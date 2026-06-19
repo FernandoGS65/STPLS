@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados - STPLS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/stpls-icon.png">
+    <link rel="apple-touch-icon" href="imagenes/stpls-icon.png">
 </head>
 <body>
 
 <nav class="navbar">
-
     <div class="logo">STPLS</div>
-
     <ul class="menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="resultados.html">Resultados</a></li>
@@ -20,35 +20,55 @@
         <li><a href="jugadores.html">Jugadores</a></li>
         <li><a href="estadisticas.html">Estadísticas</a></li>
     </ul>
-
 </nav>
 
-<header class="hero">
-    <h1>Resultados</h1>
-    <p>Resultados de la jornada.</p>
-</header>
+<main class="resultados-page">
 
-<main class="dashboard">
-
-    <main class="dashboard">
-
-    <section class="card">
-
-        <h2>Resultados</h2>
-
-        <select
-            id="selector-jornada">
-
-        </select>
-
-        <div
-            id="lista-resultados">
-
+    <div class="resultados-header">
+        <div>
+            <h2>Resultados</h2>
         </div>
+        <div class="resultados-selector-wrapper">
+            <label for="selector-jornada" class="resultados-label">Jornada</label>
+            <select id="selector-jornada" class="resultados-selector"></select>
+        </div>
+    </div>
 
-    </section>
+    <div id="lista-resultados"></div>
 
 </main>
 
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>STPLS</h4>
+            <p>Resultados, clasificaciones y estadísticas del fútbol español.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+                <li><a href="clasificaciones.html">Clasificación</a></li>
+                <li><a href="equipos.html">Equipos</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Más</h4>
+            <ul>
+                <li><a href="jugadores.html">Jugadores</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="video.html">Videos</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>STPLS &copy; 2026 &middot; Proyecto de aprendizaje y an&aacute;lisis deportivo</p>
+    </div>
+</footer>
+
 <script src="js/app.js"></script>
 <script src="js/resultados.js"></script>
+
+</body>
+</html>
