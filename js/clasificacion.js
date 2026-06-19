@@ -144,61 +144,27 @@ return clasificacion;
 
 function pintarClasificacion(clasificacion) {
 
+const contenedor = document.getElementById("tabla-clasificacion");
 
-const contenedor =
-    document.getElementById(
-        "tabla-clasificacion"
-    );
-
-let html = `
-
-<div class="tabla-responsive">
-
-    <table class="tabla-liga">
-
-        <thead>
-
-            <tr>
-
-                <th>#</th>
-                <th>Equipo</th>
-                <th>PJ</th>
-                <th>PG</th>
-                <th>PE</th>
-                <th>PP</th>
-                <th>GF</th>
-                <th>GC</th>
-                <th>DG</th>
-                <th>PTS</th>
-
-            </tr>
-
-        </thead>
-
-        <tbody>
-`;
+let html = "";
 
 clasificacion.forEach(equipo => {
 
-    let claseFila = "";
-
+    let zona = "";
     if (equipo.position <= 4) {
-
-        claseFila = "champions";
-
+        zona = "clasificacion-row--champions";
     } else if (equipo.position <= 6) {
-
-        claseFila = "europa";
-
+        zona = "clasificacion-row--europa";
     } else if (equipo.position === 7) {
-
-        claseFila = "conference";
-
+        zona = "clasificacion-row--conference";
     } else if (equipo.position >= 18) {
-
-        claseFila = "descenso";
-
+        zona = "clasificacion-row--descenso";
     }
+
+    let posClass = "";
+    if (equipo.position === 1) posClass = "clasificacion-pos--gold";
+    else if (equipo.position === 2) posClass = "clasificacion-pos--silver";
+    else if (equipo.position === 3) posClass = "clasificacion-pos--bronze";
 
     const pj = equipo.total.games;
     const pg = equipo.total.wins;
@@ -208,74 +174,50 @@ clasificacion.forEach(equipo => {
     const gc = equipo.total.receivedGoals;
     const dg = gf - gc;
 
+    const dgClass = dg >= 0 ? "clasificacion-dg--pos" : "clasificacion-dg--neg";
+    const dgText = dg > 0 ? "+" + dg : dg;
+
     html += `
-
-    <tr class="${claseFila}">
-
-        <td class="posicion">
-            ${equipo.position}
-        </td>
-
-        <td>
-
-            <div class="equipo-col">
-
-                <img
-                    src="${equipo.team.logo}"
-                    class="escudo-tabla"
-                    alt="${equipo.team.name}">
-
-                <a
-    href="equipo.html?id=${encodeURIComponent(
-        equipo.team.name
-    )}"
-    class="link-equipo">
-
-    ${equipo.team.name}
-
-</a>
-
-            </div>
-
-        </td>
-
-        <td>${pj}</td>
-        <td>${pg}</td>
-        <td>${pe}</td>
-        <td>${pp}</td>
-        <td>${gf}</td>
-        <td>${gc}</td>
-
-        <td class="${
-            dg >= 0
-            ? "dg-positivo"
-            : "dg-negativo"
-        }">
-
-            ${dg > 0 ? "+" : ""}${dg}
-
-        </td>
-
-        <td class="puntos">
-            ${equipo.points}
-        </td>
-
-    </tr>
-    `;
-
+<div class="clasificacion-row ${zona}">
+    <div class="clasificacion-pos ${posClass}">${equipo.position}</div>
+    <img src="${equipo.team.logo}" class="clasificacion-escudo" alt="${equipo.team.name}">
+    <div class="clasificacion-nombre">
+        <a href="equipo.html?id=${encodeURIComponent(equipo.team.name)}">${equipo.team.name}</a>
+        <div class="clasificacion-stats-sec">
+            <span>PJ ${pj}</span>
+            <span>${pg}V ${pe}E ${pp}D</span>
+            <span>GF ${gf}</span>
+            <span>GC ${gc}</span>
+        </div>
+    </div>
+    <div class="clasificacion-puntos">
+        <span class="clasificacion-pts">${equipo.points}</span>
+        <span class="clasificacion-dg ${dgClass}">${dgText}</span>
+    </div>
+</div>`;
 });
 
 html += `
-
-        </tbody>
-
-    </table>
-
-</div>
-`;
+<div class="clasificacion-leyenda">
+    <div class="clasificacion-leyenda-item">
+        <div class="clasificacion-leyenda-dot clasificacion-leyenda-dot--champions"></div>
+        <span>Champions League</span>
+    </div>
+    <div class="clasificacion-leyenda-item">
+        <div class="clasificacion-leyenda-dot clasificacion-leyenda-dot--europa"></div>
+        <span>Europa League</span>
+    </div>
+    <div class="clasificacion-leyenda-item">
+        <div class="clasificacion-leyenda-dot clasificacion-leyenda-dot--conference"></div>
+        <span>Conference League</span>
+    </div>
+    <div class="clasificacion-leyenda-item">
+        <div class="clasificacion-leyenda-dot clasificacion-leyenda-dot--descenso"></div>
+        <span>Descenso</span>
+    </div>
+</div>`;
 
 contenedor.innerHTML = html;
-
 
 }
 

@@ -162,132 +162,256 @@ footer{
     }
 }
 /* ================================= */
-/* CLASIFICACION STPLS v3 */
+/* CLASIFICACION MODERNA (mobile-first) */
 /* ================================= */
 
-.card-clasificacion{
-
-    padding:2px !important;
-
-    overflow:hidden;
+.clasificacion-page{
+    max-width:800px;
+    margin:0 auto;
+    padding:16px;
+    padding-top:24px;
 }
 
-.tabla-responsive{
-
-    width:100%;
-}
-
-.tabla-liga{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    margin-top:8px;
-
-    font-size:12px;
-}
-
-.tabla-liga th{
-
-    background:#1e293b;
-
-    color:white;
-
-    font-size:11px;
-
-    padding:5px 2px;
-
-    text-align:center;
-
-    white-space:nowrap;
-}
-
-.tabla-liga td{
-
-    padding:3px 1px;
-
-    text-align:center;
-
-    border-bottom:1px solid #e5e7eb;
-
-    white-space:nowrap;
-}
-
-.posicion{
-
-    width:18px;
-
-    padding-left:0 !important;
-
-    padding-right:0 !important;
-
-    font-size:11px;
-
-    font-weight:700;
-}
-
-.equipo-col{
-
+.clasificacion-header{
     display:flex;
-
+    justify-content:space-between;
     align-items:center;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+    gap:12px;
+}
 
-    gap:1px;
+.clasificacion-header h2{
+    font-size:20px;
+    font-weight:700;
+    margin:0;
+    color:#08038a;
+}
 
-    text-align:left;
+.clasificacion-temporada{
+    font-size:13px;
+    color:#999;
+    display:block;
+    margin-top:2px;
+}
 
-    font-size:12px;
+.clasificacion-selector-wrapper{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
 
+.clasificacion-label{
+    font-size:13px;
+    color:#666;
     font-weight:600;
 }
 
-.escudo-tabla{
+.clasificacion-selector{
+    padding:8px 36px 8px 14px;
+    border-radius:10px;
+    border:1.5px solid #e0e0e0;
+    background:white;
+    font-size:14px;
+    font-weight:600;
+    appearance:none;
+    -webkit-appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 12px center;
+    cursor:pointer;
+    outline:none;
+    transition:border-color 0.2s;
+}
 
-    width:15px;
+.clasificacion-selector:focus{
+    border-color:#08038a;
+}
 
-    height:15px;
+/* --- Team row (card style) --- */
 
-    object-fit:contain;
+.clasificacion-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 14px;
+    background:white;
+    border-radius:12px;
+    margin-bottom:5px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.05);
+    transition:transform 0.15s, box-shadow 0.15s;
+    border-left:4px solid #e0e0e0;
+}
 
+.clasificacion-row:active{
+    transform:scale(0.99);
+}
+
+.clasificacion-pos{
+    width:26px;
+    text-align:center;
+    font-weight:800;
+    font-size:13px;
+    color:#666;
     flex-shrink:0;
 }
 
-.champions{
-    background:#f0fff4;
-    border-left:4px solid #22c55e;
+.clasificacion-pos--gold{ color:#b8860b; }
+.clasificacion-pos--silver{ color:#a0a0a0; }
+.clasificacion-pos--bronze{ color:#cd7f32; }
+
+.clasificacion-escudo{
+    width:24px;
+    height:24px;
+    object-fit:contain;
+    flex-shrink:0;
 }
 
-.europa{
-    background:#eff6ff;
-    border-left:4px solid #3b82f6;
+.clasificacion-nombre{
+    flex:1;
+    min-width:0;
 }
 
-.conference{
-    background:#ecfeff;
-    border-left:4px solid #06b6d4;
-}
-
-.descenso{
-    background:#fef2f2;
-    border-left:4px solid #ef4444;
-}
-
-.dg-positivo{
-    color:#16a34a;
+.clasificacion-nombre a{
+    color:#222;
+    text-decoration:none;
     font-weight:600;
+    font-size:14px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:block;
 }
 
-.dg-negativo{
-    color:#dc2626;
-    font-weight:600;
+.clasificacion-nombre a:hover{
+    color:#08038a;
 }
 
-.puntos{
-
+.clasificacion-stats-sec{
+    display:flex;
+    gap:10px;
     font-size:11px;
+    color:#999;
+    margin-top:2px;
+}
 
+.clasificacion-stats-sec span{
+    white-space:nowrap;
+}
+
+.clasificacion-puntos{
+    text-align:right;
+    flex-shrink:0;
+    margin-left:auto;
+}
+
+.clasificacion-pts{
+    display:block;
+    font-size:20px;
+    font-weight:800;
+    line-height:1;
+    color:#222;
+}
+
+.clasificacion-dg{
+    font-size:11px;
     font-weight:600;
+    display:block;
+    margin-top:2px;
+}
+
+.clasificacion-dg--pos{ color:#16a34a; }
+.clasificacion-dg--neg{ color:#dc2626; }
+
+/* --- Zone colours --- */
+
+.clasificacion-row--champions{
+    border-left-color:#22c55e;
+    background:linear-gradient(to right,#f0fff4,white);
+}
+
+.clasificacion-row--europa{
+    border-left-color:#3b82f6;
+    background:linear-gradient(to right,#eff6ff,white);
+}
+
+.clasificacion-row--conference{
+    border-left-color:#06b6d4;
+    background:linear-gradient(to right,#ecfeff,white);
+}
+
+.clasificacion-row--descenso{
+    border-left-color:#ef4444;
+    background:linear-gradient(to right,#fef2f2,white);
+}
+
+/* --- Zone legend --- */
+
+.clasificacion-leyenda{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:20px;
+    padding:14px 16px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.05);
+    font-size:12px;
+}
+
+.clasificacion-leyenda-item{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#555;
+}
+
+.clasificacion-leyenda-dot{
+    width:12px;
+    height:12px;
+    border-radius:3px;
+    flex-shrink:0;
+}
+
+.clasificacion-leyenda-dot--champions{ background:#22c55e; }
+.clasificacion-leyenda-dot--europa{ background:#3b82f6; }
+.clasificacion-leyenda-dot--conference{ background:#06b6d4; }
+.clasificacion-leyenda-dot--descenso{ background:#ef4444; }
+
+/* --- Mobile tweaks --- */
+
+@media(max-width:600px){
+    .clasificacion-page{
+        padding:12px;
+        padding-top:16px;
+    }
+
+    .clasificacion-header{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .clasificacion-selector-wrapper{
+        justify-content:space-between;
+    }
+
+    .clasificacion-selector{
+        flex:1;
+    }
+
+    .clasificacion-row{
+        padding:10px 12px;
+        gap:8px;
+    }
+
+    .clasificacion-pos{
+        width:22px;
+        font-size:12px;
+    }
+
+    .clasificacion-pts{
+        font-size:18px;
+    }
 }
 
 @media (max-width:768px){

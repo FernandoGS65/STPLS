@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clasificaciones - STPLS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/stpls-icon.png">
+    <link rel="apple-touch-icon" href="imagenes/stpls-icon.png">
 </head>
 <body>
 
 <nav class="navbar">
-
     <div class="logo">STPLS</div>
-
     <ul class="menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="resultados.html">Resultados</a></li>
@@ -20,35 +20,53 @@
         <li><a href="jugadores.html">Jugadores</a></li>
         <li><a href="estadisticas.html">Estadísticas</a></li>
     </ul>
-
 </nav>
 
-<header class="hero">
-    <h1>Clasificaciones</h1>
-    <p>Tablas de clasificación.</p>
-</header>
+<main class="clasificacion-page">
 
-<main class="dashboard">
+    <div class="clasificacion-header">
+        <div>
+            <h2>La Liga EA Sports</h2>
+            <span class="clasificacion-temporada">Temporada 2025/26</span>
+        </div>
+        <div class="clasificacion-selector-wrapper">
+            <label for="selector-jornada" class="clasificacion-label">Jornada</label>
+            <select id="selector-jornada" class="clasificacion-selector"></select>
+        </div>
+    </div>
 
-    <section class="card-clasificacion">
-
-        <h2>Clasificación Primera División</h2>
-
-        <select
-            id="selector-jornada"
-            style="
-                margin-bottom:15px;
-                padding:8px;
-                border-radius:6px;
-                border:1px solid #ccc;
-            ">
-        </select>
-
-        <div id="tabla-clasificacion"></div>
-
-    </section>
+    <div id="tabla-clasificacion"></div>
 
 </main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>STPLS</h4>
+            <p>Resultados, clasificaciones y estadísticas del fútbol español.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+                <li><a href="clasificaciones.html">Clasificación</a></li>
+                <li><a href="equipos.html">Equipos</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Más</h4>
+            <ul>
+                <li><a href="jugadores.html">Jugadores</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="video.html">Videos</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>STPLS &copy; 2026 &middot; Proyecto de aprendizaje y an&aacute;lisis deportivo</p>
+    </div>
+</footer>
 
 <script src="js/app.js"></script>
 <script src="js/clasificacion.js"></script>
