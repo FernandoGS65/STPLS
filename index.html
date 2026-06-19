@@ -6,23 +6,20 @@
     <title>STPLS - Spanish Total Players League Scores</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="imagenes/stpls-icon.png">
-
-    <link rel="apple-touch-icon"
-            href="imagenes/stpls-icon.png">
+    <link rel="apple-touch-icon" href="imagenes/stpls-icon.png">
 </head>
 <body>
 
 <nav class="navbar">
     <div class="logo">STPLS</div>
-
     <ul class="menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="resultados.html">Resultados</a></li>
-    <li><a href="clasificaciones.html">Clasificaciones</a></li>
-    <li><a href="equipos.html">Equipos</a></li>
-    <li><a href="jugadores.html">Jugadores</a></li>
-    <li><a href="estadisticas.html">Estadísticas</a></li>
-</ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="clasificaciones.html">Clasificaciones</a></li>
+        <li><a href="equipos.html">Equipos</a></li>
+        <li><a href="jugadores.html">Jugadores</a></li>
+        <li><a href="estadisticas.html">Estadísticas</a></li>
+    </ul>
 </nav>
 
 <header class="hero">
@@ -46,39 +43,47 @@
     </div>
 </header>
 
-<main class="dashboard">
+<main class="index-page">
+    <div class="index-grid">
+        <section class="card-index">
+            <div class="card-index-header">
+                <h2>Clasificación</h2>
+                <a href="clasificaciones.html" class="card-index-link">Ver todas →</a>
+            </div>
+            <div id="index-clasificacion" class="card-index-body">Cargando...</div>
+        </section>
 
-    <section class="card">
-        <h2>🏆 Clasificación</h2>
-        <p>Próximamente conectada mediante API.</p>
-    </section>
+        <section class="card-index">
+            <div class="card-index-header">
+                <h2>Últimos resultados</h2>
+                <a href="resultados.html" class="card-index-link">Ver todos →</a>
+            </div>
+            <div id="index-resultados" class="card-index-body">Cargando...</div>
+        </section>
 
-    <section class="card">
-        <h2>⚽ Últimos resultados</h2>
-        <p>Resultados de la jornada.</p>
-    </section>
+        <section class="card-index">
+            <div class="card-index-header">
+                <h2>Próximos partidos</h2>
+                <a href="resultados.html" class="card-index-link">Calendario →</a>
+            </div>
+            <div id="index-proximos" class="card-index-body"></div>
+        </section>
 
-    <section class="card">
-        <h2>📅 Próximos partidos</h2>
-        <div id="proximos-partidos"></div>
-    </section>
-
-    <section class="card">
-        <h2>⭐ Jugadores destacados</h2>
-        <p>Ranking de rendimiento.</p>
-    </section>
-
+        <section class="card-index">
+            <div class="card-index-header">
+                <h2>Datos de la temporada</h2>
+            </div>
+            <div id="index-stats" class="card-index-body">Cargando...</div>
+        </section>
+    </div>
 </main>
 
 <footer>
-
     <div class="footer-content">
-
         <div class="footer-col">
             <h4>STPLS</h4>
             <p>Resultados, clasificaciones y estadísticas del fútbol español.</p>
         </div>
-
         <div class="footer-col">
             <h4>Enlaces</h4>
             <ul>
@@ -88,7 +93,6 @@
                 <li><a href="equipos.html">Equipos</a></li>
             </ul>
         </div>
-
         <div class="footer-col">
             <h4>Más</h4>
             <ul>
@@ -97,14 +101,11 @@
                 <li><a href="video.html">Videos</a></li>
             </ul>
         </div>
-
     </div>
-
     <div class="footer-bottom">
         <p>STPLS &copy; 2026 &middot; Proyecto de aprendizaje y an&aacute;lisis deportivo</p>
         <button class="theme-toggle" id="themeToggle">Cambiar tema</button>
     </div>
-
 </footer>
 
 <script src="js/app.js"></script>
