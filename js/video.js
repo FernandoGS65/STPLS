@@ -17,12 +17,11 @@ async function cargarVideo(){
         return;
     }
 
-    if (typeof entry === "string" && entry.startsWith("https://")) {
-        const ytId = new URL(entry).searchParams.get("v");
+    if (typeof entry === "string" && entry.startsWith("http")) {
         contenedor.innerHTML = `
             <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
                 <iframe
-                    src="https://www.youtube.com/embed/${ytId}?autoplay=1"
+                    src="${entry}"
                     style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
                     allow="autoplay; encrypted-media"
                     allowfullscreen>
