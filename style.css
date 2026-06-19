@@ -697,11 +697,25 @@ footer{
 /* ========================================== */
 
 .resultados-page,
-.equipo-page{
+.equipo-page,
+.video-page{
     max-width:800px;
     margin:0 auto;
     padding:16px;
     padding-top:24px;
+}
+
+.back-link{
+    display:inline-block;
+    margin-top:16px;
+    color:var(--text-secondary);
+    font-size:14px;
+    text-decoration:none;
+    transition:color 0.2s;
+}
+
+.back-link:hover{
+    color:var(--accent-gold);
 }
 
 .resultados-header{

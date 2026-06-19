@@ -20,29 +20,27 @@
 <body>
 
 <nav class="navbar">
-
     <div class="logo">STPLS</div>
-
+    <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="clasificaciones.html">Clasificaciones</a></li>
+        <li><a href="equipos.html">Equipos</a></li>
+        <li><a href="jugadores.html">Jugadores</a></li>
+        <li><a href="estadisticas.html">Estadísticas</a></li>
+    </ul>
 </nav>
 
 <header class="hero">
-
-    <h1>Resumen del partido</h1>
-
+    <div class="hero-content">
+        <div class="hero-logo">STPLS</div>
+        <p class="hero-subtitle">Resumen del partido</p>
+    </div>
 </header>
 
-<main class="dashboard">
-
-    <section class="card">
-
-        <div id="video-container">
-
-            Cargando vídeo...
-
-        </div>
-
-    </section>
-
+<main class="video-page">
+    <div id="video-container">Cargando vídeo...</div>
+    <a href="javascript:history.back()" class="back-link">← Volver</a>
 </main>
 
 <script src="js/video.js"></script>

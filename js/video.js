@@ -1,51 +1,39 @@
-function obtenerParametro(nombre){
-
-    const params =
-        new URLSearchParams(
-            window.location.search
-        );
-
-    return params.get(nombre);
-
-}
-
 async function cargarVideo(){
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const contenedor = document.getElementById("video-container");
 
-    const id =
-        obtenerParametro("id");
-
-    const contenedor =
-        document.getElementById(
-            "video-container"
-        );
-
-    if(!id){
-
-        contenedor.innerHTML =
-            "<p>Vídeo no encontrado.</p>";
-
+    if (!id) {
+        contenedor.innerHTML = "<p>Vídeo no encontrado.</p>";
         return;
-
     }
 
-    contenedor.innerHTML = `
+    const resp = await fetch("./data/videos.json");
+    const videos = await resp.json();
+    const entry = videos[id];
 
-        <video
-            controls
-            autoplay
-            style="
-                width:100%;
-                border-radius:12px;
-            ">
+    if (!entry) {
+        contenedor.innerHTML = "<p>Vídeo no disponible.</p>";
+        return;
+    }
 
-            <source
-                src="videos/${id}.mp4"
-                type="video/mp4">
-
-        </video>
-
-    `;
-
+    if (typeof entry === "string" && entry.startsWith("https://")) {
+        const ytId = new URL(entry).searchParams.get("v");
+        contenedor.innerHTML = `
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+                <iframe
+                    src="https://www.youtube.com/embed/${ytId}?autoplay=1"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
+            </div>`;
+    } else {
+        contenedor.innerHTML = `
+            <video controls autoplay style="width:100%;border-radius:12px;">
+                <source src="videos/${id}.mp4" type="video/mp4">
+            </video>`;
+    }
 }
 
 cargarVideo();
