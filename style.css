@@ -33,11 +33,11 @@ body{
     --bg-surface:#ffffff;
     --bg-card:#ffffff;
     --bg-card-hover:#f0f2f5;
-    --text-primary:#222222;
-    --text-secondary:#555555;
-    --text-muted:#999999;
-    --border-color:#e0e0e0;
-    --accent-gold:#b8860b;
+    --text-primary:#111111;
+    --text-secondary:#444444;
+    --text-muted:#888888;
+    --border-color:#d0d0d0;
+    --accent-gold:#7a5c00;
 }
 
 .navbar{
@@ -726,13 +726,13 @@ footer{
 
 .resultado-fecha{
     grid-column:1/-1;
-    font-size:12px;
-    color:var(--text-secondary);
+    font-size:13px;
+    color:var(--text-primary);
     margin-bottom:2px;
     padding-bottom:3px;
     border-bottom:1px solid var(--border-color);
     line-height:1.2;
-    font-weight:500;
+    font-weight:600;
 }
 
 .equipo-local,
