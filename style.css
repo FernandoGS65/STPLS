@@ -1,0 +1,968 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#f5f7fa;
+    color:#222;
+}
+
+.navbar{
+    background:#08038a;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 40px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.hero{
+    text-align:center;
+    padding:15px 10px;
+    background:white;
+}
+
+.hero h1{
+    margin-bottom:5px;
+    font-size:22px;
+}
+
+.hero p{
+    font-size:12px;
+    color:#666;
+}
+
+.dashboard{
+    max-width:1200px;
+    margin:auto;
+
+    padding:30px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.card{
+    background:white;
+
+    padding:25px;
+
+    border-radius:5px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+footer{
+    margin-top:60px;
+    background:linear-gradient(135deg,#1a0120,#49040a);
+    color:white;
+    padding:40px 20px 0;
+}
+
+.footer-content{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:30px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.footer-col h4{
+    font-size:16px;
+    margin-bottom:12px;
+    color:#f0c040;
+}
+
+.footer-col p{
+    font-size:13px;
+    color:#ccc;
+    line-height:1.5;
+}
+
+.footer-col ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-col ul li{
+    margin-bottom:6px;
+}
+
+.footer-col ul a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:13px;
+    transition:color 0.2s;
+}
+
+.footer-col ul a:hover{
+    color:#f0c040;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:18px 0;
+    font-size:13px;
+    color:#aaa;
+}
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+}
+/* ================================= */
+/* CLASIFICACION STPLS v3 */
+/* ================================= */
+
+.card-clasificacion{
+
+    padding:2px !important;
+
+    overflow:hidden;
+}
+
+.tabla-responsive{
+
+    width:100%;
+}
+
+.tabla-liga{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:8px;
+
+    font-size:12px;
+}
+
+.tabla-liga th{
+
+    background:#1e293b;
+
+    color:white;
+
+    font-size:11px;
+
+    padding:5px 2px;
+
+    text-align:center;
+
+    white-space:nowrap;
+}
+
+.tabla-liga td{
+
+    padding:3px 1px;
+
+    text-align:center;
+
+    border-bottom:1px solid #e5e7eb;
+
+    white-space:nowrap;
+}
+
+.posicion{
+
+    width:18px;
+
+    padding-left:0 !important;
+
+    padding-right:0 !important;
+
+    font-size:11px;
+
+    font-weight:700;
+}
+
+.equipo-col{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1px;
+
+    text-align:left;
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.escudo-tabla{
+
+    width:15px;
+
+    height:15px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+}
+
+.champions{
+    background:#f0fff4;
+    border-left:4px solid #22c55e;
+}
+
+.europa{
+    background:#eff6ff;
+    border-left:4px solid #3b82f6;
+}
+
+.conference{
+    background:#ecfeff;
+    border-left:4px solid #06b6d4;
+}
+
+.descenso{
+    background:#fef2f2;
+    border-left:4px solid #ef4444;
+}
+
+.dg-positivo{
+    color:#16a34a;
+    font-weight:600;
+}
+
+.dg-negativo{
+    color:#dc2626;
+    font-weight:600;
+}
+
+.puntos{
+
+    font-size:11px;
+
+    font-weight:600;
+}
+
+@media (max-width:768px){
+
+    .dashboard{
+
+        max-width:100%;
+
+        margin:0;
+
+        padding:0;
+    }
+
+    .card-clasificacion{
+
+        padding:1px !important;
+
+        margin:0;
+
+        border-radius:0;
+
+        box-shadow:none;
+    }
+
+    .equipo-col{
+
+        font-size:12px;
+
+        gap:1px;
+    }
+
+    .escudo-tabla{
+
+        width:16px;
+
+        height:16px;
+    }
+}
+
+.resultado-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    border-radius:10px;
+
+    background:#f7f9fc;
+}
+
+.resultado-card strong{
+
+    font-size:20px;
+
+    min-width:60px;
+
+    text-align:center;
+}
+.ganador{
+    font-weight:bold;
+    color:#0d47a1;
+}
+
+.partido-card{
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+    border-radius:10px;
+
+    background:#f7f9fc;
+}
+
+.fecha-partido{
+
+    font-size:14px;
+
+    color:#666;
+
+    margin-bottom:5px;
+}
+
+.equipos-partido{
+
+    font-weight:bold;
+}
+.equipo-card{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:20px 15px;
+
+    text-align:center;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.06);
+
+    transition:0.25s;
+
+    height:100%;
+}
+
+.equipo-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.10);
+}
+
+.equipo-card h3{
+
+    margin-bottom:10px;
+}
+
+.equipo-card p{
+
+    margin:5px 0;
+}
+.escudo-equipo{
+
+    width:60px;
+
+    height:60px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:0 auto 12px auto;
+
+    @media (max-width:768px){
+
+    .escudo-equipo{
+
+        width:45px;
+
+        height:45px;
+    }
+
+}
+}
+
+.equipo-card{
+    text-align:center;
+}
+#lista-equipos{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px,1fr)
+        );
+
+    gap:15px;
+
+    margin-top:20px;
+}
+#buscador-jugadores{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+}
+
+.jugador-card{
+
+    background:white;
+
+    padding:20px;
+
+    margin-bottom:15px;
+
+    border-radius:12px;
+
+    box-shadow:
+      0 4px 12px rgba(0,0,0,0.08);
+}
+
+.jugador-card h3{
+
+    margin-bottom:10px;
+}
+#top-goleadores p{
+
+    margin:10px 0;
+
+    font-size:18px;
+}
+
+#jugador-joven,
+#promedio-goles{
+
+    font-size:20px;
+
+    text-align:center;
+
+    padding:15px;
+}
+
+
+.dg-negativo{
+    color:#c62828;
+    font-weight:bold;
+}
+#selector-jornada{
+
+    width:100%;
+
+    padding:10px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    background:white;
+}
+/* =========================
+   RESULTADOS
+========================= */
+
+#selector-jornada {
+
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #d0d0d0;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.resultado-card {
+
+    display: grid;
+    grid-template-columns:
+        minmax(0,1fr)
+        55px
+        minmax(0,1fr)
+        28px;
+
+        .video-resultado{
+
+    text-decoration:none;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:16px;
+}
+
+    align-items: center;
+
+    background: white;
+
+    border-radius: 6px;
+
+    padding: 2px 8px;
+
+    min-height: 34px;
+
+    margin-bottom: 1px;
+
+    box-shadow:
+        0 1px 2px rgba(0,0,0,0.04);
+
+}
+
+.equipo-local,
+.equipo-visitante {
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.equipo-local {
+
+    justify-content: flex-start;
+}
+
+.equipo-visitante {
+
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.escudo-partido {
+
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.resultado-centro {
+
+    text-align: center;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #0e2d89;
+}
+
+/* móvil */
+
+
+.resultado-card:nth-child(odd){
+
+    background:#e0edfa;
+}
+
+.resultado-card:nth-child(even){
+
+    background:#e9f3e9;
+}
+.equipo-card-link{
+
+    text-decoration:none;
+
+    color:inherit;
+}
+
+.equipo-card h3{
+
+    font-size:16px;
+
+    margin-bottom:8px;
+}
+
+.equipo-card p{
+
+    color:#0a2fa3;
+
+    font-weight:700;
+
+    margin:0;
+}
+.equipo-card-link{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    cursor:pointer;
+}
+
+.border-top:4px solid #1f5eff;
+.ficha-equipo{
+
+    text-align:center;
+}
+
+.escudo-ficha{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+}
+
+.stats-equipo{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap:6px;
+
+    margin-top:15px;
+
+    margin-bottom:20px;
+}
+
+.stats-equipo div{
+
+    background:#f3f6fb;
+
+    border-radius:8px;
+
+    padding:8px 2px;
+
+    text-align:center;
+
+    min-height:58px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+.ultimos-partidos{
+
+    margin-top:30px;
+
+    text-align:left;
+}
+
+.partido-reciente{
+
+    display:grid;
+
+    grid-template-columns:
+        15px
+        20px
+        1fr
+        60px
+        1fr
+        30px;
+
+
+    gap:8px;
+
+    align-items:center;
+
+    padding:4px 8px;
+
+    min-height:32px;
+
+    border-bottom:
+        1px solid #6d6c6c;
+
+    font-size:13px;
+}
+
+.forma{
+
+    font-size:12px;
+
+    line-height:1;
+
+    margin-left:-6px;
+
+}
+}
+.link-equipo{
+
+    color:inherit;
+
+    text-decoration:none;
+}
+
+.link-equipo:hover{
+
+    text-decoration:underline;
+
+    cursor:pointer;
+}
+.forma-reciente{
+
+    margin-top:12px;
+
+    margin-bottom:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:4px;
+
+    flex-wrap:wrap;
+}
+
+.forma-reciente span{
+
+    font-size:18px;
+}
+.jornada-partido{
+
+    font-weight:700;
+
+    color:#0a2fa3;
+
+    text-align:center;
+}
+
+.resultado-partido{
+
+    text-align:center;
+}
+
+.equipo-partido{
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+}
+.resumen-equipo{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+    font-size:20px;
+
+    font-weight:600;
+}
+.stats-equipo div{
+
+    font-size:15px;
+
+    font-weight:700;
+}
+
+.stats-equipo div br + *{
+
+    font-size:20px;
+
+    font-weight:700;
+}
+.partido-reciente:nth-child(odd){
+
+    background:#e0edfa;
+
+}
+
+.partido-reciente:nth-child(even){
+
+    background:#e9f3e9;
+
+}
+
+.link-video{
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+.dato-club{
+
+    margin-top:6px;
+
+    font-size:13px;
+
+    color:#555;
+
+    margin-bottom:4px;
+}
+.cabecera-equipo{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    margin-bottom:12px;
+}
+
+.datos-principales{
+
+    flex:1;
+}
+
+.datos-principales h2{
+
+    margin-top:0;
+
+    margin-bottom:8px;
+}
+.palmares-equipo{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:4px;
+
+    margin-top:8px;
+
+    margin-bottom:8px;
+}
+.titulo-item{
+
+    background:#f3f6fb;
+
+    border-radius:8px;
+
+    padding:4px 2px;
+
+    text-align:center;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+.titulo-item strong{
+
+    font-size:15px;
+
+    margin-top:1px;
+
+    color:#0a2fa3;
+
+    line-height:1.1;
+}
+@media (max-width:768px){
+
+    #lista-equipos{
+
+        grid-template-columns:
+            repeat(4,1fr);
+
+        gap:8px;
+    }
+
+    .equipo-card{
+
+        padding:8px 4px;
+    }
+
+    .equipo-card h3{
+
+        font-size:11px;
+
+        margin:4px 0;
+    }
+
+    .equipo-card p{
+
+        display:none;
+    }
+
+}

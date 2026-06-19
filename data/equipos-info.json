@@ -1,0 +1,272 @@
+{
+  "Barcelona": {
+    "fundacion": 1899,
+    "ciudad": "Barcelona",
+    "estadio": "Spotify Camp Nou",
+    "capacidad": 99354,
+    "temporadasPrimera": 94,
+    "liga": 28,
+    "champions": 5,
+    "copaRey": 32,
+    "supercopa": 15,
+    "web": "https://www.fcbarcelona.com",
+    "apodo": "Blaugranas",
+    "colores": "Azul y grana"
+  },
+
+  "Real Madrid": {
+    "fundacion": 1902,
+    "ciudad": "Madrid",
+    "estadio": "Santiago Bernabéu",
+    "capacidad": 85000,
+    "temporadasPrimera": 94,
+    "liga": 36,
+    "champions": 15,
+    "copaRey": 20,
+    "supercopa": 13,
+    "web": "https://www.realmadrid.com",
+    "apodo": "Merengues",
+    "colores": "Blanco"
+  },
+
+  "Atlético Madrid": {
+    "fundacion": 1903,
+    "ciudad": "Madrid",
+    "estadio": "Riyadh Air Metropolitano",
+    "capacidad": 68456,
+    "temporadasPrimera": 88,
+    "liga": 11,
+    "champions": 0,
+    "copaRey": 10,
+    "supercopa": 2,
+    "web": "https://www.atleticodemadrid.com",
+    "apodo": "Colchoneros",
+    "colores": "Rojo y blanco"
+  }
+,
+"Alavés": {
+  "fundacion": 1921,
+  "ciudad": "Vitoria-Gasteiz",
+  "estadio": "Mendizorrotza",
+  "capacidad": 19840,
+  "temporadasPrimera": 19,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 0,
+  "supercopa": 0,
+  "web": "https://www.deportivoalaves.com",
+  "apodo": "Babazorros",
+  "colores": "Azul y blanco"
+},
+
+"Athletic Club": {
+  "fundacion": 1898,
+  "ciudad": "Bilbao",
+  "estadio": "San Mamés",
+  "capacidad": 53289,
+  "temporadasPrimera": 94,
+  "liga": 8,
+  "champions": 0,
+  "copaRey": 24,
+  "supercopa": 3,
+  "web": "https://www.athletic-club.eus",
+  "apodo": "Leones",
+  "colores": "Rojo y blanco"
+},
+
+"Celta de Vigo": {
+  "fundacion": 1923,
+  "ciudad": "Vigo",
+  "estadio": "Balaídos",
+  "capacidad": 24870,
+  "temporadasPrimera": 59,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 0,
+  "supercopa": 0,
+  "web": "https://rccelta.es",
+  "apodo": "Celestes",
+  "colores": "Celeste y blanco"
+},
+
+"Elche": {
+  "fundacion": 1923,
+  "ciudad": "Elche",
+  "estadio": "Martínez Valero",
+  "capacidad": 31388,
+  "temporadasPrimera": 25,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 0,
+  "supercopa": 0,
+  "web": "https://www.elchecf.es",
+  "apodo": "Franjiverdes",
+  "colores": "Verde y blanco"
+},
+
+"Espanyol": {
+  "fundacion": 1900,
+  "ciudad": "Barcelona",
+  "estadio": "RCDE Stadium",
+  "capacidad": 40260,
+  "temporadasPrimera": 88,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 4,
+  "supercopa": 0,
+  "web": "https://www.rcdespanyol.com",
+  "apodo": "Pericos",
+  "colores": "Azul y blanco"
+}
+,
+"Getafe": {
+  "fundacion": 1983,
+  "ciudad": "Getafe",
+  "estadio": "Coliseum",
+  "capacidad": 16800,
+  "temporadasPrimera": 21,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 0,
+  "supercopa": 0,
+  "web": "https://www.getafecf.com",
+  "apodo": "Azulones",
+  "colores": "Azul"
+},
+
+"Girona": {
+  "fundacion": 1930,
+  "ciudad": "Girona",
+  "estadio": "Montilivi",
+  "capacidad": 14500,
+  "temporadasPrimera": 5,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 0,
+  "supercopa": 0,
+  "web": "https://www.gironafc.cat",
+  "apodo": "Blanc-i-vermells",
+  "colores": "Rojo y blanco"
+},
+
+"Levante": {
+  "fundacion": 1909,
+  "ciudad": "Valencia",
+  "estadio": "Ciutat de València",
+  "capacidad": 26354,
+  "temporadasPrimera": 18,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 0,
+  "supercopa": 0,
+  "web": "https://www.levanteud.com",
+  "apodo": "Granotas",
+  "colores": "Azul y grana"
+},
+
+"Mallorca": {
+  "fundacion": 1916,
+  "ciudad": "Palma",
+  "estadio": "Son Moix",
+  "capacidad": 26020,
+  "temporadasPrimera": 33,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 1,
+  "supercopa": 1,
+  "web": "https://www.rcdmallorca.es",
+  "apodo": "Bermellones",
+  "colores": "Rojo y negro"
+},
+
+"Osasuna": {
+  "fundacion": 1920,
+  "ciudad": "Pamplona",
+  "estadio": "El Sadar",
+  "capacidad": 23576,
+  "temporadasPrimera": 44,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 0,
+  "supercopa": 0,
+  "web": "https://www.osasuna.es",
+  "apodo": "Rojillos",
+  "colores": "Rojo y azul"
+}
+,
+"Oviedo": {
+  "fundacion": 1926,
+  "ciudad": "Oviedo",
+  "estadio": "Carlos Tartiere",
+  "capacidad": 30500,
+  "temporadasPrimera": 39,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 0,
+  "supercopa": 0,
+  "web": "https://www.realoviedo.es",
+  "apodo": "Carbayones",
+  "colores": "Azul y blanco"
+},
+
+"Rayo Vallecano": {
+  "fundacion": 1924,
+  "ciudad": "Madrid",
+  "estadio": "Vallecas",
+  "capacidad": 14708,
+  "temporadasPrimera": 22,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 0,
+  "supercopa": 0,
+  "web": "https://www.rayovallecano.es",
+  "apodo": "Franjirrojos",
+  "colores": "Blanco y rojo"
+},
+
+"Real Betis": {
+  "fundacion": 1907,
+  "ciudad": "Sevilla",
+  "estadio": "Benito Villamarín",
+  "capacidad": 60721,
+  "temporadasPrimera": 59,
+  "liga": 1,
+  "champions": 0,
+  "copaRey": 3,
+  "supercopa": 1,
+  "web": "https://www.realbetisbalompie.es",
+  "apodo": "Verdiblancos",
+  "colores": "Verde y blanco"
+},
+
+"Real Sociedad": {
+  "fundacion": 1909,
+  "ciudad": "San Sebastián",
+  "estadio": "Reale Arena",
+  "capacidad": 39313,
+  "temporadasPrimera": 78,
+  "liga": 2,
+  "champions": 0,
+  "copaRey": 3,
+  "supercopa": 1,
+  "web": "https://www.realsociedad.eus",
+  "apodo": "Txuri-Urdin",
+  "colores": "Azul y blanco"
+},
+
+"Sevilla FC": {
+  "fundacion": 1890,
+  "ciudad": "Sevilla",
+  "estadio": "Ramón Sánchez-Pizjuán",
+  "capacidad": 43883,
+  "temporadasPrimera": 81,
+  "liga": 1,
+  "champions": 0,
+  "copaRey": 5,
+  "supercopa": 1,
+  "web": "https://www.sevillafc.es",
+  "apodo": "Nervionenses",
+  "colores": "Blanco y rojo"
+}
+
+}
