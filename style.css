@@ -923,9 +923,38 @@ footer{
 
     justify-content:center;
 }
+.partidos-tabs{
+    display:flex;
+    gap:0;
+    margin-top:30px;
+    margin-bottom:14px;
+    border-bottom:1px solid var(--border-color);
+}
+
+.partidos-tab{
+    padding:8px 20px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--text-muted);
+    cursor:pointer;
+    border-bottom:2px solid transparent;
+    margin-bottom:-1px;
+    transition:color 0.2s, border-color 0.2s;
+    user-select:none;
+}
+
+.partidos-tab:hover{
+    color:var(--text-secondary);
+}
+
+.partidos-tab--active{
+    color:var(--accent-gold);
+    border-bottom-color:var(--accent-gold);
+}
+
 .ultimos-partidos{
 
-    margin-top:30px;
+    margin-top:0;
 
     text-align:left;
 }

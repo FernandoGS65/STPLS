@@ -156,31 +156,23 @@ function calcularClasificacion(partidos) {
     return clasificacion;
 
 }
-function obtenerUltimosPartidos(
+function obtenerPartidosEquipo(
     partidos,
-    nombreEquipo,
-    cantidad = 12
+    nombreEquipo
 ) {
 
-    const partidosEquipo =
-        partidos.filter(partido => {
+    const filtrados =
+        partidos.filter(partido =>
+            partido.homeTeam.name === nombreEquipo ||
+            partido.awayTeam.name === nombreEquipo
+        );
 
-            return (
-                partido.homeTeam.name === nombreEquipo ||
-                partido.awayTeam.name === nombreEquipo
-            );
-
-        });
-
-    partidosEquipo.sort((a,b)=>
+    filtrados.sort((a,b)=>
         new Date(b.date) -
         new Date(a.date)
     );
 
-    return partidosEquipo.slice(
-        0,
-        cantidad
-    );
+    return filtrados;
 
 }
 
@@ -241,15 +233,30 @@ const info =
     const dg =
         equipo.gf - equipo.gc;
 
-        const ultimosPartidos =
-    obtenerUltimosPartidos(
+        const todosPartidos =
+    obtenerPartidosEquipo(
         datos.data,
-        nombreEquipo,
-        38
+        nombreEquipo
     );
+
+    const jugados = [];
+    const proximos = [];
+
+    todosPartidos.forEach(partido => {
+        if (
+            partido.state &&
+            partido.state.score &&
+            partido.state.score.current
+        ) {
+            jugados.push(partido);
+        } else {
+            proximos.push(partido);
+        }
+    });
+
     let formaReciente = "";
 
-ultimosPartidos.forEach(
+jugados.forEach(
     partido => {
 
         if (
@@ -298,138 +305,45 @@ ultimosPartidos.forEach(
     }
 );
 
-let htmlUltimos = "";
-
-ultimosPartidos.forEach(
-    partido => {
-
-        const local =
-            partido.homeTeam.name;
-
-        const visitante =
-            partido.awayTeam.name;
-
-        const resultado =
-            partido.state?.score?.current
-            || "-";
+function renderPartidos(lista, conVideo) {
+    let html = "";
+    lista.forEach(partido => {
+        const local = partido.homeTeam.name;
+        const visitante = partido.awayTeam.name;
+        const resultado = partido.state?.score?.current || "-";
 
         let icono = "⚪";
-
-        if (
-            partido.state &&
-            partido.state.score &&
-            partido.state.score.current
-        ) {
-
-            const marcador =
-                partido.state.score.current
-                    .split("-")
-                    .map(x =>
-                        parseInt(
-                            x.trim()
-                        )
-                    );
-
-            const gl =
-                marcador[0];
-
-            const gv =
-                marcador[1];
-
-            const esLocal =
-                local === nombreEquipo;
-
-            if (
-                (esLocal && gl > gv) ||
-                (!esLocal && gv > gl)
-            ) {
-
-                icono = "🟢";
-
-            }
-
-            else if (gl === gv) {
-
-                icono = "🟡";
-
-            }
-
-            else {
-
-                icono = "🔴";
-
-            }
-
+        if (partido.state && partido.state.score && partido.state.score.current) {
+            const marcador = partido.state.score.current.split("-").map(x => parseInt(x.trim()));
+            const gl = marcador[0];
+            const gv = marcador[1];
+            const esLocal = local === nombreEquipo;
+            if ((esLocal && gl > gv) || (!esLocal && gv > gl)) icono = "🟢";
+            else if (gl === gv) icono = "🟡";
+            else icono = "🔴";
         }
 
-        const jornada =
-    partido.round
-        .split("-")[1]
-        .trim();
+        const jornada = partido.round.split("-")[1].trim();
+        const normalizarEquipo = nombre =>
+            nombre.replaceAll(" ","").replaceAll("á","a").replaceAll("é","e").replaceAll("í","i").replaceAll("ó","o").replaceAll("ú","u");
+        const videoId = `LL-J${jornada.padStart(2,"0")}-${normalizarEquipo(local)}-${normalizarEquipo(visitante)}`;
+        const tieneVideo = videos[videoId];
 
-const normalizarEquipo = nombre =>
-
-    nombre
-        .replaceAll(" ", "")
-        .replaceAll("á","a")
-        .replaceAll("é","e")
-        .replaceAll("í","i")
-        .replaceAll("ó","o")
-        .replaceAll("ú","u");
-
-const videoId =
-
-    `LL-J${jornada.padStart(2,"0")}-` +
-
-    `${normalizarEquipo(local)}-` +
-
-    `${normalizarEquipo(visitante)}`;
-
-const tieneVideo =
-    videos[videoId];
-
-htmlUltimos += `
-
+        html += `
     <div class="partido-reciente">
+        <span class="forma">${icono}</span>
+        <span class="jornada-partido">J${jornada}</span>
+        <span class="equipo-partido">${local}</span>
+        <strong class="resultado-partido">${resultado}</strong>
+        <span class="equipo-partido">${visitante}</span>
+        ${tieneVideo ? `<a href="video.html?id=${videoId}" class="link-video">🎥</a>` : ""}
+    </div>`;
+    });
+    return html;
+}
 
-        <span class="forma">
-            ${icono}
-        </span>
-
-        <span class="jornada-partido">
-            J${jornada}
-        </span>
-
-        <span class="equipo-partido">
-            ${local}
-        </span>
-
-        <strong class="resultado-partido">
-            ${resultado}
-        </strong>
-
-        <span class="equipo-partido">
-            ${visitante}
-        </span>
-
-        ${tieneVideo ? `
-
-<a
-    href="video.html?id=${videoId}"
-    class="link-video">
-
-    🎥
-
-</a>
-
-` : ""}
-
-    </div>
-
-`;
-
-    }
-);
+const htmlJugados = renderPartidos(jugados);
+const htmlProximos = renderPartidos(proximos);
 
 document.getElementById(
     "ficha-equipo"
@@ -558,19 +472,29 @@ document.getElementById(
                 <div>DG<br>${dg}</div>
 
             </div>
-            <h3>
-    Últimos 12 partidos
-</h3>
+            <div class="partidos-tabs">
+    <span class="partidos-tab partidos-tab--active" data-ver="jugados">Jugados</span>
+    <span class="partidos-tab" data-ver="proximos">Próximos</span>
+</div>
 
 <div class="ultimos-partidos">
-
-    ${htmlUltimos}
-
+    <div class="partidos-lista" id="pl-jugados">${htmlJugados}</div>
+    <div class="partidos-lista" id="pl-proximos" style="display:none">${htmlProximos}</div>
 </div>
 
         </div>
 
     `;
+
+    document.querySelector('.partidos-tabs')?.addEventListener('click', function(e) {
+        const tab = e.target.closest('.partidos-tab');
+        if (!tab) return;
+        document.querySelectorAll('.partidos-tab').forEach(t => t.classList.remove('partidos-tab--active'));
+        tab.classList.add('partidos-tab--active');
+        const ver = tab.dataset.ver;
+        document.getElementById('pl-jugados').style.display = ver === 'jugados' ? '' : 'none';
+        document.getElementById('pl-proximos').style.display = ver === 'proximos' ? '' : 'none';
+    });
 
 }
 
