@@ -173,12 +173,15 @@ const tieneVideo =
     videos[videoId];
         const fecha = new Date(partido.date);
         const fechaStr = fecha.toLocaleDateString("es-ES", {
-            weekday:"short", day:"numeric", month:"short", year:"numeric"
+            weekday:"short", day:"numeric", month:"short"
+        });
+        const horaStr = fecha.toLocaleTimeString("es-ES", {
+            hour:"2-digit", minute:"2-digit"
         });
 
         card.innerHTML = `
 
-    <div class="resultado-fecha">${fechaStr}</div>
+    <div class="resultado-fecha">${fechaStr} · ${horaStr}</div>
 
     <div class="equipo-local">
 

@@ -225,9 +225,7 @@ const equiposInfo =
             e.nombre === nombreEquipo
         );
 const info =
-    equiposInfo[nombreEquipo];
-
-    console.log(info);
+    equiposInfo[nombreEquipo] || {};
 
     if (!equipo) {
 

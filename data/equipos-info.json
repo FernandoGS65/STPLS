@@ -44,6 +44,7 @@
     "colores": "Rojo y blanco"
   }
 ,
+
 "Alavés": {
   "fundacion": 1921,
   "ciudad": "Vitoria-Gasteiz",
@@ -267,6 +268,36 @@
   "web": "https://www.sevillafc.es",
   "apodo": "Nervionenses",
   "colores": "Blanco y rojo"
+},
+
+"Valencia": {
+  "fundacion": 1919,
+  "ciudad": "Valencia",
+  "estadio": "Mestalla",
+  "capacidad": 49430,
+  "temporadasPrimera": 90,
+  "liga": 6,
+  "champions": 0,
+  "copaRey": 8,
+  "supercopa": 1,
+  "web": "https://www.valenciacf.com",
+  "apodo": "Chés",
+  "colores": "Blanco y naranja"
+},
+
+"Villarreal": {
+  "fundacion": 1923,
+  "ciudad": "Villarreal",
+  "estadio": "Estadio de la Cerámica",
+  "capacidad": 23000,
+  "temporadasPrimera": 23,
+  "liga": 0,
+  "champions": 0,
+  "copaRey": 0,
+  "supercopa": 0,
+  "web": "https://villarrealcf.es",
+  "apodo": "Submarino Amarillo",
+  "colores": "Amarillo y azul"
 }
 
 }
