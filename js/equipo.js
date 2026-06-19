@@ -170,7 +170,7 @@ function calcularEvolucion(todosPartidos, nombreEquipo) {
     return evo;
 }
 
-function dibujarEvolucion(canvas, datos, colores) {
+function dibujarEvolucion(canvas, datos, colores, nombres) {
     const ctx = canvas.getContext('2d');
     const dpr = window.devicePixelRatio || 1;
     const rect = canvas.getBoundingClientRect();
@@ -243,6 +243,32 @@ function dibujarEvolucion(canvas, datos, colores) {
         });
         ctx.stroke();
     });
+
+    // Legend
+    if (nombres && nombres.length > 0) {
+        const legendPad = 10;
+        const legendItemH = 18;
+        const legendW = 140;
+        const legendH = nombres.length * legendItemH + legendPad * 2;
+        const legendX = W - legendW - 12;
+        const legendY = pad.top + 6;
+
+        ctx.fillStyle = 'rgba(0,0,0,0.55)';
+        ctx.roundRect ? ctx.roundRect(legendX, legendY, legendW, legendH, 6) : ctx.rect(legendX, legendY, legendW, legendH);
+        ctx.fill();
+
+        ctx.font = '12px Segoe UI, Arial, sans-serif';
+        ctx.textBaseline = 'middle';
+
+        nombres.forEach((n, i) => {
+            const ly = legendY + legendPad + i * legendItemH + legendItemH / 2;
+            ctx.fillStyle = colores[i % colores.length];
+            ctx.fillRect(legendX + 10, ly - 4, 12, 8);
+            ctx.fillStyle = '#e8edf5';
+            ctx.textAlign = 'left';
+            ctx.fillText(n, legendX + 28, ly + 1);
+        });
+    }
 }
 
 function obtenerPartidosEquipo(
@@ -621,11 +647,13 @@ document.getElementById(
     function pintarEvo() {
         const canvas = document.getElementById('evo-canvas');
         const evoPrincipal = calcularEvolucion(datos.data, nombreEquipo);
+        let nombres = [nombreEquipo];
         let todasSeries = [evoPrincipal];
         let colores = ['#f0c040'];
 
         if (equipoComparar) {
             const evoComp = calcularEvolucion(datos.data, equipoComparar);
+            nombres.push(equipoComparar);
             todasSeries.push(evoComp);
             colores.push('#3b82f6');
         }
@@ -636,7 +664,7 @@ document.getElementById(
             canvas.style.height = Math.min(cont.clientWidth * 0.5, 320) + 'px';
         }
 
-        dibujarEvolucion(canvas, todasSeries, colores);
+        dibujarEvolucion(canvas, todasSeries, colores, nombres);
     }
 
     window.addEventListener('resize', () => {
