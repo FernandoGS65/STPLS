@@ -474,6 +474,9 @@ document.getElementById(
         <strong class="palmares-num">${info.champions}</strong>
         <span class="palmares-label">Champions</span>
     </div>
+    ${info.europaLeague > 0 ? `<div class="palmares-item"><strong class="palmares-num">${info.europaLeague}</strong><span class="palmares-label">Europa L.</span></div>` : ''}
+    ${info.recopa > 0 ? `<div class="palmares-item"><strong class="palmares-num">${info.recopa}</strong><span class="palmares-label">Recopa</span></div>` : ''}
+    ${info.mundialClubes > 0 ? `<div class="palmares-item"><strong class="palmares-num">${info.mundialClubes}</strong><span class="palmares-label">Mundial</span></div>` : ''}
 </div>
 
 <div class="forma-reciente">${formaReciente}</div>
