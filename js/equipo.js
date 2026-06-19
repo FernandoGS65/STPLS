@@ -156,6 +156,95 @@ function calcularClasificacion(partidos) {
     return clasificacion;
 
 }
+function calcularEvolucion(todosPartidos, nombreEquipo) {
+    const evo = [];
+    for (let j = 1; j <= 38; j++) {
+        const filtrados = todosPartidos.filter(p => {
+            const jn = parseInt(p.round.split("-")[1].trim());
+            return jn <= j;
+        });
+        const clasif = calcularClasificacion(filtrados);
+        const eq = clasif.find(e => e.nombre === nombreEquipo);
+        if (eq) evo.push({ jornada: j, posicion: eq.posicion });
+    }
+    return evo;
+}
+
+function dibujarEvolucion(canvas, datos, colores) {
+    const ctx = canvas.getContext('2d');
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    ctx.scale(dpr, dpr);
+    const W = rect.width;
+    const H = rect.height;
+
+    const pad = { top: 16, right: 16, bottom: 28, left: 32 };
+    const plotW = W - pad.left - pad.right;
+    const plotH = H - pad.top - pad.bottom;
+
+    ctx.clearRect(0, 0, W, H);
+
+    const getX = j => pad.left + (j - 1) / 37 * plotW;
+    const getY = p => pad.top + (p - 1) / 19 * plotH;
+
+    const cs = getComputedStyle(document.documentElement);
+
+    // Grid
+    ctx.strokeStyle = cs.getPropertyValue('--border-color').trim() || '#252d42';
+    ctx.lineWidth = 0.5;
+    for (let i = 1; i <= 20; i += 2) {
+        const y = getY(i);
+        ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(W - pad.right, y); ctx.stroke();
+    }
+
+    // Y-axis labels
+    ctx.fillStyle = cs.getPropertyValue('--text-muted').trim() || '#5a6478';
+    ctx.font = '10px Segoe UI, Arial, sans-serif';
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'middle';
+    for (let i = 1; i <= 20; i += 2) {
+        ctx.fillText(i, pad.left - 6, getY(i));
+    }
+
+    // X-axis labels
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    for (let j = 1; j <= 38; j += 4) {
+        ctx.fillText(j, getX(j), H - pad.bottom + 6);
+    }
+
+    // Axes labels
+    ctx.fillStyle = cs.getPropertyValue('--text-secondary').trim() || '#8b95a8';
+    ctx.font = '10px Segoe UI, Arial, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    ctx.fillText('Jornada', pad.left + plotW / 2, H - pad.bottom + 20);
+    ctx.save();
+    ctx.translate(10, pad.top + plotH / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'bottom';
+    ctx.fillText('Posición', 0, 0);
+    ctx.restore();
+
+    // Draw lines
+    datos.forEach((d, di) => {
+        if (d.length < 2) return;
+        ctx.strokeStyle = colores[di % colores.length];
+        ctx.lineWidth = di === 0 ? 3 : 2;
+        ctx.lineJoin = 'round';
+        ctx.beginPath();
+        d.forEach((p, i) => {
+            const x = getX(p.jornada);
+            const y = getY(p.posicion);
+            i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+    });
+}
+
 function obtenerPartidosEquipo(
     partidos,
     nombreEquipo
@@ -475,11 +564,20 @@ document.getElementById(
             <div class="partidos-tabs">
     <span class="partidos-tab partidos-tab--active" data-ver="jugados">Jugados</span>
     <span class="partidos-tab" data-ver="proximos">Próximos</span>
+    <span class="partidos-tab" data-ver="evolucion">Evolución</span>
 </div>
 
 <div class="ultimos-partidos">
     <div class="partidos-lista" id="pl-jugados">${htmlJugados}</div>
     <div class="partidos-lista" id="pl-proximos" style="display:none">${htmlProximos}</div>
+    <div class="partidos-lista" id="pl-evolucion" style="display:none">
+        <div class="evolucion-container">
+            <div class="evolucion-controls">
+                <select id="evo-select" class="evolucion-select"><option value="">-- Comparar con --</option></select>
+            </div>
+            <div class="evolucion-grafico"><canvas id="evo-canvas"></canvas></div>
+        </div>
+    </div>
 </div>
 
         </div>
@@ -494,6 +592,56 @@ document.getElementById(
         const ver = tab.dataset.ver;
         document.getElementById('pl-jugados').style.display = ver === 'jugados' ? '' : 'none';
         document.getElementById('pl-proximos').style.display = ver === 'proximos' ? '' : 'none';
+        document.getElementById('pl-evolucion').style.display = ver === 'evolucion' ? '' : 'none';
+
+        if (ver === 'evolucion') {
+            const sel = document.getElementById('evo-select');
+            if (sel.options.length <= 1) {
+                const equipos = [...new Set(datos.data.map(p => p.homeTeam.name))].sort();
+                equipos.forEach(n => {
+                    if (n !== nombreEquipo) {
+                        const opt = document.createElement('option');
+                        opt.value = n;
+                        opt.textContent = n;
+                        sel.appendChild(opt);
+                    }
+                });
+            }
+            pintarEvo();
+        }
+    });
+
+    let equipoComparar = "";
+
+    document.getElementById('evo-select')?.addEventListener('change', function() {
+        equipoComparar = this.value;
+        pintarEvo();
+    });
+
+    function pintarEvo() {
+        const canvas = document.getElementById('evo-canvas');
+        const evoPrincipal = calcularEvolucion(datos.data, nombreEquipo);
+        let todasSeries = [evoPrincipal];
+        let colores = ['#f0c040'];
+
+        if (equipoComparar) {
+            const evoComp = calcularEvolucion(datos.data, equipoComparar);
+            todasSeries.push(evoComp);
+            colores.push('#3b82f6');
+        }
+
+        const cont = canvas.parentElement;
+        if (cont) {
+            canvas.style.width = cont.clientWidth + 'px';
+            canvas.style.height = Math.min(cont.clientWidth * 0.5, 320) + 'px';
+        }
+
+        dibujarEvolucion(canvas, todasSeries, colores);
+    }
+
+    window.addEventListener('resize', () => {
+        const el = document.getElementById('pl-evolucion');
+        if (el && el.style.display !== 'none') pintarEvo();
     });
 
 }
