@@ -224,17 +224,9 @@ const tieneVideo =
 
 </div>
 
-${tieneVideo ? `
-
-<a
-    href="video.html?id=${videoId}"
-    class="video-resultado">
-
-    🎥
-
-</a>
-
-` : ""}
+<div class="video-resultado${tieneVideo ? '' : ' video-resultado--empty'}">
+    ${tieneVideo ? `<a href="video.html?id=${videoId}">🎥</a>` : ''}
+</div>
 
 `;
 
