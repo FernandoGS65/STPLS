@@ -371,14 +371,10 @@ const info =
 
     let formaReciente = "";
 
-jugados.forEach(
-    partido => {
+const ultimos10 = jugados.slice(0, 10);
 
-        if (
-            !partido.state ||
-            !partido.state.score ||
-            !partido.state.score.current
-        ) return;
+ultimos10.forEach(
+    partido => {
 
         const marcador =
             partido.state.score.current
@@ -393,30 +389,11 @@ jugados.forEach(
         const esLocal =
             partido.homeTeam.name === nombreEquipo;
 
-        if (
-            (esLocal && gl > gv) ||
-            (!esLocal && gv > gl)
-        ) {
+        let tipo = "d";
+        if ((esLocal && gl > gv) || (!esLocal && gv > gl)) tipo = "v";
+        else if (gl === gv) tipo = "e";
 
-            formaReciente +=
-                '<span class="forma-v">🟢</span>';
-
-        }
-
-        else if (gl === gv) {
-
-            formaReciente +=
-                '<span class="forma-e">🟡</span>';
-
-        }
-
-        else {
-
-            formaReciente +=
-                '<span class="forma-d">🔴</span>';
-
-        }
-
+        formaReciente += `<span class="forma-pill forma-pill--${tipo}"></span>`;
     }
 );
 
