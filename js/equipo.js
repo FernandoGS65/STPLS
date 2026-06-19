@@ -442,22 +442,19 @@ document.getElementById(
 ).innerHTML = `
 
         <div class="equipo-hero">
-
     <img src="${equipo.logo}" class="equipo-hero-escudo" alt="${equipo.nombre}">
-
-    <h1 class="equipo-hero-nombre">${equipo.nombre}</h1>
-
-    <div class="equipo-hero-badge">
-        <span class="equipo-hero-pos">${equipo.posicion}º</span>
-        <span class="equipo-hero-pts">${equipo.puntos} pts</span>
+    <div class="equipo-hero-body">
+        <h1 class="equipo-hero-nombre">${equipo.nombre}</h1>
+        <div class="equipo-hero-badge">
+            <span class="equipo-hero-pos">${equipo.posicion}º</span>
+            <span class="equipo-hero-pts">${equipo.puntos} pts</span>
+        </div>
+        <div class="equipo-hero-info">
+            <span class="equipo-chip">🏟 ${info.estadio}</span>
+            <span class="equipo-chip">📅 ${info.fundacion}</span>
+            <a href="${info.web}" target="_blank" rel="noopener noreferrer" class="equipo-chip equipo-chip--link">🌐 Web</a>
+        </div>
     </div>
-
-    <div class="equipo-hero-info">
-        <span class="equipo-chip">🏟 ${info.estadio}</span>
-        <span class="equipo-chip">📅 ${info.fundacion}</span>
-        <a href="${info.web}" target="_blank" rel="noopener noreferrer" class="equipo-chip equipo-chip--link">🌐 Web</a>
-    </div>
-
 </div>
 
 <div class="equipo-palmares">
@@ -479,20 +476,17 @@ document.getElementById(
     </div>
 </div>
 
-            <div class="forma-reciente">${formaReciente}</div>
+<div class="forma-reciente">${formaReciente}</div>
 
-            <div class="stats-equipo">
-
-                <div>PG<br>${equipo.pg}</div>
-                <div>PE<br>${equipo.pe}</div>
-                <div>PP<br>${equipo.pp}</div>
-
-                <div>GF<br>${equipo.gf}</div>
-                <div>GC<br>${equipo.gc}</div>
-                <div>DG<br>${dg}</div>
-
-            </div>
-            <div class="partidos-tabs">
+<div class="stats-equipo">
+    <div>PG<br>${equipo.pg}</div>
+    <div>PE<br>${equipo.pe}</div>
+    <div>PP<br>${equipo.pp}</div>
+    <div>GF<br>${equipo.gf}</div>
+    <div>GC<br>${equipo.gc}</div>
+    <div>DG<br>${dg}</div>
+</div>
+<div class="partidos-tabs">
     <span class="partidos-tab partidos-tab--active" data-ver="jugados">Jugados</span>
     <span class="partidos-tab" data-ver="proximos">Próximos</span>
     <span class="partidos-tab" data-ver="evolucion">Evolución</span>
@@ -511,9 +505,7 @@ document.getElementById(
     </div>
 </div>
 
-        </div>
-
-    `;
+        `;
 
     document.querySelector('.partidos-tabs')?.addEventListener('click', function(e) {
         const tab = e.target.closest('.partidos-tab');
