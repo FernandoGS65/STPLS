@@ -647,7 +647,8 @@ footer{
 /* RESULTADOS — DARK MODE                     */
 /* ========================================== */
 
-.resultados-page{
+.resultados-page,
+.equipo-page{
     max-width:800px;
     margin:0 auto;
     padding:16px;
@@ -874,23 +875,6 @@ footer{
     cursor:pointer;
 }
 
-.border-top:4px solid #1f5eff;
-.ficha-equipo{
-
-    text-align:center;
-}
-
-.escudo-ficha{
-
-    width:90px;
-
-    height:90px;
-
-    object-fit:contain;
-
-    margin-bottom:20px;
-}
-
 .stats-equipo{
 
     display:grid;
@@ -1021,16 +1005,6 @@ footer{
     font-size:13px;
 }
 
-.forma{
-
-    font-size:12px;
-
-    line-height:1;
-
-    margin-left:-6px;
-
-}
-}
 .link-equipo{
 
     color:inherit;
@@ -1106,22 +1080,6 @@ footer{
 
     white-space:nowrap;
 }
-.resumen-equipo{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-top:10px;
-
-    margin-bottom:20px;
-
-    font-size:20px;
-
-    font-weight:600;
-}
 .stats-equipo div{
 
     font-size:15px;
@@ -1159,80 +1117,118 @@ footer{
 
     align-items:center;
 }
-.dato-club{
+/* ================================
+   EQUIPO HEADER MODERNO
+================================ */
 
-    margin-top:6px;
-
-    font-size:13px;
-
-    color:var(--text-secondary);
-
-    margin-bottom:4px;
+.equipo-hero{
+    text-align:center;
+    padding:10px 0 4px;
 }
-.cabecera-equipo{
 
-    display:flex;
+.equipo-hero-escudo{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    margin-bottom:8px;
+    filter:drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+}
 
-    align-items:flex-start;
+.equipo-hero-nombre{
+    font-size:22px;
+    font-weight:800;
+    margin:0 0 6px;
+    color:var(--text-primary);
+}
 
-    gap:16px;
-
+.equipo-hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--accent-gold);
+    color:#111;
+    padding:3px 14px;
+    border-radius:20px;
+    font-weight:700;
+    font-size:14px;
     margin-bottom:12px;
 }
 
-.datos-principales{
-
-    flex:1;
+.equipo-hero-pos{
+    font-size:16px;
 }
 
-.datos-principales h2{
-
-    margin-top:0;
-
-    margin-bottom:8px;
+.equipo-hero-pts{
+    font-size:13px;
+    opacity:0.8;
 }
-.palmares-equipo{
 
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:4px;
-
-    margin-top:8px;
-
-    margin-bottom:8px;
-}
-.titulo-item{
-
-    background:var(--bg-surface);
-
-    border-radius:8px;
-
-    padding:4px 2px;
-
-    text-align:center;
-
-    font-size:12px;
-
-    font-weight:600;
-
+.equipo-hero-info{
     display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:6px;
+    margin-bottom:4px;
+}
 
-    flex-direction:column;
+.equipo-chip{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    background:var(--bg-surface);
+    border:1px solid var(--border-color);
+    padding:4px 10px;
+    border-radius:16px;
+    font-size:12px;
+    color:var(--text-secondary);
+    text-decoration:none;
+    transition:background 0.2s;
+}
 
+.equipo-chip--link:hover{
+    background:var(--bg-card-hover);
+    color:var(--accent-gold);
+}
+
+.equipo-palmares{
+    display:flex;
+    gap:6px;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    padding:12px 0 8px;
     justify-content:center;
 }
-.titulo-item strong{
 
-    font-size:15px;
+.equipo-palmares::-webkit-scrollbar{
+    display:none;
+}
 
-    margin-top:1px;
+.palmares-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2px;
+    background:var(--bg-surface);
+    border:1px solid var(--border-color);
+    border-radius:12px;
+    padding:8px 14px;
+    min-width:60px;
+    flex-shrink:0;
+}
 
-    color:var(--accent-blue);
-
+.palmares-num{
+    font-size:20px;
+    font-weight:800;
+    color:var(--accent-gold);
     line-height:1.1;
+}
+
+.palmares-label{
+    font-size:10px;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
 }
 @media (max-width:768px){
 

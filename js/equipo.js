@@ -441,117 +441,45 @@ document.getElementById(
     "ficha-equipo"
 ).innerHTML = `
 
-        <div class="ficha-equipo">
+        <div class="equipo-hero">
 
-            <div class="cabecera-equipo">
+    <img src="${equipo.logo}" class="equipo-hero-escudo" alt="${equipo.nombre}">
 
-    <img
-        src="${equipo.logo}"
-        class="escudo-ficha">
+    <h1 class="equipo-hero-nombre">${equipo.nombre}</h1>
 
-    <div class="datos-principales">
+    <div class="equipo-hero-badge">
+        <span class="equipo-hero-pos">${equipo.posicion}º</span>
+        <span class="equipo-hero-pts">${equipo.puntos} pts</span>
+    </div>
 
-        <h2>
-            ${equipo.nombre}
-        </h2>
-
-        <div class="dato-club">
-
-    🏟 ${info.estadio}
-
-    (${info.capacidad.toLocaleString('es-ES')})
-
-</div>
-
-    
-        <div class="dato-club">
-            📅 ${info.fundacion}
-        </div>
-
-        <div class="dato-club">
-
-    ⚽ ${info.temporadasPrimera} temporadas
-
-    &nbsp;&nbsp;·&nbsp;&nbsp;
-
-    <a
-        href="${info.web}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="web-oficial">
-
-        🌐 Web oficial
-
-    </a>
-
-</div>
-
-    
-
-</a>
-        <div class="palmares-equipo">
-
-
-
-
-
-</div>
-
+    <div class="equipo-hero-info">
+        <span class="equipo-chip">🏟 ${info.estadio}</span>
+        <span class="equipo-chip">📅 ${info.fundacion}</span>
+        <a href="${info.web}" target="_blank" rel="noopener noreferrer" class="equipo-chip equipo-chip--link">🌐 Web</a>
     </div>
 
 </div>
 
-</div>
-
-<div class="palmares-equipo">
-
-    <div class="titulo-item">
-        🏆 La Liga
-        <strong>${info.liga}</strong>
+<div class="equipo-palmares">
+    <div class="palmares-item">
+        <strong class="palmares-num">${info.liga}</strong>
+        <span class="palmares-label">Liga</span>
     </div>
-
-    <div class="titulo-item">
-        🏆 Copa
-        <strong>${info.copaRey}</strong>
+    <div class="palmares-item">
+        <strong class="palmares-num">${info.copaRey}</strong>
+        <span class="palmares-label">Copa</span>
     </div>
-
-    <div class="titulo-item">
-        🏅 Supercopa
-        <strong>${info.supercopa}</strong>
+    <div class="palmares-item">
+        <strong class="palmares-num">${info.supercopa}</strong>
+        <span class="palmares-label">Supercopa</span>
     </div>
-
-    <div class="titulo-item">
-        ⭐ Champions
-        <strong>${info.champions}</strong>
+    <div class="palmares-item">
+        <strong class="palmares-num">${info.champions}</strong>
+        <span class="palmares-label">Champions</span>
     </div>
-
 </div>
 
-
-
-</div>
-            <div class="forma-reciente">
-
-    ${formaReciente}
-
-</div>
-
-            <div class="resumen-equipo">
-
-    <span>
-
-        🏅 ${equipo.posicion}º ·
-        ${equipo.puntos} puntos
-
-    </span>
-
-    <span>
-
-        PJ: ${equipo.pj}
-
-    </span>
-
-</div>
+            <div class="forma-reciente">${formaReciente}</div>
 
             <div class="stats-equipo">
 
