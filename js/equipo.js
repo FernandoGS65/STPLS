@@ -245,7 +245,7 @@ const info =
     obtenerUltimosPartidos(
         datos.data,
         nombreEquipo,
-        12
+        38
     );
     let formaReciente = "";
 
