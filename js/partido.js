@@ -8,18 +8,38 @@
 
     if (!matchId) { showError("No se especificó partido."); return; }
 
+    function buildVideoKey(round, home, away) {
+        var nn = round ? round.split("-").pop().trim() : "";
+        if (nn.length < 2) nn = "0" + nn;
+        function cln(s) {
+            return s.replace(/[áàäâã]/g,"a").replace(/[éèëê]/g,"e").replace(/[íìïî]/g,"i")
+                    .replace(/[óòöôõ]/g,"o").replace(/[úùüû]/g,"u").replace(/[ñ]/g,"n")
+                    .replace(/[^a-zA-Z0-9]/g,"");
+        }
+        return "LL-J" + nn + "-" + cln(home) + "-" + cln(away);
+    }
+
+    var videoUrlCache = null;
+
     function cargarPartido() {
         Promise.all([
             fetch(APP.ruta("partido", matchId)).then(function(r) {
-                if (!r.ok) throw new Error("El archivo de datos no existe (HTTP " + r.status + "). Ejecuta fetch-partidos.ps1 para obtenerlo.");
-                return r.json();
+                return r.ok ? r.json() : null;
             }),
-            fetch(APP.ruta("calendario")).then(function(r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+            fetch(APP.ruta("calendario")).then(function(r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+            fetch(APP.ruta("videos")).then(function(r) { return r.ok ? r.json() : null; })
         ]).then(function(res) {
             var d = res[0];
             var liga = res[1];
+            var videos = res[2];
             var b = liga.data.find(function(m) { return m.id == matchId; });
             if (!b) { showError("Partido no encontrado en el calendario."); return; }
+
+            if (videos) {
+                var key = buildVideoKey(b.round, b.homeTeam.name, b.awayTeam.name);
+                if (videos[key]) videoUrlCache = videos[key];
+            }
+
             render(d, b);
         }).catch(function(e) {
             showError("Error: " + e.message);
@@ -33,9 +53,9 @@
     }
 
     function render(d, b) {
-        var home = d.homeTeam || b.homeTeam;
-        var away = d.awayTeam || b.awayTeam;
-        var score = (d.state && d.state.score && d.state.score.current) || (b.state && b.state.score && b.state.score.current) || "-";
+        var home = d ? d.homeTeam || b.homeTeam : b.homeTeam;
+        var away = d ? d.awayTeam || b.awayTeam : b.awayTeam;
+        var score = (d && d.state && d.state.score && d.state.score.current) || (b.state && b.state.score && b.state.score.current) || "-";
 
         renderHeader(home, away, score, d, b);
         renderInfo(d, b);
@@ -79,11 +99,12 @@
     /* ===== TABS ===== */
     function renderTabs(d, b, home, away) {
         var tabs = [];
-        if (d.statistics && d.statistics.length) tabs.push("Estadísticas");
+        if (videoUrlCache) tabs.push("Resumen");
+        if (d && d.statistics && d.statistics.length) tabs.push("Estadísticas");
         tabs.push("Eventos");
         tabs.push("Alineaciones");
         tabs.push("Jugadores");
-        if (d.predictions && d.predictions.prematch && d.predictions.prematch.length) tabs.push("Pronóstico");
+        if (d && d.predictions && d.predictions.prematch && d.predictions.prematch.length) tabs.push("Pronóstico");
 
         if (!tabs.length) { elContent.innerHTML = '<p style="padding:2rem;text-align:center;color:var(--text-muted);font-size:13px">Sin datos disponibles.</p>'; return; }
 
@@ -107,11 +128,23 @@
     }
 
     function renderContent(tab, d, b, home, away) {
-        if (tab === "Estadísticas") renderStats(d, b, home, away);
+        if (tab === "Resumen") renderVideo(d, b, home, away);
+        else if (tab === "Estadísticas") renderStats(d, b, home, away);
         else if (tab === "Eventos") renderEvents(d, b, home, away);
         else if (tab === "Alineaciones") renderLineups(d, b, home, away);
         else if (tab === "Jugadores") renderPlayers(d, b, home, away);
         else if (tab === "Pronóstico") renderPrediction(d, b, home, away);
+    }
+
+    /* ===== VIDEO ===== */
+    function renderVideo(d, b, home, away) {
+        if (!videoUrlCache) { elContent.innerHTML = '<p class="pv-empty">Resumen no disponible.</p>'; return; }
+        elContent.innerHTML =
+            '<div class="pv-section"><div class="pv-video-card">' +
+                '<div class="pv-video-wrap">' +
+                    '<iframe src="' + videoUrlCache + '" allowfullscreen frameborder="0" style="width:100%;height:100%;position:absolute;top:0;left:0"></iframe>' +
+                '</div>' +
+            '</div></div>';
     }
 
     /* ===== STATS ===== */

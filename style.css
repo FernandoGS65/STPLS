@@ -1026,6 +1026,18 @@ footer{
     color:var(--accent-gold);
     border-bottom-color:var(--accent-gold);
 }
+/* ===== VIDEO ===== */
+.pv-video-card{
+    background:var(--bg-card);
+    border-radius:12px;
+    border:1px solid var(--border-color);
+    overflow:hidden;
+}
+.pv-video-wrap{
+    position:relative;
+    width:100%;
+    padding-top:56.25%;
+}
 /* ===== SECTION ===== */
 .pv-section{
     padding:6px 8px;
