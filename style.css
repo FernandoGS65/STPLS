@@ -1452,6 +1452,7 @@ footer{
     font-weight:700;
     font-size:13px;
     margin-bottom:8px;
+    text-decoration:none;
 }
 
 .equipo-hero-pos{
@@ -1459,8 +1460,7 @@ footer{
 }
 
 .equipo-hero-pts{
-    font-size:12px;
-    opacity:0.8;
+    font-size:15px;
 }
 
 .equipo-hero-info{

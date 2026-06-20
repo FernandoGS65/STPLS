@@ -441,10 +441,10 @@ document.getElementById(
     <img src="${equipo.logo}" class="equipo-hero-escudo" alt="${equipo.nombre}">
     <div class="equipo-hero-body">
         <h1 class="equipo-hero-nombre">${equipo.nombre}</h1>
-        <div class="equipo-hero-badge">
+        <a href="clasificaciones.html" class="equipo-hero-badge">
             <span class="equipo-hero-pos">${equipo.posicion}º</span>
             <span class="equipo-hero-pts">${equipo.puntos} pts</span>
-        </div>
+        </a>
         <div class="equipo-hero-info">
             <span class="equipo-chip">🏟 ${info.estadio}</span>
             <span class="equipo-chip">📅 ${info.fundacion}</span>
