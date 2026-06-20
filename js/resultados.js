@@ -204,7 +204,7 @@ const tieneVideo =
 
  <div class="resultado-centro">
 
-    ${resultado}
+    <a href="partido.html?matchId=${partido.id}" class="link-partido">${resultado}</a>
 
 </div>
 
