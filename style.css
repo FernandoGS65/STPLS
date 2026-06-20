@@ -1889,8 +1889,8 @@ footer{
 .partido-reciente .forma{grid-column:1;}
 .partido-reciente .jornada-partido{grid-column:2;}
 .partido-reciente .equipo-partido:first-of-type{grid-column:3;}
-.partido-reciente .icon-descarga{grid-column:4;}
-.partido-reciente .resultado-partido,.partido-reciente .link-partido{grid-column:5;}
+.partido-reciente .icon-descarga{grid-column:4;display:flex;align-items:center;justify-content:center;}
+.partido-reciente .resultado-partido,.partido-reciente .link-partido{grid-column:5;text-align:center;display:block;}
 .partido-reciente .equipo-partido:last-of-type{grid-column:6;}
 .partido-reciente .link-video{grid-column:7;}
 
@@ -2011,6 +2011,111 @@ footer{
     text-align:center;
     color:var(--text-muted);
     font-size:14px;
+}
+
+/* ================================
+   NOTICIAS CARDS
+=============================== */
+.noticias-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    padding:4px 0;
+}
+.noticia-card{
+    display:flex;
+    flex-direction:column;
+    border-radius:12px;
+    overflow:hidden;
+    background:var(--bg-card);
+    border:1px solid var(--border-color);
+    transition:transform 0.2s, box-shadow 0.2s;
+}
+.noticia-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(0,0,0,0.3);
+}
+.noticia-img{
+    position:relative;
+    height:140px;
+    background-size:cover;
+    background-position:center;
+    background-color:var(--bg-surface);
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-start;
+    padding:12px;
+}
+.noticia-img::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,0.7));
+}
+.noticia-cat{
+    position:relative;
+    background:var(--accent-blue);
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    padding:3px 10px;
+    border-radius:4px;
+}
+.noticia-body{
+    padding:14px 16px 16px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+.noticia-titulo{
+    font-size:15px;
+    font-weight:700;
+    line-height:1.35;
+    color:var(--text-primary);
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+.noticia-resumen{
+    font-size:13px;
+    line-height:1.5;
+    color:var(--text-secondary);
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+.noticia-footer{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:4px;
+    flex-wrap:wrap;
+}
+.noticia-fuente{
+    font-size:11px;
+    font-weight:600;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+}
+.noticia-fecha{
+    font-size:11px;
+    color:var(--text-muted);
+}
+.noticia-link{
+    margin-left:auto;
+    font-size:12px;
+    font-weight:600;
+    color:var(--accent-blue);
+    text-decoration:none;
+    transition:color 0.2s;
+}
+.noticia-link:hover{
+    color:var(--accent-gold);
 }
 /* ================================
    EQUIPO HEADER MODERNO

@@ -1,0 +1,55 @@
+{
+  "ultimaActualizacion": "2026-06-20T10:00:00Z",
+  "noticias": [
+    {
+      "id": "bar-001",
+      "titulo": "Lamine Yamal renueva hasta 2030: \"Este es mi club\"",
+      "resumen": "El extremo de 18 años firma su renovación con el FC Barcelona hasta 2030 con una cláusula de 1.000 millones de euros. La joya de La Masía seguirá siendo el estandarte del proyecto azulgrana.",
+      "fuente": "Marca",
+      "url": "https://www.marca.com/futbol/barcelona/lamine-yamal-renovacion-2030.html",
+      "imagen": "https://picsum.photos/seed/bar-001/400/200",
+      "fecha": "2026-06-19",
+      "categoria": "club"
+    },
+    {
+      "id": "bar-002",
+      "titulo": "El Barça cierra el fichaje de Jonathan Tah para la próxima temporada",
+      "resumen": "El central alemán del Bayer Leverkusen llega libre tras finalizar su contrato. Hansi Flick pedía un refuerzo para la zaga y Tah era su prioridad desde hace meses.",
+      "fuente": "Sport",
+      "url": "https://www.sport.es/es/noticias/barca/jonathan-tah-fichaje-barcelona-2026.html",
+      "imagen": "https://picsum.photos/seed/bar-002/400/200",
+      "fecha": "2026-06-18",
+      "categoria": "fichajes"
+    },
+    {
+      "id": "bar-003",
+      "titulo": "Pedri vuelve a los entrenamientos tras superar su lesión muscular",
+      "resumen": "El centrocampista canario completó la sesión con el grupo después de tres semanas de baja. Su recuperación abre un abanico de posibilidades tácticas para Flick de cara al tramo decisivo.",
+      "fuente": "Mundo Deportivo",
+      "url": "https://www.mundodeportivo.com/futbol/fc-barcelona/pedri-vuelve-entrenamientos-2026.html",
+      "imagen": "https://picsum.photos/seed/bar-003/400/200",
+      "fecha": "2026-06-17",
+      "categoria": "plantilla"
+    },
+    {
+      "id": "bar-004",
+      "titulo": "El Barça presenta su nueva equipación 2026-27 inspirada en el 92",
+      "resumen": "El club azulgrana ha desvelado la camiseta de la próxima temporada que rinde homenaje al equipo que ganó la primera Champions en Wembley. Los socios ya pueden reservarla.",
+      "fuente": "AS",
+      "url": "https://as.com/futbol/primera/barcelona-presenta-equipacion-2026-27.html",
+      "imagen": "https://picsum.photos/seed/bar-004/400/200",
+      "fecha": "2026-06-16",
+      "categoria": "club"
+    },
+    {
+      "id": "bar-005",
+      "titulo": "Hansi Flick analiza la pretemporada: \"Quiero ver la intensidad desde el primer día\"",
+      "resumen": "El técnico alemán ha comparecido en rueda de prensa para detallar los planes de preparación. El Barça disputará amistosos en Estados Unidos y Japón durante el verano.",
+      "fuente": "Sport",
+      "url": "https://www.sport.es/es/noticias/barca/flick-pretemporada-barcelona-2026.html",
+      "imagen": "https://picsum.photos/seed/bar-005/400/200",
+      "fecha": "2026-06-15",
+      "categoria": "declaraciones"
+    }
+  ]
+}

@@ -416,6 +416,15 @@ const equiposInfo =
 const descargados =
     await descRespuesta.json();
 
+const slugEquipo =
+    nombreEquipo.toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/á/g, 'a').replace(/é/g, 'e').replace(/í/g, 'i')
+        .replace(/ó/g, 'o').replace(/ú/g, 'u')
+        .replace(/ñ/g, 'n')
+        .replace(/[^a-z0-9-]/g, '');
+
+
 const matchIdsConDatos =
     new Set(
         descargados.map(
@@ -634,6 +643,9 @@ document.getElementById(
         document.getElementById('pl-fichajes').style.display = ver === 'fichajes' ? '' : 'none';
         document.getElementById('pl-evolucion').style.display = ver === 'evolucion' ? '' : 'none';
 
+        if (ver === 'noticias') {
+            cargarNoticias();
+        }
         if (ver === 'evolucion') {
             const sel = document.getElementById('evo-select');
             if (sel.options.length <= 1) {
@@ -694,6 +706,59 @@ document.getElementById(
         const el = document.getElementById('pl-evolucion');
         if (el && el.style.display !== 'none') pintarEvo();
     });
+
+    async function cargarNoticias() {
+        var container = document.getElementById('pl-noticias');
+        if (!container) return;
+        var url = './data/noticias/' + slugEquipo + '.json';
+        try {
+            var resp = await fetch(url);
+            if (!resp.ok) throw new Error('No hay noticias para este equipo');
+            var data = await resp.json();
+            var noticias = data.noticias;
+            if (!noticias || noticias.length === 0) {
+                container.innerHTML = '<p class="tab-placeholder">No hay noticias recientes</p>';
+                return;
+            }
+            var html = '<div class="noticias-list">';
+            var categorias = {
+                'fichajes': 'Fichajes',
+                'club': 'Club',
+                'plantilla': 'Plantilla',
+                'declaraciones': 'Declaraciones',
+                'lesion': 'Lesión',
+                'noticia': 'Noticia',
+                'partido': 'Partido'
+            };
+            for (var i = 0; i < noticias.length; i++) {
+                var n = noticias[i];
+                var catLabel = categorias[n.categoria] || n.categoria;
+                var fecha = n.fecha;
+                if (fecha && fecha.length === 10) {
+                    var partes = fecha.split('-');
+                    var d = new Date(partes[0], partes[1] - 1, partes[2]);
+                    fecha = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+                }
+                var imagenStyle = n.imagen ? 'background-image:url(' + n.imagen + ')' : '';
+                html += '<article class="noticia-card">';
+                html += '<div class="noticia-img" style="' + imagenStyle + '"><span class="noticia-cat">' + catLabel + '</span></div>';
+                html += '<div class="noticia-body">';
+                html += '<h3 class="noticia-titulo">' + n.titulo + '</h3>';
+                html += '<p class="noticia-resumen">' + n.resumen + '</p>';
+                html += '<div class="noticia-footer">';
+                html += '<span class="noticia-fuente">' + n.fuente + '</span>';
+                html += '<span class="noticia-fecha">' + fecha + '</span>';
+                if (n.url) {
+                    html += '<a href="' + n.url + '" target="_blank" rel="noopener noreferrer" class="noticia-link">Leer más →</a>';
+                }
+                html += '</div></div></article>';
+            }
+            html += '</div>';
+            container.innerHTML = html;
+        } catch (e) {
+            container.innerHTML = '<p class="tab-placeholder">' + e.message + '</p>';
+        }
+    }
 
 }
 
