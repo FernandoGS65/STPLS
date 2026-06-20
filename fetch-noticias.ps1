@@ -106,8 +106,6 @@ function ContieneEquipo($titulo, $nombreEquipo) {
     return $false
 }
 
-$corte = (Get-Date).AddDays(-7)
-
 $feeds = @(
     @{ url = "https://e00-marca.uecdn.es/rss/futbol/primera-division.xml"; fuente = "MARCA" },
     @{ url = "https://www.sport.es/es/rss/futbol/rss.xml"; fuente = "SPORT" }
