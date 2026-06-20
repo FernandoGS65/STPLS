@@ -253,10 +253,6 @@ function dibujarEvolucion(canvas, datos, colores, nombres) {
         const legendX = W - legendW - 12;
         const legendY = pad.top + 6;
 
-        ctx.fillStyle = 'rgba(0,0,0,0.55)';
-        ctx.roundRect ? ctx.roundRect(legendX, legendY, legendW, legendH, 6) : ctx.rect(legendX, legendY, legendW, legendH);
-        ctx.fill();
-
         ctx.font = '12px Segoe UI, Arial, sans-serif';
         ctx.textBaseline = 'middle';
 

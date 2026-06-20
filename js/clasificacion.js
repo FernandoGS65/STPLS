@@ -184,10 +184,7 @@ clasificacion.forEach(equipo => {
     <div class="clasificacion-nombre">
         <a href="equipo.html?id=${encodeURIComponent(equipo.team.name)}">${equipo.team.name}</a>
         <div class="clasificacion-stats-sec">
-            <span>PJ ${pj}</span>
-            <span>${pg}V ${pe}E ${pp}D</span>
-            <span>GF ${gf}</span>
-            <span>GC ${gc}</span>
+            <span>PJ ${pj} - PG ${pg} - PE ${pe} - PP ${pp} - GF ${gf} - GC ${gc}</span>
         </div>
     </div>
     <div class="clasificacion-puntos">
