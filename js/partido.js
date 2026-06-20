@@ -47,22 +47,18 @@
         var horaStr = isNaN(fechaObj.getTime()) ? "" : formatTime(fechaObj);
 
         elHeader.innerHTML =
-            '<div class="pv-hero">' +
-                '<div class="pv-vs">' +
-                    '<div class="pv-team">' +
-                        '<img src="' + home.logo + '" class="pv-logo" alt="' + escHtml(home.name) + '" onerror="this.src=\'imagenes/stpls-icon.png\'">' +
-                        '<a href="equipo.html?id=' + encodeURIComponent(home.name) + '" class="pv-team-name">' + escHtml(home.name) + '</a>' +
-                    '</div>' +
-                    '<div class="pv-score-wrap">' +
-                        '<div class="pv-score">' + escHtml(score) + '</div>' +
-                    '</div>' +
-                    '<div class="pv-team">' +
-                        '<img src="' + away.logo + '" class="pv-logo" alt="' + escHtml(away.name) + '" onerror="this.src=\'imagenes/stpls-icon.png\'">' +
-                        '<a href="equipo.html?id=' + encodeURIComponent(away.name) + '" class="pv-team-name">' + escHtml(away.name) + '</a>' +
-                    '</div>' +
+            '<div class="pv-header-bar">' +
+                '<div class="pv-team">' +
+                    '<img src="' + home.logo + '" class="pv-logo" alt="' + escHtml(home.name) + '" onerror="this.src=\'imagenes/stpls-icon.png\'">' +
+                    '<a href="equipo.html?id=' + encodeURIComponent(home.name) + '" class="pv-team-name">' + escHtml(home.name) + '</a>' +
                 '</div>' +
-                '<div class="pv-meta"><span class="pv-meta-chip">📅 Jornada ' + escHtml(numJ) + ' · ' + escHtml(fechaStr) + ' · ' + escHtml(horaStr) + '</span></div>' +
-            '</div>';
+                '<div class="pv-score">' + escHtml(score) + '</div>' +
+                '<div class="pv-team">' +
+                    '<img src="' + away.logo + '" class="pv-logo" alt="' + escHtml(away.name) + '" onerror="this.src=\'imagenes/stpls-icon.png\'">' +
+                    '<a href="equipo.html?id=' + encodeURIComponent(away.name) + '" class="pv-team-name">' + escHtml(away.name) + '</a>' +
+                '</div>' +
+            '</div>' +
+            '<div class="pv-meta"><span class="pv-meta-chip">📅 Jornada ' + escHtml(numJ) + ' · ' + escHtml(fechaStr) + ' · ' + escHtml(horaStr) + '</span></div>';
     }
 
     /* ===== INFO BAR ===== */
@@ -161,7 +157,7 @@
                     '</div>' +
                 '</div>';
         });
-        html += '<div style="display:flex;justify-content:space-between;padding:8px 16px 6px;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;border-top:1px solid var(--border-color)"><span>' + escHtml(hName) + '</span><span>' + escHtml(aName) + '</span></div>';
+        html += '<div class="pv-stat-footer"><span>' + escHtml(hName) + '</span><span>' + escHtml(aName) + '</span></div>';
         html += '</div></div>';
         elContent.innerHTML = html;
     }

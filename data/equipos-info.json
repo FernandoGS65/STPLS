@@ -33,7 +33,7 @@
                         "recopa":  0,
                         "mundialClubes":  8
                     },
-    "AtlÃ©tico Madrid":  {
+    "Atlético Madrid":  {
                              "fundacion":  1903,
                              "ciudad":  "Madrid",
                              "estadio":  "Riyadh Air Metropolitano",
@@ -340,3 +340,4 @@
                        "mundialClubes":  0
                    }
 }
+
