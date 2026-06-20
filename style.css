@@ -1685,6 +1685,11 @@ footer{
     color:var(--accent-green);
     opacity:0.8;
 }
+.partido-reciente .icon-descarga{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
 @media(max-width:600px){
     .resultados-page{
@@ -1861,6 +1866,7 @@ footer{
         15px
         20px
         1fr
+        12px
         60px
         1fr
         30px;
@@ -1879,6 +1885,14 @@ footer{
 
     font-size:13px;
 }
+
+.partido-reciente .forma{grid-column:1;}
+.partido-reciente .jornada-partido{grid-column:2;}
+.partido-reciente .equipo-partido:first-of-type{grid-column:3;}
+.partido-reciente .icon-descarga{grid-column:4;}
+.partido-reciente .resultado-partido,.partido-reciente .link-partido{grid-column:5;}
+.partido-reciente .equipo-partido:last-of-type{grid-column:6;}
+.partido-reciente .link-video{grid-column:7;}
 
 .link-equipo{
 
@@ -1992,9 +2006,15 @@ footer{
 
     align-items:center;
 }
+.tab-placeholder{
+    padding:32px 16px;
+    text-align:center;
+    color:var(--text-muted);
+    font-size:14px;
+}
 /* ================================
    EQUIPO HEADER MODERNO
-================================ */
+=============================== */
 
 .equipo-hero{
     display:flex;

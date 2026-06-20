@@ -408,6 +408,21 @@ const videos =
 const equiposInfo =
     await respuestaInfo.json();
 
+    const descRespuesta =
+    await fetch(
+        APP.ruta("descargados")
+    );
+
+const descargados =
+    await descRespuesta.json();
+
+const matchIdsConDatos =
+    new Set(
+        descargados.map(
+            p => p.id.toString()
+        )
+    );
+
     const clasificacion =
         calcularClasificacion(
             datos.data
@@ -484,12 +499,14 @@ ultimos10.forEach(
     }
 );
 
-function renderPartidos(lista, conVideo) {
+function renderPartidos(lista) {
     let html = "";
     lista.forEach(partido => {
         const local = partido.homeTeam.name;
         const visitante = partido.awayTeam.name;
         const resultado = partido.state?.score?.current || "-";
+        const tieneDatos = matchIdsConDatos.has(partido.id.toString());
+        const id = partido.id;
 
         let icono = "⚪";
         if (partido.state && partido.state.score && partido.state.score.current) {
@@ -513,9 +530,10 @@ function renderPartidos(lista, conVideo) {
         <span class="forma">${icono}</span>
         <span class="jornada-partido">J${jornada}</span>
         <span class="equipo-partido">${local}</span>
-        <strong class="resultado-partido">${resultado}</strong>
+        ${tieneDatos ? '<svg class="icon-descarga" width="12" height="12" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7l2 2 3-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>' : ''}
+        ${tieneDatos ? '<a href="partido.html?matchId=' + id + '" class="link-partido resultado-partido">' + resultado + '</a>' : '<strong class="resultado-partido">' + resultado + '</strong>'}
         <span class="equipo-partido">${visitante}</span>
-        ${tieneVideo ? `<a href="video.html?id=${videoId}" class="link-video">🎥</a>` : ""}
+        ${tieneVideo ? '<a href="video.html?id=' + videoId + '" class="link-video"><svg class="icon-video" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 5.5v5l4-2.5z" fill="currentColor"/></svg></a>' : ''}
     </div>`;
     });
     return html;
@@ -579,12 +597,18 @@ document.getElementById(
 <div class="partidos-tabs">
     <span class="partidos-tab partidos-tab--active" data-ver="jugados">Jugados</span>
     <span class="partidos-tab" data-ver="proximos">Próximos</span>
+    <span class="partidos-tab" data-ver="plantilla">Plantilla</span>
+    <span class="partidos-tab" data-ver="noticias">Noticias</span>
+    <span class="partidos-tab" data-ver="fichajes">Fichajes</span>
     <span class="partidos-tab" data-ver="evolucion">Evolución</span>
 </div>
 
 <div class="ultimos-partidos">
     <div class="partidos-lista" id="pl-jugados">${htmlJugados}</div>
     <div class="partidos-lista" id="pl-proximos" style="display:none">${htmlProximos}</div>
+    <div class="partidos-lista" id="pl-plantilla" style="display:none"><p class="tab-placeholder">Próximamente: Plantilla</p></div>
+    <div class="partidos-lista" id="pl-noticias" style="display:none"><p class="tab-placeholder">Próximamente: Noticias</p></div>
+    <div class="partidos-lista" id="pl-fichajes" style="display:none"><p class="tab-placeholder">Próximamente: Fichajes</p></div>
     <div class="partidos-lista" id="pl-evolucion" style="display:none">
         <div class="evolucion-container">
             <div class="evolucion-controls">
@@ -605,6 +629,9 @@ document.getElementById(
         const ver = tab.dataset.ver;
         document.getElementById('pl-jugados').style.display = ver === 'jugados' ? '' : 'none';
         document.getElementById('pl-proximos').style.display = ver === 'proximos' ? '' : 'none';
+        document.getElementById('pl-plantilla').style.display = ver === 'plantilla' ? '' : 'none';
+        document.getElementById('pl-noticias').style.display = ver === 'noticias' ? '' : 'none';
+        document.getElementById('pl-fichajes').style.display = ver === 'fichajes' ? '' : 'none';
         document.getElementById('pl-evolucion').style.display = ver === 'evolucion' ? '' : 'none';
 
         if (ver === 'evolucion') {
