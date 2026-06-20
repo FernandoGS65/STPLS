@@ -9,6 +9,11 @@ function obtenerParametro(nombre) {
 
 }
 
+function escHtml(s) {
+    if (s == null) return "";
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
 function calcularClasificacion(partidos) {
 
     const tabla = {};
@@ -706,52 +711,125 @@ document.getElementById(
         if (el && el.style.display !== 'none') pintarEvo();
     });
 
+    function normalizarEquipoRSS(nombre) {
+        var map = {
+            'alaves': ['alavés', 'alaves'],
+            'athletic club': ['athletic', 'bilbao', 'athletic club'],
+            'atlético madrid': ['atlético', 'atletico', 'colchonero'],
+            'barcelona': ['barcelona', 'barça', 'fc barcelona', 'blaugrana'],
+            'celta de vigo': ['celta', 'céltico'],
+            'elche': ['elche'],
+            'espanyol': ['espanyol'],
+            'getafe': ['getafe'],
+            'girona': ['girona'],
+            'levante': ['levante'],
+            'mallorca': ['mallorca'],
+            'osasuna': ['osasuna'],
+            'oviedo': ['oviedo'],
+            'rayo vallecano': ['rayo', 'vallecano'],
+            'real betis': ['betis', 'real betis', 'bétic', 'verdiblanco'],
+            'real madrid': ['madrid', 'real madrid', 'merengue'],
+            'real sociedad': ['sociedad', 'real sociedad', 'txuri'],
+            'sevilla fc': ['sevilla', 'sevillista', 'nervión'],
+            'valencia': ['valencia', 'ché'],
+            'villarreal': ['villarreal', 'submarino']
+        };
+        var key = nombre.toLowerCase().trim();
+        return map[key] || [key];
+    }
+
+    function noticiaCoincideEquipo(titulo, nombreEquipo) {
+        var t = titulo.toLowerCase();
+        var palabras = normalizarEquipoRSS(nombreEquipo);
+        for (var i = 0; i < palabras.length; i++) {
+            if (t.indexOf(palabras[i]) !== -1) return true;
+        }
+        return false;
+    }
+
     async function cargarNoticias() {
         var container = document.getElementById('pl-noticias');
         if (!container) return;
-        var url = './data/noticias/' + slugEquipo + '.json';
-        try {
-            var resp = await fetch(url);
-            if (!resp.ok) throw new Error('No hay noticias para este equipo');
-            var data = await resp.json();
-            var noticias = data.noticias;
-            if (!noticias || noticias.length === 0) {
-                container.innerHTML = '<p class="tab-placeholder">No hay noticias recientes</p>';
-                return;
-            }
-            var ahora = new Date();
-            var html = '<div class="noticias-list">';
-            for (var i = 0; i < noticias.length; i++) {
-                var n = noticias[i];
-                var fecha = n.fecha;
-                if (fecha && fecha.length === 10) {
-                    var partes = fecha.split('-');
-                    var d = new Date(partes[0], partes[1] - 1, partes[2]);
-                    var diff = (ahora - d) / (1000 * 60 * 60 * 24);
-                    if (diff > 2) continue;
-                    fecha = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+        container.innerHTML = '<p class="tab-placeholder">Cargando noticias...</p>';
+
+        var corte = new Date();
+        corte.setDate(corte.getDate() - 3);
+        var feeds = [
+            { url: 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://e00-marca.uecdn.es/rss/futbol/primera-division.xml'), fuente: 'MARCA' },
+            { url: 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://www.sport.es/es/rss/futbol/rss.xml'), fuente: 'SPORT' }
+        ];
+
+        var todas = [];
+        for (var f = 0; f < feeds.length; f++) {
+            try {
+                var resp = await fetch(feeds[f].url);
+                var data = await resp.json();
+                if (data.status !== 'ok') continue;
+                for (var i = 0; i < data.items.length; i++) {
+                    var item = data.items[i];
+                    var fechaPub = new Date(item.pubDate);
+                    if (fechaPub < corte) continue;
+                    if (!noticiaCoincideEquipo(item.title, nombreEquipo)) continue;
+                    var dia = fechaPub.toDateString();
+                    var imagen = item.enclosure && item.enclosure.link ? item.enclosure.link : (item.thumbnail || '');
+                    if (!imagen && item.content) {
+                        var m = item.content.match(/src=["']([^"']+)["']/);
+                        if (m) imagen = m[1];
+                    }
+                    todas.push({
+                        titulo: item.title,
+                        fecha: fechaPub,
+                        fechaStr: fechaPub.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' }),
+                        url: item.link,
+                        imagen: imagen,
+                        fuente: feeds[f].fuente,
+                        dia: dia
+                    });
                 }
-                html += '<article class="noticia-card">';
-                if (n.imagen) {
-                    html += '<div class="noticia-img" style="background-image:url(' + n.imagen + ')"><span class="noticia-fuente-badge">' + n.fuente + '</span></div>';
-                }
-                html += '<div class="noticia-body">';
-                if (!n.imagen) {
-                    html += '<span class="noticia-fuente">' + n.fuente + '</span>';
-                }
-                html += '<h3 class="noticia-titulo">' + n.titulo + '</h3>';
-                html += '<div class="noticia-footer">';
-                html += '<span class="noticia-fecha">' + fecha + '</span>';
-                if (n.url) {
-                    html += '<a href="' + n.url + '" target="_blank" rel="noopener noreferrer" class="noticia-link">Leer más →</a>';
-                }
-                html += '</div></div></article>';
-            }
-            html += '</div>';
-            container.innerHTML = html;
-        } catch (e) {
-            container.innerHTML = '<p class="tab-placeholder">' + e.message + '</p>';
+            } catch(e) {}
         }
+
+        var dias = {};
+        todas.forEach(function(n) {
+            if (!dias[n.dia]) dias[n.dia] = [];
+            dias[n.dia].push(n);
+        });
+
+        var seleccion = [];
+        var keys = Object.keys(dias).sort().reverse();
+        keys.forEach(function(d) {
+            var delDia = dias[d].sort(function(a, b) { return b.fecha - a.fecha; });
+            delDia.slice(0, 5).forEach(function(n) { seleccion.push(n); });
+        });
+        seleccion.sort(function(a, b) { return b.fecha - a.fecha; });
+        seleccion = seleccion.slice(0, 15);
+
+        if (!seleccion.length) {
+            container.innerHTML = '<p class="tab-placeholder">No hay noticias recientes de ' + escHtml(nombreEquipo) + '</p>';
+            return;
+        }
+
+        var html = '<div class="noticias-list">';
+        for (var i = 0; i < seleccion.length; i++) {
+            var n = seleccion[i];
+            html += '<article class="noticia-card">';
+            if (n.imagen) {
+                html += '<div class="noticia-img" style="background-image:url(' + n.imagen + ')"><span class="noticia-fuente-badge">' + n.fuente + '</span></div>';
+            }
+            html += '<div class="noticia-body">';
+            if (!n.imagen) {
+                html += '<span class="noticia-fuente">' + n.fuente + '</span>';
+            }
+            html += '<h3 class="noticia-titulo">' + escHtml(n.titulo) + '</h3>';
+            html += '<div class="noticia-footer">';
+            html += '<span class="noticia-fecha">' + n.fechaStr + '</span>';
+            if (n.url) {
+                html += '<a href="' + n.url + '" target="_blank" rel="noopener noreferrer" class="noticia-link">Leer más →</a>';
+            }
+            html += '</div></div></article>';
+        }
+        html += '</div>';
+        container.innerHTML = html;
     }
 
 }
