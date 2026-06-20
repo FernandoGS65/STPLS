@@ -564,9 +564,8 @@ document.getElementById(
             <span class="equipo-hero-pts">${equipo.puntos} pts</span>
         </a>
         <div class="equipo-hero-info">
-            <span class="equipo-chip">🏟 ${info.estadio}</span>
-            <span class="equipo-chip">📅 ${info.fundacion}</span>
-            <a href="${info.web}" target="_blank" rel="noopener noreferrer" class="equipo-chip equipo-chip--link">🌐 Web</a>
+            <span class="equipo-chip">🏟 ${info.estadio} — ${info.capacidad}</span>
+            <span class="equipo-chip">📅 ${info.fundacion} · <a href="${info.web}" target="_blank" rel="noopener noreferrer" class="equipo-chip--link">🌐 Web oficial</a></span>
         </div>
     </div>
 </div>
