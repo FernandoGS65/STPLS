@@ -1793,7 +1793,12 @@ footer{
     margin-top:30px;
     margin-bottom:14px;
     border-bottom:1px solid var(--border-color);
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    overscroll-behavior-x:contain;
 }
+.partidos-tabs::-webkit-scrollbar{display:none;}
 
 .partidos-tab{
     padding:8px 20px;
@@ -1805,6 +1810,8 @@ footer{
     margin-bottom:-1px;
     transition:color 0.2s, border-color 0.2s;
     user-select:none;
+    flex-shrink:0;
+    white-space:nowrap;
 }
 
 .partidos-tab:hover{
