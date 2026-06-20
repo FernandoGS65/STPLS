@@ -8,7 +8,7 @@ $dataDir = "data/$Season/$Competition"
 $calendarioPath = "$dataDir/calendario.json"
 $noticiasDir = "data/noticias"
 $maxNoticias = 8
-$diasMaximos = 7
+$diasMaximos = 2
 
 if (-not (Test-Path $noticiasDir)) {
     New-Item -ItemType Directory -Path $noticiasDir -Force | Out-Null
@@ -32,7 +32,7 @@ function BuscarNoticias($nombre) {
         if (-not $items) { throw "Sin resultados" }
         if ($items -isnot [array]) { $items = @($items) }
 
-        $excluir = @('basket', 'baloncesto', 'acb', 'euroleague', 'handball', 'balonmano', 'futsal')
+        $excluir = @('basket', 'baloncesto', 'acb', 'euroleague', 'handball', 'balonmano', 'futsal', 'liga endesa', 'playoff final', 'nba', 'euroliga')
         $vistos = @{}
         $noticias = @()
 
@@ -40,6 +40,7 @@ function BuscarNoticias($nombre) {
             if ($noticias.Count -ge $maxNoticias) { break }
 
             $tituloRaw = $item.title
+            if ([string]::IsNullOrWhiteSpace($tituloRaw) -or $tituloRaw.Length -lt 20) { continue }
 
             $excluirMatch = $false
             foreach ($palabra in $excluir) {

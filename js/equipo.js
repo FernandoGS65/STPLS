@@ -729,7 +729,7 @@ document.getElementById(
                     var partes = fecha.split('-');
                     var d = new Date(partes[0], partes[1] - 1, partes[2]);
                     var diff = (ahora - d) / (1000 * 60 * 60 * 24);
-                    if (diff > 7) continue;
+                    if (diff > 2) continue;
                     fecha = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
                 }
                 html += '<article class="noticia-card">';
