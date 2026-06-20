@@ -1,0 +1,12 @@
+{
+  "seasons": [
+    {
+      "id": "2025-26",
+      "label": "2025/26",
+      "default": true,
+      "competitions": [
+        { "id": "liga", "label": "La Liga" }
+      ]
+    }
+  ]
+}

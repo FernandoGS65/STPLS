@@ -225,7 +225,7 @@ try {
 
     const respuesta =
         await fetch(
-            "./data/laliga2025.json"
+            APP.ruta("calendario")
         );
 
     const datos =
@@ -306,4 +306,4 @@ try {
 
 }
 
-cargarClasificacion();
+APP.onChange(function() { cargarClasificacion(); });

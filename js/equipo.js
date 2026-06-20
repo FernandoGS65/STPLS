@@ -383,7 +383,7 @@ async function cargarEquipo() {
 
     const videosRespuesta =
     await fetch(
-        "./data/videos.json"
+        APP.ruta("videos")
     );
 
 const videos =
@@ -394,7 +394,7 @@ const videos =
 
     const respuesta =
         await fetch(
-            "./data/laliga2025.json"
+            APP.ruta("calendario")
         );
 
     const datos =
@@ -670,4 +670,4 @@ document.getElementById(
 
 }
 
-cargarEquipo();
+APP.onChange(function() { cargarEquipo(); });

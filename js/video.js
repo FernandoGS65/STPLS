@@ -8,7 +8,7 @@ async function cargarVideo(){
         return;
     }
 
-    const resp = await fetch("./data/videos.json");
+    const resp = await fetch(APP.ruta("videos"));
     const videos = await resp.json();
     const entry = videos[id];
 
@@ -35,4 +35,4 @@ async function cargarVideo(){
     }
 }
 
-cargarVideo();
+APP.onChange(function() { cargarVideo(); });

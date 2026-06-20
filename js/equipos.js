@@ -159,7 +159,7 @@ async function cargarEquipos() {
 
         const respuesta =
             await fetch(
-                "./data/laliga2025.json"
+                APP.ruta("calendario")
             );
 
         const datos =
@@ -225,4 +225,4 @@ async function cargarEquipos() {
 
 }
 
-cargarEquipos();
+APP.onChange(function() { cargarEquipos(); });

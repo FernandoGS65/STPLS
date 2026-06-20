@@ -4,7 +4,7 @@ async function cargarResultados() {
 
         const respuesta =
             await fetch(
-                "./data/laliga2025.json"
+                APP.ruta("calendario")
             );
 
         const datos =
@@ -12,7 +12,7 @@ async function cargarResultados() {
 
             const respuestaVideos =
     await fetch(
-        "./data/videos.json"
+        APP.ruta("videos")
     );
 
 const videos =
@@ -20,7 +20,7 @@ const videos =
 
 const respuestaDesc =
     await fetch(
-        "./data/descargados.json"
+        APP.ruta("descargados")
     );
 
 const descargadosRaw =
@@ -262,4 +262,4 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
 
 }
 
-cargarResultados();
+APP.onChange(function() { cargarResultados(); });

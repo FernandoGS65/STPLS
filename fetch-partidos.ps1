@@ -3,7 +3,9 @@ param(
     [int]$BatchSize = 20,
     [string]$ConfigPath = "config.json",
     [ValidateSet("detail","lineups","boxscore")]
-    [string]$Mode = "detail"
+    [string]$Mode = "detail",
+    [string]$Season = "2025-26",
+    [string]$Competition = "liga"
 )
 
 if (-not (Test-Path $ConfigPath)) {
@@ -20,7 +22,16 @@ if ($config.apiKey -eq "TU_API_KEY_AQUI") {
     exit 1
 }
 
-$liga = Get-Content -Raw "data\laliga2025.json" -Encoding UTF8 | ConvertFrom-Json
+$dataDir = "data/$Season/$Competition"
+$calendarioPath = "$dataDir/calendario.json"
+$partidosDir = "$dataDir/partidos"
+$descargadosPath = "$dataDir/descargados.json"
+
+if (-not (Test-Path $partidosDir)) {
+    New-Item -ItemType Directory -Path $partidosDir -Force | Out-Null
+}
+
+$liga = Get-Content -Raw $calendarioPath -Encoding UTF8 | ConvertFrom-Json
 $matches = $liga.data | Sort-Object round, date
 $total = $matches.Count
 $endIndex = [Math]::Min($StartIndex + $BatchSize, $total)
@@ -28,7 +39,7 @@ $endIndex = [Math]::Min($StartIndex + $BatchSize, $total)
 $modeLabel = @{ "detail" = "Detalle del partido"; "lineups" = "Alineaciones"; "boxscore" = "Box score" }
 $endpoint = @{ "detail" = "matches/"; "lineups" = "lineups/"; "boxscore" = "box-score/" }
 
-Write-Host "=== Fetching $( $modeLabel[$Mode] ) ($StartIndex a $( $endIndex - 1 )) ===" -ForegroundColor Cyan
+Write-Host "=== Fetching $($modeLabel[$Mode]) ($StartIndex a $( $endIndex - 1 )) [Season: $Season / $Competition] ===" -ForegroundColor Cyan
 Write-Host "Limite diario: 100 calls | Este lote: $( $BatchSize ) calls" -ForegroundColor Yellow
 Write-Host ""
 
@@ -37,7 +48,7 @@ $ok = 0; $skip = 0; $fail = 0
 for ($i = $StartIndex; $i -lt $endIndex; $i++) {
     $m = $matches[$i]
     $matchId = $m.id
-    $outPath = "data/partidos/$matchId.json"
+    $outPath = "$partidosDir/$matchId.json"
 
     if ($Mode -eq "detail" -and (Test-Path $outPath)) {
         Write-Host "[$i/$total] $matchId ya existe, saltando" -ForegroundColor DarkGray
@@ -45,7 +56,7 @@ for ($i = $StartIndex; $i -lt $endIndex; $i++) {
         continue
     }
 
-    $label = "$( $m.homeTeam.name ) vs $( $m.awayTeam.name ) ($( $m.round ))"
+    $label = "$($m.homeTeam.name) vs $($m.awayTeam.name) ($($m.round))"
 
     try {
         Write-Host "[$i/$total] $label... " -NoNewline
@@ -66,7 +77,7 @@ for ($i = $StartIndex; $i -lt $endIndex; $i++) {
 
             $campo = if ($Mode -eq "lineups") { "lineups" } else { "boxScore" }
             $existente | Add-Member -MemberType NoteProperty -Name $campo -Value $adicional -Force
-            $existente | ConvertTo-Json -Depth 10 -Compress | Set-Content $outPath -Encoding UTF8
+            $existente | ConvertTo-Json -Depth 10 -Compress | ForEach-Object { [System.IO.File]::WriteAllText($outPath, $_, [System.Text.Encoding]::UTF8) }
         }
 
         Write-Host "OK" -ForegroundColor Green
@@ -82,13 +93,13 @@ for ($i = $StartIndex; $i -lt $endIndex; $i++) {
 
 # Regenerar indice de partidos descargados
 try {
-$liga = Get-Content -Raw "data\laliga2025.json" -Encoding UTF8 | ConvertFrom-Json
+    $liga = Get-Content -Raw $calendarioPath -Encoding UTF8 | ConvertFrom-Json
     $idx = @()
-    Get-ChildItem "data/partidos" -Name | ForEach-Object {
+    Get-ChildItem "$partidosDir" -Name | ForEach-Object {
         $id = [int]$_.Replace(".json","")
         $m = $liga.data | Where-Object { $_.id -eq $id } | Select-Object -First 1
         if (-not $m) { return }
-        $c = Get-Content -Raw "data/partidos\$_" -Encoding UTF8 | ConvertFrom-Json
+        $c = Get-Content -Raw "$partidosDir\$_" -Encoding UTF8 | ConvertFrom-Json
         $props = $c.PSObject.Properties.Name
         $j = [int]($m.round -replace 'Regular Season - ')
         [PSCustomObject]@{
@@ -102,7 +113,7 @@ $liga = Get-Content -Raw "data\laliga2025.json" -Encoding UTF8 | ConvertFrom-Jso
             lineups = ($null -ne $c.lineups)
             boxscore = ($null -ne $c.boxScore)
         }
-    } | Sort-Object jornada, date | ConvertTo-Json -Depth 5 | ForEach-Object { [System.IO.File]::WriteAllText("data\descargados.json", $_, [System.Text.Encoding]::UTF8) }
+    } | Sort-Object jornada, date | ConvertTo-Json -Depth 5 | ForEach-Object { [System.IO.File]::WriteAllText($descargadosPath, $_, [System.Text.Encoding]::UTF8) }
     Write-Host "Índice descargados.json regenerado" -ForegroundColor Green
 } catch {
     Write-Host "AVISO: No se pudo regenerar descargados.json: $_" -ForegroundColor Yellow
@@ -115,13 +126,13 @@ Write-Host ""
 
 if ($endIndex -lt $total) {
     Write-Host "Próximo lote:" -ForegroundColor Yellow
-    Write-Host "  .\fetch-partidos.ps1 -StartIndex $endIndex -BatchSize $BatchSize -Mode $Mode"
+    Write-Host "  .\fetch-partidos.ps1 -StartIndex $endIndex -BatchSize $BatchSize -Mode $Mode -Season $Season -Competition $Competition"
 }
 else {
     Write-Host "¡Todos los partidos completados en modo $Mode!" -ForegroundColor Green
     if ($Mode -eq "detail") {
         Write-Host "`nSiguiente paso:" -ForegroundColor Yellow
-        Write-Host "  .\fetch-partidos.ps1 -Mode lineups -StartIndex 0 -BatchSize 20"
-        Write-Host "  .\fetch-partidos.ps1 -Mode boxscore -StartIndex 0 -BatchSize 20"
+        Write-Host "  .\fetch-partidos.ps1 -Mode lineups -StartIndex 0 -BatchSize 20 -Season $Season -Competition $Competition"
+        Write-Host "  .\fetch-partidos.ps1 -Mode boxscore -StartIndex 0 -BatchSize 20 -Season $Season -Competition $Competition"
     }
 }

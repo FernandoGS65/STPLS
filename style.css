@@ -71,6 +71,35 @@ body{
     padding:15px 40px;
 }
 
+#nav-controls{
+    display:flex;
+    gap:8px;
+    align-items:center;
+}
+
+.nav-select{
+    background:rgba(255,255,255,0.1);
+    color:var(--text-primary);
+    border:1px solid var(--border-color);
+    border-radius:6px;
+    padding:4px 10px;
+    font-size:13px;
+    font-family:inherit;
+    cursor:pointer;
+    outline:none;
+    appearance:auto;
+}
+
+.nav-select:hover{
+    border-color:var(--accent-blue);
+}
+
+.light-mode .nav-select{
+    background:var(--bg-card);
+    border-color:var(--border-color);
+    color:var(--text-primary);
+}
+
 .logo{
     font-size:24px;
     font-weight:bold;

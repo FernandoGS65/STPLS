@@ -8,21 +8,25 @@
 
     if (!matchId) { showError("No se especificó partido."); return; }
 
-    Promise.all([
-        fetch("./data/partidos/" + matchId + ".json").then(function(r) {
-            if (!r.ok) throw new Error("El archivo de datos no existe en el servidor (HTTP " + r.status + "). Ejecuta fetch-partidos.ps1 para obtenerlo.");
-            return r.json();
-        }),
-        fetch("./data/laliga2025.json").then(function(r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-    ]).then(function(res) {
-        var d = res[0];
-        var liga = res[1];
-        var b = liga.data.find(function(m) { return m.id == matchId; });
-        if (!b) { showError("Partido no encontrado en laliga2025.json."); return; }
-        render(d, b);
-    }).catch(function(e) {
-        showError("Error: " + e.message);
-    });
+    function cargarPartido() {
+        Promise.all([
+            fetch(APP.ruta("partido", matchId)).then(function(r) {
+                if (!r.ok) throw new Error("El archivo de datos no existe (HTTP " + r.status + "). Ejecuta fetch-partidos.ps1 para obtenerlo.");
+                return r.json();
+            }),
+            fetch(APP.ruta("calendario")).then(function(r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        ]).then(function(res) {
+            var d = res[0];
+            var liga = res[1];
+            var b = liga.data.find(function(m) { return m.id == matchId; });
+            if (!b) { showError("Partido no encontrado en el calendario."); return; }
+            render(d, b);
+        }).catch(function(e) {
+            showError("Error: " + e.message);
+        });
+    }
+
+    APP.onChange(function() { cargarPartido(); });
 
     function showError(msg) {
         elContent.innerHTML = '<p style="padding:2rem;text-align:center;color:var(--text-muted);font-size:13px">' + msg + '</p>';
