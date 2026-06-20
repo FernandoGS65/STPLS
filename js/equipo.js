@@ -732,16 +732,20 @@ document.getElementById(
                     fecha = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
                 }
                 html += '<article class="noticia-card">';
+                if (n.imagen) {
+                    html += '<div class="noticia-img" style="background-image:url(' + n.imagen + ')"><span class="noticia-fuente-badge">' + n.fuente + '</span></div>';
+                }
                 html += '<div class="noticia-body">';
-                html += '<div class="noticia-meta">';
-                html += '<span class="noticia-fuente">' + n.fuente + '</span>';
-                html += '<span class="noticia-fecha">' + fecha + '</span>';
-                html += '</div>';
+                if (!n.imagen) {
+                    html += '<span class="noticia-fuente">' + n.fuente + '</span>';
+                }
                 html += '<h3 class="noticia-titulo">' + n.titulo + '</h3>';
+                html += '<div class="noticia-footer">';
+                html += '<span class="noticia-fecha">' + fecha + '</span>';
                 if (n.url) {
                     html += '<a href="' + n.url + '" target="_blank" rel="noopener noreferrer" class="noticia-link">Leer más →</a>';
                 }
-                html += '</div></article>';
+                html += '</div></div></article>';
             }
             html += '</div>';
             container.innerHTML = html;

@@ -1,85 +1,57 @@
 ﻿{
-    "ultimaActualizacion":  "2026-06-20T20:01:33Z",
+    "ultimaActualizacion":  "2026-06-20T20:51:53Z",
     "noticias":  [
                      {
-                         "id":  "sevilla-fc-6417",
-                         "titulo":  "El sevillismo hace historia y clama contra el consejo en una manifestación que supera a la de 1995",
-                         "resumen":  "El sevillismo hace historia y clama contra el consejo en una manifestación que supera a la de 1995\u0026nbsp;\u0026nbsp;El Desmarque",
-                         "fuente":  "El Desmarque",
-                         "url":  "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQX3lQOXd2eldzQ2VxN0liWWFEdmw2ajBSbFJGNUZJMVdabHJ0S3ptUDJPa2dPalA0eU1vMExJZVlzOXJORzMza1dCdzVwZHZpQUNoclJmWWNReFYxYjk0QlkxNGQ5MUI1NzFmb01meWZuSzNNdE1wNFpSV3BjMGRzcG9KQ3RqYnhRanFtd0JhXzd4SS1ZRGxfenpWSDFXVXozT084WVotcUgzNHVEWGdtdUNzaDV3OEZETTdSVVNfSVFEUE4xMVhYTQ?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "sevilla-fc-48602",
-                         "titulo":  "Sevilla",
-                         "resumen":  "Sevilla - Espanyol: resumen, resultado y goles del partido de LALIGA EA Sports\u0026nbsp;\u0026nbsp;MARCA",
+                         "id":  "sevilla-fc-81694",
                          "fuente":  "MARCA",
-                         "url":  "https://news.google.com/rss/articles/CBMisAFBVV95cUxQUGNXNjdqRjN1dTNId3dibEVLeUI2Rks1dEItTWF2d0J0cWdlOVE3RUlOYm1ENFVSZHdId3hMVG9Id2ptN1BmNVpVUzNvZmlQYk1odWZfRTJWODE4RGduc0lDNnV0RklRMEx2cHNpUG5lRHlJVXJ5cERPN0lNSno3UE90QnNaMGJmMEJPOFJ3bTZYZTZKWEpJWnJPYTdBaFdsSUI3NG1fR0pPZng4YVRQQdIBsAFBVV95cUxOWWZ5VWJBYkRkWUN6ajRyWXhzMzl4bWg1Y3l3ZlFJYkF3VXpEcG15R1BUTlphS084MnBJTDB3SDJ1QVpBVzA2VUtibmtGREtodE9IVWdBVVhuZll4V3BSMHJYZkRfc1VWbTUwSkVWLThiZC04Z05zeXRwZlVaSkdkczI0WHZ1S3YzcEpFaEVZUlRqQ0NCQmZBdUU5NDVSU01iREVRZzR5dlFsaTZDRUtKMA?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/18/17818198884869.jpg",
+                         "fecha":  "2026-06-18",
+                         "url":  "https://www.marca.com/futbol/sevilla/2026/06/18/sos-sevilla-fc-sevillismo-protagoniza-manifestacion-historica.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "SOS Sevilla FC: el sevillismo protagoniza una manifestaciÃ³n histÃ³rica",
+                                        "SEVILLA"
+                                    ]
                      },
                      {
-                         "id":  "sevilla-fc-81158",
-                         "titulo":  "Sevilla 0",
-                         "resumen":  "Sevilla 0-1 Real Madrid: resumen, goles y resultado\u0026nbsp;\u0026nbsp;Diario AS",
-                         "fuente":  "Diario AS",
-                         "url":  "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWXBySjlMV2prcnNfdW5pOXQ0MTlMQjduMS1FWWhKNEdidFZ4RXBfRUx1NndSanVZMlp3S1ByYl9CRU9uVnlKenhYNFcwOEZwUktjSkh1azlrelpyRjVIX2wyR3Z0Wl8xcm1feWQzT3h2Y2RSS3FTMlB5THJaaElUTTJrWjRLM3hlbl9hcjZoNFFEZjBSRnZGSWNzMUNSX3RCY0ptUzQwS1VuQ0t6QkJYYnZLLS1MOXpQMk9z0gHPAUFVX3lxTE8zU0luWWxWT1JvTjFad1RDYmpJQk1BVHhyMEhOcENrVlpHOWQ0MjVYSmdEb2FfU29nRlJyT2NoR3Z6MEM5WXlwUV80VzY1cXNJY1FyU2F3N0piZHc3VUdYdjVmRWY1dDZRaFVCMnF1TnRFM0dHOFliMU1sY3FodnozS1FjbkxLbWthUm9GUldKSU4tUUM3azg2WEZ6V01qd1U3c3VnN1JqdWwybGxNcm9MclhmamdXQzEzclN5b05vR1pVT0t2V1JOajhjNFlHUQ?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "id":  "sevilla-fc-50235",
+                         "fuente":  "MARCA",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/18/17817708878247.jpg",
+                         "fecha":  "2026-06-18",
+                         "url":  "https://www.marca.com/futbol/sevilla/2026/06/18/bade-le-da-bienvenida-sevilla-sangante-club-enorme-vas-disfrutar-ahi.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "BadÃ© le da la bienvenida al Sevilla a Sangante: \"Es un club enorme, vas a disfrutar ahÃ­\"",
+                                        "SEVILLA"
+                                    ]
                      },
                      {
-                         "id":  "sevilla-fc-60077",
-                         "titulo":  "Resultado del Sevilla – Real Madrid: resumen, goles, estadísticas y cómo ha quedado el partido de la Liga (0",
-                         "resumen":  "Resultado del Sevilla – Real Madrid: resumen, goles, estadísticas y cómo ha quedado el partido de la Liga (0-1)\u0026nbsp;\u0026nbsp;OkDiario",
-                         "fuente":  "OkDiario",
-                         "url":  "https://news.google.com/rss/articles/CBMijAFBVV95cUxNcVFkbUpRbERqVWt0SE10YWxpcldFVElMU3NVOERXWDAtYjlYRnRoaWNmd1JKYkQtSnAxZlJhWXMxNVozb1JjYnA3Zm1PQ0ZlaWxrRE4zWm12b3pmSERmTUhBU0JLTWNRdVoxSG5CZXExMU9KVEpBcW12WERHclVOVXZBN2l0ZmhCdWhCcdIBkgFBVV95cUxQdVRlb1kxVnJVbmNoQWowanAxXzN2SEF3U3QzZEFMdnNvd2lKM2NxQTVydXAtNVR3YXBNcWtnZF8zR3BpZDEyQXhWVzdBVGUxV2c2VTdQWXlSS3F1dWw0b2p5Z1luX3JLSWdyZFZqVWpNc2hOeFY4MDdVVGh6Qmc0NjhBOWQ2WGdJZVNfcDFaZHROUQ?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "id":  "sevilla-fc-48040",
+                         "fuente":  "MARCA",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2025/05/10/17468985758292.jpg",
+                         "fecha":  "2026-06-17",
+                         "url":  "https://www.marca.com/futbol/sevilla/2026/06/17/guridi-extension-luis-garcia-nuevo-sevilla.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "Guridi, la extensiÃ³n de Luis GarcÃ­a en el nuevo Sevilla",
+                                        "SEVILLA"
+                                    ]
                      },
                      {
-                         "id":  "sevilla-fc-11160",
-                         "titulo":  "Un 18",
-                         "resumen":  "Un 18-J para fijar otra imagen en la historia del Sevilla FC\u0026nbsp;\u0026nbsp;ABC",
-                         "fuente":  "ABC",
-                         "url":  "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbXNrQVBGbmpPWHZYSGoxZVV4UFcxaDN0LVlfTUY1Mzlkc09faW1KdFpGNTh2dUhocnh2c2F6Z2t6TUdZdVJGenV0X09tSDFtdmNhWkpjTmpnTlFNcDBxTW02NFM1M0NuVTJjMGtPNHRWYXlBN3pSSFVDQWxmNkZhX05jX3phbVdWdFVNOVdQR3Q5R1p5eERlUkZFV29TTXEzc3J3YWhZdnVNbzFiMUczdzA3dnloZXBnSUZHbzBCRdIBxAFBVV95cUxNZTNWYmVpc0o3MGxOZVVNRFpCMEJpUFZzcDd5TkRXYV9wdndJcFZ0d3N5WndpVEkzV1pzNUJocFZOVFFmWE43ZElpT203ZXBfZzRuZWNEY3NRNjFsLVM2M0pZa2NIaEFockZKdHRlcFlBb25jdGJDRlRpWm9DVFBnejRkM2hJbjRDS2U2R1QxTzVxOERUbmtqU0FfM250aXN2SUlrVnVYZk1YTjRIYkxjY29Pd0pGZWstVWYyeE1GS1pVRDhP?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "sevilla-fc-12425",
-                         "titulo":  "Villarreal 2",
-                         "resumen":  "Villarreal 2 - 3 Sevilla: Resultado, resumen, goles y clasificación | LaLiga EA Sports\u0026nbsp;\u0026nbsp;Mundo Deportivo",
-                         "fuente":  "Mundo Deportivo",
-                         "url":  "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOa0Y2Q1hYbWZsSV96SF9wYW9qX0EweUlRSWlhZ1lfVmczam9UTDVVSzVwNy0wVlFhNzBzSWpGVGcwNHRweGJRVFdvTWJ1emFDZlV3dnVwT1FaQ0ZnYzNKVGpDOXllQUJMNGpXSm9XS0s4dGJrSFUzSUlhcVJNUlJpSkFpQmFFSm4zZUZJdjV3MmZ2bnBtc3lCcnY3b0wwb1VXVFBnSm1UdS1KWW85V0pvSGVDN0tZSE5FX29wQzZCR2c0d2psYmxBM1JSV09jS1hnTDZNV3RkYmpTM2fSAegBQVVfeXFMTm8yd1poaFVGMWVMZ0cwTFNfUjFXYXlTS1J1SlctOF9BTzd2U0JDSm4wbXRCTGlDb1ZxT3B1THlyQVBRWFVNUGNSclBzTzhVVGxJaWk4N0M1QkZKVlZYcnBxRFFVTjF5X2JDeHFKNHg5NHR6WndsUW5IbDczanNGSXdtZHpJU2dzbUxHNndMQjFudi1zN3UxWFp0eE5aWXAzWmpPZ3lTaXpTTWRET2FRYmczMmN2dlRzYU9RVDhKWjRvelYwQ3gzazQ1UzBEa1ZoanVQTVJPRWE2WVg0Q2pkUGhmdnlPOGdYcA?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "sevilla-fc-94248",
-                         "titulo":  "\u0027SOS Sevilla FC\u0027, la manifestación que vuelve a unir al sevillismo: \"Esperar en la planta noble a que pase el cadáver o defenderlo\"",
-                         "resumen":  "\u0027SOS Sevilla FC\u0027, la manifestación que vuelve a unir al sevillismo: \"Esperar en la planta noble a que pase el cadáver o defenderlo\"\u0026nbsp;\u0026nbsp;Estadio Deportivo",
-                         "fuente":  "Estadio Deportivo",
-                         "url":  "https://news.google.com/rss/articles/CBMigwJBVV95cUxQZmFWSEZsVUNHUWdqZHcyREJzYVZsZndVd3hHVHNLYjlPa2lRTHVycWNYTHRXcFdUd3V6OWkwUFl5S0N0WU44RTk0Sm5EQmV4ZzdIdzdzS2NVS3U5S2plS1ZLOU5sV2Rva0VkM2NSQU1ndFZVWkVSRlV5LUQ3dGpTT1NyMkh0NkVDbjdCS09aUUZZS3lHcmd4b2NkQnFjaHAtUjdTOUlUUE95ZFZvQ1N0Sl90dlRpcWhNQkc1aE1Rb3d6d3B6TVMta3QtN05tLWtFdGhYWGtfZHctSHFiSDRsRFo1WUpISkdHZjE5YlhWRVJsc0xEb1NGRkRYV2Q0NWRhU0Nr?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "sevilla-fc-17576",
-                         "titulo":  "Las cuatro demandas clave del sevillismo tras la manifestación del 18",
-                         "resumen":  "Las cuatro demandas clave del sevillismo tras la manifestación del 18-J\u0026nbsp;\u0026nbsp;El Desmarque",
-                         "fuente":  "El Desmarque",
-                         "url":  "https://news.google.com/rss/articles/CBMizwFBVV95cUxOZGhPOHFZa0RiaEE5cDl5QXVvZFpwN3pNdXZYMGFpdFUxTEdrUUhJWjlCQVlwbkQ0OFZycTdEMko4eGVUaUlhalFRa0JWNXBNNXY1amttZ1N2cVNxWXI4YU9tU0NOaUFKVjJ6QjZPNnprZ25GenJmTDhMd3dvQWxvTjJHalAxdHJIcVFEZ3JNSzNYZG9jTmpQRjVwa3NrbDRoOWZVU1J3bk1mdGpwa0VhWnltbk9Sa29GYUJWdG1KSkIwWG4xb3Y0bm5DYzAwTjA?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "id":  "sevilla-fc-46557",
+                         "fuente":  "MARCA",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/16/17816081238727.jpg",
+                         "fecha":  "2026-06-16",
+                         "url":  "https://www.marca.com/futbol/sevilla/2026/06/16/sangante-nuevo-jugador-sevilla-2031.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "Sangante, nuevo jugador del Sevilla hasta 2031",
+                                        "SEVILLA"
+                                    ]
                      }
                  ]
 }

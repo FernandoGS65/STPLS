@@ -1,85 +1,70 @@
 ﻿{
-    "ultimaActualizacion":  "2026-06-20T20:01:29Z",
+    "ultimaActualizacion":  "2026-06-20T20:51:53Z",
     "noticias":  [
                      {
-                         "id":  "real-betis-39090",
-                         "titulo":  "Real Betis",
-                         "resumen":  "Real Betis - Levante en directo | LALIGA EA Sports hoy en vivo\u0026nbsp;\u0026nbsp;MARCA",
+                         "id":  "real-betis-10693",
                          "fuente":  "MARCA",
-                         "url":  "https://news.google.com/rss/articles/CBMirAFBVV95cUxQczFlQVo0ekVhVlVPbDdQeVlJazRQQzh3Tk90VWVsLVdzWjV0djBRUHFzdGN4OGI3anpKYzM3Z1ZhUVMyOFFzaUlOMF8tNHg4RThHT3JsaklWbk1mMEFudS1wSlRMWDhzTnpQbDJ4dXdubk51WkNsWUlvU2NfX2I3TE9iQnZHVVVxWnFJZWJZbEd3N055QlZncnhiV3d2TVN1X05QUThDZVlEelM40gGsAUFVX3lxTE5KcXh5TmFkaTBFZ182Y3pFbGh2Y0JBOUU5Ujh6Nk4yWlFHQ0dNRV9fNTM1OURoU19CQ0RuQVFMcVpLdDJFM01EdmNEb25wV21heXFQQWRnTE5oLTdkSGhnWDNmOEJfSkY5MGRpZ0ktQzgyX3g3b2ZlS0lFUjl0V2ZOWGFWeVFxOHUzZ3VxaXNoR3JSTjQ5eHFKTnlRbzZsWHJPTDNMSDdkMnJhbGE?oc=5",
-                         "imagen":  "",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2025/08/30/17565508796964.jpg",
                          "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "url":  "https://www.marca.com/futbol/betis/2026/06/20/vasco-gama-irrumpe-fuerza-deossa.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "El Vasco de Gama irrumpe con fuerza por Deossa",
+                                        "REAL BETIS"
+                                    ]
                      },
                      {
-                         "id":  "real-betis-1419",
-                         "titulo":  "Real Betis 2",
-                         "resumen":  "Real Betis 2-1 Elche: resumen, goles y resultado\u0026nbsp;\u0026nbsp;Diario AS",
-                         "fuente":  "Diario AS",
-                         "url":  "https://news.google.com/rss/articles/CBMingFBVV95cUxNYkowcWtlM2RNa1ctbnRTRkRVbm9uSGZpYng0RHlLRHZibWd5NEY4NGRmcXNSVzFLSjgydFk0ZG1selpnNlVLbUlNakpETHZub1RCZ3RIQk5zbktCR3RzeEMzYXhpZ1RNaFFuTG9IaG1TbGI5Y19xNkdhaGxHeUY1ajN0UHVZR29aZnB1Rks5UTBERFM0OHJreUNTT0lGZ9IBsgFBVV95cUxPRTN3RUt3eVF4UTI0RkZua0M2R3hvcW9Ea2pyV3lidzhRR0pMR2JyTTh4RGV0YkNzZDBJaXc0RkV3ZmdKRFFGX2hjdHc2VDQxaXpaVkdMNW5XSWZXRmduR3BqMW5mM0RISHNQNVJ4YVlpYjB0OUliZ3c3bVU1Y1VNTjlxSWd1SUVzcW1aYUVUZVJhOE15RWxWcmk5d2h3b2lRd2ZyYXZnNXpOYTJJQ1pyTlZB?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "id":  "real-betis-22083",
+                         "fuente":  "MARCA",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/19/17818829023743.jpg",
+                         "fecha":  "2026-06-19",
+                         "url":  "https://www.marca.com/futbol/betis/2026/06/19/betis-toma-posiciones-fran-garcia-aun-le-precio.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "El Betis toma posiciones por Fran GarcÃ­a, pero aÃºn se le va de precio",
+                                        "REAL BETIS"
+                                    ]
                      },
                      {
-                         "id":  "real-betis-85805",
-                         "titulo":  "Así te hemos contado la victoria del Barcelona ante el Betis en Liga",
-                         "resumen":  "Así te hemos contado la victoria del Barcelona ante el Betis en Liga\u0026nbsp;\u0026nbsp;EL PAÍS",
-                         "fuente":  "EL PAÍS",
-                         "url":  "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUV9HMXE3a1JkM0FTOWZ1dlVzMXVybTJrQloxYjZ1dGNRUS0xLUszcmhxYkpacWk1NHN0YlR2Ql9tUU5nLXRmUG1uWGpMTEk5eEpKYkpKWlh6MDNNdHpYMDFoZTZLcURBYWFFUk8tUm9fRHVWbDVFSlBCWl9ndGdJbzR4U0x2bXlta1pnSUVaS2pPQVBuNjAyZmFfaG9CYVpvcTNDZmtCd3VOQ0XSAb8BQVVfeXFMTVYzeHhzeG1NRE9ZcW9mS0JINkFCWmFtRkVnZnkwaUhxQXl4RU5fdWNZVl8yRVlRdkplZGthLVcycHUzOFU3T2pCYzlfSkFoV2J6YTIzaWRtc2EyVjlXWldtMjZxUVdmQUhKdWVlT3o4VzN4T1lIZmFjaW5xZWNmX0puOHV1dDU2SU82dEhydnN6WjZrY3p3VWNSeTJrNjB2UGVON0JIZl8xeC1YN3VHS0FCalpIbi1WRmlIWWNwazg?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "id":  "real-betis-73872",
+                         "fuente":  "MARCA",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/19/17818698789440.jpg",
+                         "fecha":  "2026-06-19",
+                         "url":  "https://www.marca.com/futbol/betis/2026/06/19/betis-traspasa-mateo-flores-arouca-reserva-50-futura-venta.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "El Betis traspasa a Mateo Flores al Arouca y se reserva el 50% de una futura venta",
+                                        "REAL BETIS"
+                                    ]
                      },
                      {
-                         "id":  "real-betis-68251",
-                         "titulo":  "El Real Betis supera los 20.000 abonados en apenas una semana",
-                         "resumen":  "El Real Betis supera los 20.000 abonados en apenas una semana\u0026nbsp;\u0026nbsp;Mundo Deportivo",
-                         "fuente":  "Mundo Deportivo",
-                         "url":  "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbUQ1QjdSZkcydVBxXzhjcXBKT1U1cnd2bFRqazFGUy13ZmdJRWdJT0swdEx1ZVRkSk0wa1l0VUFILXlLUkhoZHhnU3ZFSTRWRERxVlRRUlhGdTZvUkw2MG5Dd0U2M0UtYzl2N19rbV85QUJVN0RLYmFaYnlpWjFtanVQRXRRNEZ3RWtBcEhYcFZ1d1cyaFpWc2p3ZnJabEpFY0tjMU5tcGVWNjVXSEM40gG8AUFVX3lxTE52b1dieHFXNlhjQnZYdzcyZkZmS1NiXzhHem1LQW9WbDZFcjlXYTZNV1JkRFotNV8ycF9OY0N2dDYzTUhCM0VWbENyS1hQNVVGZFhLMnhwSHQzMFRCRGVtLWRERmVPOG5BdHVMdFotYmN6cjJjbFRQWFQwRnRlcjlfeThJbFEyQVZmWG85T0Itc0pjTl9SRUVrRkJQNk9GNGRGQjF0NWM3bF9yRExZUGh5WENLSVBZTmNpZEhp?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "id":  "real-betis-1990",
+                         "fuente":  "MARCA",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/18/17817682946401.jpg",
+                         "fecha":  "2026-06-18",
+                         "url":  "https://www.marca.com/futbol/betis/2026/06/18/betis-expectante-proxima-salida-ceballos-real-madrid.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "El Betis, expectante ante la prÃ³xima salida de Ceballos del Real Madrid",
+                                        "REAL BETIS"
+                                    ]
                      },
                      {
-                         "id":  "real-betis-30011",
-                         "titulo":  "FC Barcelona",
-                         "resumen":  "FC Barcelona - Real Betis, fútbol hoy en directo: resultado, goleadores y estadísticas en vivo del partido de La Liga\u0026nbsp;\u0026nbsp;El Español",
-                         "fuente":  "El Español",
-                         "url":  "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQcVYyc3VkOHk1TzNTNlZyZkZjWGg2Vm5ZbjdVd08wUHhFZVhId2s1REdJZDJvMnllT2Z2Rkg4UENOdXFscWI5R3Q4amZ5ZVpPZENicUYwUGdldENKdDl6Wnd5R1Fwd1YtSktNeHBFcjg2am1hX0pISzM1ejktSmtrMkdDYUd2ZGxXaUtleGVkVDF0UC1mT1ZSMmlZN0x4ME1nT0pLczdiMVZGMy1qc0twd05JNFp1RDVHekVpX0N4b0p1LVJGMlpZR1lyNGJhTFpWV21jTHpaOURZckQzWVZiM3U1S0dxWEFoeWQ2N1M4aXpnZw?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "real-betis-3166",
-                         "titulo":  "El Real Betis se ilusiona con un fichaje",
-                         "resumen":  "El Real Betis se ilusiona con un fichaje\u0026nbsp;\u0026nbsp;Fichajes.com",
-                         "fuente":  "Fichajes.com",
-                         "url":  "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcWc5S3AwY21LQ0lOS1I5S2k2LS1BVlJ1Ykkxb3Ytdm4yNlhEblhtXzhaeTBaY2tWajgwX3ZTYnJVT1hnTGRyMUVvb1dKamV5Mno4QXlRSmhnY2VFd3J0OGozcUhQQTlIZk0yaTZFQ3lWdk5vcTQwY3gtTlk2NHdES2ZXbVlLN1FmNEpiWHNDTQ?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "real-betis-60043",
-                         "titulo":  "El Betis quiere hacer un ‘doblete’ con el Madrid: Sus dos objetivos en el mercado",
-                         "resumen":  "El Betis quiere hacer un ‘doblete’ con el Madrid: Sus dos objetivos en el mercado\u0026nbsp;\u0026nbsp;Superdeporte",
-                         "fuente":  "Superdeporte",
-                         "url":  "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUUpiUm93SDgtbXZvTFhYYjYxWnV4bzJ1NzVTMi0yZnlLV05vSENOajZIdGxZNF9tVmh1Y1NKZG1ZMlBCaE02OGgtR1hvUlZMUlFVYWtHSXNoa0ZKakw4T3pRZ3pDUHFkQzRnOE9DODNZZUhtbU1jc1h6X2ZPZGdqOVc3RWp6UmRZb2M5dm1zRHVjYUhKejhmc3pvZjdneUtNVjRTSWxobEbSAa4BQVVfeXFMTU9tSjlTY050ekZPZFB4VHhjV2V2OVI1aDlaSWsxb0hjTnBTX1U1dGUzOTQ0NXZodnN0R015aDVMMjJFeDJMRi1TdjZlLVZBeE9kNHIzTUxOcXhhckp3WHEzUV9jelFYUnlsRG5TUE9qQXU0eFlWZ2R0cktQNUVDSUltRzcwdWp0aVdOY0w4c1BoakdEeVhSRzdJUnpvNWxPYnE3VWNGSzVEbnphM05B?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "real-betis-27966",
-                         "titulo":  "Barcelona",
-                         "resumen":  "Barcelona-Real Betis – Jornada 37 – Resumen, mejores momentos y estadísticas -Información en vivo – Hoy\u0026nbsp;\u0026nbsp;Eurosport",
-                         "fuente":  "Eurosport",
-                         "url":  "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZVBiZmpJSmFRZGlORHJwZFJpQlpERVZGTkpKM19XX0pRenQtMEtwbkttLUJFUXV4Yk5CMlR4WVdDNERENnhEOXhRcVVzWXZZUi1ZVGJBQy16Wl9UTU9yLXJOMlJqMWV1MVlxS3ZSQlU5Vng4cS13Rk1FX3RnNi0ycTlXcU00RE9MU0V3LTM2ai10cUJwMWNQY3ctRmh0Wm81dHRpOEJB?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "id":  "real-betis-83908",
+                         "fuente":  "MARCA",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/17/17817208215350.png",
+                         "fecha":  "2026-06-17",
+                         "url":  "https://www.marca.com/futbol/betis/2026/06/17/betis-confirma-tercer-amistoso-pretemporada-frente-granada.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "El Betis confirma su tercer amistoso de pretemporada, frente al Granada",
+                                        "REAL BETIS"
+                                    ]
                      }
                  ]
 }

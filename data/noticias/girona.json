@@ -1,85 +1,31 @@
 ﻿{
-    "ultimaActualizacion":  "2026-06-20T20:01:21Z",
+    "ultimaActualizacion":  "2026-06-20T20:51:53Z",
     "noticias":  [
                      {
-                         "id":  "girona-227",
-                         "titulo":  "Girona",
-                         "resumen":  "Girona - Real Sociedad en directo | Resumen, resultado y goles del partido\u0026nbsp;\u0026nbsp;MARCA",
+                         "id":  "girona-86708",
                          "fuente":  "MARCA",
-                         "url":  "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMmNUemdtbVB4dFlCVG5yb1RWWWhoU0JIYWR2by1zZlVDeUZnaE4tZVZySG56RkNkRzZqaE1KakhYS1JaV2pDdkFhTzBhRGxGTE1fR2VnLVduZlUtVzZ4UEJrZnJMWU16dF9vQngwUHBVN3UtaGttQVlsTkZEbElNQmRpem9ZbDNLX3h5SmhaQzVMY1dLOTdybk0xWnFoTEdUX3BpYlFvTEw2cVpmajF1ODAzdzdBRVnSAbcBQVVfeXFMTmFvZG1qTFRpTW5UdkFROXdJNGpRZk5TdzBMYTR2ZkExb09IOWg2Zk1iU2VuVVQzZEttdG5VR29YQUl2VU95T3lIUGtGdmZxQmhDeU02Qm9xbWVGako5TmdZcWt1OUtyc1VKMHJZUlU3N2VCMHJVemk1emhydHI4V3NQUmVab1FhWUVsSXJ3SHBOTXh1WDRSUFhCSlhRRE5qVWswYjJIbnBUNnYtWUJVOWVUZHFITnRF?oc=5",
-                         "imagen":  "",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/20/17819721099738.jpg",
                          "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "url":  "https://www.marca.com/futbol/girona/2026/06/20/girona-escoge-quique-alvarez-filial-ocupar-banquillo.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "El Girona escoge a Quique Ãlvarez, hasta ahora en el filial, para ocupar el banquillo",
+                                        "GIRONA"
+                                    ]
                      },
                      {
-                         "id":  "girona-53891",
-                         "titulo":  "Así te hemos contado el descenso del Girona y el Mallorca en la última jornada de la Liga",
-                         "resumen":  "Así te hemos contado el descenso del Girona y el Mallorca en la última jornada de la Liga\u0026nbsp;\u0026nbsp;EL PAÍS",
-                         "fuente":  "EL PAÍS",
-                         "url":  "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMEtHd1ZQVF9XVkpZaW1HdjdMaC00YldxZHhmMFA5bUJVMVBzLWRySHBxdEZrenZOMXV5UDVJb0x1U2NnQmFnQ1l3ZVM4RlJCWG5udHc5TzFRUDZhTlZzUHhZZ2pjQ1pUZGNPR3JqUUNSY241Mlo1eVdONFhDOHk4UEJnYURnSmZzUmRWUFdIcHZORzdGSS1LZjBmd19jR2EybkM3akx4ZU82YzV3VmgzTHpVNktpMjhZ0gHMAUFVX3lxTE1sMnJFcEVVOFIyTm9oM0JzT3RiUFd2TlBxQ0dLM3AtSV9TemVlS0QtcVRXejByR1NNT0tUMkhGNHNlRllBSWo2U1NiNlh4UDd0Q3R2Zm5tRjZmcXpvY09xNUN6Z0p3TmFWcE9ySWFVeUswc2p6ejlSbkZXRmMtbEpnbGtmM0cwYm1KU25Tbm94VkpSVUZKNDhYVG9DLXNfOU5WU2dXcjVMUHREMG1pRzd5TkpERzNibmhuX0ZBOFQwbDY5S29ueUtCUkR0Zg?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "girona-78455",
-                         "titulo":  "Rayo Vallecano 1",
-                         "resumen":  "Rayo Vallecano 1-1 Girona: resumen, goles y resultado\u0026nbsp;\u0026nbsp;Diario AS",
-                         "fuente":  "Diario AS",
-                         "url":  "https://news.google.com/rss/articles/CBMimgFBVV95cUxOejVSMkJQUWtvZ2c2NjNweDQzejJGWVJrYi1tS080RVM1cnhNdkU2QkV1QVk4OGVrQ1N2eDlXeVoxY3JyRzhkUVNHR2pjdXZodEdZYXFpTm8ybXRWbXlyX1p0VFhtSmpxYkZ4T1hyVTVwQlN2cDZLQmZoSy1TZjE3cXZaMm1JUTRSNXJOMXVhc1pvSFRaY3JJZ0JR0gGuAUFVX3lxTFBPUENibVJ0Yzd5a2M1X3R6UGEwNVZIRjZoTTVtS2lnSXBwY2poVkNyVzdneE94T3JPMjlWd2FzaXduRHBYRkcxVVNRX21xdDZYTlRKdkFBYnBjTjMzejhZclNZdTI3cFBQdmhCMTFNVXhZZkdpaHQ5cjhUZUlGRmlQVS00V3drVDZSSmtEUHF2RXJ0V1hKWmI2ZXY0Sm9QZDZ4TFJ4MFdKaEptNk51dw?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "girona-28340",
-                         "titulo":  "Girona y Mallorca se hunden en la tabla y Celta y Getafe se mantienen en Europa: el Sevilla, Valencia, Espanyol y Alavés, salvados",
-                         "resumen":  "Girona y Mallorca se hunden en la tabla y Celta y Getafe se mantienen en Europa: el Sevilla, Valencia, Espanyol y Alavés, salvados\u0026nbsp;\u0026nbsp;20Minutos",
-                         "fuente":  "20Minutos",
-                         "url":  "https://news.google.com/rss/articles/CBMiugFBVV95cUxNM00zam5JUkR3X25tZFR5cGJmemoxdHo2N3d1SEpqdTRmOC0wU3Myck1qa2luNkFBWTNOS2lOTVplZDBBU2lBWmJ4cWhzUDl3d0JiUi00SlB3YUp0RkZ1QjZFSWM1VWt3R040ZFJBeS02c3d2bU4yRHJfbjNZSzRwdjI1Q0t1WWJocmtpZURGSkZIY2pvX0dFWnkyMFNtd0ZySzlrbjZUMExuaVpzd21ZYUc0X0ZWcUhiSEE?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "girona-76310",
-                         "titulo":  "Rubén Blanco, con la vista en sol naciente",
-                         "resumen":  "Rubén Blanco, con la vista en sol naciente\u0026nbsp;\u0026nbsp;Atlántico",
-                         "fuente":  "Atlántico",
-                         "url":  "https://news.google.com/rss/articles/CBMilAFBVV95cUxQU3Z6WDkwRi1JZHMxNUxiNDNLbjJETXJXNDYzT3FoazB4MktzY3JWOERScDRhZmltS2w4bFJGcFM1U1NoWTBsUl9ObkZ3TDIxclpqMWJOdmN2dHVrS19jb0UzMjdFY2dWSi0zeEc4OGFLckdwSmVBRHg2V2xjaV85b29zU0VaZlU1STM2cTJnYmc0MXFr?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "girona-63802",
-                         "titulo":  "Girona y Mallorca descienden a Segunda; Celta y Getafe jugarán en Europa: así hemos contado la jornada 38 de Liga en Carrusel",
-                         "resumen":  "Girona y Mallorca descienden a Segunda; Celta y Getafe jugarán en Europa: así hemos contado la jornada 38 de Liga en Carrusel\u0026nbsp;\u0026nbsp;Cadena SER",
-                         "fuente":  "Cadena SER",
-                         "url":  "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMVFvWFFka2l5SkhRdVZ0MVpPTEhiVDhaWlVqem02OHhNUGRlSlBLRk1EZDdsNDdMRmpVVlQ1SXdNZUVzcVZfSVFCRGZFVDM4TFNjR3BCckYycGpiUmltdWVIeEctM2ktMk1jUVpXSTByUDJiSWx4bWZUeDM0eHk0THlMZHYyNXdQZGw4VlczM0VORzV0d1RjNUg4aTRDelN6Y3NwUUpCSkJUWVVWMU5ndFhxbE85MU92ZTZQcVZJXzNUV3PSAdcBQVVfeXFMUEVtbjI0UTFXU0R4TTFncEJHSkM5ZUh1aVpqUXMxV0UxR19wWWpkeDloMGdvOHBQb05kWFZYMDZzaXVsZmZnVnp0amRMYVNtRzNackUzMGd5dTdnSjgtMTBucWVfeW9HUE5lUTlTeS04RDJZOTFWRFFHQVdId1BxeG9IeHpuN1hEU0toRUEyNU03Ym5lWUwxbnJ6N1JuSmVIV1hyVlRuTEdUWkNzWFRjQjRtUTRxdTkzMXdjUkt1ekNkYVE5a0lrcUpIY1R0X0RKcFpmRi1OMzA?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "girona-755",
-                         "titulo":  "LaLiga EA Sports",
-                         "resumen":  "LaLiga EA Sports\u0026nbsp;\u0026nbsp;El Correo",
-                         "fuente":  "El Correo",
-                         "url":  "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTkNRdEJreklxYUxNaTNvM2VEbEpvRkI2Q0VpQ0ZMeFFJdHpWWDN3TDdYcWFuc0wyNlZOWjhISnNjUzd2S3ZXM2M3OE1oUUVFT2g4SjFSa2dtNVZLeWFUZXBuenI1RVF3bFZSdnhqUkhLNTZYb056UmY1Ym83QU8zMWtXT0g0OUpYTzFvMmNCbG51SzY2NVdlaWFYR1VvdWdRQWhETTJWeFU2T2xFb2wwODdJLWFiLUkw?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "girona-3770",
-                         "titulo":  "Atlético",
-                         "resumen":  "Atlético - Girona | Resumen de la despedida de Griezmann, resultado y goles del partido\u0026nbsp;\u0026nbsp;MARCA",
+                         "id":  "girona-88246",
                          "fuente":  "MARCA",
-                         "url":  "https://news.google.com/rss/articles/CBMisAFBVV95cUxPWTg5SGl0VVdVb2ctcElFS0pKUGZyTFFnbkRkQUNYYmV6SnQ3Nk9PRG9LdHdweWp1NG9TbGFVd1ZLZGM4ZkZUelVmZWVtZFpKZWFKWGtuRGIwOG54V1g5SnJsMTdtNV9ObjdPRXVLWDRrNDQ2SF9kVXU0X1A2SWNhSnp3U3hnWVJtdVdaZkYtbS1hdUItVXlQUC1ESlMwNW56UVBUZUJldzlnVlFIanR4LdIBsAFBVV95cUxQWlFvM0pfZGxmNXVsNlJnTVJwcG8zX0J1cWRMNks5ZGRpMTR4MEpSb3A5dW8yTHIzQzVnbWNDZkF5OFdpRVlkdmFPcjQtd0xfcEJrN3pJVGh3dWVSY1luM2pVYUJIcWVfeFFHSkx3WTAzNUJEWVR2R0M1MFl6Wkt1TnFZZzdZSmhDSjZSWE9DRzJWMjFZSW0ybnZDVm5Gb1dNUUFvTURta3NxaFY4UUhSdg?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/16/17816223759717.jpg",
+                         "fecha":  "2026-06-16",
+                         "url":  "https://www.marca.com/futbol/girona/2026/06/16/izan-gonzalez-nuevo-jugador-girona-2029.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "Izan GonzÃ¡lez, nuevo jugador del Girona hasta 2029",
+                                        "GIRONA"
+                                    ]
                      }
                  ]
 }

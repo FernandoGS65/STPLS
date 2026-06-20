@@ -1,85 +1,57 @@
 ﻿{
-    "ultimaActualizacion":  "2026-06-20T20:01:12Z",
+    "ultimaActualizacion":  "2026-06-20T20:51:52Z",
     "noticias":  [
                      {
-                         "id":  "athletic-club-84576",
-                         "titulo":  "Rego firma con el Athletic hasta 2030",
-                         "resumen":  "Rego firma con el Athletic hasta 2030\u0026nbsp;\u0026nbsp;La Razón",
-                         "fuente":  "La Razón",
-                         "url":  "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOS3lMSTdhWkgxVHM2U2M4cEFuY0dUeDFQZWRrbnVwVjhtTTlMZGNzQS1Xam15VDYyaHFuTkQ5akFMR19rMFl1NGhtS0lCQ0lFWVY0RnFtU203ZkUwMjQ3RHEzNTZSS3pucHVKN1A1ZHlKUENRLU1oODVITDJPVEhDWXdjazNheFZmbXpwOWk0dXJYUTAzRm5RaXdTLWh5T1BKR3RGd1BWa2PSAbwBQVVfeXFMUFBqdlVQVm1HVUUya1puSnVlNmZOcEdNYW9ScXN4bEc4V3pmSXNTX2dhcVNhSGIzNzgzQ0xLSTNQX2hvRldjekcwWENaNGxURUROLUJwRHdPUHZVTlBLZnAzZWlPQlVycTItUDZtWXBkVUM0WVVCQnEtbzlmMWtwWmZ5dFFvZFJwNXJtMFJ4S1pPdEoyMkxkbm91MS0zRnptdzVDM2NsVzQwTzdfOGlPUTJPUjZCN3dpdmlXYno?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "athletic-club-51724",
-                         "titulo":  "Real Madrid",
-                         "resumen":  "Real Madrid - Athletic: resumen, resultado y goles\u0026nbsp;\u0026nbsp;MARCA",
+                         "id":  "athletic-club-33057",
                          "fuente":  "MARCA",
-                         "url":  "https://news.google.com/rss/articles/CBMisgFBVV95cUxPN1FiSnZjaHM3WVliUkRPSUx2U0NaTm5Hamp2QTBaRnV2aFZOcld2aFJORHE3TmhNNjdMTEt5OThNM2FBbktsOG5rX0RWNnhNZXBXUW9LSTFwNWZoNS1STDQ4RHpORUJhY3hWRXE2eVBfQWhnaHdTTDM3M3FQSTNmTWtmLUZpRG9fMzNOMzdNdlNJU3d5b2ZQSUplbzRtaDFOeVRwOHpoTkNVcHVkaFhfSVRn0gGyAUFVX3lxTE1ZamFfaEN3QWhlc2dOWEtCZ0Nsa0xxV01YTHZUVVdTVVBmR1g0UWJVVGlaWDhIejF3dlhQTmw2NmkwQlRfampGRzFVdVNaZGd4R1VLUmpDcDhkRlA5Q09oVndqcGZ0ak1VbjlEOTZxLUNVZVJlWlNycm9EeFlHWVJvcTNuS2d2eHhMU0c4QURzRnN6SXBwMlJZZzkwSmVuUEwtNkc5MGdIaDZuMmQtTEFnMXc?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/19/17818779411936.png",
+                         "fecha":  "2026-06-19",
+                         "url":  "https://www.marca.com/futbol/athletic/2026/06/19/yuri-continuara-temporada-rojiblanco.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "Yuri continuarÃ¡ una temporada mÃ¡s como rojiblanco",
+                                        "ATHLETIC CLUB"
+                                    ]
                      },
                      {
-                         "id":  "athletic-club-55774",
-                         "titulo":  "Athletic Club 0",
-                         "resumen":  "Athletic Club 0 - 1 Valencia: resumen, resultado y gol\u0026nbsp;\u0026nbsp;Diario AS",
-                         "fuente":  "Diario AS",
-                         "url":  "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcnp1YlpEVkZjcl95QjNoRVh3M3hYdEtoakcta0ltT0tJMGlIODZLdnczSkI3eHoybjd6T2ROWlR4RWM5QURaMFZsdWtVTzZMb0hPN2pRbGlVSlY2MFdZWVpnQ3dfRk5lODJnYnEtYktrRFNoMFRRTlp2Mkx3R0tnZTVCYVJqU3dyWGxGU1loWjYtaVRqLWFWTEFNa2k1NmNTMzk4SXFR0gG6AUFVX3lxTFByQjRKUzhwNkRGem42VmhObGJlYllpR0pBY1huUzVtcmdiSHB5ZjlrRFZpMjRkRWxDNDBEQllBUlYtMkhyZE9rUmo2b1pacmNEeEFxX0hOM01ZWmJRbEhBYjZGMFJlZXF3NWZLeE0tanJHWXNNVzJrMVpNbFQ4RHROekl5UnJVOGp6N2kwRlVLRGxidnphTlZfblpOdEdhQmpvU25KWHdFbXlxR1o4V2JTSk1sMnBDejRvdw?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "id":  "athletic-club-98342",
+                         "fuente":  "MARCA",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/18/17817913432176.jpg",
+                         "fecha":  "2026-06-18",
+                         "url":  "https://www.marca.com/futbol/athletic/2026/06/18/duelo-primera-laredo-athletic-medira-racing.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "Un duelo de primera en Laredo: el Athletic se medirÃ¡ al Racing",
+                                        "ATHLETIC CLUB"
+                                    ]
                      },
                      {
-                         "id":  "athletic-club-32919",
-                         "titulo":  "Una opción de 15 M€ para el ataque del Athletic Club",
-                         "resumen":  "Una opción de 15 M€ para el ataque del Athletic Club\u0026nbsp;\u0026nbsp;Fichajes.com",
-                         "fuente":  "Fichajes.com",
-                         "url":  "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeDlzUHVrTG5WenFPZzZJSjVJMlZLWTREMkZjVldsS2x1cW9GQTRBUDd0U2lqVS1NMUhLcEtvenpFMVZNOXZpQld1Z2lXZ1VmQjJMd0V4a2pqNERYenVDcTlTMlpVR2FFTG9DcE5vUUVFbGRVaE90UUJROEZjLU1kR0NNVGE1Z0tDTlg1bThSZUdvcnJuNnQteEZCdHgyd0tOU0E?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "id":  "athletic-club-33199",
+                         "fuente":  "MARCA",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/17/17816968659713.jpg",
+                         "fecha":  "2026-06-17",
+                         "url":  "https://www.marca.com/futbol/athletic/2026/06/17/athletic-saca-pecho-torneo-pago-visperas-abrir-seleccion-nueva-academia.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "El Athletic saca pecho de su torneo de pago en vÃ­speras de abrir la selecciÃ³n para su nueva Academia",
+                                        "ATHLETIC CLUB"
+                                    ]
                      },
                      {
-                         "id":  "athletic-club-36825",
-                         "titulo":  "El Athletic Club renueva a Alejandro Rego hasta 2030",
-                         "resumen":  "El Athletic Club renueva a Alejandro Rego hasta 2030\u0026nbsp;\u0026nbsp;Diario de Burgos",
-                         "fuente":  "Diario de Burgos",
-                         "url":  "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZk1ubXBfUnpFTUFuTnVqQllZOVREdWFldEZJTXNoSk1PYjVzTXVtWTJ4ZndOak1XS1dISV9wZ09NZkJPcFRZdFlBM0pTc2d2V3ZkNl9XNlp1Z3hyWE02aUF5ZHdxQXRvODQ0R3BmbHJoa3E3ZVM0R2NLY21CME9VLXNveTNNYzltbUo4YWVRVDNSbmI0SG1YenFiUF9hZlZ6bWZFcjhaQm5YZ2RBNE43bmpNXzJ0X254aXRTQW5HUWJxeFhDTDNGbHJDaFBlOXc?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "athletic-club-39828",
-                         "titulo":  "Espanyol 2",
-                         "resumen":  "Espanyol 2 - 0 Athletic Club: resultado, resumen y goles | LaLiga EA Sports\u0026nbsp;\u0026nbsp;Mundo Deportivo",
-                         "fuente":  "Mundo Deportivo",
-                         "url":  "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOVVNQbndGRnd4NENYUFYxMlJMZXlDaXJPRy1vcXhjMW8xMFNXN1Z0ZW5uUGNVNDhST0JlQ1BNUWdDUTJZTHhOV25SS3B2d3pkbkpBdmtIWHM4MnFJVG4tZFJMQXF6NDBTSUIwMDZDWExMeF9kQXg0ZzktNnFEZVJLYmlNdkp4QlFPTDBFX084T0k0NzhIMEF6MTV6YlFCdk9JZEs2bmkybUFCZGU0ZF9HSmk5enZkdkZneWVKYXlKekFGWHNOYmpYWExBTnFucS1kQTZXMU1mNFhwZ0RuSDlGbtIB7gFBVV95cUxPb1FndHpuY2dTbEU0U241MGc2dGlnbWxjUHNZZFhRd1JfRFRrXzJNVFNydnBnUWZaU2lWUl9Rd3ZYRlJTS1BZbE0xNl9sV2xqT2NJOTNrdlpONnlVVW9Cb2FGLWIzVlpfSzZ0cHl6WkFlUmpDSTFreWVwWXFoV1Uwak5seEpBQVotajRsaS1hU05uQmJEUkJhUHdranRnSzJsd0NTTnFCRTJWNDR0S193LVdjeEVSMzRITE0wQXZxZU82SXV1dXpYTTIyN0ZNMjFpc0N0R0c3STBFVEpvbTlWTkZ0MU9KYVVEWjR2dHNn?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "athletic-club-14958",
-                         "titulo":  "Dani García, exjugador del Athletic Club: \"Le tenía miedo a Messi\"",
-                         "resumen":  "Dani García, exjugador del Athletic Club: \"Le tenía miedo a Messi\"\u0026nbsp;\u0026nbsp;SPORT",
-                         "fuente":  "SPORT",
-                         "url":  "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMTFwYXJnYWh0TTdSVWdSNU90TDZ3cE50aU5QWHl4OFZ1QnNFSlZBVmRBb05Rdk0yQUVNeVhzV0lBRElETFJQcnlscWh6a2w5ODI4eGVld0txY1BJRzN3M0ttUTBZVXFKWjFNUHBSSlNRNXVBckhlWG9nNmdHUUR1LVpLYS1ud1hBbENvXzNn0gGOAUFVX3lxTE82eDFaaFYwOHUzR0UwTkdsZGh3ZDNjU2NaZ2lZVWtNSW9GTldVRGNSYVRHMDNzNThrYlZJbG1rUU1RN3diSlNCUklpSkRKSngwNG56Q3RCMFY5aWdsaW9WcGhHeHFSLUpXOEJHd2RhU21RS05Rb0dZd0dSZHh3TjRldm5iUU9GOTZrY3dnMFE?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
-                     },
-                     {
-                         "id":  "athletic-club-91702",
-                         "titulo":  "Real Madrid 4",
-                         "resumen":  "Real Madrid 4-2 Athletic Club: resumen, goles y resultado\u0026nbsp;\u0026nbsp;Diario AS",
-                         "fuente":  "Diario AS",
-                         "url":  "https://news.google.com/rss/articles/CBMinwFBVV95cUxPaVZQR1lJX1lGbUJZSTI4NldVLW9EOHd2NEJJZzR0VVVQQWF6eE1ZZVJIOC1VVlY5MmVSR2pSMG1RRUE0Q3FpYW81OTY2bkpUMGRlcnFzQldyVC1BNEVxLUVGT3VmSkZYUkszdUNGd0lFNERnUGk0RGZTMlVWNXd6OXdTWURmemxwbE1iSVRvMlpKaUR0Y0g5VnVXckw2ODTSAbMBQVVfeXFMUGZyU3MzYTdoUmE0cmI5Ny1hMVhwWFR2TjVkeHhhMlZIamNqd2hUREhXcS1sTkh6SzI0Z0ZFLUwzenhoZVJ3UG5fbHpPeHN0cXRsWDRKeEppbHJxdXBXQWJzZVdaNjBxd01TNnplZHVSYmw4QVBNRlRHT0FPQ1lwNGJ0SU92dm9fTUE5Wjd5cm0xNzczQk03NW5rQi11d3A0THNqZERLVUkteE1wbTVsRUJWamM?oc=5",
-                         "imagen":  "",
-                         "fecha":  "2026-06-20",
-                         "categoria":  "noticia"
+                         "id":  "athletic-club-48763",
+                         "fuente":  "MARCA",
+                         "resumen":  "",
+                         "imagen":  "https://objetos.estaticos-marca.com/assets/multimedia/imagenes/2026/06/16/17816067182083.jpg",
+                         "fecha":  "2026-06-16",
+                         "url":  "https://www.marca.com/futbol/athletic/2026/06/16/seleccion-euskadi-campeona-uefa-reunira-volver-jugar-21-anos-despues-partido-solidario.html",
+                         "categoria":  "noticia",
+                         "titulo":  [
+                                        "La selecciÃ³n de Euskadi campeona UEFA se reunirÃ¡ para volver a jugar 21 aÃ±os despuÃ©s en un partido solidario",
+                                        "ATHLETIC CLUB"
+                                    ]
                      }
                  ]
 }
