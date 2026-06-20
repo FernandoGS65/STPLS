@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -19,66 +19,59 @@
     <div class="nav-top">
         <a href="index.html" class="nav-logo">STPLS</a>
         <div id="nav-controls"></div>
-        <button id="themeToggle" aria-label="Cambiar tema">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-        </button>
     </div>
     <div id="nav-icons" class="nav-icons"></div>
 </nav>
 
-<header class="hero">
-    <div class="hero-content">
-        <div class="hero-logo">STPLS</div>
-        <p class="hero-subtitle">Resultados, clasificaciones y estadísticas del fútbol español</p>
-        <div class="hero-stats">
-            <span class="hero-stat">
-                <strong id="heroTotalPartidos">—</strong>
-                Partidos
-            </span>
-            <span class="hero-stat">
-                <strong id="heroTotalGoles">—</strong>
-                Goles
-            </span>
-            <span class="hero-stat">
-                <strong id="heroTotalEquipos">20</strong>
-                Equipos
-            </span>
-        </div>
-    </div>
-</header>
-
 <main class="index-page">
-    <div class="index-grid">
-        <section class="card-index">
-            <div class="card-index-header">
-                <h2>Clasificación</h2>
-                <a href="clasificaciones.html" class="card-index-link">Ver todas →</a>
+    <div class="ligas-grid">
+        <a href="resultados.html?comp=liga" class="liga-card liga-card--active">
+            <div class="liga-logo">
+                <svg viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="4"/>
+                    <path d="M50 10 L55 40 L85 40 L60 58 L70 88 L50 70 L30 88 L40 58 L15 40 L45 40 Z" fill="currentColor" opacity="0.9"/>
+                </svg>
             </div>
-            <div id="index-clasificacion" class="card-index-body">Cargando...</div>
-        </section>
-
-        <section class="card-index">
-            <div class="card-index-header">
-                <h2>Últimos resultados</h2>
-                <a href="resultados.html" class="card-index-link">Ver todos →</a>
+            <span class="liga-nombre">La Liga</span>
+            <span class="liga-estado">Activo</span>
+        </a>
+        <div class="liga-card liga-card--disabled">
+            <div class="liga-logo">
+                <svg viewBox="0 0 100 100" fill="none">
+                    <rect x="15" y="25" width="70" height="55" rx="5" stroke="currentColor" stroke-width="4"/>
+                    <path d="M35 25 L50 5 L65 25" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                    <path d="M35 45 L50 40 L65 45" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M35 55 L50 50 L65 55" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M35 65 L50 60 L65 65" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
             </div>
-            <div id="index-resultados" class="card-index-body">Cargando...</div>
-        </section>
-
-        <section class="card-index">
-            <div class="card-index-header">
-                <h2>Próximos partidos</h2>
-                <a href="resultados.html" class="card-index-link">Calendario →</a>
+            <span class="liga-nombre">Premier League</span>
+            <span class="liga-estado">Próximamente</span>
+        </div>
+        <div class="liga-card liga-card--disabled">
+            <div class="liga-logo">
+                <svg viewBox="0 0 100 100" fill="none">
+                    <ellipse cx="50" cy="50" rx="40" ry="45" stroke="currentColor" stroke-width="4"/>
+                    <path d="M50 15 L55 40 L80 40 L60 55 L70 80 L50 65 L30 80 L40 55 L20 40 L45 40 Z" fill="currentColor" opacity="0.6"/>
+                </svg>
             </div>
-            <div id="index-proximos" class="card-index-body"></div>
-        </section>
-
-        <section class="card-index">
-            <div class="card-index-header">
-                <h2>Datos de la temporada</h2>
+            <span class="liga-nombre">Serie A</span>
+            <span class="liga-estado">Próximamente</span>
+        </div>
+        <div class="liga-card liga-card--disabled">
+            <div class="liga-logo">
+                <svg viewBox="0 0 100 100" fill="none">
+                    <path d="M50 10 L65 30 L90 35 L72 55 L78 85 L50 70 L22 85 L28 55 L10 35 L35 30 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                    <circle cx="50" cy="48" r="10" stroke="currentColor" stroke-width="3"/>
+                    <path d="M50 38 L50 25" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M50 58 L50 70" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M38 48 L25 48" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M62 48 L75 48" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
             </div>
-            <div id="index-stats" class="card-index-body">Cargando...</div>
-        </section>
+            <span class="liga-nombre">Champions</span>
+            <span class="liga-estado">Próximamente</span>
+        </div>
     </div>
 </main>
 
@@ -87,8 +80,6 @@
 </footer>
 
 <script src="js/app.js"></script>
-<script src="js/index.js"></script>
-<script src="js/proximos-partidos.js"></script>
 
 </body>
 </html>
