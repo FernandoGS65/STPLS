@@ -18,6 +18,18 @@ async function cargarResultados() {
 const videos =
     await respuestaVideos.json();
 
+const respuestaDesc =
+    await fetch(
+        "./data/descargados.json"
+    );
+
+const descargadosRaw =
+    await respuestaDesc.json();
+
+const descargados = new Set(
+    descargadosRaw.map(d => d.id)
+);
+
         const partidos =
             datos.data;
 
@@ -74,7 +86,8 @@ const videos =
         mostrarJornada(
     jornadas[0],
     partidos,
-    videos
+    videos,
+    descargados
 );
         selector.addEventListener(
             "change",
@@ -83,7 +96,8 @@ const videos =
                 mostrarJornada(
     selector.value,
     partidos,
-    videos
+    videos,
+    descargados
 );
 
             }
@@ -117,7 +131,8 @@ function normalizarEquipo(nombre){
 function mostrarJornada(
     jornada,
     partidos,
-    videos
+    videos,
+    descargados
 ){
 
     const contenedor =
@@ -171,6 +186,10 @@ const videoId =
 
 const tieneVideo =
     videos[videoId];
+
+const tieneDatos =
+    descargados && descargados.has(partido.id);
+
         const fecha = new Date(partido.date);
         const fechaStr = fecha.toLocaleDateString("es-ES", {
             weekday:"short", day:"numeric", month:"short"
@@ -189,6 +208,8 @@ const tieneVideo =
             src="${partido.homeTeam.logo}"
             class="escudo-partido"
             alt="${partido.homeTeam.name}">
+
+${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7l2 2 3-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>' : ''}
 
        <a
     href="equipo.html?id=${encodeURIComponent(
@@ -228,7 +249,7 @@ const tieneVideo =
 </div>
 
 <div class="video-resultado${tieneVideo ? '' : ' video-resultado--empty'}">
-    ${tieneVideo ? `<a href="video.html?id=${videoId}">🎥</a>` : ''}
+    ${tieneVideo ? '<a href="video.html?id=' + videoId + '" class="link-video"><svg class="icon-video" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 5.5v5l4-2.5z" fill="currentColor"/></svg></a>' : ''}
 </div>
 
 `;

@@ -20,7 +20,7 @@ if ($config.apiKey -eq "TU_API_KEY_AQUI") {
     exit 1
 }
 
-$liga = Get-Content -Raw "data\laliga2025.json" | ConvertFrom-Json
+$liga = Get-Content -Raw "data\laliga2025.json" -Encoding UTF8 | ConvertFrom-Json
 $matches = $liga.data | Sort-Object round, date
 $total = $matches.Count
 $endIndex = [Math]::Min($StartIndex + $BatchSize, $total)
@@ -52,7 +52,7 @@ for ($i = $StartIndex; $i -lt $endIndex; $i++) {
 
         if ($Mode -eq "detail") {
             $resp = Invoke-RestMethod -Uri "$baseUrl/$($endpoint[$Mode])$matchId" -Headers $headers -Method Get
-            $resp | ConvertTo-Json -Depth 10 -Compress | Set-Content $outPath -Encoding UTF8
+            $resp | ConvertTo-Json -Depth 10 -Compress | ForEach-Object { [System.IO.File]::WriteAllText($outPath, $_, [System.Text.Encoding]::UTF8) }
         }
         else {
             $endpointUrl = "$baseUrl/$($endpoint[$Mode])$matchId"
@@ -82,13 +82,13 @@ for ($i = $StartIndex; $i -lt $endIndex; $i++) {
 
 # Regenerar indice de partidos descargados
 try {
-    $liga = Get-Content -Raw "data\laliga2025.json" | ConvertFrom-Json
+$liga = Get-Content -Raw "data\laliga2025.json" -Encoding UTF8 | ConvertFrom-Json
     $idx = @()
     Get-ChildItem "data/partidos" -Name | ForEach-Object {
         $id = [int]$_.Replace(".json","")
         $m = $liga.data | Where-Object { $_.id -eq $id } | Select-Object -First 1
         if (-not $m) { return }
-        $c = Get-Content -Raw "data/partidos\$_" | ConvertFrom-Json
+        $c = Get-Content -Raw "data/partidos\$_" -Encoding UTF8 | ConvertFrom-Json
         $props = $c.PSObject.Properties.Name
         $j = [int]($m.round -replace 'Regular Season - ')
         [PSCustomObject]@{
@@ -102,7 +102,7 @@ try {
             lineups = ($null -ne $c.lineups)
             boxscore = ($null -ne $c.boxScore)
         }
-    } | Sort-Object jornada, date | ConvertTo-Json -Depth 5 | Set-Content "data\descargados.json" -Encoding UTF8
+    } | Sort-Object jornada, date | ConvertTo-Json -Depth 5 | ForEach-Object { [System.IO.File]::WriteAllText("data\descargados.json", $_, [System.Text.Encoding]::UTF8) }
     Write-Host "Índice descargados.json regenerado" -ForegroundColor Green
 } catch {
     Write-Host "AVISO: No se pudo regenerar descargados.json: $_" -ForegroundColor Yellow

@@ -19,7 +19,7 @@
     "Real Madrid":  {
                         "fundacion":  1902,
                         "ciudad":  "Madrid",
-                        "estadio":  "Santiago BernabÃ©u",
+                        "estadio":  "Santiago Bernabéu",
                         "capacidad":  85000,
                         "temporadasPrimera":  94,
                         "liga":  36,
@@ -50,7 +50,7 @@
                              "recopa":  0,
                              "mundialClubes":  0
                          },
-    "AlavÃ©s":  {
+    "Alavés":  {
                     "fundacion":  1921,
                     "ciudad":  "Vitoria-Gasteiz",
                     "estadio":  "Mendizorrotza",
@@ -70,7 +70,7 @@
     "Athletic Club":  {
                           "fundacion":  1898,
                           "ciudad":  "Bilbao",
-                          "estadio":  "San MamÃ©s",
+                          "estadio":  "San Mamés",
                           "capacidad":  53289,
                           "temporadasPrimera":  94,
                           "liga":  8,
@@ -87,7 +87,7 @@
     "Celta de Vigo":  {
                           "fundacion":  1923,
                           "ciudad":  "Vigo",
-                          "estadio":  "BalaÃ­dos",
+                          "estadio":  "Balaídos",
                           "capacidad":  24870,
                           "temporadasPrimera":  59,
                           "liga":  0,
@@ -104,7 +104,7 @@
     "Elche":  {
                   "fundacion":  1923,
                   "ciudad":  "Elche",
-                  "estadio":  "MartÃ­nez Valero",
+                  "estadio":  "Martínez Valero",
                   "capacidad":  31388,
                   "temporadasPrimera":  25,
                   "liga":  0,
@@ -172,7 +172,7 @@
     "Levante":  {
                     "fundacion":  1909,
                     "ciudad":  "Valencia",
-                    "estadio":  "Ciutat de ValÃ¨ncia",
+                    "estadio":  "Ciutat de València",
                     "capacidad":  26354,
                     "temporadasPrimera":  18,
                     "liga":  0,
@@ -257,7 +257,7 @@
     "Real Betis":  {
                        "fundacion":  1907,
                        "ciudad":  "Sevilla",
-                       "estadio":  "Benito VillamarÃ­n",
+                       "estadio":  "Benito Villamarín",
                        "capacidad":  60721,
                        "temporadasPrimera":  59,
                        "liga":  1,
@@ -273,7 +273,7 @@
                    },
     "Real Sociedad":  {
                           "fundacion":  1909,
-                          "ciudad":  "San SebastiÃ¡n",
+                          "ciudad":  "San Sebastián",
                           "estadio":  "Reale Arena",
                           "capacidad":  39313,
                           "temporadasPrimera":  78,
@@ -291,7 +291,7 @@
     "Sevilla FC":  {
                        "fundacion":  1890,
                        "ciudad":  "Sevilla",
-                       "estadio":  "RamÃ³n SÃ¡nchez-PizjuÃ¡n",
+                       "estadio":  "Ramón Sánchez-Pizjuán",
                        "capacidad":  43883,
                        "temporadasPrimera":  81,
                        "liga":  1,
@@ -316,7 +316,7 @@
                      "copaRey":  8,
                      "supercopa":  1,
                      "web":  "https://www.valenciacf.com",
-                     "apodo":  "ChÃ©s",
+                     "apodo":  "Chés",
                      "colores":  "Blanco y naranja",
                      "europaLeague":  1,
                      "recopa":  1,
@@ -325,7 +325,7 @@
     "Villarreal":  {
                        "fundacion":  1923,
                        "ciudad":  "Villarreal",
-                       "estadio":  "Estadio de la CerÃ¡mica",
+                       "estadio":  "Estadio de la Cerámica",
                        "capacidad":  23000,
                        "temporadasPrimera":  23,
                        "liga":  0,
