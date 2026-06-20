@@ -1,55 +1,85 @@
-{
-  "ultimaActualizacion": "2026-06-20T10:00:00Z",
-  "noticias": [
-    {
-      "id": "bar-001",
-      "titulo": "Lamine Yamal renueva hasta 2030: \"Este es mi club\"",
-      "resumen": "El extremo de 18 años firma su renovación con el FC Barcelona hasta 2030 con una cláusula de 1.000 millones de euros. La joya de La Masía seguirá siendo el estandarte del proyecto azulgrana.",
-      "fuente": "Marca",
-      "url": "https://www.marca.com/futbol/barcelona/lamine-yamal-renovacion-2030.html",
-      "imagen": "https://picsum.photos/seed/bar-001/400/200",
-      "fecha": "2026-06-19",
-      "categoria": "club"
-    },
-    {
-      "id": "bar-002",
-      "titulo": "El Barça cierra el fichaje de Jonathan Tah para la próxima temporada",
-      "resumen": "El central alemán del Bayer Leverkusen llega libre tras finalizar su contrato. Hansi Flick pedía un refuerzo para la zaga y Tah era su prioridad desde hace meses.",
-      "fuente": "Sport",
-      "url": "https://www.sport.es/es/noticias/barca/jonathan-tah-fichaje-barcelona-2026.html",
-      "imagen": "https://picsum.photos/seed/bar-002/400/200",
-      "fecha": "2026-06-18",
-      "categoria": "fichajes"
-    },
-    {
-      "id": "bar-003",
-      "titulo": "Pedri vuelve a los entrenamientos tras superar su lesión muscular",
-      "resumen": "El centrocampista canario completó la sesión con el grupo después de tres semanas de baja. Su recuperación abre un abanico de posibilidades tácticas para Flick de cara al tramo decisivo.",
-      "fuente": "Mundo Deportivo",
-      "url": "https://www.mundodeportivo.com/futbol/fc-barcelona/pedri-vuelve-entrenamientos-2026.html",
-      "imagen": "https://picsum.photos/seed/bar-003/400/200",
-      "fecha": "2026-06-17",
-      "categoria": "plantilla"
-    },
-    {
-      "id": "bar-004",
-      "titulo": "El Barça presenta su nueva equipación 2026-27 inspirada en el 92",
-      "resumen": "El club azulgrana ha desvelado la camiseta de la próxima temporada que rinde homenaje al equipo que ganó la primera Champions en Wembley. Los socios ya pueden reservarla.",
-      "fuente": "AS",
-      "url": "https://as.com/futbol/primera/barcelona-presenta-equipacion-2026-27.html",
-      "imagen": "https://picsum.photos/seed/bar-004/400/200",
-      "fecha": "2026-06-16",
-      "categoria": "club"
-    },
-    {
-      "id": "bar-005",
-      "titulo": "Hansi Flick analiza la pretemporada: \"Quiero ver la intensidad desde el primer día\"",
-      "resumen": "El técnico alemán ha comparecido en rueda de prensa para detallar los planes de preparación. El Barça disputará amistosos en Estados Unidos y Japón durante el verano.",
-      "fuente": "Sport",
-      "url": "https://www.sport.es/es/noticias/barca/flick-pretemporada-barcelona-2026.html",
-      "imagen": "https://picsum.photos/seed/bar-005/400/200",
-      "fecha": "2026-06-15",
-      "categoria": "declaraciones"
-    }
-  ]
+﻿{
+    "ultimaActualizacion":  "2026-06-20T19:32:03Z",
+    "noticias":  [
+                     {
+                         "id":  "fc-barcelona-1",
+                         "titulo":  "Barcelona 1",
+                         "resumen":  "Barcelona 1-0 Celta: resumen, gol y resultado\u0026nbsp;\u0026nbsp;Diario",
+                         "fuente":  "0 Celta: resumen, gol y resultado - Diario AS",
+                         "url":  "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWFVJLThyY3o5NUZPZGEzSUdTYzJUandJMkdvV0VzWnB4U2FuSjRlektEOXItcGJqVjVDdFQ1X3dQRnY1Uy1saTd0NVA5aWprN2dlc0x6STRZMEFWM21PRmNKTldkT3lBWVYtc281YVVhU2YwYXJKVkxjY0UzQ3p3N3B0Rm5MLXM2N0RNdW1mNExsSUoxdmRJYlFDa0VJZ1lvcTZkX1FNdS1zV19xZXFRMVFZR1HSAcgBQVVfeXFMUDJoY2hNaTNNVEFXRWROS0RYTi1ZUm5laGlmeHpFREVZYTBmUWF1QmRXVTAzSFBuZlNmN29kQVdoelNoYWlWdXpzV2VIMkpVMXZZcHpzdnQ2WHc4X1ZKSjVIRmhRWTcyVUlJTTNBM05ZNi1XZW90cGhscXF1Q1V6MlRrVkpSN0g1ZnR2anVsSm9mQUNqZmFUcWZYMXBMWlFLa25qdUc2RVlWb09XV2s2VXVTWnhjR2JCU3ZVZ24yWWpPZUE2a1cwNFk?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "fc-barcelona-2",
+                         "titulo":  "Osasuna",
+                         "resumen":  "Osasuna - Barcelona: resumen, resultado y goles del partido de",
+                         "fuente":  "Barcelona: resumen, resultado y goles del partido de LaLiga - SPORT",
+                         "url":  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcm4xcnFBM2JCN1dfd2Fqb0JJdWNxczVQRlZYZ29Vb3pOa3hKZlFZR0VlS1JRQ0JtT1lOVWFPQ3Fibjhza0tlWTNhXzdyUzd5UVdhOS1vbENldGF5SlJHZm5IV0tOS1NMMGFsaDNRNXRSLWNyQ2hwNEx0UUdqX1dvSXdnMjZsSE1m0gGIAUFVX3lxTE83eURyTUpQZ01uTmM0SEVXZ1k5WF95VXNMTy0wN2NBQzhUaWszLUt3SlZYaDhyMFZLTkNSZmVrN3MtZnk1MTkxaDVfVmFBUXpuZEItNWFvNEJUVzdIa1hsYzJBcDIwelJEMTdYcnlCTGl2bHl2VXk3ZFNHQ3cyNXNnTjRuMFl2NFQ?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "fc-barcelona-3",
+                         "titulo":  "Así te hemos contado la victoria del Barcelona ante el Madrid y la consecución de su 29º título de Liga",
+                         "resumen":  "Así te hemos contado la victoria del Barcelona ante el Madrid",
+                         "fuente":  "EL PAÍS",
+                         "url":  "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWURNSXJWMW9XYzQyODFxN0diaWU0TkdKR0VCQTFtZnp5dVE5c2NONlNQZmw1ank0dUY4Z1ZXMmdkTWhBN3BmMF93bVE3MGJtb3pLUm5VVklxbWxzMVBCU1B3TkZ0RlpvSG5VcVZTT09YZjhqQmlDX1dXUjNpYS1XNC1oYjN3a1hYWWVWbkxmTVd6NDZzQkpTaDN2M0VvZzllemNTTFJRZTdFRHc1dzMtZ0pTVdIBxwFBVV95cUxPMHFkWkM5SEZEcl9jQkk4SzlUd2hCZVBHUFY2WkxkaC1QTHZKV2xjaG5ReThKZG5mMlYyZUZNMld0TXA3Q19TZklidXROSU1lbXpRc19LMnNwUnJUWEE5QWR5MmJIRDhhOTFRNDFrY28xMlpSNWhBMklPRldUNWVYM1ptZ1ZJdGhBZi1HdnNZUFZkamktSWREWk9uQ1lCYzloYndIYWtfMVVHLXFEaDVGQl9rMmhyeW1xR3R4X0tLWkRYSGEyOXE0?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "fc-barcelona-4",
+                         "titulo":  "Barcelona",
+                         "resumen":  "Barcelona - Celta | Resultado, resumen y clasificación de la",
+                         "fuente":  "Celta | Resultado, resumen y clasificación de la Primera división de fútbol: LaLiga EA Sports - Mundo Deportivo",
+                         "url":  "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQQTZNQ04wVVdIYVFObzgtNzN6aHlmUFlycjVyaXMzcUgtUThDZzRqTFJYbE9LM2VVdWliNzBvaEMxaTlwQU9IX2lkVTYyZFlPdzZwZDQ2eG9iZzR6RG9TY3YwcFpPNlU1VEx5VUMtUzZQQW10Z1RUQ0twWVQ4OWRxUU9Xd1hEb3VNbHZuMklqbGJjVWJMWnk2SVY2bl81S0l6SjlJNE1hYk1feDhLWVVhUGRzTk9RRWdBNmY1N1JKM2ptSFN3T0hMSUtWM09jQXBzYmFWWUk3M29nck9sUkxjYTVPONIB8AFBVV95cUxQSzhCSUVHYl9oclkwSzhldnNVWV82cXZaZWhXb0YwTDdhNUVCQWpFSmxUNVhfcVJ3bndzRzlvMkR4OUZHOUt3a29fclk1eVVmdWViY2taeTVsSV9PeEVybjlyRjFkX0tjajBLODZJTnBYZ2l5ckoyY2xBYUtPSVdlVzNCbElqenM1Z250QXNxM2FwRTlWdFIwTW5tckp5TGIzaF9jNnQ2UzFFRWJEbzJscklqZ0xoX0NCMDROa1V6RDFYQ3BzbmdTTnQzYnNPdXFuQW1YRXRDM3pCaDRnVlNRVFkyNXRINXo1d0xmZEdoLXU?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "fc-barcelona-5",
+                         "titulo":  "¿Cómo quedó Barcelona vs Real Madrid? Cronología y resultado de El Clásico de LaLiga 2026",
+                         "resumen":  "¿Cómo quedó Barcelona vs Real Madrid? Cronología y resultado",
+                         "fuente":  "MARCA",
+                         "url":  "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPby15c3hoZWxGZHMyaXpHVGhCS1JDY3lYSVc0T0lmV0tSVmRKQXozblVtdWdsVHVBSF9XZnRtMWgzanp3THV2N05YUFVCRW4tQUJ6QU5UWFA5SmsxX2YyOWxod0JwV2M2NUpwcjJhOWk2Yk5PQThwWF9zbGlETzFweGw2aUxTeFVuWmJFNXJCMHFpdkVSSldNWUJOSEJtRVl3NG85RldQSGtSMGs?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "fc-barcelona-6",
+                         "titulo":  "Getafe 0",
+                         "resumen":  "Getafe 0-2 Barcelona: resumen, goles y resultado\u0026nbsp;\u0026nbsp;Diario",
+                         "fuente":  "2 Barcelona: resumen, goles y resultado - Diario AS",
+                         "url":  "https://news.google.com/rss/articles/CBMitgFBVV95cUxOOHlsQ1h3bzRLODBEc1A2NjRuak4xUEhCbXRyTjk3RkNPaXNXcHp3SXRzMy03M25jVUxkN3RPV0Z1Nnh1YVJDQ2FXVDZScHNpV0UtZFVzTFY4VEVFaHcyRGRjUnotd0ktbkk0cWJWQndiamJFYlJ3STRESDJEc1RtMUxmUF83d0ZpdnZPdUZ5MXZYVlFockdKU3dlRDVpeGdXcWlfd25MWTJlN0V0WTY5UTZQcGNOZ9IBygFBVV95cUxQaVg2ZDdVXzFHYlVHX1hRSzZlU0M3cnd1WFBrTnU2ZDgwZUVuWHV6S3hwVVB3Y1l0R1BRNVdLMGFjeURjeUNjajlrcTExWmhyZDI3bzQ5dTZrbzk0bjEtTXN2MW1SUVZ1TjFObld1RVg3NENIWTJrWGoxZ3hWeHo5RzVsU2g2SVhfcU9hMndOMXdmTUhWOE5fTHg3ZG1MVW1rV1JZd0RERUpvblR6ZUV2UzNmRmNQVmtEdlZQNkYyd0pmLU9QZWxSejl3?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "fc-barcelona-7",
+                         "titulo":  "Osasuna 1",
+                         "resumen":  "Osasuna 1-2 Barcelona: resumen, goles y resultado\u0026nbsp;\u0026nbsp;Diario",
+                         "fuente":  "2 Barcelona: resumen, goles y resultado - Diario AS",
+                         "url":  "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUWpWMWEtS0Rra2h3TFdvUWpOU2ZmYmdKSDltRW5nN1FKNHllQ090NVZpbDlwcmJQcHMtTGpTUnI2RWYtR1hXZk5Iei1sQmN5d0JUclBKZmhaWmdhZEhia3psUW5MazJIUXFaQUk4dWpqMkhsSElNdXFiMGtXRU9TczBmZkthSzlHMlhmQk1tVUF6Ylc3M2dxX2daX0lVZU50UHI2blE2elI0eHpiekdvN2FrYWlmWm_SAcsBQVVfeXFMUHFoQmFScDlka0Q0TXdHa1JTLU1yYWdseDNaMlVHVklzV2Frb1ZEeEp0ZEU4X3B6dEJscG9faUJtX0p4Ymp0dlprQ2xLQnJMRU9vUTUyMjVremYzU2R1VmdfNVRnaHZZX0dpQjJ0SC1iMjJ6NTFROHg2YnpEWnoxam1BWWhtV0tZOXVUcFhrX3BIQlFFZjlkQW1oNnBjUTMwYlBpMjVhN3NSNWl3SzVybUZNYW1faHJpOERuWkNmbnlyR3JqUFBlMVNwQTA?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "fc-barcelona-8",
+                         "titulo":  "Barcelona vs. Real Madrid por LaLiga, El Clásico: ¡Barça CAMPEÓN!",
+                         "resumen":  "Barcelona vs. Real Madrid por LaLiga, El Clásico: ¡Barça CAMPEÓN!\u0026nbsp;\u0026nbsp;TUDN",
+                         "fuente":  "TUDN",
+                         "url":  "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOaDVZbG1zak8xRHVONFRqUndRZXFJc2RuMEFmektacElPV1c2RTE5T0FycWJLaUJ0SUh4aWVvOWppeUt5ZG05SV9lM08zQWZmQjFQbmk4NXVoSWZJYXJ5QU1zRmZOZmY4OUt1Z3FUUms0VEJKMExhbVM3ZkRPZzVvZ1gxaGVEZENWQXJhUFpuSE45eDJBT2N6a1dlamN4RkJ4akdXeG4yQmRMWUNqZXVZSl9MUFgxeGQ1aklkSEgzb0VCaXM1YWloNg?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     }
+                 ]
 }

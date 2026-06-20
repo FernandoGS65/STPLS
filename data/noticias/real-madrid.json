@@ -1,55 +1,85 @@
-{
-  "ultimaActualizacion": "2026-06-20T10:00:00Z",
-  "noticias": [
-    {
-      "id": "rm-001",
-      "titulo": "Kylian Mbappé: \"Estoy en el mejor momento de mi carrera\"",
-      "resumen": "El delantero francés atendió a los medios tras su doblete en el último amistoso. Mbappé asegura sentirse completamente adaptado al equipo y promete goles en la próxima temporada.",
-      "fuente": "Marca",
-      "url": "https://www.marca.com/futbol/real-madrid/mbappe-mejor-momento-carrera-2026.html",
-      "imagen": "https://picsum.photos/seed/rm-001/400/200",
-      "fecha": "2026-06-19",
-      "categoria": "declaraciones"
-    },
-    {
-      "id": "rm-002",
-      "titulo": "El Real Madrid cierra el fichaje de Florian Wirtz por 120 millones",
-      "resumen": "El conjunto blanco ha llegado a un acuerdo con el Bayer Leverkusen para el traspaso del mediapunta alemán. Wirtz firmará por seis temporadas y será presentado la próxima semana.",
-      "fuente": "AS",
-      "url": "https://as.com/futbol/primera/real-madrid-fichaje-florian-wirtz-2026.html",
-      "imagen": "https://picsum.photos/seed/rm-002/400/200",
-      "fecha": "2026-06-18",
-      "categoria": "fichajes"
-    },
-    {
-      "id": "rm-003",
-      "titulo": "Ancelotti renueva hasta 2028: "Es un honor seguir en el mejor club del mundo"",
-      "resumen": "El técnico italiano ha ampliado su contrato con el Real Madrid por dos temporadas más. Con esta renovación, Carletto cumplirá una década al frente del banquillo blanco de forma intermitente.",
-      "fuente": "Marca",
-      "url": "https://www.marca.com/futbol/real-madrid/ancelotti-renovacion-2028.html",
-      "imagen": "https://picsum.photos/seed/rm-003/400/200",
-      "fecha": "2026-06-17",
-      "categoria": "club"
-    },
-    {
-      "id": "rm-004",
-      "titulo": "Bellingham: \"Quiero ganar el Balón de Oro vistiendo de blanco\"",
-      "resumen": "El centrocampista inglés concedió una entrevista exclusiva donde habla de sus ambiciones, su adaptación a Madrid y la próxima temporada. Jude es uno de los favoritos al galardón.",
-      "fuente": "The Athletic",
-      "url": "https://www.nytimes.com/athletic/bellingham-balon-oro-real-madrid-2026.html",
-      "imagen": "https://picsum.photos/seed/rm-004/400/200",
-      "fecha": "2026-06-16",
-      "categoria": "declaraciones"
-    },
-    {
-      "id": "rm-005",
-      "titulo": "El Real Madrid presenta su nuevo estadio: el Bernabéu 2.0 ya es una realidad",
-      "resumen": "Las obras de remodelación del Santiago Bernabéu han finalizado completamente. El nuevo estadio cuenta con cubierta retráctil, césped retráctil y un anillo VIP de última generación.",
-      "fuente": "AS",
-      "url": "https://as.com/futbol/primera/bernabeu-remodelacion-completa-2026.html",
-      "imagen": "https://picsum.photos/seed/rm-005/400/200",
-      "fecha": "2026-06-15",
-      "categoria": "club"
-    }
-  ]
+﻿{
+    "ultimaActualizacion":  "2026-06-20T19:32:04Z",
+    "noticias":  [
+                     {
+                         "id":  "real-madrid-1",
+                         "titulo":  "Nueva sesión en la Ciudad Real Madrid",
+                         "resumen":  "Nueva sesión en la Ciudad Real Madrid\u0026nbsp;\u0026nbsp;Real Madrid",
+                         "fuente":  "Real Madrid CF | Web Oficial",
+                         "url":  "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbUxjTU1CVTBqTEE5SUxuYXI0X1NtWlF3ZWRKZUdhMjZndmhUajd5cjZpS3FMLVlKN0JlU2NnNklpaFZta3ljVUxmeDhUQlZsYzRnZVNPcWNiV3dGM1J6bW4ycUJueWJ1X2VDekJVVzcwTXp2V0VSdk40UkFLc1JHN1BmXzhMc2lxaGRaZElnUWMzSWctZTQwZzZySmxtakF4Wms2QV9KXzFuSDQ5NnFvV2c0M0FtdjRF?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "real-madrid-2",
+                         "titulo":  "El Real Madrid pide \"medidas disciplinarias\" a la UEFA para el Barcelona por el \u0027Caso Negreira\u0027",
+                         "resumen":  "El Real Madrid pide \"medidas disciplinarias\" a la UEFA para el",
+                         "fuente":  "Eurosport",
+                         "url":  "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNVzU0dm5FV2dBdkplNnMwbjlkQ3cxWkJQY1FNRGRfdnEtNEg4VGZiS3NsLWhzUXJiM2pNT2lfQTR4RGRxZXdqczZCVGdWcGJqTVpsbVY2dFVHQWhMMzFGeGxCcWpadUNWeFh6WHZ1SHdTOTU2SmJxU0p0WkZHWC14R0tPZWVWNlBwaUJMMkVIb3BtTFA1dmtTZmNJYk94YUljd003aWR0dzJ4bzA5bkxzbXREWF9Zc29faVk1aThrYURtdTJJMXJ1S1JaV2k3TkdfNXpMNV90UVJ6cjAwMTEw?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "real-madrid-3",
+                         "titulo":  "El Real Madrid denuncia al Barcelona ante la UEFA enviando el \u0027informe Negreira\u0027",
+                         "resumen":  "El Real Madrid denuncia al Barcelona ante la UEFA enviando el",
+                         "fuente":  "MARCA",
+                         "url":  "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTTc5djFyN3gxelVfR01GQXd5UmdhVmw0V3EzNldfeHZ2MUFVSFBQanFfaF9vXzlZdFNVNmdna3B4c0dwZFVCNUhvLVJkbFdISlRYYVpoYS1VaHZQN0RiWmgzSm90bXhRd0FVck9XdGNldDU1UGJReEd4OGgwb181WjdKTVpfUVnSAYcBQVVfeXFMUG15VGdFYXIxNTRmd1U0a285ZVRoSm02dWRWRm91MGlHUEp5NFlHSHJaSDdBeFM5SC1UaHg3ODhTTTNxT1NjSkhfYUg0Rms2MWlJdC1vWGszYXhNeHRRRm15anZmQTZQbGhmZnhDMVdDVy1Gc1Y5YUY2dmp2ckE4bEpTbXNmTWFn?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "real-madrid-4",
+                         "titulo":  "El Real Madrid repite como el club de fútbol más valioso del mundo: el Barça, segundo",
+                         "resumen":  "El Real Madrid repite como el club de fútbol más valioso del",
+                         "fuente":  "Mundo Deportivo",
+                         "url":  "https://news.google.com/rss/articles/CBMizgFBVV95cUxOa1gxNDJCQ2c5NGhzeDV2cHFMVVFyeXlIa0V1YVlKTWxmSmZ3WlBOaXFYZmpVY2JLSnVsV2VLTnRUbVVWYlRTeHJYVXpiT0FmZXBBSkVZRzMtaUVKOWw5eXJhVmdaOU9kUVAyN0xyU000OFgyUnV6N3F2eTZlamxKck9mU3JqaWF0bUhGZ0pYLTh6akV5SVVsTDFsTXB6b0hkb2xCSjY1ZU9zQzBtVkY0MlE4S1A0ZXVOT1prTm9SZ0t2dXVXc2xscWVRbVRNZ9IB2wFBVV95cUxNbXg4bHpiZFl2VU4tUnpaTWVXSVNzaDNWUjBCcy1HdDIwYTE4NWJNNVBaQURxdHZ6U29yRWgzYVFuVDU2N0RDeU5KTXRTRmZyaGVrN3ByY0VFMGgzU3FsaFVyZkczZHhQdjN2X2xSUlFfVFJkZGd2V2ExWGFWaFRLYUhRU2tMdFN4WlFPZThmR2NlNy1NQW4wYmJzY1F3MVVqVldRYkJtdS1TcnpicnFyck95X0w1c1RMbEJhLW9Ic0Q4Q1BHY2hXdFZITTE1OTlYNzhnS3lybUwxOFk?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "real-madrid-5",
+                         "titulo":  "El calendario del Real Madrid hasta el final de la temporada",
+                         "resumen":  "El calendario del Real Madrid hasta el final de la temporada\u0026nbsp;\u0026nbsp;Real",
+                         "fuente":  "Real Madrid CF | Web Oficial",
+                         "url":  "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQMHRSNUVncnB1cXh4MEI2cDJVX2VIcFpsbU9yYkVGV3FRakJZN256TW5wMzZWcGRCRGpocm9KdklJcXR4MHJndWUtVU5EaTlHSmk2QzlfRGZHOHFPRWcwSi11SzY5X3J3OVFHeE9OSVozMk1WV2d0dmd1X1BqZ1pjNGN3VTRxa25MdUx4U3hWUE0yYUtyZ2JZWGgtLTZGMlEzNlVUZnRjSHYzT2hTZlJ5akE1LWxLLWMzekhKM2x4OHhORzl5YThEVWU3YXZoY1kxUXNCRnY3dzhHeENKNEE?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "real-madrid-6",
+                         "titulo":  "¡Se confirma el \u0027robo\u0027 a Barcelona y Atlético! Bernardo Silva ya es del Real Madrid",
+                         "resumen":  "¡Se confirma el \u0027robo\u0027 a Barcelona y Atlético! Bernardo Silva",
+                         "fuente":  "MARCA",
+                         "url":  "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZ2FTSzJYRmVvbm5BWFJmTnBJcUVGenNCOW9XNDRha0FFaU1WdXhqaVdxVFBqSV9BdFJIY1RfVll4azRsS3JFYnhDZ3FuNmlWcXREUjdZS00xaW9uSU1lVC16M0FDSjI4Zi00QVo0MVh4TG8tTWswN3NWNVVwZHZ0T2hORFM0MUHSAYcBQVVfeXFMTWE1MFUwOXNfd2FtMjFYbTZCSXNjMzU0eklRVXRRc0dLbHNIRDQxc0RuTURaVWJkNTZwai1TT0dGbFVITjI4TTdzUDJKLUR0X3dpYXFPR1JudHl4c3Y3NjV0Ulk3QUN3a1dxUmRLc3NhQjJIRTZCQTU0OVEwWEtzZDhNUHFIUDFn?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "real-madrid-7",
+                         "titulo":  "Resultados de la 32ª jornada de Liga",
+                         "resumen":  "Resultados de la 32ª jornada de Liga\u0026nbsp;\u0026nbsp;Real Madrid CF",
+                         "fuente":  "Real Madrid CF | Web Oficial",
+                         "url":  "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRUJEYmxtNjVaVVl2MzVRVlFEX1RoWDVlNG5Oc2p4RjJZbDNReEVKcFdESmhkVi04a1hxZUxYWnRweTZYZVFjTVQtYk5TQnpqdThPUzE3Z0NsSnpMRUpnTUEtYUNXTi1qTXFta18xSUYxNWJRU0RRVjdtN2owQW4xWU5adVozNmphaDlxd01rblVsR1RwNnhIazRxdXg0cDh4LVFzejg4TW5NSndnTWNUaWFpa2dlT3phLUpv?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     },
+                     {
+                         "id":  "real-madrid-8",
+                         "titulo":  "Resultados de la 31ª jornada de Liga",
+                         "resumen":  "Resultados de la 31ª jornada de Liga\u0026nbsp;\u0026nbsp;Real Madrid CF",
+                         "fuente":  "Real Madrid CF | Web Oficial",
+                         "url":  "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQS0V2YmJ1WmxiR2ZhZjEzalZFemd4cmc1Vl9aemFOdC1sTTE1VU5nME1XMmZWLWU5M0lCbElvT1JNSVFMM2JXU1Q0ZFNkNUFnNEpMY2ZucXUzTHZSaU5GWFVUMU9jbmhnOC1adGdoRnMwbzhlS1V6TjZNaUNOcmt0YkQ2ZlZiNmpyQjhacmhSTHlMdWpwZzItczA4b1JvRTB0RUl5a3pkdk5XN0FjVTUyWHZRNEhIR3BzbFln?oc=5",
+                         "imagen":  "",
+                         "fecha":  "2026-06-20",
+                         "categoria":  "noticia"
+                     }
+                 ]
 }

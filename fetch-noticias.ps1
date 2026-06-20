@@ -7,7 +7,7 @@ param(
 $dataDir = "data/$Season/$Competition"
 $calendarioPath = "$dataDir/calendario.json"
 $noticiasDir = "data/noticias"
-$maxNoticias = 10
+$maxNoticias = 8
 
 if (-not (Test-Path $noticiasDir)) {
     New-Item -ItemType Directory -Path $noticiasDir -Force | Out-Null
@@ -24,14 +24,30 @@ function BuscarNoticias($nombre) {
     $rssUrl = "https://news.google.com/rss/search?q=$query&hl=es&gl=ES&ceid=ES:es"
 
     try {
-        $xml = Invoke-RestMethod -Uri $rssUrl -Method Get -TimeoutSec 15
+        $resp = Invoke-WebRequest -Uri $rssUrl -Method Get -TimeoutSec 15 -UseBasicParsing
+        [xml]$xml = $resp.Content
         $items = $xml.rss.channel.item
         if (-not $items) { throw "Sin resultados" }
         if ($items -isnot [array]) { $items = @($items) }
 
+        $vistos = @{}
         $noticias = @()
-        foreach ($item in $items[0..[Math]::Min($items.Count, $maxNoticias)]) {
-            $titulo = $item.title -replace '^.*?- ', ''
+
+        foreach ($item in $items) {
+            if ($noticias.Count -ge $maxNoticias) { break }
+
+            $tituloRaw = $item.title
+            $titulo = $tituloRaw
+            $fuente = ""
+
+            if ($tituloRaw -match '^(.*?)\s*-\s*(.+)$') {
+                $titulo = $matches[1].Trim()
+                $fuente = $matches[2].Trim()
+            }
+
+            if ($vistos.ContainsKey($titulo)) { continue }
+            $vistos[$titulo] = $true
+
             $link = $item.link
 
             $fecha = try {
@@ -40,13 +56,23 @@ function BuscarNoticias($nombre) {
                 [DateTime]::UtcNow
             }
 
-            $fuente = $item.source -replace '^.*?<source.*?>(.*?)</source>.*$', '$1'
-            if ($fuente -eq $item.source) { $fuente = "Google News" }
+            $descHtml = $item.description
+            if ([string]::IsNullOrWhiteSpace($fuente) -and $descHtml -match '<font color="#6f6f6f">(.*?)</font>') {
+                $fuente = $matches[1].Trim()
+            }
+            if ([string]::IsNullOrWhiteSpace($fuente)) { $fuente = "Google News" }
+            $fuente = $fuente -replace '^https?://[^/]+/(.*)', '$1'
+
+            $resumen = $descHtml -replace '<[^>]+>', ''
+            $resumen = $resumen -replace '^\s*', ''
+            $resumen = $resumen -replace '\s+', ' '
+            if ($resumen -match '^(.{' + 60 + ',}?[.?!]?)\s') { $resumen = $matches[1] }
+            if ($resumen.Length -gt 200) { $resumen = $resumen.Substring(0, 200) + "..." }
 
             $noticias += [PSCustomObject]@{
-                id = "$(NormalizarNombre $nombre)-$(Get-Random -Maximum 99999)"
+                id = "$(NormalizarNombre $nombre)-$($noticias.Count + 1)"
                 titulo = $titulo
-                resumen = $item.description -replace '<[^>]+>', '' -replace '^.*?: '
+                resumen = $resumen
                 fuente = $fuente
                 url = $link
                 imagen = ""
@@ -64,6 +90,10 @@ function BuscarNoticias($nombre) {
 }
 
 if ($AllTeams) {
+    if (-not (Test-Path $calendarioPath)) {
+        Write-Host "ERROR: No existe $calendarioPath" -ForegroundColor Red
+        exit 1
+    }
     $liga = Get-Content -Raw $calendarioPath -Encoding UTF8 | ConvertFrom-Json
     $equipos = ($liga.data | ForEach-Object { $_.homeTeam.name }) | Select-Object -Unique | Sort-Object
 } else {
@@ -72,7 +102,6 @@ if ($AllTeams) {
 
 foreach ($nombre in $equipos) {
     $noticias = BuscarNoticias($nombre)
-
     $archivo = "$noticiasDir/$(NormalizarNombre $nombre).json"
 
     if ($noticias -and $noticias.Count -gt 0) {
@@ -80,13 +109,14 @@ foreach ($nombre in $equipos) {
             ultimaActualizacion = [DateTime]::UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ")
             noticias = $noticias
         }
-        $data | ConvertTo-Json -Depth 5 | ForEach-Object { [System.IO.File]::WriteAllText((Resolve-Path $archivo).Path, $_, [System.Text.Encoding]::UTF8) }
+        $json = $data | ConvertTo-Json -Depth 5
+        [System.IO.File]::WriteAllText((Resolve-Path $archivo).Path, $json, [System.Text.Encoding]::UTF8)
         Write-Host "  Guardadas $($noticias.Count) noticias en $archivo" -ForegroundColor Green
     } else {
         Write-Host "  No se encontraron noticias para $nombre" -ForegroundColor DarkGray
     }
 
-    Start-Sleep -Seconds 1
+    Start-Sleep -Milliseconds 500
 }
 
 Write-Host "`n¡Noticias actualizadas!" -ForegroundColor Cyan
