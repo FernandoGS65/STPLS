@@ -80,6 +80,34 @@ for ($i = $StartIndex; $i -lt $endIndex; $i++) {
     Start-Sleep -Milliseconds 200
 }
 
+# Regenerar indice de partidos descargados
+try {
+    $liga = Get-Content -Raw "data\laliga2025.json" | ConvertFrom-Json
+    $idx = @()
+    Get-ChildItem "data/partidos" -Name | ForEach-Object {
+        $id = [int]$_.Replace(".json","")
+        $m = $liga.data | Where-Object { $_.id -eq $id } | Select-Object -First 1
+        if (-not $m) { return }
+        $c = Get-Content -Raw "data/partidos\$_" | ConvertFrom-Json
+        $props = $c.PSObject.Properties.Name
+        $j = [int]($m.round -replace 'Regular Season - ')
+        [PSCustomObject]@{
+            id = $id
+            jornada = $j
+            home = $m.homeTeam.name
+            away = $m.awayTeam.name
+            date = $m.date
+            score = $m.state.score.current
+            detail = ($props -contains 'venue')
+            lineups = ($null -ne $c.lineups)
+            boxscore = ($null -ne $c.boxScore)
+        }
+    } | Sort-Object jornada, date | ConvertTo-Json -Depth 5 | Set-Content "data\descargados.json" -Encoding UTF8
+    Write-Host "Índice descargados.json regenerado" -ForegroundColor Green
+} catch {
+    Write-Host "AVISO: No se pudo regenerar descargados.json: $_" -ForegroundColor Yellow
+}
+
 Write-Host ""
 Write-Host "=== Resumen ===" -ForegroundColor Cyan
 Write-Host "OK: $ok | Skip: $skip | Fail: $fail"

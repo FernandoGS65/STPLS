@@ -105,3 +105,24 @@ document.getElementById(
   <strong>${promedio}</strong>
   goles por jugador
 `;
+
+(async function() {
+  var container = document.getElementById("partidos-descargados");
+  if (!container) return;
+  try {
+    var resp = await fetch("./data/descargados.json");
+    if (!resp.ok) throw new Error("HTTP " + resp.status);
+    var partidos = await resp.json();
+    var html = '<div class="desc-table-wrap"><table class="desc-table"><thead><tr><th>#</th><th>Local</th><th>Res</th><th>Visitante</th><th title="Detalle">D</th><th title="Alineaciones">A</th><th title="Boxscore">B</th></tr></thead><tbody>';
+    for (var i = 0; i < partidos.length; i++) {
+      var p = partidos[i];
+      var f = new Date(p.date).toLocaleDateString("es-ES", { day: "2-digit", month: "2-digit" });
+      html += '<tr><td class="desc-j">' + p.jornada + '</td><td class="desc-local"><a href="partido.html?matchId=' + p.id + '">' + p.home + '</a></td><td class="desc-res">' + p.score + '</td><td class="desc-visit"><a href="partido.html?matchId=' + p.id + '">' + p.away + '</a></td><td class="desc-check' + (p.detail ? ' desc-yes' : '') + '">' + (p.detail ? '✓' : '—') + '</td><td class="desc-check' + (p.lineups ? ' desc-yes' : '') + '">' + (p.lineups ? '✓' : '—') + '</td><td class="desc-check' + (p.boxscore ? ' desc-yes' : '') + '">' + (p.boxscore ? '✓' : '—') + '</td></tr>';
+    }
+    html += '</tbody></table></div>';
+    html += '<p class="desc-total">' + partidos.length + ' de 380 partidos descargados</p>';
+    container.innerHTML = html;
+  } catch (e) {
+    container.innerHTML = '<p class="desc-error">Error al cargar: ' + e.message + '</p>';
+  }
+})();
