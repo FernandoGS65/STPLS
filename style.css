@@ -280,10 +280,14 @@ body{
 .liga-logo{
     width:64px;
     height:64px;
-    color:var(--accent-gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
-.liga-card--disabled .liga-logo{
-    color:var(--text-muted);
+.liga-img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
 }
 .liga-nombre{
     font-size:15px;
