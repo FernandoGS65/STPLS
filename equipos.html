@@ -16,19 +16,14 @@
 <body>
 
 <nav class="navbar">
-
-    <div class="logo">STPLS</div>
-
-    <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="resultados.html">Resultados</a></li>
-        <li><a href="clasificaciones.html">Clasificaciones</a></li>
-        <li><a href="equipos.html">Equipos</a></li>
-        <li><a href="jugadores.html">Jugadores</a></li>
-        <li><a href="estadisticas.html">Estadísticas</a></li>
-    </ul>
-    <div id="nav-controls"></div>
-
+    <div class="nav-top">
+        <a href="index.html" class="nav-logo">STPLS</a>
+        <div id="nav-controls"></div>
+        <button id="themeToggle" aria-label="Cambiar tema">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+    </div>
+    <div id="nav-icons" class="nav-icons"></div>
 </nav>
 
 <header class="hero">
@@ -51,6 +46,9 @@
 <script src="js/app.js"></script>
 <script src="js/equipos.js"></script>
 
+<footer>
+    <span class="footer-copy">STPLS &copy; 2026</span>
+</footer>
 
 </body>
 </html>

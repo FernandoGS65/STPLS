@@ -16,16 +16,14 @@
 <body>
 
 <nav class="navbar">
-    <div class="logo">STPLS</div>
-    <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="resultados.html">Resultados</a></li>
-        <li><a href="clasificaciones.html">Clasificaciones</a></li>
-        <li><a href="equipos.html">Equipos</a></li>
-        <li><a href="jugadores.html">Jugadores</a></li>
-        <li><a href="estadisticas.html">Estadísticas</a></li>
-    </ul>
-    <div id="nav-controls"></div>
+    <div class="nav-top">
+        <a href="index.html" class="nav-logo">STPLS</a>
+        <div id="nav-controls"></div>
+        <button id="themeToggle" aria-label="Cambiar tema">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+    </div>
+    <div id="nav-icons" class="nav-icons"></div>
 </nav>
 
 <main class="resultados-page">
@@ -45,33 +43,7 @@
 </main>
 
 <footer>
-    <div class="footer-content">
-        <div class="footer-col">
-            <h4>STPLS</h4>
-            <p>Resultados, clasificaciones y estadísticas del fútbol español.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Enlaces</h4>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-                <li><a href="clasificaciones.html">Clasificación</a></li>
-                <li><a href="equipos.html">Equipos</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Más</h4>
-            <ul>
-                <li><a href="jugadores.html">Jugadores</a></li>
-                <li><a href="estadisticas.html">Estadísticas</a></li>
-                <li><a href="video.html">Videos</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>STPLS &copy; 2026 &middot; Proyecto de aprendizaje y an&aacute;lisis deportivo</p>
-        <button class="theme-toggle" id="themeToggle">Cambiar tema</button>
-    </div>
+    <span class="footer-copy">STPLS &copy; 2026</span>
 </footer>
 
 <script src="js/app.js"></script>
