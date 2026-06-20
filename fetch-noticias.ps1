@@ -15,7 +15,18 @@ if (-not (Test-Path $noticiasDir)) {
 }
 
 function NormalizarNombre($nombre) {
-    return $nombre.ToLower() -replace '\s+', '-' -replace 'á', 'a' -replace 'é', 'e' -replace 'í', 'i' -replace 'ó', 'o' -replace 'ú', 'u' -replace 'ñ', 'n' -replace '[^a-z0-9-]', ''
+    $map = @{
+        [char]0x00E1 = 'a'; [char]0x00E9 = 'e'; [char]0x00ED = 'i'
+        [char]0x00F3 = 'o'; [char]0x00FA = 'u'; [char]0x00F1 = 'n'
+        [char]0x00C1 = 'A'; [char]0x00C9 = 'E'; [char]0x00CD = 'I'
+        [char]0x00D3 = 'O'; [char]0x00DA = 'U'; [char]0x00D1 = 'N'
+    }
+    $result = $nombre.ToLower()
+    foreach ($ch in $map.Keys) {
+        $result = $result.Replace([string]$ch, $map[$ch])
+    }
+    $result = $result -replace '\s+', '-' -replace '[^a-z0-9-]', ''
+    return $result
 }
 
 function BuscarNoticias($nombre) {
@@ -108,7 +119,7 @@ if ($AllTeams) {
     $liga = Get-Content -Raw $calendarioPath -Encoding UTF8 | ConvertFrom-Json
     $equipos = ($liga.data | ForEach-Object { $_.homeTeam.name }) | Select-Object -Unique | Sort-Object
 } else {
-    $equipos = @("FC Barcelona", "Real Madrid")
+    $equipos = @("Barcelona", "Real Betis", "Valencia", "Real Madrid")
 }
 
 foreach ($nombre in $equipos) {
@@ -121,6 +132,7 @@ foreach ($nombre in $equipos) {
             noticias = $noticias
         }
         $json = $data | ConvertTo-Json -Depth 5
+        if (-not (Test-Path $archivo)) { New-Item -ItemType File -Path $archivo -Force | Out-Null }
         [System.IO.File]::WriteAllText((Resolve-Path $archivo).Path, $json, [System.Text.Encoding]::UTF8)
         Write-Host "  Guardadas $($noticias.Count) noticias en $archivo" -ForegroundColor Green
     } else {
