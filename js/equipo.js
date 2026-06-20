@@ -250,8 +250,29 @@ function dibujarEvolucion(canvas, datos, colores, nombres) {
         const legendItemH = 18;
         const legendW = 140;
         const legendH = nombres.length * legendItemH + legendPad * 2;
-        const legendX = W - legendW - 12;
-        const legendY = pad.top + 6;
+
+        let legendX, legendY;
+        if (canvas.dataset.dragging === 'true') {
+            legendX = parseFloat(canvas.dataset.legendX) || (W - legendW - 12);
+            legendY = parseFloat(canvas.dataset.legendY) || (pad.top + 6);
+        } else {
+            const avgPos = datos.reduce((sum, d) => {
+                const last = d.length ? d[d.length - 1].posicion : 10;
+                return sum + last;
+            }, 0) / datos.length;
+
+            if (avgPos > 10) {
+                legendY = pad.top + 6;
+            } else {
+                legendY = pad.top + plotH - legendH - 6;
+            }
+            legendX = W - legendW - 12;
+            canvas.dataset.legendX = legendX;
+            canvas.dataset.legendY = legendY;
+        }
+
+        canvas.dataset.legendW = legendW;
+        canvas.dataset.legendH = legendH;
 
         ctx.font = '12px Segoe UI, Arial, sans-serif';
         ctx.textBaseline = 'middle';
@@ -265,6 +286,76 @@ function dibujarEvolucion(canvas, datos, colores, nombres) {
             ctx.fillText(n, legendX + 28, ly + 1);
         });
     }
+}
+
+function initEvoDrag(canvas) {
+    canvas.style.cursor = 'default';
+    let dragOrigX, dragOrigY, dragStartX, dragStartY;
+
+    function getPos(e) {
+        const rect = canvas.getBoundingClientRect();
+        const t = e.touches ? e.touches[0] : e;
+        return { x: t.clientX - rect.left, y: t.clientY - rect.top };
+    }
+
+    function hitLegend(pos) {
+        const lx = parseFloat(canvas.dataset.legendX);
+        const ly = parseFloat(canvas.dataset.legendY);
+        const lw = parseFloat(canvas.dataset.legendW);
+        const lh = parseFloat(canvas.dataset.legendH);
+        if (isNaN(lx) || isNaN(ly)) return false;
+        return pos.x >= lx && pos.x <= lx + lw && pos.y >= ly && pos.y <= ly + lh;
+    }
+
+    function onStart(e) {
+        const pos = getPos(e);
+        if (!hitLegend(pos)) return;
+        e.preventDefault();
+        canvas.dataset.dragging = 'true';
+        dragStartX = pos.x;
+        dragStartY = pos.y;
+        dragOrigX = parseFloat(canvas.dataset.legendX);
+        dragOrigY = parseFloat(canvas.dataset.legendY);
+        canvas.style.cursor = 'grabbing';
+    }
+
+    function onMove(e) {
+        if (canvas.dataset.dragging !== 'true') {
+            const pos = getPos(e);
+            canvas.style.cursor = hitLegend(pos) ? 'grab' : 'default';
+            return;
+        }
+        e.preventDefault();
+        const pos = getPos(e);
+        const dx = pos.x - dragStartX;
+        const dy = pos.y - dragStartY;
+        canvas.dataset.legendX = dragOrigX + dx;
+        canvas.dataset.legendY = dragOrigY + dy;
+        const evoPrincipal = calcularEvolucion(window._evoDatos, window._evoNombre);
+        let nombres = [window._evoNombre];
+        let todasSeries = [evoPrincipal];
+        let colores = ['#f0c040'];
+        if (window._evoComparar) {
+            const evoComp = calcularEvolucion(window._evoDatos, window._evoComparar);
+            nombres.push(window._evoComparar);
+            todasSeries.push(evoComp);
+            colores.push('#3b82f6');
+        }
+        dibujarEvolucion(canvas, todasSeries, colores, nombres);
+    }
+
+    function onEnd() {
+        if (canvas.dataset.dragging !== 'true') return;
+        canvas.dataset.dragging = 'false';
+        canvas.style.cursor = 'grab';
+    }
+
+    canvas.addEventListener('mousedown', onStart);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onEnd);
+    canvas.addEventListener('touchstart', onStart, { passive: false });
+    window.addEventListener('touchmove', onMove, { passive: false });
+    window.addEventListener('touchend', onEnd);
 }
 
 function obtenerPartidosEquipo(
@@ -542,6 +633,10 @@ document.getElementById(
 
     function pintarEvo() {
         const canvas = document.getElementById('evo-canvas');
+        window._evoDatos = datos.data;
+        window._evoNombre = nombreEquipo;
+        window._evoComparar = equipoComparar;
+
         const evoPrincipal = calcularEvolucion(datos.data, nombreEquipo);
         let nombres = [nombreEquipo];
         let todasSeries = [evoPrincipal];
@@ -561,6 +656,11 @@ document.getElementById(
         }
 
         dibujarEvolucion(canvas, todasSeries, colores, nombres);
+
+        if (!canvas.dataset.dragInit) {
+            canvas.dataset.dragInit = 'true';
+            initEvoDrag(canvas);
+        }
     }
 
     window.addEventListener('resize', () => {
