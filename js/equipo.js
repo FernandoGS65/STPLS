@@ -720,38 +720,29 @@ document.getElementById(
                 container.innerHTML = '<p class="tab-placeholder">No hay noticias recientes</p>';
                 return;
             }
+            var ahora = new Date();
             var html = '<div class="noticias-list">';
-            var categorias = {
-                'fichajes': 'Fichajes',
-                'club': 'Club',
-                'plantilla': 'Plantilla',
-                'declaraciones': 'Declaraciones',
-                'lesion': 'Lesión',
-                'noticia': 'Noticia',
-                'partido': 'Partido'
-            };
             for (var i = 0; i < noticias.length; i++) {
                 var n = noticias[i];
-                var catLabel = categorias[n.categoria] || n.categoria;
                 var fecha = n.fecha;
                 if (fecha && fecha.length === 10) {
                     var partes = fecha.split('-');
                     var d = new Date(partes[0], partes[1] - 1, partes[2]);
+                    var diff = (ahora - d) / (1000 * 60 * 60 * 24);
+                    if (diff > 7) continue;
                     fecha = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
                 }
-                var imagenStyle = n.imagen ? 'background-image:url(' + n.imagen + ')' : '';
                 html += '<article class="noticia-card">';
-                html += '<div class="noticia-img" style="' + imagenStyle + '"><span class="noticia-cat">' + catLabel + '</span></div>';
                 html += '<div class="noticia-body">';
-                html += '<h3 class="noticia-titulo">' + n.titulo + '</h3>';
-                html += '<p class="noticia-resumen">' + n.resumen + '</p>';
-                html += '<div class="noticia-footer">';
+                html += '<div class="noticia-meta">';
                 html += '<span class="noticia-fuente">' + n.fuente + '</span>';
                 html += '<span class="noticia-fecha">' + fecha + '</span>';
+                html += '</div>';
+                html += '<h3 class="noticia-titulo">' + n.titulo + '</h3>';
                 if (n.url) {
                     html += '<a href="' + n.url + '" target="_blank" rel="noopener noreferrer" class="noticia-link">Leer más →</a>';
                 }
-                html += '</div></div></article>';
+                html += '</div></article>';
             }
             html += '</div>';
             container.innerHTML = html;

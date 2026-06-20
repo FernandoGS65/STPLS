@@ -8,6 +8,7 @@ $dataDir = "data/$Season/$Competition"
 $calendarioPath = "$dataDir/calendario.json"
 $noticiasDir = "data/noticias"
 $maxNoticias = 8
+$diasMaximos = 7
 
 if (-not (Test-Path $noticiasDir)) {
     New-Item -ItemType Directory -Path $noticiasDir -Force | Out-Null
@@ -20,8 +21,9 @@ function NormalizarNombre($nombre) {
 function BuscarNoticias($nombre) {
     Write-Host "Buscando noticias para: $nombre" -ForegroundColor Cyan
 
-    $query = [System.Uri]::EscapeDataString("$nombre fútbol La Liga")
+    $query = [System.Uri]::EscapeDataString("$nombre La Liga")
     $rssUrl = "https://news.google.com/rss/search?q=$query&hl=es&gl=ES&ceid=ES:es"
+    $corte = (Get-Date).AddDays(-$diasMaximos)
 
     try {
         $resp = Invoke-WebRequest -Uri $rssUrl -Method Get -TimeoutSec 15 -UseBasicParsing
@@ -30,6 +32,7 @@ function BuscarNoticias($nombre) {
         if (-not $items) { throw "Sin resultados" }
         if ($items -isnot [array]) { $items = @($items) }
 
+        $excluir = @('basket', 'baloncesto', 'acb', 'euroleague', 'handball', 'balonmano', 'futsal')
         $vistos = @{}
         $noticias = @()
 
@@ -37,18 +40,27 @@ function BuscarNoticias($nombre) {
             if ($noticias.Count -ge $maxNoticias) { break }
 
             $tituloRaw = $item.title
+
+            $excluirMatch = $false
+            foreach ($palabra in $excluir) {
+                if ($tituloRaw.ToLower() -match $palabra) { $excluirMatch = $true; break }
+            }
+            if ($excluirMatch) { continue }
+
             $titulo = $tituloRaw
             $fuente = ""
 
-            if ($tituloRaw -match '^(.*?)\s*-\s*(.+)$') {
-                $titulo = $matches[1].Trim()
-                $fuente = $matches[2].Trim()
+            if ($tituloRaw -match '\s*-\s*(.+)$') {
+                $fuente = $matches[1].Trim()
+                $titulo = $tituloRaw.Substring(0, $tituloRaw.Length - $matches[0].Length).Trim()
+            }
+
+            if ($item.source.'#text') {
+                $fuente = $item.source.'#text'
             }
 
             if ($vistos.ContainsKey($titulo)) { continue }
             $vistos[$titulo] = $true
-
-            $link = $item.link
 
             $fecha = try {
                 [DateTime]::ParseExact($item.pubDate, "ddd, dd MMM yyyy HH:mm:ss zzz", [System.Globalization.CultureInfo]::InvariantCulture)
@@ -56,21 +68,19 @@ function BuscarNoticias($nombre) {
                 [DateTime]::UtcNow
             }
 
-            $descHtml = $item.description
-            if ([string]::IsNullOrWhiteSpace($fuente) -and $descHtml -match '<font color="#6f6f6f">(.*?)</font>') {
-                $fuente = $matches[1].Trim()
-            }
-            if ([string]::IsNullOrWhiteSpace($fuente)) { $fuente = "Google News" }
-            $fuente = $fuente -replace '^https?://[^/]+/(.*)', '$1'
+            if ($fecha -lt $corte) { continue }
 
+            $link = $item.link
+            if ([string]::IsNullOrWhiteSpace($fuente)) { $fuente = "Google News" }
+
+            $descHtml = $item.description
             $resumen = $descHtml -replace '<[^>]+>', ''
             $resumen = $resumen -replace '^\s*', ''
             $resumen = $resumen -replace '\s+', ' '
-            if ($resumen -match '^(.{' + 60 + ',}?[.?!]?)\s') { $resumen = $matches[1] }
             if ($resumen.Length -gt 200) { $resumen = $resumen.Substring(0, 200) + "..." }
 
             $noticias += [PSCustomObject]@{
-                id = "$(NormalizarNombre $nombre)-$($noticias.Count + 1)"
+                id = "$(NormalizarNombre $nombre)-$(Get-Random -Maximum 99999)"
                 titulo = $titulo
                 resumen = $resumen
                 fuente = $fuente
