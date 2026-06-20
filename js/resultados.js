@@ -204,12 +204,12 @@ const tieneDatos =
 
     <div class="equipo-local">
 
+${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7l2 2 3-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>' : ''}
+
         <img
             src="${partido.homeTeam.logo}"
             class="escudo-partido"
             alt="${partido.homeTeam.name}">
-
-${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7l2 2 3-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>' : ''}
 
        <a
     href="equipo.html?id=${encodeURIComponent(
