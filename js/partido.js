@@ -265,16 +265,24 @@
         elContent.innerHTML = html;
     }
 
-    /* ===== LINEUPS (pitch view) ===== */
+    /* ===== LINEUPS (single pitch view) ===== */
     function renderLineups(d, b, home, away) {
         if (!d.lineups) {
             elContent.innerHTML = '<div class="pv-section"><p class="pv-empty">Alineaciones no disponibles.<br><small>Se obtendrán al solicitar el modo lineups del script.</small></p></div>';
             return;
         }
 
-        // Cross-reference cards & goals from events
+        var homeT = d.lineups.homeTeam;
+        var awayT = d.lineups.awayTeam;
+        if (!homeT && !awayT) {
+            elContent.innerHTML = '<div class="pv-section"><p class="pv-empty">Alineaciones no disponibles.</p></div>';
+            return;
+        }
+
+        // Cross-reference cards, goals & subs from events
         var cardByName = {}, cardById = {};
         var goalByName = {}, goalById = {};
+        var subByName = {}, subById = {};
         if (d.events) {
             d.events.forEach(function(e) {
                 var code = null;
@@ -287,6 +295,10 @@
                     goalByName[e.player] = true;
                     if (e.playerId) goalById[e.playerId] = true;
                 }
+                if (e.type === "Substitution" && e.player) {
+                    subByName[e.player] = true;
+                    if (e.playerId) subById[e.playerId] = true;
+                }
             });
         }
 
@@ -296,33 +308,22 @@
         function hasGoal(p) {
             return (p.id && goalById[p.id]) || goalByName[p.name] || false;
         }
+        function isSubbed(p) {
+            return (p.id && subById[p.id]) || subByName[p.name] || false;
+        }
 
-        var html = '<div class="pv-section"><div class="pv-lineups-new">';
-
-        [d.lineups.homeTeam, d.lineups.awayTeam].forEach(function(t) {
-            if (!t) return;
-
-            html += '<div class="pv-pitch-card">';
-            html += '<div class="pv-pitch-header">';
-            html += '<img src="' + escHtml(t.logo || 'imagenes/stpls-icon.png') + '" class="pv-pitch-shield" alt="" onerror="this.src=\'imagenes/stpls-icon.png\'">';
-            html += '<h3>' + escHtml(t.name) + '</h3>';
-            html += '<span class="pv-pitch-form">' + escHtml(t.formation) + '</span>';
-            html += '</div>';
-
-            // Pitch with markings
-            html += '<div class="pv-pitch-wrap"><div class="pv-pitch">';
-            html += '<div class="pv-pitch-spot"></div>';
-            html += '<div class="pv-pitch-pa-b"></div><div class="pv-pitch-pa-t"></div>';
-            html += '<div class="pv-pitch-ga-b"></div><div class="pv-pitch-ga-t"></div>';
-            html += '<div class="pv-pitch-ps-b"></div><div class="pv-pitch-ps-t"></div>';
-
-            // Players
-            html += '<div class="pv-pitch-players">';
-            var rows = t.initialLineup;
+        function renderPlayers(rows, isHome) {
+            var html = '';
             var numRows = rows.length;
             rows.forEach(function(row, ri) {
-                // Vertical: GK(ri=0) near bottom, forwards at top
-                var topPct = numRows <= 1 ? 50 : 84 - (ri / (numRows - 1)) * 70;
+                var topPct;
+                if (isHome) {
+                    // Home: GK(top=5%) to forwards(bottom=35%)
+                    topPct = numRows <= 1 ? 20 : 5 + (ri / (numRows - 1)) * 32;
+                } else {
+                    // Away: GK(bottom=95%) to forwards(top=65%)
+                    topPct = numRows <= 1 ? 80 : 95 - (ri / (numRows - 1)) * 32;
+                }
 
                 var count = row.length;
                 var spacing = count <= 1 ? 0 : Math.min(72 / (count - 1), 26);
@@ -335,44 +336,89 @@
 
                     var card = getCard(p);
                     var goal = hasGoal(p);
+                    var subbed = isSubbed(p);
+                    var teamClass = isHome ? 'home' : 'away';
 
-                    html += '<div class="pv-pitch-player" style="top:' + topPct + '%;left:' + leftPct + '%">';
-                    html += '<div class="pv-pitch-badge">';
+                    html += '<div class="pv-pitch-player ' + teamClass + '" style="top:' + topPct + '%;left:' + leftPct + '%">';
+                    html += '<div class="pv-pitch-badge ' + teamClass + '">';
                     html += '<span class="pv-badge-num">' + (p.number || '') + '</span>';
                     html += '<span class="pv-badge-name">' + escHtml(p.name) + '</span>';
                     html += '</div>';
-                    if (card || goal) {
+                    if (card || goal || subbed) {
                         html += '<div class="pv-player-card-indicator">';
                         if (goal) html += '<span class="pv-player-goal">⚽</span>';
+                        if (subbed) html += '<span class="pv-player-sub">🔄</span>';
                         if (card) html += '<span class="pv-player-card ' + card + '"></span>';
                         html += '</div>';
                     }
                     html += '</div>';
                 });
             });
-            html += '</div></div></div>'; // close pitch-players, pitch, pitch-wrap
+            return html;
+        }
 
-            // Substitutes
-            if (t.substitutes && t.substitutes.length) {
-                html += '<details class="pv-pitch-subs"><summary>Suplentes (' + t.substitutes.length + ')</summary>';
-                html += '<div class="pv-pitch-subs-list">';
-                t.substitutes.forEach(function(s) {
-                    var card = getCard(s);
-                    html += '<span class="pv-subs-item">';
-                    html += '<span class="pv-subs-num">' + (s.number || '') + '</span>';
-                    html += escHtml(s.name);
-                    if (card) {
-                        html += '<span class="pv-subs-card-indicator"><span class="pv-player-card ' + card + '"></span></span>';
-                    }
-                    html += '</span>';
-                });
-                html += '</div></details>';
-            }
+        function renderSubs(t, isHome) {
+            if (!t.substitutes || !t.substitutes.length) return '';
+            var teamClass = isHome ? 'home' : 'away';
+            var html = '<details class="pv-pitch-subs ' + teamClass + '"><summary>Suplentes (' + t.substitutes.length + ')</summary>';
+            html += '<div class="pv-pitch-subs-list">';
+            t.substitutes.forEach(function(s) {
+                var card = getCard(s);
+                html += '<span class="pv-subs-item">';
+                html += '<span class="pv-subs-num">' + (s.number || '') + '</span>';
+                html += escHtml(s.name);
+                if (card) {
+                    html += '<span class="pv-subs-card-indicator"><span class="pv-player-card ' + card + '"></span></span>';
+                }
+                html += '</span>';
+            });
+            html += '</div></details>';
+            return html;
+        }
 
-            html += '</div>'; // close pitch-card
-        });
+        var html = '<div class="pv-section"><div class="pv-lineups-new">';
+        html += '<div class="pv-pitch-card">';
 
-        html += '</div></div>';
+        // Home header
+        if (homeT) {
+            html += '<div class="pv-pitch-header home">';
+            html += '<img src="' + escHtml(homeT.logo || 'imagenes/stpls-icon.png') + '" class="pv-pitch-shield" alt="" onerror="this.src=\'imagenes/stpls-icon.png\'">';
+            html += '<h3>' + escHtml(homeT.name) + '</h3>';
+            html += '<span class="pv-pitch-form">' + escHtml(homeT.formation) + '</span>';
+            html += '</div>';
+        }
+
+        // Home subs top
+        if (homeT) html += renderSubs(homeT, true);
+
+        // Single pitch
+        html += '<div class="pv-pitch-wrap"><div class="pv-pitch">';
+        html += '<div class="pv-pitch-spot"></div>';
+        html += '<div class="pv-pitch-pa-b"></div><div class="pv-pitch-pa-t"></div>';
+        html += '<div class="pv-pitch-ga-b"></div><div class="pv-pitch-ga-t"></div>';
+        html += '<div class="pv-pitch-ps-b"></div><div class="pv-pitch-ps-t"></div>';
+        html += '<div class="pv-pitch-players">';
+
+        // Home players (bottom half)
+        if (homeT && homeT.initialLineup) html += renderPlayers(homeT.initialLineup, true);
+        // Away players (top half)
+        if (awayT && awayT.initialLineup) html += renderPlayers(awayT.initialLineup, false);
+
+        html += '</div></div></div>'; // close pitch-players, pitch, pitch-wrap
+
+        // Away subs bottom
+        if (awayT) html += renderSubs(awayT, false);
+
+        // Away header
+        if (awayT) {
+            html += '<div class="pv-pitch-header away">';
+            html += '<img src="' + escHtml(awayT.logo || 'imagenes/stpls-icon.png') + '" class="pv-pitch-shield" alt="" onerror="this.src=\'imagenes/stpls-icon.png\'">';
+            html += '<h3>' + escHtml(awayT.name) + '</h3>';
+            html += '<span class="pv-pitch-form">' + escHtml(awayT.formation) + '</span>';
+            html += '</div>';
+        }
+
+        html += '</div></div></div>'; // close pitch-card, lineups-new, section
         elContent.innerHTML = html;
     }
 
