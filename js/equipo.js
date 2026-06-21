@@ -650,6 +650,9 @@ document.getElementById(
         if (ver === 'noticias') {
             cargarNoticias();
         }
+        if (ver === 'fichajes') {
+            cargarFichajes();
+        }
         if (ver === 'evolucion') {
             const sel = document.getElementById('evo-select');
             if (sel.options.length <= 1) {
@@ -830,6 +833,62 @@ document.getElementById(
         }
         html += '</div>';
         container.innerHTML = html;
+    }
+
+    async function cargarFichajes() {
+        var container = document.getElementById('pl-fichajes');
+        if (!container) return;
+        if (container.querySelector('.fichajes-list')) return;
+        container.innerHTML = '<p class="tab-placeholder">Cargando fichajes...</p>';
+
+        try {
+            var resp = await fetch('./data/fichajes.json');
+            var data = await resp.json();
+            var fichajes = data[slugEquipo];
+            if (!fichajes || fichajes.length === 0) {
+                container.innerHTML = '<p class="tab-placeholder">No hay fichajes registrados para este equipo</p>';
+                return;
+            }
+            var html = '<div class="fichajes-list">';
+            var llegadas = fichajes.filter(function(f) { return f.tipo === 'llegada'; });
+            var salidas = fichajes.filter(function(f) { return f.tipo === 'salida'; });
+            if (llegadas.length > 0) {
+                html += '<div class="fichajes-section-label">Llegadas</div>';
+                for (var i = 0; i < llegadas.length; i++) {
+                    html += renderFichaje(llegadas[i], 'llegada');
+                }
+            }
+            if (salidas.length > 0) {
+                html += '<div class="fichajes-section-label">Salidas</div>';
+                for (var i = 0; i < salidas.length; i++) {
+                    html += renderFichaje(salidas[i], 'salida');
+                }
+            }
+            html += '</div>';
+            container.innerHTML = html;
+        } catch(e) {
+            container.innerHTML = '<p class="tab-placeholder">Error al cargar fichajes</p>';
+        }
+    }
+
+    function renderFichaje(f, tipo) {
+        var icono = tipo === 'llegada' ? '⬇' : '⬆';
+        var precioClass = 'fichaje-precio--pago';
+        var precioLabel = f.precio;
+        if (f.precio.toLowerCase().indexOf('cesión') !== -1 || f.precio.toLowerCase().indexOf('cesion') !== -1) {
+            precioClass = 'fichaje-precio--cesion';
+        } else if (f.precio.toLowerCase().indexOf('libre') !== -1) {
+            precioClass = 'fichaje-precio--libre';
+        }
+        var clubLabel = tipo === 'llegada' ? 'Procede de: ' : 'Destino: ';
+        return '<div class="fichaje-item">'
+            + '<div class="fichaje-icon fichaje-icon--' + tipo + '">' + icono + '</div>'
+            + '<div class="fichaje-body">'
+            + '<div class="fichaje-jugador">' + escHtml(f.jugador) + '</div>'
+            + '<div class="fichaje-detalle">' + clubLabel + escHtml(f.club) + ' · ' + f.fecha + '</div>'
+            + '</div>'
+            + '<div class="fichaje-precio ' + precioClass + '">' + escHtml(precioLabel) + '</div>'
+            + '</div>';
     }
 
 }

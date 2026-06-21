@@ -2402,3 +2402,90 @@ footer{
     color:var(--accent-red);
     font-size:13px;
 }
+
+/* ================================
+   FICHAJES
+=============================== */
+.fichajes-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding:4px 0;
+}
+.fichaje-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 14px;
+    border-radius:10px;
+    background:var(--bg-card);
+    border:1px solid var(--border-color);
+    transition:transform 0.15s;
+}
+.fichaje-icon{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    flex-shrink:0;
+}
+.fichaje-icon--llegada{
+    background:rgba(34,197,94,0.15);
+    color:var(--accent-green);
+}
+.fichaje-icon--salida{
+    background:rgba(239,68,68,0.15);
+    color:var(--accent-red);
+}
+.fichaje-body{
+    flex:1;
+    min-width:0;
+}
+.fichaje-jugador{
+    font-size:14px;
+    font-weight:600;
+    color:var(--text-primary);
+}
+.fichaje-detalle{
+    font-size:11px;
+    color:var(--text-muted);
+    margin-top:2px;
+}
+.fichaje-precio{
+    font-size:12px;
+    font-weight:600;
+    padding:3px 8px;
+    border-radius:4px;
+    white-space:nowrap;
+    flex-shrink:0;
+}
+.fichaje-precio--pago{
+    color:var(--accent-green);
+    background:rgba(34,197,94,0.1);
+}
+.fichaje-precio--cesion{
+    color:var(--accent-cyan);
+    background:rgba(6,182,212,0.1);
+}
+.fichaje-precio--libre{
+    color:var(--accent-gold);
+    background:rgba(240,192,64,0.1);
+}
+.fichaje-posicion{
+    font-size:10px;
+    color:var(--accent-blue);
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    font-weight:600;
+}
+.fichajes-section-label{
+    font-size:12px;
+    font-weight:700;
+    color:var(--text-secondary);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    padding:12px 4px 4px;
+}
