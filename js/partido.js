@@ -141,10 +141,17 @@
         if (!videoUrlCache) { elContent.innerHTML = '<p class="pv-empty">Resumen no disponible.</p>'; return; }
         elContent.innerHTML =
             '<div class="pv-section"><div class="pv-video-card">' +
-                '<div class="pv-video-wrap">' +
-                    '<iframe src="' + videoUrlCache + '" allowfullscreen frameborder="0" style="width:100%;height:100%;position:absolute;top:0;left:0"></iframe>' +
+                '<div class="pv-video-wrap" id="pv-video-placeholder">' +
+                    '<div class="pv-video-overlay" id="pv-video-playbtn">' +
+                        '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" fill="rgba(0,0,0,.6)"/><path d="M26 21v22l18-11z" fill="#fff"/></svg>' +
+                        '<p>Ver resumen</p>' +
+                    '</div>' +
                 '</div>' +
             '</div></div>';
+        document.getElementById("pv-video-playbtn").onclick = function() {
+            document.getElementById("pv-video-placeholder").innerHTML =
+                '<iframe src="' + videoUrlCache + '" allowfullscreen frameborder="0" style="width:100%;height:100%;position:absolute;top:0;left:0"></iframe>';
+        };
     }
 
     /* ===== STATS ===== */
@@ -245,43 +252,114 @@
         elContent.innerHTML = html;
     }
 
-    /* ===== LINEUPS ===== */
+    /* ===== LINEUPS (pitch view) ===== */
     function renderLineups(d, b, home, away) {
         if (!d.lineups) {
             elContent.innerHTML = '<div class="pv-section"><p class="pv-empty">Alineaciones no disponibles.<br><small>Se obtendrán al solicitar el modo lineups del script.</small></p></div>';
             return;
         }
-        var logoHome = (d.homeTeam && d.homeTeam.logo) || (b.homeTeam && b.homeTeam.logo) || "";
-        var logoAway = (d.awayTeam && d.awayTeam.logo) || (b.awayTeam && b.awayTeam.logo) || "";
-        var logos = [logoHome, logoAway];
-        var idx = 0;
-        var html = '<div class="pv-section pv-lineups">';
+
+        // Cross-reference cards & goals from events
+        var cardByName = {}, cardById = {};
+        var goalByName = {}, goalById = {};
+        if (d.events) {
+            d.events.forEach(function(e) {
+                var code = null;
+                if (e.type === "Yellow Card") code = "yellow";
+                else if (e.type === "Red Card") code = "red";
+                else if (e.type === "Second Yellow Card") code = "yr";
+                if (code && e.player) cardByName[e.player] = code;
+                if (code && e.playerId) cardById[e.playerId] = code;
+                if ((e.type === "Goal" || e.type === "Penalty") && e.player) {
+                    goalByName[e.player] = true;
+                    if (e.playerId) goalById[e.playerId] = true;
+                }
+            });
+        }
+
+        function getCard(p) {
+            return (p.id && cardById[p.id]) || cardByName[p.name] || null;
+        }
+        function hasGoal(p) {
+            return (p.id && goalById[p.id]) || goalByName[p.name] || false;
+        }
+
+        var html = '<div class="pv-section"><div class="pv-lineups-new">';
+
         [d.lineups.homeTeam, d.lineups.awayTeam].forEach(function(t) {
             if (!t) return;
-            html += '<div class="pv-lineup-card">';
-            html += '<div class="pv-lineup-header">';
-            if (logos[idx]) html += '<img src="' + logos[idx] + '" class="pv-lineup-shield" alt="">';
+
+            html += '<div class="pv-pitch-card">';
+            html += '<div class="pv-pitch-header">';
+            html += '<img src="' + escHtml(t.logo || 'imagenes/stpls-icon.png') + '" class="pv-pitch-shield" alt="" onerror="this.src=\'imagenes/stpls-icon.png\'">';
             html += '<h3>' + escHtml(t.name) + '</h3>';
-            html += '<span class="pv-formation-badge">' + escHtml(t.formation) + '</span>';
+            html += '<span class="pv-pitch-form">' + escHtml(t.formation) + '</span>';
             html += '</div>';
-            html += '<div class="pv-field"><div class="pv-formation-grid">';
-            t.initialLineup.forEach(function(row) {
-                html += '<div class="pv-formation-row">';
-                row.forEach(function(p) {
-                    html += '<div class="pv-player-pin"><span class="pv-pin-num">' + (p.number||"") + '</span><span class="pv-pin-name">' + escHtml(p.name) + '</span></div>';
+
+            // Pitch with markings
+            html += '<div class="pv-pitch-wrap"><div class="pv-pitch">';
+            html += '<div class="pv-pitch-spot"></div>';
+            html += '<div class="pv-pitch-pa-b"></div><div class="pv-pitch-pa-t"></div>';
+            html += '<div class="pv-pitch-ga-b"></div><div class="pv-pitch-ga-t"></div>';
+            html += '<div class="pv-pitch-ps-b"></div><div class="pv-pitch-ps-t"></div>';
+
+            // Players
+            html += '<div class="pv-pitch-players">';
+            var rows = t.initialLineup;
+            var numRows = rows.length;
+            rows.forEach(function(row, ri) {
+                // Vertical: GK(ri=0) near bottom, forwards at top
+                var topPct = numRows <= 1 ? 50 : 84 - (ri / (numRows - 1)) * 70;
+
+                var count = row.length;
+                var spacing = count <= 1 ? 0 : Math.min(72 / (count - 1), 26);
+                var startX = count <= 1 ? 50 : 50 - ((count - 1) * spacing) / 2;
+
+                row.forEach(function(p, pi) {
+                    var leftPct = count <= 1 ? 50 : startX + pi * spacing;
+                    if (leftPct < 8) leftPct = 8;
+                    if (leftPct > 92) leftPct = 92;
+
+                    var card = getCard(p);
+                    var goal = hasGoal(p);
+
+                    html += '<div class="pv-pitch-player" style="top:' + topPct + '%;left:' + leftPct + '%">';
+                    html += '<div class="pv-pitch-badge">';
+                    html += '<span class="pv-badge-num">' + (p.number || '') + '</span>';
+                    html += '<span class="pv-badge-name">' + escHtml(p.name) + '</span>';
+                    html += '</div>';
+                    if (card || goal) {
+                        html += '<div class="pv-player-card-indicator">';
+                        if (goal) html += '<span class="pv-player-goal">⚽</span>';
+                        if (card) html += '<span class="pv-player-card ' + card + '"></span>';
+                        html += '</div>';
+                    }
+                    html += '</div>';
                 });
-                html += '</div>';
             });
-            html += '</div></div>';
+            html += '</div></div></div>'; // close pitch-players, pitch, pitch-wrap
+
+            // Substitutes
             if (t.substitutes && t.substitutes.length) {
-                html += '<details class="pv-subs-card"><summary>🔁 Suplentes (' + t.substitutes.length + ')</summary><div class="pv-subs-grid">';
-                t.substitutes.forEach(function(s) { html += '<span class="pv-sub-chip"><span class="sub-num">' + (s.number||"") + '</span> ' + escHtml(s.name) + '</span>'; });
+                html += '<details class="pv-pitch-subs"><summary>Suplentes (' + t.substitutes.length + ')</summary>';
+                html += '<div class="pv-pitch-subs-list">';
+                t.substitutes.forEach(function(s) {
+                    var card = getCard(s);
+                    html += '<span class="pv-subs-item">';
+                    html += '<span class="pv-subs-num">' + (s.number || '') + '</span>';
+                    html += escHtml(s.name);
+                    if (card) {
+                        html += '<span class="pv-subs-card-indicator"><span class="pv-player-card ' + card + '"></span></span>';
+                    }
+                    html += '</span>';
+                });
                 html += '</div></details>';
             }
-            html += '</div>';
-            idx++;
+
+            html += '</div>'; // close pitch-card
         });
-        html += '</div>';
+
+        html += '</div></div>';
         elContent.innerHTML = html;
     }
 
