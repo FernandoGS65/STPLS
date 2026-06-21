@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#0b0f1a">
+    <title>Descargas - STPLS</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/stpls-icon.png">
+    <link rel="apple-touch-icon" href="imagenes/stpls-icon.png">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-top">
+        <a href="index.html" class="nav-logo">STPLS</a>
+        <div id="nav-controls"></div>
+    </div>
+    <div id="nav-icons" class="nav-icons"></div>
+</nav>
+
+<main class="descargas-page">
+    <section class="desc-resumen">
+        <div class="desc-resumen-card">
+            <span class="desc-resumen-num" id="total-matches">380</span>
+            <span class="desc-resumen-label">Total</span>
+        </div>
+        <div class="desc-resumen-card desc-resumen-downloaded">
+            <span class="desc-resumen-num" id="downloaded-matches">0</span>
+            <span class="desc-resumen-label">Descargados</span>
+        </div>
+        <div class="desc-resumen-card desc-resumen-pending">
+            <span class="desc-resumen-num" id="pending-matches">380</span>
+            <span class="desc-resumen-label">Pendientes</span>
+        </div>
+    </section>
+
+    <section class="desc-legend">
+        <span class="desc-legend-item"><span class="desc-icon-legend desc-icon-full"></span> Completo</span>
+        <span class="desc-legend-item"><span class="desc-icon-legend desc-icon-partial"></span> Parcial</span>
+        <span class="desc-legend-item"><span class="desc-icon-legend desc-icon-none"></span> Sin datos</span>
+    </section>
+
+    <section class="desc-table-wrap">
+        <table class="desc-table" id="descargas-table">
+            <thead>
+                <tr>
+                    <th>J</th>
+                    <th>Fecha</th>
+                    <th>Local</th>
+                    <th></th>
+                    <th>Visitante</th>
+                    <th title="Detalle">D</th>
+                    <th title="Alineaciones">A</th>
+                    <th title="Boxscore">B</th>
+                </tr>
+            </thead>
+            <tbody id="descargas-tbody"></tbody>
+        </table>
+    </section>
+
+    <p class="desc-total" id="descargas-footer"></p>
+</main>
+
+<footer>
+    <a href="descargas.html" class="footer-link">Descargas</a>
+    <span class="footer-copy">STPLS &copy; 2026</span>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/descargas.js"></script>
+
+</body>
+</html>
