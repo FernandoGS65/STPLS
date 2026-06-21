@@ -262,10 +262,9 @@ footer{
 .video-embed-wrap{
     position:relative;
     width:100%;
-    padding-top:56.25%;
+    aspect-ratio:16/9;
     background:#000;
     border-radius:12px;
-    overflow:hidden;
 }
 
 .video-embed-iframe{
@@ -308,7 +307,7 @@ footer{
     }
 
     .video-body .video-embed-wrap{
-        padding-top:0;
+        aspect-ratio:unset;
         height:100%;
         border-radius:0;
         flex:1;
