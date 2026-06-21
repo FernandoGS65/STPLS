@@ -18,71 +18,28 @@ async function cargarVideo(){
     }
 
     if (typeof entry === "string" && entry.startsWith("http")) {
-        contenedor.innerHTML = `
-            <div class="video-embed-wrap">
-                <iframe
-                    src="${entry}"
-                    class="video-embed-iframe"
-                    allow="autoplay; encrypted-media; fullscreen"
-                    allowfullscreen>
-                </iframe>
-            </div>`;
+        contenedor.innerHTML =
+            '<div class="video-embed-wrap">' +
+                '<iframe ' +
+                    'src="' + entry + '" ' +
+                    'class="video-embed-iframe" ' +
+                    'allow="autoplay; encrypted-media; fullscreen" ' +
+                    'allowfullscreen>' +
+                '</iframe>' +
+            '</div>';
     } else {
-        contenedor.innerHTML = `
-            <div class="video-embed-wrap">
-                <video
-                    class="video-embed-native"
-                    controls
-                    playsinline
-                    webkit-playsinline
-                    preload="metadata"
-                    poster="">
-                    <source src="videos/${id}.mp4" type="video/mp4">
-                </video>
-            </div>`;
-        setupNativeVideoFullscreen(contenedor.querySelector('video'));
+        contenedor.innerHTML =
+            '<div class="video-embed-wrap">' +
+                '<video ' +
+                    'class="video-embed-native" ' +
+                    'controls ' +
+                    'playsinline ' +
+                    'webkit-playsinline ' +
+                    'preload="metadata">' +
+                    '<source src="videos/' + id + '.mp4" type="video/mp4">' +
+                '</video>' +
+            '</div>';
     }
-
-    setupLandscapeDetection();
-}
-
-function setupNativeVideoFullscreen(video) {
-    if (!video) return;
-
-    video.addEventListener('webkitbeginfullscreen', function() {
-        document.documentElement.classList.add('video-fullscreen-active');
-    });
-
-    video.addEventListener('webkitendfullscreen', function() {
-        document.documentElement.classList.remove('video-fullscreen-active');
-    });
-
-    video.addEventListener('fullscreenchange', function() {
-        if (document.fullscreenElement) {
-            document.documentElement.classList.add('video-fullscreen-active');
-        } else {
-            document.documentElement.classList.remove('video-fullscreen-active');
-        }
-    });
-}
-
-function setupLandscapeDetection() {
-    function checkOrientation() {
-        var isLandscape = window.orientation === 90 || window.orientation === -90;
-        var isNarrow = window.innerWidth <= 900;
-
-        if (isLandscape && isNarrow) {
-            document.documentElement.classList.add('video-landscape-mode');
-        } else {
-            document.documentElement.classList.remove('video-landscape-mode');
-        }
-    }
-
-    window.removeEventListener('orientationchange', checkOrientation);
-    window.addEventListener('orientationchange', function() {
-        setTimeout(checkOrientation, 150);
-    });
-    checkOrientation();
 }
 
 APP.onChange(function() { cargarVideo(); });
