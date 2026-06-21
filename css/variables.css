@@ -1,0 +1,70 @@
+/* ================================
+   RESET & BASE
+   =============================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    user-select:none;
+}
+input, textarea, [contenteditable]{
+    -webkit-user-select:text;
+    user-select:text;
+}
+html{
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior:none;
+}
+body{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* ================================
+   CSS VARIABLES (DARK THEME)
+   =============================== */
+:root{
+    --bg-body:#0b0f1a;
+    --bg-surface:#121826;
+    --bg-card:#1a2035;
+    --bg-card-hover:#1f2740;
+    --text-primary:#e8edf5;
+    --text-secondary:#8b95a8;
+    --text-muted:#5a6478;
+    --border-color:#252d42;
+    --accent-blue:#3b82f6;
+    --accent-gold:#f0c040;
+    --accent-green:#22c55e;
+    --accent-red:#ef4444;
+    --accent-cyan:#06b6d4;
+    --accent-violet:#7c3aed;
+}
+
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:var(--bg-body);
+    color:var(--text-primary);
+    transition:background 0.3s, color 0.3s;
+}
+
+/* ================================
+   LIGHT MODE
+   =============================== */
+:root.light-mode{
+    --bg-body:#f5f7fa;
+    --bg-surface:#ffffff;
+    --bg-card:#ffffff;
+    --bg-card-hover:#f0f2f5;
+    --text-primary:#111111;
+    --text-secondary:#444444;
+    --text-muted:#888888;
+    --border-color:#d0d0d0;
+    --accent-gold:#7a5c00;
+}
+
+.light-mode .hero{
+    background:linear-gradient(135deg,#2563eb 0%,#1e40af 100%);
+}

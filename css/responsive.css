@@ -1,0 +1,146 @@
+/* ================================
+   RESPONSIVE — Media Queries
+   =============================== */
+
+/* --- Index page --- */
+@media(max-width:420px){
+    .ligas-grid{
+        grid-template-columns:1fr;
+        max-width:280px;
+    }
+}
+
+@media(max-width:640px){
+    .index-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* --- Layout / Hero --- */
+@media(max-width:768px){
+    .hero-logo{
+        font-size:44px;
+    }
+}
+
+/* --- Clasificacion page --- */
+@media(max-width:600px){
+    .clasificacion-page{
+        padding:12px;
+        padding-top:16px;
+    }
+
+    .clasificacion-header{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .clasificacion-selector-wrapper{
+        justify-content:space-between;
+    }
+
+    .clasificacion-selector{
+        flex:1;
+    }
+
+    .clasificacion-row{
+        padding:10px 12px;
+        gap:8px;
+    }
+
+    .clasificacion-pos{
+        width:22px;
+        font-size:14px;
+    }
+
+    .clasificacion-pts{
+        font-size:18px;
+    }
+}
+
+/* --- Dashboard shared (equipos, estadisticas, jugadores) --- */
+@media(max-width:768px){
+    .dashboard{
+        max-width:100%;
+        margin:0;
+        padding:0;
+    }
+
+    .card-clasificacion{
+        padding:1px !important;
+        margin:0;
+        border-radius:0;
+        box-shadow:none;
+    }
+
+    .equipo-col{
+        font-size:12px;
+        gap:1px;
+    }
+
+    .escudo-tabla{
+        width:16px;
+        height:16px;
+    }
+}
+
+/* --- Equipos page --- */
+@media(max-width:768px){
+    .escudo-equipo{
+        width:45px;
+        height:45px;
+    }
+
+    #lista-equipos{
+        grid-template-columns:repeat(4,1fr);
+        gap:8px;
+    }
+
+    .equipo-card{
+        padding:8px 4px;
+    }
+
+    .equipo-card h3{
+        font-size:11px;
+        margin:4px 0;
+    }
+
+    .equipo-card p{
+        display:none;
+    }
+}
+
+/* --- Resultados page --- */
+@media(max-width:600px){
+    .resultados-page{
+        padding:12px;
+        padding-top:16px;
+    }
+
+    .resultados-selector{
+        min-width:0;
+        flex-shrink:1;
+    }
+
+    .resultado-card{
+        padding:10px 12px;
+        gap:3px 6px;
+    }
+
+    .equipo-local,
+    .equipo-visitante{
+        font-size:13px;
+        gap:5px;
+    }
+
+    .escudo-partido{
+        width:18px;
+        height:18px;
+    }
+
+    .resultado-centro{
+        font-size:14px;
+        padding:3px 10px;
+        min-width:44px;
+    }
+}

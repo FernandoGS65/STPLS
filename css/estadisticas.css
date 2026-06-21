@@ -1,0 +1,95 @@
+/* ================================
+   ESTADISTICAS PAGE
+   =============================== */
+#top-goleadores p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+#jugador-joven,
+#promedio-goles{
+    font-size:20px;
+    text-align:center;
+    padding:15px;
+}
+
+.dg-negativo{
+    color:var(--accent-red);
+    font-weight:bold;
+}
+
+/* --- Download table --- */
+.desc-table-wrap{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+.desc-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+    white-space:nowrap;
+}
+.desc-table th{
+    position:sticky;
+    top:0;
+    background:var(--bg-card);
+    color:var(--text-muted);
+    font-weight:700;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    padding:8px 6px;
+    text-align:left;
+    border-bottom:2px solid var(--border-color);
+}
+.desc-table td{
+    padding:6px;
+    border-bottom:1px solid var(--border-color);
+}
+.desc-table tbody tr:hover{
+    background:var(--bg-card-hover);
+}
+.desc-j{
+    text-align:center;
+    font-weight:700;
+    color:var(--accent-blue);
+    width:28px;
+}
+.desc-local, .desc-visit{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    max-width:120px;
+}
+.desc-local a, .desc-visit a{
+    color:var(--text-primary);
+    text-decoration:none;
+}
+.desc-local a:hover, .desc-visit a:hover{
+    color:var(--accent-gold);
+}
+.desc-res{
+    text-align:center;
+    font-weight:700;
+    padding:6px 10px;
+    min-width:44px;
+}
+.desc-check{
+    text-align:center;
+    font-size:14px;
+    color:var(--text-muted);
+    width:24px;
+}
+.desc-yes{
+    color:var(--accent-green);
+    font-weight:700;
+}
+.desc-total{
+    margin-top:10px;
+    text-align:center;
+    color:var(--text-muted);
+    font-size:13px;
+}
+.desc-error{
+    color:var(--accent-red);
+    font-size:13px;
+}

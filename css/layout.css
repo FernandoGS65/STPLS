@@ -1,0 +1,253 @@
+/* ================================
+   APP HEADER / NAVBAR
+   =============================== */
+.navbar{
+    background:var(--bg-surface);
+    border-bottom:1px solid var(--border-color);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+.nav-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:8px 16px;
+    gap:8px;
+}
+.nav-logo{
+    font-size:18px;
+    font-weight:800;
+    color:var(--accent-gold);
+    text-decoration:none;
+    letter-spacing:-0.5px;
+    flex-shrink:0;
+}
+#nav-controls{
+    display:flex;
+    gap:6px;
+    align-items:center;
+    flex:1;
+    justify-content:center;
+}
+.nav-select{
+    background:var(--bg-card);
+    color:var(--text-primary);
+    border:1px solid var(--border-color);
+    border-radius:6px;
+    padding:4px 8px;
+    font-size:12px;
+    font-family:inherit;
+    cursor:pointer;
+    outline:none;
+    appearance:auto;
+    max-width:110px;
+}
+.nav-select:hover{
+    border-color:var(--accent-blue);
+}
+#themeToggle{
+    background:none;
+    border:none;
+    color:var(--text-muted);
+    cursor:pointer;
+    padding:4px;
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    transition:color 0.2s;
+}
+#themeToggle:hover{
+    color:var(--accent-gold);
+}
+
+/* ================================
+   NAV ICONS
+   =============================== */
+.nav-icons{
+    display:flex;
+    border-top:1px solid var(--border-color);
+    background:var(--bg-surface);
+}
+.nav-icon{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2px;
+    padding:6px 0 8px;
+    text-decoration:none;
+    color:var(--text-muted);
+    transition:color 0.2s;
+    border-top:2px solid transparent;
+    margin-top:-1px;
+}
+.nav-icon:hover{
+    color:var(--text-secondary);
+}
+.nav-icon--active{
+    color:var(--accent-gold);
+    border-top-color:var(--accent-gold);
+}
+.nav-icon-svg{
+    width:22px;
+    height:22px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+.nav-icon span{
+    font-size:9px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+}
+
+/* ================================
+   HERO SECTION
+   =============================== */
+.hero{
+    background:linear-gradient(135deg,var(--accent-blue) 0%,#0a2a6e 100%);
+    padding:28px 16px 24px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 20% 80%,rgba(255,255,255,0.06) 0%,transparent 60%);
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
+}
+
+.hero-logo{
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:2px;
+    color:#fff;
+    text-shadow:0 2px 8px rgba(0,0,0,0.2);
+    line-height:1.1;
+}
+
+.hero-subtitle{
+    margin:6px auto 16px;
+    font-size:13px;
+    color:rgba(255,255,255,0.75);
+    max-width:380px;
+    line-height:1.4;
+}
+
+.hero-stats{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.hero-stat{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1px;
+    color:rgba(255,255,255,0.65);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+}
+
+.hero-stat strong{
+    font-size:24px;
+    font-weight:800;
+    color:#fff;
+    line-height:1.1;
+}
+
+/* ================================
+   PAGE WRAPPERS (shared)
+   =============================== */
+.resultados-page,
+.equipo-page,
+.video-page{
+    max-width:800px;
+    margin:0 auto;
+    padding:16px;
+    padding-top:24px;
+}
+
+.back-link{
+    display:inline-block;
+    margin-top:16px;
+    color:var(--text-secondary);
+    font-size:14px;
+    text-decoration:none;
+    transition:color 0.2s;
+}
+
+.back-link:hover{
+    color:var(--accent-gold);
+}
+
+/* ================================
+   FOOTER
+   =============================== */
+footer{
+    margin-top:40px;
+    border-top:1px solid var(--border-color);
+    background:var(--bg-surface);
+    padding:12px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+}
+
+.footer-copy{
+    font-size:11px;
+    color:var(--text-muted);
+}
+
+.footer-theme-btn{
+    background:none;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+    padding:4px 8px;
+    border-radius:6px;
+    transition:background 0.15s;
+    line-height:1;
+}
+.footer-theme-btn:hover{
+    background:var(--bg-card);
+}
+
+/* ================================
+   GENERIC CARD
+   =============================== */
+.card{
+    background:var(--bg-card);
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+    border:1px solid var(--border-color);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:var(--text-primary);
+}

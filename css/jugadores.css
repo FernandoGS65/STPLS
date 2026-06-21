@@ -1,0 +1,26 @@
+/* ================================
+   JUGADORES PAGE
+   =============================== */
+#buscador-jugadores{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid var(--border-color);
+    border-radius:8px;
+    font-size:16px;
+    background:var(--bg-card);
+    color:var(--text-primary);
+}
+
+.jugador-card{
+    background:var(--bg-card);
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.jugador-card h3{
+    margin-bottom:10px;
+    color:var(--text-primary);
+}

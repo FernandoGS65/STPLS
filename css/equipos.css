@@ -1,0 +1,51 @@
+/* ================================
+   EQUIPOS PAGE (team grid)
+   =============================== */
+.equipo-card{
+    background:var(--bg-card);
+    border-radius:12px;
+    padding:20px 15px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    transition:0.25s;
+    height:100%;
+    border:1px solid var(--border-color);
+}
+
+.equipo-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 14px rgba(0,0,0,0.3);
+}
+
+.equipo-card h3{
+    margin-bottom:10px;
+    color:var(--text-primary);
+    font-size:16px;
+}
+
+.equipo-card p{
+    margin:5px 0;
+    color:var(--accent-blue);
+    font-weight:700;
+}
+
+.equipo-card-link{
+    text-decoration:none;
+    color:inherit;
+    cursor:pointer;
+}
+
+.escudo-equipo{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 12px auto;
+}
+
+#lista-equipos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
