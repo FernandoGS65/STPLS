@@ -18,28 +18,21 @@ async function cargarVideo(){
     }
 
     if (typeof entry === "string" && entry.startsWith("http")) {
-        contenedor.innerHTML =
-            '<div class="video-embed-wrap">' +
-                '<iframe ' +
-                    'src="' + entry + '" ' +
-                    'class="video-embed-iframe" ' +
-                    'allow="autoplay; encrypted-media; fullscreen" ' +
-                    'allowfullscreen>' +
-                '</iframe>' +
-            '</div>';
-    } else {
-        contenedor.innerHTML =
-            '<div class="video-embed-wrap">' +
-                '<video ' +
-                    'class="video-embed-native" ' +
-                    'controls ' +
-                    'playsinline ' +
-                    'webkit-playsinline ' +
-                    'preload="metadata">' +
-                    '<source src="videos/' + id + '.mp4" type="video/mp4">' +
-                '</video>' +
-            '</div>';
+        window.location.href = entry;
+        return;
     }
+
+    contenedor.innerHTML =
+        '<div class="video-embed-wrap">' +
+            '<video ' +
+                'class="video-embed-native" ' +
+                'controls ' +
+                'playsinline ' +
+                'webkit-playsinline ' +
+                'preload="metadata">' +
+                '<source src="videos/' + id + '.mp4" type="video/mp4">' +
+            '</video>' +
+        '</div>';
 }
 
 APP.onChange(function() { cargarVideo(); });
