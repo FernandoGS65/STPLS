@@ -1,2 +1,7 @@
 config.json
 data/partidos/
+
+# opencode tool artifacts
+.agents/
+.opencode/
+skills-lock.json
