@@ -234,6 +234,13 @@
             if (type.indexOf("VAR") !== -1) return "var";
             return "";
         }
+        function dotLetter(type) {
+            if (type === "Goal" || type === "Penalty" || type === "Own Goal") return "G";
+            if (type.indexOf("Card") !== -1) return "T";
+            if (type === "Substitution") return "S";
+            if (type.indexOf("VAR") !== -1) return "V";
+            return "";
+        }
 
         var html = '<div class="pv-section"><div class="pv-events-card">';
         evts.forEach(function(e) {
@@ -253,7 +260,7 @@
                             ? '<div class="pv-event-body local"><span class="pv-event-time">' + escHtml(e.time) + '\'</span><span class="pv-event-desc">' + desc + (extra ? '<small>' + extra + '</small>' : '') + '</span></div>'
                             : '') +
                     '</div>' +
-                    '<div class="pv-event-dot' + (dt ? ' ' + dt : '') + '"></div>' +
+                    '<div class="pv-event-dot' + (dt ? ' ' + dt : '') + '">' + dotLetter(e.type) + '</div>' +
                     '<div class="pv-event-col ' + side + '">' +
                         (!isHome
                             ? '<div class="pv-event-body visit"><span class="pv-event-time">' + escHtml(e.time) + '\'</span><span class="pv-event-desc">' + desc + (extra ? '<small>' + extra + '</small>' : '') + '</span></div>'
