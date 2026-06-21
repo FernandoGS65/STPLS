@@ -19,20 +19,70 @@ async function cargarVideo(){
 
     if (typeof entry === "string" && entry.startsWith("http")) {
         contenedor.innerHTML = `
-            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+            <div class="video-embed-wrap">
                 <iframe
                     src="${entry}"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
-                    allow="autoplay; encrypted-media"
+                    class="video-embed-iframe"
+                    allow="autoplay; encrypted-media; fullscreen"
                     allowfullscreen>
                 </iframe>
             </div>`;
     } else {
         contenedor.innerHTML = `
-            <video controls autoplay style="width:100%;border-radius:12px;">
-                <source src="videos/${id}.mp4" type="video/mp4">
-            </video>`;
+            <div class="video-embed-wrap">
+                <video
+                    class="video-embed-native"
+                    controls
+                    playsinline
+                    webkit-playsinline
+                    preload="metadata"
+                    poster="">
+                    <source src="videos/${id}.mp4" type="video/mp4">
+                </video>
+            </div>`;
+        setupNativeVideoFullscreen(contenedor.querySelector('video'));
     }
+
+    setupLandscapeDetection();
+}
+
+function setupNativeVideoFullscreen(video) {
+    if (!video) return;
+
+    video.addEventListener('webkitbeginfullscreen', function() {
+        document.documentElement.classList.add('video-fullscreen-active');
+    });
+
+    video.addEventListener('webkitendfullscreen', function() {
+        document.documentElement.classList.remove('video-fullscreen-active');
+    });
+
+    video.addEventListener('fullscreenchange', function() {
+        if (document.fullscreenElement) {
+            document.documentElement.classList.add('video-fullscreen-active');
+        } else {
+            document.documentElement.classList.remove('video-fullscreen-active');
+        }
+    });
+}
+
+function setupLandscapeDetection() {
+    function checkOrientation() {
+        var isLandscape = window.orientation === 90 || window.orientation === -90;
+        var isNarrow = window.innerWidth <= 900;
+
+        if (isLandscape && isNarrow) {
+            document.documentElement.classList.add('video-landscape-mode');
+        } else {
+            document.documentElement.classList.remove('video-landscape-mode');
+        }
+    }
+
+    window.removeEventListener('orientationchange', checkOrientation);
+    window.addEventListener('orientationchange', function() {
+        setTimeout(checkOrientation, 150);
+    });
+    checkOrientation();
 }
 
 APP.onChange(function() { cargarVideo(); });
