@@ -168,35 +168,48 @@
             else dict[s.displayName][1] = s.value;
         });
 
-        var keys = ["Ball Possession","Total Shots","Shots On Target","Shots Off Target","Corner Kicks","Fouls","Yellow Cards","Red Cards","Offsides"];
-        var labels = {"Ball Possession":"Posesión","Total Shots":"Tiros","Shots On Target":"A puerta","Shots Off Target":"Fuera","Corner Kicks":"Córners","Fouls":"Faltas","Yellow Cards":"Amarillas","Red Cards":"Rojas","Offsides":"Fueras de juego"};
-        var icons = {"Ball Possession":"🎯","Total Shots":"⚽","Shots On Target":"🎯","Shots Off Target":"👟","Corner Kicks":"🚩","Fouls":"🟡","Yellow Cards":"🟨","Red Cards":"🟥","Offsides":"🚩"};
+        var statOrder = [
+            { key: "Possession", label: "Posesión", icon: "🎯", isPercent: true },
+            { key: "Shots on target", label: "Tiros a puerta", icon: "⚽" },
+            { key: "Total passes", label: "Total pases", icon: "👟" },
+            { key: "Successful passes", label: "Pases completados", icon: "✅" },
+            { key: "Big Chances Created", label: "Ocasiones claras", icon: "🌟" },
+            { key: "Corners", label: "Córners", icon: "🚩" },
+            { key: "Free Kicks", label: "Tiros libres", icon: "🦶" },
+            { key: "Interceptions", label: "Intercepciones", icon: "🛑" },
+            { key: "Dribbles", label: "Regates", icon: "🏃" },
+            { key: "Fouls", label: "Faltas", icon: "🟡" },
+            { key: "Yellow cards", label: "Tarjetas amarillas", icon: "🟨" },
+            { key: "Offsides", label: "Fueras de juego", icon: "🚩" },
+            { key: "Goalkeeper saves", label: "Paradas del portero", icon: "🧤" },
+            { key: "Goal Kicks", label: "Saques de puerta", icon: "🥅" }
+        ];
 
         var html = '<div class="pv-section"><div class="pv-stats-card">';
-        keys.forEach(function(k) {
-            var v = dict[k];
+        statOrder.forEach(function(s) {
+            var v = dict[s.key];
             if (!v) return;
             var hv = parseFloat((v[0]||"0").toString().replace(",","."));
             var av = parseFloat((v[1]||"0").toString().replace(",","."));
             var total = hv + av || 1;
             var ph = Math.round(hv / total * 100);
             var pa = Math.round(av / total * 100);
-            var label = labels[k] || k;
-            var icon = icons[k] || "";
+            var hDisplay = s.isPercent ? hv.toFixed(0) + '%' : (v[0] ?? "-");
+            var aDisplay = s.isPercent ? av.toFixed(0) + '%' : (v[1] ?? "-");
 
             html +=
                 '<div class="pv-stat-row">' +
-                    '<span class="pv-stat-icon">' + icon + '</span>' +
+                    '<span class="pv-stat-icon">' + s.icon + '</span>' +
                     '<div class="pv-stat-info">' +
-                        '<div class="pv-stat-label">' + label + '</div>' +
+                        '<div class="pv-stat-label">' + s.label + '</div>' +
                         '<div class="pv-stat-bar-wrap">' +
-                            '<span class="pv-stat-val local">' + (k === "Ball Possession" ? hv.toFixed(0) + '%' : (v[0]??"-")) + '</span>' +
+                            '<span class="pv-stat-val local">' + hDisplay + '</span>' +
                             '<div class="pv-bar-track">' +
                                 '<div class="pv-bar-fill local" style="width:' + ph + '%"></div>' +
                                 (ph < 100 && pa < 100 ? '<div class="pv-bar-gap"></div>' : '') +
                                 '<div class="pv-bar-fill visit" style="width:' + pa + '%"></div>' +
                             '</div>' +
-                            '<span class="pv-stat-val visit">' + (k === "Ball Possession" ? av.toFixed(0) + '%' : (v[1]??"-")) + '</span>' +
+                            '<span class="pv-stat-val visit">' + aDisplay + '</span>' +
                         '</div>' +
                     '</div>' +
                 '</div>';
