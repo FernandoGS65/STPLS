@@ -76,13 +76,6 @@
         html += '</div>';
 
         html += '<div class="arb-info">';
-        html += '<div class="arb-info-row">';
-        html += '<div class="arb-info-icon arb-info-icon--whistle">\uD83C\uDFC8</div>';
-        html += '<div class="arb-info-text">';
-        html += '<div class="arb-info-label">Colegio</div>';
-        html += '<div class="arb-info-value">' + a.Colegio + '</div>';
-        html += '</div></div>';
-
         html += '</div>';
         html += '</div>';
         html += '</div>';
