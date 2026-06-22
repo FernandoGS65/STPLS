@@ -141,7 +141,11 @@
                 return resp.json();
             })
             .then(function(data) {
-                arbitrosData = data;
+                arbitrosData = data.sort(function(a, b) {
+                    var aa = a.Nombre.replace(/^[a-záéíóúñ]+\s+/i, '').split(/\s+/)[0].toLowerCase();
+                    var bb = b.Nombre.replace(/^[a-záéíóúñ]+\s+/i, '').split(/\s+/)[0].toLowerCase();
+                    return aa.localeCompare(bb, 'es');
+                });
                 selectedId = null;
                 renderLista();
             })
