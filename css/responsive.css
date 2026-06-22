@@ -144,3 +144,31 @@
         min-width:44px;
     }
 }
+
+/* --- Arbitros page --- */
+@media(max-width:480px){
+    .arbitros-page{
+        padding:12px;
+        padding-top:16px;
+    }
+
+    .arb-foto-full{
+        height:380px;
+    }
+
+    .arb-nombre{
+        font-size:18px;
+    }
+
+    .arb-body{
+        padding:12px 16px 16px;
+    }
+
+    .arb-stats{
+        gap:6px;
+    }
+
+    .arb-stat-value{
+        font-size:18px;
+    }
+}
