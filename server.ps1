@@ -26,6 +26,8 @@ while ($listener.IsListening) {
             ".js"   = "application/javascript"
             ".json" = "application/json"
             ".png"  = "image/png"
+            ".jpg"  = "image/jpeg"
+            ".jpeg" = "image/jpeg"
             ".webp" = "image/webp"
             ".mp4"  = "video/mp4"
             ".ico"  = "image/x-icon"
