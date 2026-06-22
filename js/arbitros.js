@@ -383,9 +383,7 @@
                         return m.home === teamName || m.away === teamName;
                     });
 
-                    var totalYellow = 0, totalRed = 0, totalPen = 0;
-                    var homeYellow = 0, homeRed = 0, homePen = 0;
-                    var awayYellow = 0, awayRed = 0, awayPen = 0;
+                    var totalYellow = 0, totalRed = 0, totalPenFor = 0, totalPenAga = 0;
 
                     teamMatches.forEach(function(m) {
                         var events = [];
@@ -393,19 +391,13 @@
                         if (origMatch && origMatch.events) {
                             events = origMatch.events;
                         }
-                        var isHome = m.home === teamName;
                         events.forEach(function(e) {
-                            if (e.team && e.team.name === teamName) {
-                                if (e.type === 'Yellow Card') {
-                                    totalYellow++;
-                                    if (isHome) homeYellow++; else awayYellow++;
-                                } else if (e.type === 'Red Card') {
-                                    totalRed++;
-                                    if (isHome) homeRed++; else awayRed++;
-                                } else if (e.type === 'Penalty') {
-                                    totalPen++;
-                                    if (isHome) homePen++; else awayPen++;
-                                }
+                            if (!e.team) return;
+                            var isTeam = e.team.name === teamName;
+                            if (e.type === 'Yellow Card' && isTeam) totalYellow++;
+                            else if (e.type === 'Red Card' && isTeam) totalRed++;
+                            else if (e.type === 'Penalty') {
+                                if (isTeam) totalPenFor++; else totalPenAga++;
                             }
                         });
                     });
@@ -414,10 +406,11 @@
                     var shtml = '<div class="arb-summary">';
                     shtml += '<div class="arb-summary-title">' + escHtml(teamName) + ' (' + n + ' partido' + (n > 1 ? 's' : '') + ')</div>';
                     shtml += '<div class="arb-summary-grid">';
-                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + totalYellow + '</span><span class="arb-summary-label">\uD83D\uDFE8 Amarillas</span></div>';
-                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + totalRed + '</span><span class="arb-summary-label">\uD83D\uDFE5 Rojas</span></div>';
-                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + totalPen + '</span><span class="arb-summary-label">\u26BD Penaltis</span></div>';
-                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + (totalYellow + totalRed + totalPen) + '</span><span class="arb-summary-label">Total</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + (totalYellow + totalRed + totalPenFor + totalPenAga) + '</span><span class="arb-summary-label">Total</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--yc">' + totalYellow + '</span><span class="arb-summary-label">\uD83D\uDFE8 Amarillas</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--rc">' + totalRed + '</span><span class="arb-summary-label">\uD83D\uDFE5 Rojas</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--pen">' + totalPenFor + '</span><span class="arb-summary-label">\u26BD Pen. Favor</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--pen">' + totalPenAga + '</span><span class="arb-summary-label">\u26BD Pen. Contra</span></div>';
                     shtml += '</div></div>';
 
                     if (n > 0) {
