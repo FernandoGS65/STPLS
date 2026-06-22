@@ -317,7 +317,8 @@
         }
 
         var cardByName = {}, cardById = {};
-        var goalByName = {}, goalById = {};
+        var goalCountById = {};
+        var goalCountByName = {};
         var subEvents = [];
         if (d.events) {
             d.events.forEach(function(e) {
@@ -328,8 +329,8 @@
                 if (code && e.player) cardByName[e.player] = code;
                 if (code && e.playerId) cardById[e.playerId] = code;
                 if ((e.type === "Goal" || e.type === "Penalty") && e.player) {
-                    goalByName[e.player] = e;
-                    if (e.playerId) goalById[e.playerId] = e;
+                    if (e.playerId) goalCountById[e.playerId] = (goalCountById[e.playerId] || 0) + 1;
+                    goalCountByName[e.player] = (goalCountByName[e.player] || 0) + 1;
                 }
                 if (e.type === "Substitution") subEvents.push(e);
             });
@@ -362,8 +363,10 @@
         function getCard(p) {
             return findEvent(p.name, p.id, cardByName, cardById) || null;
         }
-        function getGoalEvent(p) {
-            return findEvent(p.name, p.id, goalByName, goalById) || null;
+        function getGoalCount(p) {
+            if (p.id && goalCountById[p.id]) return goalCountById[p.id];
+            if (p.name && goalCountByName[p.name]) return goalCountByName[p.name];
+            return 0;
         }
 
         function getSubInEvent(p) {
@@ -415,7 +418,7 @@
                     if (leftPct > 90) leftPct = 90;
 
                     var card = getCard(p);
-                    var goalEvt = getGoalEvent(p);
+                    var goalCt = getGoalCount(p);
                     var subOutEvt = getSubOutEvent(p);
                     var subInEvt = getSubInEvent(p);
                     var teamClass = isHome ? 'home' : 'away';
@@ -427,11 +430,11 @@
                     html += '<span class="pv-avatar-num">' + (p.number || '') + '</span>';
                     html += '<span class="pv-avatar-initials">' + escHtml(initials) + '</span>';
                     html += '</div>';
-                    if (card || goalEvt || subOutEvt || subInEvt) {
+                    if (card || goalCt || subOutEvt || subInEvt) {
                         html += '<div class="pv-avatar-badges">';
-                        if (goalEvt) html += '<span class="pv-ind-goal">⚽</span>';
-                        if (subOutEvt) html += '<span class="pv-ind-sub out"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span>';
-                        if (subInEvt) html += '<span class="pv-ind-sub in"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span>';
+                        for (var gi = 0; gi < goalCt; gi++) html += '<span class="pv-ind-goal">\u26BD</span>';
+                        if (subOutEvt) html += '<span class="pv-ind-sub out"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span>';
+                        if (subInEvt) html += '<span class="pv-ind-sub in"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span>';
                         if (card === 'yellow') html += '<span class="pv-ind-card yellow"></span>';
                         if (card === 'red') html += '<span class="pv-ind-card red"></span>';
                         if (card === 'yr') html += '<span class="pv-ind-card yr"></span>';
@@ -459,7 +462,7 @@
             html += '<div class="pv-subs-grid">';
             t.substitutes.forEach(function(s) {
                 var card = getCard(s);
-                var goalEvt = getGoalEvent(s);
+                var goalCt = getGoalCount(s);
                 var subInEvt = getSubInEvent(s);
                 var subOutEvt = getSubOutEvent(s);
                 var entered = !!subInEvt;
@@ -470,12 +473,12 @@
                 html += '<span class="pv-subs-name">' + escHtml(shortName(name)) + '</span>';
                 if (entered) {
                     html += '<span class="pv-subs-in-info">';
-                    html += '<span class="pv-subs-arrow-in"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span> ';
+                    html += '<span class="pv-subs-arrow-in"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span> ';
                     html += escHtml(shortName(subInEvt.player || ''));
                     html += ' <span class="pv-subs-min">' + escHtml(subInEvt.time || '') + '\'</span>';
                     html += '</span>';
                 }
-                if (goalEvt) html += '<span class="pv-ind-goal">⚽</span>';
+                for (var gi = 0; gi < goalCt; gi++) html += '<span class="pv-ind-goal">\u26BD</span>';
                 if (card === 'yellow') html += '<span class="pv-ind-card yellow"></span>';
                 if (card === 'red') html += '<span class="pv-ind-card red"></span>';
                 if (card === 'yr') html += '<span class="pv-ind-card yr"></span>';
