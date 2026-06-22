@@ -91,7 +91,9 @@
         var referee = d.referee;
         var parts = [];
         if (venue) parts.push('🏟️ ' + escHtml(venue.name) + (venue.city ? ', ' + escHtml(venue.city) : ''));
-        if (referee) parts.push('👤 ' + escHtml(referee.name));
+        if (referee && referee.name) {
+            parts.push('👤 <a href="arbitros.html?nombre=' + encodeURIComponent(referee.name) + '" class="pv-info-link">' + escHtml(referee.name) + '</a>');
+        }
         if (venue && venue.capacity) parts.push('👥 ' + parseInt(venue.capacity).toLocaleString('es-ES') + ' esp.');
         elInfo.innerHTML = parts.length ? '<div class="pv-info">' + parts.map(function(p) { return '<span>' + p + '</span>'; }).join('') + '</div>' : '';
     }
@@ -149,8 +151,20 @@
                 '</div>' +
             '</div></div>';
         document.getElementById("pv-video-playbtn").onclick = function() {
+            var src = videoUrlCache;
+            var iframeSrc = src;
+            if (src.indexOf("youtube.com") !== -1 || src.indexOf("youtu.be") !== -1) {
+                var ytId = "";
+                if (src.indexOf("youtu.be/") !== -1) ytId = src.split("youtu.be/")[1].split("?")[0];
+                else if (src.indexOf("v=") !== -1) ytId = src.split("v=")[1].split("&")[0];
+                else if (src.indexOf("/embed/") !== -1) ytId = src.split("/embed/")[1].split("?")[0];
+                if (ytId) iframeSrc = "https://www.youtube.com/embed/" + ytId + "?rel=0&modestbranding=1";
+            }
             document.getElementById("pv-video-placeholder").innerHTML =
-                '<iframe src="' + videoUrlCache + '" allowfullscreen frameborder="0" style="width:100%;height:100%;position:absolute;top:0;left:0"></iframe>';
+                '<iframe class="pv-video-iframe" src="' + iframeSrc + '" ' +
+                'allowfullscreen ' +
+                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" ' +
+                'frameborder="0"></iframe>';
         };
     }
 
@@ -194,8 +208,8 @@
             var total = hv + av || 1;
             var ph = Math.round(hv / total * 100);
             var pa = Math.round(av / total * 100);
-            var hDisplay = s.isPercent ? hv.toFixed(0) + '%' : (v[0] ?? "-");
-            var aDisplay = s.isPercent ? av.toFixed(0) + '%' : (v[1] ?? "-");
+            var hDisplay = s.isPercent ? Math.round(hv * 100) + '%' : (v[0] ?? "-");
+            var aDisplay = s.isPercent ? Math.round(av * 100) + '%' : (v[1] ?? "-");
 
             html +=
                 '<div class="pv-stat-row">' +
@@ -268,6 +282,12 @@
                     '</div>' +
                 '</div>';
         });
+        html += '<div class="pv-events-legend">';
+        html += '<div class="pv-legend-item"><div class="pv-legend-dot" style="background:var(--accent-green)"></div>Gol</div>';
+        html += '<div class="pv-legend-item"><div class="pv-legend-dot" style="background:var(--accent-gold)"></div>Tarjeta</div>';
+        html += '<div class="pv-legend-item"><div class="pv-legend-dot" style="background:var(--accent-cyan)"></div>Sust.</div>';
+        html += '<div class="pv-legend-item"><div class="pv-legend-dot" style="background:var(--accent-violet)"></div>VAR</div>';
+        html += '</div>';
         html += '</div></div>';
         elContent.innerHTML = html;
     }
@@ -445,7 +465,7 @@
                 if (card === 'yr') html += '<span class="pv-ind-card yr"></span>';
                 html += '</div>';
             });
-            html += '</div></div>';
+        html += '</div>';
             return html;
         }
 
@@ -532,13 +552,24 @@
         var dVal = parseFloat(prob.draw);
         var aVal = parseFloat(prob.away);
 
+        var desc = three.description ? escHtml(three.description) : "";
+        if (desc) {
+            desc = desc
+                .replace(/home win/gi, "Victoria local")
+                .replace(/away win/gi, "Victoria visitante")
+                .replace(/draw/gi, "Empate")
+                .replace(/probability/gi, "probabilidad")
+                .replace(/The .*? is favored/gi, "Se favorece al $1")
+                .replace(/favored to win/gi, "favorito para ganar");
+        }
+
         elContent.innerHTML =
             '<div class="pv-section"><div class="pv-pred-card">' +
                 '<h3>📊 Pronóstico pre-partido</h3>' +
                 '<div class="pv-pred-row"><span class="pv-pred-label">' + escHtml(hName) + '</span><div class="pv-pred-track"><div class="pv-pred-fill home" style="width:' + hVal + '%"></div></div><span class="pv-pred-val home">' + prob.home + '</span></div>' +
                 '<div class="pv-pred-row"><span class="pv-pred-label">Empate</span><div class="pv-pred-track"><div class="pv-pred-fill draw" style="width:' + dVal + '%"></div></div><span class="pv-pred-val draw">' + prob.draw + '</span></div>' +
                 '<div class="pv-pred-row"><span class="pv-pred-label">' + escHtml(aName) + '</span><div class="pv-pred-track"><div class="pv-pred-fill away" style="width:' + aVal + '%"></div></div><span class="pv-pred-val away">' + prob.away + '</span></div>' +
-                (three.description ? '<p class="pv-pred-desc">💬 ' + escHtml(three.description) + '</p>' : '') +
+                (desc ? '<p class="pv-pred-desc">💬 ' + desc + '</p>' : '') +
             '</div></div>';
     }
 

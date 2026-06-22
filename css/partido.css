@@ -90,6 +90,14 @@
     background:var(--bg-surface);
     border-radius:6px;
 }
+.pv-info-link{
+    color:var(--accent-cyan);
+    text-decoration:none;
+    font-weight:600;
+}
+.pv-info-link:hover{
+    text-decoration:underline;
+}
 
 /* ===== TABS ===== */
 .pv-tabs{
@@ -134,6 +142,12 @@
     position:relative;
     width:100%;
     padding-top:56.25%;
+}
+.pv-video-iframe{
+    position:absolute;
+    top:0;left:0;
+    width:100%;height:100%;
+    border:none;
 }
 .pv-video-overlay{
     position:absolute;
@@ -279,18 +293,20 @@
 .pv-event-col.visit{justify-content:flex-end;padding-left:14px;margin-left:auto;text-align:right}
 .pv-event-dot{
     width:36px;height:36px;
+    min-width:36px;min-height:36px;max-width:36px;max-height:36px;
     border-radius:50%;
     flex-shrink:0;
     position:relative;
     z-index:1;
-    border:none;
+    border:2px solid var(--bg-primary);
+    overflow:hidden;
+    box-sizing:border-box;
     display:flex;align-items:center;justify-content:center;
     font-size:14px;font-weight:900;color:#fff;line-height:1;
+    background:var(--accent-blue);
 }
-.pv-event-dot.local{background:var(--accent-blue);margin-left:auto;margin-right:-18px}
-.pv-event-dot.visit{background:var(--accent-gold);margin-right:auto;margin-left:-18px}
 .pv-event-dot.goal{background:var(--accent-green)}
-.pv-event-dot.card{background:var(--accent-red)}
+.pv-event-dot.card{background:var(--accent-gold);width:10px;height:10px;min-width:10px;min-height:10px;max-width:10px;max-height:10px}
 .pv-event-dot.sub{background:var(--accent-cyan)}
 .pv-event-dot.var{background:var(--accent-violet)}
 .pv-event-body{display:flex;flex-direction:column}
@@ -313,6 +329,29 @@
     color:var(--text-secondary);
     display:block;
     margin-top:1px;
+}
+
+/* ===== EVENTS LEGEND ===== */
+.pv-events-legend{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    padding:10px 12px 6px;
+    border-top:1px solid var(--border-color);
+    margin-top:4px;
+}
+.pv-legend-item{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    font-size:10px;
+    color:var(--text-muted);
+    font-weight:600;
+}
+.pv-legend-dot{
+    width:12px;height:12px;
+    border-radius:50%;
+    flex-shrink:0;
 }
 
 /* ===== LINEUPS — SINGLE PITCH VIEW ===== */
@@ -592,23 +631,23 @@
     text-align:center;
 }
 .pv-pred-row{
-    display:flex;
+    display:grid;
+    grid-template-columns:120px 1fr 48px;
     align-items:center;
-    gap:8px;
-    margin-bottom:8px;
+    gap:10px;
+    margin-bottom:10px;
 }
 .pv-pred-label{
     font-size:11px;
     font-weight:600;
     color:var(--text-primary);
-    min-width:60px;
-    text-align:right;
+    text-align:left;
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
+    padding-right:4px;
 }
 .pv-pred-track{
-    flex:1;
     height:18px;
     background:var(--bg-surface);
     border-radius:10px;
@@ -625,8 +664,7 @@
 .pv-pred-val{
     font-size:13px;
     font-weight:800;
-    min-width:44px;
-    text-align:center;
+    text-align:right;
     font-variant-numeric:tabular-nums;
 }
 .pv-pred-val.home{color:var(--accent-blue)}
@@ -641,4 +679,30 @@
     line-height:1.4;
     text-align:center;
     font-style:italic;
+}
+
+/* ===== LANDSCAPE VIDEO (partido page) ===== */
+@media (orientation: landscape) and (max-width:900px){
+    .pv-tabs{
+        display:none;
+    }
+    .pv-video-card{
+        position:fixed;
+        top:0;left:0;
+        width:100vw;height:100vh;
+        width:100dvw;height:100dvh;
+        border-radius:0;
+        border:none;
+        z-index:999;
+        background:#000;
+    }
+    .pv-video-wrap{
+        padding-top:0;
+        width:100%;height:100%;
+    }
+    .pv-video-iframe{
+        position:absolute;
+        top:0;left:0;
+        width:100%;height:100%;
+    }
 }

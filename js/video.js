@@ -1,24 +1,58 @@
 async function cargarVideo(){
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
-    const contenedor = document.getElementById("video-container");
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get("id");
+    var contenedor = document.getElementById("video-container");
 
     if (!id) {
         contenedor.innerHTML = "<p>Vídeo no encontrado.</p>";
         return;
     }
 
-    const resp = await fetch(APP.ruta("videos"));
-    const videos = await resp.json();
-    const entry = videos[id];
+    var resp = await fetch(APP.ruta("videos"));
+    var videos = await resp.json();
+    var entry = videos[id];
 
     if (!entry) {
         contenedor.innerHTML = "<p>Vídeo no disponible.</p>";
         return;
     }
 
-    if (typeof entry === "string" && entry.startsWith("http")) {
-        window.location.href = entry;
+    var url = typeof entry === "string" ? entry : "";
+
+    if (url.indexOf("youtube.com") !== -1 || url.indexOf("youtu.be") !== -1) {
+        var ytId = "";
+        if (url.indexOf("youtu.be/") !== -1) ytId = url.split("youtu.be/")[1].split("?")[0];
+        else if (url.indexOf("v=") !== -1) ytId = url.split("v=")[1].split("&")[0];
+        else if (url.indexOf("/embed/") !== -1) ytId = url.split("/embed/")[1].split("?")[0];
+        if (ytId) {
+            contenedor.innerHTML =
+                '<div class="video-embed-wrap">' +
+                    '<iframe class="video-embed-iframe" ' +
+                        'src="https://www.youtube.com/embed/' + ytId + '?rel=0&modestbranding=1" ' +
+                        'allowfullscreen ' +
+                        'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" ' +
+                        'frameborder="0">' +
+                    '</iframe>' +
+                '</div>';
+            return;
+        }
+    }
+
+    if (url.indexOf("rtve.es") !== -1) {
+        contenedor.innerHTML =
+            '<div class="video-embed-wrap">' +
+                '<iframe class="video-embed-iframe" ' +
+                    'src="' + url + '" ' +
+                    'allowfullscreen ' +
+                    'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" ' +
+                    'frameborder="0">' +
+                '</iframe>' +
+            '</div>';
+        return;
+    }
+
+    if (url && url.indexOf("http") === 0) {
+        window.location.href = url;
         return;
     }
 
@@ -34,5 +68,19 @@ async function cargarVideo(){
             '</video>' +
         '</div>';
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    var btnFs = document.getElementById("btn-fullscreen");
+    if (btnFs) {
+        btnFs.addEventListener("click", function() {
+            var iframe = document.querySelector(".video-embed-iframe");
+            var video = document.querySelector(".video-embed-native");
+            var el = iframe || video || document.getElementById("video-container");
+            if (el.requestFullscreen) el.requestFullscreen();
+            else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+            else if (el.msRequestFullscreen) el.msRequestFullscreen();
+        });
+    }
+});
 
 APP.onChange(function() { cargarVideo(); });
