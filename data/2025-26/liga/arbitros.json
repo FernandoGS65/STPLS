@@ -1,11 +1,182 @@
 [
   {
+    "id": 3,
+    "Nombre": "Adrián CORDERO VEGA",
+    "Colegio": "Cántabro",
+    "Internacional": 0,
+    "FechaNacim": "1984-06-15",
+    "FechaPrimera": "2018",
+    "Foto": "imagenes/arbitros/corderovega.jpg"
+  },
+  {
+    "id": 9,
+    "Nombre": "Alejandro HERNÁNDEZ HERNÁNDEZ",
+    "Colegio": "Las Palmas",
+    "Internacional": 1,
+    "FechaNacim": "1982-11-10",
+    "FechaPrimera": "2012",
+    "Foto": "imagenes/arbitros/hernandezhernandez.jpg"
+  },
+  {
+    "id": 20,
+    "Nombre": "Alejandro MUÑÍZ RUIZ",
+    "Colegio": "Gallego",
+    "Internacional": 0,
+    "FechaNacim": "1990-01-01",
+    "FechaPrimera": "2022",
+    "Foto": null
+  },
+  {
+    "id": 14,
+    "Nombre": "Alejandro QUINTERO GONZÁLEZ",
+    "Colegio": "Andaluz",
+    "Internacional": 0,
+    "FechaNacim": "1993-05-03",
+    "FechaPrimera": "2024",
+    "Foto": null
+  },
+  {
+    "id": 16,
+    "Nombre": "César SOTO GRADO",
+    "Colegio": "Riojano",
+    "Internacional": 1,
+    "FechaNacim": "1980-06-17",
+    "FechaPrimera": "2019",
+    "Foto": null
+  },
+  {
+    "id": 10,
+    "Nombre": "Francisco HERNÁNDEZ MAESO",
+    "Colegio": "Extremeño",
+    "Internacional": 0,
+    "FechaNacim": "1988-08-31",
+    "FechaPrimera": "2023",
+    "Foto": null
+  },
+  {
+    "id": 4,
+    "Nombre": "Guillermo CUADRA FERNÁNDEZ",
+    "Colegio": "Balear",
+    "Internacional": 1,
+    "FechaNacim": "1984-04-25",
+    "FechaPrimera": "2018",
+    "Foto": null
+  },
+  {
+    "id": 17,
+    "Nombre": "Iosu GALECH APEZTEGUÍA",
+    "Colegio": "Navarro",
+    "Internacional": 0,
+    "FechaNacim": "1990-12-12",
+    "FechaPrimera": "2025",
+    "Foto": null
+  },
+  {
+    "id": 6,
+    "Nombre": "Isidro DÍAZ DE MERA ESCUDEROS",
+    "Colegio": "Castellano - Manchego",
+    "Internacional": 0,
+    "FechaNacim": "1989-08-24",
+    "FechaPrimera": "2020",
+    "Foto": null
+  },
+  {
     "id": 1,
-    "Nombre": "Javier ARBEROLA ROJAS",
+    "Nombre": "Javier ALBEROLA ROJAS",
     "Colegio": "Castellano - Manchego",
     "Internacional": 1,
     "FechaNacim": "1991-06-22",
     "FechaPrimera": "2017",
-    "Foto": "C:\\Proyectos\\STPLS\\imagenes\\arbitros\\arberolarojas.jpg"
+    "Foto": "imagenes/arbitros/arberolarojas.jpg"
+  },
+  {
+    "id": 8,
+    "Nombre": "Jesús Gil MANZANO",
+    "Colegio": "Extremeño",
+    "Internacional": 1,
+    "FechaNacim": "1984-02-04",
+    "FechaPrimera": "2012",
+    "Foto": null
+  },
+  {
+    "id": 18,
+    "Nombre": "José Luis GUZMÁN MANSILLA",
+    "Colegio": "Andaluz",
+    "Internacional": 0,
+    "FechaNacim": "1995-11-02",
+    "FechaPrimera": "2025",
+    "Foto": null
+  },
+  {
+    "id": 12,
+    "Nombre": "José Luis MUNUERA MONTERO",
+    "Colegio": "Andaluz",
+    "Internacional": 1,
+    "FechaNacim": "1983-05-19",
+    "FechaPrimera": "2016",
+    "Foto": null
+  },
+  {
+    "id": 15,
+    "Nombre": "José María SÁNCHEZ MARTÍNEZ",
+    "Colegio": "Murciano",
+    "Internacional": 1,
+    "FechaNacim": "1983-10-03",
+    "FechaPrimera": "2015",
+    "Foto": null
+  },
+  {
+    "id": 11,
+    "Nombre": "Juan MARTÍNEZ MUNUERA",
+    "Colegio": "Valenciano",
+    "Internacional": 1,
+    "FechaNacim": "1982-07-13",
+    "FechaPrimera": "2013",
+    "Foto": null
+  },
+  {
+    "id": 2,
+    "Nombre": "Mateo BUSQUETS FERRER",
+    "Colegio": "Balear",
+    "Internacional": 1,
+    "FechaNacim": "1993-10-31",
+    "FechaPrimera": "2023",
+    "Foto": "imagenes/arbitros/ferrerbusquets.jpg"
+  },
+  {
+    "id": 19,
+    "Nombre": "Miguel SESMA ESPINOSA",
+    "Colegio": "Riojano",
+    "Internacional": 0,
+    "FechaNacim": "1995-01-31",
+    "FechaPrimera": "2025",
+    "Foto": null
+  },
+  {
+    "id": 13,
+    "Nombre": "Miguel Ángel ORTIZ ARIAS",
+    "Colegio": "Madrileño",
+    "Internacional": 0,
+    "FechaNacim": "1987-01-01",
+    "FechaPrimera": "2019",
+    "Foto": null
+  },
+  {
+    "id": 5,
+    "Nombre": "Ricardo DE BURGOS BENGOETXEA",
+    "Colegio": "Vasco",
+    "Internacional": 1,
+    "FechaNacim": "1986-03-16",
+    "FechaPrimera": "2015",
+    "Foto": null
+  },
+  {
+    "id": 7,
+    "Nombre": "Víctor GARCÍA VERDURA",
+    "Colegio": "Catalán",
+    "Internacional": 0,
+    "FechaNacim": "1994-10-12",
+    "FechaPrimera": "2023",
+    "Foto": null
   }
 ]
