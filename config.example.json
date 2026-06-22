@@ -1,4 +1,7 @@
 {
-    "apiKey": "TU_API_KEY_AQUI",
+    "apiKeys": [
+        "TU_API_KEY_1_AQUI",
+        "TU_API_KEY_2_AQUI"
+    ],
     "baseUrl": "https://soccer.highlightly.net"
 }

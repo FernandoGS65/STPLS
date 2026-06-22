@@ -14,13 +14,31 @@ if (-not (Test-Path $ConfigPath)) {
 }
 
 $config = Get-Content -Raw $ConfigPath | ConvertFrom-Json
-$headers = @{ "x-rapidapi-key" = $config.apiKey }
 $baseUrl = $config.baseUrl
 
-if ($config.apiKey -eq "TU_API_KEY_AQUI") {
+# Support multiple API keys (round-robin)
+if ($config.apiKeys -and $config.apiKeys.Count -gt 0) {
+    $apiKeys = @($config.apiKeys)
+} elseif ($config.apiKey) {
+    $apiKeys = @($config.apiKey)
+} else {
+    Write-Host "ERROR: No se encontraron API keys en config.json." -ForegroundColor Red
+    exit 1
+}
+
+if ($apiKeys[0] -eq "TU_API_KEY_AQUI") {
     Write-Host "ERROR: Edita config.json con tu API key real." -ForegroundColor Red
     exit 1
 }
+
+$script:currentKeyIndex = 0
+function Get-NextHeader {
+    $key = $apiKeys[$script:currentKeyIndex % $apiKeys.Count]
+    $script:currentKeyIndex++
+    return @{ "x-rapidapi-key" = $key }
+}
+
+Write-Host "API keys configuradas: $($apiKeys.Count)" -ForegroundColor Yellow
 
 $dataDir = "data/$Season/$Competition"
 $calendarioPath = "$dataDir/calendario.json"
@@ -62,12 +80,12 @@ for ($i = $StartIndex; $i -lt $endIndex; $i++) {
         Write-Host "[$i/$total] $label... " -NoNewline
 
         if ($Mode -eq "detail") {
-            $resp = Invoke-RestMethod -Uri "$baseUrl/$($endpoint[$Mode])$matchId" -Headers $headers -Method Get
+            $resp = Invoke-RestMethod -Uri "$baseUrl/$($endpoint[$Mode])$matchId" -Headers (Get-NextHeader) -Method Get
             $resp | ConvertTo-Json -Depth 10 -Compress | ForEach-Object { [System.IO.File]::WriteAllText($outPath, $_, [System.Text.Encoding]::UTF8) }
         }
         else {
             $endpointUrl = "$baseUrl/$($endpoint[$Mode])$matchId"
-            $adicional = Invoke-RestMethod -Uri $endpointUrl -Headers $headers -Method Get
+            $adicional = Invoke-RestMethod -Uri $endpointUrl -Headers (Get-NextHeader) -Method Get
 
             if (Test-Path $outPath) {
                 $existente = Get-Content -Raw $outPath | ConvertFrom-Json
