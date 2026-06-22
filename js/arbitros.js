@@ -191,27 +191,53 @@
                 return;
             }
 
+            var totalYellow = 0, totalRed = 0, totalPen = 0;
+
             var html = '<table class="arb-partidos-table">';
             html += '<thead><tr>';
-            html += '<th>J</th><th>Fecha</th><th>Local</th><th></th><th>Visitante</th><th>Cards</th>';
+            html += '<th class="arb-col-j">J</th>';
+            html += '<th class="arb-col-fecha">Fecha</th>';
+            html += '<th class="arb-col-local">Local</th>';
+            html += '<th class="arb-col-score"></th>';
+            html += '<th class="arb-col-away">Visitante</th>';
+            html += '<th class="arb-col-yc">\uD83D\uDFE8</th>';
+            html += '<th class="arb-col-rc">\uD83D\uDFE5</th>';
+            html += '<th class="arb-col-pen">\u26BD</th>';
             html += '</tr></thead>';
             html += '<tbody>';
             myMatches.forEach(function(m) {
                 var fecha = m.fecha.substring(5).split('-').reverse().join('/');
+                totalYellow += m.yellow;
+                totalRed += m.red;
+                totalPen += m.penalty;
                 html += '<tr>';
-                html += '<td class="arb-partidos-jornada">' + m.jornada + '</td>';
-                html += '<td class="arb-partidos-fecha">' + fecha + '</td>';
-                html += '<td class="arb-partidos-home">' + escHtml(m.home) + '</td>';
-                html += '<td class="arb-partidos-score">' + escHtml(m.score) + '</td>';
-                html += '<td class="arb-partidos-away">' + escHtml(m.away) + '</td>';
-                html += '<td class="arb-partidos-cards">';
-                if (m.yellow) html += '<span class="arb-cards-yellow">\uD83D\uDFE8' + m.yellow + '</span> ';
-                if (m.red) html += '<span class="arb-cards-red">\uD83D\uDFE5' + m.red + '</span> ';
-                if (m.penalty) html += '<span class="arb-cards-pen">\u26BD' + m.penalty + '</span>';
-                html += '</td>';
+                html += '<td class="arb-col-j">' + m.jornada + '</td>';
+                html += '<td class="arb-col-fecha">' + fecha + '</td>';
+                html += '<td class="arb-col-local">' + escHtml(m.home) + '</td>';
+                html += '<td class="arb-col-score">' + escHtml(m.score) + '</td>';
+                html += '<td class="arb-col-away">' + escHtml(m.away) + '</td>';
+                html += '<td class="arb-col-yc">' + (m.yellow || '-') + '</td>';
+                html += '<td class="arb-col-rc">' + (m.red || '-') + '</td>';
+                html += '<td class="arb-col-pen">' + (m.penalty || '-') + '</td>';
                 html += '</tr>';
             });
             html += '</tbody></table>';
+
+            var n = myMatches.length;
+            var avgYellow = (totalYellow / n).toFixed(1);
+            var avgRed = (totalRed / n).toFixed(1);
+            var avgPen = (totalPen / n).toFixed(1);
+            var avgTotal = ((totalYellow + totalRed + totalPen) / n).toFixed(1);
+
+            html += '<div class="arb-summary">';
+            html += '<div class="arb-summary-title">Promedio por partido (' + n + ' partidos)</div>';
+            html += '<div class="arb-summary-grid">';
+            html += '<div class="arb-summary-item"><span class="arb-summary-val">' + avgTotal + '</span><span class="arb-summary-label">Total</span></div>';
+            html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--yc">' + avgYellow + '</span><span class="arb-summary-label">\uD83D\uDFE8 Amarillas</span></div>';
+            html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--rc">' + avgRed + '</span><span class="arb-summary-label">\uD83D\uDFE5 Rojas</span></div>';
+            html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--pen">' + avgPen + '</span><span class="arb-summary-label">\u26BD Penaltis</span></div>';
+            html += '</div></div>';
+
             container.innerHTML = html;
         });
     }

@@ -4,8 +4,8 @@
 .arbitros-page{
     max-width:360px;
     margin:0 auto;
-    padding:16px;
-    padding-top:24px;
+    padding:8px 4px;
+    padding-top:16px;
 }
 
 .arbitros-loading{
@@ -341,6 +341,7 @@
     width:100%;
     border-collapse:collapse;
     font-size:12px;
+    table-layout:fixed;
 }
 
 .arb-partidos-table th{
@@ -350,12 +351,12 @@
     color:var(--text-muted);
     text-transform:uppercase;
     letter-spacing:0.4px;
-    padding:6px 4px;
+    padding:6px 2px;
     border-bottom:2px solid var(--border-color);
 }
 
 .arb-partidos-table td{
-    padding:7px 4px;
+    padding:7px 2px;
     border-bottom:1px solid var(--border-color);
     color:var(--text-primary);
 }
@@ -364,41 +365,61 @@
     background:var(--bg-card-hover);
 }
 
-.arb-partidos-jornada{
+.arb-col-j{
+    width:24px;
     font-weight:700;
     color:var(--accent-blue);
     text-align:center;
-    width:28px;
 }
 
-.arb-partidos-fecha{
+.arb-col-fecha{
+    width:42px;
     color:var(--text-muted);
     font-size:11px;
     white-space:nowrap;
 }
 
-.arb-partidos-teams{
-    min-width:0;
-}
-
-.arb-partidos-home, .arb-partidos-away{
+.arb-col-local{
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
-    max-width:110px;
 }
 
-.arb-partidos-score{
+.arb-col-score{
+    width:40px;
     text-align:center;
     font-weight:700;
     white-space:nowrap;
-    padding:0 6px;
 }
 
-.arb-partidos-cards{
-    text-align:center;
+.arb-col-away{
+    overflow:hidden;
+    text-overflow:ellipsis;
     white-space:nowrap;
+}
+
+.arb-col-yc{
+    width:30px;
+    text-align:center;
     font-size:11px;
+    color:#f59e0b;
+    font-weight:700;
+}
+
+.arb-col-rc{
+    width:26px;
+    text-align:center;
+    font-size:11px;
+    color:#ef4444;
+    font-weight:700;
+}
+
+.arb-col-pen{
+    width:26px;
+    text-align:center;
+    font-size:11px;
+    color:var(--accent-blue);
+    font-weight:700;
 }
 
 .arb-cards-yellow{
@@ -414,6 +435,57 @@
 .arb-cards-pen{
     color:var(--accent-blue);
     font-weight:700;
+}
+
+/* ================================
+   PARTIDOS SUMMARY
+   =============================== */
+.arb-summary{
+    margin-top:14px;
+    background:var(--bg-surface);
+    border:1px solid var(--border-color);
+    border-radius:10px;
+    padding:12px 10px;
+}
+
+.arb-summary-title{
+    font-size:11px;
+    font-weight:700;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:0.4px;
+    margin-bottom:8px;
+}
+
+.arb-summary-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:6px;
+    text-align:center;
+}
+
+.arb-summary-item{
+    display:flex;
+    flex-direction:column;
+    gap:1px;
+}
+
+.arb-summary-val{
+    font-size:16px;
+    font-weight:800;
+    color:var(--text-primary);
+}
+
+.arb-summary-val--yc{ color:#f59e0b; }
+.arb-summary-val--rc{ color:#ef4444; }
+.arb-summary-val--pen{ color:var(--accent-blue); }
+
+.arb-summary-label{
+    font-size:9px;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    font-weight:600;
 }
 
 /* ================================
