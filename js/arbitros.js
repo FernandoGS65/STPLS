@@ -254,12 +254,13 @@
                 var avgYellow = (totalYellow / n).toFixed(1);
                 var avgRed = (totalRed / n).toFixed(1);
                 var avgPen = (totalPen / n).toFixed(1);
-                var avgTotal = ((totalYellow + totalRed + totalPen) / n).toFixed(1);
+                var avgTotal = ((totalYellow + totalRed) / n).toFixed(1);
+                var totalTarjetas = totalYellow + totalRed;
 
                 html += '<div class="arb-summary">';
                 html += '<div class="arb-summary-title">Promedio por partido (' + n + ' partido' + (n > 1 ? 's' : '') + ')</div>';
                 html += '<div class="arb-summary-grid">';
-                html += '<div class="arb-summary-item"><span class="arb-summary-val">' + avgTotal + '</span><span class="arb-summary-label">Total</span></div>';
+                html += '<div class="arb-summary-item"><span class="arb-summary-val">' + avgTotal + '</span><span class="arb-summary-label">Tarjetas</span></div>';
                 html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--yc">' + avgYellow + '</span><span class="arb-summary-label">\uD83D\uDFE8 Amarillas</span></div>';
                 html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--rc">' + avgRed + '</span><span class="arb-summary-label">\uD83D\uDFE5 Rojas</span></div>';
                 html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--pen">' + avgPen + '</span><span class="arb-summary-label">\u26BD Penaltis</span></div>';
@@ -297,7 +298,7 @@
                     stats[arb.id].yellow += data.yellow;
                     stats[arb.id].red += data.red;
                     stats[arb.id].penalty += data.penalty;
-                    stats[arb.id].total += data.yellow + data.red + data.penalty;
+                    stats[arb.id].total += data.yellow + data.red;
                     stats[arb.id].partidos++;
                 }
             });
@@ -551,6 +552,9 @@
             return;
         }
 
+        var params = new URLSearchParams(window.location.search);
+        var nombreParam = params.get('nombre');
+
         fetch(path)
             .then(function(resp) {
                 if (!resp.ok) throw new Error('HTTP ' + resp.status);
@@ -563,6 +567,10 @@
                     return aa.localeCompare(bb, 'es');
                 });
                 selectedId = null;
+                if (nombreParam) {
+                    var found = matchArbitro(nombreParam);
+                    if (found) selectedId = found.id;
+                }
                 currentTab = 'ficha';
                 partidosCache = null;
                 renderLista();
