@@ -557,7 +557,7 @@
         "date":  "2025-11-28T20:00:00.000Z",
         "score":  "1 - 0",
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -568,8 +568,8 @@
         "date":  "2025-11-29T13:00:00.000Z",
         "score":  "2 - 2",
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1183699234,
@@ -579,7 +579,7 @@
         "date":  "2025-11-29T15:15:00.000Z",
         "score":  "3 - 1",
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -590,8 +590,8 @@
         "date":  "2025-11-29T17:30:00.000Z",
         "score":  "0 - 2",
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1183698383,
@@ -612,8 +612,8 @@
         "date":  "2025-11-30T13:00:00.000Z",
         "score":  "2 - 3",
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1183706042,
@@ -634,8 +634,8 @@
         "date":  "2025-11-30T17:30:00.000Z",
         "score":  "0 - 1",
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1183701787,
@@ -656,8 +656,8 @@
         "date":  "2025-12-01T20:00:00.000Z",
         "score":  "1 - 1",
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1183712850,
