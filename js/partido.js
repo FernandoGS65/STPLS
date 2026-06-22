@@ -307,8 +307,9 @@
         }
 
         var ratingById = {};
-        if (d.boxScore) {
-            d.boxScore.forEach(function(box) {
+        var bsPlayers = d.boxScore && (d.boxScore.value || d.boxScore);
+        if (Array.isArray(bsPlayers)) {
+            bsPlayers.forEach(function(box) {
                 if (box.players) box.players.forEach(function(p) {
                     if (p.id && p.matchRating) ratingById[p.id] = p.matchRating;
                 });
@@ -525,12 +526,13 @@
 
     /* ===== PLAYERS (BOX SCORE) ===== */
     function renderPlayers(d, b, home, away) {
-        if (!d.boxScore || !d.boxScore.length) {
+        var bsData = d.boxScore && (d.boxScore.value || d.boxScore);
+        if (!bsData || !Array.isArray(bsData) || !bsData.length) {
             elContent.innerHTML = '<div class="pv-section"><p class="pv-empty">Datos de jugadores no disponibles.<br><small>Se obtendrán al solicitar el modo boxscore del script.</small></p></div>';
             return;
         }
         var html = '<div class="pv-section">';
-        d.boxScore.forEach(function(box) {
+        bsData.forEach(function(box) {
             if (!box.players || !box.players.length) return;
             var sorted = box.players.slice().sort(function(a, b) {
                 var order = {Goalkeeper:0, Defender:1, Midfielder:2, Forward:3};
