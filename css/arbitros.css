@@ -479,6 +479,7 @@
 
 .arb-ranking-highlight td{
     color:var(--accent-blue);
+    font-weight:800;
 }
 
 /* ================================

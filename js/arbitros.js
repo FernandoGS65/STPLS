@@ -2,9 +2,8 @@
 
     var arbitrosData = [];
     var selectedId = null;
-    var currentTab = null;
+    var currentTab = 'ficha';
     var partidosCache = null;
-    var rankingCache = null;
 
     function calcularEdad(fechaStr) {
         if (!fechaStr) return null;
@@ -121,7 +120,16 @@
         return html;
     }
 
-    function renderArbitro(a) {
+    function renderTabs() {
+        var html = '<div class="arb-tabs">';
+        html += '<button class="arb-tab' + (currentTab === 'ficha' ? ' active' : '') + '" data-tab="ficha">Ficha</button>';
+        html += '<button class="arb-tab' + (currentTab === 'partidos' ? ' active' : '') + '" data-tab="partidos">Partidos</button>';
+        html += '<button class="arb-tab' + (currentTab === 'ranking' ? ' active' : '') + '" data-tab="ranking">Ranking</button>';
+        html += '</div>';
+        return html;
+    }
+
+    function renderFicha(a) {
         var edad = calcularEdad(a.FechaNacim);
         var antiguedad = calcularAntiguedad(a.FechaPrimera);
         var foto = fotoUrl(a.Foto);
@@ -154,19 +162,7 @@
         }
         html += '</div>';
 
-        html += '<div class="arb-info">';
         html += '</div>';
-        html += '</div>';
-
-        html += '<div class="arb-tabs">';
-        html += '<button class="arb-tab' + (currentTab === 'partidos' ? ' active' : '') + '" data-tab="partidos">Partidos</button>';
-        html += '<button class="arb-tab' + (currentTab === 'ranking' ? ' active' : '') + '" data-tab="ranking">Ranking</button>';
-        html += '</div>';
-
-        html += '<div class="arb-tab-content" id="arb-tab-content">';
-        html += '<div class="arb-loading">Cargando datos...</div>';
-        html += '</div>';
-
         html += '</div>';
 
         return html;
@@ -197,7 +193,7 @@
 
             var html = '<table class="arb-partidos-table">';
             html += '<thead><tr>';
-            html += '<th>J</th><th>Fecha</th><th>Local</th><th></th><th>Visitante</th><th>\uD83C\uDFC8</th>';
+            html += '<th>J</th><th>Fecha</th><th>Local</th><th></th><th>Visitante</th><th>Cards</th>';
             html += '</tr></thead>';
             html += '<tbody>';
             myMatches.forEach(function(m) {
@@ -209,7 +205,7 @@
                 html += '<td class="arb-partidos-score">' + escHtml(m.score) + '</td>';
                 html += '<td class="arb-partidos-away">' + escHtml(m.away) + '</td>';
                 html += '<td class="arb-partidos-cards">';
-                if (m.yellow) html += '<span class="arb-cards-yellow">\uD83D\uDFE3' + m.yellow + '</span> ';
+                if (m.yellow) html += '<span class="arb-cards-yellow">\uD83D\uDFE8' + m.yellow + '</span> ';
                 if (m.red) html += '<span class="arb-cards-red">\uD83D\uDFE5' + m.red + '</span> ';
                 if (m.penalty) html += '<span class="arb-cards-pen">\u26BD' + m.penalty + '</span>';
                 html += '</td>';
@@ -249,7 +245,7 @@
 
             var html = '<table class="arb-ranking-table">';
             html += '<thead><tr>';
-            html += '<th>#</th><th>\u00c1rbitro</th><th>PJ</th><th>\uD83D\uDFE3</th><th>\uD83D\uDFE5</th><th>\u26BD</th><th>TOT</th>';
+            html += '<th>#</th><th>\u00c1rbitro</th><th>PJ</th><th>\uD83D\uDFE8</th><th>\uD83D\uDFE5</th><th>\u26BD</th><th>TOT</th>';
             html += '</tr></thead>';
             html += '<tbody>';
             ranked.forEach(function(r, i) {
@@ -267,6 +263,23 @@
             html += '</tbody></table>';
             container.innerHTML = html;
         });
+    }
+
+    function renderContent() {
+        var tabContent = document.getElementById('arb-tab-content');
+        if (!tabContent) return;
+
+        if (currentTab === 'ficha') {
+            var cardWrap = document.getElementById('arb-card-wrap');
+            if (cardWrap) cardWrap.style.display = '';
+            tabContent.innerHTML = '';
+        } else {
+            var cardWrap = document.getElementById('arb-card-wrap');
+            if (cardWrap) cardWrap.style.display = 'none';
+            tabContent.innerHTML = '<div class="arb-loading">Cargando datos...</div>';
+            if (currentTab === 'partidos') renderPartidosTab();
+            else if (currentTab === 'ranking') renderRankingTab();
+        }
     }
 
     function renderLista() {
@@ -291,14 +304,18 @@
         if (!selected) selected = arbitrosData[0];
 
         var html = renderSelector();
-        html += renderArbitro(selected);
+        html += '<div id="arb-card-wrap">';
+        html += renderFicha(selected);
+        html += '</div>';
+        html += renderTabs();
+        html += '<div class="arb-tab-content" id="arb-tab-content"></div>';
         container.innerHTML = html;
 
         var sel = document.getElementById('arb-select');
         if (sel) {
             sel.addEventListener('change', function() {
                 selectedId = parseInt(this.value);
-                currentTab = null;
+                currentTab = 'ficha';
                 renderLista();
             });
         }
@@ -309,13 +326,11 @@
                 currentTab = this.getAttribute('data-tab');
                 container.querySelectorAll('.arb-tab').forEach(function(t) { t.classList.remove('active'); });
                 this.classList.add('active');
-                if (currentTab === 'partidos') renderPartidosTab();
-                else if (currentTab === 'ranking') renderRankingTab();
+                renderContent();
             });
         });
 
-        if (currentTab === 'partidos') renderPartidosTab();
-        else if (currentTab === 'ranking') renderRankingTab();
+        renderContent();
     }
 
     function getJsonPath() {
@@ -348,9 +363,8 @@
                     return aa.localeCompare(bb, 'es');
                 });
                 selectedId = null;
-                currentTab = null;
+                currentTab = 'ficha';
                 partidosCache = null;
-                rankingCache = null;
                 renderLista();
             })
             .catch(function(err) {
@@ -366,7 +380,6 @@
 
     APP.onChange(function() {
         partidosCache = null;
-        rankingCache = null;
         init();
     });
 
