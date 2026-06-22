@@ -48,10 +48,9 @@
 
     function primerApellido(nombre) {
         if (!nombre) return '';
-        var preps = {'DE':1,'DEL':1,'LA':1,'LAS':1,'LOS':1,'EL':1,'SAN':1,'SANTA':1};
         var parts = nombre.split(/\s+/);
         for (var i = 0; i < parts.length; i++) {
-            if (parts[i] === parts[i].toUpperCase() && parts[i].length > 1 && !preps[parts[i]]) {
+            if (parts[i] === parts[i].toUpperCase() && parts[i].length > 1) {
                 return parts[i].toLowerCase();
             }
         }
