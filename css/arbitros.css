@@ -418,6 +418,16 @@
     white-space:nowrap;
 }
 
+.arb-match-link{
+    color:var(--text-primary);
+    text-decoration:none;
+    transition:color 0.2s;
+}
+
+.arb-match-link:hover{
+    color:var(--accent-gold);
+}
+
 .arb-col-away{
     overflow:hidden;
     text-overflow:ellipsis;

@@ -125,6 +125,7 @@
         var html = '<div class="arb-tabs">';
         html += '<button class="arb-tab' + (currentTab === 'ficha' ? ' active' : '') + '" data-tab="ficha">Ficha</button>';
         html += '<button class="arb-tab' + (currentTab === 'partidos' ? ' active' : '') + '" data-tab="partidos">Partidos</button>';
+        html += '<button class="arb-tab' + (currentTab === 'equipos' ? ' active' : '') + '" data-tab="equipos">Equipos</button>';
         html += '<button class="arb-tab' + (currentTab === 'ranking' ? ' active' : '') + '" data-tab="ranking">Ranking</button>';
         html += '</div>';
         return html;
@@ -239,7 +240,7 @@
                 html += '<td class="arb-col-j">' + m.jornada + '</td>';
                 html += '<td class="arb-col-fecha">' + fecha + '</td>';
                 html += '<td class="arb-col-local">' + escHtml(m.home) + '</td>';
-                html += '<td class="arb-col-score">' + escHtml(m.score) + '</td>';
+                html += '<td class="arb-col-score"><a href="partido.html?matchId=' + m.id + '" class="arb-match-link">' + escHtml(m.score) + '</a></td>';
                 html += '<td class="arb-col-away">' + escHtml(m.away) + '</td>';
                 html += '<td class="arb-col-yc">' + (m.yellow || '-') + '</td>';
                 html += '<td class="arb-col-rc">' + (m.red || '-') + '</td>';
@@ -326,6 +327,134 @@
         });
     }
 
+    function renderEquiposTab() {
+        var container = document.getElementById('arb-tab-content');
+        if (!container) return;
+
+        var selected = arbitrosData.find(function(a) { return a.id === selectedId; });
+        if (!selected) return;
+
+        loadAllMatches().then(function(matches) {
+            var myMatches = [];
+            matches.forEach(function(m) {
+                var data = extractMatchData(m);
+                if (matchArbitro(data.referee) && matchArbitro(data.referee).id === selected.id) {
+                    myMatches.push(data);
+                }
+            });
+
+            myMatches.sort(function(a, b) { return a.jornada - b.jornada; });
+
+            if (!myMatches.length) {
+                container.innerHTML = '<div class="arb-loading">No hay partidos registrados para este &aacute;rbitro.</div>';
+                return;
+            }
+
+            var teams = {};
+            myMatches.forEach(function(m) {
+                teams[m.home] = true;
+                teams[m.away] = true;
+            });
+            var teamList = Object.keys(teams).sort(function(a, b) { return a.localeCompare(b, 'es'); });
+
+            var html = '<div class="arb-team-filter">';
+            html += '<select id="arb-equipos-select" class="arb-team-select">';
+            html += '<option value="">Seleccionar equipo</option>';
+            teamList.forEach(function(t) {
+                html += '<option value="' + escHtml(t) + '">' + escHtml(t) + '</option>';
+            });
+            html += '</select></div>';
+
+            html += '<div id="arb-equipos-stats"></div>';
+
+            container.innerHTML = html;
+
+            var sel = document.getElementById('arb-equipos-select');
+            if (sel) {
+                sel.addEventListener('change', function() {
+                    var teamName = this.value;
+                    var statsDiv = document.getElementById('arb-equipos-stats');
+                    if (!teamName) {
+                        statsDiv.innerHTML = '';
+                        return;
+                    }
+
+                    var teamMatches = myMatches.filter(function(m) {
+                        return m.home === teamName || m.away === teamName;
+                    });
+
+                    var totalYellow = 0, totalRed = 0, totalPen = 0;
+                    var homeYellow = 0, homeRed = 0, homePen = 0;
+                    var awayYellow = 0, awayRed = 0, awayPen = 0;
+
+                    teamMatches.forEach(function(m) {
+                        var events = [];
+                        var origMatch = matches.find(function(om) { return om.id === m.id; });
+                        if (origMatch && origMatch.events) {
+                            events = origMatch.events;
+                        }
+                        var isHome = m.home === teamName;
+                        events.forEach(function(e) {
+                            if (e.team && e.team.name === teamName) {
+                                if (e.type === 'Yellow Card') {
+                                    totalYellow++;
+                                    if (isHome) homeYellow++; else awayYellow++;
+                                } else if (e.type === 'Red Card') {
+                                    totalRed++;
+                                    if (isHome) homeRed++; else awayRed++;
+                                } else if (e.type === 'Penalty') {
+                                    totalPen++;
+                                    if (isHome) homePen++; else awayPen++;
+                                }
+                            }
+                        });
+                    });
+
+                    var n = teamMatches.length;
+                    var shtml = '<div class="arb-summary">';
+                    shtml += '<div class="arb-summary-title">' + escHtml(teamName) + ' (' + n + ' partido' + (n > 1 ? 's' : '') + ')</div>';
+                    shtml += '<div class="arb-summary-grid">';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + totalYellow + '</span><span class="arb-summary-label">\uD83D\uDFE8 Amarillas</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + totalRed + '</span><span class="arb-summary-label">\uD83D\uDFE5 Rojas</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + totalPen + '</span><span class="arb-summary-label">\u26BD Penaltis</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + (totalYellow + totalRed + totalPen) + '</span><span class="arb-summary-label">Total</span></div>';
+                    shtml += '</div></div>';
+
+                    if (n > 0) {
+                        shtml += '<table class="arb-partidos-table">';
+                        shtml += '<thead><tr>';
+                        shtml += '<th class="arb-col-j">J</th>';
+                        shtml += '<th class="arb-col-fecha">Fecha</th>';
+                        shtml += '<th class="arb-col-local">Local</th>';
+                        shtml += '<th class="arb-col-score"></th>';
+                        shtml += '<th class="arb-col-away">Visitante</th>';
+                        shtml += '<th class="arb-col-yc">\uD83D\uDFE8</th>';
+                        shtml += '<th class="arb-col-rc">\uD83D\uDFE5</th>';
+                        shtml += '<th class="arb-col-pen">\u26BD</th>';
+                        shtml += '</tr></thead>';
+                        shtml += '<tbody>';
+                        teamMatches.forEach(function(m) {
+                            var fecha = m.fecha.substring(5).split('-').reverse().join('/');
+                            shtml += '<tr>';
+                            shtml += '<td class="arb-col-j">' + m.jornada + '</td>';
+                            shtml += '<td class="arb-col-fecha">' + fecha + '</td>';
+                            shtml += '<td class="arb-col-local">' + escHtml(m.home) + '</td>';
+                            shtml += '<td class="arb-col-score"><a href="partido.html?matchId=' + m.id + '" class="arb-match-link">' + escHtml(m.score) + '</a></td>';
+                            shtml += '<td class="arb-col-away">' + escHtml(m.away) + '</td>';
+                            shtml += '<td class="arb-col-yc">' + (m.yellow || '-') + '</td>';
+                            shtml += '<td class="arb-col-rc">' + (m.red || '-') + '</td>';
+                            shtml += '<td class="arb-col-pen">' + (m.penalty || '-') + '</td>';
+                            shtml += '</tr>';
+                        });
+                        shtml += '</tbody></table>';
+                    }
+
+                    statsDiv.innerHTML = shtml;
+                });
+            }
+        });
+    }
+
     function renderContent() {
         var tabContent = document.getElementById('arb-tab-content');
         if (!tabContent) return;
@@ -340,6 +469,7 @@
             tabContent.innerHTML = '<div class="arb-loading">Cargando datos...</div>';
             if (currentTab === 'partidos') renderPartidosTab();
             else if (currentTab === 'ranking') renderRankingTab();
+            else if (currentTab === 'equipos') renderEquiposTab();
         }
     }
 
