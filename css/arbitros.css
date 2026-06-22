@@ -500,6 +500,19 @@
     text-align:center;
 }
 
+.arb-summary-grid--7{
+    grid-template-columns:repeat(7, 1fr);
+    gap:3px;
+}
+
+.arb-summary-grid--7 .arb-summary-val{
+    font-size:14px;
+}
+
+.arb-summary-grid--7 .arb-summary-label{
+    font-size:8px;
+}
+
 .arb-summary-item{
     display:flex;
     flex-direction:column;

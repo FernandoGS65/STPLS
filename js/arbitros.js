@@ -384,6 +384,7 @@
                     });
 
                     var totalYellow = 0, totalRed = 0, totalPenFor = 0, totalPenAga = 0;
+                    var wins = 0, draws = 0, losses = 0;
 
                     teamMatches.forEach(function(m) {
                         var events = [];
@@ -400,17 +401,31 @@
                                 if (isTeam) totalPenFor++; else totalPenAga++;
                             }
                         });
+
+                        if (m.score) {
+                            var parts = m.score.split('-').map(function(s) { return parseInt(s.trim()); });
+                            if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
+                                var isHome = m.home === teamName;
+                                var gf = isHome ? parts[0] : parts[1];
+                                var gc = isHome ? parts[1] : parts[0];
+                                if (gf > gc) wins++;
+                                else if (gf === gc) draws++;
+                                else losses++;
+                            }
+                        }
                     });
 
                     var n = teamMatches.length;
                     var shtml = '<div class="arb-summary">';
                     shtml += '<div class="arb-summary-title">' + escHtml(teamName) + ' (' + n + ' partido' + (n > 1 ? 's' : '') + ')</div>';
-                    shtml += '<div class="arb-summary-grid">';
-                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + (totalYellow + totalRed + totalPenFor + totalPenAga) + '</span><span class="arb-summary-label">Total</span></div>';
-                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--yc">' + totalYellow + '</span><span class="arb-summary-label">\uD83D\uDFE8 Amarillas</span></div>';
-                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--rc">' + totalRed + '</span><span class="arb-summary-label">\uD83D\uDFE5 Rojas</span></div>';
-                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--pen">' + totalPenFor + '</span><span class="arb-summary-label">\u26BD Pen. Favor</span></div>';
-                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--pen">' + totalPenAga + '</span><span class="arb-summary-label">\u26BD Pen. Contra</span></div>';
+                    shtml += '<div class="arb-summary-grid arb-summary-grid--7">';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + wins + '</span><span class="arb-summary-label">Gan</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + draws + '</span><span class="arb-summary-label">Emp</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val">' + losses + '</span><span class="arb-summary-label">Per</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--yc">' + totalYellow + '</span><span class="arb-summary-label">\uD83D\uDFE8</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--rc">' + totalRed + '</span><span class="arb-summary-label">\uD83D\uDFE5</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--pen">' + totalPenFor + '</span><span class="arb-summary-label">\u26BD Fav</span></div>';
+                    shtml += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--pen">' + totalPenAga + '</span><span class="arb-summary-label">\u26BD Con</span></div>';
                     shtml += '</div></div>';
 
                     if (n > 0) {
