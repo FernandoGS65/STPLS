@@ -64,7 +64,7 @@
 
         html += '<div class="arb-body">';
         html += '<h2 class="arb-nombre">' + a.Nombre + '</h2>';
-        html += '<p class="arb-colegio">' + a.Colegio + '</p>';
+        html += '<p class="arb-colegio">\uD83D\uDCCD ' + a.Colegio + '</p>';
 
         html += '<div class="arb-stats">';
         if (edad !== null) {
