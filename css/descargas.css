@@ -201,9 +201,31 @@
         flex-wrap:wrap;
     }
     .desc-table{
-        font-size:12px;
+        font-size:11px;
+    }
+    .desc-table th{
+        padding:6px 3px;
+        font-size:10px;
+    }
+    .desc-table td{
+        padding:4px 3px;
+    }
+    .desc-j{
+        width:22px;
+    }
+    .desc-fecha{
+        width:34px;
+        font-size:11px;
     }
     .desc-local, .desc-visit{
-        max-width:100px;
+        max-width:80px;
+    }
+    .desc-score{
+        min-width:36px;
+        padding:4px 4px;
+    }
+    .desc-check{
+        width:20px;
+        font-size:13px;
     }
 }
