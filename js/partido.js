@@ -306,6 +306,15 @@
             return;
         }
 
+        var ratingById = {};
+        if (d.boxScore) {
+            d.boxScore.forEach(function(box) {
+                if (box.players) box.players.forEach(function(p) {
+                    if (p.id && p.matchRating) ratingById[p.id] = p.matchRating;
+                });
+            });
+        }
+
         var cardByName = {}, cardById = {};
         var goalByName = {}, goalById = {};
         var subEvents = [];
@@ -429,6 +438,12 @@
                     }
                     html += '</div>';
                     html += '<div class="pv-player-name">' + escHtml(shortName(p.name)) + '</div>';
+                    var rating = ratingById[p.id];
+                    if (rating) {
+                        var rv = parseFloat(rating);
+                        var rCls = rv >= 7.5 ? 'high' : (rv >= 6.5 ? 'mid' : 'low');
+                        html += '<div class="pv-player-rating ' + rCls + '">' + rating + '</div>';
+                    }
                     html += '</div>';
                 });
             });
