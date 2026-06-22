@@ -619,7 +619,7 @@ document.getElementById(
 <div class="ultimos-partidos">
     <div class="partidos-lista" id="pl-jugados">${htmlJugados}</div>
     <div class="partidos-lista" id="pl-proximos" style="display:none">${htmlProximos}</div>
-    <div class="partidos-lista" id="pl-plantilla" style="display:none"><p class="tab-placeholder">Próximamente: Plantilla</p></div>
+    <div class="partidos-lista" id="pl-plantilla" style="display:none"></div>
     <div class="partidos-lista" id="pl-noticias" style="display:none"><p class="tab-placeholder">Próximamente: Noticias</p></div>
     <div class="partidos-lista" id="pl-fichajes" style="display:none"><p class="tab-placeholder">Próximamente: Fichajes</p></div>
     <div class="partidos-lista" id="pl-evolucion" style="display:none">
@@ -652,6 +652,9 @@ document.getElementById(
         }
         if (ver === 'fichajes') {
             cargarFichajes();
+        }
+        if (ver === 'plantilla') {
+            cargarPlantilla(nombreEquipo);
         }
         if (ver === 'evolucion') {
             const sel = document.getElementById('evo-select');
@@ -869,6 +872,88 @@ document.getElementById(
         } catch(e) {
             container.innerHTML = '<p class="tab-placeholder">Error al cargar fichajes</p>';
         }
+    }
+
+    var plantillaCache = null;
+
+    async function cargarPlantilla(teamName) {
+        var container = document.getElementById('pl-plantilla');
+        if (!container) return;
+        if (plantillaCache) {
+            renderPlantilla(plantillaCache, teamName, container);
+            return;
+        }
+        container.innerHTML = '<p class="tab-placeholder">Cargando plantilla...</p>';
+
+        try {
+            var resp = await fetch(APP.ruta('plantilla'));
+            var data = await resp.json();
+            plantillaCache = data;
+            renderPlantilla(data, teamName, container);
+        } catch(e) {
+            container.innerHTML = '<p class="tab-placeholder">Plantilla no disponible</p>';
+        }
+    }
+
+    function renderPlantilla(data, teamName, container) {
+        var team = data[teamName];
+        if (!team || !team.players || !team.players.length) {
+            container.innerHTML = '<p class="tab-placeholder">No hay datos de plantilla para este equipo</p>';
+            return;
+        }
+
+        var posLabels = {
+            Goalkeeper: 'Porteros',
+            Defender: 'Defensas',
+            Midfielder: 'Mediocampistas',
+            Forward: 'Delanteros'
+        };
+        var posIcons = {
+            Goalkeeper: '\uD83D\uDDF3',
+            Defender: '\uD83D\uDEE1',
+            Midfielder: '\u2696',
+            Forward: '\u26BD'
+        };
+        var posOrder = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'];
+
+        var grouped = {};
+        posOrder.forEach(function(p) { grouped[p] = []; });
+        team.players.forEach(function(p) {
+            if (grouped[p.position]) grouped[p.position].push(p);
+        });
+
+        var html = '<div class="squad-card">';
+        html += '<div class="squad-header">';
+        if (team.logo) html += '<img src="' + escHtml(team.logo) + '" class="squad-logo" onerror="this.style.display=\'none\'">';
+        html += '<h3 class="squad-team-name">' + escHtml(teamName) + '</h3>';
+        html += '<span class="squad-count">' + team.players.length + ' jugadores convocados</span>';
+        html += '</div>';
+
+        posOrder.forEach(function(pos) {
+            var players = grouped[pos];
+            if (!players.length) return;
+            html += '<div class="squad-section">';
+            html += '<div class="squad-section-header">';
+            html += '<span class="squad-section-icon">' + (posIcons[pos] || '') + '</span>';
+            html += '<span class="squad-section-title">' + (posLabels[pos] || pos) + '</span>';
+            html += '<span class="squad-section-count">' + players.length + '</span>';
+            html += '</div>';
+            html += '<div class="squad-grid">';
+            players.forEach(function(p) {
+                html += '<div class="squad-player">';
+                html += '<div class="squad-player-num">' + (p.number || '-') + '</div>';
+                html += '<div class="squad-player-info">';
+                html += '<div class="squad-player-name">' + escHtml(p.name) + '</div>';
+                html += '<div class="squad-player-meta">' + p.appearances + ' partidos</div>';
+                html += '</div>';
+                html += '</div>';
+            });
+            html += '</div>';
+            html += '</div>';
+        });
+
+        html += '</div>';
+        container.innerHTML = html;
     }
 
     function renderFichaje(f, tipo) {
