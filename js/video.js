@@ -69,18 +69,4 @@ async function cargarVideo(){
         '</div>';
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    var btnFs = document.getElementById("btn-fullscreen");
-    if (btnFs) {
-        btnFs.addEventListener("click", function() {
-            var iframe = document.querySelector(".video-embed-iframe");
-            var video = document.querySelector(".video-embed-native");
-            var el = iframe || video || document.getElementById("video-container");
-            if (el.requestFullscreen) el.requestFullscreen();
-            else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-            else if (el.msRequestFullscreen) el.msRequestFullscreen();
-        });
-    }
-});
-
 APP.onChange(function() { cargarVideo(); });

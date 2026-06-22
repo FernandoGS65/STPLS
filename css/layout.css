@@ -284,33 +284,6 @@ footer{
     background:#000;
 }
 
-.video-controls{
-    display:flex;
-    justify-content:center;
-    gap:8px;
-    margin-top:8px;
-}
-
-.video-btn-fullscreen{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:40px;
-    height:40px;
-    border-radius:10px;
-    border:1px solid var(--border-color);
-    background:var(--bg-card);
-    color:var(--text-secondary);
-    cursor:pointer;
-    transition:all .2s;
-}
-
-.video-btn-fullscreen:hover{
-    background:var(--accent-gold);
-    color:#fff;
-    border-color:var(--accent-gold);
-}
-
 /* ================================
    VIDEO FULLSCREEN / LANDSCAPE
    Pure CSS — no JS class interference
@@ -318,7 +291,6 @@ footer{
 @media (orientation: landscape) and (max-width:900px){
     .video-body .navbar,
     .video-body footer,
-    .video-body .video-controls,
     .video-body .back-link{
         display:none;
     }
