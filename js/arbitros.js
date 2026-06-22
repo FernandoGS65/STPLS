@@ -46,6 +46,18 @@
             .trim();
     }
 
+    function primerApellido(nombre) {
+        if (!nombre) return '';
+        var preps = {'DE':1,'DEL':1,'LA':1,'LAS':1,'LOS':1,'EL':1,'SAN':1,'SANTA':1};
+        var parts = nombre.split(/\s+/);
+        for (var i = 0; i < parts.length; i++) {
+            if (parts[i] === parts[i].toUpperCase() && parts[i].length > 1 && !preps[parts[i]]) {
+                return parts[i].toLowerCase();
+            }
+        }
+        return parts[parts.length - 1].toLowerCase();
+    }
+
     function matchArbitro(nombreArbitro) {
         if (!nombreArbitro) return null;
         var norm = normalizarApellido(nombreArbitro);
@@ -562,8 +574,8 @@
             })
             .then(function(data) {
                 arbitrosData = data.sort(function(a, b) {
-                    var aa = a.Nombre.replace(/^[a-záéíóúñ]+\s+/i, '').split(/\s+/)[0].toLowerCase();
-                    var bb = b.Nombre.replace(/^[a-záéíóúñ]+\s+/i, '').split(/\s+/)[0].toLowerCase();
+                    var aa = primerApellido(a.Nombre);
+                    var bb = primerApellido(b.Nombre);
                     return aa.localeCompare(bb, 'es');
                 });
                 selectedId = null;
