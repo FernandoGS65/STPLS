@@ -1,4 +1,4 @@
-/* ================================
+﻿/* ================================
    ARBITROS PAGE
    =============================== */
 .arbitros-page{
@@ -74,7 +74,7 @@
 }
 
 /* ================================
-   ARBITRO CARD — Foto full width
+   ARBITRO CARD â€” Foto full width
    =============================== */
 .arb-foto-full{
     position:relative;
@@ -122,7 +122,7 @@
 }
 
 /* ================================
-   ARBITRO CARD — Body
+   ARBITRO CARD â€” Body
    =============================== */
 .arb-body{
     padding:16px 20px 20px;
@@ -144,7 +144,7 @@
 }
 
 /* ================================
-   ARBITRO CARD — Badge
+   ARBITRO CARD â€” Badge
    =============================== */
 .arb-badge{
     display:inline-flex;
@@ -171,7 +171,7 @@
 }
 
 /* ================================
-   ARBITRO CARD — Stats
+   ARBITRO CARD â€” Stats
    =============================== */
 .arb-stats{
     display:grid;
@@ -212,7 +212,7 @@
 }
 
 /* ================================
-   ARBITRO CARD — Info rows
+   ARBITRO CARD â€” Info rows
    =============================== */
 .arb-info{
     display:flex;
@@ -291,3 +291,203 @@
     font-size:13px;
     line-height:1.5;
 }
+
+/* ================================
+   TABS MENU
+   =============================== */
+.arb-tabs{
+    display:flex;
+    gap:0;
+    margin:16px 0 0;
+    border-bottom:2px solid var(--border-color);
+}
+
+.arb-tab{
+    flex:1;
+    padding:10px 0;
+    text-align:center;
+    font-size:13px;
+    font-weight:700;
+    color:var(--text-muted);
+    background:none;
+    border:none;
+    border-bottom:2px solid transparent;
+    margin-bottom:-2px;
+    cursor:pointer;
+    transition:color 0.2s, border-color 0.2s;
+    font-family:inherit;
+}
+
+.arb-tab:hover{
+    color:var(--text-secondary);
+}
+
+.arb-tab.active{
+    color:var(--accent-blue);
+    border-bottom-color:var(--accent-blue);
+}
+
+/* ================================
+   TAB CONTENT
+   =============================== */
+.arb-tab-content{
+    padding:14px 0 0;
+}
+
+/* ================================
+   PARTIDOS TABLE
+   =============================== */
+.arb-partidos-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:12px;
+}
+
+.arb-partidos-table th{
+    text-align:left;
+    font-size:10px;
+    font-weight:700;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:0.4px;
+    padding:6px 4px;
+    border-bottom:2px solid var(--border-color);
+}
+
+.arb-partidos-table td{
+    padding:7px 4px;
+    border-bottom:1px solid var(--border-color);
+    color:var(--text-primary);
+}
+
+.arb-partidos-table tbody tr:hover{
+    background:var(--bg-card-hover);
+}
+
+.arb-partidos-jornada{
+    font-weight:700;
+    color:var(--accent-blue);
+    text-align:center;
+    width:28px;
+}
+
+.arb-partidos-fecha{
+    color:var(--text-muted);
+    font-size:11px;
+    white-space:nowrap;
+}
+
+.arb-partidos-teams{
+    min-width:0;
+}
+
+.arb-partidos-home, .arb-partidos-away{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    max-width:110px;
+}
+
+.arb-partidos-score{
+    text-align:center;
+    font-weight:700;
+    white-space:nowrap;
+    padding:0 6px;
+}
+
+.arb-partidos-cards{
+    text-align:center;
+    white-space:nowrap;
+    font-size:11px;
+}
+
+.arb-cards-yellow{
+    color:#f59e0b;
+    font-weight:700;
+}
+
+.arb-cards-red{
+    color:#ef4444;
+    font-weight:700;
+}
+
+.arb-cards-pen{
+    color:var(--accent-blue);
+    font-weight:700;
+}
+
+/* ================================
+   RANKING TABLE
+   =============================== */
+.arb-ranking-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:12px;
+}
+
+.arb-ranking-table th{
+    text-align:left;
+    font-size:10px;
+    font-weight:700;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:0.4px;
+    padding:6px 4px;
+    border-bottom:2px solid var(--border-color);
+}
+
+.arb-ranking-table td{
+    padding:7px 4px;
+    border-bottom:1px solid var(--border-color);
+    color:var(--text-primary);
+}
+
+.arb-ranking-table tbody tr:hover{
+    background:var(--bg-card-hover);
+}
+
+.arb-ranking-pos{
+    font-weight:700;
+    color:var(--text-muted);
+    text-align:center;
+    width:24px;
+}
+
+.arb-ranking-name{
+    font-weight:600;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    max-width:130px;
+}
+
+.arb-ranking-num{
+    text-align:center;
+    font-weight:700;
+    width:32px;
+}
+
+.arb-ranking-total{
+    text-align:center;
+    font-weight:800;
+    width:36px;
+}
+
+.arb-ranking-highlight{
+    background:rgba(59,130,246,0.08);
+}
+
+.arb-ranking-highlight td{
+    color:var(--accent-blue);
+}
+
+/* ================================
+   LOADING SPINNER
+   =============================== */
+.arb-loading{
+    text-align:center;
+    padding:20px;
+    color:var(--text-muted);
+    font-size:12px;
+}
+
