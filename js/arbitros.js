@@ -4,6 +4,7 @@
     var selectedId = null;
     var currentTab = 'ficha';
     var partidosCache = null;
+    var currentTeamFilter = '';
 
     function calcularEdad(fechaStr) {
         if (!fechaStr) return null;
@@ -191,9 +192,33 @@
                 return;
             }
 
+            var teams = {};
+            myMatches.forEach(function(m) {
+                teams[m.home] = true;
+                teams[m.away] = true;
+            });
+            var teamList = Object.keys(teams).sort(function(a, b) { return a.localeCompare(b, 'es'); });
+
+            if (currentTeamFilter && !teams[currentTeamFilter]) {
+                currentTeamFilter = '';
+            }
+
+            var html = '<div class="arb-team-filter">';
+            html += '<select id="arb-team-select" class="arb-team-select">';
+            html += '<option value="">Todos los equipos (' + myMatches.length + ')</option>';
+            teamList.forEach(function(t) {
+                var sel = currentTeamFilter === t ? ' selected' : '';
+                html += '<option value="' + escHtml(t) + '"' + sel + '>' + escHtml(t) + '</option>';
+            });
+            html += '</select></div>';
+
+            var filtered = currentTeamFilter
+                ? myMatches.filter(function(m) { return m.home === currentTeamFilter || m.away === currentTeamFilter; })
+                : myMatches;
+
             var totalYellow = 0, totalRed = 0, totalPen = 0;
 
-            var html = '<table class="arb-partidos-table">';
+            html += '<table class="arb-partidos-table">';
             html += '<thead><tr>';
             html += '<th class="arb-col-j">J</th>';
             html += '<th class="arb-col-fecha">Fecha</th>';
@@ -205,7 +230,7 @@
             html += '<th class="arb-col-pen">\u26BD</th>';
             html += '</tr></thead>';
             html += '<tbody>';
-            myMatches.forEach(function(m) {
+            filtered.forEach(function(m) {
                 var fecha = m.fecha.substring(5).split('-').reverse().join('/');
                 totalYellow += m.yellow;
                 totalRed += m.red;
@@ -223,22 +248,32 @@
             });
             html += '</tbody></table>';
 
-            var n = myMatches.length;
-            var avgYellow = (totalYellow / n).toFixed(1);
-            var avgRed = (totalRed / n).toFixed(1);
-            var avgPen = (totalPen / n).toFixed(1);
-            var avgTotal = ((totalYellow + totalRed + totalPen) / n).toFixed(1);
+            var n = filtered.length;
+            if (n > 0) {
+                var avgYellow = (totalYellow / n).toFixed(1);
+                var avgRed = (totalRed / n).toFixed(1);
+                var avgPen = (totalPen / n).toFixed(1);
+                var avgTotal = ((totalYellow + totalRed + totalPen) / n).toFixed(1);
 
-            html += '<div class="arb-summary">';
-            html += '<div class="arb-summary-title">Promedio por partido (' + n + ' partidos)</div>';
-            html += '<div class="arb-summary-grid">';
-            html += '<div class="arb-summary-item"><span class="arb-summary-val">' + avgTotal + '</span><span class="arb-summary-label">Total</span></div>';
-            html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--yc">' + avgYellow + '</span><span class="arb-summary-label">\uD83D\uDFE8 Amarillas</span></div>';
-            html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--rc">' + avgRed + '</span><span class="arb-summary-label">\uD83D\uDFE5 Rojas</span></div>';
-            html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--pen">' + avgPen + '</span><span class="arb-summary-label">\u26BD Penaltis</span></div>';
-            html += '</div></div>';
+                html += '<div class="arb-summary">';
+                html += '<div class="arb-summary-title">Promedio por partido (' + n + ' partido' + (n > 1 ? 's' : '') + ')</div>';
+                html += '<div class="arb-summary-grid">';
+                html += '<div class="arb-summary-item"><span class="arb-summary-val">' + avgTotal + '</span><span class="arb-summary-label">Total</span></div>';
+                html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--yc">' + avgYellow + '</span><span class="arb-summary-label">\uD83D\uDFE8 Amarillas</span></div>';
+                html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--rc">' + avgRed + '</span><span class="arb-summary-label">\uD83D\uDFE5 Rojas</span></div>';
+                html += '<div class="arb-summary-item"><span class="arb-summary-val arb-summary-val--pen">' + avgPen + '</span><span class="arb-summary-label">\u26BD Penaltis</span></div>';
+                html += '</div></div>';
+            }
 
             container.innerHTML = html;
+
+            var teamSel = document.getElementById('arb-team-select');
+            if (teamSel) {
+                teamSel.addEventListener('change', function() {
+                    currentTeamFilter = this.value;
+                    renderPartidosTab();
+                });
+            }
         });
     }
 
@@ -342,6 +377,7 @@
             sel.addEventListener('change', function() {
                 selectedId = parseInt(this.value);
                 currentTab = 'ficha';
+                currentTeamFilter = '';
                 renderLista();
             });
         }
