@@ -488,13 +488,30 @@
             return html;
         }
 
+        var homeAvg = null, awayAvg = null;
+        if (d.boxScore && d.boxScore.value) {
+            d.boxScore.value.forEach(function(box) {
+                var sum = 0, cnt = 0;
+                if (box.players) box.players.forEach(function(p) {
+                    if (p.matchRating) { sum += parseFloat(p.matchRating); cnt++; }
+                });
+                var avg = cnt > 0 ? (sum / cnt).toFixed(2) : null;
+                if (box.team && d.homeTeam && box.team.id === d.homeTeam.id) homeAvg = avg;
+                else if (box.team && d.awayTeam && box.team.id === d.awayTeam.id) awayAvg = avg;
+            });
+        }
+
         var html = '<div class="pv-section"><div class="pv-lineups-new">';
         html += '<div class="pv-pitch-card">';
+
+        var homeWins = homeAvg && awayAvg && parseFloat(homeAvg) > parseFloat(awayAvg);
+        var awayWins = homeAvg && awayAvg && parseFloat(awayAvg) > parseFloat(homeAvg);
 
         if (homeT) {
             html += '<div class="pv-pitch-header home">';
             html += '<img src="' + escHtml(homeT.logo || 'imagenes/stpls-icon.png') + '" class="pv-pitch-shield" alt="" onerror="this.src=\'imagenes/stpls-icon.png\'">';
             html += '<h3>' + escHtml(homeT.name) + '</h3>';
+            if (homeAvg) html += '<span class="pv-pitch-avg' + (homeWins ? ' best' : (awayWins ? ' worst' : '')) + '">' + homeAvg + '</span>';
             html += '<span class="pv-pitch-formation">' + escHtml(homeT.formation) + '</span>';
             html += '</div>';
         }
@@ -514,6 +531,7 @@
             html += '<div class="pv-pitch-header away">';
             html += '<img src="' + escHtml(awayT.logo || 'imagenes/stpls-icon.png') + '" class="pv-pitch-shield" alt="" onerror="this.src=\'imagenes/stpls-icon.png\'">';
             html += '<h3>' + escHtml(awayT.name) + '</h3>';
+            if (awayAvg) html += '<span class="pv-pitch-avg' + (awayWins ? ' best' : (homeWins ? ' worst' : '')) + '">' + awayAvg + '</span>';
             html += '<span class="pv-pitch-formation">' + escHtml(awayT.formation) + '</span>';
             html += '</div>';
         }
