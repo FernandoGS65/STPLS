@@ -36,11 +36,12 @@
     }
 }
 
-/* --- Equipo page: Plantilla mobile --- */
+/* --- Equipo page: mobile --- */
 @media(max-width:480px){
     .equipo-page{
         padding:12px 10px;
         overflow-x:hidden;
+        width:100%;
     }
     .equipo-hero{
         gap:10px;
@@ -53,16 +54,68 @@
     .equipo-hero-nombre{
         font-size:20px;
     }
+    .equipo-hero-info{
+        flex-direction:column;
+        gap:4px;
+    }
     .equipo-palmares{
         justify-content:flex-start;
-        padding:10px 0 6px;
+        overflow-x:auto;
     }
+    .forma-reciente{
+        justify-content:flex-start;
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
+        margin:8px 0 14px;
+    }
+    .forma-reciente::-webkit-scrollbar{display:none}
     .stats-equipo{
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns:repeat(6, 1fr);
+        gap:3px;
+        margin:10px 0 16px;
+        width:100%;
+        max-width:100%;
+        overflow:hidden;
+    }
+    .stats-equipo div{
+        padding:5px 1px;
+        min-height:44px;
+        font-size:11px;
+        min-width:0;
+        overflow:hidden;
+        width:100%;
+    }
+    .stats-equipo div br + *{
+        font-size:14px;
     }
     .partidos-tabs{
-        margin-top:20px;
+        margin-top:16px;
+        margin-bottom:10px;
     }
+    .ultimos-partidos{
+        width:100%;
+        max-width:100%;
+        overflow:hidden;
+    }
+    .partido-reciente{
+        grid-template-columns:14px 28px 1fr 42px 1fr;
+        gap:2px 3px;
+        padding:4px 2px;
+        font-size:11px;
+        min-width:0;
+        width:100%;
+        max-width:100%;
+        overflow:hidden;
+    }
+    .partido-reciente .forma{grid-column:1}
+    .partido-reciente .jornada-partido{grid-column:2;font-size:10px}
+    .partido-reciente .equipo-partido:first-of-type{grid-column:3;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .partido-reciente .icon-descarga{display:none}
+    .partido-reciente .resultado-partido,.partido-reciente .link-partido{grid-column:4;text-align:center;display:block;white-space:nowrap;font-weight:700;font-size:11px}
+    .partido-reciente .equipo-partido:last-of-type{grid-column:5;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .partido-reciente .link-video{display:none}
     .squad-card{
         overflow-x:hidden;
     }

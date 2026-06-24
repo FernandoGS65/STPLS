@@ -341,7 +341,9 @@
         }
 
         function normalize(s) {
-            return (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+            return (s || '').toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^a-z0-9]/g, '');
         }
 
         function matchName(eventVal, targetVal) {
@@ -477,15 +479,7 @@
                     html += '<div class="pv-player-name">' + escHtml(shortName(p.name)) + '</div>';
                     var rating = ratingById[p.id];
                     if (rating) {
-                        var rv = parseFloat(rating);
-                        var rCls = rv >= 7.5 ? 'high' : (rv >= 6.5 ? 'mid' : 'low');
-                        html += '<div class="pv-player-rating ' + rCls + '">' + rating + '</div>';
-                    }
-                    var avgR = avgRatingById[p.id];
-                    if (avgR) {
-                        var arv = parseFloat(avgR);
-                        var arCls = arv >= 7.5 ? 'high' : (arv >= 6.5 ? 'mid' : 'low');
-                        html += '<div class="pv-player-rating avg ' + arCls + '">' + avgR + '</div>';
+                        html += '<div class="pv-player-rating">' + rating + '</div>';
                     }
                     html += '</div>';
                 });
