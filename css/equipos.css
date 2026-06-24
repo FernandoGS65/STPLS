@@ -340,8 +340,8 @@
 }
 
 .pitch-player-photo{
-    width:48px;
-    height:48px;
+    width:62px;
+    height:62px;
     border-radius:50%;
     object-fit:cover;
     border:2px solid #fff;
@@ -357,7 +357,7 @@
 }
 
 .pitch-player-name{
-    font-size:12px;
+    font-size:14px;
     font-weight:700;
     color:#fff;
     text-shadow:0 1px 3px rgba(0,0,0,0.7);
@@ -367,6 +367,10 @@
     max-width:84px;
     text-align:center;
 }
+.pitch-player.pos-Goalkeeper .pitch-player-name{color:#fff}
+.pitch-player.pos-Defender .pitch-player-name{color:#facc15}
+.pitch-player.pos-Midfielder .pitch-player-name{color:#06b6d4}
+.pitch-player.pos-Forward .pitch-player-name{color:#ef4444}
 
 .pitch-back{
     text-align:center;

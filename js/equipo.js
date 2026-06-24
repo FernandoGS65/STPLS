@@ -1018,7 +1018,7 @@ document.getElementById(
 
         function playerNode(p, idx) {
             var fotoUrl = p.fotMobId ? 'https://images.fotmob.com/image_resources/playerimages/' + p.fotMobId + '.png' : '';
-            var h = '<div class="pitch-player">';
+            var h = '<div class="pitch-player pos-' + p.position + '">';
             if (fotoUrl) {
                 h += '<img class="pitch-player-photo" src="' + escHtml(fotoUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">';
             }
