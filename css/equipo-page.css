@@ -133,6 +133,10 @@
     overscroll-behavior-x:contain;
     overscroll-behavior-y:none;
     touch-action:pan-x;
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:var(--bg-body);
 }
 .partidos-tabs::-webkit-scrollbar{display:none;}
 

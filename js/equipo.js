@@ -634,7 +634,13 @@ document.getElementById(
 
         `;
 
-    document.querySelector('.partidos-tabs')?.addEventListener('click', function(e) {
+    const tabsEl = document.querySelector('.partidos-tabs');
+    if (tabsEl) {
+        const navH = document.querySelector('.navbar')?.offsetHeight || 0;
+        tabsEl.style.top = navH + 'px';
+    }
+
+    tabsEl?.addEventListener('click', function(e) {
         const tab = e.target.closest('.partidos-tab');
         if (!tab) return;
         document.querySelectorAll('.partidos-tab').forEach(t => t.classList.remove('partidos-tab--active'));
