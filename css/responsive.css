@@ -36,6 +36,26 @@
     }
 }
 
+/* --- Equipo page: Plantilla mobile --- */
+@media(max-width:480px){
+    .squad-card{
+        overflow-x:hidden;
+    }
+    .squad-player{
+        gap:10px;
+        padding:10px 10px 10px 0;
+    }
+    .squad-player-photo{
+        width:68px;
+        height:68px;
+    }
+    .squad-player-num{
+        width:42px;
+        height:42px;
+        font-size:18px;
+    }
+}
+
 /* --- Clasificacion page --- */
 @media(max-width:600px){
     .clasificacion-page{

@@ -952,6 +952,9 @@ document.getElementById(
                     html += '<img class="squad-player-photo" src="' + escHtml(fotoUrl) + '" alt="' + escHtml(p.name) + '" loading="lazy" onerror="this.style.display=\'none\'">';
                 }
                 html += '<div class="squad-player-num">' + (p.number || '-') + '</div>';
+                if (p.countryCode) {
+                    html += '<img class="squad-player-flag" src="https://flagcdn.com/w40/' + p.countryCode.toLowerCase() + '.png" alt="' + escHtml(p.nationality || '') + '" loading="lazy" title="' + escHtml(p.nationality || '') + '">';
+                }
                 html += '<div class="squad-player-info">';
                 html += '<div class="squad-player-name">' + escHtml(p.name) + '</div>';
                 html += '<div class="squad-player-meta">';
