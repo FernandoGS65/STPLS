@@ -48,6 +48,12 @@ body{
     background:var(--bg-body);
     color:var(--text-primary);
     transition:background 0.3s, color 0.3s;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+main{
+    flex:1;
 }
 
 /* ================================
