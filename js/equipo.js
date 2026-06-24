@@ -976,7 +976,88 @@ document.getElementById(
         });
 
         html += '</div>';
+
+        html += '<div class="squad-alineacion-link"><a href="#" id="btn-alineacion-habitual">\u26BD Alineaci\u00f3n habitual</a></div>';
+
         container.innerHTML = html;
+
+        document.getElementById('btn-alineacion-habitual')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            renderAlineacion(team, teamName, container);
+        });
+    }
+
+    function seleccionarTitular(team, position, count) {
+        var candidates = team.players.filter(function(p) { return p.position === position; });
+        candidates.sort(function(a, b) {
+            var sa = a.starts || 0;
+            var sb = b.starts || 0;
+            if (sb !== sa) return sb - sa;
+            var ga = a.goals || 0;
+            var gb = b.goals || 0;
+            if (gb !== ga) return gb - ga;
+            var ya = a.yellowCards || 0;
+            var yb = b.yellowCards || 0;
+            return ya - yb;
+        });
+        return candidates.slice(0, count);
+    }
+
+    function renderAlineacion(team, teamName, container) {
+        var gk = seleccionarTitular(team, 'Goalkeeper', 1);
+        var def = seleccionarTitular(team, 'Defender', 4);
+        var mid = seleccionarTitular(team, 'Midfielder', 4);
+        var fwd = seleccionarTitular(team, 'Forward', 4);
+        var xi = [].concat(gk, def, mid, fwd);
+
+        function playerNode(p, idx) {
+            var fotoUrl = p.fotMobId ? 'https://images.fotmob.com/image_resources/playerimages/' + p.fotMobId + '.png' : '';
+            var h = '<div class="pitch-player">';
+            if (fotoUrl) {
+                h += '<img class="pitch-player-photo" src="' + escHtml(fotoUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">';
+            }
+            h += '<span class="pitch-player-num">' + (p.number || '') + '</span>';
+            h += '<span class="pitch-player-name">' + escHtml(p.name.split(' ').pop()) + '</span>';
+            h += '</div>';
+            return h;
+        }
+
+        var rows = [
+            { label: '', players: gk },
+            { label: '', players: def },
+            { label: '', players: mid },
+            { label: '', players: fwd }
+        ];
+
+        var html = '<div class="pitch-container">';
+        html += '<div class="pitch">';
+        html += '<div class="pitch-lines">';
+        html += '<div class="pitch-center-circle"></div>';
+        html += '<div class="pitch-center-line"></div>';
+        html += '<div class="pitch-area-top"></div>';
+        html += '<div class="pitch-area-bottom"></div>';
+        html += '</div>';
+        html += '<div class="pitch-formation">';
+
+        rows.forEach(function(row) {
+            html += '<div class="pitch-row">';
+            row.players.forEach(function(p, i) {
+                html += playerNode(p, i);
+            });
+            html += '</div>';
+        });
+
+        html += '</div>';
+        html += '</div>';
+        html += '<div class="pitch-back"><a href="#" id="btn-volver-plantilla">\u2190 Volver a la plantilla</a></div>';
+        html += '</div>';
+
+        container.innerHTML = html;
+
+        document.getElementById('btn-volver-plantilla')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            renderPlantilla({ [teamName]: team }, teamName, container);
+        });
     }
 
     function renderFichaje(f, tipo) {
