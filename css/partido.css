@@ -480,6 +480,10 @@
     line-height:1;position:absolute;top:50%;left:50%;
     transform:translate(-50%,-50%);z-index:1;
 }
+.pv-avatar-photo{
+    width:100%;height:100%;border-radius:50%;object-fit:cover;
+    position:absolute;top:0;left:0;z-index:3;
+}
 .pv-player-name{
     font-size:12px;font-weight:700;color:#fff;text-align:center;
     max-width:72px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
@@ -546,10 +550,18 @@
     align-items:center;justify-content:center;
     font-size:12px;font-weight:800;color:var(--text-primary);
     background:var(--bg-surface);border:1px solid var(--border-color);
-    flex-shrink:0;
+    flex-shrink:0;overflow:hidden;position:relative;
 }
+.pv-subs-photo{
+    width:100%;height:100%;border-radius:50%;object-fit:cover;
+    position:absolute;top:0;left:0;
+}
+.pv-subs-num{position:relative;z-index:1;}
 .pv-subs-row.played .pv-subs-badge{
     background:var(--accent-green,#22c55e);color:#fff;border-color:transparent;
+}
+.pv-subs-row.played .pv-subs-badge .pv-subs-photo{
+    border:2px solid var(--accent-green,#22c55e);
 }
 .pv-subs-name{
     flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;

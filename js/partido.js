@@ -21,17 +21,21 @@
 
     var videoUrlCache = null;
 
+    var plantillaCache = null;
+
     function cargarPartido() {
         Promise.all([
             fetch(APP.ruta("partido", matchId)).then(function(r) {
                 return r.ok ? r.json() : null;
             }),
             fetch(APP.ruta("calendario")).then(function(r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-            fetch(APP.ruta("videos")).then(function(r) { return r.ok ? r.json() : null; })
+            fetch(APP.ruta("videos")).then(function(r) { return r.ok ? r.json() : null; }),
+            plantillaCache ? Promise.resolve(plantillaCache) : fetch(APP.ruta("plantilla")).then(function(r) { return r.ok ? r.json() : null; })
         ]).then(function(res) {
             var d = res[0];
             var liga = res[1];
             var videos = res[2];
+            if (res[3]) plantillaCache = res[3];
             var b = liga.data.find(function(m) { return m.id == matchId; });
             if (!b) { showError("Partido no encontrado en el calendario."); return; }
 
@@ -397,6 +401,22 @@
             return parts[0].charAt(0) + '. ' + last;
         }
 
+        var fotMobById = {};
+        if (plantillaCache) {
+            Object.keys(plantillaCache).forEach(function(teamKey) {
+                var team = plantillaCache[teamKey];
+                if (team && team.players) {
+                    team.players.forEach(function(p) {
+                        if (p.id && p.fotMobId) fotMobById[p.id] = p.fotMobId;
+                    });
+                }
+            });
+        }
+        function playerPhotoUrl(p) {
+            if (p && p.id && fotMobById[p.id]) return 'https://images.fotmob.com/image_resources/playerimages/' + fotMobById[p.id] + '.png';
+            return '';
+        }
+
         function renderPlayers(rows, isHome) {
             var html = '';
             var numRows = rows.length;
@@ -424,10 +444,16 @@
                     var teamClass = isHome ? 'home' : 'away';
                     var initials = (p.name || '').split(' ').map(function(w){ return w.charAt(0); }).join('').substring(0,2);
 
+                    var photo = playerPhotoUrl(p);
                     html += '<div class="pv-player-node ' + teamClass + '" style="top:' + topPct + '%;left:' + leftPct + '%">';
                     html += '<div class="pv-avatar-wrap">';
                     html += '<div class="pv-avatar ' + teamClass + '">';
-                    html += '<span class="pv-avatar-num">' + (p.number || '') + '</span>';
+                    if (photo) {
+                        html += '<img class="pv-avatar-photo" src="' + escHtml(photo) + '" alt="" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">';
+                        html += '<span class="pv-avatar-num fallback" style="display:none">' + (p.number || '') + '</span>';
+                    } else {
+                        html += '<span class="pv-avatar-num">' + (p.number || '') + '</span>';
+                    }
                     html += '<span class="pv-avatar-initials">' + escHtml(initials) + '</span>';
                     html += '</div>';
                     if (card || goalCt || subOutEvt || subInEvt) {
@@ -468,8 +494,16 @@
                 var entered = !!subInEvt;
                 var num = s.number || '';
                 var name = s.name || '';
+                var photo = playerPhotoUrl(s);
                 html += '<div class="pv-subs-row' + (entered ? ' played' : '') + '">';
-                html += '<span class="pv-subs-badge">' + num + '</span>';
+                html += '<span class="pv-subs-badge">';
+                if (photo) {
+                    html += '<img class="pv-subs-photo" src="' + escHtml(photo) + '" alt="" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">';
+                    html += '<span class="pv-subs-num fallback" style="display:none">' + num + '</span>';
+                } else {
+                    html += '<span class="pv-subs-num">' + num + '</span>';
+                }
+                html += '</span>';
                 html += '<span class="pv-subs-name">' + escHtml(shortName(name)) + '</span>';
                 if (entered) {
                     html += '<span class="pv-subs-in-info">';
