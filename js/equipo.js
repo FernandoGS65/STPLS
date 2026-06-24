@@ -1006,8 +1006,8 @@ document.getElementById(
     function renderAlineacion(team, teamName, container) {
         var gk = seleccionarTitular(team, 'Goalkeeper', 1);
         var def = seleccionarTitular(team, 'Defender', 4);
-        var mid = seleccionarTitular(team, 'Midfielder', 4);
-        var fwd = seleccionarTitular(team, 'Forward', 4);
+        var mid = seleccionarTitular(team, 'Midfielder', 3);
+        var fwd = seleccionarTitular(team, 'Forward', 3);
         var xi = [].concat(gk, def, mid, fwd);
 
         function playerNode(p, idx) {

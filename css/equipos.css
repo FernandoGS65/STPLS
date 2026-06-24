@@ -337,8 +337,8 @@
 }
 
 .pitch-player-photo{
-    width:40px;
-    height:40px;
+    width:48px;
+    height:48px;
     border-radius:50%;
     object-fit:cover;
     border:2px solid #fff;
@@ -347,21 +347,21 @@
 }
 
 .pitch-player-num{
-    font-size:10px;
+    font-size:12px;
     font-weight:800;
     color:var(--accent-gold);
     text-shadow:0 1px 3px rgba(0,0,0,0.6);
 }
 
 .pitch-player-name{
-    font-size:10px;
+    font-size:12px;
     font-weight:700;
     color:#fff;
     text-shadow:0 1px 3px rgba(0,0,0,0.7);
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
-    max-width:70px;
+    max-width:84px;
     text-align:center;
 }
 
