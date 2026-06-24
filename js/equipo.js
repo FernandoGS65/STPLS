@@ -14,6 +14,12 @@ function escHtml(s) {
     return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 }
 
+var CC3_TO_CC2 = {ESP:"es",GBR:"gb",FRA:"fr",GER:"de",ITA:"it",POR:"pt",BRA:"br",ARG:"ar",URU:"uy",COL:"co",CHI:"cl",VEN:"ve",PAR:"py",PER:"pe",ECU:"ec",BOL:"bo",MEX:"mx",USA:"us",CAN:"ca",CMR:"cm",SEN:"sn",MLI:"ml",GUI:"gn",GHA:"gh",NGA:"ng",COD:"cd",CIV:"ci",MAR:"ma",ALG:"dz",EGY:"eg",TUN:"tn",RSA:"za",GNB:"gw",CPV:"cv",ANG:"ao",EQG:"gq",TOG:"tg",NIG:"ne",KEN:"ke",DOM:"do",HON:"hn",PAN:"pa",CRC:"cr",GEO:"ge",NED:"nl",BEL:"be",SUI:"ch",AUT:"at",SWE:"se",NOR:"no",DEN:"dk",FIN:"fi",POL:"pl",CZE:"cz",SVK:"sk",SVN:"si",CRO:"hr",SRB:"rs",BIH:"ba",MNE:"me",MKD:"mk",ALB:"al",BUL:"bg",ROU:"ro",HUN:"hu",RUS:"ru",UKR:"ua",TUR:"tr",GRE:"gr",ISL:"is",IRL:"ie",ENG:"gb",AUS:"au",NZL:"nz",JPN:"jp",CHN:"cn",KOR:"kr",IND:"in",ISR:"il",LBN:"lb",JOR:"jo",IRQ:"iq",IRN:"ir",KWT:"kw",QAT:"qa",UAE:"ae",KSA:"sa",ARM:"am",AZE:"az",KAZ:"kz",UZB:"uz",TJK:"tj",KGZ:"kg",TKM:"tm",MDA:"md",BLR:"by",LVA:"lv",LTU:"lt",EST:"ee",LUX:"lux",MLT:"mt",CYP:"cy",GUF:"gf",GLP:"gp",NCL:"nc",PYF:"pf",REU:"re",MYT:"yt",ATF:"tf",SPM:"pm",WLF:"wf",COM:"km",SYC:"sc",MUS:"mu",MDG:"mg",MOZ:"mz",ZWE:"zw",ZAM:"zm",MWI:"mw",BWA:"bw",NAM:"nam",LSO:"ls",SWZ:"sz",TZA:"tz",UGA:"ug",RWA:"rw",BDI:"bi",SSD:"ss",SDN:"sd",TCD:"td",CAF:"cf",COG:"cg",GAB:"ga",STP:"st",SLE:"sl",LBR:"lr",GAM:"gm",ERI:"er",DJI:"dj",SOM:"so",BFA:"bf",NER:"ne",GIN:"gn",SAH:"eh",BEN:"bj"};
+function countryCodeTo2(cc3) {
+    if (!cc3 || cc3.length === 2) return cc3 ? cc3.toLowerCase() : '';
+    return CC3_TO_CC2[cc3.toUpperCase()] || cc3.toLowerCase().substring(0,2);
+}
+
 function calcularClasificacion(partidos) {
 
     const tabla = {};
@@ -951,10 +957,15 @@ document.getElementById(
                 if (fotoUrl) {
                     html += '<img class="squad-player-photo" src="' + escHtml(fotoUrl) + '" alt="' + escHtml(p.name) + '" loading="lazy" onerror="this.style.display=\'none\'">';
                 }
+                html += '<div class="squad-player-num-wrap">';
                 html += '<div class="squad-player-num">' + (p.number || '-') + '</div>';
                 if (p.countryCode) {
-                    html += '<img class="squad-player-flag" src="https://flagcdn.com/w40/' + p.countryCode.toLowerCase() + '.png" alt="' + escHtml(p.nationality || '') + '" loading="lazy" title="' + escHtml(p.nationality || '') + '">';
+                    var cc2 = countryCodeTo2(p.countryCode);
+                    if (cc2) {
+                        html += '<img class="squad-player-flag" src="https://flagcdn.com/w40/' + cc2 + '.png" alt="' + escHtml(p.nationality || '') + '" loading="lazy" title="' + escHtml(p.nationality || '') + '">';
+                    }
                 }
+                html += '</div>';
                 html += '<div class="squad-player-info">';
                 html += '<div class="squad-player-name">' + escHtml(p.name) + '</div>';
                 html += '<div class="squad-player-meta">';
