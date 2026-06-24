@@ -156,8 +156,8 @@
 }
 
 .squad-player-photo{
-    width:68px;
-    height:68px;
+    width:88px;
+    height:88px;
     border-radius:50%;
     object-fit:cover;
     flex-shrink:0;
@@ -187,13 +187,16 @@
 }
 
 .squad-player-name{
-    font-size:13px;
+    font-size:15px;
     font-weight:700;
-    color:var(--accent-cyan);
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
 }
+.squad-player.pos-Goalkeeper .squad-player-name{color:#fff}
+.squad-player.pos-Defender .squad-player-name{color:#facc15}
+.squad-player.pos-Midfielder .squad-player-name{color:#06b6d4}
+.squad-player.pos-Forward .squad-player-name{color:#ef4444}
 
 .squad-player-meta{
     font-size:17px;

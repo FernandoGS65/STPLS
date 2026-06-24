@@ -947,7 +947,7 @@ document.getElementById(
             html += '<div class="squad-grid">';
             players.forEach(function(p) {
                 var fotoUrl = p.fotMobId ? 'https://images.fotmob.com/image_resources/playerimages/' + p.fotMobId + '.png' : '';
-                html += '<div class="squad-player">';
+                html += '<div class="squad-player pos-' + p.position + '">';
                 if (fotoUrl) {
                     html += '<img class="squad-player-photo" src="' + escHtml(fotoUrl) + '" alt="' + escHtml(p.name) + '" loading="lazy" onerror="this.style.display=\'none\'">';
                 }
