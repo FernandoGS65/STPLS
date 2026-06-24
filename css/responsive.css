@@ -38,6 +38,31 @@
 
 /* --- Equipo page: Plantilla mobile --- */
 @media(max-width:480px){
+    .equipo-page{
+        padding:12px 10px;
+        overflow-x:hidden;
+    }
+    .equipo-hero{
+        gap:10px;
+        padding:12px 0 8px;
+    }
+    .equipo-hero-escudo{
+        width:72px;
+        height:72px;
+    }
+    .equipo-hero-nombre{
+        font-size:20px;
+    }
+    .equipo-palmares{
+        justify-content:flex-start;
+        padding:10px 0 6px;
+    }
+    .stats-equipo{
+        grid-template-columns:repeat(3,1fr);
+    }
+    .partidos-tabs{
+        margin-top:20px;
+    }
     .squad-card{
         overflow-x:hidden;
     }
