@@ -23,6 +23,19 @@
     }
 }
 
+/* --- Partido page mobile --- */
+@media(max-width:768px){
+    .pv-page{
+        overflow-x:hidden;
+    }
+    .pv-pitch-wrap{
+        margin:0 4px;
+    }
+    .pv-pitch-card{
+        overflow:hidden;
+    }
+}
+
 /* --- Clasificacion page --- */
 @media(max-width:600px){
     .clasificacion-page{

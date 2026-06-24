@@ -450,13 +450,13 @@
 .pv-player-node{
     position:absolute;transform:translate(-50%,0);
     display:flex;flex-direction:column;align-items:center;
-    gap:2px;width:68px;
+    gap:2px;width:80px;
 }
 .pv-avatar-wrap{
     position:relative;display:flex;flex-direction:column;align-items:center;
 }
 .pv-avatar{
-    width:42px;height:42px;border-radius:50%;
+    width:56px;height:56px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;
     position:relative;overflow:hidden;
     box-shadow:0 2px 6px rgba(0,0,0,0.4);
@@ -470,7 +470,7 @@
     border:2px solid rgba(245,158,11,0.6);
 }
 .pv-avatar-num{
-    font-size:18px;font-weight:900;color:#fff;line-height:1;
+    font-size:22px;font-weight:900;color:#fff;line-height:1;
     text-shadow:0 1px 2px rgba(0,0,0,0.3);
     position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
     z-index:2;
@@ -485,11 +485,15 @@
     position:absolute;top:0;left:0;z-index:3;
 }
 .pv-player-name{
-    font-size:12px;font-weight:700;color:#fff;text-align:center;
-    max-width:72px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    font-size:20px;font-weight:700;color:#fff;text-align:center;
+    max-width:84px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
     text-shadow:0 1px 3px rgba(0,0,0,0.8),0 0 6px rgba(0,0,0,0.5);
     line-height:1.2;
 }
+.pv-player-node.pos-gk .pv-player-name{color:#fff}
+.pv-player-node.pos-def .pv-player-name{color:#facc15}
+.pv-player-node.pos-mid .pv-player-name{color:#06b6d4}
+.pv-player-node.pos-fwd .pv-player-name{color:#ef4444}
 .pv-player-rating{
     font-size:10px;font-weight:800;text-align:center;
     padding:1px 6px;border-radius:6px;line-height:1.2;

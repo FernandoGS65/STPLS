@@ -431,23 +431,28 @@
                 }
 
                 var count = row.length;
-                var spacing = count <= 1 ? 0 : Math.min(80 / (count - 1), 24);
+                var spacing = count <= 1 ? 0 : Math.min(90 / (count - 1), 30);
                 var startX = count <= 1 ? 50 : 50 - ((count - 1) * spacing) / 2;
 
                 row.forEach(function(p, pi) {
                     var leftPct = count <= 1 ? 50 : startX + pi * spacing;
-                    if (leftPct < 10) leftPct = 10;
-                    if (leftPct > 90) leftPct = 90;
+                    if (leftPct < 8) leftPct = 8;
+                    if (leftPct > 92) leftPct = 92;
 
                     var card = getCard(p);
                     var goalCt = getGoalCount(p);
                     var subOutEvt = getSubOutEvent(p);
                     var subInEvt = getSubInEvent(p);
                     var teamClass = isHome ? 'home' : 'away';
+                    var posClass = '';
+                    if (p.position === 'Goalkeeper') posClass = 'pos-gk';
+                    else if (p.position === 'Defender') posClass = 'pos-def';
+                    else if (p.position === 'Midfielder') posClass = 'pos-mid';
+                    else if (p.position === 'Forward') posClass = 'pos-fwd';
                     var initials = (p.name || '').split(' ').map(function(w){ return w.charAt(0); }).join('').substring(0,2);
 
                     var photo = playerPhotoUrl(p);
-                    html += '<div class="pv-player-node ' + teamClass + '" style="top:' + topPct + '%;left:' + leftPct + '%">';
+                    html += '<div class="pv-player-node ' + teamClass + ' ' + posClass + '" style="top:' + topPct + '%;left:' + leftPct + '%">';
                     html += '<div class="pv-avatar-wrap">';
                     html += '<div class="pv-avatar ' + teamClass + '">';
                     if (photo) {
