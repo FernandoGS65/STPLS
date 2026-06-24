@@ -201,3 +201,32 @@
     font-weight:600;
     margin-top:1px;
 }
+
+.squad-player-stats{
+    display:flex;
+    gap:8px;
+    margin-top:3px;
+}
+
+.squad-stat{
+    font-size:11px;
+    font-weight:700;
+    padding:1px 6px;
+    border-radius:4px;
+    white-space:nowrap;
+}
+
+.squad-stat--goal{
+    color:#22c55e;
+    background:rgba(34,197,94,0.12);
+}
+
+.squad-stat--yellow{
+    color:#eab308;
+    background:rgba(234,179,8,0.12);
+}
+
+.squad-stat--red{
+    color:#ef4444;
+    background:rgba(239,68,68,0.12);
+}

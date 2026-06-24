@@ -911,7 +911,7 @@ document.getElementById(
         var posIcons = {
             Goalkeeper: '\uD83D\uDDF3',
             Defender: '\uD83D\uDEE1',
-            Midfielder: '\u2696',
+            Midfielder: '\u2B50',
             Forward: '\u26BD'
         };
         var posOrder = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'];
@@ -953,11 +953,21 @@ document.getElementById(
                 var subs = p.subs || 0;
                 var total = starts + subs;
                 if (total > 0) {
-                    html += starts + ' TIT ' + subs + ' SUP';
+                    html += starts + 'T ' + subs + 'S';
                 } else {
                     html += p.appearances + ' partidos';
                 }
                 html += '</div>';
+                var goals = p.goals || 0;
+                var yellows = p.yellowCards || 0;
+                var reds = p.redCards || 0;
+                if (goals > 0 || yellows > 0 || reds > 0) {
+                    html += '<div class="squad-player-stats">';
+                    if (goals > 0) html += '<span class="squad-stat squad-stat--goal">\u26BD ' + goals + '</span>';
+                    if (yellows > 0) html += '<span class="squad-stat squad-stat--yellow">\uD83D\uDFE1 ' + yellows + '</span>';
+                    if (reds > 0) html += '<span class="squad-stat squad-stat--red">\uD83D\uDD34 ' + reds + '</span>';
+                    html += '</div>';
+                }
                 html += '</div>';
                 html += '</div>';
             });
