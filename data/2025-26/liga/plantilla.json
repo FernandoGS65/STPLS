@@ -7,7 +7,9 @@
         "number": 1,
         "name": "Sergio Herrera",
         "position": "Goalkeeper",
-        "fotMobId": 683762
+        "fotMobId": 683762,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 11,
@@ -15,7 +17,9 @@
         "number": 13,
         "name": "Aitor Fernández",
         "position": "Goalkeeper",
-        "fotMobId": 213471
+        "fotMobId": 213471,
+        "starts": 0,
+        "subs": 19
       },
       {
         "appearances": 5,
@@ -23,7 +27,9 @@
         "number": 31,
         "name": "Dimitrios Stamatakis",
         "position": "Goalkeeper",
-        "fotMobId": 1532145
+        "fotMobId": 1532145,
+        "starts": 0,
+        "subs": 8
       },
       {
         "appearances": 10,
@@ -31,7 +37,9 @@
         "number": 3,
         "name": "Juan Cruz",
         "position": "Defender",
-        "fotMobId": 243419
+        "fotMobId": 243419,
+        "starts": 7,
+        "subs": 10
       },
       {
         "appearances": 11,
@@ -39,7 +47,9 @@
         "number": 5,
         "name": "Jorge Herrando",
         "position": "Defender",
-        "fotMobId": 1098365
+        "fotMobId": 1098365,
+        "starts": 8,
+        "subs": 11
       },
       {
         "appearances": 3,
@@ -47,7 +57,9 @@
         "number": 20,
         "name": "Javi Galán",
         "position": "Defender",
-        "fotMobId": 695062
+        "fotMobId": 695062,
+        "starts": 4,
+        "subs": 15
       },
       {
         "appearances": 9,
@@ -55,7 +67,9 @@
         "number": 22,
         "name": "Flavien Boyomo",
         "position": "Defender",
-        "fotMobId": 1187734
+        "fotMobId": 1187734,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -63,7 +77,9 @@
         "number": 24,
         "name": "Alejandro Catena",
         "position": "Defender",
-        "fotMobId": 814663
+        "fotMobId": 814663,
+        "starts": 17,
+        "subs": 0
       },
       {
         "appearances": 1,
@@ -71,7 +87,9 @@
         "number": 34,
         "name": "Raúl Chasco",
         "position": "Defender",
-        "fotMobId": 1670573
+        "fotMobId": 1670573,
+        "starts": 0,
+        "subs": 4
       },
       {
         "appearances": 9,
@@ -79,7 +97,9 @@
         "number": 41,
         "name": "Iñigo Arguibide",
         "position": "Defender",
-        "fotMobId": 1614872
+        "fotMobId": 1614872,
+        "starts": 2,
+        "subs": 7
       },
       {
         "appearances": 10,
@@ -87,7 +107,9 @@
         "number": 6,
         "name": "Lucas Torró",
         "position": "Midfielder",
-        "fotMobId": 303879
+        "fotMobId": 303879,
+        "starts": 17,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -95,7 +117,9 @@
         "number": 7,
         "name": "Jon Moncayola",
         "position": "Midfielder",
-        "fotMobId": 921825
+        "fotMobId": 921825,
+        "starts": 18,
+        "subs": 0
       },
       {
         "appearances": 11,
@@ -103,7 +127,9 @@
         "number": 8,
         "name": "Iker Muñoz",
         "position": "Midfielder",
-        "fotMobId": 1323863
+        "fotMobId": 1323863,
+        "starts": 2,
+        "subs": 17
       },
       {
         "appearances": 11,
@@ -111,7 +137,9 @@
         "number": 16,
         "name": "Moi Gómez",
         "position": "Midfielder",
-        "fotMobId": 262592
+        "fotMobId": 262592,
+        "starts": 10,
+        "subs": 7
       },
       {
         "appearances": 7,
@@ -119,7 +147,9 @@
         "number": 19,
         "name": "Valentin Rosier",
         "position": "Midfielder",
-        "fotMobId": 763970
+        "fotMobId": 763970,
+        "starts": 11,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -127,7 +157,9 @@
         "number": 23,
         "name": "Abel Bretones",
         "position": "Midfielder",
-        "fotMobId": 1323398
+        "fotMobId": 1323398,
+        "starts": 14,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -135,7 +167,9 @@
         "number": 26,
         "name": "Mauro Echegoyen",
         "position": "Midfielder",
-        "fotMobId": 1699317
+        "fotMobId": 1699317,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 11,
@@ -143,7 +177,9 @@
         "number": 29,
         "name": "Asier Osambela",
         "position": "Midfielder",
-        "fotMobId": 1431121
+        "fotMobId": 1431121,
+        "starts": 2,
+        "subs": 17
       },
       {
         "appearances": 1,
@@ -151,7 +187,9 @@
         "number": 2,
         "name": "Iker Benito",
         "position": "Forward",
-        "fotMobId": 1323022
+        "fotMobId": 1323022,
+        "starts": 1,
+        "subs": 6
       },
       {
         "appearances": 11,
@@ -159,7 +197,9 @@
         "number": 9,
         "name": "Raúl García de Haro",
         "position": "Forward",
-        "fotMobId": 1094778
+        "fotMobId": 1094778,
+        "starts": 5,
+        "subs": 14
       },
       {
         "appearances": 10,
@@ -167,7 +207,9 @@
         "number": 10,
         "name": "Aimar Oroz",
         "position": "Forward",
-        "fotMobId": 1054786
+        "fotMobId": 1054786,
+        "starts": 12,
+        "subs": 2
       },
       {
         "appearances": 11,
@@ -175,7 +217,9 @@
         "number": 11,
         "name": "Kike Barja",
         "position": "Forward",
-        "fotMobId": 574624
+        "fotMobId": 574624,
+        "starts": 1,
+        "subs": 18
       },
       {
         "appearances": 11,
@@ -183,7 +227,9 @@
         "number": 14,
         "name": "Rubén García",
         "position": "Forward",
-        "fotMobId": 384413
+        "fotMobId": 384413,
+        "starts": 11,
+        "subs": 6
       },
       {
         "appearances": 1,
@@ -191,7 +237,9 @@
         "number": 15,
         "name": "Raúl Moro",
         "position": "Forward",
-        "fotMobId": 1169596
+        "fotMobId": 1169596,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -199,7 +247,9 @@
         "number": 17,
         "name": "Ante Budimir",
         "position": "Forward",
-        "fotMobId": 251269
+        "fotMobId": 251269,
+        "starts": 16,
+        "subs": 2
       },
       {
         "appearances": 9,
@@ -207,7 +257,9 @@
         "number": 18,
         "name": "Sheraldo Becker",
         "position": "Forward",
-        "fotMobId": 495222
+        "fotMobId": 495222,
+        "starts": 0,
+        "subs": 15
       },
       {
         "appearances": 11,
@@ -215,7 +267,9 @@
         "number": 21,
         "name": "Victor Muñoz",
         "position": "Forward",
-        "fotMobId": 1323863
+        "fotMobId": 1323863,
+        "starts": 17,
+        "subs": 2
       }
     ],
     "name": "Osasuna",
@@ -229,7 +283,9 @@
         "number": 1,
         "name": "Juan Carlos",
         "position": "Goalkeeper",
-        "fotMobId": 246422
+        "fotMobId": 246422,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 7,
@@ -237,7 +293,9 @@
         "number": 1,
         "name": "Dominik Livaković",
         "position": "Goalkeeper",
-        "fotMobId": 383971
+        "fotMobId": 383971,
+        "starts": 0,
+        "subs": 13
       },
       {
         "appearances": 9,
@@ -245,7 +303,9 @@
         "number": 13,
         "name": "Paulo Gazzaniga",
         "position": "Goalkeeper",
-        "fotMobId": 278285
+        "fotMobId": 278285,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -253,7 +313,9 @@
         "number": 22,
         "name": "Marc-André Ter Stegen",
         "position": "Goalkeeper",
-        "fotMobId": 184554
+        "fotMobId": 184554,
+        "starts": 1,
+        "subs": 4
       },
       {
         "appearances": 4,
@@ -261,7 +323,9 @@
         "number": 25,
         "name": "Vladyslav Krapyvtsov",
         "position": "Goalkeeper",
-        "fotMobId": 1526728
+        "fotMobId": 1526728,
+        "starts": 1,
+        "subs": 8
       },
       {
         "appearances": 4,
@@ -269,7 +333,9 @@
         "number": 43,
         "name": "Aleksandar Andreev",
         "position": "Goalkeeper",
-        "fotMobId": 1692204
+        "fotMobId": 1692204,
+        "starts": 0,
+        "subs": 9
       },
       {
         "appearances": 9,
@@ -277,7 +343,9 @@
         "number": 2,
         "name": "Hugo Rincón",
         "position": "Defender",
-        "fotMobId": 1427819
+        "fotMobId": 1427819,
+        "starts": 7,
+        "subs": 11
       },
       {
         "appearances": 8,
@@ -285,7 +353,9 @@
         "number": 4,
         "name": "Arnau Martínez",
         "position": "Defender",
-        "fotMobId": 1194892
+        "fotMobId": 1194892,
+        "starts": 13,
+        "subs": 4
       },
       {
         "appearances": 3,
@@ -293,7 +363,9 @@
         "number": 5,
         "name": "David López",
         "position": "Defender",
-        "fotMobId": 215584
+        "fotMobId": 215584,
+        "starts": 2,
+        "subs": 4
       },
       {
         "appearances": 9,
@@ -301,7 +373,9 @@
         "number": 12,
         "name": "Vitor Reis",
         "position": "Defender",
-        "fotMobId": 1580952
+        "fotMobId": 1580952,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 6,
@@ -309,7 +383,9 @@
         "number": 16,
         "name": "Alejandro Francés",
         "position": "Defender",
-        "fotMobId": 1112511
+        "fotMobId": 1112511,
+        "starts": 5,
+        "subs": 10
       },
       {
         "appearances": 8,
@@ -317,7 +393,9 @@
         "number": 17,
         "name": "Daley Blind",
         "position": "Defender",
-        "fotMobId": 161012
+        "fotMobId": 161012,
+        "starts": 15,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -325,7 +403,9 @@
         "number": 18,
         "name": "Ladislav Krejčí",
         "position": "Defender",
-        "fotMobId": 798029
+        "fotMobId": 798029,
+        "starts": 2,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -333,7 +413,9 @@
         "number": 24,
         "name": "Álex Moreno",
         "position": "Defender",
-        "fotMobId": 477588
+        "fotMobId": 477588,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 2,
@@ -341,7 +423,9 @@
         "number": 27,
         "name": "Pol Arnau",
         "position": "Defender",
-        "fotMobId": 1691663
+        "fotMobId": 1691663,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 2,
@@ -357,7 +441,9 @@
         "number": 28,
         "name": "Gibert Jordana",
         "position": "Defender",
-        "fotMobId": 1794403
+        "fotMobId": 1794403,
+        "starts": 0,
+        "subs": 12
       },
       {
         "appearances": 1,
@@ -365,7 +451,9 @@
         "number": 31,
         "name": "Antonio Salguero",
         "position": "Defender",
-        "fotMobId": 1680383
+        "fotMobId": 1680383,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -373,7 +461,9 @@
         "number": 8,
         "name": "Fran Beltrán",
         "position": "Midfielder",
-        "fotMobId": 785511
+        "fotMobId": 785511,
+        "starts": 8,
+        "subs": 10
       },
       {
         "appearances": 8,
@@ -381,7 +471,9 @@
         "number": 11,
         "name": "Thomas Lemar",
         "position": "Midfielder",
-        "fotMobId": 468931
+        "fotMobId": 468931,
+        "starts": 4,
+        "subs": 7
       },
       {
         "appearances": 1,
@@ -389,7 +481,9 @@
         "number": 14,
         "name": "Claudio Echeverri",
         "position": "Midfielder",
-        "fotMobId": 1486264
+        "fotMobId": 1486264,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 4,
@@ -397,7 +491,9 @@
         "number": 18,
         "name": "Azzedine Ounahi",
         "position": "Midfielder",
-        "fotMobId": 1073143
+        "fotMobId": 1073143,
+        "starts": 8,
+        "subs": 1
       },
       {
         "appearances": 6,
@@ -405,7 +501,9 @@
         "number": 20,
         "name": "Axel Witsel",
         "position": "Midfielder",
-        "fotMobId": 39591
+        "fotMobId": 39591,
+        "starts": 13,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -413,7 +511,9 @@
         "number": 21,
         "name": "Yangel Herrera",
         "position": "Midfielder",
-        "fotMobId": 730901
+        "fotMobId": 730901,
+        "starts": 3,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -421,7 +521,9 @@
         "number": 21,
         "name": "Bryan Gil",
         "position": "Midfielder",
-        "fotMobId": 970692
+        "fotMobId": 970692,
+        "starts": 9,
+        "subs": 6
       },
       {
         "appearances": 7,
@@ -429,7 +531,9 @@
         "number": 22,
         "name": "Jhon Solís",
         "position": "Midfielder",
-        "fotMobId": 1433032
+        "fotMobId": 1433032,
+        "starts": 3,
+        "subs": 12
       },
       {
         "appearances": 9,
@@ -437,7 +541,9 @@
         "number": 23,
         "name": "Iván Martín",
         "position": "Midfielder",
-        "fotMobId": 967871
+        "fotMobId": 967871,
+        "starts": 16,
+        "subs": 2
       },
       {
         "appearances": 4,
@@ -445,7 +551,9 @@
         "number": 29,
         "name": "Lancinet Kourouma",
         "position": "Midfielder",
-        "fotMobId": 1643963
+        "fotMobId": 1643963,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 9,
@@ -453,7 +561,9 @@
         "number": 33,
         "name": "Joel Roca",
         "position": "Midfielder",
-        "fotMobId": 1326043
+        "fotMobId": 1326043,
+        "starts": 8,
+        "subs": 7
       },
       {
         "appearances": 3,
@@ -461,7 +571,9 @@
         "number": 7,
         "name": "Cristhian Stuani",
         "position": "Forward",
-        "fotMobId": 58294
+        "fotMobId": 58294,
+        "starts": 1,
+        "subs": 9
       },
       {
         "appearances": 3,
@@ -469,7 +581,9 @@
         "number": 8,
         "name": "Portu",
         "position": "Forward",
-        "fotMobId": 282692
+        "fotMobId": 282692,
+        "starts": 3,
+        "subs": 7
       },
       {
         "appearances": 3,
@@ -477,7 +591,9 @@
         "number": 9,
         "name": "Abel Ruíz",
         "position": "Forward",
-        "fotMobId": 748380
+        "fotMobId": 748380,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 8,
@@ -485,7 +601,9 @@
         "number": 10,
         "name": "Yáser Asprilla",
         "position": "Forward",
-        "fotMobId": 1277380
+        "fotMobId": 1277380,
+        "starts": 6,
+        "subs": 11
       },
       {
         "appearances": 9,
@@ -493,7 +611,9 @@
         "number": 15,
         "name": "Viktor Tsygankov",
         "position": "Forward",
-        "fotMobId": 564847
+        "fotMobId": 564847,
+        "starts": 12,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -501,7 +621,9 @@
         "number": 19,
         "name": "Vladyslav Vanat",
         "position": "Forward",
-        "fotMobId": 1231648
+        "fotMobId": 1231648,
+        "starts": 15,
+        "subs": 0
       },
       {
         "appearances": 1,
@@ -509,7 +631,9 @@
         "number": 19,
         "name": "Bojan Miovski",
         "position": "Forward",
-        "fotMobId": 846970
+        "fotMobId": 846970,
+        "starts": 1,
+        "subs": 0
       },
       {
         "appearances": 5,
@@ -517,7 +641,9 @@
         "number": 32,
         "name": "Juan Arango",
         "position": "Forward",
-        "fotMobId": 1682236
+        "fotMobId": 1682236,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 7,
@@ -525,7 +651,9 @@
         "number": 44,
         "name": "Papa Dame Ba",
         "position": "Forward",
-        "fotMobId": 1690793
+        "fotMobId": 1690793,
+        "starts": 0,
+        "subs": 13
       }
     ],
     "name": "Girona",
@@ -539,7 +667,9 @@
         "number": 1,
         "name": "Matías Dituro",
         "position": "Goalkeeper",
-        "fotMobId": 592412
+        "fotMobId": 592412,
+        "starts": 6,
+        "subs": 12
       },
       {
         "appearances": 8,
@@ -547,7 +677,9 @@
         "number": 13,
         "name": "Iñaki Peña",
         "position": "Goalkeeper",
-        "fotMobId": 990996
+        "fotMobId": 990996,
+        "starts": 12,
+        "subs": 6
       },
       {
         "appearances": 4,
@@ -555,7 +687,9 @@
         "number": 45,
         "name": "Alejandro Iturbe",
         "position": "Goalkeeper",
-        "fotMobId": 1311126
+        "fotMobId": 1311126,
+        "starts": 0,
+        "subs": 13
       },
       {
         "appearances": 8,
@@ -563,7 +697,9 @@
         "number": 3,
         "name": "Adrià Pedrosa",
         "position": "Defender",
-        "fotMobId": 927646
+        "fotMobId": 927646,
+        "starts": 4,
+        "subs": 11
       },
       {
         "appearances": 1,
@@ -571,7 +707,9 @@
         "number": 3,
         "name": "Jairo Izquierdo",
         "position": "Defender",
-        "fotMobId": 573782
+        "fotMobId": 573782,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 7,
@@ -579,7 +717,9 @@
         "number": 4,
         "name": "Bambo Diaby",
         "position": "Defender",
-        "fotMobId": 884383
+        "fotMobId": 884383,
+        "starts": 1,
+        "subs": 15
       },
       {
         "appearances": 7,
@@ -587,7 +727,9 @@
         "number": 6,
         "name": "Pedro Bigas",
         "position": "Defender",
-        "fotMobId": 291635
+        "fotMobId": 291635,
+        "starts": 13,
+        "subs": 3
       },
       {
         "appearances": 8,
@@ -595,7 +737,9 @@
         "number": 15,
         "name": "Alvaro Núñez",
         "position": "Defender",
-        "fotMobId": 1132355
+        "fotMobId": 1132355,
+        "starts": 17,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -603,7 +747,9 @@
         "number": 18,
         "name": "John Nwankwo",
         "position": "Defender",
-        "fotMobId": 1217644
+        "fotMobId": 1217644,
+        "starts": 3,
+        "subs": 14
       },
       {
         "appearances": 9,
@@ -611,7 +757,9 @@
         "number": 21,
         "name": "Léo Pétrot",
         "position": "Defender",
-        "fotMobId": 708457
+        "fotMobId": 708457,
+        "starts": 5,
+        "subs": 13
       },
       {
         "appearances": 9,
@@ -619,7 +767,9 @@
         "number": 22,
         "name": "David Affengruber",
         "position": "Defender",
-        "fotMobId": 1073980
+        "fotMobId": 1073980,
+        "starts": 17,
+        "subs": 1
       },
       {
         "appearances": 8,
@@ -627,7 +777,9 @@
         "number": 23,
         "name": "Víctor Chust",
         "position": "Defender",
-        "fotMobId": 1192393
+        "fotMobId": 1192393,
+        "starts": 10,
+        "subs": 6
       },
       {
         "appearances": 1,
@@ -635,7 +787,9 @@
         "number": 26,
         "name": "Bema Sina",
         "position": "Defender",
-        "fotMobId": 1748407
+        "fotMobId": 1748407,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -643,7 +797,9 @@
         "number": 31,
         "name": "David Delgado",
         "position": "Defender",
-        "fotMobId": 1833129
+        "fotMobId": 1833129,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 6,
@@ -651,7 +807,9 @@
         "number": 39,
         "name": "Hector Fort",
         "position": "Defender",
-        "fotMobId": 1490110
+        "fotMobId": 1490110,
+        "starts": 5,
+        "subs": 5
       },
       {
         "appearances": 9,
@@ -659,7 +817,9 @@
         "number": 5,
         "name": "Federico Redondo",
         "position": "Midfielder",
-        "fotMobId": 1277343
+        "fotMobId": 1277343,
+        "starts": 0,
+        "subs": 16
       },
       {
         "appearances": 9,
@@ -667,7 +827,9 @@
         "number": 8,
         "name": "Marc Aguado",
         "position": "Midfielder",
-        "fotMobId": 1392232
+        "fotMobId": 1392232,
+        "starts": 14,
+        "subs": 3
       },
       {
         "appearances": 9,
@@ -675,7 +837,9 @@
         "number": 11,
         "name": "Germán Valera",
         "position": "Midfielder",
-        "fotMobId": 1102708
+        "fotMobId": 1102708,
+        "starts": 15,
+        "subs": 2
       },
       {
         "appearances": 9,
@@ -683,7 +847,9 @@
         "number": 14,
         "name": "Aleix Febas",
         "position": "Midfielder",
-        "fotMobId": 671686
+        "fotMobId": 671686,
+        "starts": 18,
+        "subs": 0
       },
       {
         "appearances": 9,
@@ -691,7 +857,9 @@
         "number": 16,
         "name": "Martim Neto",
         "position": "Midfielder",
-        "fotMobId": 1226189
+        "fotMobId": 1226189,
+        "starts": 8,
+        "subs": 8
       },
       {
         "appearances": 7,
@@ -699,7 +867,9 @@
         "number": 17,
         "name": "Josan",
         "position": "Midfielder",
-        "fotMobId": 623982
+        "fotMobId": 623982,
+        "starts": 4,
+        "subs": 11
       },
       {
         "appearances": 9,
@@ -707,7 +877,9 @@
         "number": 30,
         "name": "Rodrigo Mendoza",
         "position": "Midfielder",
-        "fotMobId": 1419969
+        "fotMobId": 1419969,
+        "starts": 5,
+        "subs": 10
       },
       {
         "appearances": 7,
@@ -715,7 +887,9 @@
         "number": 7,
         "name": "Yago Santiago",
         "position": "Forward",
-        "fotMobId": 1137497
+        "fotMobId": 1137497,
+        "starts": 1,
+        "subs": 9
       },
       {
         "appearances": 6,
@@ -723,7 +897,9 @@
         "number": 9,
         "name": "André Silva",
         "position": "Forward",
-        "fotMobId": 388523
+        "fotMobId": 388523,
+        "starts": 8,
+        "subs": 6
       },
       {
         "appearances": 8,
@@ -731,7 +907,9 @@
         "number": 10,
         "name": "Rafa Mir",
         "position": "Forward",
-        "fotMobId": 640492
+        "fotMobId": 640492,
+        "starts": 14,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -739,7 +917,9 @@
         "number": 19,
         "name": "Mourad El Ghezouani",
         "position": "Forward",
-        "fotMobId": 1119943
+        "fotMobId": 1119943,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 5,
@@ -747,7 +927,9 @@
         "number": 19,
         "name": "Grady Diangana",
         "position": "Forward",
-        "fotMobId": 654091
+        "fotMobId": 654091,
+        "starts": 6,
+        "subs": 6
       },
       {
         "appearances": 9,
@@ -755,7 +937,9 @@
         "number": 20,
         "name": "Álvaro Rodriguez",
         "position": "Forward",
-        "fotMobId": 1327406
+        "fotMobId": 1327406,
+        "starts": 10,
+        "subs": 7
       },
       {
         "appearances": 8,
@@ -763,7 +947,9 @@
         "number": 32,
         "name": "Adam Boayar",
         "position": "Forward",
-        "fotMobId": 1577912
+        "fotMobId": 1577912,
+        "starts": 0,
+        "subs": 15
       },
       {
         "appearances": 3,
@@ -771,7 +957,9 @@
         "number": 35,
         "name": "Ali Houary",
         "position": "Forward",
-        "fotMobId": 1670281
+        "fotMobId": 1670281,
+        "starts": 2,
+        "subs": 7
       }
     ],
     "name": "Elche",
@@ -785,7 +973,9 @@
         "number": 1,
         "name": "Stole Dimitrievski",
         "position": "Goalkeeper",
-        "fotMobId": 254241
+        "fotMobId": 254241,
+        "starts": 2,
+        "subs": 14
       },
       {
         "appearances": 8,
@@ -793,7 +983,9 @@
         "number": 13,
         "name": "Cristian Rivero",
         "position": "Goalkeeper",
-        "fotMobId": 913464
+        "fotMobId": 913464,
+        "starts": 0,
+        "subs": 11
       },
       {
         "appearances": 9,
@@ -801,7 +993,9 @@
         "number": 25,
         "name": "Julen Agirrezabala",
         "position": "Goalkeeper",
-        "fotMobId": 1280020
+        "fotMobId": 1280020,
+        "starts": 17,
+        "subs": 0
       },
       {
         "appearances": 4,
@@ -809,7 +1003,9 @@
         "number": 28,
         "name": "Vicent Abril",
         "position": "Goalkeeper",
-        "fotMobId": 1642398
+        "fotMobId": 1642398,
+        "starts": 0,
+        "subs": 4
       },
       {
         "appearances": 11,
@@ -817,7 +1013,9 @@
         "number": 3,
         "name": "José Copete",
         "position": "Defender",
-        "fotMobId": 896402
+        "fotMobId": 896402,
+        "starts": 14,
+        "subs": 5
       },
       {
         "appearances": 3,
@@ -825,7 +1023,9 @@
         "number": 4,
         "name": "Mouctar Diakhaby",
         "position": "Defender",
-        "fotMobId": 561198
+        "fotMobId": 561198,
+        "starts": 7,
+        "subs": 3
       },
       {
         "appearances": 9,
@@ -833,7 +1033,9 @@
         "number": 5,
         "name": "César Tárrega",
         "position": "Defender",
-        "fotMobId": 1311985
+        "fotMobId": 1311985,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 8,
@@ -841,7 +1043,9 @@
         "number": 12,
         "name": "Thierry Correia",
         "position": "Defender",
-        "fotMobId": 992052
+        "fotMobId": 992052,
+        "starts": 10,
+        "subs": 4
       },
       {
         "appearances": 10,
@@ -849,7 +1053,9 @@
         "number": 14,
         "name": "José Luis Gayà",
         "position": "Defender",
-        "fotMobId": 391058
+        "fotMobId": 391058,
+        "starts": 14,
+        "subs": 3
       },
       {
         "appearances": 8,
@@ -857,7 +1063,9 @@
         "number": 20,
         "name": "Dimitri Foulquier",
         "position": "Defender",
-        "fotMobId": 261609
+        "fotMobId": 261609,
+        "starts": 11,
+        "subs": 5
       },
       {
         "appearances": 11,
@@ -865,7 +1073,9 @@
         "number": 21,
         "name": "Jesús Vázquez",
         "position": "Defender",
-        "fotMobId": 1220187
+        "fotMobId": 1220187,
+        "starts": 5,
+        "subs": 14
       },
       {
         "appearances": 8,
@@ -873,7 +1083,9 @@
         "number": 24,
         "name": "Eray Cömert",
         "position": "Defender",
-        "fotMobId": 705484
+        "fotMobId": 705484,
+        "starts": 2,
+        "subs": 14
       },
       {
         "appearances": 11,
@@ -881,7 +1093,9 @@
         "number": 26,
         "name": "Rubén Iranzo",
         "position": "Defender",
-        "fotMobId": 1319968
+        "fotMobId": 1319968,
+        "starts": 0,
+        "subs": 15
       },
       {
         "appearances": 5,
@@ -889,7 +1103,9 @@
         "number": 32,
         "name": "Alejandro Panach Olmo",
         "position": "Defender",
-        "fotMobId": 1793870
+        "fotMobId": 1793870,
+        "starts": 0,
+        "subs": 5
       },
       {
         "appearances": 1,
@@ -897,7 +1113,9 @@
         "number": 36,
         "name": "Marcos Navarro",
         "position": "Defender",
-        "fotMobId": 1469787
+        "fotMobId": 1469787,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -905,7 +1123,9 @@
         "number": 40,
         "name": "Joel Fontanet Paredes",
         "position": "Defender",
-        "fotMobId": 1852169
+        "fotMobId": 1852169,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 11,
@@ -913,7 +1133,9 @@
         "number": 8,
         "name": "Javier Guerra",
         "position": "Midfielder",
-        "fotMobId": 1284429
+        "fotMobId": 1284429,
+        "starts": 12,
+        "subs": 7
       },
       {
         "appearances": 11,
@@ -921,7 +1143,9 @@
         "number": 10,
         "name": "André Almeida",
         "position": "Midfielder",
-        "fotMobId": 777028
+        "fotMobId": 777028,
+        "starts": 8,
+        "subs": 10
       },
       {
         "appearances": 10,
@@ -929,7 +1153,9 @@
         "number": 11,
         "name": "Luis Rioja",
         "position": "Midfielder",
-        "fotMobId": 638070
+        "fotMobId": 638070,
+        "starts": 14,
+        "subs": 4
       },
       {
         "appearances": 11,
@@ -937,7 +1163,9 @@
         "number": 16,
         "name": "Diego López",
         "position": "Midfielder",
-        "fotMobId": 1284434
+        "fotMobId": 1284434,
+        "starts": 13,
+        "subs": 6
       },
       {
         "appearances": 11,
@@ -945,7 +1173,9 @@
         "number": 18,
         "name": "Pepelu",
         "position": "Midfielder",
-        "fotMobId": 673689
+        "fotMobId": 673689,
+        "starts": 15,
+        "subs": 4
       },
       {
         "appearances": 11,
@@ -953,7 +1183,9 @@
         "number": 22,
         "name": "Baptiste Santamaria",
         "position": "Midfielder",
-        "fotMobId": 478105
+        "fotMobId": 478105,
+        "starts": 7,
+        "subs": 12
       },
       {
         "appearances": 7,
@@ -961,7 +1193,9 @@
         "number": 23,
         "name": "Filip Ugrinić",
         "position": "Midfielder",
-        "fotMobId": 800615
+        "fotMobId": 800615,
+        "starts": 4,
+        "subs": 10
       },
       {
         "appearances": 5,
@@ -969,7 +1203,9 @@
         "number": 29,
         "name": "Lucas Núñez",
         "position": "Midfielder",
-        "fotMobId": 1757894
+        "fotMobId": 1757894,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 2,
@@ -977,7 +1213,9 @@
         "number": 6,
         "name": "Umar Sadiq",
         "position": "Forward",
-        "fotMobId": 590494
+        "fotMobId": 590494,
+        "starts": 2,
+        "subs": 11
       },
       {
         "appearances": 11,
@@ -985,7 +1223,9 @@
         "number": 7,
         "name": "Arnaut Danjuma",
         "position": "Forward",
-        "fotMobId": 704151
+        "fotMobId": 704151,
+        "starts": 14,
+        "subs": 5
       },
       {
         "appearances": 11,
@@ -993,7 +1233,9 @@
         "number": 9,
         "name": "Hugo Duro",
         "position": "Forward",
-        "fotMobId": 929838
+        "fotMobId": 929838,
+        "starts": 12,
+        "subs": 7
       },
       {
         "appearances": 10,
@@ -1001,7 +1243,9 @@
         "number": 15,
         "name": "Lucas Beltrán",
         "position": "Forward",
-        "fotMobId": 974755
+        "fotMobId": 974755,
+        "starts": 9,
+        "subs": 7
       },
       {
         "appearances": 6,
@@ -1009,7 +1253,9 @@
         "number": 17,
         "name": "Largie Ramazani",
         "position": "Forward",
-        "fotMobId": 1077915
+        "fotMobId": 1077915,
+        "starts": 0,
+        "subs": 12
       },
       {
         "appearances": 10,
@@ -1017,7 +1263,9 @@
         "number": 19,
         "name": "Dani Raba",
         "position": "Forward",
-        "fotMobId": 784246
+        "fotMobId": 784246,
+        "starts": 3,
+        "subs": 15
       },
       {
         "appearances": 6,
@@ -1025,7 +1273,9 @@
         "number": 27,
         "name": "David Otorbi",
         "position": "Forward",
-        "fotMobId": 1600732
+        "fotMobId": 1600732,
+        "starts": 0,
+        "subs": 11
       },
       {
         "appearances": 1,
@@ -1033,7 +1283,9 @@
         "number": 33,
         "name": "Pablo López Gómez",
         "position": "Forward",
-        "fotMobId": 1700529
+        "fotMobId": 1700529,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 3,
@@ -1055,7 +1307,9 @@
         "number": 1,
         "name": "Iván Villar",
         "position": "Goalkeeper",
-        "fotMobId": 786630
+        "fotMobId": 786630,
+        "starts": 0,
+        "subs": 19
       },
       {
         "appearances": 9,
@@ -1063,7 +1317,9 @@
         "number": 13,
         "name": "Ionuț Radu",
         "position": "Goalkeeper",
-        "fotMobId": 681213
+        "fotMobId": 681213,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -1071,7 +1327,9 @@
         "number": 2,
         "name": "Carl Starfelt",
         "position": "Defender",
-        "fotMobId": 497662
+        "fotMobId": 497662,
+        "starts": 10,
+        "subs": 2
       },
       {
         "appearances": 7,
@@ -1079,7 +1337,9 @@
         "number": 4,
         "name": "Joseph Aidoo",
         "position": "Defender",
-        "fotMobId": 643998
+        "fotMobId": 643998,
+        "starts": 2,
+        "subs": 7
       },
       {
         "appearances": 8,
@@ -1087,7 +1347,9 @@
         "number": 12,
         "name": "Manu Fernández",
         "position": "Defender",
-        "fotMobId": 1675505
+        "fotMobId": 1675505,
+        "starts": 9,
+        "subs": 7
       },
       {
         "appearances": 9,
@@ -1095,7 +1357,9 @@
         "number": 20,
         "name": "Marcos Alonso",
         "position": "Defender",
-        "fotMobId": 196169
+        "fotMobId": 196169,
+        "starts": 15,
+        "subs": 2
       },
       {
         "appearances": 5,
@@ -1103,7 +1367,9 @@
         "number": 21,
         "name": "Mihailo Ristić",
         "position": "Defender",
-        "fotMobId": 588562
+        "fotMobId": 588562,
+        "starts": 4,
+        "subs": 9
       },
       {
         "appearances": 4,
@@ -1111,7 +1377,9 @@
         "number": 24,
         "name": "Carlos Domínguez",
         "position": "Defender",
-        "fotMobId": 1254217
+        "fotMobId": 1254217,
+        "starts": 4,
+        "subs": 10
       },
       {
         "appearances": 7,
@@ -1119,7 +1387,9 @@
         "number": 29,
         "name": "Yoel Lago",
         "position": "Defender",
-        "fotMobId": 1578176
+        "fotMobId": 1578176,
+        "starts": 4,
+        "subs": 10
       },
       {
         "appearances": 9,
@@ -1127,7 +1397,9 @@
         "number": 32,
         "name": "Javi Rodríguez",
         "position": "Defender",
-        "fotMobId": 1435439
+        "fotMobId": 1435439,
+        "starts": 11,
+        "subs": 7
       },
       {
         "appearances": 9,
@@ -1135,7 +1407,9 @@
         "number": 3,
         "name": "Óscar Mingueza",
         "position": "Midfielder",
-        "fotMobId": 952095
+        "fotMobId": 952095,
+        "starts": 11,
+        "subs": 8
       },
       {
         "appearances": 9,
@@ -1143,7 +1417,9 @@
         "number": 5,
         "name": "Sergio Carreira",
         "position": "Midfielder",
-        "fotMobId": 1106742
+        "fotMobId": 1106742,
+        "starts": 15,
+        "subs": 3
       },
       {
         "appearances": 9,
@@ -1151,7 +1427,9 @@
         "number": 6,
         "name": "Ilaix Moriba",
         "position": "Midfielder",
-        "fotMobId": 1109046
+        "fotMobId": 1109046,
+        "starts": 13,
+        "subs": 6
       },
       {
         "appearances": 7,
@@ -1159,7 +1437,9 @@
         "number": 8,
         "name": "Fran Beltrán",
         "position": "Midfielder",
-        "fotMobId": 785511
+        "fotMobId": 785511,
+        "starts": 8,
+        "subs": 10
       },
       {
         "appearances": 3,
@@ -1167,7 +1447,9 @@
         "number": 11,
         "name": "Franco Cervi",
         "position": "Midfielder",
-        "fotMobId": 541588
+        "fotMobId": 541588,
+        "starts": 0,
+        "subs": 5
       },
       {
         "appearances": 6,
@@ -1175,7 +1457,9 @@
         "number": 14,
         "name": "Damián Rodríguez",
         "position": "Midfielder",
-        "fotMobId": 1435439
+        "fotMobId": 1435439,
+        "starts": 2,
+        "subs": 11
       },
       {
         "appearances": 9,
@@ -1183,7 +1467,9 @@
         "number": 16,
         "name": "Miguel Román",
         "position": "Midfielder",
-        "fotMobId": 1359911
+        "fotMobId": 1359911,
+        "starts": 7,
+        "subs": 11
       },
       {
         "appearances": 7,
@@ -1191,7 +1477,9 @@
         "number": 17,
         "name": "Javier Rueda",
         "position": "Midfielder",
-        "fotMobId": 1310440
+        "fotMobId": 1310440,
+        "starts": 7,
+        "subs": 9
       },
       {
         "appearances": 6,
@@ -1199,7 +1487,9 @@
         "number": 19,
         "name": "Williot Swedberg",
         "position": "Midfielder",
-        "fotMobId": 1272740
+        "fotMobId": 1272740,
+        "starts": 6,
+        "subs": 8
       },
       {
         "appearances": 7,
@@ -1207,7 +1497,9 @@
         "number": 22,
         "name": "Hugo Sotelo",
         "position": "Midfielder",
-        "fotMobId": 1254218
+        "fotMobId": 1254218,
+        "starts": 10,
+        "subs": 7
       },
       {
         "appearances": 7,
@@ -1215,7 +1507,9 @@
         "number": 23,
         "name": "Hugo Álvarez",
         "position": "Midfielder",
-        "fotMobId": 1308414
+        "fotMobId": 1308414,
+        "starts": 5,
+        "subs": 11
       },
       {
         "appearances": 1,
@@ -1223,7 +1517,9 @@
         "number": 38,
         "name": "Hugo Burcio",
         "position": "Midfielder",
-        "fotMobId": 1825995
+        "fotMobId": 1825995,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 8,
@@ -1231,7 +1527,9 @@
         "number": 7,
         "name": "Borja Iglesias",
         "position": "Forward",
-        "fotMobId": 609505
+        "fotMobId": 609505,
+        "starts": 10,
+        "subs": 8
       },
       {
         "appearances": 7,
@@ -1239,7 +1537,9 @@
         "number": 9,
         "name": "Ferran Jutglà",
         "position": "Forward",
-        "fotMobId": 1102732
+        "fotMobId": 1102732,
+        "starts": 9,
+        "subs": 8
       },
       {
         "appearances": 9,
@@ -1247,7 +1547,9 @@
         "number": 10,
         "name": "Iago Aspas",
         "position": "Forward",
-        "fotMobId": 174472
+        "fotMobId": 174472,
+        "starts": 7,
+        "subs": 12
       },
       {
         "appearances": 9,
@@ -1255,7 +1557,9 @@
         "number": 15,
         "name": "Bryan Zaragoza",
         "position": "Forward",
-        "fotMobId": 1202525
+        "fotMobId": 1202525,
+        "starts": 12,
+        "subs": 7
       },
       {
         "appearances": 7,
@@ -1263,7 +1567,9 @@
         "number": 18,
         "name": "Pablo Durán",
         "position": "Forward",
-        "fotMobId": 1322858
+        "fotMobId": 1322858,
+        "starts": 9,
+        "subs": 8
       },
       {
         "appearances": 2,
@@ -1279,7 +1585,9 @@
         "number": 30,
         "name": "Hugo González",
         "position": "Forward",
-        "fotMobId": 1226783
+        "fotMobId": 1226783,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 9,
@@ -1287,7 +1595,9 @@
         "number": 39,
         "name": "Jones El-Abdellaoui",
         "position": "Forward",
-        "fotMobId": 1379196
+        "fotMobId": 1379196,
+        "starts": 1,
+        "subs": 17
       }
     ],
     "name": "Celta de Vigo",
@@ -1301,7 +1611,9 @@
         "number": 1,
         "name": "Luiz Júnior",
         "position": "Goalkeeper",
-        "fotMobId": 1187044
+        "fotMobId": 1187044,
+        "starts": 17,
+        "subs": 3
       },
       {
         "appearances": 3,
@@ -1309,7 +1621,9 @@
         "number": 13,
         "name": "Diego Conde",
         "position": "Goalkeeper",
-        "fotMobId": 1022354
+        "fotMobId": 1022354,
+        "starts": 0,
+        "subs": 9
       },
       {
         "appearances": 10,
@@ -1317,7 +1631,9 @@
         "number": 25,
         "name": "Arnau Tenas",
         "position": "Goalkeeper",
-        "fotMobId": 942375
+        "fotMobId": 942375,
+        "starts": 3,
+        "subs": 15
       },
       {
         "appearances": 1,
@@ -1325,7 +1641,9 @@
         "number": 31,
         "name": "Rubén Gómez",
         "position": "Goalkeeper",
-        "fotMobId": 1408547
+        "fotMobId": 1408547,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -1333,7 +1651,9 @@
         "number": 2,
         "name": "Logan Costa",
         "position": "Defender",
-        "fotMobId": 922877
+        "fotMobId": 922877,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 2,
@@ -1341,7 +1661,9 @@
         "number": 3,
         "name": "Alexander Freeman",
         "position": "Defender",
-        "fotMobId": 1338696
+        "fotMobId": 1338696,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 11,
@@ -1349,7 +1671,9 @@
         "number": 4,
         "name": "Rafa Marín",
         "position": "Defender",
-        "fotMobId": 1313884
+        "fotMobId": 1313884,
+        "starts": 14,
+        "subs": 6
       },
       {
         "appearances": 1,
@@ -1357,7 +1681,9 @@
         "number": 5,
         "name": "Willy Kambwala",
         "position": "Defender",
-        "fotMobId": 1344550
+        "fotMobId": 1344550,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 8,
@@ -1365,7 +1691,9 @@
         "number": 8,
         "name": "Juan Foyth",
         "position": "Defender",
-        "fotMobId": 833219
+        "fotMobId": 833219,
+        "starts": 11,
+        "subs": 3
       },
       {
         "appearances": 7,
@@ -1373,7 +1701,9 @@
         "number": 12,
         "name": "Adrià Altimira",
         "position": "Defender",
-        "fotMobId": 1256478
+        "fotMobId": 1256478,
+        "starts": 0,
+        "subs": 15
       },
       {
         "appearances": 10,
@@ -1381,7 +1711,9 @@
         "number": 12,
         "name": "Renato Veiga",
         "position": "Defender",
-        "fotMobId": 1343750
+        "fotMobId": 1343750,
+        "starts": 12,
+        "subs": 6
       },
       {
         "appearances": 7,
@@ -1389,7 +1721,9 @@
         "number": 15,
         "name": "Santiago Mouriño",
         "position": "Defender",
-        "fotMobId": 1407468
+        "fotMobId": 1407468,
+        "starts": 13,
+        "subs": 3
       },
       {
         "appearances": 11,
@@ -1397,7 +1731,9 @@
         "number": 23,
         "name": "Sergi Cardona",
         "position": "Defender",
-        "fotMobId": 1059657
+        "fotMobId": 1059657,
+        "starts": 11,
+        "subs": 9
       },
       {
         "appearances": 10,
@@ -1405,7 +1741,9 @@
         "number": 24,
         "name": "Alfonso Pedraza",
         "position": "Defender",
-        "fotMobId": 629594
+        "fotMobId": 629594,
+        "starts": 9,
+        "subs": 10
       },
       {
         "appearances": 11,
@@ -1413,7 +1751,9 @@
         "number": 26,
         "name": "Pau Navarro",
         "position": "Defender",
-        "fotMobId": 1531887
+        "fotMobId": 1531887,
+        "starts": 10,
+        "subs": 7
       },
       {
         "appearances": 1,
@@ -1429,7 +1769,9 @@
         "number": 27,
         "name": "Jean Ives Valou",
         "position": "Defender",
-        "fotMobId": 1667056
+        "fotMobId": 1667056,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -1437,7 +1779,9 @@
         "number": 6,
         "name": "Denis Suárez",
         "position": "Midfielder",
-        "fotMobId": 282281
+        "fotMobId": 282281,
+        "starts": 9,
+        "subs": 8
       },
       {
         "appearances": 10,
@@ -1445,7 +1789,9 @@
         "number": 10,
         "name": "Dani Parejo",
         "position": "Midfielder",
-        "fotMobId": 75307
+        "fotMobId": 75307,
+        "starts": 8,
+        "subs": 11
       },
       {
         "appearances": 9,
@@ -1453,7 +1799,9 @@
         "number": 14,
         "name": "Santi Comesaña",
         "position": "Midfielder",
-        "fotMobId": 671865
+        "fotMobId": 671865,
+        "starts": 15,
+        "subs": 3
       },
       {
         "appearances": 8,
@@ -1461,7 +1809,9 @@
         "number": 16,
         "name": "Thomas Partey",
         "position": "Midfielder",
-        "fotMobId": 434325
+        "fotMobId": 434325,
+        "starts": 7,
+        "subs": 9
       },
       {
         "appearances": 8,
@@ -1469,7 +1819,9 @@
         "number": 18,
         "name": "Pape Gueye",
         "position": "Midfielder",
-        "fotMobId": 844544
+        "fotMobId": 844544,
+        "starts": 12,
+        "subs": 4
       },
       {
         "appearances": 11,
@@ -1477,7 +1829,9 @@
         "number": 19,
         "name": "Nicolas Pépé",
         "position": "Midfielder",
-        "fotMobId": 575735
+        "fotMobId": 575735,
+        "starts": 13,
+        "subs": 7
       },
       {
         "appearances": 11,
@@ -1485,7 +1839,9 @@
         "number": 20,
         "name": "Alberto Moleiro",
         "position": "Midfielder",
-        "fotMobId": 1184694
+        "fotMobId": 1184694,
+        "starts": 17,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -1493,7 +1849,9 @@
         "number": 21,
         "name": "Yéremy Pino",
         "position": "Midfielder",
-        "fotMobId": 1047676
+        "fotMobId": 1047676,
+        "starts": 2,
+        "subs": 0
       },
       {
         "appearances": 5,
@@ -1501,7 +1859,9 @@
         "number": 37,
         "name": "Carlos Macia",
         "position": "Midfielder",
-        "fotMobId": 1841906
+        "fotMobId": 1841906,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 4,
@@ -1509,7 +1869,9 @@
         "number": 38,
         "name": "Alassane Diatta",
         "position": "Midfielder",
-        "fotMobId": 1695966
+        "fotMobId": 1695966,
+        "starts": 0,
+        "subs": 5
       },
       {
         "appearances": 5,
@@ -1517,7 +1879,9 @@
         "number": 6,
         "name": "Manor Solomon",
         "position": "Forward",
-        "fotMobId": 822237
+        "fotMobId": 822237,
+        "starts": 1,
+        "subs": 10
       },
       {
         "appearances": 8,
@@ -1525,7 +1889,9 @@
         "number": 7,
         "name": "Gerard Moreno",
         "position": "Forward",
-        "fotMobId": 246438
+        "fotMobId": 246438,
+        "starts": 8,
+        "subs": 2
       },
       {
         "appearances": 9,
@@ -1533,7 +1899,9 @@
         "number": 9,
         "name": "Georges Mikautadze",
         "position": "Forward",
-        "fotMobId": 1117069
+        "fotMobId": 1117069,
+        "starts": 11,
+        "subs": 5
       },
       {
         "appearances": 6,
@@ -1541,7 +1909,9 @@
         "number": 11,
         "name": "Ilias Akhomach",
         "position": "Forward",
-        "fotMobId": 1311915
+        "fotMobId": 1311915,
+        "starts": 2,
+        "subs": 12
       },
       {
         "appearances": 1,
@@ -1549,7 +1919,9 @@
         "number": 11,
         "name": "Alfon González",
         "position": "Forward",
-        "fotMobId": 926643
+        "fotMobId": 926643,
+        "starts": 4,
+        "subs": 8
       },
       {
         "appearances": 11,
@@ -1557,7 +1929,9 @@
         "number": 17,
         "name": "Tajon Buchanan",
         "position": "Forward",
-        "fotMobId": 1026135
+        "fotMobId": 1026135,
+        "starts": 11,
+        "subs": 8
       },
       {
         "appearances": 10,
@@ -1565,7 +1939,9 @@
         "number": 21,
         "name": "Tani Oluwaseyi",
         "position": "Forward",
-        "fotMobId": 1338740
+        "fotMobId": 1338740,
+        "starts": 3,
+        "subs": 15
       },
       {
         "appearances": 10,
@@ -1573,7 +1949,9 @@
         "number": 22,
         "name": "Ayoze Pérez",
         "position": "Forward",
-        "fotMobId": 479020
+        "fotMobId": 479020,
+        "starts": 7,
+        "subs": 6
       },
       {
         "appearances": 1,
@@ -1581,7 +1959,9 @@
         "number": 29,
         "name": "Etta Eyong",
         "position": "Forward",
-        "fotMobId": 1392779
+        "fotMobId": 1392779,
+        "starts": 15,
+        "subs": 1
       },
       {
         "appearances": 2,
@@ -1589,7 +1969,9 @@
         "number": 32,
         "name": "Hugo Lopez",
         "position": "Forward",
-        "fotMobId": 1807857
+        "fotMobId": 1807857,
+        "starts": 0,
+        "subs": 4
       },
       {
         "appearances": 2,
@@ -1597,7 +1979,9 @@
         "number": 33,
         "name": "Pau Cabanes De La Torre",
         "position": "Forward",
-        "fotMobId": 1646375
+        "fotMobId": 1646375,
+        "starts": 0,
+        "subs": 3
       }
     ],
     "name": "Villarreal",
@@ -1611,7 +1995,9 @@
         "number": 1,
         "name": "Horațiu Moldovan",
         "position": "Goalkeeper",
-        "fotMobId": 1017745
+        "fotMobId": 1017745,
+        "starts": 0,
+        "subs": 19
       },
       {
         "appearances": 10,
@@ -1619,7 +2005,9 @@
         "number": 13,
         "name": "Aarón Escandell",
         "position": "Goalkeeper",
-        "fotMobId": 534955
+        "fotMobId": 534955,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 3,
@@ -1627,7 +2015,9 @@
         "number": 26,
         "name": "Miguel Narvaez",
         "position": "Goalkeeper",
-        "fotMobId": 1688651
+        "fotMobId": 1688651,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 7,
@@ -1635,7 +2025,9 @@
         "number": 2,
         "name": "Eric Bailly",
         "position": "Defender",
-        "fotMobId": 574200
+        "fotMobId": 574200,
+        "starts": 4,
+        "subs": 12
       },
       {
         "appearances": 9,
@@ -1643,7 +2035,9 @@
         "number": 3,
         "name": "Abdel Rahim",
         "position": "Defender",
-        "fotMobId": 1333066
+        "fotMobId": 1333066,
+        "starts": 13,
+        "subs": 5
       },
       {
         "appearances": 9,
@@ -1651,7 +2045,9 @@
         "number": 4,
         "name": "David Costas",
         "position": "Defender",
-        "fotMobId": 479217
+        "fotMobId": 479217,
+        "starts": 14,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -1659,7 +2055,9 @@
         "number": 12,
         "name": "Dani Calvo",
         "position": "Defender",
-        "fotMobId": 545905
+        "fotMobId": 545905,
+        "starts": 6,
+        "subs": 13
       },
       {
         "appearances": 7,
@@ -1667,7 +2065,9 @@
         "number": 15,
         "name": "Oier Luengo",
         "position": "Defender",
-        "fotMobId": 884262
+        "fotMobId": 884262,
+        "starts": 3,
+        "subs": 11
       },
       {
         "appearances": 7,
@@ -1675,7 +2075,9 @@
         "number": 16,
         "name": "David Carmo",
         "position": "Defender",
-        "fotMobId": 954962
+        "fotMobId": 954962,
+        "starts": 12,
+        "subs": 3
       },
       {
         "appearances": 8,
@@ -1683,7 +2085,9 @@
         "number": 22,
         "name": "Nacho Vidal",
         "position": "Defender",
-        "fotMobId": 640238
+        "fotMobId": 640238,
+        "starts": 11,
+        "subs": 2
       },
       {
         "appearances": 9,
@@ -1691,7 +2095,9 @@
         "number": 24,
         "name": "Lucas Ahijado",
         "position": "Defender",
-        "fotMobId": 687568
+        "fotMobId": 687568,
+        "starts": 8,
+        "subs": 8
       },
       {
         "appearances": 8,
@@ -1699,7 +2105,9 @@
         "number": 25,
         "name": "Javi López",
         "position": "Defender",
-        "fotMobId": 1159181
+        "fotMobId": 1159181,
+        "starts": 6,
+        "subs": 8
       },
       {
         "appearances": 1,
@@ -1707,7 +2115,9 @@
         "number": 29,
         "name": "Omar Falah",
         "position": "Defender",
-        "fotMobId": 1427152
+        "fotMobId": 1427152,
+        "starts": 0,
+        "subs": 4
       },
       {
         "appearances": 1,
@@ -1715,7 +2125,9 @@
         "number": 30,
         "name": "Marco Esteban",
         "position": "Defender",
-        "fotMobId": 1557032
+        "fotMobId": 1557032,
+        "starts": 0,
+        "subs": 4
       },
       {
         "appearances": 10,
@@ -1723,7 +2135,9 @@
         "number": 5,
         "name": "Alberto Reina",
         "position": "Midfielder",
-        "fotMobId": 1323510
+        "fotMobId": 1323510,
+        "starts": 13,
+        "subs": 5
       },
       {
         "appearances": 9,
@@ -1731,7 +2145,9 @@
         "number": 6,
         "name": "Kwasi Sibo",
         "position": "Midfielder",
-        "fotMobId": 948745
+        "fotMobId": 948745,
+        "starts": 7,
+        "subs": 11
       },
       {
         "appearances": 10,
@@ -1739,7 +2155,9 @@
         "number": 7,
         "name": "Ilyas Chaira",
         "position": "Midfielder",
-        "fotMobId": 1169595
+        "fotMobId": 1169595,
+        "starts": 14,
+        "subs": 3
       },
       {
         "appearances": 6,
@@ -1747,7 +2165,9 @@
         "number": 8,
         "name": "Santi Cazorla",
         "position": "Midfielder",
-        "fotMobId": 37436
+        "fotMobId": 37436,
+        "starts": 4,
+        "subs": 10
       },
       {
         "appearances": 10,
@@ -1755,7 +2175,9 @@
         "number": 10,
         "name": "Haissem Hassan",
         "position": "Midfielder",
-        "fotMobId": 971787
+        "fotMobId": 971787,
+        "starts": 10,
+        "subs": 9
       },
       {
         "appearances": 9,
@@ -1763,7 +2185,9 @@
         "number": 11,
         "name": "Santiago Colombatto",
         "position": "Midfielder",
-        "fotMobId": 686460
+        "fotMobId": 686460,
+        "starts": 13,
+        "subs": 5
       },
       {
         "appearances": 1,
@@ -1771,7 +2195,9 @@
         "number": 16,
         "name": "Borja Sánchez",
         "position": "Midfielder",
-        "fotMobId": 688989
+        "fotMobId": 688989,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 5,
@@ -1779,7 +2205,9 @@
         "number": 17,
         "name": "Brandon Domingues",
         "position": "Midfielder",
-        "fotMobId": 1188087
+        "fotMobId": 1188087,
+        "starts": 0,
+        "subs": 8
       },
       {
         "appearances": 9,
@@ -1787,7 +2215,9 @@
         "number": 20,
         "name": "Leander Dendoncker",
         "position": "Midfielder",
-        "fotMobId": 424129
+        "fotMobId": 424129,
+        "starts": 14,
+        "subs": 4
       },
       {
         "appearances": 2,
@@ -1795,7 +2225,9 @@
         "number": 23,
         "name": "Nicolas Fonseca",
         "position": "Midfielder",
-        "fotMobId": 950599
+        "fotMobId": 950599,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -1803,7 +2235,9 @@
         "number": 27,
         "name": "Álex Cardero",
         "position": "Midfielder",
-        "fotMobId": 1248024
+        "fotMobId": 1248024,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 7,
@@ -1811,7 +2245,9 @@
         "number": 27,
         "name": "Pablo Agudín",
         "position": "Midfielder",
-        "fotMobId": 1819495
+        "fotMobId": 1819495,
+        "starts": 0,
+        "subs": 9
       },
       {
         "appearances": 3,
@@ -1827,7 +2263,9 @@
         "number": 31,
         "name": "Cheli",
         "position": "Midfielder",
-        "fotMobId": 1597557
+        "fotMobId": 1597557,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 9,
@@ -1835,7 +2273,9 @@
         "number": 9,
         "name": "Federico Viñas",
         "position": "Forward",
-        "fotMobId": 1032811
+        "fotMobId": 1032811,
+        "starts": 12,
+        "subs": 4
       },
       {
         "appearances": 3,
@@ -1843,7 +2283,9 @@
         "number": 14,
         "name": "Ovie Ejaria",
         "position": "Forward",
-        "fotMobId": 760715
+        "fotMobId": 760715,
+        "starts": 2,
+        "subs": 5
       },
       {
         "appearances": 2,
@@ -1851,7 +2293,9 @@
         "number": 17,
         "name": "Thiago Borbas",
         "position": "Forward",
-        "fotMobId": 1132940
+        "fotMobId": 1132940,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 6,
@@ -1859,7 +2303,9 @@
         "number": 18,
         "name": "Josip Brekalo",
         "position": "Forward",
-        "fotMobId": 688668
+        "fotMobId": 688668,
+        "starts": 6,
+        "subs": 9
       },
       {
         "appearances": 9,
@@ -1867,7 +2313,9 @@
         "number": 19,
         "name": "Álex Forés",
         "position": "Forward",
-        "fotMobId": 1304120
+        "fotMobId": 1304120,
+        "starts": 1,
+        "subs": 17
       },
       {
         "appearances": 8,
@@ -1875,7 +2323,9 @@
         "number": 21,
         "name": "Luka Ilić",
         "position": "Forward",
-        "fotMobId": 859764
+        "fotMobId": 859764,
+        "starts": 5,
+        "subs": 11
       },
       {
         "appearances": 8,
@@ -1883,7 +2333,9 @@
         "number": 23,
         "name": "Salomón Rondón",
         "position": "Forward",
-        "fotMobId": 51545
+        "fotMobId": 51545,
+        "starts": 12,
+        "subs": 4
       },
       {
         "appearances": 1,
@@ -1891,7 +2343,9 @@
         "number": 28,
         "name": "Lamine Gueye",
         "position": "Forward",
-        "fotMobId": 1763473
+        "fotMobId": 1763473,
+        "starts": 0,
+        "subs": 7
       }
     ],
     "name": "Oviedo",
@@ -1905,7 +2359,9 @@
         "number": 1,
         "name": "Dani Cárdenas",
         "position": "Goalkeeper",
-        "fotMobId": 1041445
+        "fotMobId": 1041445,
+        "starts": 0,
+        "subs": 18
       },
       {
         "appearances": 11,
@@ -1913,7 +2369,9 @@
         "number": 13,
         "name": "Augusto Batalla",
         "position": "Goalkeeper",
-        "fotMobId": 621415
+        "fotMobId": 621415,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 1,
@@ -1921,7 +2379,9 @@
         "number": 30,
         "name": "Juanpe",
         "position": "Goalkeeper",
-        "fotMobId": 1364363
+        "fotMobId": 1364363,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 7,
@@ -1929,7 +2389,9 @@
         "number": 40,
         "name": "Adrián Molina",
         "position": "Goalkeeper",
-        "fotMobId": 1803292
+        "fotMobId": 1803292,
+        "starts": 0,
+        "subs": 10
       },
       {
         "appearances": 8,
@@ -1937,7 +2399,9 @@
         "number": 2,
         "name": "Andrei Rațiu",
         "position": "Defender",
-        "fotMobId": 970578
+        "fotMobId": 970578,
+        "starts": 16,
+        "subs": 0
       },
       {
         "appearances": 11,
@@ -1945,7 +2409,9 @@
         "number": 3,
         "name": "Josep Chavarría",
         "position": "Defender",
-        "fotMobId": 988805
+        "fotMobId": 988805,
+        "starts": 18,
+        "subs": 1
       },
       {
         "appearances": 7,
@@ -1953,7 +2419,9 @@
         "number": 5,
         "name": "Luiz Felipe",
         "position": "Defender",
-        "fotMobId": 672840
+        "fotMobId": 672840,
+        "starts": 5,
+        "subs": 6
       },
       {
         "appearances": 8,
@@ -1961,7 +2429,9 @@
         "number": 20,
         "name": "Iván Balliu",
         "position": "Defender",
-        "fotMobId": 264885
+        "fotMobId": 264885,
+        "starts": 2,
+        "subs": 14
       },
       {
         "appearances": 9,
@@ -1969,7 +2439,9 @@
         "number": 22,
         "name": "Alfonso Espino",
         "position": "Defender",
-        "fotMobId": 526968
+        "fotMobId": 526968,
+        "starts": 5,
+        "subs": 12
       },
       {
         "appearances": 11,
@@ -1977,7 +2449,9 @@
         "number": 24,
         "name": "Florian Lejeune",
         "position": "Defender",
-        "fotMobId": 184521
+        "fotMobId": 184521,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 2,
@@ -1985,7 +2459,9 @@
         "number": 26,
         "name": "Marco de las Sias",
         "position": "Defender",
-        "fotMobId": 1662963
+        "fotMobId": 1662963,
+        "starts": 0,
+        "subs": 4
       },
       {
         "appearances": 1,
@@ -1993,7 +2469,9 @@
         "number": 27,
         "name": "Pelayo Fernández",
         "position": "Defender",
-        "fotMobId": 1411818
+        "fotMobId": 1411818,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -2009,7 +2487,9 @@
         "number": 32,
         "name": "Nobel Mendy",
         "position": "Defender",
-        "fotMobId": 1428427
+        "fotMobId": 1428427,
+        "starts": 9,
+        "subs": 5
       },
       {
         "appearances": 11,
@@ -2017,7 +2497,9 @@
         "number": 33,
         "name": "Jozhua Vertrouwd",
         "position": "Defender",
-        "fotMobId": 1255090
+        "fotMobId": 1255090,
+        "starts": 1,
+        "subs": 18
       },
       {
         "appearances": 9,
@@ -2025,7 +2507,9 @@
         "number": 4,
         "name": "Pedro Díaz",
         "position": "Midfielder",
-        "fotMobId": 715069
+        "fotMobId": 715069,
+        "starts": 11,
+        "subs": 5
       },
       {
         "appearances": 7,
@@ -2033,7 +2517,9 @@
         "number": 6,
         "name": "Pathé Ismaël Ciss",
         "position": "Midfielder",
-        "fotMobId": 872396
+        "fotMobId": 872396,
+        "starts": 11,
+        "subs": 3
       },
       {
         "appearances": 11,
@@ -2041,7 +2527,9 @@
         "number": 7,
         "name": "Isi Palazón",
         "position": "Midfielder",
-        "fotMobId": 638010
+        "fotMobId": 638010,
+        "starts": 17,
+        "subs": 1
       },
       {
         "appearances": 9,
@@ -2049,7 +2537,9 @@
         "number": 8,
         "name": "Óscar Trejo",
         "position": "Midfielder",
-        "fotMobId": 21414
+        "fotMobId": 21414,
+        "starts": 0,
+        "subs": 16
       },
       {
         "appearances": 6,
@@ -2057,7 +2547,9 @@
         "number": 11,
         "name": "Randy Nteka",
         "position": "Midfielder",
-        "fotMobId": 915264
+        "fotMobId": 915264,
+        "starts": 0,
+        "subs": 9
       },
       {
         "appearances": 11,
@@ -2065,7 +2557,9 @@
         "number": 15,
         "name": "Gerard Gumbau",
         "position": "Midfielder",
-        "fotMobId": 522234
+        "fotMobId": 522234,
+        "starts": 3,
+        "subs": 16
       },
       {
         "appearances": 11,
@@ -2073,7 +2567,9 @@
         "number": 18,
         "name": "Álvaro García",
         "position": "Midfielder",
-        "fotMobId": 474658
+        "fotMobId": 474658,
+        "starts": 16,
+        "subs": 3
       },
       {
         "appearances": 11,
@@ -2081,7 +2577,9 @@
         "number": 21,
         "name": "Fran Pérez",
         "position": "Midfielder",
-        "fotMobId": 1284430
+        "fotMobId": 1284430,
+        "starts": 4,
+        "subs": 14
       },
       {
         "appearances": 10,
@@ -2089,7 +2587,9 @@
         "number": 23,
         "name": "Óscar Valentín",
         "position": "Midfielder",
-        "fotMobId": 956622
+        "fotMobId": 956622,
+        "starts": 12,
+        "subs": 6
       },
       {
         "appearances": 9,
@@ -2097,7 +2597,9 @@
         "number": 28,
         "name": "Samu Becerra",
         "position": "Midfielder",
-        "fotMobId": 1797872
+        "fotMobId": 1797872,
+        "starts": 0,
+        "subs": 16
       },
       {
         "appearances": 6,
@@ -2105,7 +2607,9 @@
         "number": 9,
         "name": "Alemão",
         "position": "Forward",
-        "fotMobId": 924300
+        "fotMobId": 924300,
+        "starts": 5,
+        "subs": 7
       },
       {
         "appearances": 10,
@@ -2113,7 +2617,9 @@
         "number": 10,
         "name": "Sergio Camello",
         "position": "Forward",
-        "fotMobId": 980422
+        "fotMobId": 980422,
+        "starts": 4,
+        "subs": 13
       },
       {
         "appearances": 1,
@@ -2121,7 +2627,9 @@
         "number": 12,
         "name": "Ilias Akhomach",
         "position": "Forward",
-        "fotMobId": 1311915
+        "fotMobId": 1311915,
+        "starts": 2,
+        "subs": 12
       },
       {
         "appearances": 2,
@@ -2129,7 +2637,9 @@
         "number": 14,
         "name": "Carlos Martín",
         "position": "Forward",
-        "fotMobId": 1282015
+        "fotMobId": 1282015,
+        "starts": 2,
+        "subs": 16
       },
       {
         "appearances": 8,
@@ -2137,7 +2647,9 @@
         "number": 17,
         "name": "Unai López",
         "position": "Forward",
-        "fotMobId": 571615
+        "fotMobId": 571615,
+        "starts": 13,
+        "subs": 3
       },
       {
         "appearances": 10,
@@ -2145,7 +2657,9 @@
         "number": 19,
         "name": "Jorge de Frutos",
         "position": "Forward",
-        "fotMobId": 797901
+        "fotMobId": 797901,
+        "starts": 17,
+        "subs": 1
       }
     ],
     "name": "Rayo Vallecano",
@@ -2159,7 +2673,9 @@
         "number": 1,
         "name": "Thibaut Courtois",
         "position": "Goalkeeper",
-        "fotMobId": 170323
+        "fotMobId": 170323,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -2167,7 +2683,9 @@
         "number": 13,
         "name": "Andriy Lunin",
         "position": "Goalkeeper",
-        "fotMobId": 800882
+        "fotMobId": 800882,
+        "starts": 0,
+        "subs": 17
       },
       {
         "appearances": 2,
@@ -2175,7 +2693,9 @@
         "number": 26,
         "name": "Fran González",
         "position": "Goalkeeper",
-        "fotMobId": 1484851
+        "fotMobId": 1484851,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 9,
@@ -2183,7 +2703,9 @@
         "number": 43,
         "name": "Sergio Mestre",
         "position": "Goalkeeper",
-        "fotMobId": 1405014
+        "fotMobId": 1405014,
+        "starts": 0,
+        "subs": 17
       },
       {
         "appearances": 4,
@@ -2191,7 +2713,9 @@
         "number": 2,
         "name": "Daniel Carvajal",
         "position": "Defender",
-        "fotMobId": 282674
+        "fotMobId": 282674,
+        "starts": 4,
+        "subs": 7
       },
       {
         "appearances": 5,
@@ -2199,7 +2723,9 @@
         "number": 3,
         "name": "Éder Militão",
         "position": "Defender",
-        "fotMobId": 844415
+        "fotMobId": 844415,
+        "starts": 10,
+        "subs": 3
       },
       {
         "appearances": 5,
@@ -2207,7 +2733,9 @@
         "number": 4,
         "name": "David Alaba",
         "position": "Defender",
-        "fotMobId": 121633
+        "fotMobId": 121633,
+        "starts": 0,
+        "subs": 13
       },
       {
         "appearances": 5,
@@ -2215,7 +2743,9 @@
         "number": 12,
         "name": "Trent Alexander-Arnold",
         "position": "Defender",
-        "fotMobId": 760712
+        "fotMobId": 760712,
+        "starts": 4,
+        "subs": 5
       },
       {
         "appearances": 10,
@@ -2223,7 +2753,9 @@
         "number": 17,
         "name": "Raúl Asencio",
         "position": "Defender",
-        "fotMobId": 1580528
+        "fotMobId": 1580528,
+        "starts": 10,
+        "subs": 8
       },
       {
         "appearances": 8,
@@ -2231,7 +2763,9 @@
         "number": 18,
         "name": "Álvaro Carreras",
         "position": "Defender",
-        "fotMobId": 1190025
+        "fotMobId": 1190025,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 9,
@@ -2239,7 +2773,9 @@
         "number": 20,
         "name": "Fran García",
         "position": "Defender",
-        "fotMobId": 750028
+        "fotMobId": 750028,
+        "starts": 5,
+        "subs": 13
       },
       {
         "appearances": 3,
@@ -2247,7 +2783,9 @@
         "number": 22,
         "name": "Antonio Rüdiger",
         "position": "Defender",
-        "fotMobId": 276738
+        "fotMobId": 276738,
+        "starts": 5,
+        "subs": 2
       },
       {
         "appearances": 5,
@@ -2255,7 +2793,9 @@
         "number": 23,
         "name": "Ferland Mendy",
         "position": "Defender",
-        "fotMobId": 623537
+        "fotMobId": 623537,
+        "starts": 0,
+        "subs": 7
       },
       {
         "appearances": 9,
@@ -2263,7 +2803,9 @@
         "number": 24,
         "name": "Dean Huijsen",
         "position": "Defender",
-        "fotMobId": 1367619
+        "fotMobId": 1367619,
+        "starts": 14,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -2271,7 +2813,9 @@
         "number": 27,
         "name": "Diego Aguado",
         "position": "Defender",
-        "fotMobId": 1696019
+        "fotMobId": 1696019,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 2,
@@ -2279,7 +2823,9 @@
         "number": 35,
         "name": "David Jiménez",
         "position": "Defender",
-        "fotMobId": 1413780
+        "fotMobId": 1413780,
+        "starts": 0,
+        "subs": 5
       },
       {
         "appearances": 2,
@@ -2287,7 +2833,9 @@
         "number": 36,
         "name": "Joan Martínez",
         "position": "Defender",
-        "fotMobId": 1665675
+        "fotMobId": 1665675,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -2295,7 +2843,9 @@
         "number": 40,
         "name": "Víctor Valdepeñas",
         "position": "Defender",
-        "fotMobId": 1712399
+        "fotMobId": 1712399,
+        "starts": 1,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -2303,7 +2853,9 @@
         "number": 6,
         "name": "Eduardo Camavinga",
         "position": "Midfielder",
-        "fotMobId": 1015185
+        "fotMobId": 1015185,
+        "starts": 5,
+        "subs": 9
       },
       {
         "appearances": 9,
@@ -2311,7 +2863,9 @@
         "number": 8,
         "name": "Federico Valverde",
         "position": "Midfielder",
-        "fotMobId": 743533
+        "fotMobId": 743533,
+        "starts": 16,
+        "subs": 2
       },
       {
         "appearances": 7,
@@ -2319,7 +2873,9 @@
         "number": 14,
         "name": "Aurélien Tchouaméni",
         "position": "Midfielder",
-        "fotMobId": 914458
+        "fotMobId": 914458,
+        "starts": 15,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -2327,7 +2883,9 @@
         "number": 15,
         "name": "Arda Güler",
         "position": "Midfielder",
-        "fotMobId": 1253890
+        "fotMobId": 1253890,
+        "starts": 16,
+        "subs": 3
       },
       {
         "appearances": 10,
@@ -2335,7 +2893,9 @@
         "number": 19,
         "name": "Dani Ceballos",
         "position": "Midfielder",
-        "fotMobId": 531629
+        "fotMobId": 531629,
+        "starts": 4,
+        "subs": 15
       },
       {
         "appearances": 4,
@@ -2343,7 +2903,9 @@
         "number": 28,
         "name": "Jorge Cestero",
         "position": "Midfielder",
-        "fotMobId": 1807277
+        "fotMobId": 1807277,
+        "starts": 0,
+        "subs": 4
       },
       {
         "appearances": 1,
@@ -2351,7 +2913,9 @@
         "number": 38,
         "name": "César Palacios",
         "position": "Midfielder",
-        "fotMobId": 1403691
+        "fotMobId": 1403691,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 3,
@@ -2359,7 +2923,9 @@
         "number": 45,
         "name": "Thiago Pitarch",
         "position": "Midfielder",
-        "fotMobId": 1796908
+        "fotMobId": 1796908,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 1,
@@ -2367,7 +2933,9 @@
         "number": 46,
         "name": "Alvaro Leiva",
         "position": "Midfielder",
-        "fotMobId": 1301989
+        "fotMobId": 1301989,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 9,
@@ -2375,7 +2943,9 @@
         "number": 5,
         "name": "Jude Bellingham",
         "position": "Forward",
-        "fotMobId": 1077894
+        "fotMobId": 1077894,
+        "starts": 12,
+        "subs": 3
       },
       {
         "appearances": 10,
@@ -2383,7 +2953,9 @@
         "number": 7,
         "name": "Vinícius Júnior",
         "position": "Forward",
-        "fotMobId": 846033
+        "fotMobId": 846033,
+        "starts": 17,
+        "subs": 2
       },
       {
         "appearances": 5,
@@ -2391,7 +2963,9 @@
         "number": 9,
         "name": "Endrick",
         "position": "Forward",
-        "fotMobId": 1406729
+        "fotMobId": 1406729,
+        "starts": 0,
+        "subs": 10
       },
       {
         "appearances": 10,
@@ -2399,7 +2973,9 @@
         "number": 10,
         "name": "Kylian Mbappé",
         "position": "Forward",
-        "fotMobId": 701154
+        "fotMobId": 701154,
+        "starts": 18,
+        "subs": 0
       },
       {
         "appearances": 9,
@@ -2407,7 +2983,9 @@
         "number": 11,
         "name": "Rodrygo",
         "position": "Forward",
-        "fotMobId": 895362
+        "fotMobId": 895362,
+        "starts": 5,
+        "subs": 13
       },
       {
         "appearances": 10,
@@ -2415,7 +2993,9 @@
         "number": 16,
         "name": "Gonzalo García",
         "position": "Forward",
-        "fotMobId": 1413847
+        "fotMobId": 1413847,
+        "starts": 3,
+        "subs": 16
       },
       {
         "appearances": 8,
@@ -2423,7 +3003,9 @@
         "number": 21,
         "name": "Brahim Díaz",
         "position": "Forward",
-        "fotMobId": 750027
+        "fotMobId": 750027,
+        "starts": 3,
+        "subs": 13
       },
       {
         "appearances": 8,
@@ -2431,7 +3013,9 @@
         "number": 30,
         "name": "Franco Mastantuono",
         "position": "Forward",
-        "fotMobId": 1607566
+        "fotMobId": 1607566,
+        "starts": 7,
+        "subs": 10
       }
     ],
     "name": "Real Madrid",
@@ -2445,7 +3029,9 @@
         "number": 1,
         "name": "Álvaro Valles",
         "position": "Goalkeeper",
-        "fotMobId": 999171
+        "fotMobId": 999171,
+        "starts": 11,
+        "subs": 8
       },
       {
         "appearances": 10,
@@ -2453,7 +3039,9 @@
         "number": 13,
         "name": "Adrián",
         "position": "Goalkeeper",
-        "fotMobId": 169756
+        "fotMobId": 169756,
+        "starts": 0,
+        "subs": 19
       },
       {
         "appearances": 8,
@@ -2461,7 +3049,9 @@
         "number": 25,
         "name": "Pau López",
         "position": "Goalkeeper",
-        "fotMobId": 532942
+        "fotMobId": 532942,
+        "starts": 8,
+        "subs": 6
       },
       {
         "appearances": 1,
@@ -2469,7 +3059,9 @@
         "number": 30,
         "name": "Germán García",
         "position": "Goalkeeper",
-        "fotMobId": 1662379
+        "fotMobId": 1662379,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 6,
@@ -2477,7 +3069,9 @@
         "number": 2,
         "name": "Héctor Bellerín",
         "position": "Defender",
-        "fotMobId": 427438
+        "fotMobId": 427438,
+        "starts": 11,
+        "subs": 3
       },
       {
         "appearances": 8,
@@ -2485,7 +3079,9 @@
         "number": 3,
         "name": "Diego Llorente",
         "position": "Defender",
-        "fotMobId": 420568
+        "fotMobId": 420568,
+        "starts": 2,
+        "subs": 11
       },
       {
         "appearances": 10,
@@ -2493,7 +3089,9 @@
         "number": 4,
         "name": "Natan",
         "position": "Defender",
-        "fotMobId": 1188375
+        "fotMobId": 1188375,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 10,
@@ -2501,7 +3099,9 @@
         "number": 5,
         "name": "Marc Bartra",
         "position": "Defender",
-        "fotMobId": 195305
+        "fotMobId": 195305,
+        "starts": 14,
+        "subs": 2
       },
       {
         "appearances": 9,
@@ -2509,7 +3109,9 @@
         "number": 12,
         "name": "Ricardo Rodríguez",
         "position": "Defender",
-        "fotMobId": 115591
+        "fotMobId": 115591,
+        "starts": 9,
+        "subs": 7
       },
       {
         "appearances": 10,
@@ -2517,7 +3119,9 @@
         "number": 16,
         "name": "Valentín Gómez",
         "position": "Defender",
-        "fotMobId": 1338016
+        "fotMobId": 1338016,
+        "starts": 9,
+        "subs": 10
       },
       {
         "appearances": 4,
@@ -2525,7 +3129,9 @@
         "number": 23,
         "name": "Junior Firpo",
         "position": "Defender",
-        "fotMobId": 743192
+        "fotMobId": 743192,
+        "starts": 4,
+        "subs": 9
       },
       {
         "appearances": 9,
@@ -2533,7 +3139,9 @@
         "number": 6,
         "name": "Sergi Altimira",
         "position": "Midfielder",
-        "fotMobId": 1310480
+        "fotMobId": 1310480,
+        "starts": 8,
+        "subs": 10
       },
       {
         "appearances": 9,
@@ -2541,7 +3149,9 @@
         "number": 7,
         "name": "Antony",
         "position": "Midfielder",
-        "fotMobId": 967622
+        "fotMobId": 967622,
+        "starts": 14,
+        "subs": 0
       },
       {
         "appearances": 10,
@@ -2549,7 +3159,9 @@
         "number": 8,
         "name": "Pablo Fornals",
         "position": "Midfielder",
-        "fotMobId": 683450
+        "fotMobId": 683450,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 6,
@@ -2557,7 +3169,9 @@
         "number": 10,
         "name": "Abdessamad Ezzalzouli",
         "position": "Midfielder",
-        "fotMobId": 1209399
+        "fotMobId": 1209399,
+        "starts": 9,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -2565,7 +3179,9 @@
         "number": 14,
         "name": "Iker Losada",
         "position": "Midfielder",
-        "fotMobId": 1082930
+        "fotMobId": 1082930,
+        "starts": 2,
+        "subs": 16
       },
       {
         "appearances": 4,
@@ -2573,7 +3189,9 @@
         "number": 14,
         "name": "Sofyan Amrabat",
         "position": "Midfielder",
-        "fotMobId": 593116
+        "fotMobId": 593116,
+        "starts": 5,
+        "subs": 2
       },
       {
         "appearances": 9,
@@ -2581,7 +3199,9 @@
         "number": 17,
         "name": "Rodrigo Riquelme",
         "position": "Midfielder",
-        "fotMobId": 1072200
+        "fotMobId": 1072200,
+        "starts": 7,
+        "subs": 11
       },
       {
         "appearances": 8,
@@ -2589,7 +3209,9 @@
         "number": 18,
         "name": "Nelson Deossa",
         "position": "Midfielder",
-        "fotMobId": 1315711
+        "fotMobId": 1315711,
+        "starts": 5,
+        "subs": 7
       },
       {
         "appearances": 9,
@@ -2597,7 +3219,9 @@
         "number": 20,
         "name": "Giovani Lo Celso",
         "position": "Midfielder",
-        "fotMobId": 604126
+        "fotMobId": 604126,
+        "starts": 10,
+        "subs": 7
       },
       {
         "appearances": 9,
@@ -2605,7 +3229,9 @@
         "number": 21,
         "name": "Marc Roca",
         "position": "Midfielder",
-        "fotMobId": 640220
+        "fotMobId": 640220,
+        "starts": 11,
+        "subs": 5
       },
       {
         "appearances": 1,
@@ -2613,7 +3239,9 @@
         "number": 22,
         "name": "Isco",
         "position": "Midfielder",
-        "fotMobId": 191315
+        "fotMobId": 191315,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 9,
@@ -2621,7 +3249,9 @@
         "number": 24,
         "name": "Aitor Ruibal",
         "position": "Midfielder",
-        "fotMobId": 676533
+        "fotMobId": 676533,
+        "starts": 9,
+        "subs": 6
       },
       {
         "appearances": 1,
@@ -2637,7 +3267,9 @@
         "number": 37,
         "name": "Dani Pérez",
         "position": "Midfielder",
-        "fotMobId": 1418942
+        "fotMobId": 1418942,
+        "starts": 0,
+        "subs": 5
       },
       {
         "appearances": 1,
@@ -2645,7 +3277,9 @@
         "number": 50,
         "name": "Ivan Corralejo",
         "position": "Midfielder",
-        "fotMobId": 1690099
+        "fotMobId": 1690099,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 9,
@@ -2653,7 +3287,9 @@
         "number": 9,
         "name": "Chimy Ávila",
         "position": "Forward",
-        "fotMobId": 361724
+        "fotMobId": 361724,
+        "starts": 1,
+        "subs": 17
       },
       {
         "appearances": 8,
@@ -2661,7 +3297,9 @@
         "number": 11,
         "name": "Cédric Bakambu",
         "position": "Forward",
-        "fotMobId": 201939
+        "fotMobId": 201939,
+        "starts": 1,
+        "subs": 15
       },
       {
         "appearances": 8,
@@ -2669,7 +3307,9 @@
         "number": 19,
         "name": "Cucho Hernández",
         "position": "Forward",
-        "fotMobId": 852071
+        "fotMobId": 852071,
+        "starts": 17,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -2677,7 +3317,9 @@
         "number": 40,
         "name": "Angel Ortiz",
         "position": "Forward",
-        "fotMobId": 1580522
+        "fotMobId": 1580522,
+        "starts": 4,
+        "subs": 13
       },
       {
         "appearances": 9,
@@ -2685,7 +3327,9 @@
         "number": 52,
         "name": "Pablo García",
         "position": "Forward",
-        "fotMobId": 1662379
+        "fotMobId": 1662379,
+        "starts": 2,
+        "subs": 14
       }
     ],
     "name": "Real Betis",
@@ -2699,7 +3343,9 @@
         "number": 1,
         "name": "Unai Simón",
         "position": "Goalkeeper",
-        "fotMobId": 660625
+        "fotMobId": 660625,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 11,
@@ -2707,7 +3353,9 @@
         "number": 27,
         "name": "Alex Padilla",
         "position": "Goalkeeper",
-        "fotMobId": 1401997
+        "fotMobId": 1401997,
+        "starts": 0,
+        "subs": 16
       },
       {
         "appearances": 11,
@@ -2715,7 +3363,9 @@
         "number": 2,
         "name": "Andoni Gorosabel",
         "position": "Defender",
-        "fotMobId": 839893
+        "fotMobId": 839893,
+        "starts": 6,
+        "subs": 13
       },
       {
         "appearances": 10,
@@ -2723,7 +3373,9 @@
         "number": 3,
         "name": "Daniel Vivian",
         "position": "Defender",
-        "fotMobId": 940743
+        "fotMobId": 940743,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 11,
@@ -2731,7 +3383,9 @@
         "number": 4,
         "name": "Aitor Paredes",
         "position": "Defender",
-        "fotMobId": 1191407
+        "fotMobId": 1191407,
+        "starts": 13,
+        "subs": 6
       },
       {
         "appearances": 11,
@@ -2739,7 +3393,9 @@
         "number": 12,
         "name": "Jesús Areso",
         "position": "Defender",
-        "fotMobId": 1037537
+        "fotMobId": 1037537,
+        "starts": 10,
+        "subs": 9
       },
       {
         "appearances": 5,
@@ -2747,7 +3403,9 @@
         "number": 14,
         "name": "Aymeric Laporte",
         "position": "Defender",
-        "fotMobId": 411617
+        "fotMobId": 411617,
+        "starts": 8,
+        "subs": 1
       },
       {
         "appearances": 8,
@@ -2755,7 +3413,9 @@
         "number": 15,
         "name": "Íñigo Lekue",
         "position": "Defender",
-        "fotMobId": 616544
+        "fotMobId": 616544,
+        "starts": 4,
+        "subs": 10
       },
       {
         "appearances": 9,
@@ -2763,7 +3423,9 @@
         "number": 17,
         "name": "Yuri Berchiche",
         "position": "Defender",
-        "fotMobId": 80295
+        "fotMobId": 80295,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 11,
@@ -2771,7 +3433,9 @@
         "number": 19,
         "name": "Adama Boiro",
         "position": "Defender",
-        "fotMobId": 1331249
+        "fotMobId": 1331249,
+        "starts": 3,
+        "subs": 16
       },
       {
         "appearances": 2,
@@ -2787,7 +3451,9 @@
         "number": 34,
         "name": "Jon de Luis",
         "position": "Defender",
-        "fotMobId": 1596411
+        "fotMobId": 1596411,
+        "starts": 0,
+        "subs": 5
       },
       {
         "appearances": 5,
@@ -2795,7 +3461,9 @@
         "number": 47,
         "name": "Iker Monreal Agundez",
         "position": "Defender",
-        "fotMobId": 1817320
+        "fotMobId": 1817320,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 10,
@@ -2803,7 +3471,9 @@
         "number": 6,
         "name": "Mikel Vesga",
         "position": "Midfielder",
-        "fotMobId": 616545
+        "fotMobId": 616545,
+        "starts": 1,
+        "subs": 16
       },
       {
         "appearances": 11,
@@ -2811,7 +3481,9 @@
         "number": 7,
         "name": "Álex Berenguer",
         "position": "Midfielder",
-        "fotMobId": 574629
+        "fotMobId": 574629,
+        "starts": 15,
+        "subs": 2
       },
       {
         "appearances": 9,
@@ -2819,7 +3491,9 @@
         "number": 8,
         "name": "Oihan Sancet",
         "position": "Midfielder",
-        "fotMobId": 950545
+        "fotMobId": 950545,
+        "starts": 13,
+        "subs": 2
       },
       {
         "appearances": 5,
@@ -2827,7 +3501,9 @@
         "number": 9,
         "name": "Iñaki Williams",
         "position": "Midfielder",
-        "fotMobId": 604105
+        "fotMobId": 604105,
+        "starts": 10,
+        "subs": 2
       },
       {
         "appearances": 11,
@@ -2835,7 +3511,9 @@
         "number": 10,
         "name": "Nico Williams",
         "position": "Midfielder",
-        "fotMobId": 1202110
+        "fotMobId": 1202110,
+        "starts": 12,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -2843,7 +3521,9 @@
         "number": 13,
         "name": "Unai Vencedor",
         "position": "Midfielder",
-        "fotMobId": 1007717
+        "fotMobId": 1007717,
+        "starts": 10,
+        "subs": 4
       },
       {
         "appearances": 11,
@@ -2851,7 +3531,9 @@
         "number": 16,
         "name": "Iñigo Ruiz de Galarreta",
         "position": "Midfielder",
-        "fotMobId": 282462
+        "fotMobId": 282462,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 11,
@@ -2859,7 +3541,9 @@
         "number": 18,
         "name": "Mikel Jauregizar",
         "position": "Midfielder",
-        "fotMobId": 1553099
+        "fotMobId": 1553099,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 10,
@@ -2867,7 +3551,9 @@
         "number": 20,
         "name": "Unai Gómez",
         "position": "Midfielder",
-        "fotMobId": 1436270
+        "fotMobId": 1436270,
+        "starts": 3,
+        "subs": 15
       },
       {
         "appearances": 9,
@@ -2875,7 +3561,9 @@
         "number": 23,
         "name": "Robert Navarro",
         "position": "Midfielder",
-        "fotMobId": 1011117
+        "fotMobId": 1011117,
+        "starts": 5,
+        "subs": 12
       },
       {
         "appearances": 11,
@@ -2883,7 +3571,9 @@
         "number": 30,
         "name": "Alejandro Rego Mora",
         "position": "Midfielder",
-        "fotMobId": 1425769
+        "fotMobId": 1425769,
+        "starts": 1,
+        "subs": 17
       },
       {
         "appearances": 8,
@@ -2891,7 +3581,9 @@
         "number": 44,
         "name": "Selton Sanchez",
         "position": "Midfielder",
-        "fotMobId": 1820601
+        "fotMobId": 1820601,
+        "starts": 1,
+        "subs": 8
       },
       {
         "appearances": 10,
@@ -2899,7 +3591,9 @@
         "number": 11,
         "name": "Gorka Guruzeta",
         "position": "Forward",
-        "fotMobId": 711231
+        "fotMobId": 711231,
+        "starts": 12,
+        "subs": 6
       },
       {
         "appearances": 2,
@@ -2907,7 +3601,9 @@
         "number": 21,
         "name": "Maroan Sannadi",
         "position": "Forward",
-        "fotMobId": 1425206
+        "fotMobId": 1425206,
+        "starts": 2,
+        "subs": 7
       },
       {
         "appearances": 10,
@@ -2915,7 +3611,9 @@
         "number": 22,
         "name": "Nico Serrano",
         "position": "Forward",
-        "fotMobId": 1203614
+        "fotMobId": 1203614,
+        "starts": 2,
+        "subs": 16
       },
       {
         "appearances": 11,
@@ -2923,7 +3621,9 @@
         "number": 25,
         "name": "Urko Izeta",
         "position": "Forward",
-        "fotMobId": 988197
+        "fotMobId": 988197,
+        "starts": 1,
+        "subs": 16
       },
       {
         "appearances": 2,
@@ -2931,7 +3631,9 @@
         "number": 31,
         "name": "Asier Hierro",
         "position": "Forward",
-        "fotMobId": 1637566
+        "fotMobId": 1637566,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -2939,7 +3641,9 @@
         "number": 48,
         "name": "Endika Buján",
         "position": "Forward",
-        "fotMobId": 1537230
+        "fotMobId": 1537230,
+        "starts": 0,
+        "subs": 1
       }
     ],
     "name": "Athletic Club",
@@ -2953,7 +3657,9 @@
         "number": 1,
         "name": "Álex Remiro",
         "position": "Goalkeeper",
-        "fotMobId": 616539
+        "fotMobId": 616539,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 10,
@@ -2961,7 +3667,9 @@
         "number": 13,
         "name": "Unai Marrero",
         "position": "Goalkeeper",
-        "fotMobId": 1217043
+        "fotMobId": 1217043,
+        "starts": 0,
+        "subs": 19
       },
       {
         "appearances": 2,
@@ -2969,7 +3677,9 @@
         "number": 32,
         "name": "Aitor Fraga",
         "position": "Goalkeeper",
-        "fotMobId": 1529105
+        "fotMobId": 1529105,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -2977,7 +3687,9 @@
         "number": 41,
         "name": "Theo Folgado",
         "position": "Goalkeeper",
-        "fotMobId": 1573817
+        "fotMobId": 1573817,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 9,
@@ -2985,7 +3697,9 @@
         "number": 2,
         "name": "Jon Aramburu",
         "position": "Defender",
-        "fotMobId": 1249284
+        "fotMobId": 1249284,
+        "starts": 17,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -2993,7 +3707,9 @@
         "number": 3,
         "name": "Aihen Muñoz",
         "position": "Defender",
-        "fotMobId": 999159
+        "fotMobId": 999159,
+        "starts": 5,
+        "subs": 14
       },
       {
         "appearances": 8,
@@ -3001,7 +3717,9 @@
         "number": 5,
         "name": "Igor Zubeldia",
         "position": "Defender",
-        "fotMobId": 698653
+        "fotMobId": 698653,
+        "starts": 14,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -3009,7 +3727,9 @@
         "number": 6,
         "name": "Aritz Elustondo",
         "position": "Defender",
-        "fotMobId": 607148
+        "fotMobId": 607148,
+        "starts": 4,
+        "subs": 12
       },
       {
         "appearances": 10,
@@ -3017,7 +3737,9 @@
         "number": 16,
         "name": "Duje Ćaleta-Car",
         "position": "Defender",
-        "fotMobId": 557799
+        "fotMobId": 557799,
+        "starts": 10,
+        "subs": 9
       },
       {
         "appearances": 1,
@@ -3025,7 +3747,9 @@
         "number": 18,
         "name": "Hamari Traoré",
         "position": "Defender",
-        "fotMobId": 426892
+        "fotMobId": 426892,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -3033,7 +3757,9 @@
         "number": 20,
         "name": "Jon Pacheco",
         "position": "Defender",
-        "fotMobId": 1112072
+        "fotMobId": 1112072,
+        "starts": 12,
+        "subs": 4
       },
       {
         "appearances": 9,
@@ -3041,7 +3767,9 @@
         "number": 20,
         "name": "Álvaro Odriozola",
         "position": "Defender",
-        "fotMobId": 636570
+        "fotMobId": 636570,
+        "starts": 0,
+        "subs": 16
       },
       {
         "appearances": 10,
@@ -3049,7 +3777,9 @@
         "number": 31,
         "name": "Jon Martin",
         "position": "Defender",
-        "fotMobId": 1523234
+        "fotMobId": 1523234,
+        "starts": 12,
+        "subs": 4
       },
       {
         "appearances": 1,
@@ -3057,7 +3787,9 @@
         "number": 38,
         "name": "Luken Beitia",
         "position": "Defender",
-        "fotMobId": 1697334
+        "fotMobId": 1697334,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 9,
@@ -3065,7 +3797,9 @@
         "number": 4,
         "name": "Jon Gorrotxategi",
         "position": "Midfielder",
-        "fotMobId": 1323827
+        "fotMobId": 1323827,
+        "starts": 15,
+        "subs": 2
       },
       {
         "appearances": 8,
@@ -3073,7 +3807,9 @@
         "number": 7,
         "name": "Ander Barrenetxea",
         "position": "Midfielder",
-        "fotMobId": 1002618
+        "fotMobId": 1002618,
+        "starts": 12,
+        "subs": 5
       },
       {
         "appearances": 10,
@@ -3081,7 +3817,9 @@
         "number": 8,
         "name": "Beñat Turrientes",
         "position": "Midfielder",
-        "fotMobId": 1210647
+        "fotMobId": 1210647,
+        "starts": 6,
+        "subs": 13
       },
       {
         "appearances": 1,
@@ -3089,7 +3827,9 @@
         "number": 12,
         "name": "Yangel Herrera",
         "position": "Midfielder",
-        "fotMobId": 730901
+        "fotMobId": 730901,
+        "starts": 3,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -3097,7 +3837,9 @@
         "number": 14,
         "name": "Takefusa Kubo",
         "position": "Midfielder",
-        "fotMobId": 848289
+        "fotMobId": 848289,
+        "starts": 12,
+        "subs": 5
       },
       {
         "appearances": 1,
@@ -3105,7 +3847,9 @@
         "number": 15,
         "name": "Urko González",
         "position": "Midfielder",
-        "fotMobId": 1187767
+        "fotMobId": 1187767,
+        "starts": 12,
+        "subs": 7
       },
       {
         "appearances": 8,
@@ -3113,7 +3857,9 @@
         "number": 18,
         "name": "Carlos Soler",
         "position": "Midfielder",
-        "fotMobId": 708890
+        "fotMobId": 708890,
+        "starts": 10,
+        "subs": 5
       },
       {
         "appearances": 7,
@@ -3121,7 +3867,9 @@
         "number": 21,
         "name": "Arsen Zakharyan",
         "position": "Midfielder",
-        "fotMobId": 1175610
+        "fotMobId": 1175610,
+        "starts": 1,
+        "subs": 15
       },
       {
         "appearances": 8,
@@ -3129,7 +3877,9 @@
         "number": 22,
         "name": "Mikel Goti",
         "position": "Midfielder",
-        "fotMobId": 1340594
+        "fotMobId": 1340594,
+        "starts": 1,
+        "subs": 14
       },
       {
         "appearances": 10,
@@ -3137,7 +3887,9 @@
         "number": 24,
         "name": "Luka Sučić",
         "position": "Midfielder",
-        "fotMobId": 959597
+        "fotMobId": 959597,
+        "starts": 3,
+        "subs": 15
       },
       {
         "appearances": 10,
@@ -3145,7 +3897,9 @@
         "number": 28,
         "name": "Pablo Marín",
         "position": "Midfielder",
-        "fotMobId": 1293912
+        "fotMobId": 1293912,
+        "starts": 7,
+        "subs": 12
       },
       {
         "appearances": 1,
@@ -3153,7 +3907,9 @@
         "number": 44,
         "name": "Lander Astiazaran",
         "position": "Midfielder",
-        "fotMobId": 1697371
+        "fotMobId": 1697371,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -3161,7 +3917,9 @@
         "number": 46,
         "name": "Ibai Aguirre",
         "position": "Midfielder",
-        "fotMobId": 1810849
+        "fotMobId": 1810849,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 2,
@@ -3169,7 +3927,9 @@
         "number": 9,
         "name": "Orri Steinn Óskarsson",
         "position": "Forward",
-        "fotMobId": 1097229
+        "fotMobId": 1097229,
+        "starts": 1,
+        "subs": 4
       },
       {
         "appearances": 8,
@@ -3177,7 +3937,9 @@
         "number": 10,
         "name": "Mikel Oyarzabal",
         "position": "Forward",
-        "fotMobId": 678234
+        "fotMobId": 678234,
+        "starts": 16,
+        "subs": 0
       },
       {
         "appearances": 10,
@@ -3185,7 +3947,9 @@
         "number": 11,
         "name": "Gonçalo Guedes",
         "position": "Forward",
-        "fotMobId": 536455
+        "fotMobId": 536455,
+        "starts": 14,
+        "subs": 5
       },
       {
         "appearances": 6,
@@ -3193,7 +3957,9 @@
         "number": 15,
         "name": "Umar Sadiq",
         "position": "Forward",
-        "fotMobId": 590494
+        "fotMobId": 590494,
+        "starts": 2,
+        "subs": 11
       },
       {
         "appearances": 9,
@@ -3201,7 +3967,9 @@
         "number": 17,
         "name": "Sergio Gómez",
         "position": "Forward",
-        "fotMobId": 844477
+        "fotMobId": 844477,
+        "starts": 14,
+        "subs": 4
       },
       {
         "appearances": 6,
@@ -3209,7 +3977,9 @@
         "number": 19,
         "name": "Jon Karrikaburu",
         "position": "Forward",
-        "fotMobId": 1242132
+        "fotMobId": 1242132,
+        "starts": 0,
+        "subs": 13
       },
       {
         "appearances": 10,
@@ -3217,7 +3987,9 @@
         "number": 23,
         "name": "Brais Méndez",
         "position": "Forward",
-        "fotMobId": 640122
+        "fotMobId": 640122,
+        "starts": 13,
+        "subs": 5
       },
       {
         "appearances": 1,
@@ -3225,7 +3997,9 @@
         "number": 26,
         "name": "Dani Díaz",
         "position": "Forward",
-        "fotMobId": 1712125
+        "fotMobId": 1712125,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -3233,7 +4007,9 @@
         "number": 34,
         "name": "Arkaitz Mariezkurrena",
         "position": "Forward",
-        "fotMobId": 1436231
+        "fotMobId": 1436231,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -3241,7 +4017,9 @@
         "number": 40,
         "name": "Alex Marchal",
         "position": "Forward",
-        "fotMobId": 1721611
+        "fotMobId": 1721611,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 2,
@@ -3249,7 +4027,9 @@
         "number": 47,
         "name": "Job Ochieng",
         "position": "Forward",
-        "fotMobId": 1724551
+        "fotMobId": 1724551,
+        "starts": 0,
+        "subs": 2
       }
     ],
     "name": "Real Sociedad",
@@ -3263,7 +4043,9 @@
         "number": 1,
         "name": "Pablo Cuñat",
         "position": "Goalkeeper",
-        "fotMobId": 1237455
+        "fotMobId": 1237455,
+        "starts": 2,
+        "subs": 16
       },
       {
         "appearances": 8,
@@ -3271,7 +4053,9 @@
         "number": 13,
         "name": "Mathew Ryan",
         "position": "Goalkeeper",
-        "fotMobId": 185644
+        "fotMobId": 185644,
+        "starts": 16,
+        "subs": 0
       },
       {
         "appearances": 7,
@@ -3279,7 +4063,9 @@
         "number": 32,
         "name": "Alejandro Primo",
         "position": "Goalkeeper",
-        "fotMobId": 1366374
+        "fotMobId": 1366374,
+        "starts": 0,
+        "subs": 12
       },
       {
         "appearances": 6,
@@ -3287,7 +4073,9 @@
         "number": 2,
         "name": "Matias Moreno",
         "position": "Defender",
-        "fotMobId": 1605748
+        "fotMobId": 1605748,
+        "starts": 11,
+        "subs": 4
       },
       {
         "appearances": 8,
@@ -3295,7 +4083,9 @@
         "number": 3,
         "name": "Alan Matturro",
         "position": "Defender",
-        "fotMobId": 1412942
+        "fotMobId": 1412942,
+        "starts": 3,
+        "subs": 9
       },
       {
         "appearances": 7,
@@ -3303,7 +4093,9 @@
         "number": 4,
         "name": "Adrián de la Fuente",
         "position": "Defender",
-        "fotMobId": 952528
+        "fotMobId": 952528,
+        "starts": 12,
+        "subs": 4
       },
       {
         "appearances": 4,
@@ -3311,7 +4103,9 @@
         "number": 5,
         "name": "Unai Elgezabal",
         "position": "Defender",
-        "fotMobId": 693736
+        "fotMobId": 693736,
+        "starts": 11,
+        "subs": 2
       },
       {
         "appearances": 6,
@@ -3319,7 +4113,9 @@
         "number": 6,
         "name": "Diego Pampín",
         "position": "Defender",
-        "fotMobId": 881124
+        "fotMobId": 881124,
+        "starts": 3,
+        "subs": 12
       },
       {
         "appearances": 6,
@@ -3327,7 +4123,9 @@
         "number": 14,
         "name": "Jorge Cabello",
         "position": "Defender",
-        "fotMobId": 1617146
+        "fotMobId": 1617146,
+        "starts": 4,
+        "subs": 10
       },
       {
         "appearances": 8,
@@ -3335,7 +4133,9 @@
         "number": 22,
         "name": "Jeremy Toljan",
         "position": "Defender",
-        "fotMobId": 443966
+        "fotMobId": 443966,
+        "starts": 18,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -3343,7 +4143,9 @@
         "number": 23,
         "name": "Manuel Sánchez",
         "position": "Defender",
-        "fotMobId": 1052330
+        "fotMobId": 1052330,
+        "starts": 15,
+        "subs": 2
       },
       {
         "appearances": 2,
@@ -3351,7 +4153,9 @@
         "number": 28,
         "name": "Martín Krug",
         "position": "Defender",
-        "fotMobId": 1648656
+        "fotMobId": 1648656,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 4,
@@ -3359,7 +4163,9 @@
         "number": 29,
         "name": "Nacho Pérez",
         "position": "Defender",
-        "fotMobId": 1800611
+        "fotMobId": 1800611,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 5,
@@ -3367,7 +4173,9 @@
         "number": 7,
         "name": "Roger Brugué",
         "position": "Midfielder",
-        "fotMobId": 1286471
+        "fotMobId": 1286471,
+        "starts": 9,
+        "subs": 5
       },
       {
         "appearances": 8,
@@ -3375,7 +4183,9 @@
         "number": 8,
         "name": "Jon Ander Olasagasti",
         "position": "Midfielder",
-        "fotMobId": 1131957
+        "fotMobId": 1131957,
+        "starts": 5,
+        "subs": 11
       },
       {
         "appearances": 3,
@@ -3383,7 +4193,9 @@
         "number": 10,
         "name": "Pablo Martínez",
         "position": "Midfielder",
-        "fotMobId": 923298
+        "fotMobId": 923298,
+        "starts": 8,
+        "subs": 4
       },
       {
         "appearances": 7,
@@ -3391,7 +4203,9 @@
         "number": 12,
         "name": "Unai Vencedor",
         "position": "Midfielder",
-        "fotMobId": 1007717
+        "fotMobId": 1007717,
+        "starts": 10,
+        "subs": 4
       },
       {
         "appearances": 2,
@@ -3399,7 +4213,9 @@
         "number": 14,
         "name": "Ugo Raghouber",
         "position": "Midfielder",
-        "fotMobId": 1335102
+        "fotMobId": 1335102,
+        "starts": 1,
+        "subs": 1
       },
       {
         "appearances": 7,
@@ -3407,7 +4223,9 @@
         "number": 16,
         "name": "Kervin Arriaga",
         "position": "Midfielder",
-        "fotMobId": 839750
+        "fotMobId": 839750,
+        "starts": 9,
+        "subs": 5
       },
       {
         "appearances": 7,
@@ -3415,7 +4233,9 @@
         "number": 17,
         "name": "Víctor García",
         "position": "Midfielder",
-        "fotMobId": 977618
+        "fotMobId": 977618,
+        "starts": 5,
+        "subs": 11
       },
       {
         "appearances": 4,
@@ -3423,7 +4243,9 @@
         "number": 20,
         "name": "Oriol Rey",
         "position": "Midfielder",
-        "fotMobId": 914401
+        "fotMobId": 914401,
+        "starts": 8,
+        "subs": 6
       },
       {
         "appearances": 8,
@@ -3431,7 +4253,9 @@
         "number": 24,
         "name": "Carlos Álvarez",
         "position": "Midfielder",
-        "fotMobId": 1209980
+        "fotMobId": 1209980,
+        "starts": 14,
+        "subs": 4
       },
       {
         "appearances": 2,
@@ -3439,7 +4263,9 @@
         "number": 27,
         "name": "Paco Cortés",
         "position": "Midfielder",
-        "fotMobId": 1649293
+        "fotMobId": 1649293,
+        "starts": 1,
+        "subs": 4
       },
       {
         "appearances": 7,
@@ -3447,7 +4273,9 @@
         "number": 9,
         "name": "Iván Romero",
         "position": "Forward",
-        "fotMobId": 1209441
+        "fotMobId": 1209441,
+        "starts": 13,
+        "subs": 4
       },
       {
         "appearances": 8,
@@ -3455,7 +4283,9 @@
         "number": 11,
         "name": "José Luis Morales",
         "position": "Forward",
-        "fotMobId": 477472
+        "fotMobId": 477472,
+        "starts": 1,
+        "subs": 17
       },
       {
         "appearances": 6,
@@ -3463,7 +4293,9 @@
         "number": 15,
         "name": "Goduine Koyalipou",
         "position": "Forward",
-        "fotMobId": 864154
+        "fotMobId": 864154,
+        "starts": 2,
+        "subs": 10
       },
       {
         "appearances": 8,
@@ -3471,7 +4303,9 @@
         "number": 18,
         "name": "Iker Losada",
         "position": "Forward",
-        "fotMobId": 1082930
+        "fotMobId": 1082930,
+        "starts": 2,
+        "subs": 16
       },
       {
         "appearances": 5,
@@ -3479,7 +4313,9 @@
         "number": 19,
         "name": "Carlos Espí",
         "position": "Forward",
-        "fotMobId": 1610744
+        "fotMobId": 1610744,
+        "starts": 1,
+        "subs": 13
       },
       {
         "appearances": 7,
@@ -3487,7 +4323,9 @@
         "number": 21,
         "name": "Etta Eyong",
         "position": "Forward",
-        "fotMobId": 1392779
+        "fotMobId": 1392779,
+        "starts": 15,
+        "subs": 1
       },
       {
         "appearances": 3,
@@ -3495,7 +4333,9 @@
         "number": 26,
         "name": "Kareem Tunde",
         "position": "Forward",
-        "fotMobId": 1875615
+        "fotMobId": 1875615,
+        "starts": 2,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -3503,7 +4343,9 @@
         "number": 55,
         "name": "Tai Abed",
         "position": "Forward",
-        "fotMobId": 1377639
+        "fotMobId": 1377639,
+        "starts": 0,
+        "subs": 1
       }
     ],
     "name": "Levante",
@@ -3517,7 +4359,9 @@
         "number": 1,
         "name": "Iñaki Peña",
         "position": "Goalkeeper",
-        "fotMobId": 990996
+        "fotMobId": 990996,
+        "starts": 12,
+        "subs": 6
       },
       {
         "appearances": 3,
@@ -3525,7 +4369,9 @@
         "number": 1,
         "name": "Marc-André Ter Stegen",
         "position": "Goalkeeper",
-        "fotMobId": 184554
+        "fotMobId": 184554,
+        "starts": 1,
+        "subs": 4
       },
       {
         "appearances": 7,
@@ -3533,7 +4379,9 @@
         "number": 13,
         "name": "Joan García",
         "position": "Goalkeeper",
-        "fotMobId": 1167220
+        "fotMobId": 1167220,
+        "starts": 14,
+        "subs": 0
       },
       {
         "appearances": 8,
@@ -3541,7 +4389,9 @@
         "number": 25,
         "name": "Wojciech Szczęsny",
         "position": "Goalkeeper",
-        "fotMobId": 169718
+        "fotMobId": 169718,
+        "starts": 5,
+        "subs": 11
       },
       {
         "appearances": 7,
@@ -3549,7 +4399,9 @@
         "number": 31,
         "name": "Diego Kochen",
         "position": "Goalkeeper",
-        "fotMobId": 1529648
+        "fotMobId": 1529648,
+        "starts": 0,
+        "subs": 13
       },
       {
         "appearances": 4,
@@ -3557,7 +4409,9 @@
         "number": 33,
         "name": "Eder Aller",
         "position": "Goalkeeper",
-        "fotMobId": 1818299
+        "fotMobId": 1818299,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 2,
@@ -3565,7 +4419,9 @@
         "number": 2,
         "name": "João Cancelo",
         "position": "Defender",
-        "fotMobId": 361757
+        "fotMobId": 361757,
+        "starts": 1,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -3573,7 +4429,9 @@
         "number": 3,
         "name": "Alejandro Balde",
         "position": "Defender",
-        "fotMobId": 1254166
+        "fotMobId": 1254166,
+        "starts": 13,
+        "subs": 2
       },
       {
         "appearances": 7,
@@ -3581,7 +4439,9 @@
         "number": 4,
         "name": "Ronald Araújo",
         "position": "Defender",
-        "fotMobId": 921253
+        "fotMobId": 921253,
+        "starts": 7,
+        "subs": 7
       },
       {
         "appearances": 10,
@@ -3589,7 +4449,9 @@
         "number": 5,
         "name": "Pau Cubarsí",
         "position": "Defender",
-        "fotMobId": 1532137
+        "fotMobId": 1532137,
+        "starts": 15,
+        "subs": 4
       },
       {
         "appearances": 5,
@@ -3597,7 +4459,9 @@
         "number": 15,
         "name": "Andreas Christensen",
         "position": "Defender",
-        "fotMobId": 449232
+        "fotMobId": 449232,
+        "starts": 3,
+        "subs": 10
       },
       {
         "appearances": 9,
@@ -3605,7 +4469,9 @@
         "number": 18,
         "name": "Gerard Martín",
         "position": "Defender",
-        "fotMobId": 1598982
+        "fotMobId": 1598982,
+        "starts": 12,
+        "subs": 5
       },
       {
         "appearances": 10,
@@ -3613,7 +4479,9 @@
         "number": 23,
         "name": "Jules Koundé",
         "position": "Defender",
-        "fotMobId": 705450
+        "fotMobId": 705450,
+        "starts": 13,
+        "subs": 6
       },
       {
         "appearances": 10,
@@ -3621,7 +4489,9 @@
         "number": 24,
         "name": "Eric García",
         "position": "Defender",
-        "fotMobId": 940573
+        "fotMobId": 940573,
+        "starts": 17,
+        "subs": 2
       },
       {
         "appearances": 2,
@@ -3637,7 +4507,9 @@
         "number": 26,
         "name": "Jofre Torrents",
         "position": "Defender",
-        "fotMobId": 1789791
+        "fotMobId": 1789791,
+        "starts": 0,
+        "subs": 11
       },
       {
         "appearances": 3,
@@ -3645,7 +4517,9 @@
         "number": 42,
         "name": "Xavi Espart",
         "position": "Defender",
-        "fotMobId": 1815149
+        "fotMobId": 1815149,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -3653,7 +4527,9 @@
         "number": 6,
         "name": "Pablo Gavi",
         "position": "Midfielder",
-        "fotMobId": 1279040
+        "fotMobId": 1279040,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 5,
@@ -3661,7 +4537,9 @@
         "number": 8,
         "name": "Pedri",
         "position": "Midfielder",
-        "fotMobId": 1083323
+        "fotMobId": 1083323,
+        "starts": 12,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -3669,7 +4547,9 @@
         "number": 10,
         "name": "Lamine Yamal",
         "position": "Midfielder",
-        "fotMobId": 1467236
+        "fotMobId": 1467236,
+        "starts": 14,
+        "subs": 1
       },
       {
         "appearances": 6,
@@ -3677,7 +4557,9 @@
         "number": 11,
         "name": "Raphinha",
         "position": "Midfielder",
-        "fotMobId": 696679
+        "fotMobId": 696679,
+        "starts": 10,
+        "subs": 3
       },
       {
         "appearances": 10,
@@ -3685,7 +4567,9 @@
         "number": 16,
         "name": "Fermín López",
         "position": "Midfielder",
-        "fotMobId": 1404415
+        "fotMobId": 1404415,
+        "starts": 8,
+        "subs": 7
       },
       {
         "appearances": 10,
@@ -3693,7 +4577,9 @@
         "number": 17,
         "name": "Marc Casadó",
         "position": "Midfielder",
-        "fotMobId": 1384883
+        "fotMobId": 1384883,
+        "starts": 7,
+        "subs": 12
       },
       {
         "appearances": 6,
@@ -3701,7 +4587,9 @@
         "number": 20,
         "name": "Dani Olmo",
         "position": "Midfielder",
-        "fotMobId": 614834
+        "fotMobId": 614834,
+        "starts": 8,
+        "subs": 7
       },
       {
         "appearances": 9,
@@ -3709,7 +4597,9 @@
         "number": 21,
         "name": "Frenkie de Jong",
         "position": "Midfielder",
-        "fotMobId": 638622
+        "fotMobId": 638622,
+        "starts": 12,
+        "subs": 3
       },
       {
         "appearances": 9,
@@ -3717,7 +4607,9 @@
         "number": 22,
         "name": "Marc Bernal",
         "position": "Midfielder",
-        "fotMobId": 1573126
+        "fotMobId": 1573126,
+        "starts": 1,
+        "subs": 15
       },
       {
         "appearances": 7,
@@ -3725,7 +4617,9 @@
         "number": 27,
         "name": "Dro Fernández",
         "position": "Midfielder",
-        "fotMobId": 1682313
+        "fotMobId": 1682313,
+        "starts": 1,
+        "subs": 13
       },
       {
         "appearances": 1,
@@ -3733,7 +4627,9 @@
         "number": 30,
         "name": "Guillermo Fernández",
         "position": "Midfielder",
-        "fotMobId": 1665438
+        "fotMobId": 1665438,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -3741,7 +4637,9 @@
         "number": 41,
         "name": "Juan Hernández",
         "position": "Midfielder",
-        "fotMobId": 1574190
+        "fotMobId": 1574190,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 4,
@@ -3749,7 +4647,9 @@
         "number": 43,
         "name": "Tomás Marqués",
         "position": "Midfielder",
-        "fotMobId": 1777474
+        "fotMobId": 1777474,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 9,
@@ -3757,7 +4657,9 @@
         "number": 7,
         "name": "Ferran Torres",
         "position": "Forward",
-        "fotMobId": 881771
+        "fotMobId": 881771,
+        "starts": 15,
+        "subs": 3
       },
       {
         "appearances": 8,
@@ -3765,7 +4667,9 @@
         "number": 9,
         "name": "Robert Lewandowski",
         "position": "Forward",
-        "fotMobId": 93447
+        "fotMobId": 93447,
+        "starts": 7,
+        "subs": 10
       },
       {
         "appearances": 9,
@@ -3773,7 +4677,9 @@
         "number": 14,
         "name": "Marcus Rashford",
         "position": "Forward",
-        "fotMobId": 696365
+        "fotMobId": 696365,
+        "starts": 11,
+        "subs": 7
       },
       {
         "appearances": 9,
@@ -3781,7 +4687,9 @@
         "number": 28,
         "name": "Roony Bardghji",
         "position": "Forward",
-        "fotMobId": 1315475
+        "fotMobId": 1315475,
+        "starts": 3,
+        "subs": 13
       },
       {
         "appearances": 3,
@@ -3789,7 +4697,9 @@
         "number": 29,
         "name": "Toni Fernández",
         "position": "Forward",
-        "fotMobId": 1665438
+        "fotMobId": 1665438,
+        "starts": 0,
+        "subs": 10
       }
     ],
     "name": "Barcelona",
@@ -3803,7 +4713,9 @@
         "number": 1,
         "name": "Odysseas Vlachodimos",
         "position": "Goalkeeper",
-        "fotMobId": 304355
+        "fotMobId": 304355,
+        "starts": 15,
+        "subs": 2
       },
       {
         "appearances": 7,
@@ -3811,7 +4723,9 @@
         "number": 13,
         "name": "Ørjan Nyland",
         "position": "Goalkeeper",
-        "fotMobId": 73409
+        "fotMobId": 73409,
+        "starts": 4,
+        "subs": 14
       },
       {
         "appearances": 5,
@@ -3819,7 +4733,9 @@
         "number": 31,
         "name": "Alberto Flores",
         "position": "Goalkeeper",
-        "fotMobId": 1329320
+        "fotMobId": 1329320,
+        "starts": 0,
+        "subs": 8
       },
       {
         "appearances": 2,
@@ -3835,7 +4751,9 @@
         "number": 2,
         "name": "José Ángel Carmona",
         "position": "Defender",
-        "fotMobId": 1281461
+        "fotMobId": 1281461,
+        "starts": 16,
+        "subs": 2
       },
       {
         "appearances": 2,
@@ -3843,7 +4761,9 @@
         "number": 3,
         "name": "César Azpilicueta",
         "position": "Defender",
-        "fotMobId": 72541
+        "fotMobId": 72541,
+        "starts": 8,
+        "subs": 0
       },
       {
         "appearances": 6,
@@ -3851,7 +4771,9 @@
         "number": 4,
         "name": "Kike Salas",
         "position": "Defender",
-        "fotMobId": 1327489
+        "fotMobId": 1327489,
+        "starts": 7,
+        "subs": 9
       },
       {
         "appearances": 3,
@@ -3859,7 +4781,9 @@
         "number": 5,
         "name": "Tanguy Nianzou",
         "position": "Defender",
-        "fotMobId": 1070617
+        "fotMobId": 1070617,
+        "starts": 3,
+        "subs": 3
       },
       {
         "appearances": 6,
@@ -3867,7 +4791,9 @@
         "number": 12,
         "name": "Gabriel Suazo",
         "position": "Defender",
-        "fotMobId": 659490
+        "fotMobId": 659490,
+        "starts": 11,
+        "subs": 2
       },
       {
         "appearances": 6,
@@ -3875,7 +4801,9 @@
         "number": 15,
         "name": "Fábio Cardoso",
         "position": "Defender",
-        "fotMobId": 361751
+        "fotMobId": 361751,
+        "starts": 3,
+        "subs": 11
       },
       {
         "appearances": 1,
@@ -3883,7 +4811,9 @@
         "number": 22,
         "name": "Federico Gattoni",
         "position": "Defender",
-        "fotMobId": 956291
+        "fotMobId": 956291,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 6,
@@ -3891,7 +4821,9 @@
         "number": 22,
         "name": "Ramón Martínez",
         "position": "Defender",
-        "fotMobId": 1592621
+        "fotMobId": 1592621,
+        "starts": 0,
+        "subs": 10
       },
       {
         "appearances": 4,
@@ -3899,14 +4831,18 @@
         "number": 23,
         "name": "Marcão",
         "position": "Defender",
-        "fotMobId": 753593
+        "fotMobId": 753593,
+        "starts": 10,
+        "subs": 4
       },
       {
         "appearances": 8,
         "id": 54563376,
         "number": 32,
         "name": "Andres Castrin",
-        "position": "Defender"
+        "position": "Defender",
+        "starts": 7,
+        "subs": 11
       },
       {
         "appearances": 8,
@@ -3914,7 +4850,9 @@
         "number": 36,
         "name": "Oso",
         "position": "Defender",
-        "fotMobId": 1575945
+        "fotMobId": 1575945,
+        "starts": 4,
+        "subs": 12
       },
       {
         "appearances": 8,
@@ -3922,7 +4860,9 @@
         "number": 6,
         "name": "Nemanja Gudelj",
         "position": "Midfielder",
-        "fotMobId": 178753
+        "fotMobId": 178753,
+        "starts": 12,
+        "subs": 7
       },
       {
         "appearances": 7,
@@ -3930,7 +4870,9 @@
         "number": 8,
         "name": "Joan Jordán",
         "position": "Midfielder",
-        "fotMobId": 574662
+        "fotMobId": 574662,
+        "starts": 0,
+        "subs": 9
       },
       {
         "appearances": 3,
@@ -3938,7 +4880,9 @@
         "number": 11,
         "name": "Ruben Vargas",
         "position": "Midfielder",
-        "fotMobId": 860752
+        "fotMobId": 860752,
+        "starts": 10,
+        "subs": 1
       },
       {
         "appearances": 7,
@@ -3946,7 +4890,9 @@
         "number": 14,
         "name": "Peque Fernández",
         "position": "Midfielder",
-        "fotMobId": 1132607
+        "fotMobId": 1132607,
+        "starts": 8,
+        "subs": 10
       },
       {
         "appearances": 7,
@@ -3954,7 +4900,9 @@
         "number": 16,
         "name": "Juanlu Sánchez",
         "position": "Midfielder",
-        "fotMobId": 1158512
+        "fotMobId": 1158512,
+        "starts": 12,
+        "subs": 6
       },
       {
         "appearances": 6,
@@ -3962,7 +4910,9 @@
         "number": 18,
         "name": "Lucien Agoumé",
         "position": "Midfielder",
-        "fotMobId": 971790
+        "fotMobId": 971790,
+        "starts": 14,
+        "subs": 3
       },
       {
         "appearances": 7,
@@ -3970,7 +4920,9 @@
         "number": 19,
         "name": "Batista Mendy",
         "position": "Midfielder",
-        "fotMobId": 1078729
+        "fotMobId": 1078729,
+        "starts": 13,
+        "subs": 1
       },
       {
         "appearances": 8,
@@ -3978,7 +4930,9 @@
         "number": 20,
         "name": "Djibril Sow",
         "position": "Midfielder",
-        "fotMobId": 707970
+        "fotMobId": 707970,
+        "starts": 14,
+        "subs": 3
       },
       {
         "appearances": 4,
@@ -3986,7 +4940,9 @@
         "number": 24,
         "name": "Adnan Januzaj",
         "position": "Midfielder",
-        "fotMobId": 449241
+        "fotMobId": 449241,
+        "starts": 2,
+        "subs": 10
       },
       {
         "appearances": 8,
@@ -3994,7 +4950,9 @@
         "number": 28,
         "name": "Manu Bueno",
         "position": "Midfielder",
-        "fotMobId": 1428849
+        "fotMobId": 1428849,
+        "starts": 0,
+        "subs": 17
       },
       {
         "appearances": 4,
@@ -4002,7 +4960,9 @@
         "number": 7,
         "name": "Isaac Romero",
         "position": "Forward",
-        "fotMobId": 1130991
+        "fotMobId": 1130991,
+        "starts": 10,
+        "subs": 5
       },
       {
         "appearances": 7,
@@ -4010,7 +4970,9 @@
         "number": 9,
         "name": "Akor Adams",
         "position": "Forward",
-        "fotMobId": 958640
+        "fotMobId": 958640,
+        "starts": 9,
+        "subs": 6
       },
       {
         "appearances": 4,
@@ -4018,7 +4980,9 @@
         "number": 10,
         "name": "Alexis Sánchez",
         "position": "Forward",
-        "fotMobId": 50047
+        "fotMobId": 50047,
+        "starts": 6,
+        "subs": 6
       },
       {
         "appearances": 6,
@@ -4026,7 +4990,9 @@
         "number": 17,
         "name": "Alfon González",
         "position": "Forward",
-        "fotMobId": 926643
+        "fotMobId": 926643,
+        "starts": 4,
+        "subs": 8
       },
       {
         "appearances": 7,
@@ -4034,7 +5000,9 @@
         "number": 21,
         "name": "Chidera Ejuke",
         "position": "Forward",
-        "fotMobId": 837270
+        "fotMobId": 837270,
+        "starts": 4,
+        "subs": 12
       },
       {
         "appearances": 2,
@@ -4042,7 +5010,9 @@
         "number": 26,
         "name": "Alex Costa",
         "position": "Forward",
-        "fotMobId": 1636068
+        "fotMobId": 1636068,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 5,
@@ -4050,7 +5020,9 @@
         "number": 29,
         "name": "Miguel Sierra",
         "position": "Forward",
-        "fotMobId": 1797904
+        "fotMobId": 1797904,
+        "starts": 0,
+        "subs": 6
       }
     ],
     "name": "Sevilla FC",
@@ -4064,7 +5036,9 @@
         "number": 1,
         "name": "Angel Fortuno",
         "position": "Goalkeeper",
-        "fotMobId": 1184772
+        "fotMobId": 1184772,
+        "starts": 0,
+        "subs": 19
       },
       {
         "appearances": 10,
@@ -4072,7 +5046,9 @@
         "number": 13,
         "name": "Marko Dmitrović",
         "position": "Goalkeeper",
-        "fotMobId": 280818
+        "fotMobId": 280818,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 6,
@@ -4080,7 +5056,9 @@
         "number": 30,
         "name": "Pol Tristan Jimenez",
         "position": "Goalkeeper",
-        "fotMobId": 1559812
+        "fotMobId": 1559812,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 1,
@@ -4088,7 +5066,9 @@
         "number": 31,
         "name": "Llorenç Serred",
         "position": "Goalkeeper",
-        "fotMobId": 1624106
+        "fotMobId": 1624106,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -4096,7 +5076,9 @@
         "number": 2,
         "name": "Rubén Sánchez",
         "position": "Defender",
-        "fotMobId": 1330035
+        "fotMobId": 1330035,
+        "starts": 3,
+        "subs": 16
       },
       {
         "appearances": 1,
@@ -4104,7 +5086,9 @@
         "number": 4,
         "name": "Pablo Ramón",
         "position": "Defender",
-        "fotMobId": 982734
+        "fotMobId": 982734,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -4112,7 +5096,9 @@
         "number": 5,
         "name": "Fernando Calero",
         "position": "Defender",
-        "fotMobId": 839232
+        "fotMobId": 839232,
+        "starts": 14,
+        "subs": 5
       },
       {
         "appearances": 10,
@@ -4120,7 +5106,9 @@
         "number": 6,
         "name": "Leandro Cabrera",
         "position": "Defender",
-        "fotMobId": 169586
+        "fotMobId": 169586,
+        "starts": 18,
+        "subs": 0
       },
       {
         "appearances": 10,
@@ -4128,7 +5116,9 @@
         "number": 12,
         "name": "Jose Salinas",
         "position": "Defender",
-        "fotMobId": 1187478
+        "fotMobId": 1187478,
+        "starts": 1,
+        "subs": 18
       },
       {
         "appearances": 10,
@@ -4136,7 +5126,9 @@
         "number": 15,
         "name": "Miguel Rubio",
         "position": "Defender",
-        "fotMobId": 938564
+        "fotMobId": 938564,
+        "starts": 1,
+        "subs": 18
       },
       {
         "appearances": 9,
@@ -4144,7 +5136,9 @@
         "number": 22,
         "name": "Carlos Romero",
         "position": "Defender",
-        "fotMobId": 1395964
+        "fotMobId": 1395964,
+        "starts": 18,
+        "subs": 0
       },
       {
         "appearances": 9,
@@ -4152,7 +5146,9 @@
         "number": 23,
         "name": "Omar El Hilali",
         "position": "Defender",
-        "fotMobId": 1208708
+        "fotMobId": 1208708,
+        "starts": 16,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -4160,7 +5156,9 @@
         "number": 31,
         "name": "Roger Hinojo",
         "position": "Defender",
-        "fotMobId": 1727689
+        "fotMobId": 1727689,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 8,
@@ -4168,7 +5166,9 @@
         "number": 38,
         "name": "Clemens Riedel",
         "position": "Defender",
-        "fotMobId": 1279557
+        "fotMobId": 1279557,
+        "starts": 5,
+        "subs": 11
       },
       {
         "appearances": 9,
@@ -4176,7 +5176,9 @@
         "number": 4,
         "name": "Urko González",
         "position": "Midfielder",
-        "fotMobId": 1187767
+        "fotMobId": 1187767,
+        "starts": 12,
+        "subs": 7
       },
       {
         "appearances": 1,
@@ -4184,7 +5186,9 @@
         "number": 7,
         "name": "Javi Puado",
         "position": "Midfielder",
-        "fotMobId": 846966
+        "fotMobId": 846966,
+        "starts": 8,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -4192,7 +5196,9 @@
         "number": 8,
         "name": "Edu Expósito",
         "position": "Midfielder",
-        "fotMobId": 837089
+        "fotMobId": 837089,
+        "starts": 15,
+        "subs": 4
       },
       {
         "appearances": 10,
@@ -4200,7 +5206,9 @@
         "number": 10,
         "name": "Pol Lozano",
         "position": "Midfielder",
-        "fotMobId": 750031
+        "fotMobId": 750031,
+        "starts": 17,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -4208,7 +5216,9 @@
         "number": 11,
         "name": "Pere Milla",
         "position": "Midfielder",
-        "fotMobId": 593129
+        "fotMobId": 593129,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -4216,7 +5226,9 @@
         "number": 17,
         "name": "Jofre Carreras",
         "position": "Midfielder",
-        "fotMobId": 1184777
+        "fotMobId": 1184777,
+        "starts": 5,
+        "subs": 14
       },
       {
         "appearances": 7,
@@ -4224,7 +5236,9 @@
         "number": 27,
         "name": "Javier Hernandez",
         "position": "Midfielder",
-        "fotMobId": 1427828
+        "fotMobId": 1427828,
+        "starts": 0,
+        "subs": 11
       },
       {
         "appearances": 1,
@@ -4232,7 +5246,9 @@
         "number": 28,
         "name": "Rafael Bauza",
         "position": "Midfielder",
-        "fotMobId": 1609364
+        "fotMobId": 1609364,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -4240,7 +5256,9 @@
         "number": 28,
         "name": "Ferran Gomez",
         "position": "Midfielder",
-        "fotMobId": 1826456
+        "fotMobId": 1826456,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -4248,7 +5266,9 @@
         "number": 9,
         "name": "Roberto Fernández",
         "position": "Forward",
-        "fotMobId": 1252373
+        "fotMobId": 1252373,
+        "starts": 15,
+        "subs": 4
       },
       {
         "appearances": 7,
@@ -4256,7 +5276,9 @@
         "number": 14,
         "name": "Ramón Terrats",
         "position": "Forward",
-        "fotMobId": 1202587
+        "fotMobId": 1202587,
+        "starts": 4,
+        "subs": 12
       },
       {
         "appearances": 5,
@@ -4264,7 +5286,9 @@
         "number": 16,
         "name": "Luca Koleosho",
         "position": "Forward",
-        "fotMobId": 1368318
+        "fotMobId": 1368318,
+        "starts": 0,
+        "subs": 14
       },
       {
         "appearances": 8,
@@ -4272,7 +5296,9 @@
         "number": 18,
         "name": "Charles Pickel",
         "position": "Forward",
-        "fotMobId": 743720
+        "fotMobId": 743720,
+        "starts": 2,
+        "subs": 13
       },
       {
         "appearances": 10,
@@ -4280,7 +5306,9 @@
         "number": 19,
         "name": "Kike García",
         "position": "Forward",
-        "fotMobId": 183353
+        "fotMobId": 183353,
+        "starts": 5,
+        "subs": 14
       },
       {
         "appearances": 10,
@@ -4288,7 +5316,9 @@
         "number": 20,
         "name": "Antoniu Roca",
         "position": "Forward",
-        "fotMobId": 1323403
+        "fotMobId": 1323403,
+        "starts": 1,
+        "subs": 18
       },
       {
         "appearances": 9,
@@ -4296,7 +5326,9 @@
         "number": 24,
         "name": "Tyrhys Dolan",
         "position": "Forward",
-        "fotMobId": 1181101
+        "fotMobId": 1181101,
+        "starts": 14,
+        "subs": 4
       }
     ],
     "name": "Espanyol",
@@ -4310,7 +5342,9 @@
         "number": 1,
         "name": "Jiří Letáček",
         "position": "Goalkeeper",
-        "fotMobId": 1178641
+        "fotMobId": 1178641,
+        "starts": 0,
+        "subs": 17
       },
       {
         "appearances": 10,
@@ -4318,7 +5352,9 @@
         "number": 13,
         "name": "David Soria",
         "position": "Goalkeeper",
-        "fotMobId": 581919
+        "fotMobId": 581919,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 1,
@@ -4326,7 +5362,9 @@
         "number": 42,
         "name": "Diego Ferrer",
         "position": "Goalkeeper",
-        "fotMobId": 1669215
+        "fotMobId": 1669215,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -4334,7 +5372,9 @@
         "number": 2,
         "name": "Djené",
         "position": "Defender",
-        "fotMobId": 421365
+        "fotMobId": 421365,
+        "starts": 17,
+        "subs": 2
       },
       {
         "appearances": 5,
@@ -4342,7 +5382,9 @@
         "number": 3,
         "name": "Abdelkabir Abqar",
         "position": "Defender",
-        "fotMobId": 956921
+        "fotMobId": 956921,
+        "starts": 8,
+        "subs": 2
       },
       {
         "appearances": 7,
@@ -4350,7 +5392,9 @@
         "number": 4,
         "name": "Yvan Neyou",
         "position": "Defender",
-        "fotMobId": 815187
+        "fotMobId": 815187,
+        "starts": 0,
+        "subs": 13
       },
       {
         "appearances": 8,
@@ -4358,7 +5402,9 @@
         "number": 12,
         "name": "Allan Nyom",
         "position": "Defender",
-        "fotMobId": 213809
+        "fotMobId": 213809,
+        "starts": 3,
+        "subs": 10
       },
       {
         "appearances": 1,
@@ -4366,7 +5412,9 @@
         "number": 15,
         "name": "Sebastián Boselli",
         "position": "Defender",
-        "fotMobId": 1414777
+        "fotMobId": 1414777,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -4374,7 +5422,9 @@
         "number": 16,
         "name": "Diego Rico",
         "position": "Defender",
-        "fotMobId": 488718
+        "fotMobId": 488718,
+        "starts": 14,
+        "subs": 5
       },
       {
         "appearances": 9,
@@ -4382,7 +5432,9 @@
         "number": 17,
         "name": "Kiko Femenía",
         "position": "Defender",
-        "fotMobId": 175311
+        "fotMobId": 175311,
+        "starts": 13,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -4390,7 +5442,9 @@
         "number": 21,
         "name": "Juan Iglesias",
         "position": "Defender",
-        "fotMobId": 1102289
+        "fotMobId": 1102289,
+        "starts": 17,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -4398,7 +5452,9 @@
         "number": 22,
         "name": "Domingos Duarte",
         "position": "Defender",
-        "fotMobId": 566425
+        "fotMobId": 566425,
+        "starts": 17,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -4406,7 +5462,9 @@
         "number": 24,
         "name": "Zaid Romero",
         "position": "Defender",
-        "fotMobId": 1118199
+        "fotMobId": 1118199,
+        "starts": 1,
+        "subs": 0
       },
       {
         "appearances": 1,
@@ -4414,7 +5472,9 @@
         "number": 31,
         "name": "Ismael Bekhoucha",
         "position": "Defender",
-        "fotMobId": 1705340
+        "fotMobId": 1705340,
+        "starts": 1,
+        "subs": 8
       },
       {
         "appearances": 2,
@@ -4430,7 +5490,9 @@
         "number": 32,
         "name": "Lucas Laso",
         "position": "Defender",
-        "fotMobId": 1396368
+        "fotMobId": 1396368,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 6,
@@ -4438,7 +5500,9 @@
         "number": 32,
         "name": "Lucas Laso",
         "position": "Defender",
-        "fotMobId": 1396368
+        "fotMobId": 1396368,
+        "starts": 0,
+        "subs": 7
       },
       {
         "appearances": 6,
@@ -4446,7 +5510,9 @@
         "number": 41,
         "name": "Jorge Montes",
         "position": "Defender",
-        "fotMobId": 1858597
+        "fotMobId": 1858597,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 9,
@@ -4454,7 +5520,9 @@
         "number": 5,
         "name": "Luis Milla",
         "position": "Midfielder",
-        "fotMobId": 638090
+        "fotMobId": 638090,
+        "starts": 18,
+        "subs": 0
       },
       {
         "appearances": 10,
@@ -4462,7 +5530,9 @@
         "number": 6,
         "name": "Mario Martín",
         "position": "Midfielder",
-        "fotMobId": 1321605
+        "fotMobId": 1321605,
+        "starts": 16,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -4470,7 +5540,9 @@
         "number": 8,
         "name": "Mauro Arambarri",
         "position": "Midfielder",
-        "fotMobId": 625340
+        "fotMobId": 625340,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 10,
@@ -4478,7 +5550,9 @@
         "number": 14,
         "name": "Javier Muñoz",
         "position": "Midfielder",
-        "fotMobId": 616531
+        "fotMobId": 616531,
+        "starts": 2,
+        "subs": 13
       },
       {
         "appearances": 9,
@@ -4486,7 +5560,9 @@
         "number": 20,
         "name": "Coba da Costa",
         "position": "Midfielder",
-        "fotMobId": 1676905
+        "fotMobId": 1676905,
+        "starts": 2,
+        "subs": 16
       },
       {
         "appearances": 10,
@@ -4494,7 +5570,9 @@
         "number": 23,
         "name": "Adrian Liso",
         "position": "Midfielder",
-        "fotMobId": 1541825
+        "fotMobId": 1541825,
+        "starts": 15,
+        "subs": 1
       },
       {
         "appearances": 6,
@@ -4502,7 +5580,9 @@
         "number": 34,
         "name": "Hugo Solozábal",
         "position": "Midfielder",
-        "fotMobId": 1713218
+        "fotMobId": 1713218,
+        "starts": 0,
+        "subs": 7
       },
       {
         "appearances": 2,
@@ -4510,7 +5590,9 @@
         "number": 44,
         "name": "Adrián Riquelme",
         "position": "Midfielder",
-        "fotMobId": 1842852
+        "fotMobId": 1842852,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -4518,7 +5600,9 @@
         "number": 45,
         "name": "Alejandro Mestanza",
         "position": "Midfielder",
-        "fotMobId": 1477850
+        "fotMobId": 1477850,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -4526,7 +5610,9 @@
         "number": 7,
         "name": "Juanmi",
         "position": "Forward",
-        "fotMobId": 191873
+        "fotMobId": 191873,
+        "starts": 0,
+        "subs": 12
       },
       {
         "appearances": 7,
@@ -4534,7 +5620,9 @@
         "number": 9,
         "name": "Borja Mayoral",
         "position": "Forward",
-        "fotMobId": 635772
+        "fotMobId": 635772,
+        "starts": 12,
+        "subs": 3
       },
       {
         "appearances": 2,
@@ -4542,7 +5630,9 @@
         "number": 10,
         "name": "Martín Satriano",
         "position": "Forward",
-        "fotMobId": 1197039
+        "fotMobId": 1197039,
+        "starts": 2,
+        "subs": 0
       },
       {
         "appearances": 6,
@@ -4550,7 +5640,9 @@
         "number": 11,
         "name": "Abu Kamara",
         "position": "Forward",
-        "fotMobId": 1136450
+        "fotMobId": 1136450,
+        "starts": 1,
+        "subs": 11
       },
       {
         "appearances": 9,
@@ -4558,7 +5650,9 @@
         "number": 18,
         "name": "Álex Sancris",
         "position": "Forward",
-        "fotMobId": 1323207
+        "fotMobId": 1323207,
+        "starts": 3,
+        "subs": 7
       },
       {
         "appearances": 1,
@@ -4566,7 +5660,9 @@
         "number": 19,
         "name": "Luis Vázquez",
         "position": "Forward",
-        "fotMobId": 1215735
+        "fotMobId": 1215735,
+        "starts": 1,
+        "subs": 0
       },
       {
         "appearances": 1,
@@ -4574,7 +5670,9 @@
         "number": 29,
         "name": "Mykyta Aleksandrov",
         "position": "Forward",
-        "fotMobId": 1817835
+        "fotMobId": 1817835,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 8,
@@ -4582,7 +5680,9 @@
         "number": 37,
         "name": "José Luis Pérez",
         "position": "Forward",
-        "fotMobId": 1559834
+        "fotMobId": 1559834,
+        "starts": 0,
+        "subs": 11
       },
       {
         "appearances": 1,
@@ -4590,7 +5690,9 @@
         "number": 39,
         "name": "Yassin Tallal",
         "position": "Forward",
-        "fotMobId": 1639361
+        "fotMobId": 1639361,
+        "starts": 0,
+        "subs": 1
       }
     ],
     "name": "Getafe",
@@ -4604,7 +5706,9 @@
         "number": 1,
         "name": "Antonio Sivera",
         "position": "Goalkeeper",
-        "fotMobId": 530468
+        "fotMobId": 530468,
+        "starts": 18,
+        "subs": 0
       },
       {
         "appearances": 7,
@@ -4612,7 +5716,9 @@
         "number": 13,
         "name": "Raúl Fernández",
         "position": "Goalkeeper",
-        "fotMobId": 96618
+        "fotMobId": 96618,
+        "starts": 0,
+        "subs": 18
       },
       {
         "appearances": 2,
@@ -4620,7 +5726,9 @@
         "number": 31,
         "name": "Grégoire Swiderski",
         "position": "Goalkeeper",
-        "fotMobId": 1467806
+        "fotMobId": 1467806,
+        "starts": 0,
+        "subs": 4
       },
       {
         "appearances": 2,
@@ -4628,7 +5736,9 @@
         "number": 33,
         "name": "Ruben Montero",
         "position": "Goalkeeper",
-        "fotMobId": 1559968
+        "fotMobId": 1559968,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 7,
@@ -4636,7 +5746,9 @@
         "number": 3,
         "name": "Youssef Enriquez Lekhedim",
         "position": "Defender",
-        "fotMobId": 1403692
+        "fotMobId": 1403692,
+        "starts": 6,
+        "subs": 12
       },
       {
         "appearances": 6,
@@ -4644,7 +5756,9 @@
         "number": 5,
         "name": "Jon Pacheco",
         "position": "Defender",
-        "fotMobId": 1112072
+        "fotMobId": 1112072,
+        "starts": 12,
+        "subs": 4
       },
       {
         "appearances": 7,
@@ -4652,7 +5766,9 @@
         "number": 14,
         "name": "Nahuel Tenaglia",
         "position": "Defender",
-        "fotMobId": 860314
+        "fotMobId": 860314,
+        "starts": 17,
+        "subs": 1
       },
       {
         "appearances": 7,
@@ -4660,7 +5776,9 @@
         "number": 17,
         "name": "Jonny Otto",
         "position": "Defender",
-        "fotMobId": 360918
+        "fotMobId": 360918,
+        "starts": 18,
+        "subs": 0
       },
       {
         "appearances": 4,
@@ -4668,7 +5786,9 @@
         "number": 22,
         "name": "Moussa Diarra",
         "position": "Defender",
-        "fotMobId": 1054522
+        "fotMobId": 1054522,
+        "starts": 3,
+        "subs": 9
       },
       {
         "appearances": 7,
@@ -4676,7 +5796,9 @@
         "number": 24,
         "name": "Victor Parada",
         "position": "Defender",
-        "fotMobId": 1056071
+        "fotMobId": 1056071,
+        "starts": 9,
+        "subs": 8
       },
       {
         "appearances": 2,
@@ -4684,7 +5806,9 @@
         "number": 30,
         "name": "Carlos Ballestero",
         "position": "Defender",
-        "fotMobId": 1821709
+        "fotMobId": 1821709,
+        "starts": 0,
+        "subs": 5
       },
       {
         "appearances": 5,
@@ -4692,7 +5816,9 @@
         "number": 34,
         "name": "Aitor Mañas",
         "position": "Defender",
-        "fotMobId": 1553663
+        "fotMobId": 1553663,
+        "starts": 0,
+        "subs": 6
       },
       {
         "appearances": 1,
@@ -4700,7 +5826,9 @@
         "number": 35,
         "name": "Xanet Olaiz",
         "position": "Defender",
-        "fotMobId": 1721181
+        "fotMobId": 1721181,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 6,
@@ -4708,7 +5836,9 @@
         "number": 4,
         "name": "Denis Suárez",
         "position": "Midfielder",
-        "fotMobId": 282281
+        "fotMobId": 282281,
+        "starts": 9,
+        "subs": 8
       },
       {
         "appearances": 7,
@@ -4716,7 +5846,9 @@
         "number": 6,
         "name": "Ander Guevara",
         "position": "Midfielder",
-        "fotMobId": 873827
+        "fotMobId": 873827,
+        "starts": 2,
+        "subs": 16
       },
       {
         "appearances": 6,
@@ -4724,7 +5856,9 @@
         "number": 8,
         "name": "Antonio Blanco",
         "position": "Midfielder",
-        "fotMobId": 845998
+        "fotMobId": 845998,
+        "starts": 16,
+        "subs": 1
       },
       {
         "appearances": 7,
@@ -4732,7 +5866,9 @@
         "number": 10,
         "name": "Carles Aleñá",
         "position": "Midfielder",
-        "fotMobId": 637756
+        "fotMobId": 637756,
+        "starts": 12,
+        "subs": 6
       },
       {
         "appearances": 6,
@@ -4740,7 +5876,9 @@
         "number": 18,
         "name": "Jon Guridi",
         "position": "Midfielder",
-        "fotMobId": 678192
+        "fotMobId": 678192,
+        "starts": 6,
+        "subs": 11
       },
       {
         "appearances": 7,
@@ -4748,7 +5886,9 @@
         "number": 19,
         "name": "Pablo Ibáñez",
         "position": "Midfielder",
-        "fotMobId": 1238154
+        "fotMobId": 1238154,
+        "starts": 14,
+        "subs": 4
       },
       {
         "appearances": 6,
@@ -4756,7 +5896,9 @@
         "number": 20,
         "name": "Calebe Gonçalves",
         "position": "Midfielder",
-        "fotMobId": 1174300
+        "fotMobId": 1174300,
+        "starts": 8,
+        "subs": 9
       },
       {
         "appearances": 7,
@@ -4764,7 +5906,9 @@
         "number": 23,
         "name": "Carlos Benavídez",
         "position": "Midfielder",
-        "fotMobId": 799914
+        "fotMobId": 799914,
+        "starts": 1,
+        "subs": 16
       },
       {
         "appearances": 7,
@@ -4772,7 +5916,9 @@
         "number": 7,
         "name": "Carlos Vicente",
         "position": "Forward",
-        "fotMobId": 1229177
+        "fotMobId": 1229177,
+        "starts": 10,
+        "subs": 8
       },
       {
         "appearances": 4,
@@ -4780,7 +5926,9 @@
         "number": 9,
         "name": "Mariano Díaz",
         "position": "Forward",
-        "fotMobId": 518525
+        "fotMobId": 518525,
+        "starts": 2,
+        "subs": 12
       },
       {
         "appearances": 7,
@@ -4788,7 +5936,9 @@
         "number": 11,
         "name": "Toni Martínez",
         "position": "Forward",
-        "fotMobId": 640123
+        "fotMobId": 640123,
+        "starts": 12,
+        "subs": 6
       },
       {
         "appearances": 6,
@@ -4796,7 +5946,9 @@
         "number": 15,
         "name": "Lucas Boyé",
         "position": "Forward",
-        "fotMobId": 561164
+        "fotMobId": 561164,
+        "starts": 10,
+        "subs": 4
       },
       {
         "appearances": 7,
@@ -4804,7 +5956,9 @@
         "number": 21,
         "name": "Abderrahman Rebbach",
         "position": "Forward",
-        "fotMobId": 1200941
+        "fotMobId": 1200941,
+        "starts": 7,
+        "subs": 11
       },
       {
         "appearances": 2,
@@ -4812,7 +5966,9 @@
         "number": 29,
         "name": "Diego Morcillo",
         "position": "Forward",
-        "fotMobId": 1418118
+        "fotMobId": 1418118,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -4820,7 +5976,9 @@
         "number": 32,
         "name": "Izei Hernandez",
         "position": "Forward",
-        "fotMobId": 1859185
+        "fotMobId": 1859185,
+        "starts": 0,
+        "subs": 1
       }
     ],
     "name": "Alavés",
@@ -4834,7 +5992,9 @@
         "number": 1,
         "name": "Juan Musso",
         "position": "Goalkeeper",
-        "fotMobId": 389050
+        "fotMobId": 389050,
+        "starts": 2,
+        "subs": 16
       },
       {
         "appearances": 8,
@@ -4842,7 +6002,9 @@
         "number": 13,
         "name": "Jan Oblak",
         "position": "Goalkeeper",
-        "fotMobId": 177126
+        "fotMobId": 177126,
+        "starts": 18,
+        "subs": 1
       },
       {
         "appearances": 5,
@@ -4850,7 +6012,9 @@
         "number": 31,
         "name": "Salvador Esquivel",
         "position": "Goalkeeper",
-        "fotMobId": 1553402
+        "fotMobId": 1553402,
+        "starts": 0,
+        "subs": 12
       },
       {
         "appearances": 2,
@@ -4866,7 +6030,9 @@
         "number": 33,
         "name": "Mario de Luis",
         "position": "Goalkeeper",
-        "fotMobId": 1163904
+        "fotMobId": 1163904,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 5,
@@ -4874,7 +6040,9 @@
         "number": 2,
         "name": "José María Giménez",
         "position": "Defender",
-        "fotMobId": 474589
+        "fotMobId": 474589,
+        "starts": 5,
+        "subs": 3
       },
       {
         "appearances": 9,
@@ -4882,7 +6050,9 @@
         "number": 3,
         "name": "Matteo Ruggeri",
         "position": "Defender",
-        "fotMobId": 1051097
+        "fotMobId": 1051097,
+        "starts": 10,
+        "subs": 10
       },
       {
         "appearances": 7,
@@ -4890,7 +6060,9 @@
         "number": 14,
         "name": "Marcos Llorente",
         "position": "Defender",
-        "fotMobId": 602563
+        "fotMobId": 602563,
+        "starts": 17,
+        "subs": 0
       },
       {
         "appearances": 7,
@@ -4898,7 +6070,9 @@
         "number": 15,
         "name": "Clément Lenglet",
         "position": "Defender",
-        "fotMobId": 488412
+        "fotMobId": 488412,
+        "starts": 9,
+        "subs": 8
       },
       {
         "appearances": 8,
@@ -4906,7 +6080,9 @@
         "number": 16,
         "name": "Nahuel Molina",
         "position": "Defender",
-        "fotMobId": 726345
+        "fotMobId": 726345,
+        "starts": 5,
+        "subs": 14
       },
       {
         "appearances": 9,
@@ -4914,7 +6090,9 @@
         "number": 17,
         "name": "Dávid Hancko",
         "position": "Defender",
-        "fotMobId": 727897
+        "fotMobId": 727897,
+        "starts": 18,
+        "subs": 2
       },
       {
         "appearances": 9,
@@ -4922,7 +6100,9 @@
         "number": 18,
         "name": "Marc Pubill",
         "position": "Defender",
-        "fotMobId": 1323897
+        "fotMobId": 1323897,
+        "starts": 8,
+        "subs": 12
       },
       {
         "appearances": 6,
@@ -4930,7 +6110,9 @@
         "number": 21,
         "name": "Javi Galán",
         "position": "Defender",
-        "fotMobId": 695062
+        "fotMobId": 695062,
+        "starts": 4,
+        "subs": 15
       },
       {
         "appearances": 6,
@@ -4938,7 +6120,9 @@
         "number": 24,
         "name": "Robin Le Normand",
         "position": "Defender",
-        "fotMobId": 609516
+        "fotMobId": 609516,
+        "starts": 9,
+        "subs": 7
       },
       {
         "appearances": 1,
@@ -4946,7 +6130,9 @@
         "number": 30,
         "name": "Dani Martinez",
         "position": "Defender",
-        "fotMobId": 1531100
+        "fotMobId": 1531100,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 3,
@@ -4954,7 +6140,9 @@
         "number": 32,
         "name": "Javier Boñar",
         "position": "Defender",
-        "fotMobId": 1367926
+        "fotMobId": 1367926,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 3,
@@ -4962,7 +6150,9 @@
         "number": 40,
         "name": "Aleksa Puric",
         "position": "Defender",
-        "fotMobId": 1527038
+        "fotMobId": 1527038,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 6,
@@ -4970,7 +6160,9 @@
         "number": 4,
         "name": "Conor Gallagher",
         "position": "Midfielder",
-        "fotMobId": 966027
+        "fotMobId": 966027,
+        "starts": 4,
+        "subs": 13
       },
       {
         "appearances": 7,
@@ -4978,7 +6170,9 @@
         "number": 5,
         "name": "Johnny Cardoso",
         "position": "Midfielder",
-        "fotMobId": 1173678
+        "fotMobId": 1173678,
+        "starts": 5,
+        "subs": 8
       },
       {
         "appearances": 9,
@@ -4986,7 +6180,9 @@
         "number": 6,
         "name": "Koke",
         "position": "Midfielder",
-        "fotMobId": 184533
+        "fotMobId": 184533,
+        "starts": 14,
+        "subs": 6
       },
       {
         "appearances": 7,
@@ -4994,7 +6190,9 @@
         "number": 8,
         "name": "Pablo Barrios",
         "position": "Midfielder",
-        "fotMobId": 1338192
+        "fotMobId": 1338192,
+        "starts": 16,
+        "subs": 2
       },
       {
         "appearances": 6,
@@ -5002,7 +6200,9 @@
         "number": 10,
         "name": "Alejandro Baena",
         "position": "Midfielder",
-        "fotMobId": 942372
+        "fotMobId": 942372,
+        "starts": 9,
+        "subs": 4
       },
       {
         "appearances": 8,
@@ -5010,7 +6210,9 @@
         "number": 11,
         "name": "Thiago Almada",
         "position": "Midfielder",
-        "fotMobId": 955271
+        "fotMobId": 955271,
+        "starts": 5,
+        "subs": 9
       },
       {
         "appearances": 8,
@@ -5018,7 +6220,9 @@
         "number": 20,
         "name": "Giuliano Simeone",
         "position": "Midfielder",
-        "fotMobId": 1226147
+        "fotMobId": 1226147,
+        "starts": 17,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -5026,7 +6230,9 @@
         "number": 21,
         "name": "Obed Vargas",
         "position": "Midfielder",
-        "fotMobId": 1254394
+        "fotMobId": 1254394,
+        "starts": 1,
+        "subs": 0
       },
       {
         "appearances": 7,
@@ -5034,7 +6240,9 @@
         "number": 23,
         "name": "Nicolás González",
         "position": "Midfielder",
-        "fotMobId": 841672
+        "fotMobId": 841672,
+        "starts": 11,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -5042,7 +6250,9 @@
         "number": 27,
         "name": "Jano Monserrate",
         "position": "Midfielder",
-        "fotMobId": 1664735
+        "fotMobId": 1664735,
+        "starts": 0,
+        "subs": 7
       },
       {
         "appearances": 2,
@@ -5050,7 +6260,9 @@
         "number": 34,
         "name": "Julio Díaz",
         "position": "Midfielder",
-        "fotMobId": 1447089
+        "fotMobId": 1447089,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -5058,7 +6270,9 @@
         "number": 47,
         "name": "Javi Morcillo",
         "position": "Midfielder",
-        "fotMobId": 1732412
+        "fotMobId": 1732412,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 8,
@@ -5066,7 +6280,9 @@
         "number": 7,
         "name": "Antoine Griezmann",
         "position": "Forward",
-        "fotMobId": 184138
+        "fotMobId": 184138,
+        "starts": 5,
+        "subs": 14
       },
       {
         "appearances": 9,
@@ -5074,7 +6290,9 @@
         "number": 9,
         "name": "Alexander Sørloth",
         "position": "Forward",
-        "fotMobId": 440330
+        "fotMobId": 440330,
+        "starts": 11,
+        "subs": 8
       },
       {
         "appearances": 6,
@@ -5082,7 +6300,9 @@
         "number": 12,
         "name": "Carlos Martín",
         "position": "Forward",
-        "fotMobId": 1282015
+        "fotMobId": 1282015,
+        "starts": 2,
+        "subs": 16
       },
       {
         "appearances": 8,
@@ -5090,7 +6310,9 @@
         "number": 19,
         "name": "Julián Alvarez",
         "position": "Forward",
-        "fotMobId": 974753
+        "fotMobId": 974753,
+        "starts": 18,
+        "subs": 1
       },
       {
         "appearances": 1,
@@ -5098,7 +6320,9 @@
         "number": 22,
         "name": "Ademola Lookman",
         "position": "Forward",
-        "fotMobId": 690516
+        "fotMobId": 690516,
+        "starts": 1,
+        "subs": 0
       },
       {
         "appearances": 6,
@@ -5106,7 +6330,9 @@
         "number": 22,
         "name": "Giacomo Raspadori",
         "position": "Forward",
-        "fotMobId": 951743
+        "fotMobId": 951743,
+        "starts": 1,
+        "subs": 16
       },
       {
         "appearances": 2,
@@ -5114,7 +6340,9 @@
         "number": 29,
         "name": "Rayane Belaid",
         "position": "Forward",
-        "fotMobId": 1553404
+        "fotMobId": 1553404,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -5122,7 +6350,9 @@
         "number": 37,
         "name": "Iker Luque",
         "position": "Forward",
-        "fotMobId": 1586390
+        "fotMobId": 1586390,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -5130,7 +6360,9 @@
         "number": 61,
         "name": "Miguel Cubo",
         "position": "Forward",
-        "fotMobId": 1842315
+        "fotMobId": 1842315,
+        "starts": 0,
+        "subs": 1
       }
     ],
     "name": "Atlético Madrid",
@@ -5144,7 +6376,9 @@
         "number": 1,
         "name": "Leo Román",
         "position": "Goalkeeper",
-        "fotMobId": 1187702
+        "fotMobId": 1187702,
+        "starts": 14,
+        "subs": 0
       },
       {
         "appearances": 7,
@@ -5152,7 +6386,9 @@
         "number": 25,
         "name": "Iván Cuéllar",
         "position": "Goalkeeper",
-        "fotMobId": 33630
+        "fotMobId": 33630,
+        "starts": 0,
+        "subs": 14
       },
       {
         "appearances": 10,
@@ -5160,7 +6396,9 @@
         "number": 31,
         "name": "Lucas Bergström",
         "position": "Goalkeeper",
-        "fotMobId": 1096396
+        "fotMobId": 1096396,
+        "starts": 5,
+        "subs": 14
       },
       {
         "appearances": 4,
@@ -5168,7 +6406,9 @@
         "number": 38,
         "name": "Nil Torreguitart",
         "position": "Goalkeeper",
-        "fotMobId": 1646223
+        "fotMobId": 1646223,
+        "starts": 0,
+        "subs": 4
       },
       {
         "appearances": 10,
@@ -5176,7 +6416,9 @@
         "number": 2,
         "name": "Mateu Morey",
         "position": "Defender",
-        "fotMobId": 844478
+        "fotMobId": 844478,
+        "starts": 6,
+        "subs": 13
       },
       {
         "appearances": 4,
@@ -5184,7 +6426,9 @@
         "number": 3,
         "name": "Toni Lato",
         "position": "Defender",
-        "fotMobId": 674518
+        "fotMobId": 674518,
+        "starts": 3,
+        "subs": 9
       },
       {
         "appearances": 4,
@@ -5192,7 +6436,9 @@
         "number": 4,
         "name": "Marash Kumbulla",
         "position": "Defender",
-        "fotMobId": 872362
+        "fotMobId": 872362,
+        "starts": 4,
+        "subs": 6
       },
       {
         "appearances": 10,
@@ -5200,7 +6446,9 @@
         "number": 21,
         "name": "Antonio Raíllo",
         "position": "Defender",
-        "fotMobId": 640231
+        "fotMobId": 640231,
+        "starts": 17,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -5208,7 +6456,9 @@
         "number": 22,
         "name": "Johan Mojica",
         "position": "Defender",
-        "fotMobId": 474673
+        "fotMobId": 474673,
+        "starts": 16,
+        "subs": 3
       },
       {
         "appearances": 8,
@@ -5216,7 +6466,9 @@
         "number": 23,
         "name": "Pablo Maffeo",
         "position": "Defender",
-        "fotMobId": 673356
+        "fotMobId": 673356,
+        "starts": 13,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -5224,7 +6476,9 @@
         "number": 24,
         "name": "Martin Valjent",
         "position": "Defender",
-        "fotMobId": 521846
+        "fotMobId": 521846,
+        "starts": 19,
+        "subs": 0
       },
       {
         "appearances": 9,
@@ -5232,7 +6486,9 @@
         "number": 26,
         "name": "Iliesse Salhi",
         "position": "Defender",
-        "fotMobId": 1669929
+        "fotMobId": 1669929,
+        "starts": 0,
+        "subs": 14
       },
       {
         "appearances": 10,
@@ -5240,7 +6496,9 @@
         "number": 27,
         "name": "David López",
         "position": "Defender",
-        "fotMobId": 1552991
+        "fotMobId": 1552991,
+        "starts": 2,
+        "subs": 17
       },
       {
         "appearances": 1,
@@ -5248,7 +6506,9 @@
         "number": 34,
         "name": "Javier Olaizola",
         "position": "Defender",
-        "fotMobId": 1817861
+        "fotMobId": 1817861,
+        "starts": 0,
+        "subs": 1
       },
       {
         "appearances": 9,
@@ -5256,7 +6516,9 @@
         "number": 5,
         "name": "Omar Mascarell",
         "position": "Midfielder",
-        "fotMobId": 359191
+        "fotMobId": 359191,
+        "starts": 9,
+        "subs": 7
       },
       {
         "appearances": 10,
@@ -5264,7 +6526,9 @@
         "number": 6,
         "name": "Antonio Sánchez",
         "position": "Midfielder",
-        "fotMobId": 1055327
+        "fotMobId": 1055327,
+        "starts": 6,
+        "subs": 13
       },
       {
         "appearances": 8,
@@ -5272,7 +6536,9 @@
         "number": 8,
         "name": "Manu Morlanes",
         "position": "Midfielder",
-        "fotMobId": 784241
+        "fotMobId": 784241,
+        "starts": 11,
+        "subs": 5
       },
       {
         "appearances": 10,
@@ -5280,7 +6546,9 @@
         "number": 10,
         "name": "Sergi Darder",
         "position": "Midfielder",
-        "fotMobId": 282472
+        "fotMobId": 282472,
+        "starts": 16,
+        "subs": 3
       },
       {
         "appearances": 10,
@@ -5288,7 +6556,9 @@
         "number": 11,
         "name": "Takuma Asano",
         "position": "Midfielder",
-        "fotMobId": 430856
+        "fotMobId": 430856,
+        "starts": 5,
+        "subs": 13
       },
       {
         "appearances": 8,
@@ -5296,7 +6566,9 @@
         "number": 12,
         "name": "Samú Costa",
         "position": "Midfielder",
-        "fotMobId": 1130583
+        "fotMobId": 1130583,
+        "starts": 13,
+        "subs": 3
       },
       {
         "appearances": 1,
@@ -5304,7 +6576,9 @@
         "number": 14,
         "name": "Dani Rodríguez",
         "position": "Midfielder",
-        "fotMobId": 213516
+        "fotMobId": 213516,
+        "starts": 0,
+        "subs": 3
       },
       {
         "appearances": 9,
@@ -5312,7 +6586,9 @@
         "number": 17,
         "name": "Jan Virgili",
         "position": "Midfielder",
-        "fotMobId": 1690093
+        "fotMobId": 1690093,
+        "starts": 10,
+        "subs": 3
       },
       {
         "appearances": 10,
@@ -5320,7 +6596,9 @@
         "number": 20,
         "name": "Pablo Torre",
         "position": "Midfielder",
-        "fotMobId": 1233404
+        "fotMobId": 1233404,
+        "starts": 7,
+        "subs": 12
       },
       {
         "appearances": 1,
@@ -5328,7 +6606,9 @@
         "number": 28,
         "name": "Jan Salas",
         "position": "Midfielder",
-        "fotMobId": 1673117
+        "fotMobId": 1673117,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 1,
@@ -5336,7 +6616,9 @@
         "number": 29,
         "name": "Daniel Luna",
         "position": "Midfielder",
-        "fotMobId": 1321601
+        "fotMobId": 1321601,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 10,
@@ -5344,7 +6626,9 @@
         "number": 7,
         "name": "Vedat Muriqi",
         "position": "Forward",
-        "fotMobId": 517052
+        "fotMobId": 517052,
+        "starts": 17,
+        "subs": 1
       },
       {
         "appearances": 10,
@@ -5352,7 +6636,9 @@
         "number": 9,
         "name": "Abdón Prats",
         "position": "Forward",
-        "fotMobId": 245311
+        "fotMobId": 245311,
+        "starts": 0,
+        "subs": 19
       },
       {
         "appearances": 10,
@@ -5360,7 +6646,9 @@
         "number": 18,
         "name": "Mateo Joseph",
         "position": "Forward",
-        "fotMobId": 1344677
+        "fotMobId": 1344677,
+        "starts": 14,
+        "subs": 5
       },
       {
         "appearances": 10,
@@ -5368,7 +6656,9 @@
         "number": 19,
         "name": "Javi Llabrés",
         "position": "Forward",
-        "fotMobId": 1315828
+        "fotMobId": 1315828,
+        "starts": 0,
+        "subs": 17
       },
       {
         "appearances": 2,
@@ -5376,7 +6666,9 @@
         "number": 30,
         "name": "Justin-Noel Kalumba",
         "position": "Forward",
-        "fotMobId": 1457823
+        "fotMobId": 1457823,
+        "starts": 0,
+        "subs": 2
       },
       {
         "appearances": 8,
@@ -5384,7 +6676,9 @@
         "number": 30,
         "name": "Marc Domenech",
         "position": "Forward",
-        "fotMobId": 1675933
+        "fotMobId": 1675933,
+        "starts": 2,
+        "subs": 14
       }
     ],
     "name": "Mallorca",

@@ -948,7 +948,16 @@ document.getElementById(
                 html += '<div class="squad-player-num">' + (p.number || '-') + '</div>';
                 html += '<div class="squad-player-info">';
                 html += '<div class="squad-player-name">' + escHtml(p.name) + '</div>';
-                html += '<div class="squad-player-meta">' + p.appearances + ' partidos</div>';
+                html += '<div class="squad-player-meta">';
+                var starts = p.starts || 0;
+                var subs = p.subs || 0;
+                var total = starts + subs;
+                if (total > 0) {
+                    html += starts + ' TIT ' + subs + ' SUP';
+                } else {
+                    html += p.appearances + ' partidos';
+                }
+                html += '</div>';
                 html += '</div>';
                 html += '</div>';
             });
