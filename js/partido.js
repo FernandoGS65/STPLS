@@ -402,12 +402,14 @@
         }
 
         var fotMobById = {};
+        var avgRatingById = {};
         if (plantillaCache) {
             Object.keys(plantillaCache).forEach(function(teamKey) {
                 var team = plantillaCache[teamKey];
                 if (team && team.players) {
                     team.players.forEach(function(p) {
                         if (p.id && p.fotMobId) fotMobById[p.id] = p.fotMobId;
+                        if (p.id && p.avgRating) avgRatingById[p.id] = p.avgRating;
                     });
                 }
             });
@@ -474,6 +476,12 @@
                         var rCls = rv >= 7.5 ? 'high' : (rv >= 6.5 ? 'mid' : 'low');
                         html += '<div class="pv-player-rating ' + rCls + '">' + rating + '</div>';
                     }
+                    var avgR = avgRatingById[p.id];
+                    if (avgR) {
+                        var arv = parseFloat(avgR);
+                        var arCls = arv >= 7.5 ? 'high' : (arv >= 6.5 ? 'mid' : 'low');
+                        html += '<div class="pv-player-rating avg ' + arCls + '">' + avgR + '</div>';
+                    }
                     html += '</div>';
                 });
             });
@@ -505,6 +513,12 @@
                 }
                 html += '</span>';
                 html += '<span class="pv-subs-name">' + escHtml(shortName(name)) + '</span>';
+                var sAvgR = avgRatingById[s.id];
+                if (sAvgR) {
+                    var sArv = parseFloat(sAvgR);
+                    var sArCls = sArv >= 7.5 ? 'high' : (sArv >= 6.5 ? 'mid' : 'low');
+                    html += '<span class="pv-subs-rating ' + sArCls + '">' + sAvgR + '</span>';
+                }
                 if (entered) {
                     html += '<span class="pv-subs-in-info">';
                     html += '<span class="pv-subs-arrow-in"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span> ';

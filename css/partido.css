@@ -497,6 +497,9 @@
     min-width:26px;
     background:rgba(239,68,68,0.9);color:#fff;
 }
+.pv-player-rating.avg{
+    background:rgba(56,189,248,0.2);color:var(--accent-cyan);border:1px solid rgba(56,189,248,0.3);
+}
 
 /* ===== PLAYER INDICATORS ===== */
 .pv-avatar-badges{
@@ -566,6 +569,11 @@
 .pv-subs-name{
     flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
     font-weight:600;color:var(--text-primary);font-size:14px;
+}
+.pv-subs-rating{
+    font-size:11px;font-weight:800;padding:1px 6px;border-radius:6px;
+    line-height:1.2;text-shadow:none;letter-spacing:.3px;flex-shrink:0;
+    background:rgba(56,189,248,0.2);color:var(--accent-cyan);border:1px solid rgba(56,189,248,0.3);
 }
 .pv-subs-in-info{
     font-size:12px;color:var(--accent-green,#22c55e);

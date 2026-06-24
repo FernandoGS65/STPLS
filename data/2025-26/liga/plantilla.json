@@ -12,7 +12,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.21
       },
       {
         "appearances": 11,
@@ -48,7 +49,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.53
       },
       {
         "appearances": 11,
@@ -61,7 +63,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.7
       },
       {
         "appearances": 3,
@@ -74,7 +77,8 @@
         "subs": 15,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.78
       },
       {
         "appearances": 9,
@@ -87,7 +91,8 @@
         "subs": 1,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.92
       },
       {
         "appearances": 10,
@@ -100,7 +105,8 @@
         "subs": 0,
         "goals": 2,
         "yellowCards": 6,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.92
       },
       {
         "appearances": 1,
@@ -123,7 +129,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.47
       },
       {
         "appearances": 10,
@@ -136,7 +143,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.73
       },
       {
         "appearances": 10,
@@ -149,7 +157,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.97
       },
       {
         "appearances": 11,
@@ -162,7 +171,8 @@
         "subs": 17,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.58
       },
       {
         "appearances": 11,
@@ -175,7 +185,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.9
       },
       {
         "appearances": 7,
@@ -188,7 +199,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.61
       },
       {
         "appearances": 10,
@@ -201,7 +213,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 5,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.83
       },
       {
         "appearances": 1,
@@ -224,7 +237,8 @@
         "subs": 17,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.78
       },
       {
         "appearances": 1,
@@ -237,7 +251,8 @@
         "subs": 6,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.05
       },
       {
         "appearances": 11,
@@ -250,7 +265,8 @@
         "subs": 14,
         "goals": 3,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.73
       },
       {
         "appearances": 10,
@@ -263,7 +279,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.96
       },
       {
         "appearances": 11,
@@ -276,7 +293,8 @@
         "subs": 18,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.5
       },
       {
         "appearances": 11,
@@ -289,7 +307,8 @@
         "subs": 6,
         "goals": 2,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.93
       },
       {
         "appearances": 1,
@@ -312,7 +331,8 @@
         "subs": 2,
         "goals": 6,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.95
       },
       {
         "appearances": 9,
@@ -322,7 +342,8 @@
         "position": "Forward",
         "fotMobId": 495222,
         "starts": 0,
-        "subs": 15
+        "subs": 15,
+        "avgRating": 6.59
       },
       {
         "appearances": 11,
@@ -335,7 +356,8 @@
         "subs": 2,
         "goals": 4,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.76
       }
     ],
     "name": "Osasuna",
@@ -374,7 +396,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.91
       },
       {
         "appearances": 1,
@@ -384,7 +407,8 @@
         "position": "Goalkeeper",
         "fotMobId": 184554,
         "starts": 1,
-        "subs": 4
+        "subs": 4,
+        "avgRating": 6.86
       },
       {
         "appearances": 4,
@@ -394,7 +418,8 @@
         "position": "Goalkeeper",
         "fotMobId": 1526728,
         "starts": 1,
-        "subs": 8
+        "subs": 8,
+        "avgRating": 7.19
       },
       {
         "appearances": 4,
@@ -417,7 +442,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.52
       },
       {
         "appearances": 8,
@@ -430,7 +456,8 @@
         "subs": 4,
         "goals": 1,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.7
       },
       {
         "appearances": 3,
@@ -443,7 +470,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.51
       },
       {
         "appearances": 9,
@@ -456,7 +484,8 @@
         "subs": 1,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.94
       },
       {
         "appearances": 6,
@@ -469,7 +498,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.68
       },
       {
         "appearances": 8,
@@ -482,7 +512,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.87
       },
       {
         "appearances": 1,
@@ -495,7 +526,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 5.61
       },
       {
         "appearances": 8,
@@ -508,7 +540,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.56
       },
       {
         "appearances": 2,
@@ -559,7 +592,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.73
       },
       {
         "appearances": 8,
@@ -572,7 +606,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.48
       },
       {
         "appearances": 1,
@@ -582,7 +617,8 @@
         "position": "Midfielder",
         "fotMobId": 1486264,
         "starts": 0,
-        "subs": 1
+        "subs": 1,
+        "avgRating": 6.87
       },
       {
         "appearances": 4,
@@ -595,7 +631,8 @@
         "subs": 1,
         "goals": 3,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.34
       },
       {
         "appearances": 6,
@@ -608,7 +645,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.75
       },
       {
         "appearances": 1,
@@ -621,7 +659,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.49
       },
       {
         "appearances": 8,
@@ -634,7 +673,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.44
       },
       {
         "appearances": 7,
@@ -647,7 +687,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.49
       },
       {
         "appearances": 9,
@@ -660,7 +701,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.96
       },
       {
         "appearances": 4,
@@ -683,7 +725,8 @@
         "subs": 7,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.57
       },
       {
         "appearances": 3,
@@ -696,7 +739,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.7
       },
       {
         "appearances": 3,
@@ -709,7 +753,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.46
       },
       {
         "appearances": 3,
@@ -719,7 +764,8 @@
         "position": "Forward",
         "fotMobId": 748380,
         "starts": 0,
-        "subs": 6
+        "subs": 6,
+        "avgRating": 6.46
       },
       {
         "appearances": 8,
@@ -732,7 +778,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.71
       },
       {
         "appearances": 9,
@@ -745,7 +792,8 @@
         "subs": 0,
         "goals": 4,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.92
       },
       {
         "appearances": 8,
@@ -758,7 +806,8 @@
         "subs": 0,
         "goals": 3,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.62
       },
       {
         "appearances": 1,
@@ -771,7 +820,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.48
       },
       {
         "appearances": 5,
@@ -781,7 +831,8 @@
         "position": "Forward",
         "fotMobId": 1682236,
         "starts": 0,
-        "subs": 6
+        "subs": 6,
+        "avgRating": 6.44
       },
       {
         "appearances": 7,
@@ -810,7 +861,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.46
       },
       {
         "appearances": 8,
@@ -820,7 +872,8 @@
         "position": "Goalkeeper",
         "fotMobId": 990996,
         "starts": 12,
-        "subs": 6
+        "subs": 6,
+        "avgRating": 7.5
       },
       {
         "appearances": 4,
@@ -843,7 +896,8 @@
         "subs": 11,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.63
       },
       {
         "appearances": 1,
@@ -853,7 +907,8 @@
         "position": "Defender",
         "fotMobId": 573782,
         "starts": 0,
-        "subs": 3
+        "subs": 3,
+        "avgRating": 6.68
       },
       {
         "appearances": 7,
@@ -866,7 +921,8 @@
         "subs": 15,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.2
       },
       {
         "appearances": 7,
@@ -879,7 +935,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.02
       },
       {
         "appearances": 8,
@@ -892,7 +949,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.99
       },
       {
         "appearances": 8,
@@ -905,7 +963,8 @@
         "subs": 14,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.72
       },
       {
         "appearances": 9,
@@ -918,7 +977,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.53
       },
       {
         "appearances": 9,
@@ -931,7 +991,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.91
       },
       {
         "appearances": 8,
@@ -944,7 +1005,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 5,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.9
       },
       {
         "appearances": 1,
@@ -977,7 +1039,8 @@
         "subs": 5,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.75
       },
       {
         "appearances": 9,
@@ -987,7 +1050,8 @@
         "position": "Midfielder",
         "fotMobId": 1277343,
         "starts": 0,
-        "subs": 16
+        "subs": 16,
+        "avgRating": 6.51
       },
       {
         "appearances": 9,
@@ -1000,7 +1064,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.83
       },
       {
         "appearances": 9,
@@ -1013,7 +1078,8 @@
         "subs": 2,
         "goals": 4,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.04
       },
       {
         "appearances": 9,
@@ -1026,7 +1092,8 @@
         "subs": 0,
         "goals": 2,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.19
       },
       {
         "appearances": 9,
@@ -1039,7 +1106,8 @@
         "subs": 8,
         "goals": 2,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.89
       },
       {
         "appearances": 7,
@@ -1052,7 +1120,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.76
       },
       {
         "appearances": 9,
@@ -1065,7 +1134,8 @@
         "subs": 10,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.6
       },
       {
         "appearances": 7,
@@ -1078,7 +1148,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.4
       },
       {
         "appearances": 6,
@@ -1091,7 +1162,8 @@
         "subs": 6,
         "goals": 4,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.75
       },
       {
         "appearances": 8,
@@ -1104,7 +1176,8 @@
         "subs": 3,
         "goals": 6,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 1,
@@ -1114,7 +1187,8 @@
         "position": "Forward",
         "fotMobId": 1119943,
         "starts": 0,
-        "subs": 3
+        "subs": 3,
+        "avgRating": 6.69
       },
       {
         "appearances": 5,
@@ -1127,7 +1201,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.52
       },
       {
         "appearances": 9,
@@ -1140,7 +1215,8 @@
         "subs": 7,
         "goals": 4,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.02
       },
       {
         "appearances": 8,
@@ -1153,7 +1229,8 @@
         "subs": 15,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.98
       },
       {
         "appearances": 3,
@@ -1166,7 +1243,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.38
       }
     ],
     "name": "Elche",
@@ -1182,7 +1260,8 @@
         "position": "Goalkeeper",
         "fotMobId": 254241,
         "starts": 2,
-        "subs": 14
+        "subs": 14,
+        "avgRating": 7.61
       },
       {
         "appearances": 8,
@@ -1205,7 +1284,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.9
       },
       {
         "appearances": 4,
@@ -1228,7 +1308,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.67
       },
       {
         "appearances": 3,
@@ -1241,7 +1322,8 @@
         "subs": 3,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.8
       },
       {
         "appearances": 9,
@@ -1254,7 +1336,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.75
       },
       {
         "appearances": 8,
@@ -1267,7 +1350,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.47
       },
       {
         "appearances": 10,
@@ -1280,7 +1364,8 @@
         "subs": 3,
         "goals": 1,
         "yellowCards": 5,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.36
       },
       {
         "appearances": 8,
@@ -1293,7 +1378,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.44
       },
       {
         "appearances": 11,
@@ -1306,7 +1392,8 @@
         "subs": 14,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.66
       },
       {
         "appearances": 8,
@@ -1319,7 +1406,8 @@
         "subs": 14,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.96
       },
       {
         "appearances": 11,
@@ -1329,7 +1417,8 @@
         "position": "Defender",
         "fotMobId": 1319968,
         "starts": 0,
-        "subs": 15
+        "subs": 15,
+        "avgRating": 6.59
       },
       {
         "appearances": 5,
@@ -1372,7 +1461,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.57
       },
       {
         "appearances": 11,
@@ -1385,7 +1475,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7
       },
       {
         "appearances": 10,
@@ -1398,7 +1489,8 @@
         "subs": 4,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.71
       },
       {
         "appearances": 11,
@@ -1411,7 +1503,8 @@
         "subs": 6,
         "goals": 3,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.7
       },
       {
         "appearances": 11,
@@ -1424,7 +1517,8 @@
         "subs": 4,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.09
       },
       {
         "appearances": 11,
@@ -1437,7 +1531,8 @@
         "subs": 12,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.9
       },
       {
         "appearances": 7,
@@ -1450,7 +1545,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 5,
@@ -1473,7 +1569,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.47
       },
       {
         "appearances": 11,
@@ -1486,7 +1583,8 @@
         "subs": 5,
         "goals": 3,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.86
       },
       {
         "appearances": 11,
@@ -1499,7 +1597,8 @@
         "subs": 7,
         "goals": 7,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.89
       },
       {
         "appearances": 10,
@@ -1512,7 +1611,8 @@
         "subs": 7,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.59
       },
       {
         "appearances": 6,
@@ -1525,7 +1625,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.69
       },
       {
         "appearances": 10,
@@ -1538,7 +1639,8 @@
         "subs": 15,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.55
       },
       {
         "appearances": 6,
@@ -1592,7 +1694,8 @@
         "position": "Goalkeeper",
         "fotMobId": 681213,
         "starts": 19,
-        "subs": 0
+        "subs": 0,
+        "avgRating": 7.25
       },
       {
         "appearances": 8,
@@ -1605,7 +1708,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.04
       },
       {
         "appearances": 7,
@@ -1615,7 +1719,8 @@
         "position": "Defender",
         "fotMobId": 643998,
         "starts": 2,
-        "subs": 7
+        "subs": 7,
+        "avgRating": 6.27
       },
       {
         "appearances": 8,
@@ -1628,7 +1733,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.77
       },
       {
         "appearances": 9,
@@ -1641,7 +1747,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.06
       },
       {
         "appearances": 5,
@@ -1654,7 +1761,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 4,
@@ -1667,7 +1775,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.88
       },
       {
         "appearances": 7,
@@ -1680,7 +1789,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.69
       },
       {
         "appearances": 9,
@@ -1693,7 +1803,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.75
       },
       {
         "appearances": 9,
@@ -1706,7 +1817,8 @@
         "subs": 8,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.04
       },
       {
         "appearances": 9,
@@ -1719,7 +1831,8 @@
         "subs": 3,
         "goals": 2,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.86
       },
       {
         "appearances": 9,
@@ -1732,7 +1845,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.69
       },
       {
         "appearances": 7,
@@ -1745,7 +1859,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.73
       },
       {
         "appearances": 3,
@@ -1768,7 +1883,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.21
       },
       {
         "appearances": 9,
@@ -1781,7 +1897,8 @@
         "subs": 11,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.92
       },
       {
         "appearances": 7,
@@ -1794,7 +1911,8 @@
         "subs": 9,
         "goals": 2,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.98
       },
       {
         "appearances": 6,
@@ -1807,7 +1925,8 @@
         "subs": 8,
         "goals": 3,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.68
       },
       {
         "appearances": 7,
@@ -1820,7 +1939,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.11
       },
       {
         "appearances": 7,
@@ -1833,7 +1953,8 @@
         "subs": 11,
         "goals": 2,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.86
       },
       {
         "appearances": 1,
@@ -1843,7 +1964,8 @@
         "position": "Midfielder",
         "fotMobId": 1825995,
         "starts": 0,
-        "subs": 1
+        "subs": 1,
+        "avgRating": 6.62
       },
       {
         "appearances": 8,
@@ -1856,7 +1978,8 @@
         "subs": 8,
         "goals": 6,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.79
       },
       {
         "appearances": 7,
@@ -1869,7 +1992,8 @@
         "subs": 8,
         "goals": 2,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.69
       },
       {
         "appearances": 9,
@@ -1882,7 +2006,8 @@
         "subs": 12,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 9,
@@ -1895,7 +2020,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.92
       },
       {
         "appearances": 7,
@@ -1908,7 +2034,8 @@
         "subs": 8,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.61
       },
       {
         "appearances": 2,
@@ -1939,7 +2066,8 @@
         "subs": 17,
         "goals": 2,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       }
     ],
     "name": "Celta de Vigo",
@@ -1958,7 +2086,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.11
       },
       {
         "appearances": 3,
@@ -1978,7 +2107,8 @@
         "position": "Goalkeeper",
         "fotMobId": 942375,
         "starts": 3,
-        "subs": 15
+        "subs": 15,
+        "avgRating": 6.42
       },
       {
         "appearances": 1,
@@ -1998,7 +2128,8 @@
         "position": "Defender",
         "fotMobId": 922877,
         "starts": 0,
-        "subs": 1
+        "subs": 1,
+        "avgRating": 6.88
       },
       {
         "appearances": 2,
@@ -2008,7 +2139,8 @@
         "position": "Defender",
         "fotMobId": 1338696,
         "starts": 0,
-        "subs": 2
+        "subs": 2,
+        "avgRating": 6.67
       },
       {
         "appearances": 11,
@@ -2021,7 +2153,8 @@
         "subs": 6,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.21
       },
       {
         "appearances": 1,
@@ -2044,7 +2177,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.14
       },
       {
         "appearances": 7,
@@ -2067,7 +2201,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.87
       },
       {
         "appearances": 7,
@@ -2080,7 +2215,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 7,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 7.12
       },
       {
         "appearances": 11,
@@ -2093,7 +2229,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.85
       },
       {
         "appearances": 10,
@@ -2106,7 +2243,8 @@
         "subs": 10,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.86
       },
       {
         "appearances": 11,
@@ -2119,7 +2257,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.86
       },
       {
         "appearances": 1,
@@ -2150,7 +2289,8 @@
         "subs": 8,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.77
       },
       {
         "appearances": 10,
@@ -2163,7 +2303,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.96
       },
       {
         "appearances": 9,
@@ -2176,7 +2317,8 @@
         "subs": 3,
         "goals": 2,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.89
       },
       {
         "appearances": 8,
@@ -2189,7 +2331,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.63
       },
       {
         "appearances": 8,
@@ -2202,7 +2345,8 @@
         "subs": 4,
         "goals": 3,
         "yellowCards": 6,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.17
       },
       {
         "appearances": 11,
@@ -2215,7 +2359,8 @@
         "subs": 7,
         "goals": 2,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.26
       },
       {
         "appearances": 11,
@@ -2228,7 +2373,8 @@
         "subs": 3,
         "goals": 6,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.8
       },
       {
         "appearances": 1,
@@ -2241,7 +2387,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.19
       },
       {
         "appearances": 5,
@@ -2254,7 +2401,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.63
       },
       {
         "appearances": 4,
@@ -2264,7 +2412,8 @@
         "position": "Midfielder",
         "fotMobId": 1695966,
         "starts": 0,
-        "subs": 5
+        "subs": 5,
+        "avgRating": 7.22
       },
       {
         "appearances": 5,
@@ -2277,7 +2426,8 @@
         "subs": 10,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.81
       },
       {
         "appearances": 8,
@@ -2290,7 +2440,8 @@
         "subs": 2,
         "goals": 3,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.37
       },
       {
         "appearances": 9,
@@ -2303,7 +2454,8 @@
         "subs": 5,
         "goals": 6,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.82
       },
       {
         "appearances": 6,
@@ -2316,7 +2468,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.54
       },
       {
         "appearances": 1,
@@ -2329,7 +2482,8 @@
         "subs": 8,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.6
       },
       {
         "appearances": 11,
@@ -2342,7 +2496,8 @@
         "subs": 8,
         "goals": 4,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.99
       },
       {
         "appearances": 10,
@@ -2355,7 +2510,8 @@
         "subs": 15,
         "goals": 2,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.64
       },
       {
         "appearances": 10,
@@ -2368,7 +2524,8 @@
         "subs": 6,
         "goals": 4,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.97
       },
       {
         "appearances": 1,
@@ -2381,7 +2538,8 @@
         "subs": 1,
         "goals": 6,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.79
       },
       {
         "appearances": 2,
@@ -2401,7 +2559,8 @@
         "position": "Forward",
         "fotMobId": 1646375,
         "starts": 0,
-        "subs": 3
+        "subs": 3,
+        "avgRating": 6.47
       }
     ],
     "name": "Villarreal",
@@ -2430,7 +2589,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.42
       },
       {
         "appearances": 3,
@@ -2453,7 +2613,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.89
       },
       {
         "appearances": 9,
@@ -2466,7 +2627,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.67
       },
       {
         "appearances": 9,
@@ -2479,7 +2641,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.81
       },
       {
         "appearances": 10,
@@ -2492,7 +2655,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.94
       },
       {
         "appearances": 7,
@@ -2505,7 +2669,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.44
       },
       {
         "appearances": 7,
@@ -2518,7 +2683,8 @@
         "subs": 3,
         "goals": 1,
         "yellowCards": 6,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.82
       },
       {
         "appearances": 8,
@@ -2531,7 +2697,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.66
       },
       {
         "appearances": 9,
@@ -2544,7 +2711,8 @@
         "subs": 8,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 8,
@@ -2557,7 +2725,8 @@
         "subs": 8,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.52
       },
       {
         "appearances": 1,
@@ -2567,7 +2736,8 @@
         "position": "Defender",
         "fotMobId": 1427152,
         "starts": 0,
-        "subs": 4
+        "subs": 4,
+        "avgRating": 6.65
       },
       {
         "appearances": 1,
@@ -2577,7 +2747,8 @@
         "position": "Defender",
         "fotMobId": 1557032,
         "starts": 0,
-        "subs": 4
+        "subs": 4,
+        "avgRating": 6.35
       },
       {
         "appearances": 10,
@@ -2590,7 +2761,8 @@
         "subs": 5,
         "goals": 2,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.67
       },
       {
         "appearances": 9,
@@ -2603,7 +2775,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.51
       },
       {
         "appearances": 10,
@@ -2616,7 +2789,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.4
       },
       {
         "appearances": 6,
@@ -2629,7 +2803,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.84
       },
       {
         "appearances": 10,
@@ -2642,7 +2817,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 9,
@@ -2655,7 +2831,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.78
       },
       {
         "appearances": 1,
@@ -2665,7 +2842,8 @@
         "position": "Midfielder",
         "fotMobId": 688989,
         "starts": 0,
-        "subs": 1
+        "subs": 1,
+        "avgRating": 6.71
       },
       {
         "appearances": 5,
@@ -2688,7 +2866,8 @@
         "subs": 4,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.78
       },
       {
         "appearances": 2,
@@ -2701,7 +2880,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.39
       },
       {
         "appearances": 1,
@@ -2721,7 +2901,8 @@
         "position": "Midfielder",
         "fotMobId": 1819495,
         "starts": 0,
-        "subs": 9
+        "subs": 9,
+        "avgRating": 6.35
       },
       {
         "appearances": 3,
@@ -2752,7 +2933,8 @@
         "subs": 4,
         "goals": 2,
         "yellowCards": 4,
-        "redCards": 3
+        "redCards": 3,
+        "avgRating": 6.8
       },
       {
         "appearances": 3,
@@ -2765,7 +2947,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.61
       },
       {
         "appearances": 2,
@@ -2775,7 +2958,8 @@
         "position": "Forward",
         "fotMobId": 1132940,
         "starts": 0,
-        "subs": 2
+        "subs": 2,
+        "avgRating": 6.71
       },
       {
         "appearances": 6,
@@ -2788,7 +2972,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.64
       },
       {
         "appearances": 9,
@@ -2801,7 +2986,8 @@
         "subs": 17,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.44
       },
       {
         "appearances": 8,
@@ -2814,7 +3000,8 @@
         "subs": 11,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.49
       },
       {
         "appearances": 8,
@@ -2827,7 +3014,8 @@
         "subs": 4,
         "goals": 2,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.6
       },
       {
         "appearances": 1,
@@ -2866,7 +3054,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.96
       },
       {
         "appearances": 1,
@@ -2899,7 +3088,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.67
       },
       {
         "appearances": 11,
@@ -2912,7 +3102,8 @@
         "subs": 1,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.73
       },
       {
         "appearances": 7,
@@ -2925,7 +3116,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.58
       },
       {
         "appearances": 8,
@@ -2938,7 +3130,8 @@
         "subs": 14,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.61
       },
       {
         "appearances": 9,
@@ -2951,7 +3144,8 @@
         "subs": 12,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.44
       },
       {
         "appearances": 11,
@@ -2964,7 +3158,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 2,
@@ -2984,7 +3179,8 @@
         "position": "Defender",
         "fotMobId": 1411818,
         "starts": 0,
-        "subs": 3
+        "subs": 3,
+        "avgRating": 6.48
       },
       {
         "appearances": 1,
@@ -3005,7 +3201,8 @@
         "subs": 5,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.43
       },
       {
         "appearances": 11,
@@ -3015,7 +3212,8 @@
         "position": "Defender",
         "fotMobId": 1255090,
         "starts": 1,
-        "subs": 18
+        "subs": 18,
+        "avgRating": 6.17
       },
       {
         "appearances": 9,
@@ -3028,7 +3226,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.49
       },
       {
         "appearances": 7,
@@ -3041,7 +3240,8 @@
         "subs": 3,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 7.17
       },
       {
         "appearances": 11,
@@ -3054,7 +3254,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.7
       },
       {
         "appearances": 9,
@@ -3067,7 +3268,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.53
       },
       {
         "appearances": 6,
@@ -3077,7 +3279,8 @@
         "position": "Midfielder",
         "fotMobId": 915264,
         "starts": 0,
-        "subs": 9
+        "subs": 9,
+        "avgRating": 6.57
       },
       {
         "appearances": 11,
@@ -3090,7 +3293,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.55
       },
       {
         "appearances": 11,
@@ -3103,7 +3307,8 @@
         "subs": 3,
         "goals": 2,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.54
       },
       {
         "appearances": 11,
@@ -3116,7 +3321,8 @@
         "subs": 14,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.55
       },
       {
         "appearances": 10,
@@ -3129,7 +3335,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.84
       },
       {
         "appearances": 9,
@@ -3139,7 +3346,8 @@
         "position": "Midfielder",
         "fotMobId": 1797872,
         "starts": 0,
-        "subs": 16
+        "subs": 16,
+        "avgRating": 6.58
       },
       {
         "appearances": 6,
@@ -3152,7 +3360,8 @@
         "subs": 7,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.57
       },
       {
         "appearances": 10,
@@ -3165,7 +3374,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.43
       },
       {
         "appearances": 1,
@@ -3178,7 +3388,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.54
       },
       {
         "appearances": 2,
@@ -3191,7 +3402,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.52
       },
       {
         "appearances": 8,
@@ -3204,7 +3416,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 7,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.82
       },
       {
         "appearances": 10,
@@ -3217,7 +3430,8 @@
         "subs": 1,
         "goals": 3,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.95
       }
     ],
     "name": "Rayo Vallecano",
@@ -3233,7 +3447,8 @@
         "position": "Goalkeeper",
         "fotMobId": 170323,
         "starts": 19,
-        "subs": 0
+        "subs": 0,
+        "avgRating": 6.97
       },
       {
         "appearances": 8,
@@ -3279,7 +3494,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.93
       },
       {
         "appearances": 5,
@@ -3292,7 +3508,8 @@
         "subs": 3,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.44
       },
       {
         "appearances": 5,
@@ -3302,7 +3519,8 @@
         "position": "Defender",
         "fotMobId": 121633,
         "starts": 0,
-        "subs": 13
+        "subs": 13,
+        "avgRating": 6.74
       },
       {
         "appearances": 5,
@@ -3315,7 +3533,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.94
       },
       {
         "appearances": 10,
@@ -3328,7 +3547,8 @@
         "subs": 8,
         "goals": 2,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.98
       },
       {
         "appearances": 8,
@@ -3341,7 +3561,8 @@
         "subs": 1,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 7.05
       },
       {
         "appearances": 9,
@@ -3354,7 +3575,8 @@
         "subs": 13,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.58
       },
       {
         "appearances": 3,
@@ -3367,7 +3589,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.96
       },
       {
         "appearances": 5,
@@ -3390,7 +3613,8 @@
         "subs": 1,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 7.34
       },
       {
         "appearances": 1,
@@ -3430,7 +3654,8 @@
         "position": "Defender",
         "fotMobId": 1712399,
         "starts": 1,
-        "subs": 0
+        "subs": 0,
+        "avgRating": 6.61
       },
       {
         "appearances": 8,
@@ -3443,7 +3668,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.01
       },
       {
         "appearances": 9,
@@ -3456,7 +3682,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.18
       },
       {
         "appearances": 7,
@@ -3469,7 +3696,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.16
       },
       {
         "appearances": 10,
@@ -3482,7 +3710,8 @@
         "subs": 3,
         "goals": 3,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.15
       },
       {
         "appearances": 10,
@@ -3495,7 +3724,8 @@
         "subs": 15,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.04
       },
       {
         "appearances": 4,
@@ -3548,7 +3778,8 @@
         "subs": 3,
         "goals": 4,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.27
       },
       {
         "appearances": 10,
@@ -3561,7 +3792,8 @@
         "subs": 2,
         "goals": 4,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.2
       },
       {
         "appearances": 5,
@@ -3571,7 +3803,8 @@
         "position": "Forward",
         "fotMobId": 1406729,
         "starts": 0,
-        "subs": 10
+        "subs": 10,
+        "avgRating": 6.56
       },
       {
         "appearances": 10,
@@ -3584,7 +3817,8 @@
         "subs": 0,
         "goals": 11,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.84
       },
       {
         "appearances": 9,
@@ -3597,7 +3831,8 @@
         "subs": 13,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.94
       },
       {
         "appearances": 10,
@@ -3610,7 +3845,8 @@
         "subs": 16,
         "goals": 3,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.76
       },
       {
         "appearances": 8,
@@ -3623,7 +3859,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.57
       },
       {
         "appearances": 8,
@@ -3636,7 +3873,8 @@
         "subs": 10,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.84
       }
     ],
     "name": "Real Madrid",
@@ -3652,7 +3890,8 @@
         "position": "Goalkeeper",
         "fotMobId": 999171,
         "starts": 11,
-        "subs": 8
+        "subs": 8,
+        "avgRating": 6.9
       },
       {
         "appearances": 10,
@@ -3675,7 +3914,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.1
       },
       {
         "appearances": 1,
@@ -3698,7 +3938,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.67
       },
       {
         "appearances": 8,
@@ -3711,7 +3952,8 @@
         "subs": 11,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.02
       },
       {
         "appearances": 10,
@@ -3724,7 +3966,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 10,
@@ -3737,7 +3980,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.05
       },
       {
         "appearances": 9,
@@ -3750,7 +3994,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.64
       },
       {
         "appearances": 10,
@@ -3763,7 +4008,8 @@
         "subs": 10,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.96
       },
       {
         "appearances": 4,
@@ -3776,7 +4022,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.67
       },
       {
         "appearances": 9,
@@ -3789,7 +4036,8 @@
         "subs": 10,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.02
       },
       {
         "appearances": 9,
@@ -3802,7 +4050,8 @@
         "subs": 0,
         "goals": 3,
         "yellowCards": 1,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 7.15
       },
       {
         "appearances": 10,
@@ -3815,7 +4064,8 @@
         "subs": 0,
         "goals": 5,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.15
       },
       {
         "appearances": 6,
@@ -3828,7 +4078,8 @@
         "subs": 2,
         "goals": 4,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.22
       },
       {
         "appearances": 1,
@@ -3841,7 +4092,8 @@
         "subs": 16,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.54
       },
       {
         "appearances": 4,
@@ -3854,7 +4106,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.19
       },
       {
         "appearances": 9,
@@ -3867,7 +4120,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.61
       },
       {
         "appearances": 8,
@@ -3880,7 +4134,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.81
       },
       {
         "appearances": 9,
@@ -3893,7 +4148,8 @@
         "subs": 7,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.11
       },
       {
         "appearances": 9,
@@ -3906,7 +4162,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 1,
@@ -3916,7 +4173,8 @@
         "position": "Midfielder",
         "fotMobId": 191315,
         "starts": 0,
-        "subs": 1
+        "subs": 1,
+        "avgRating": 7.16
       },
       {
         "appearances": 9,
@@ -3929,7 +4187,8 @@
         "subs": 6,
         "goals": 4,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.01
       },
       {
         "appearances": 1,
@@ -3957,7 +4216,8 @@
         "position": "Midfielder",
         "fotMobId": 1690099,
         "starts": 0,
-        "subs": 1
+        "subs": 1,
+        "avgRating": 6.33
       },
       {
         "appearances": 9,
@@ -3970,7 +4230,8 @@
         "subs": 17,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.44
       },
       {
         "appearances": 8,
@@ -3983,7 +4244,8 @@
         "subs": 15,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.54
       },
       {
         "appearances": 8,
@@ -3996,7 +4258,8 @@
         "subs": 0,
         "goals": 7,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.89
       },
       {
         "appearances": 8,
@@ -4009,7 +4272,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.57
       },
       {
         "appearances": 9,
@@ -4022,7 +4286,8 @@
         "subs": 14,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.43
       }
     ],
     "name": "Real Betis",
@@ -4038,7 +4303,8 @@
         "position": "Goalkeeper",
         "fotMobId": 660625,
         "starts": 19,
-        "subs": 0
+        "subs": 0,
+        "avgRating": 6.92
       },
       {
         "appearances": 11,
@@ -4064,7 +4330,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.5
       },
       {
         "appearances": 10,
@@ -4077,7 +4344,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.63
       },
       {
         "appearances": 11,
@@ -4090,7 +4358,8 @@
         "subs": 6,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.82
       },
       {
         "appearances": 11,
@@ -4103,7 +4372,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.69
       },
       {
         "appearances": 5,
@@ -4116,7 +4386,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7
       },
       {
         "appearances": 8,
@@ -4129,7 +4400,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.6
       },
       {
         "appearances": 9,
@@ -4142,7 +4414,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.94
       },
       {
         "appearances": 11,
@@ -4155,7 +4428,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.33
       },
       {
         "appearances": 2,
@@ -4196,7 +4470,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.57
       },
       {
         "appearances": 11,
@@ -4209,7 +4484,8 @@
         "subs": 2,
         "goals": 2,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.87
       },
       {
         "appearances": 9,
@@ -4222,7 +4498,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.43
       },
       {
         "appearances": 5,
@@ -4235,7 +4512,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.46
       },
       {
         "appearances": 11,
@@ -4248,7 +4526,8 @@
         "subs": 3,
         "goals": 3,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.1
       },
       {
         "appearances": 1,
@@ -4261,7 +4540,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.62
       },
       {
         "appearances": 11,
@@ -4274,7 +4554,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 9,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.98
       },
       {
         "appearances": 11,
@@ -4287,7 +4568,8 @@
         "subs": 0,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.9
       },
       {
         "appearances": 10,
@@ -4300,7 +4582,8 @@
         "subs": 15,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.6
       },
       {
         "appearances": 9,
@@ -4313,7 +4596,8 @@
         "subs": 12,
         "goals": 4,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.71
       },
       {
         "appearances": 11,
@@ -4326,7 +4610,8 @@
         "subs": 17,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.7
       },
       {
         "appearances": 8,
@@ -4339,7 +4624,8 @@
         "subs": 8,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.33
       },
       {
         "appearances": 10,
@@ -4352,7 +4638,8 @@
         "subs": 6,
         "goals": 2,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.42
       },
       {
         "appearances": 2,
@@ -4365,7 +4652,8 @@
         "subs": 7,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.42
       },
       {
         "appearances": 10,
@@ -4378,7 +4666,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.46
       },
       {
         "appearances": 11,
@@ -4391,7 +4680,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.42
       },
       {
         "appearances": 2,
@@ -4401,7 +4691,8 @@
         "position": "Forward",
         "fotMobId": 1637566,
         "starts": 0,
-        "subs": 2
+        "subs": 2,
+        "avgRating": 6.47
       },
       {
         "appearances": 1,
@@ -4430,7 +4721,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.93
       },
       {
         "appearances": 10,
@@ -4473,7 +4765,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 6,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.71
       },
       {
         "appearances": 10,
@@ -4486,7 +4779,8 @@
         "subs": 14,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.66
       },
       {
         "appearances": 8,
@@ -4499,7 +4793,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.62
       },
       {
         "appearances": 10,
@@ -4512,7 +4807,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.44
       },
       {
         "appearances": 10,
@@ -4525,7 +4821,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.76
       },
       {
         "appearances": 1,
@@ -4548,7 +4845,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.93
       },
       {
         "appearances": 9,
@@ -4561,7 +4859,8 @@
         "subs": 16,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.21
       },
       {
         "appearances": 10,
@@ -4574,7 +4873,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.8
       },
       {
         "appearances": 1,
@@ -4597,7 +4897,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 6,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.81
       },
       {
         "appearances": 8,
@@ -4610,7 +4911,8 @@
         "subs": 5,
         "goals": 3,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.93
       },
       {
         "appearances": 10,
@@ -4623,7 +4925,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.81
       },
       {
         "appearances": 1,
@@ -4636,7 +4939,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.49
       },
       {
         "appearances": 8,
@@ -4649,7 +4953,8 @@
         "subs": 5,
         "goals": 2,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.15
       },
       {
         "appearances": 1,
@@ -4662,7 +4967,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.66
       },
       {
         "appearances": 8,
@@ -4675,7 +4981,8 @@
         "subs": 5,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.84
       },
       {
         "appearances": 7,
@@ -4688,7 +4995,8 @@
         "subs": 15,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.48
       },
       {
         "appearances": 8,
@@ -4701,7 +5009,8 @@
         "subs": 14,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.02
       },
       {
         "appearances": 10,
@@ -4714,7 +5023,8 @@
         "subs": 15,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.51
       },
       {
         "appearances": 10,
@@ -4727,7 +5037,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.5
       },
       {
         "appearances": 1,
@@ -4760,7 +5071,8 @@
         "subs": 4,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.66
       },
       {
         "appearances": 8,
@@ -4773,7 +5085,8 @@
         "subs": 0,
         "goals": 5,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.28
       },
       {
         "appearances": 10,
@@ -4786,7 +5099,8 @@
         "subs": 5,
         "goals": 5,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.83
       },
       {
         "appearances": 6,
@@ -4799,7 +5113,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.47
       },
       {
         "appearances": 9,
@@ -4812,7 +5127,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.8
       },
       {
         "appearances": 6,
@@ -4822,7 +5138,8 @@
         "position": "Forward",
         "fotMobId": 1242132,
         "starts": 0,
-        "subs": 13
+        "subs": 13,
+        "avgRating": 6.34
       },
       {
         "appearances": 10,
@@ -4835,7 +5152,8 @@
         "subs": 5,
         "goals": 3,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.99
       },
       {
         "appearances": 1,
@@ -4891,7 +5209,8 @@
         "position": "Goalkeeper",
         "fotMobId": 1237455,
         "starts": 2,
-        "subs": 16
+        "subs": 16,
+        "avgRating": 7.75
       },
       {
         "appearances": 8,
@@ -4904,7 +5223,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.37
       },
       {
         "appearances": 7,
@@ -4927,7 +5247,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.82
       },
       {
         "appearances": 8,
@@ -4940,7 +5261,8 @@
         "subs": 9,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.76
       },
       {
         "appearances": 7,
@@ -4953,7 +5275,8 @@
         "subs": 4,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.83
       },
       {
         "appearances": 4,
@@ -4966,7 +5289,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.55
       },
       {
         "appearances": 6,
@@ -4979,7 +5303,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.57
       },
       {
         "appearances": 6,
@@ -4992,7 +5317,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.35
       },
       {
         "appearances": 8,
@@ -5005,7 +5331,8 @@
         "subs": 0,
         "goals": 1,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.55
       },
       {
         "appearances": 8,
@@ -5018,7 +5345,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.49
       },
       {
         "appearances": 2,
@@ -5051,7 +5379,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.34
       },
       {
         "appearances": 8,
@@ -5064,7 +5393,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 3,
@@ -5077,7 +5407,8 @@
         "subs": 4,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.86
       },
       {
         "appearances": 7,
@@ -5090,7 +5421,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.62
       },
       {
         "appearances": 2,
@@ -5103,7 +5435,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.85
       },
       {
         "appearances": 7,
@@ -5116,7 +5449,8 @@
         "subs": 5,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.89
       },
       {
         "appearances": 7,
@@ -5129,7 +5463,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.68
       },
       {
         "appearances": 4,
@@ -5142,7 +5477,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.69
       },
       {
         "appearances": 8,
@@ -5155,7 +5491,8 @@
         "subs": 4,
         "goals": 3,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.88
       },
       {
         "appearances": 2,
@@ -5168,7 +5505,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.46
       },
       {
         "appearances": 7,
@@ -5181,7 +5519,8 @@
         "subs": 4,
         "goals": 4,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.03
       },
       {
         "appearances": 8,
@@ -5194,7 +5533,8 @@
         "subs": 17,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.69
       },
       {
         "appearances": 6,
@@ -5207,7 +5547,8 @@
         "subs": 10,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.58
       },
       {
         "appearances": 8,
@@ -5220,7 +5561,8 @@
         "subs": 16,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.54
       },
       {
         "appearances": 5,
@@ -5233,7 +5575,8 @@
         "subs": 13,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.62
       },
       {
         "appearances": 7,
@@ -5246,7 +5589,8 @@
         "subs": 1,
         "goals": 6,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.79
       },
       {
         "appearances": 3,
@@ -5259,7 +5603,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.33
       },
       {
         "appearances": 1,
@@ -5285,7 +5630,8 @@
         "position": "Goalkeeper",
         "fotMobId": 990996,
         "starts": 12,
-        "subs": 6
+        "subs": 6,
+        "avgRating": 7.5
       },
       {
         "appearances": 3,
@@ -5295,7 +5641,8 @@
         "position": "Goalkeeper",
         "fotMobId": 184554,
         "starts": 1,
-        "subs": 4
+        "subs": 4,
+        "avgRating": 6.86
       },
       {
         "appearances": 7,
@@ -5308,7 +5655,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.44
       },
       {
         "appearances": 8,
@@ -5318,7 +5666,8 @@
         "position": "Goalkeeper",
         "fotMobId": 169718,
         "starts": 5,
-        "subs": 11
+        "subs": 11,
+        "avgRating": 7.75
       },
       {
         "appearances": 7,
@@ -5351,7 +5700,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.92
       },
       {
         "appearances": 10,
@@ -5364,7 +5714,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.79
       },
       {
         "appearances": 7,
@@ -5377,7 +5728,8 @@
         "subs": 7,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.98
       },
       {
         "appearances": 10,
@@ -5390,7 +5742,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.18
       },
       {
         "appearances": 5,
@@ -5403,7 +5756,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.9
       },
       {
         "appearances": 9,
@@ -5416,7 +5770,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.12
       },
       {
         "appearances": 10,
@@ -5429,7 +5784,8 @@
         "subs": 6,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.94
       },
       {
         "appearances": 10,
@@ -5442,7 +5798,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.95
       },
       {
         "appearances": 2,
@@ -5460,7 +5817,8 @@
         "position": "Defender",
         "fotMobId": 1789791,
         "starts": 0,
-        "subs": 11
+        "subs": 11,
+        "avgRating": 6.49
       },
       {
         "appearances": 3,
@@ -5480,7 +5838,8 @@
         "position": "Midfielder",
         "fotMobId": 1279040,
         "starts": 0,
-        "subs": 2
+        "subs": 2,
+        "avgRating": 7.11
       },
       {
         "appearances": 5,
@@ -5493,7 +5852,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 7.67
       },
       {
         "appearances": 10,
@@ -5506,7 +5866,8 @@
         "subs": 1,
         "goals": 6,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 8.02
       },
       {
         "appearances": 6,
@@ -5519,7 +5880,8 @@
         "subs": 3,
         "goals": 6,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.41
       },
       {
         "appearances": 10,
@@ -5532,7 +5894,8 @@
         "subs": 7,
         "goals": 4,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.19
       },
       {
         "appearances": 10,
@@ -5545,7 +5908,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.67
       },
       {
         "appearances": 6,
@@ -5558,7 +5922,8 @@
         "subs": 7,
         "goals": 5,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.27
       },
       {
         "appearances": 9,
@@ -5571,7 +5936,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 7.35
       },
       {
         "appearances": 9,
@@ -5584,7 +5950,8 @@
         "subs": 15,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.82
       },
       {
         "appearances": 7,
@@ -5597,7 +5964,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.63
       },
       {
         "appearances": 1,
@@ -5640,7 +6008,8 @@
         "subs": 3,
         "goals": 10,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.01
       },
       {
         "appearances": 8,
@@ -5653,7 +6022,8 @@
         "subs": 10,
         "goals": 8,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.89
       },
       {
         "appearances": 9,
@@ -5666,7 +6036,8 @@
         "subs": 7,
         "goals": 3,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.67
       },
       {
         "appearances": 9,
@@ -5679,7 +6050,8 @@
         "subs": 13,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.77
       },
       {
         "appearances": 3,
@@ -5708,7 +6080,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7
       },
       {
         "appearances": 7,
@@ -5721,7 +6094,8 @@
         "subs": 14,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.65
       },
       {
         "appearances": 5,
@@ -5752,7 +6126,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 7,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.71
       },
       {
         "appearances": 2,
@@ -5765,7 +6140,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.88
       },
       {
         "appearances": 6,
@@ -5775,7 +6151,8 @@
         "position": "Defender",
         "fotMobId": 1327489,
         "starts": 7,
-        "subs": 9
+        "subs": 9,
+        "avgRating": 7.14
       },
       {
         "appearances": 3,
@@ -5788,7 +6165,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.62
       },
       {
         "appearances": 6,
@@ -5801,7 +6179,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7
       },
       {
         "appearances": 6,
@@ -5814,7 +6193,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.75
       },
       {
         "appearances": 1,
@@ -5834,7 +6214,8 @@
         "position": "Defender",
         "fotMobId": 1592621,
         "starts": 0,
-        "subs": 10
+        "subs": 10,
+        "avgRating": 6.6
       },
       {
         "appearances": 4,
@@ -5847,7 +6228,8 @@
         "subs": 4,
         "goals": 1,
         "yellowCards": 5,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.75
       },
       {
         "appearances": 8,
@@ -5859,7 +6241,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.02
       },
       {
         "appearances": 8,
@@ -5872,7 +6255,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.76
       },
       {
         "appearances": 8,
@@ -5885,7 +6269,8 @@
         "subs": 7,
         "goals": 1,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.68
       },
       {
         "appearances": 7,
@@ -5898,7 +6283,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.36
       },
       {
         "appearances": 3,
@@ -5911,7 +6297,8 @@
         "subs": 1,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.62
       },
       {
         "appearances": 7,
@@ -5924,7 +6311,8 @@
         "subs": 10,
         "goals": 2,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.75
       },
       {
         "appearances": 7,
@@ -5937,7 +6325,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.63
       },
       {
         "appearances": 6,
@@ -5950,7 +6339,8 @@
         "subs": 3,
         "goals": 1,
         "yellowCards": 7,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.92
       },
       {
         "appearances": 7,
@@ -5963,7 +6353,8 @@
         "subs": 1,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.76
       },
       {
         "appearances": 8,
@@ -5976,7 +6367,8 @@
         "subs": 3,
         "goals": 2,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.67
       },
       {
         "appearances": 4,
@@ -5989,7 +6381,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.89
       },
       {
         "appearances": 8,
@@ -5999,7 +6392,8 @@
         "position": "Midfielder",
         "fotMobId": 1428849,
         "starts": 0,
-        "subs": 17
+        "subs": 17,
+        "avgRating": 6.79
       },
       {
         "appearances": 4,
@@ -6012,7 +6406,8 @@
         "subs": 5,
         "goals": 3,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.36
       },
       {
         "appearances": 7,
@@ -6025,7 +6420,8 @@
         "subs": 6,
         "goals": 4,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.71
       },
       {
         "appearances": 4,
@@ -6038,7 +6434,8 @@
         "subs": 6,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.62
       },
       {
         "appearances": 6,
@@ -6051,7 +6448,8 @@
         "subs": 8,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.6
       },
       {
         "appearances": 7,
@@ -6064,7 +6462,8 @@
         "subs": 12,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.8
       },
       {
         "appearances": 2,
@@ -6084,7 +6483,8 @@
         "position": "Forward",
         "fotMobId": 1797904,
         "starts": 0,
-        "subs": 6
+        "subs": 6,
+        "avgRating": 6.72
       }
     ],
     "name": "Sevilla FC",
@@ -6110,7 +6510,8 @@
         "position": "Goalkeeper",
         "fotMobId": 280818,
         "starts": 19,
-        "subs": 0
+        "subs": 0,
+        "avgRating": 7.14
       },
       {
         "appearances": 6,
@@ -6143,7 +6544,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.54
       },
       {
         "appearances": 1,
@@ -6166,7 +6568,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.88
       },
       {
         "appearances": 10,
@@ -6179,7 +6582,8 @@
         "subs": 0,
         "goals": 2,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.85
       },
       {
         "appearances": 10,
@@ -6192,7 +6596,8 @@
         "subs": 18,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.69
       },
       {
         "appearances": 10,
@@ -6205,7 +6610,8 @@
         "subs": 18,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.95
       },
       {
         "appearances": 9,
@@ -6218,7 +6624,8 @@
         "subs": 0,
         "goals": 3,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.18
       },
       {
         "appearances": 9,
@@ -6231,7 +6638,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.8
       },
       {
         "appearances": 1,
@@ -6254,7 +6662,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.79
       },
       {
         "appearances": 9,
@@ -6267,7 +6676,8 @@
         "subs": 7,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.66
       },
       {
         "appearances": 1,
@@ -6280,7 +6690,8 @@
         "subs": 1,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.54
       },
       {
         "appearances": 10,
@@ -6293,7 +6704,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.08
       },
       {
         "appearances": 10,
@@ -6306,7 +6718,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 6,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.56
       },
       {
         "appearances": 10,
@@ -6319,7 +6732,8 @@
         "subs": 1,
         "goals": 5,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.82
       },
       {
         "appearances": 10,
@@ -6332,7 +6746,8 @@
         "subs": 14,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.68
       },
       {
         "appearances": 7,
@@ -6375,7 +6790,8 @@
         "subs": 4,
         "goals": 3,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.7
       },
       {
         "appearances": 7,
@@ -6388,7 +6804,8 @@
         "subs": 12,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.68
       },
       {
         "appearances": 5,
@@ -6398,7 +6815,8 @@
         "position": "Forward",
         "fotMobId": 1368318,
         "starts": 0,
-        "subs": 14
+        "subs": 14,
+        "avgRating": 6.45
       },
       {
         "appearances": 8,
@@ -6411,7 +6829,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.57
       },
       {
         "appearances": 10,
@@ -6424,7 +6843,8 @@
         "subs": 14,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.62
       },
       {
         "appearances": 10,
@@ -6437,7 +6857,8 @@
         "subs": 18,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.42
       },
       {
         "appearances": 9,
@@ -6450,7 +6871,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.77
       }
     ],
     "name": "Espanyol",
@@ -6479,7 +6901,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.99
       },
       {
         "appearances": 1,
@@ -6502,7 +6925,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.68
       },
       {
         "appearances": 5,
@@ -6515,7 +6939,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.01
       },
       {
         "appearances": 7,
@@ -6528,7 +6953,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.51
       },
       {
         "appearances": 8,
@@ -6541,7 +6967,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.62
       },
       {
         "appearances": 1,
@@ -6551,7 +6978,8 @@
         "position": "Defender",
         "fotMobId": 1414777,
         "starts": 0,
-        "subs": 1
+        "subs": 1,
+        "avgRating": 6.16
       },
       {
         "appearances": 10,
@@ -6564,7 +6992,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.71
       },
       {
         "appearances": 9,
@@ -6577,7 +7006,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.71
       },
       {
         "appearances": 10,
@@ -6590,7 +7020,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 10,
@@ -6603,7 +7034,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 6,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.52
       },
       {
         "appearances": 1,
@@ -6613,7 +7045,8 @@
         "position": "Defender",
         "fotMobId": 1118199,
         "starts": 1,
-        "subs": 0
+        "subs": 0,
+        "avgRating": 6.25
       },
       {
         "appearances": 1,
@@ -6626,7 +7059,8 @@
         "subs": 8,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.96
       },
       {
         "appearances": 2,
@@ -6677,7 +7111,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 7.06
       },
       {
         "appearances": 10,
@@ -6690,7 +7125,8 @@
         "subs": 2,
         "goals": 2,
         "yellowCards": 7,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.54
       },
       {
         "appearances": 10,
@@ -6703,7 +7139,8 @@
         "subs": 0,
         "goals": 3,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.89
       },
       {
         "appearances": 10,
@@ -6716,7 +7153,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.59
       },
       {
         "appearances": 9,
@@ -6729,7 +7167,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.59
       },
       {
         "appearances": 10,
@@ -6742,7 +7181,8 @@
         "subs": 1,
         "goals": 3,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.55
       },
       {
         "appearances": 6,
@@ -6752,7 +7192,8 @@
         "position": "Midfielder",
         "fotMobId": 1713218,
         "starts": 0,
-        "subs": 7
+        "subs": 7,
+        "avgRating": 6.34
       },
       {
         "appearances": 2,
@@ -6772,7 +7213,8 @@
         "position": "Midfielder",
         "fotMobId": 1477850,
         "starts": 0,
-        "subs": 1
+        "subs": 1,
+        "avgRating": 6.67
       },
       {
         "appearances": 10,
@@ -6782,7 +7224,8 @@
         "position": "Forward",
         "fotMobId": 191873,
         "starts": 0,
-        "subs": 12
+        "subs": 12,
+        "avgRating": 6.46
       },
       {
         "appearances": 7,
@@ -6795,7 +7238,8 @@
         "subs": 3,
         "goals": 4,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.65
       },
       {
         "appearances": 2,
@@ -6808,7 +7252,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.6
       },
       {
         "appearances": 6,
@@ -6821,7 +7266,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.43
       },
       {
         "appearances": 9,
@@ -6847,7 +7293,8 @@
         "subs": 0,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.19
       },
       {
         "appearances": 1,
@@ -6867,7 +7314,8 @@
         "position": "Forward",
         "fotMobId": 1559834,
         "starts": 0,
-        "subs": 11
+        "subs": 11,
+        "avgRating": 6.34
       },
       {
         "appearances": 1,
@@ -6893,7 +7341,8 @@
         "position": "Goalkeeper",
         "fotMobId": 530468,
         "starts": 18,
-        "subs": 0
+        "subs": 0,
+        "avgRating": 7.1
       },
       {
         "appearances": 7,
@@ -6936,7 +7385,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.58
       },
       {
         "appearances": 6,
@@ -6949,7 +7399,8 @@
         "subs": 4,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.93
       },
       {
         "appearances": 7,
@@ -6962,7 +7413,8 @@
         "subs": 1,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.92
       },
       {
         "appearances": 7,
@@ -6975,7 +7427,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.71
       },
       {
         "appearances": 4,
@@ -6988,7 +7441,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.46
       },
       {
         "appearances": 7,
@@ -7001,7 +7455,8 @@
         "subs": 8,
         "goals": 0,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.5
       },
       {
         "appearances": 2,
@@ -7021,7 +7476,8 @@
         "position": "Defender",
         "fotMobId": 1553663,
         "starts": 0,
-        "subs": 6
+        "subs": 6,
+        "avgRating": 6.26
       },
       {
         "appearances": 1,
@@ -7044,7 +7500,8 @@
         "subs": 8,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.77
       },
       {
         "appearances": 7,
@@ -7057,7 +7514,8 @@
         "subs": 16,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.65
       },
       {
         "appearances": 6,
@@ -7070,7 +7528,8 @@
         "subs": 1,
         "goals": 0,
         "yellowCards": 5,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.9
       },
       {
         "appearances": 7,
@@ -7083,7 +7542,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.66
       },
       {
         "appearances": 6,
@@ -7096,7 +7556,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.39
       },
       {
         "appearances": 7,
@@ -7109,7 +7570,8 @@
         "subs": 4,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.64
       },
       {
         "appearances": 6,
@@ -7122,7 +7584,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.72
       },
       {
         "appearances": 7,
@@ -7135,7 +7598,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.68
       },
       {
         "appearances": 7,
@@ -7148,7 +7612,8 @@
         "subs": 8,
         "goals": 2,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.92
       },
       {
         "appearances": 4,
@@ -7161,7 +7626,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.4
       },
       {
         "appearances": 7,
@@ -7174,7 +7640,8 @@
         "subs": 6,
         "goals": 3,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.67
       },
       {
         "appearances": 6,
@@ -7187,7 +7654,8 @@
         "subs": 4,
         "goals": 3,
         "yellowCards": 2,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.66
       },
       {
         "appearances": 7,
@@ -7200,7 +7668,8 @@
         "subs": 11,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.62
       },
       {
         "appearances": 2,
@@ -7210,7 +7679,8 @@
         "position": "Forward",
         "fotMobId": 1418118,
         "starts": 0,
-        "subs": 3
+        "subs": 3,
+        "avgRating": 6.15
       },
       {
         "appearances": 1,
@@ -7239,7 +7709,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.39
       },
       {
         "appearances": 8,
@@ -7249,7 +7720,8 @@
         "position": "Goalkeeper",
         "fotMobId": 177126,
         "starts": 18,
-        "subs": 1
+        "subs": 1,
+        "avgRating": 7
       },
       {
         "appearances": 5,
@@ -7290,7 +7762,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.25
       },
       {
         "appearances": 9,
@@ -7303,7 +7776,8 @@
         "subs": 10,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.75
       },
       {
         "appearances": 7,
@@ -7316,7 +7790,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.92
       },
       {
         "appearances": 7,
@@ -7329,7 +7804,8 @@
         "subs": 8,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.86
       },
       {
         "appearances": 8,
@@ -7342,7 +7818,8 @@
         "subs": 14,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.64
       },
       {
         "appearances": 9,
@@ -7355,7 +7832,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.79
       },
       {
         "appearances": 9,
@@ -7368,7 +7846,8 @@
         "subs": 12,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.33
       },
       {
         "appearances": 6,
@@ -7381,7 +7860,8 @@
         "subs": 15,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.78
       },
       {
         "appearances": 6,
@@ -7394,7 +7874,8 @@
         "subs": 7,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.74
       },
       {
         "appearances": 1,
@@ -7414,7 +7895,8 @@
         "position": "Defender",
         "fotMobId": 1367926,
         "starts": 0,
-        "subs": 3
+        "subs": 3,
+        "avgRating": 6.62
       },
       {
         "appearances": 3,
@@ -7424,7 +7906,8 @@
         "position": "Defender",
         "fotMobId": 1527038,
         "starts": 0,
-        "subs": 3
+        "subs": 3,
+        "avgRating": 6.19
       },
       {
         "appearances": 6,
@@ -7437,7 +7920,8 @@
         "subs": 13,
         "goals": 2,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.64
       },
       {
         "appearances": 7,
@@ -7450,7 +7934,8 @@
         "subs": 8,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.98
       },
       {
         "appearances": 9,
@@ -7463,7 +7948,8 @@
         "subs": 6,
         "goals": 2,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.22
       },
       {
         "appearances": 7,
@@ -7476,7 +7962,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.13
       },
       {
         "appearances": 6,
@@ -7489,7 +7976,8 @@
         "subs": 4,
         "goals": 1,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.94
       },
       {
         "appearances": 8,
@@ -7502,7 +7990,8 @@
         "subs": 9,
         "goals": 2,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.98
       },
       {
         "appearances": 8,
@@ -7515,7 +8004,8 @@
         "subs": 2,
         "goals": 2,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.81
       },
       {
         "appearances": 1,
@@ -7525,7 +8015,8 @@
         "position": "Midfielder",
         "fotMobId": 1254394,
         "starts": 1,
-        "subs": 0
+        "subs": 0,
+        "avgRating": 6.91
       },
       {
         "appearances": 7,
@@ -7538,7 +8029,8 @@
         "subs": 3,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.85
       },
       {
         "appearances": 1,
@@ -7568,7 +8060,8 @@
         "position": "Midfielder",
         "fotMobId": 1732412,
         "starts": 0,
-        "subs": 1
+        "subs": 1,
+        "avgRating": 6.58
       },
       {
         "appearances": 8,
@@ -7581,7 +8074,8 @@
         "subs": 14,
         "goals": 6,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.96
       },
       {
         "appearances": 9,
@@ -7594,7 +8088,8 @@
         "subs": 8,
         "goals": 7,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.74
       },
       {
         "appearances": 6,
@@ -7607,7 +8102,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.52
       },
       {
         "appearances": 8,
@@ -7620,7 +8116,8 @@
         "subs": 1,
         "goals": 5,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.08
       },
       {
         "appearances": 1,
@@ -7633,7 +8130,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.21
       },
       {
         "appearances": 6,
@@ -7646,7 +8144,8 @@
         "subs": 16,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.46
       },
       {
         "appearances": 2,
@@ -7695,7 +8194,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.08
       },
       {
         "appearances": 7,
@@ -7718,7 +8218,8 @@
         "subs": 14,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 7.06
       },
       {
         "appearances": 4,
@@ -7741,7 +8242,8 @@
         "subs": 13,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.5
       },
       {
         "appearances": 4,
@@ -7754,7 +8256,8 @@
         "subs": 9,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.43
       },
       {
         "appearances": 4,
@@ -7767,7 +8270,8 @@
         "subs": 6,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.65
       },
       {
         "appearances": 10,
@@ -7780,7 +8284,8 @@
         "subs": 2,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.82
       },
       {
         "appearances": 10,
@@ -7793,7 +8298,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.7
       },
       {
         "appearances": 8,
@@ -7806,7 +8312,8 @@
         "subs": 2,
         "goals": 1,
         "yellowCards": 4,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.66
       },
       {
         "appearances": 10,
@@ -7819,7 +8326,8 @@
         "subs": 0,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.67
       },
       {
         "appearances": 9,
@@ -7842,7 +8350,8 @@
         "subs": 17,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 5.96
       },
       {
         "appearances": 1,
@@ -7865,7 +8374,8 @@
         "subs": 7,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.87
       },
       {
         "appearances": 10,
@@ -7878,7 +8388,8 @@
         "subs": 13,
         "goals": 0,
         "yellowCards": 4,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.58
       },
       {
         "appearances": 8,
@@ -7891,7 +8402,8 @@
         "subs": 5,
         "goals": 1,
         "yellowCards": 3,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 6.76
       },
       {
         "appearances": 10,
@@ -7904,7 +8416,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 3,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.91
       },
       {
         "appearances": 10,
@@ -7917,7 +8430,8 @@
         "subs": 13,
         "goals": 1,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.6
       },
       {
         "appearances": 8,
@@ -7930,7 +8444,8 @@
         "subs": 3,
         "goals": 3,
         "yellowCards": 7,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.9
       },
       {
         "appearances": 1,
@@ -7940,7 +8455,8 @@
         "position": "Midfielder",
         "fotMobId": 213516,
         "starts": 0,
-        "subs": 3
+        "subs": 3,
+        "avgRating": 6.62
       },
       {
         "appearances": 9,
@@ -7953,7 +8469,8 @@
         "subs": 3,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.58
       },
       {
         "appearances": 10,
@@ -7966,7 +8483,8 @@
         "subs": 12,
         "goals": 0,
         "yellowCards": 1,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.6
       },
       {
         "appearances": 1,
@@ -7976,7 +8494,8 @@
         "position": "Midfielder",
         "fotMobId": 1673117,
         "starts": 0,
-        "subs": 2
+        "subs": 2,
+        "avgRating": 6.72
       },
       {
         "appearances": 1,
@@ -7999,7 +8518,8 @@
         "subs": 1,
         "goals": 8,
         "yellowCards": 1,
-        "redCards": 1
+        "redCards": 1,
+        "avgRating": 7.22
       },
       {
         "appearances": 10,
@@ -8009,7 +8529,8 @@
         "position": "Forward",
         "fotMobId": 245311,
         "starts": 0,
-        "subs": 19
+        "subs": 19,
+        "avgRating": 6.42
       },
       {
         "appearances": 10,
@@ -8022,7 +8543,8 @@
         "subs": 5,
         "goals": 0,
         "yellowCards": 2,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.56
       },
       {
         "appearances": 10,
@@ -8032,7 +8554,8 @@
         "position": "Forward",
         "fotMobId": 1315828,
         "starts": 0,
-        "subs": 17
+        "subs": 17,
+        "avgRating": 6.53
       },
       {
         "appearances": 2,
@@ -8055,7 +8578,8 @@
         "subs": 14,
         "goals": 0,
         "yellowCards": 0,
-        "redCards": 0
+        "redCards": 0,
+        "avgRating": 6.62
       }
     ],
     "name": "Mallorca",
