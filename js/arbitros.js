@@ -138,6 +138,7 @@
         html += '<button class="arb-tab' + (currentTab === 'partidos' ? ' active' : '') + '" data-tab="partidos">Partidos</button>';
         html += '<button class="arb-tab' + (currentTab === 'equipos' ? ' active' : '') + '" data-tab="equipos">Equipos</button>';
         html += '<button class="arb-tab' + (currentTab === 'ranking' ? ' active' : '') + '" data-tab="ranking">Ranking</button>';
+        html += '<button class="arb-tab' + (currentTab === 'detalle' ? ' active' : '') + '" data-tab="detalle">Detalle</button>';
         html += '</div>';
         return html;
     }
@@ -475,6 +476,117 @@
         });
     }
 
+    function renderDetalleTab() {
+        var container = document.getElementById('arb-tab-content');
+        if (!container) return;
+
+        var selected = arbitrosData.find(function(a) { return a.id === selectedId; });
+        if (!selected) return;
+
+        loadAllMatches().then(function(matches) {
+            var myMatches = [];
+            matches.forEach(function(m) {
+                var data = extractMatchData(m);
+                if (matchArbitro(data.referee) && matchArbitro(data.referee).id === selected.id) {
+                    myMatches.push(data);
+                }
+            });
+
+            if (!myMatches.length) {
+                container.innerHTML = '<div class="arb-loading">No hay partidos registrados para este &aacute;rbitro.</div>';
+                return;
+            }
+
+            var teamStats = {};
+
+            myMatches.forEach(function(m) {
+                var origMatch = matches.find(function(om) { return om.id === m.id; });
+
+                function ensureTeam(name) {
+                    if (!teamStats[name]) {
+                        teamStats[name] = { team: name, played: 0, wins: 0, draws: 0, losses: 0, penFor: 0, penAgainst: 0 };
+                    }
+                }
+
+                ensureTeam(m.home);
+                ensureTeam(m.away);
+                teamStats[m.home].played++;
+                teamStats[m.away].played++;
+
+                if (origMatch && origMatch.events) {
+                    origMatch.events.forEach(function(e) {
+                        if (e.type === 'Penalty') {
+                            if (e.team && e.team.name === m.home) teamStats[m.home].penFor++;
+                            else if (e.team && e.team.name === m.away) teamStats[m.away].penFor++;
+                            var otherTeam = (e.team && e.team.name === m.home) ? m.away : m.home;
+                            teamStats[otherTeam].penAgainst++;
+                        }
+                    });
+                }
+
+                if (m.score) {
+                    var parts = m.score.split('-').map(function(s) { return parseInt(s.trim()); });
+                    if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
+                        if (parts[0] > parts[1]) {
+                            teamStats[m.home].wins++;
+                            teamStats[m.away].losses++;
+                        } else if (parts[0] < parts[1]) {
+                            teamStats[m.home].losses++;
+                            teamStats[m.away].wins++;
+                        } else {
+                            teamStats[m.home].draws++;
+                            teamStats[m.away].draws++;
+                        }
+                    }
+                }
+            });
+
+            var teamList = Object.keys(teamStats).map(function(k) { return teamStats[k]; });
+            teamList.sort(function(a, b) { return b.played - a.played || a.team.localeCompare(b.team, 'es'); });
+
+            function pct(val, total) {
+                if (total === 0) return '0.0';
+                return ((val / total) * 100).toFixed(1);
+            }
+
+            var html = '<div class="arb-detalle-wrap">';
+            html += '<table class="arb-detalle-table">';
+            html += '<thead><tr>';
+            html += '<th class="arb-detalle-col-team">Equipo</th>';
+            html += '<th class="arb-detalle-col-num">PJ</th>';
+            html += '<th class="arb-detalle-col-num">Gan</th>';
+            html += '<th class="arb-detalle-col-num">%G</th>';
+            html += '<th class="arb-detalle-col-num">Per</th>';
+            html += '<th class="arb-detalle-col-num">%P</th>';
+            html += '<th class="arb-detalle-col-num">Emp</th>';
+            html += '<th class="arb-detalle-col-num">%E</th>';
+            html += '<th class="arb-detalle-col-num arb-detalle-pen">\u26BD Fav</th>';
+            html += '<th class="arb-detalle-col-num arb-detalle-pen">\u26BD Con</th>';
+            html += '</tr></thead>';
+            html += '<tbody>';
+
+            teamList.forEach(function(t) {
+                html += '<tr>';
+                html += '<td class="arb-detalle-team">' + escHtml(t.team) + '</td>';
+                html += '<td class="arb-detalle-num">' + t.played + '</td>';
+                html += '<td class="arb-detalle-num arb-detalle-wins">' + t.wins + '</td>';
+                html += '<td class="arb-detalle-num arb-detalle-pct">' + pct(t.wins, t.played) + '</td>';
+                html += '<td class="arb-detalle-num arb-detalle-losses">' + t.losses + '</td>';
+                html += '<td class="arb-detalle-num arb-detalle-pct">' + pct(t.losses, t.played) + '</td>';
+                html += '<td class="arb-detalle-num">' + t.draws + '</td>';
+                html += '<td class="arb-detalle-num arb-detalle-pct">' + pct(t.draws, t.played) + '</td>';
+                html += '<td class="arb-detalle-num arb-detalle-pen">' + t.penFor + '</td>';
+                html += '<td class="arb-detalle-num arb-detalle-pen">' + t.penAgainst + '</td>';
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            html += '</div>';
+
+            container.innerHTML = html;
+        });
+    }
+
     function renderContent() {
         var tabContent = document.getElementById('arb-tab-content');
         if (!tabContent) return;
@@ -490,6 +602,7 @@
             if (currentTab === 'partidos') renderPartidosTab();
             else if (currentTab === 'ranking') renderRankingTab();
             else if (currentTab === 'equipos') renderEquiposTab();
+            else if (currentTab === 'detalle') renderDetalleTab();
         }
     }
 

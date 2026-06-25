@@ -628,3 +628,81 @@
     font-size:12px;
 }
 
+/* ================================
+   DETALLE TABLE
+   =============================== */
+.arb-detalle-wrap{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+.arb-detalle-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:11px;
+    table-layout:fixed;
+    min-width:340px;
+}
+
+.arb-detalle-table th{
+    text-align:left;
+    font-size:9px;
+    font-weight:700;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    padding:6px 2px;
+    border-bottom:2px solid var(--border-color);
+    white-space:nowrap;
+}
+
+.arb-detalle-table td{
+    padding:7px 2px;
+    border-bottom:1px solid var(--border-color);
+    color:var(--text-primary);
+}
+
+.arb-detalle-table tbody tr:hover{
+    background:var(--bg-card-hover);
+}
+
+.arb-detalle-col-team{
+    width:auto;
+    text-align:left;
+}
+
+.arb-detalle-col-num{
+    width:32px;
+    text-align:center;
+}
+
+.arb-detalle-team{
+    font-weight:600;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.arb-detalle-num{
+    text-align:center;
+    font-weight:700;
+    font-variant-numeric:tabular-nums;
+}
+
+.arb-detalle-wins{
+    color:#22c55e;
+}
+
+.arb-detalle-losses{
+    color:#ef4444;
+}
+
+.arb-detalle-pct{
+    color:var(--text-muted);
+    font-size:10px;
+}
+
+.arb-detalle-pen{
+    color:var(--accent-blue);
+}
+
