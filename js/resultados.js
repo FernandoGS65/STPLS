@@ -267,9 +267,11 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
 (function() {
 
     var partidosCache = null;
-    var jornadasCache = null;
     var descargadosCache = null;
+    var plantillaCache = null;
     var modoActual = null;
+
+    var fotMobById = {};
 
     function escHtml(s) {
         if (s == null) return '';
@@ -285,6 +287,11 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
         return parts[0].charAt(0) + '. ' + last;
     }
 
+    function playerPhotoUrl(fotMobId) {
+        if (!fotMobId) return '';
+        return 'https://images.fotmob.com/image_resources/playerimages/' + fotMobId + '.png';
+    }
+
     async function ensureData() {
         if (partidosCache && descargadosCache) return;
 
@@ -294,6 +301,23 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
 
         var respDesc = await fetch(APP.ruta('descargados'));
         descargadosCache = await respDesc.json();
+    }
+
+    async function ensurePlantilla() {
+        if (plantillaCache) return;
+
+        var resp = await fetch(APP.ruta('plantilla'));
+        plantillaCache = await resp.json();
+
+        fotMobById = {};
+        Object.keys(plantillaCache).forEach(function(teamKey) {
+            var team = plantillaCache[teamKey];
+            if (team && team.players) {
+                team.players.forEach(function(p) {
+                    if (p.id && p.fotMobId) fotMobById[p.id] = p.fotMobId;
+                });
+            }
+        });
     }
 
     function getPartidosDescargados(jornada) {
@@ -320,7 +344,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
         return Promise.all(resultados);
     }
 
-    function extraerJugadores(partidos) {
+    function extraerJugadores(partidos, modo) {
         var jugadores = {};
 
         partidos.forEach(function(d) {
@@ -334,19 +358,44 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
                     if (!p.matchRating || p.minutesPlayed === 0) return;
                     var rating = parseFloat(p.matchRating);
                     if (isNaN(rating)) return;
+                    rating = Math.min(rating, 10);
 
                     var key = p.id || (p.name + '_' + (p.shirtNumber || ''));
-                    if (!jugadores[key] || rating > jugadores[key].rating) {
-                        jugadores[key] = {
-                            id: p.id,
-                            name: p.name,
-                            position: p.position,
-                            rating: rating,
-                            shirtNumber: p.shirtNumber,
-                            teamName: box.team ? box.team.name : '',
-                            teamLogo: box.team ? box.team.logo : '',
-                            minutesPlayed: p.minutesPlayed
-                        };
+                    var teamLogo = box.team ? box.team.logo : '';
+
+                    if (modo === 'temporada') {
+                        if (!jugadores[key]) {
+                            jugadores[key] = {
+                                id: p.id,
+                                name: p.name,
+                                position: p.position,
+                                sumRating: rating,
+                                numMatches: 1,
+                                rating: rating,
+                                shirtNumber: p.shirtNumber,
+                                teamName: box.team ? box.team.name : '',
+                                teamLogo: teamLogo,
+                                fotMobId: (p.id && fotMobById[p.id]) ? fotMobById[p.id] : null
+                            };
+                        } else {
+                            jugadores[key].sumRating += rating;
+                            jugadores[key].numMatches++;
+                            jugadores[key].rating = Math.min(jugadores[key].sumRating / jugadores[key].numMatches, 10);
+                            if (teamLogo && !jugadores[key].teamLogo) jugadores[key].teamLogo = teamLogo;
+                        }
+                    } else {
+                        if (!jugadores[key] || rating > jugadores[key].rating) {
+                            jugadores[key] = {
+                                id: p.id,
+                                name: p.name,
+                                position: p.position,
+                                rating: rating,
+                                shirtNumber: p.shirtNumber,
+                                teamName: box.team ? box.team.name : '',
+                                teamLogo: teamLogo,
+                                fotMobId: (p.id && fotMobById[p.id]) ? fotMobById[p.id] : null
+                            };
+                        }
                     }
                 });
             });
@@ -408,10 +457,10 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
         html += '<div class="bx-pitch-players">';
 
         var filas = [
-            { jugadores: xi.del, topPct: 12 },
-            { jugadores: xi.med, topPct: 32 },
-            { jugadores: xi.def, topPct: 55 },
-            { jugadores: xi.por, topPct: 78 }
+            { jugadores: xi.por, topPct: 8 },
+            { jugadores: xi.def, topPct: 28 },
+            { jugadores: xi.med, topPct: 52 },
+            { jugadores: xi.del, topPct: 75 }
         ];
 
         filas.forEach(function(fila) {
@@ -425,14 +474,22 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
                 if (leftPct < 8) leftPct = 8;
                 if (leftPct > 92) leftPct = 92;
 
+                var photo = playerPhotoUrl(p.fotMobId);
                 var initials = (p.name || '').split(' ').map(function(w){ return w.charAt(0); }).join('').substring(0,2);
 
                 html += '<div class="bx-player-node" style="top:' + fila.topPct + '%;left:' + leftPct + '%">';
                 html += '<div class="bx-avatar-wrap">';
                 html += '<div class="bx-avatar">';
-                html += '<span class="bx-avatar-num">' + (p.shirtNumber || '') + '</span>';
-                html += '<span class="bx-avatar-initials">' + escHtml(initials) + '</span>';
+                if (photo) {
+                    html += '<img class="bx-avatar-photo" src="' + escHtml(photo) + '" alt="" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">';
+                    html += '<span class="bx-avatar-initials fallback" style="display:none">' + escHtml(initials) + '</span>';
+                } else {
+                    html += '<span class="bx-avatar-initials">' + escHtml(initials) + '</span>';
+                }
                 html += '</div>';
+                if (p.teamLogo) {
+                    html += '<img class="bx-team-badge" src="' + escHtml(p.teamLogo) + '" alt="" onerror="this.style.display=\'none\'">';
+                }
                 html += '</div>';
                 html += '<div class="bx-player-name">' + escHtml(shortName(p.name)) + '</div>';
                 html += '<div class="bx-player-rating">' + p.rating.toFixed(2) + '</div>';
@@ -457,18 +514,14 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
         container.innerHTML = '<div class="bestxi-loading">Cargando alineaciones...</div>';
 
         await ensureData();
+        await ensurePlantilla();
 
         var selector = document.getElementById('selector-jornada');
         var jornadaActual = selector ? selector.value : null;
 
-        var jornadaNum = null;
-        if (modo === 'jornada' && jornadaActual) {
-            jornadaNum = parseInt(jornadaActual.split('-')[1].trim());
-        }
-
         var partidos = await getPartidosDescargados(modo === 'jornada' ? jornadaActual : null);
 
-        var jugadores = extraerJugadores(partidos);
+        var jugadores = extraerJugadores(partidos, modo);
         var xi = seleccionarBestXI(jugadores);
 
         if (xi.por.length === 0 && xi.def.length === 0 && xi.med.length === 0 && xi.del.length === 0) {
@@ -511,6 +564,8 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
     APP.onChange(function() {
         partidosCache = null;
         descargadosCache = null;
+        plantillaCache = null;
+        fotMobById = {};
         var container = document.getElementById('bestxi-container');
         var lista = document.getElementById('lista-resultados');
         if (container) container.style.display = 'none';
