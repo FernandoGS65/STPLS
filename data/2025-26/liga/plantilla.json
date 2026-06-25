@@ -973,6 +973,45 @@
                 "subs": 13,
                 "nationality": "Senegal",
                 "countryCode": "SEN"
+            },
+            {
+                "appearances": 0,
+                "id": 88221,
+                "number": 21,
+                "name": "Donny van de Beek",
+                "position": "Midfielder",
+                "fotMobId": 612836,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 47866098,
+                "number": 16,
+                "name": "Dawda Camara",
+                "position": "Forward",
+                "fotMobId": 1305565,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 70728259,
+                "number": 24,
+                "name": "Lancinet Kourouma",
+                "position": "Midfielder",
+                "fotMobId": 1643963,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Girona",
@@ -1435,6 +1474,71 @@
                 "avgRating": 6.38,
                 "nationality": "Morocco",
                 "countryCode": "MAR"
+            },
+            {
+                "appearances": 0,
+                "id": 7564256,
+                "number": 6,
+                "name": "Gonzalo Villar",
+                "position": "Midfielder",
+                "fotMobId": 881773,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 51293466,
+                "number": 17,
+                "name": "Lucas Cepeda",
+                "position": "Forward",
+                "fotMobId": 1280756,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 7596456,
+                "number": 19,
+                "name": "Tete Morente",
+                "position": "Midfielder",
+                "fotMobId": 801213,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 102263973,
+                "number": 20,
+                "name": "Alex Sanchez",
+                "position": "Forward",
+                "fotMobId": 1896315,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 71816941,
+                "number": 15,
+                "name": "Buba Sangaré",
+                "position": "Defender",
+                "fotMobId": 1583872,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Elche",
@@ -1938,6 +2042,19 @@
                 "avgRating": 7.3,
                 "nationality": "Argentina",
                 "countryCode": "ARG"
+            },
+            {
+                "appearances": 0,
+                "id": 7611751,
+                "number": 4,
+                "name": "Unai Núñez",
+                "position": "Defender",
+                "fotMobId": 805352,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Valencia",
@@ -2397,6 +2514,32 @@
                 "avgRating": 6.74,
                 "nationality": "Morocco",
                 "countryCode": "MAR"
+            },
+            {
+                "appearances": 0,
+                "id": 63083496,
+                "number": 11,
+                "name": "Fer López",
+                "position": "Forward",
+                "fotMobId": 1573122,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 34125,
+                "number": 8,
+                "name": "Matías Vecino",
+                "position": "Midfielder",
+                "fotMobId": 206322,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Celta de Vigo",
@@ -3503,6 +3646,19 @@
                 "subs": 7,
                 "nationality": "Senegal",
                 "countryCode": "SEN"
+            },
+            {
+                "appearances": 0,
+                "id": 58402904,
+                "number": 9,
+                "name": "Thiago Fernández",
+                "position": "Forward",
+                "fotMobId": 1460063,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Oviedo",
@@ -3971,6 +4127,19 @@
                 "avgRating": 6.95,
                 "nationality": "Spain",
                 "countryCode": "ESP"
+            },
+            {
+                "appearances": 0,
+                "id": 2560054,
+                "number": 16,
+                "name": "Abdul Mumin",
+                "position": "Defender",
+                "fotMobId": 776591,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Rayo Vallecano",
@@ -4484,6 +4653,19 @@
                 "avgRating": 6.84,
                 "nationality": "Argentina",
                 "countryCode": "ARG"
+            },
+            {
+                "appearances": 0,
+                "id": 90305376,
+                "number": 32,
+                "name": "Manuel Serrano",
+                "position": "Defender",
+                "fotMobId": 1997332,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Real Madrid",
@@ -4959,6 +5141,19 @@
                 "avgRating": 6.43,
                 "nationality": "Spain",
                 "countryCode": "ESP"
+            },
+            {
+                "appearances": 0,
+                "id": 120904,
+                "number": 8,
+                "name": "Álvaro Fidalgo",
+                "position": "Midfielder",
+                "fotMobId": 895954,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Real Betis",
@@ -5436,6 +5631,32 @@
                 "subs": 1,
                 "nationality": "Spain",
                 "countryCode": "ESP"
+            },
+            {
+                "appearances": 0,
+                "id": 7610785,
+                "number": 5,
+                "name": "Yeray Álvarez",
+                "position": "Defender",
+                "fotMobId": 639450,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 29401491,
+                "number": 14,
+                "name": "Beñat Prados",
+                "position": "Midfielder",
+                "fotMobId": 1229176,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Athletic Club",
@@ -6003,6 +6224,32 @@
                 "subs": 2,
                 "nationality": "Kenya",
                 "countryCode": "KEN"
+            },
+            {
+                "appearances": 0,
+                "id": 58811361,
+                "number": 11,
+                "name": "Wesley",
+                "position": "Forward",
+                "fotMobId": 1372179,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 64973475,
+                "number": 28,
+                "name": "Gorka Carrera",
+                "position": "Forward",
+                "fotMobId": 1431291,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Real Sociedad",
@@ -6486,6 +6733,19 @@
                 "subs": 1,
                 "nationality": "Israel",
                 "countryCode": "ISR"
+            },
+            {
+                "appearances": 0,
+                "id": 29326304,
+                "number": 21,
+                "name": "Sergio Lozano",
+                "position": "Midfielder",
+                "fotMobId": 906919,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Levante",
@@ -7488,6 +7748,45 @@
                 "avgRating": 6.72,
                 "nationality": "Spain",
                 "countryCode": "ESP"
+            },
+            {
+                "appearances": 0,
+                "id": 4098892,
+                "number": 11,
+                "name": "Dodi Lukebakio",
+                "position": "Midfielder",
+                "fotMobId": 688876,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 3117758,
+                "number": 9,
+                "name": "Neal Maupay",
+                "position": "Forward",
+                "fotMobId": 391064,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 54764626,
+                "number": 20,
+                "name": "Stanis Idumbo",
+                "position": "Midfielder",
+                "fotMobId": 1366936,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Sevilla FC",
@@ -7949,6 +8248,19 @@
                 "avgRating": 6.66,
                 "nationality": "Belgium",
                 "countryCode": "BEL"
+            },
+            {
+                "appearances": 0,
+                "id": 88462892,
+                "number": 27,
+                "name": "Lluc Castell",
+                "position": "Forward",
+                "fotMobId": 1701828,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Espanyol",
@@ -8474,6 +8786,84 @@
                 "subs": 1,
                 "nationality": "Morocco",
                 "countryCode": "MAR"
+            },
+            {
+                "appearances": 0,
+                "id": 64972348,
+                "number": 11,
+                "name": "Christantus Uche",
+                "position": "Forward",
+                "fotMobId": 1580704,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 29698053,
+                "number": 7,
+                "name": "Álex Sancris",
+                "position": "Forward",
+                "fotMobId": 1323207,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 75908112,
+                "number": 3,
+                "name": "Davinchi",
+                "position": "Defender",
+                "fotMobId": 1780392,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 102700605,
+                "number": 14,
+                "name": "Damián Cáceres",
+                "position": "Midfielder",
+                "fotMobId": 1217911,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 7616420,
+                "number": 22,
+                "name": "Álex Sola",
+                "position": "Midfielder",
+                "fotMobId": 895953,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 7374598,
+                "number": 10,
+                "name": "Veljko Birmančević",
+                "position": "Midfielder",
+                "fotMobId": 940735,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Getafe",
@@ -8895,6 +9285,58 @@
                 "subs": 1,
                 "nationality": "Spain",
                 "countryCode": "ESP"
+            },
+            {
+                "appearances": 0,
+                "id": 53350563,
+                "number": 2,
+                "name": "Ángel Pérez",
+                "position": "Defender",
+                "fotMobId": 1563022,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 17188353,
+                "number": 3,
+                "name": "Ville Koski",
+                "position": "Defender",
+                "fotMobId": 1056461,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 1068872,
+                "number": 4,
+                "name": "Facundo Garcés",
+                "position": "Defender",
+                "fotMobId": 845067,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 29428378,
+                "number": 9,
+                "name": "Ibrahim Diabaté",
+                "position": "Forward",
+                "fotMobId": 1104401,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Alavés",
@@ -9922,6 +10364,32 @@
                 "avgRating": 6.62,
                 "nationality": "Spain",
                 "countryCode": "ESP"
+            },
+            {
+                "appearances": 0,
+                "id": 22673945,
+                "number": 11,
+                "name": "Zito Luvumbo",
+                "position": "Forward",
+                "fotMobId": 1089744,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
+            },
+            {
+                "appearances": 0,
+                "id": 98536662,
+                "number": 32,
+                "name": "Miguel Calatayud",
+                "position": "Defender",
+                "fotMobId": 1981023,
+                "starts": 0,
+                "subs": 0,
+                "avgRating": 0,
+                "nationality": "",
+                "countryCode": ""
             }
         ],
         "name": "Mallorca",
