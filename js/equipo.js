@@ -888,6 +888,40 @@ document.getElementById(
 
     var plantillaCache = null;
 
+    function getPositionOverrides() {
+        try {
+            return JSON.parse(localStorage.getItem('stpls_position_overrides') || '{}');
+        } catch(e) { return {}; }
+    }
+
+    function savePositionOverride(teamName, playerId, newPosition) {
+        var overrides = getPositionOverrides();
+        var key = teamName + ':' + playerId;
+        overrides[key] = newPosition;
+        localStorage.setItem('stpls_position_overrides', JSON.stringify(overrides));
+    }
+
+    function applyOverrides(data) {
+        var overrides = getPositionOverrides();
+        if (!Object.keys(overrides).length) return data;
+        var result = JSON.parse(JSON.stringify(data));
+        Object.keys(overrides).forEach(function(key) {
+            var parts = key.split(':');
+            var teamName = parts[0];
+            var playerId = parseInt(parts[1]);
+            var newPos = overrides[key];
+            if (result[teamName] && result[teamName].players) {
+                var pl = result[teamName].players.find(function(p) { return p.id === playerId; });
+                if (pl) pl.position = newPos;
+            }
+        });
+        return result;
+    }
+
+    function isLocalServer() {
+        return location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    }
+
     async function cargarPlantilla(teamName) {
         var container = document.getElementById('pl-plantilla');
         if (!container) return;
@@ -900,6 +934,7 @@ document.getElementById(
         try {
             var resp = await fetch(APP.ruta('plantilla'));
             var data = await resp.json();
+            data = applyOverrides(data);
             plantillaCache = data;
             renderPlantilla(data, teamName, container);
         } catch(e) {
@@ -1116,6 +1151,10 @@ document.getElementById(
         html += '<div class="modal-box">';
         html += '<button class="modal-close" id="modal-close-btn">&times;</button>';
 
+        if (!isLocalServer()) {
+            html += '<div class="modal-info-banner">Los cambios se guardan solo en este navegador</div>';
+        }
+
         html += '<div class="modal-player">';
         if (fotoUrl) {
             html += '<img class="modal-player-photo" src="' + escHtml(fotoUrl) + '" alt="' + escHtml(player.name) + '">';
@@ -1192,58 +1231,67 @@ document.getElementById(
         if (saveBtn) saveBtn.disabled = true;
         if (cancelBtn) cancelBtn.disabled = true;
 
-        var payload = JSON.stringify({
-            team: teamName,
-            playerId: playerId,
-            newPosition: newPosition
-        });
+        var posLabels = {
+            Goalkeeper: 'Portero',
+            Defender: 'Defensa',
+            Midfielder: 'Centrocampista',
+            Forward: 'Delantero'
+        };
 
-        fetch('/api/update-position', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: payload
-        })
-        .then(function(resp) { return resp.json(); })
-        .then(function(result) {
-            if (result.success) {
-                var posLabels = {
-                    Goalkeeper: 'Portero',
-                    Defender: 'Defensa',
-                    Midfielder: 'Centrocampista',
-                    Forward: 'Delantero'
-                };
-                if (plantillaCache && plantillaCache[teamName]) {
-                    var pl = plantillaCache[teamName].players.find(function(p) { return p.id === playerId; });
-                    if (pl) pl.position = newPosition;
-                }
-
-                var resultDiv = document.getElementById('modal-result');
-                if (resultDiv) {
-                    resultDiv.innerHTML = '<div class="modal-success">'
-                        + '<div class="modal-success-icon">\u2705</div>'
-                        + '<div class="modal-success-text">Posici\u00f3n actualizada a ' + posLabels[newPosition] + '</div>'
-                        + '</div>';
-                }
-
-                setTimeout(function() {
-                    var m = document.getElementById('modal-posicion');
-                    if (m) m.remove();
-                    var container = document.getElementById('pl-plantilla');
-                    if (container && plantillaCache) {
-                        renderPlantilla(plantillaCache, teamName, container);
-                    }
-                }, 1200);
-            } else {
-                alert('Error al guardar: ' + (result.error || 'Error desconocido'));
-                if (saveBtn) saveBtn.disabled = false;
-                if (cancelBtn) cancelBtn.disabled = false;
+        function onSuccess(mode) {
+            if (plantillaCache && plantillaCache[teamName]) {
+                var pl = plantillaCache[teamName].players.find(function(p) { return p.id === playerId; });
+                if (pl) pl.position = newPosition;
             }
-        })
-        .catch(function(err) {
-            alert('Error de conexi\u00f3n: ' + err.message);
+
+            var resultDiv = document.getElementById('modal-result');
+            if (resultDiv) {
+                var label = mode === 'local' ? ' (solo en este navegador)' : '';
+                resultDiv.innerHTML = '<div class="modal-success">'
+                    + '<div class="modal-success-icon">\u2705</div>'
+                    + '<div class="modal-success-text">Posici\u00f3n actualizada a ' + posLabels[newPosition] + label + '</div>'
+                    + '</div>';
+            }
+
+            setTimeout(function() {
+                var m = document.getElementById('modal-posicion');
+                if (m) m.remove();
+                var container = document.getElementById('pl-plantilla');
+                if (container && plantillaCache) {
+                    renderPlantilla(plantillaCache, teamName, container);
+                }
+            }, 1200);
+        }
+
+        function onError(msg) {
+            alert('Error al guardar: ' + msg);
             if (saveBtn) saveBtn.disabled = false;
             if (cancelBtn) cancelBtn.disabled = false;
-        });
+        }
+
+        if (isLocalServer()) {
+            var payload = JSON.stringify({ team: teamName, playerId: playerId, newPosition: newPosition });
+            fetch('/api/update-position', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: payload
+            })
+            .then(function(resp) { return resp.json(); })
+            .then(function(result) {
+                if (result.success) {
+                    onSuccess('server');
+                } else {
+                    onError(result.error || 'Error desconocido');
+                }
+            })
+            .catch(function() {
+                savePositionOverride(teamName, playerId, newPosition);
+                onSuccess('local');
+            });
+        } else {
+            savePositionOverride(teamName, playerId, newPosition);
+            onSuccess('local');
+        }
     }
 
     function renderFichaje(f, tipo) {
