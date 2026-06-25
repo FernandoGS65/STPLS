@@ -651,6 +651,7 @@
 .pv-box-g{text-align:center;font-weight:700;color:var(--accent-green)}
 .pv-box-a{text-align:center;font-weight:600}
 .pv-box-ta{text-align:center;color:var(--accent-red)}
+.pv-box-tr{text-align:center;color:#ef4444;font-weight:700}
 
 /* ===== PREDICTIONS ===== */
 .pv-pred-card{

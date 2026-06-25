@@ -198,6 +198,7 @@
             { key: "Dribbles", label: "Regates", icon: "🏃" },
             { key: "Fouls", label: "Faltas", icon: "🟡" },
             { key: "Yellow cards", label: "Tarjetas amarillas", icon: "🟨" },
+            { key: "Red cards", label: "Tarjetas rojas", icon: "🟥" },
             { key: "Offsides", label: "Fueras de juego", icon: "🚩" },
             { key: "Goalkeeper saves", label: "Paradas del portero", icon: "🧤" },
             { key: "Goal Kicks", label: "Saques de puerta", icon: "🥅" }
@@ -512,13 +513,13 @@
                 }
                 html += '</span>';
                 html += '<span class="pv-subs-name">' + escHtml(shortName(name)) + '</span>';
-                var sAvgR = avgRatingById[s.id];
-                if (sAvgR) {
-                    var sArv = parseFloat(sAvgR);
-                    var sArCls = sArv >= 7.5 ? 'high' : (sArv >= 6.5 ? 'mid' : 'low');
-                    html += '<span class="pv-subs-rating ' + sArCls + '">' + sAvgR + '</span>';
-                }
                 if (entered) {
+                    var sRat = ratingById[s.id] || avgRatingById[s.id];
+                    if (sRat) {
+                        var sArv = parseFloat(sRat);
+                        var sArCls = sArv >= 7.5 ? 'high' : (sArv >= 6.5 ? 'mid' : 'low');
+                        html += '<span class="pv-subs-rating ' + sArCls + '">' + sRat + '</span>';
+                    }
                     html += '<span class="pv-subs-in-info">';
                     html += '<span class="pv-subs-arrow-in"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span> ';
                     html += escHtml(shortName(subInEvt.player || ''));
@@ -609,11 +610,11 @@
             var logoTeam = box.team.logo || "";
             html += '<div class="pv-box-card">';
             html += '<h3>' + (logoTeam ? '<img src="' + logoTeam + '" style="width:20px;height:20px;object-fit:contain">' : '') + escHtml(box.team.name) + '</h3>';
-            html += '<div class="pv-box-scroll"><table class="pv-box-table"><thead><tr><th>#</th><th>Jugador</th><th>Pos</th><th>Min</th><th>G</th><th>A</th><th>TA</th><th>Val</th></tr></thead><tbody>';
+            html += '<div class="pv-box-scroll"><table class="pv-box-table"><thead><tr><th>#</th><th>Jugador</th><th>Pos</th><th>Min</th><th>G</th><th>A</th><th>TA</th><th>TR</th><th>Val</th></tr></thead><tbody>';
             sorted.forEach(function(p) {
                 var s = p.statistics && p.statistics[0] ? p.statistics[0] : {};
                 var min = p.isSubstitute ? 'S' : (p.minutesPlayed||"-");
-                html += '<tr><td>' + (p.shirtNumber||"") + '</td><td class="pv-box-name">' + escHtml(p.name) + '</td><td>' + posShort(p.position) + '</td><td class="pv-box-min">' + min + '</td><td class="pv-box-g">' + (s.goalsScored||0) + '</td><td class="pv-box-a">' + (s.assists||0) + '</td><td class="pv-box-ta">' + (s.cardsYellow||0) + '</td><td class="pv-box-rating">' + (p.matchRating||"-") + '</td></tr>';
+                html += '<tr><td>' + (p.shirtNumber||"") + '</td><td class="pv-box-name">' + escHtml(p.name) + '</td><td>' + posShort(p.position) + '</td><td class="pv-box-min">' + min + '</td><td class="pv-box-g">' + (s.goalsScored||0) + '</td><td class="pv-box-a">' + (s.assists||0) + '</td><td class="pv-box-ta">' + (s.cardsYellow||0) + '</td><td class="pv-box-tr">' + (s.cardsRed||0) + '</td><td class="pv-box-rating">' + (p.matchRating||"-") + '</td></tr>';
             });
             html += '</tbody></table></div></div>';
         });
