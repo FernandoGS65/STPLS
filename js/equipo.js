@@ -962,7 +962,7 @@ document.getElementById(
                 if (p.countryCode) {
                     var cc2 = countryCodeTo2(p.countryCode);
                     if (cc2) {
-                        html += '<img class="squad-player-flag" src="https://flagcdn.com/w40/' + cc2 + '.png" alt="' + escHtml(p.nationality || '') + '" loading="lazy" title="' + escHtml(p.nationality || '') + '">';
+                        html += '<img class="squad-player-flag" src="https://flagcdn.com/w40/' + cc2 + '.png" alt="' + escHtml(p.nationality || '') + '" loading="lazy" title="Editar posición de ' + escHtml(p.name) + '" data-player-id="' + p.id + '" data-team="' + escHtml(teamName) + '">';
                     }
                 }
                 html += '</div>';
@@ -1004,6 +1004,15 @@ document.getElementById(
         document.getElementById('btn-alineacion-habitual')?.addEventListener('click', function(e) {
             e.preventDefault();
             renderAlineacion(team, teamName, container);
+        });
+
+        container.addEventListener('click', function(e) {
+            var flag = e.target.closest('.squad-player-flag');
+            if (!flag) return;
+            var playerId = parseInt(flag.dataset.playerId);
+            var tName = flag.dataset.team;
+            var player = team.players.find(function(pl) { return pl.id === playerId; });
+            if (player) abrirEditorPosicion(player, tName);
         });
     }
 
@@ -1076,7 +1085,164 @@ document.getElementById(
 
         document.getElementById('btn-volver-plantilla')?.addEventListener('click', function(e) {
             e.preventDefault();
-            renderPlantilla({ [teamName]: team }, teamName, container);
+            plantillaCache = null;
+            cargarPlantilla(teamName);
+        });
+    }
+
+    function abrirEditorPosicion(player, teamName) {
+        var existing = document.getElementById('modal-posicion');
+        if (existing) existing.remove();
+
+        var posLabels = {
+            Goalkeeper: 'Portero',
+            Defender: 'Defensa',
+            Midfielder: 'Centrocampista',
+            Forward: 'Delantero'
+        };
+        var posIcons = {
+            Goalkeeper: '\uD83D\uDDF3',
+            Defender: '\uD83D\uDEE1',
+            Midfielder: '\u2B50',
+            Forward: '\u26BD'
+        };
+        var posOrder = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'];
+
+        var fotoUrl = player.fotMobId
+            ? 'https://images.fotmob.com/image_resources/playerimages/' + player.fotMobId + '.png'
+            : '';
+
+        var html = '<div class="modal-overlay" id="modal-posicion">';
+        html += '<div class="modal-box">';
+        html += '<button class="modal-close" id="modal-close-btn">&times;</button>';
+
+        html += '<div class="modal-player">';
+        if (fotoUrl) {
+            html += '<img class="modal-player-photo" src="' + escHtml(fotoUrl) + '" alt="' + escHtml(player.name) + '">';
+        }
+        html += '<div class="modal-player-info">';
+        html += '<div class="modal-player-name">' + escHtml(player.name) + '</div>';
+        html += '<div class="modal-player-current">';
+        html += '<span class="pos-dot pos-dot--' + player.position + '"></span>';
+        html += posLabels[player.position] || player.position;
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+
+        html += '<div class="modal-divider"></div>';
+        html += '<div class="modal-label">Selecciona la posici\u00f3n correcta</div>';
+
+        html += '<div class="modal-positions" id="modal-pos-list">';
+        posOrder.forEach(function(pos) {
+            var sel = pos === player.position ? ' selected' : '';
+            html += '<div class="modal-pos-option' + sel + '" data-pos="' + pos + '">';
+            html += '<span class="modal-pos-dot modal-pos-dot--' + pos + '"></span>';
+            html += '<span class="modal-pos-label">' + posLabels[pos] + '</span>';
+            html += '<span class="modal-pos-icon">' + posIcons[pos] + '</span>';
+            html += '</div>';
+        });
+        html += '</div>';
+
+        html += '<div class="modal-actions">';
+        html += '<button class="modal-btn modal-btn--cancel" id="modal-cancel-btn">Cancelar</button>';
+        html += '<button class="modal-btn modal-btn--save" id="modal-save-btn" disabled>Guardar</button>';
+        html += '</div>';
+
+        html += '<div id="modal-result"></div>';
+        html += '</div></div>';
+
+        document.body.insertAdjacentHTML('beforeend', html);
+
+        var overlay = document.getElementById('modal-posicion');
+        var selectedPos = player.position;
+
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) closeModal();
+        });
+        document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+        document.getElementById('modal-cancel-btn').addEventListener('click', closeModal);
+
+        var options = overlay.querySelectorAll('.modal-pos-option');
+        options.forEach(function(opt) {
+            opt.addEventListener('click', function() {
+                options.forEach(function(o) { o.classList.remove('selected'); });
+                opt.classList.add('selected');
+                selectedPos = opt.dataset.pos;
+                document.getElementById('modal-save-btn').disabled = (selectedPos === player.position);
+            });
+        });
+
+        document.getElementById('modal-save-btn').addEventListener('click', function() {
+            if (selectedPos === player.position) return;
+            var confirmMsg = '\u00BFGuardar cambio de ' + player.name + ' de '
+                + posLabels[player.position] + ' a ' + posLabels[selectedPos] + '?';
+            if (!confirm(confirmMsg)) return;
+            guardarPosicionJugador(teamName, player.id, selectedPos, player);
+        });
+
+        function closeModal() {
+            var m = document.getElementById('modal-posicion');
+            if (m) m.remove();
+        }
+    }
+
+    function guardarPosicionJugador(teamName, playerId, newPosition, player) {
+        var saveBtn = document.getElementById('modal-save-btn');
+        var cancelBtn = document.getElementById('modal-cancel-btn');
+        if (saveBtn) saveBtn.disabled = true;
+        if (cancelBtn) cancelBtn.disabled = true;
+
+        var payload = JSON.stringify({
+            team: teamName,
+            playerId: playerId,
+            newPosition: newPosition
+        });
+
+        fetch('/api/update-position', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: payload
+        })
+        .then(function(resp) { return resp.json(); })
+        .then(function(result) {
+            if (result.success) {
+                var posLabels = {
+                    Goalkeeper: 'Portero',
+                    Defender: 'Defensa',
+                    Midfielder: 'Centrocampista',
+                    Forward: 'Delantero'
+                };
+                if (plantillaCache && plantillaCache[teamName]) {
+                    var pl = plantillaCache[teamName].players.find(function(p) { return p.id === playerId; });
+                    if (pl) pl.position = newPosition;
+                }
+
+                var resultDiv = document.getElementById('modal-result');
+                if (resultDiv) {
+                    resultDiv.innerHTML = '<div class="modal-success">'
+                        + '<div class="modal-success-icon">\u2705</div>'
+                        + '<div class="modal-success-text">Posici\u00f3n actualizada a ' + posLabels[newPosition] + '</div>'
+                        + '</div>';
+                }
+
+                setTimeout(function() {
+                    var m = document.getElementById('modal-posicion');
+                    if (m) m.remove();
+                    var container = document.getElementById('pl-plantilla');
+                    if (container && plantillaCache) {
+                        renderPlantilla(plantillaCache, teamName, container);
+                    }
+                }, 1200);
+            } else {
+                alert('Error al guardar: ' + (result.error || 'Error desconocido'));
+                if (saveBtn) saveBtn.disabled = false;
+                if (cancelBtn) cancelBtn.disabled = false;
+            }
+        })
+        .catch(function(err) {
+            alert('Error de conexi\u00f3n: ' + err.message);
+            if (saveBtn) saveBtn.disabled = false;
+            if (cancelBtn) cancelBtn.disabled = false;
         });
     }
 

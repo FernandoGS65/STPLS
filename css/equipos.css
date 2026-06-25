@@ -412,3 +412,224 @@
 .pitch-back a:hover{
     background:var(--bg-card-hover);
 }
+
+/* ================================
+   SQUAD FLAG CLICKABLE
+   =============================== */
+.squad-player-flag{
+    cursor:pointer;
+    transition:transform 0.15s, box-shadow 0.15s;
+}
+.squad-player-flag:hover{
+    transform:scale(1.2);
+    box-shadow:0 2px 8px rgba(59,130,246,0.5);
+}
+
+/* ================================
+   POSITION EDITOR MODAL
+   =============================== */
+.modal-overlay{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    animation:modalFadeIn 0.2s ease;
+}
+@keyframes modalFadeIn{
+    from{opacity:0}
+    to{opacity:1}
+}
+.modal-box{
+    background:var(--bg-card);
+    border:1px solid var(--border-color);
+    border-radius:16px;
+    padding:28px 24px 24px;
+    width:90%;
+    max-width:380px;
+    box-shadow:0 16px 48px rgba(0,0,0,0.5);
+    position:relative;
+    animation:modalSlideUp 0.25s ease;
+}
+@keyframes modalSlideUp{
+    from{transform:translateY(20px);opacity:0}
+    to{transform:translateY(0);opacity:1}
+}
+.modal-close{
+    position:absolute;
+    top:12px;
+    right:14px;
+    background:none;
+    border:none;
+    color:var(--text-muted);
+    font-size:22px;
+    cursor:pointer;
+    width:32px;
+    height:32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    transition:background 0.15s;
+}
+.modal-close:hover{
+    background:var(--bg-surface);
+    color:var(--text-primary);
+}
+.modal-player{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:20px;
+}
+.modal-player-photo{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid var(--border-color);
+    background:var(--bg-surface);
+    flex-shrink:0;
+}
+.modal-player-info{
+    min-width:0;
+}
+.modal-player-name{
+    font-size:16px;
+    font-weight:700;
+    color:var(--text-primary);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.modal-player-current{
+    font-size:13px;
+    font-weight:600;
+    margin-top:3px;
+}
+.modal-player-current .pos-dot{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    margin-right:5px;
+    vertical-align:middle;
+}
+.pos-dot--Goalkeeper{background:#fff}
+.pos-dot--Defender{background:#facc15}
+.pos-dot--Midfielder{background:#06b6d4}
+.pos-dot--Forward{background:#ef4444}
+
+.modal-divider{
+    height:1px;
+    background:var(--border-color);
+    margin:0 0 16px;
+}
+.modal-label{
+    font-size:12px;
+    font-weight:700;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin-bottom:10px;
+}
+.modal-positions{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+.modal-pos-option{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 14px;
+    border-radius:10px;
+    border:2px solid transparent;
+    background:var(--bg-surface);
+    cursor:pointer;
+    transition:border-color 0.15s, background 0.15s;
+    user-select:none;
+}
+.modal-pos-option:hover{
+    background:var(--bg-card-hover);
+}
+.modal-pos-option.selected{
+    border-color:var(--accent-blue);
+    background:rgba(59,130,246,0.1);
+}
+.modal-pos-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    flex-shrink:0;
+}
+.modal-pos-dot--Goalkeeper{background:#fff}
+.modal-pos-dot--Defender{background:#facc15}
+.modal-pos-dot--Midfielder{background:#06b6d4}
+.modal-pos-dot--Forward{background:#ef4444}
+.modal-pos-label{
+    font-size:14px;
+    font-weight:600;
+    color:var(--text-primary);
+    flex:1;
+}
+.modal-pos-icon{
+    font-size:16px;
+    opacity:0.5;
+}
+.modal-actions{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+.modal-btn{
+    flex:1;
+    padding:11px 0;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    border:none;
+    transition:transform 0.12s, box-shadow 0.12s;
+}
+.modal-btn:active{
+    transform:scale(0.97);
+}
+.modal-btn--cancel{
+    background:var(--bg-surface);
+    color:var(--text-secondary);
+    border:1px solid var(--border-color);
+}
+.modal-btn--cancel:hover{
+    background:var(--bg-card-hover);
+}
+.modal-btn--save{
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+    color:#fff;
+    box-shadow:0 2px 10px rgba(59,130,246,0.3);
+}
+.modal-btn--save:hover{
+    box-shadow:0 4px 16px rgba(59,130,246,0.45);
+}
+.modal-btn--save:disabled{
+    opacity:0.4;
+    cursor:not-allowed;
+    box-shadow:none;
+}
+.modal-success{
+    text-align:center;
+    padding:20px 0 4px;
+}
+.modal-success-icon{
+    font-size:36px;
+    margin-bottom:8px;
+}
+.modal-success-text{
+    font-size:14px;
+    font-weight:600;
+    color:var(--accent-green);
+}
