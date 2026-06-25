@@ -272,6 +272,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
     var modoActual = null;
 
     var fotMobById = {};
+    var positionById = {};
 
     function escHtml(s) {
         if (s == null) return '';
@@ -310,11 +311,13 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
         plantillaCache = await resp.json();
 
         fotMobById = {};
+        positionById = {};
         Object.keys(plantillaCache).forEach(function(teamKey) {
             var team = plantillaCache[teamKey];
             if (team && team.players) {
                 team.players.forEach(function(p) {
                     if (p.id && p.fotMobId) fotMobById[p.id] = p.fotMobId;
+                    if (p.id && p.position) positionById[p.id] = p.position;
                 });
             }
         });
@@ -362,13 +365,15 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
 
                     var key = p.id || (p.name + '_' + (p.shirtNumber || ''));
                     var teamLogo = box.team ? box.team.logo : '';
+                    var position = p.position;
+                    if (p.id && positionById[p.id]) position = positionById[p.id];
 
                     if (modo === 'temporada') {
                         if (!jugadores[key]) {
                             jugadores[key] = {
                                 id: p.id,
                                 name: p.name,
-                                position: p.position,
+                                position: position,
                                 sumRating: rating,
                                 numMatches: 1,
                                 rating: rating,
@@ -388,7 +393,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
                             jugadores[key] = {
                                 id: p.id,
                                 name: p.name,
-                                position: p.position,
+                                position: position,
                                 rating: rating,
                                 shirtNumber: p.shirtNumber,
                                 teamName: box.team ? box.team.name : '',
@@ -566,6 +571,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
         descargadosCache = null;
         plantillaCache = null;
         fotMobById = {};
+        positionById = {};
         var container = document.getElementById('bestxi-container');
         var lista = document.getElementById('lista-resultados');
         if (container) container.style.display = 'none';
