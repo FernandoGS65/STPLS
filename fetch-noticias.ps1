@@ -14,7 +14,6 @@ $feeds = @(
     @{ url = "https://e00-marca.uecdn.es/rss/futbol/primera-division.xml"; fuente = "MARCA" },
     @{ url = "https://www.sport.es/es/rss/futbol/rss.xml"; fuente = "SPORT" },
     @{ url = "https://feeds.as.com/mrss-s/pages/as/site/as.com/portada"; fuente = "AS" },
-    @{ url = "https://www.football-espana.net/feed"; fuente = "FOOTBALL ESPANA" },
     @{ url = "https://www.transfermarkt.es/rss/news"; fuente = "TRANSFERMARKT" }
 )
 
