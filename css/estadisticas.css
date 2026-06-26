@@ -124,4 +124,7 @@
     color:var(--accent-gold);
     text-align:right;
     white-space:nowrap;
+    background:rgba(240,192,64,0.15);
+    border-radius:4px;
+    padding:2px 4px;
 }
