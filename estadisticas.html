@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#0b0f1a">
-    <title>EstadÃ­sticas - STPLS</title>
+    <title>Estadísticas - STPLS</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="imagenes/stpls-icon.png">
@@ -23,45 +23,11 @@
     <div id="nav-icons" class="nav-icons"></div>
 </nav>
 
-<header class="hero">
-    <h1>EstadÃ­sticas</h1>
-    <p>EstadÃ­sticas y anÃ¡lisis de resultados.</p>
-</header>
-
-<main class="dashboard">
-
-    <section class="card">
-
-        <h2>ðŸ† Top goleadores</h2>
-
-        <div id="top-goleadores"></div>
-
-    </section>
-
-    <section class="card">
-
-        <h2>â­ Jugador mÃ¡s joven</h2>
-
-        <div id="jugador-joven"></div>
-
-    </section>
-
-    <section class="card">
-
-        <h2>âš½ Promedio de goles</h2>
-
-        <div id="promedio-goles"></div>
-
-    </section>
-
-    <section class="card">
-
-        <h2>ðŸ“¥ Partidos descargados</h2>
-
-        <div id="partidos-descargados"></div>
-
-    </section>
-
+<main class="stats-page">
+    <div id="stats-tabs" class="stats-tabs"></div>
+    <div id="stats-content" class="stats-content">
+        <p class="stats-loading">Cargando datos...</p>
+    </div>
 </main>
 
 <script src="js/app.js"></script>
