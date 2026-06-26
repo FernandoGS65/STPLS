@@ -378,8 +378,9 @@
             container.innerHTML = '<p class="stats-loading">No hay datos disponibles.</p>';
             return;
         }
+        var top = data.slice(0, 10);
         var html = '<div class="stats-ranking">';
-        data.forEach(function(item, idx) {
+        top.forEach(function(item, idx) {
             var p = item.player;
             var photo = playerPhoto(p.fotMobId);
             var flagUrl = '';
