@@ -70,6 +70,7 @@
 }
 
 .stats-pos{
+    grid-column: 1;
     font-size:13px;
     font-weight:700;
     color:var(--text-muted);
@@ -77,6 +78,7 @@
 }
 
 .stats-photo{
+    grid-column: 2;
     width:32px;
     height:32px;
     border-radius:50%;
@@ -85,6 +87,7 @@
 }
 
 .stats-info{
+    grid-column: 3;
     min-width:0;
     overflow:hidden;
 }
@@ -119,12 +122,14 @@
 }
 
 .stats-value{
+    grid-column: 4;
     font-size:15px;
     font-weight:800;
     color:var(--accent-gold);
     text-align:right;
     white-space:nowrap;
-    background:rgba(240,192,64,0.15);
+    background:rgba(240,192,64,0.2);
+    border:1px solid var(--accent-gold);
     border-radius:4px;
     padding:2px 4px;
 }
