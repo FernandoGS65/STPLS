@@ -118,6 +118,7 @@ var APP = (function() {
             case 'calendario': return base + '/calendario.json';
             case 'videos': return base + '/videos.json';
             case 'descargados': return base + '/descargados.json';
+            case 'noticias': return base + '/noticias/' + param + '.json';
             case 'equipos-info': return './data/equipos-info.json';
             case 'partido': return base + '/partidos/' + param + '.json';
             default: return base + '/' + tipo + '.json';

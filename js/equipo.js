@@ -768,86 +768,57 @@ document.getElementById(
     async function cargarNoticias() {
         var container = document.getElementById('pl-noticias');
         if (!container) return;
+        if (container.querySelector('.noticias-list')) return;
         container.innerHTML = '<p class="tab-placeholder">Cargando noticias...</p>';
 
-        var corte = new Date();
-        corte.setDate(corte.getDate() - 3);
-        var feeds = [
-            { url: 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://e00-marca.uecdn.es/rss/futbol/primera-division.xml'), fuente: 'MARCA' },
-            { url: 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://www.sport.es/es/rss/futbol/rss.xml'), fuente: 'SPORT' }
-        ];
+        var slug = nombreEquipo.toLowerCase().trim()
+            .replace(/á/g,'a').replace(/é/g,'e').replace(/í/g,'i')
+            .replace(/ó/g,'o').replace(/ú/g,'u').replace(/ñ/g,'n')
+            .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 
-        var todas = [];
-        for (var f = 0; f < feeds.length; f++) {
-            try {
-                var resp = await fetch(feeds[f].url);
-                var data = await resp.json();
-                if (data.status !== 'ok') continue;
-                for (var i = 0; i < data.items.length; i++) {
-                    var item = data.items[i];
-                    var fechaPub = new Date(item.pubDate);
-                    if (fechaPub < corte) continue;
-                    if (!noticiaCoincideEquipo(item.title, nombreEquipo)) continue;
-                    var dia = fechaPub.toDateString();
-                    var imagen = item.enclosure && item.enclosure.link ? item.enclosure.link : (item.thumbnail || '');
-                    if (!imagen && item.content) {
-                        var m = item.content.match(/src=["']([^"']+)["']/);
-                        if (m) imagen = m[1];
-                    }
-                    todas.push({
-                        titulo: item.title,
-                        fecha: fechaPub,
-                        fechaStr: fechaPub.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' }),
-                        url: item.link,
-                        imagen: imagen,
-                        fuente: feeds[f].fuente,
-                        dia: dia
-                    });
+        var apiUrl = 'api/noticias?team=' + encodeURIComponent(slug);
+
+        try {
+            var resp = await fetch(apiUrl);
+            if (!resp.ok) throw new Error('HTTP ' + resp.status);
+            var noticias = await resp.json();
+
+            var seleccion = [];
+            for (var i = 0; i < noticias.length && seleccion.length < 15; i++) {
+                seleccion.push(noticias[i]);
+            }
+
+            if (!seleccion.length) {
+                container.innerHTML = '<p class="tab-placeholder">No hay noticias recientes de ' + escHtml(nombreEquipo) + '</p>';
+                return;
+            }
+
+            var html = '<div class="noticias-list">';
+            for (var j = 0; j < seleccion.length; j++) {
+                var n = seleccion[j];
+                var fechaPub = new Date(n.fecha);
+                var fechaStr = fechaPub.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+                html += '<article class="noticia-card">';
+                if (n.imagen) {
+                    html += '<div class="noticia-img" style="background-image:url(' + n.imagen + ')"><span class="noticia-fuente-badge">' + escHtml(n.fuente) + '</span></div>';
                 }
-            } catch(e) {}
-        }
-
-        var dias = {};
-        todas.forEach(function(n) {
-            if (!dias[n.dia]) dias[n.dia] = [];
-            dias[n.dia].push(n);
-        });
-
-        var seleccion = [];
-        var keys = Object.keys(dias).sort().reverse();
-        keys.forEach(function(d) {
-            var delDia = dias[d].sort(function(a, b) { return b.fecha - a.fecha; });
-            delDia.slice(0, 5).forEach(function(n) { seleccion.push(n); });
-        });
-        seleccion.sort(function(a, b) { return b.fecha - a.fecha; });
-        seleccion = seleccion.slice(0, 15);
-
-        if (!seleccion.length) {
-            container.innerHTML = '<p class="tab-placeholder">No hay noticias recientes de ' + escHtml(nombreEquipo) + '</p>';
-            return;
-        }
-
-        var html = '<div class="noticias-list">';
-        for (var i = 0; i < seleccion.length; i++) {
-            var n = seleccion[i];
-            html += '<article class="noticia-card">';
-            if (n.imagen) {
-                html += '<div class="noticia-img" style="background-image:url(' + n.imagen + ')"><span class="noticia-fuente-badge">' + n.fuente + '</span></div>';
+                html += '<div class="noticia-body">';
+                if (!n.imagen) {
+                    html += '<span class="noticia-fuente">' + escHtml(n.fuente) + '</span>';
+                }
+                html += '<h3 class="noticia-titulo">' + escHtml(n.titulo) + '</h3>';
+                html += '<div class="noticia-footer">';
+                html += '<span class="noticia-fecha">' + fechaStr + '</span>';
+                if (n.url) {
+                    html += '<a href="' + n.url + '" target="_blank" rel="noopener noreferrer" class="noticia-link">Leer más →</a>';
+                }
+                html += '</div></div></article>';
             }
-            html += '<div class="noticia-body">';
-            if (!n.imagen) {
-                html += '<span class="noticia-fuente">' + n.fuente + '</span>';
-            }
-            html += '<h3 class="noticia-titulo">' + escHtml(n.titulo) + '</h3>';
-            html += '<div class="noticia-footer">';
-            html += '<span class="noticia-fecha">' + n.fechaStr + '</span>';
-            if (n.url) {
-                html += '<a href="' + n.url + '" target="_blank" rel="noopener noreferrer" class="noticia-link">Leer más →</a>';
-            }
-            html += '</div></div></article>';
+            html += '</div>';
+            container.innerHTML = html;
+        } catch(e) {
+            container.innerHTML = '<p class="tab-placeholder">No hay noticias disponibles</p>';
         }
-        html += '</div>';
-        container.innerHTML = html;
     }
 
     async function cargarFichajes() {

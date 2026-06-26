@@ -75,6 +75,54 @@ while ($listener.IsListening) {
         continue
     }
 
+    if ($path -eq 'api/noticias' -and $request.HttpMethod -eq 'GET') {
+        $team = $request.QueryString['team']
+        if ([string]::IsNullOrEmpty($team)) {
+            $errBytes = [System.Text.Encoding]::UTF8.GetBytes('{"success":false,"error":"Parametro team requerido"}')
+            $response.StatusCode = 400
+            $response.ContentType = 'application/json'
+            $response.ContentLength64 = $errBytes.Length
+            $response.OutputStream.Write($errBytes, 0, $errBytes.Length)
+            $response.OutputStream.Close()
+            continue
+        }
+
+        $season = if ($request.QueryString['season']) { $request.QueryString['season'] } else { "2025-26" }
+        $comp = if ($request.QueryString['comp']) { $request.QueryString['comp'] } else { "liga" }
+        $noticiasDir = Join-Path $root "data/$season/$comp/noticias"
+        $jsonPath = Join-Path $noticiasDir "$team.json"
+
+        $fresco = $false
+        if (Test-Path $jsonPath) {
+            $ultimaMod = (Get-Item $jsonPath).LastWriteTime
+            $fresco = ((Get-Date) - $ultimaMod).TotalHours -lt 1
+        }
+
+        if (-not $fresco) {
+            Write-Host "API noticias: generando $team..." -ForegroundColor Yellow
+            $fetchScript = Join-Path $root "fetch-noticias.ps1"
+            if (Test-Path $fetchScript) {
+                & PowerShell -ExecutionPolicy Bypass -File $fetchScript -Team $team -Season $season -Competition $comp
+            }
+        }
+
+        if (Test-Path $jsonPath) {
+            $response.ContentType = 'application/json'
+            $response.Headers.Add('Access-Control-Allow-Origin', '*')
+            $bytes = [System.IO.File]::ReadAllBytes($jsonPath)
+            $response.ContentLength64 = $bytes.Length
+            $response.OutputStream.Write($bytes, 0, $bytes.Length)
+        } else {
+            $response.ContentType = 'application/json'
+            $response.StatusCode = 200
+            $emptyBytes = [System.Text.Encoding]::UTF8.GetBytes('[]')
+            $response.ContentLength64 = $emptyBytes.Length
+            $response.OutputStream.Write($emptyBytes, 0, $emptyBytes.Length)
+        }
+        $response.OutputStream.Close()
+        continue
+    }
+
     $fullPath = Join-Path $root $path
 
     if (Test-Path $fullPath -PathType Leaf) {
