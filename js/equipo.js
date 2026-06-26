@@ -1047,10 +1047,10 @@ document.getElementById(
 
         var totalJornadas = 0;
         try {
-            var calResp = await fetch(APP.ruta('calendario'));
-            var calData = await calResp.json();
-            totalJornadas = calData.data.filter(function(m) {
-                return (m.homeTeam.name === teamName || m.awayTeam.name === teamName) && m.state && m.state.description === 'Finished';
+            var descResp = await fetch(APP.ruta('descargados'));
+            var descData = await descResp.json();
+            totalJornadas = descData.filter(function(m) {
+                return (m.home === teamName || m.away === teamName) && m.lineups && m.boxscore;
             }).length;
         } catch(e) {}
 
@@ -1063,7 +1063,7 @@ document.getElementById(
             }
             h += '<span class="pitch-player-num">' + (p.number || '') + '</span>';
             h += '<span class="pitch-player-name">' + escHtml(p.name.split(' ').pop()) + '</span>';
-            h += '<span class="pitch-player-stats">' + tit + ' TIT / ' + totalJornadas + ' JOR</span>';
+            h += '<span class="pitch-player-stats">' + tit + ' TIT</span>';
             h += '</div>';
             return h;
         }
@@ -1077,6 +1077,7 @@ document.getElementById(
 
         var html = '<div class="pitch-container">';
         html += '<div class="pitch">';
+        html += '<div class="pitch-jornadas-badge">' + totalJornadas + ' JOR</div>';
         html += '<div class="pitch-lines">';
         html += '<div class="pitch-center-circle"></div>';
         html += '<div class="pitch-center-line"></div>';
