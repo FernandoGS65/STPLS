@@ -347,7 +347,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
         return Promise.all(resultados);
     }
 
-    function extraerJugadores(partidos, modo) {
+    function extraerJugadores(partidos, modo, jornadasPorEquipo) {
         var jugadores = {};
 
         partidos.forEach(function(d) {
@@ -369,6 +369,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
                     if (p.id && positionById[p.id]) position = positionById[p.id];
 
                     if (modo === 'temporada') {
+                        var teamJor = jornadasPorEquipo[box.team ? box.team.name : ''] || 0;
                         if (!jugadores[key]) {
                             jugadores[key] = {
                                 id: p.id,
@@ -380,7 +381,8 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
                                 shirtNumber: p.shirtNumber,
                                 teamName: box.team ? box.team.name : '',
                                 teamLogo: teamLogo,
-                                fotMobId: (p.id && fotMobById[p.id]) ? fotMobById[p.id] : null
+                                fotMobId: (p.id && fotMobById[p.id]) ? fotMobById[p.id] : null,
+                                teamTotalJornadas: teamJor
                             };
                         } else {
                             jugadores[key].sumRating += rating;
@@ -417,6 +419,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
 
         Object.keys(jugadores).forEach(function(key) {
             var p = jugadores[key];
+            if (p.teamTotalJornadas && p.teamTotalJornadas > 0 && p.numMatches < p.teamTotalJornadas * 0.2) return;
             switch (p.position) {
                 case 'Goalkeeper': por.push(p); break;
                 case 'Defender': def.push(p); break;
@@ -526,7 +529,16 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
 
         var partidos = await getPartidosDescargados(modo === 'jornada' ? jornadaActual : null);
 
-        var jugadores = extraerJugadores(partidos, modo);
+        var jornadasPorEquipo = {};
+        if (modo === 'temporada') {
+            descargadosCache.forEach(function(d) {
+                if (!d.lineups || !d.boxscore) return;
+                jornadasPorEquipo[d.home] = (jornadasPorEquipo[d.home] || 0) + 1;
+                jornadasPorEquipo[d.away] = (jornadasPorEquipo[d.away] || 0) + 1;
+            });
+        }
+
+        var jugadores = extraerJugadores(partidos, modo, jornadasPorEquipo);
         var xi = seleccionarBestXI(jugadores);
 
         if (xi.por.length === 0 && xi.def.length === 0 && xi.med.length === 0 && xi.del.length === 0) {
