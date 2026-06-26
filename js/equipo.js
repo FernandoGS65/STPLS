@@ -1038,21 +1038,32 @@ document.getElementById(
         return candidates.slice(0, count);
     }
 
-    function renderAlineacion(team, teamName, container) {
+    async function renderAlineacion(team, teamName, container) {
         var gk = seleccionarTitular(team, 'Goalkeeper', 1);
         var def = seleccionarTitular(team, 'Defender', 4);
         var mid = seleccionarTitular(team, 'Midfielder', 3);
         var fwd = seleccionarTitular(team, 'Forward', 3);
         var xi = [].concat(gk, def, mid, fwd);
 
+        var totalJornadas = 0;
+        try {
+            var calResp = await fetch(APP.ruta('calendario'));
+            var calData = await calResp.json();
+            totalJornadas = calData.data.filter(function(m) {
+                return (m.homeTeam.name === teamName || m.awayTeam.name === teamName) && m.state && m.state.description === 'Finished';
+            }).length;
+        } catch(e) {}
+
         function playerNode(p, idx) {
             var fotoUrl = p.fotMobId ? 'https://images.fotmob.com/image_resources/playerimages/' + p.fotMobId + '.png' : '';
+            var tit = p.starts || 0;
             var h = '<div class="pitch-player pos-' + p.position + '">';
             if (fotoUrl) {
                 h += '<img class="pitch-player-photo" src="' + escHtml(fotoUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">';
             }
             h += '<span class="pitch-player-num">' + (p.number || '') + '</span>';
             h += '<span class="pitch-player-name">' + escHtml(p.name.split(' ').pop()) + '</span>';
+            h += '<span class="pitch-player-stats">' + tit + ' TIT / ' + totalJornadas + ' JOR</span>';
             h += '</div>';
             return h;
         }

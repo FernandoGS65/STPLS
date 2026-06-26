@@ -391,6 +391,15 @@
 .pitch-player.pos-Midfielder .pitch-player-name{color:#fff}
 .pitch-player.pos-Forward .pitch-player-name{color:#fff}
 
+.pitch-player-stats{
+    font-size:10px;
+    font-weight:600;
+    color:#fff;
+    opacity:0.85;
+    white-space:nowrap;
+    text-shadow:0 1px 3px rgba(0,0,0,0.7);
+}
+
 .pitch-back{
     text-align:center;
     padding:14px 0 4px;
