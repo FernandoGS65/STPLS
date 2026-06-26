@@ -1,24 +1,17 @@
 ﻿[
     {
         "url":  "https://as.com/futbol/real-madrid/oficial-ceballos-deja-el-madrid-f202606-n/",
-        "imagen":  "https://vdmedia.as.com/mcv/diarioas/multimedia/20251108/1107068_093821_video_1200.mp4",
+        "imagen":  "",
         "titulo":  "Oficial: Ceballos deja el Madrid",
         "fuente":  "AS",
         "fecha":  "2026-06-26T20:06:51.000Z"
     },
     {
         "url":  "https://as.com/futbol/mundial/ordonez-hoy-se-vendio-al-real-madrid-f202606-n/",
-        "imagen":  "https://vdmedia.as.com/mcv/diarioas/multimedia/20260625/1188220_221325_video_1200.mp4",
-        "titulo":  "âOrdoÃ±ez hoy se vendiÃ³ al Real Madridâ",
+        "imagen":  "",
+        "titulo":  "“Ordoñez hoy se vendió al Real Madrid”",
         "fuente":  "AS",
         "fecha":  "2026-06-26T14:45:36.000Z"
-    },
-    {
-        "url":  "https://as.com/baloncesto/euroliga/la-euroliga-ratifica-al-madrid-que-podria-jugar-la-supercopa-europea-f202606-n/",
-        "imagen":  "https://img.asmedia.epimg.net/resizer/v2/QOSPWRK6P5KDFGHBCI46LC3Q7U.jpg?auth=d15a4cc0c7d585fea61633120bed18d597d3509d6fff82cb27dd0d3f4780bd3a",
-        "titulo":  "La Euroliga ratifica al Madrid, que podrÃ­a jugar la Supercopa europea",
-        "fuente":  "AS",
-        "fecha":  "2026-06-26T13:36:11.000Z"
     },
     {
         "url":  "https://www.football-espana.net/2026/06/25/julian-alvarez-transfer-atletico-block-barcelona-real-madrid",
@@ -33,26 +26,5 @@
         "titulo":  "Nico Páz Set to Return to Madrid as €9m Buyback Clause Is Activated",
         "fuente":  "FOOTBALL ESPANA",
         "fecha":  "2026-06-25T14:30:00.000Z"
-    },
-    {
-        "url":  "https://as.com/audio/podcast/minuto-116/colombia-clama-por-que-el-madrid-ficho-a-dumfries-y-no-a-daniel-munoz-minuto-116-f202606-n/",
-        "imagen":  "https://img.asmedia.epimg.net/resizer/v2/R3JILONYNJB5BBPT6BOEXD3R3E.PNG?auth=6a7e927ed827812cda9f09de26603b313d8c197a60322d060eb2cefa42866262",
-        "titulo":  "Colombia clama: Â¿Por quÃ© el Madrid fichÃ³ a Dumfries y no a Daniel MuÃ±oz? | Minuto 116",
-        "fuente":  "AS",
-        "fecha":  "2026-06-25T08:57:12.000Z"
-    },
-    {
-        "url":  "https://www.football-espana.net/2026/06/22/mourinho-real-madrid-dias-fernandez-transfers",
-        "imagen":  "https://www.football-espana.net/wp-content/uploads/2026/06/mourinho-real-madrid-recruitment-dias-fernandez.webp",
-        "titulo":  "Mourinho reshapes Real Madrid recruitment with Dias and Fernandez targets",
-        "fuente":  "FOOTBALL ESPANA",
-        "fecha":  "2026-06-22T18:00:00.000Z"
-    },
-    {
-        "url":  "https://www.football-espana.net/2026/06/22/kang-in-lee-atletico-madrid-midfield-target",
-        "imagen":  "https://www.football-espana.net/wp-content/uploads/2026/06/kang-in-lee-atletico-madrid-primary-midfield-target.webp",
-        "titulo":  "Kang-in Lee Emerges as Atletico Madrid’s Primary Midfield Target",
-        "fuente":  "FOOTBALL ESPANA",
-        "fecha":  "2026-06-22T11:00:00.000Z"
     }
 ]

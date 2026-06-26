@@ -70,6 +70,44 @@ function Test-TitleMatchesTeam($titulo, $aliases) {
     return $false
 }
 
+$nonFootballPatterns = @(
+    'baloncesto', 'basketball', 'nba', 'euroliga', 'acb', 'endesa',
+    'tenis', 'atletismo', 'ciclismo', 'f1', 'formula 1', 'motociclismo',
+    'nfl', 'baseball', 'golf', 'boxeo', 'ufc', 'mma',
+    'podcast', 'minuto 116'
+)
+
+$footballUrlPatterns = @('/futbol/', '/football/', '/soccer/', '/la-liga/', '/laliga/', '/primera-division')
+
+function Test-IsFootball($titulo, $link) {
+    $t = $titulo.ToLower()
+    $l = $link.ToLower()
+
+    foreach ($pattern in $nonFootballPatterns) {
+        if ($t.Contains($pattern)) { return $false }
+        if ($l.Contains($pattern)) { return $false }
+    }
+
+    foreach ($pattern in $footballUrlPatterns) {
+        if ($l.Contains($pattern)) { return $true }
+    }
+
+    $footballWords = @('fichaje', 'fichó', 'firma', 'contrato', 'gol', 'partido', 'liga',
+        'champions', 'europa league', 'copa', 'transfer', 'signing', 'deal',
+        'match', 'goal', 'league', 'season', 'manager', 'coach', 'entrenador',
+        'jugador', 'player', 'equipo', 'team', 'goles', 'tarjeta', 'red card',
+        'yellow card', 'expulsión', 'lesión', 'injury', 'ondule', 'titular',
+        'alineación', 'lineup', 'suplente', 'sustitución', 'penalti', 'penalty',
+        'corner', 'tiro', 'shot', 'pases', 'posesión', 'possession', 'xg',
+        'market value', 'valor de mercado', 'cláusula', 'clause', 'cedido', 'loan',
+        'libre', 'free agent', 'renovación', 'extension', 'despido', 'dismissal')
+    foreach ($word in $footballWords) {
+        if ($t.Contains($word)) { return $true }
+    }
+
+    return $false
+}
+
 function Parse-FeedXml($xmlContent, $fuente) {
     $items = @()
     try {
@@ -138,6 +176,10 @@ function Parse-FeedXml($xmlContent, $fuente) {
                 }
             }
 
+            if ($imagen -and $imagen -match '\.(mp4|webm|avi|mov)(\?|$)') {
+                $imagen = ""
+            }
+
             $fecha = $null
             if ($pubDate) {
                 try { $fecha = [DateTime]::Parse($pubDate) } catch {}
@@ -168,8 +210,11 @@ foreach ($feed in $feeds) {
     Write-Host "  $($feed.fuente)..." -NoNewline
     try {
         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-        $response = Invoke-WebRequest -Uri $feed.url -UseBasicParsing -TimeoutSec 15
-        $items = Parse-FeedXml $response.Content $feed.fuente
+        $webClient = New-Object System.Net.WebClient
+        $webClient.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) STPLS/1.0")
+        $webClient.Encoding = [System.Text.Encoding]::UTF8
+        $xmlContent = $webClient.DownloadString($feed.url)
+        $items = Parse-FeedXml $xmlContent $feed.fuente
         $allItems += $items
         Write-Host " OK ($($items.Count) items)" -ForegroundColor Green
     } catch {
@@ -187,6 +232,7 @@ foreach ($item in $allItems) {
     if (-not $item.fecha) { continue }
     if ($item.fecha -lt $corte) { continue }
     if ([string]::IsNullOrWhiteSpace($item.titulo)) { continue }
+    if (-not (Test-IsFootball $item.titulo $item.link)) { continue }
 
     foreach ($teamEntry in $teamAliases.GetEnumerator()) {
         $slug = $teamEntry.Key
