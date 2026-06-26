@@ -4,9 +4,7 @@
 .stats-page{
     max-width:800px;
     margin:0 auto;
-    padding:12px 16px 24px;
-    width:100%;
-    box-sizing:border-box;
+    padding:12px 0 24px;
 }
 
 /* --- Tabs --- */
@@ -14,7 +12,7 @@
     display:flex;
     gap:6px;
     overflow-x:auto;
-    padding:8px 0 16px;
+    padding:8px 16px 16px;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
 }
@@ -46,6 +44,7 @@
 /* --- Content --- */
 .stats-content{
     min-height:200px;
+    padding:0 16px;
 }
 .stats-loading{
     text-align:center;
@@ -59,7 +58,8 @@
     width:100%;
 }
 .stats-row{
-    display:flex;
+    display:grid;
+    grid-template-columns:24px 32px 1fr 36px;
     align-items:center;
     padding:8px 0;
     border-bottom:1px solid var(--border-color);
@@ -70,12 +70,10 @@
 }
 
 .stats-pos{
-    width:20px;
     font-size:13px;
     font-weight:700;
     color:var(--text-muted);
     text-align:center;
-    flex-shrink:0;
 }
 
 .stats-photo{
@@ -84,11 +82,9 @@
     border-radius:50%;
     object-fit:cover;
     background:var(--bg-card);
-    flex-shrink:0;
 }
 
 .stats-info{
-    flex:1;
     min-width:0;
     overflow:hidden;
 }
@@ -100,7 +96,6 @@
     overflow:hidden;
     text-overflow:ellipsis;
     display:block;
-    width:100%;
 }
 .stats-team{
     display:flex;
@@ -127,9 +122,6 @@
     font-size:15px;
     font-weight:800;
     color:var(--accent-gold);
-    flex-shrink:0;
     text-align:right;
     white-space:nowrap;
-    width:30px;
-    text-align:right;
 }
