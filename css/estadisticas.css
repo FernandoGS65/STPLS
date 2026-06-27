@@ -1,135 +1,262 @@
 /* ================================
-   ESTADISTICAS PAGE
+   ESTADÍSTICAS PAGE
    =============================== */
-.stats-page{
-    max-width:800px;
-    margin:0 auto;
-    padding:12px 0 24px;
+.estadisticas-page{
+    width:100%;
+    padding:0 0 32px;
 }
 
 /* --- Tabs --- */
-.stats-tabs{
+.estadisticas-tabs{
     display:flex;
-    gap:6px;
-    overflow-x:auto;
-    padding:8px 16px 16px;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-}
-.stats-tabs::-webkit-scrollbar{display:none}
-
-.stats-tab{
-    flex-shrink:0;
-    padding:8px 14px;
-    border-radius:8px;
-    background:var(--bg-surface);
-    border:1px solid var(--border-color);
-    color:var(--text-secondary);
-    font-size:12px;
-    font-weight:600;
-    cursor:pointer;
-    transition:all 0.15s;
-    white-space:nowrap;
-}
-.stats-tab:hover{
-    background:var(--bg-card-hover);
-    color:var(--text-primary);
-}
-.stats-tab.active{
-    background:var(--accent-gold);
-    color:#0b0f1a;
-    border-color:var(--accent-gold);
+    gap:0;
+    border-bottom:2px solid var(--border-color);
+    position:sticky;
+    top:0;
+    background:var(--bg-body);
+    z-index:10;
 }
 
-/* --- Content --- */
-.stats-content{
-    min-height:200px;
-    padding:0 16px;
-}
-.stats-loading{
-    text-align:center;
+.estadisticas-tab{
+    flex:1;
+    background:none;
+    border:none;
     color:var(--text-muted);
-    padding:40px 0;
-    font-size:14px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.8px;
+    padding:14px 0 12px;
+    cursor:pointer;
+    border-bottom:2px solid transparent;
+    margin-bottom:-2px;
+    transition:color 0.2s, border-color 0.2s;
 }
 
-/* --- Ranking table --- */
-.stats-ranking{
-    width:100%;
+.estadisticas-tab--active{
+    color:var(--text-primary);
+    border-bottom-color:var(--accent-gold);
 }
-.stats-row{
-    display:grid;
-    grid-template-columns:24px 32px 1fr 36px;
+
+.estadisticas-tab:hover:not(.estadisticas-tab--active){
+    color:var(--text-secondary);
+}
+
+/* --- Tab content --- */
+.estadisticas-tab-content{
+    display:none;
+}
+
+.estadisticas-tab-content--active{
+    display:block;
+}
+
+/* --- Section --- */
+.estadisticas-section{
+    padding:20px 16px 0;
+}
+
+.estadisticas-title{
+    font-size:14px;
+    font-weight:700;
+    color:var(--text-primary);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin-bottom:12px;
+}
+
+.estadisticas-title--link{
+    cursor:pointer;
+    display:flex;
     align-items:center;
-    padding:8px 0;
-    border-bottom:1px solid var(--border-color);
-    gap:8px;
+    gap:6px;
 }
-.stats-row:last-child{
+
+.estadisticas-title--link:hover{
+    color:var(--accent-gold);
+}
+
+.estadisticas-arrow{
+    font-size:16px;
+    font-weight:400;
+    opacity:0.5;
+}
+
+.estadisticas-title--link:hover .estadisticas-arrow{
+    opacity:1;
+}
+
+/* --- Table --- */
+.estadisticas-table{
+    background:#000;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+/* --- Row --- */
+.estadisticas-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 14px;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.estadisticas-row:last-child{
     border-bottom:none;
 }
 
-.stats-pos{
-    grid-column: 1;
-    font-size:13px;
+/* --- Position number --- */
+.estadisticas-pos{
+    font-size:12px;
     font-weight:700;
     color:var(--text-muted);
+    width:18px;
+    flex-shrink:0;
     text-align:center;
 }
 
-.stats-photo{
-    grid-column: 2;
-    width:32px;
-    height:32px;
-    border-radius:50%;
-    object-fit:cover;
-    background:var(--bg-card);
-}
-
-.stats-info{
-    grid-column: 3;
-    min-width:0;
-    overflow:hidden;
-}
-.stats-player-name{
-    font-size:13px;
-    font-weight:600;
-    color:var(--text-primary);
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    display:block;
-}
-.stats-team{
+/* --- Player --- */
+.estadisticas-player{
     display:flex;
     align-items:center;
-    gap:4px;
+    gap:10px;
     min-width:0;
+    flex:1;
 }
-.stats-team-logo{
-    width:14px;
-    height:14px;
-    object-fit:contain;
+
+/* --- Avatar --- */
+.estadisticas-avatar{
+    width:40px;
+    height:40px;
     flex-shrink:0;
-}
-.stats-team-name{
-    font-size:11px;
-    color:var(--text-secondary);
-    white-space:nowrap;
+    border-radius:50%;
+    background:var(--bg-card);
+    display:flex;
+    align-items:center;
+    justify-content:center;
     overflow:hidden;
-    text-overflow:ellipsis;
+    border:1.5px solid var(--border-color);
+}
+
+.estadisticas-avatar-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.estadisticas-avatar-fallback{
+    font-size:13px;
+    font-weight:700;
+    color:var(--text-secondary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:100%;
+}
+
+/* --- Info (name + team) --- */
+.estadisticas-info{
+    display:flex;
+    flex-direction:column;
     min-width:0;
 }
 
-.stats-value{
-    grid-column: 4;
-    font-size:15px;
-    font-weight:800;
-    color:var(--accent-gold);
-    text-align:right;
+.estadisticas-name{
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
     white-space:nowrap;
-    background:rgba(240,192,64,0.2);
-    border:1px solid var(--accent-gold);
-    border-radius:4px;
-    padding:2px 4px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.estadisticas-team{
+    font-size:11px;
+    color:var(--text-muted);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/* --- Value (always visible) --- */
+.estadisticas-value{
+    font-size:13px;
+    font-weight:700;
+    color:#fff;
+    flex-shrink:0;
+    margin-left:8px;
+    min-width:24px;
+    text-align:center;
+}
+
+/* --- Pill (first row only) --- */
+.estadisticas-row:first-child .estadisticas-value{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:32px;
+    height:26px;
+    padding:0 10px;
+    border-radius:13px;
+    background:var(--accent-red);
+}
+
+/* --- Separator --- */
+.estadisticas-separator{
+    height:1px;
+    background:var(--border-color);
+    margin:24px 16px 4px;
+}
+
+/* --- Empty state --- */
+.estadisticas-empty{
+    text-align:center;
+    color:var(--text-muted);
+    font-size:14px;
+    padding:40px 0;
+}
+
+/* --- Meta info --- */
+.estadisticas-meta{
+    display:flex;
+    justify-content:space-between;
+    padding:16px;
+    font-size:11px;
+    color:var(--text-muted);
+}
+
+/* --- Detail view --- */
+.estadisticas-detail{
+    padding:0 0 32px;
+}
+
+.estadisticas-detail-header{
+    padding:16px;
+    border-bottom:1px solid var(--border-color);
+    margin-bottom:4px;
+}
+
+.estadisticas-back{
+    background:none;
+    border:none;
+    color:var(--accent-gold);
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    padding:0;
+    margin-bottom:8px;
+    display:block;
+}
+
+.estadisticas-back:hover{
+    opacity:0.8;
+}
+
+.estadisticas-detail-title{
+    font-size:16px;
+    font-weight:700;
+    color:var(--text-primary);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
 }

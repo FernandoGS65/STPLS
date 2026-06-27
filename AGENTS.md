@@ -42,7 +42,8 @@ copy config.example.json config.json
   - `equipo-page.css` — equipo detail: hero, palmares, tabs, stats, evolution, news, transfers
   - `partido.css` — partido page: all `pv-*` classes (header, stats, events, lineups, pitch, boxscore, predictions)
   - `jugadores.css` — jugadores page: search, player cards
-  - `estadisticas.css` — estadísticas page: download table, stat widgets
+  - `estadisticas.css` — estadísticas page: tabs, stat tables, player rows
+  - `arbitros.css` — árbitros page
   - `responsive.css` — all `@media` queries consolidated
 
 ## Data layout
@@ -69,7 +70,7 @@ data/seasons.json      — available seasons/competitions
 | `equipo.html` | `js/equipo.js` | Tabs: jugados/proximos/plantilla/noticias/fichajes/evolucion |
 | `partido.html` | `js/partido.js` | Uses `?v=2` cache busting |
 | `video.html` | `js/video.js` | Iframe or `<video>` element |
-| `estadisticas.html` | `js/estadisticas.js` | + download progress table |
+| `estadisticas.html` | `js/estadisticas.js` | Tabs: jugadores/equipo, stat tables |
 | `jugadores.html` | `js/jugadores.js` | Hardcoded player data |
 
 ## Gotchas
@@ -80,6 +81,6 @@ data/seasons.json      — available seasons/competitions
 - `partido.html` appends `?v=2` to CSS/JS for cache busting — match when editing
 - `index.js` uses a hardcoded GitHub raw URL fallback for calendar data
 - API key sends as `x-rapidapi-key` header (fetch script) but `api.js` (unused) uses `x-api-key`
-- `jugadores.js` and `estadisticas.js` use **hardcoded** player arrays, not API data
+- `jugadores.js` uses **hardcoded** player arrays, not API data
 - `equipos.html` uses old `<header class="hero">` pattern (unlike other pages with `<nav>` only)
 - `seasons.json` currently has one entry (`2025-26` / `liga`) — add entries there for new seasons

@@ -169,7 +169,7 @@
     }
 }
 
-/* --- Dashboard shared (equipos, estadisticas, jugadores) --- */
+/* --- Dashboard shared (equipos, jugadores) --- */
 @media(max-width:768px){
     .dashboard{
         max-width:100%;

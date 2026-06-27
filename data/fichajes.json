@@ -1,60 +1,26 @@
 ﻿{
+  "alaves": [],
   "athletic-club": [],
-  "atletico-madrid": [
-    {"jugador":"Nicolás González","fecha":"2025-08-31","tipo":"llegada","club":"Juventus","precio":"Cesión","posicion":"Delantero","foto":""},
-    {"jugador":"David Hancko","fecha":"2025-07-15","tipo":"llegada","club":"Feyenoord","precio":"35 M€","posicion":"Defensa","foto":""},
-    {"jugador":"Marc Pubill","fecha":"2025-07-10","tipo":"llegada","club":"Almería","precio":"15 M€","posicion":"Defensa","foto":""},
-    {"jugador":"Álex Baena","fecha":"2025-07-01","tipo":"llegada","club":"Villarreal","precio":"40 M€","posicion":"Centrocampista","foto":""},
-    {"jugador":"Thiago Almada","fecha":"2025-07-01","tipo":"llegada","club":"Botafogo","precio":"25 M€","posicion":"Centrocampista","foto":""},
-    {"jugador":"Giacomo Raspadori","fecha":"2025-07-01","tipo":"llegada","club":"Napoli","precio":"30 M€","posicion":"Delantero","foto":""}
-  ],
-  "barcelona": [
-    {"jugador":"Dani Olmo","fecha":"2025-08-01","tipo":"llegada","club":"RB Leipzig","precio":"60 M€","posicion":"Centrocampista","foto":""},
-    {"jugador":"Nico Williams","fecha":"2025-07-15","tipo":"llegada","club":"Athletic Club","precio":"58 M€","posicion":"Delantero","foto":""}
-  ],
+  "atletico-madrid": [],
+  "barcelona": [],
   "celta-de-vigo": [],
-  "elche": [
-    {"jugador":"Adriá Pedrosa","fecha":"2025-08-30","tipo":"llegada","club":"Espanyol","precio":"Libre","posicion":"Defensa","foto":""}
-  ],
+  "elche": [],
   "espanyol": [],
-  "getafe": [],
-  "girona": [
-    {"jugador":"Vladyslav Vanat","fecha":"2025-08-31","tipo":"llegada","club":"Dinamo Kiev","precio":"12 M€","posicion":"Delantero","foto":""},
-    {"jugador":"Bryan Gil","fecha":"2025-08-31","tipo":"llegada","club":"Tottenham","precio":"15 M€","posicion":"Centrocampista","foto":""},
-    {"jugador":"Yangel Herrera","fecha":"2025-07-01","tipo":"salida","club":"Real Sociedad","precio":"8 M€","posicion":"Centrocampista","foto":""}
+  "getafe": [
+    {"jugador": "Coba", "fecha": "2026-05-30", "tipo": "llegada", "club": "Anderlecht", "precio": "Return from loan", "posicion": "", "foto": ""}
   ],
-  "levante": [
-    {"jugador":"Etta Eyong","fecha":"2025-08-31","tipo":"llegada","club":"Villarreal","precio":"10 M€","posicion":"Delantero","foto":""},
-    {"jugador":"Goduine Koyalipou","fecha":"2025-08-30","tipo":"llegada","club":"CSKA Sofia","precio":"4 M€","posicion":"Delantero","foto":""},
-    {"jugador":"Kervin Arriaga","fecha":"2025-08-01","tipo":"llegada","club":"Marathón","precio":"2 M€","posicion":"Centrocampista","foto":""}
+  "girona": [],
+  "levante": [],
+  "mallorca": [
+    {"jugador": "M. Calatayud", "fecha": "2026-05-08", "tipo": "llegada", "club": "Mallorca", "precio": "Raise", "posicion": "", "foto": ""}
   ],
-  "mallorca": [],
   "osasuna": [],
   "oviedo": [],
-  "rayo-vallecano": [
-    {"jugador":"Alemão","fecha":"2025-08-31","tipo":"llegada","club":"Pachuca","precio":"8 M€","posicion":"Delantero","foto":""}
-  ],
-  "real-betis": [
-    {"jugador":"Antony","fecha":"2025-09-01","tipo":"llegada","club":"Manchester United","precio":"25 M€","posicion":"Delantero","foto":""},
-    {"jugador":"Sofyan Amrabat","fecha":"2025-09-01","tipo":"llegada","club":"Fenerbahce","precio":"12 M€","posicion":"Centrocampista","foto":""}
-  ],
+  "rayo-vallecano": [],
+  "real-betis": [],
   "real-madrid": [],
-  "real-sociedad": [
-    {"jugador":"Carlos Soler","fecha":"2025-08-31","tipo":"llegada","club":"PSG","precio":"20 M€","posicion":"Centrocampista","foto":""},
-    {"jugador":"Yangel Herrera","fecha":"2025-08-31","tipo":"llegada","club":"Girona","precio":"8 M€","posicion":"Centrocampista","foto":""}
-  ],
-  "alaves": [
-    {"jugador":"Lucas Boyé","fecha":"2025-08-31","tipo":"llegada","club":"Granada","precio":"6 M€","posicion":"Delantero","foto":""}
-  ],
-  "sevilla-fc": [
-    {"jugador":"Alexis Sánchez","fecha":"2025-09-01","tipo":"llegada","club":"Udinese","precio":"Libre","posicion":"Delantero","foto":""},
-    {"jugador":"Fabio Cardoso","fecha":"2025-08-15","tipo":"llegada","club":"Porto","precio":"8 M€","posicion":"Defensa","foto":""},
-    {"jugador":"Batista Mendy","fecha":"2025-08-01","tipo":"llegada","club":"Angers","precio":"6 M€","posicion":"Centrocampista","foto":""}
-  ],
-  "valencia": [
-    {"jugador":"Lucas Beltrán","fecha":"2025-08-31","tipo":"llegada","club":"Fiorentina","precio":"12 M€","posicion":"Delantero","foto":""}
-  ],
-  "villarreal": [
-    {"jugador":"Georges Mikautadze","fecha":"2025-09-01","tipo":"llegada","club":"Olympique Lyon","precio":"18 M€","posicion":"Delantero","foto":""}
-  ]
+  "real-sociedad": [],
+  "sevilla-fc": [],
+  "valencia": [],
+  "villarreal": []
 }
