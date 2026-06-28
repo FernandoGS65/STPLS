@@ -1,24 +1,8 @@
 ﻿{
     "valoracion15":  [
                          {
-                             "avgPossession":  0.6003,
-                             "avgRating":  7.07,
-                             "played":  38,
-                             "points":  86,
-                             "goalDifference":  42,
-                             "name":  "Real Madrid",
-                             "lost":  6,
-                             "won":  27,
-                             "logo":  "https://highlightly.net/soccer/images/teams/461175.png",
-                             "goalsFor":  77,
-                             "goalsAgainst":  35,
-                             "cleanSheets":  14,
-                             "drawn":  5,
-                             "avgXG":  2.11
-                         },
-                         {
-                             "avgPossession":  0.6883,
-                             "avgRating":  7.04,
+                             "avgPossession":  0.6887,
+                             "avgRating":  7.06,
                              "played":  38,
                              "points":  94,
                              "goalDifference":  59,
@@ -30,26 +14,26 @@
                              "goalsAgainst":  36,
                              "cleanSheets":  15,
                              "drawn":  1,
-                             "avgXG":  2.3
+                             "avgXG":  2.28
                          },
                          {
-                             "avgPossession":  0.4476,
-                             "avgRating":  6.9,
+                             "avgPossession":  0.5934,
+                             "avgRating":  7.04,
                              "played":  38,
-                             "points":  72,
-                             "goalDifference":  26,
-                             "name":  "Villarreal",
-                             "lost":  10,
-                             "won":  22,
-                             "logo":  "https://highlightly.net/soccer/images/teams/454367.png",
-                             "goalsFor":  72,
-                             "goalsAgainst":  46,
-                             "cleanSheets":  8,
-                             "drawn":  6,
-                             "avgXG":  1.5
+                             "points":  86,
+                             "goalDifference":  42,
+                             "name":  "Real Madrid",
+                             "lost":  6,
+                             "won":  27,
+                             "logo":  "https://highlightly.net/soccer/images/teams/461175.png",
+                             "goalsFor":  77,
+                             "goalsAgainst":  35,
+                             "cleanSheets":  14,
+                             "drawn":  5,
+                             "avgXG":  2.01
                          },
                          {
-                             "avgPossession":  0.495,
+                             "avgPossession":  0.5018,
                              "avgRating":  6.88,
                              "played":  38,
                              "points":  60,
@@ -62,10 +46,26 @@
                              "goalsAgainst":  48,
                              "cleanSheets":  10,
                              "drawn":  15,
-                             "avgXG":  1.53
+                             "avgXG":  1.46
                          },
                          {
-                             "avgPossession":  0.524,
+                             "avgPossession":  0.4445,
+                             "avgRating":  6.88,
+                             "played":  38,
+                             "points":  72,
+                             "goalDifference":  26,
+                             "name":  "Villarreal",
+                             "lost":  10,
+                             "won":  22,
+                             "logo":  "https://highlightly.net/soccer/images/teams/454367.png",
+                             "goalsFor":  72,
+                             "goalsAgainst":  46,
+                             "cleanSheets":  8,
+                             "drawn":  6,
+                             "avgXG":  1.49
+                         },
+                         {
+                             "avgPossession":  0.5321,
                              "avgRating":  6.88,
                              "played":  38,
                              "points":  69,
@@ -78,10 +78,10 @@
                              "goalsAgainst":  44,
                              "cleanSheets":  14,
                              "drawn":  6,
-                             "avgXG":  1.56
+                             "avgXG":  1.55
                          },
                          {
-                             "avgPossession":  0.5881,
+                             "avgPossession":  0.5766,
                              "avgRating":  6.83,
                              "played":  38,
                              "points":  43,
@@ -94,11 +94,11 @@
                              "goalsAgainst":  57,
                              "cleanSheets":  8,
                              "drawn":  13,
-                             "avgXG":  1.18
+                             "avgXG":  1.11
                          },
                          {
-                             "avgPossession":  0.5038,
-                             "avgRating":  6.83,
+                             "avgPossession":  0.5034,
+                             "avgRating":  6.82,
                              "played":  38,
                              "points":  54,
                              "goalDifference":  5,
@@ -110,10 +110,42 @@
                              "goalsAgainst":  48,
                              "cleanSheets":  10,
                              "drawn":  12,
+                             "avgXG":  1.29
+                         },
+                         {
+                             "avgPossession":  0.535,
+                             "avgRating":  6.79,
+                             "played":  38,
+                             "points":  50,
+                             "goalDifference":  -3,
+                             "name":  "Rayo Vallecano",
+                             "lost":  12,
+                             "won":  12,
+                             "logo":  "https://highlightly.net/soccer/images/teams/620312.png",
+                             "goalsFor":  41,
+                             "goalsAgainst":  44,
+                             "cleanSheets":  12,
+                             "drawn":  14,
                              "avgXG":  1.35
                          },
                          {
-                             "avgPossession":  0.5081,
+                             "avgPossession":  0.5066,
+                             "avgRating":  6.78,
+                             "played":  38,
+                             "points":  41,
+                             "goalDifference":  -16,
+                             "name":  "Girona",
+                             "lost":  15,
+                             "won":  9,
+                             "logo":  "https://highlightly.net/soccer/images/teams/466281.png",
+                             "goalsFor":  39,
+                             "goalsAgainst":  55,
+                             "cleanSheets":  6,
+                             "drawn":  14,
+                             "avgXG":  1.27
+                         },
+                         {
+                             "avgPossession":  0.5124,
                              "avgRating":  6.78,
                              "played":  38,
                              "points":  46,
@@ -126,26 +158,10 @@
                              "goalsAgainst":  61,
                              "cleanSheets":  3,
                              "drawn":  13,
-                             "avgXG":  1.3
+                             "avgXG":  1.38
                          },
                          {
-                             "avgPossession":  0.54,
-                             "avgRating":  6.78,
-                             "played":  38,
-                             "points":  50,
-                             "goalDifference":  -3,
-                             "name":  "Rayo Vallecano",
-                             "lost":  12,
-                             "won":  12,
-                             "logo":  "https://highlightly.net/soccer/images/teams/620312.png",
-                             "goalsFor":  41,
-                             "goalsAgainst":  44,
-                             "cleanSheets":  12,
-                             "drawn":  14,
-                             "avgXG":  1.29
-                         },
-                         {
-                             "avgPossession":  0.4527,
+                             "avgPossession":  0.4676,
                              "avgRating":  6.78,
                              "played":  38,
                              "points":  42,
@@ -158,43 +174,11 @@
                              "goalsAgainst":  50,
                              "cleanSheets":  7,
                              "drawn":  9,
-                             "avgXG":  1.22
+                             "avgXG":  1.21
                          },
                          {
-                             "avgPossession":  0.4294,
+                             "avgPossession":  0.4695,
                              "avgRating":  6.77,
-                             "played":  38,
-                             "points":  46,
-                             "goalDifference":  -12,
-                             "name":  "Espanyol",
-                             "lost":  16,
-                             "won":  12,
-                             "logo":  "https://highlightly.net/soccer/images/teams/460324.png",
-                             "goalsFor":  43,
-                             "goalsAgainst":  55,
-                             "cleanSheets":  10,
-                             "drawn":  10,
-                             "avgXG":  1.35
-                         },
-                         {
-                             "avgPossession":  0.4968,
-                             "avgRating":  6.77,
-                             "played":  38,
-                             "points":  41,
-                             "goalDifference":  -16,
-                             "name":  "Girona",
-                             "lost":  15,
-                             "won":  9,
-                             "logo":  "https://highlightly.net/soccer/images/teams/466281.png",
-                             "goalsFor":  39,
-                             "goalsAgainst":  55,
-                             "cleanSheets":  6,
-                             "drawn":  14,
-                             "avgXG":  1.29
-                         },
-                         {
-                             "avgPossession":  0.4597,
-                             "avgRating":  6.76,
                              "played":  38,
                              "points":  42,
                              "goalDifference":  -10,
@@ -206,26 +190,26 @@
                              "goalsAgainst":  57,
                              "cleanSheets":  6,
                              "drawn":  9,
-                             "avgXG":  1.17
+                             "avgXG":  1.13
                          },
                          {
-                             "avgPossession":  0.5315,
-                             "avgRating":  6.75,
+                             "avgPossession":  0.4247,
+                             "avgRating":  6.76,
                              "played":  38,
-                             "points":  43,
-                             "goalDifference":  -14,
-                             "name":  "Sevilla FC",
-                             "lost":  19,
+                             "points":  46,
+                             "goalDifference":  -12,
+                             "name":  "Espanyol",
+                             "lost":  16,
                              "won":  12,
-                             "logo":  "https://highlightly.net/soccer/images/teams/456920.png",
-                             "goalsFor":  46,
-                             "goalsAgainst":  60,
-                             "cleanSheets":  6,
-                             "drawn":  7,
-                             "avgXG":  1.04
+                             "logo":  "https://highlightly.net/soccer/images/teams/460324.png",
+                             "goalsFor":  43,
+                             "goalsAgainst":  55,
+                             "cleanSheets":  10,
+                             "drawn":  10,
+                             "avgXG":  1.28
                          },
                          {
-                             "avgPossession":  0.4306,
+                             "avgPossession":  0.4282,
                              "avgRating":  6.75,
                              "played":  38,
                              "points":  42,
@@ -238,29 +222,29 @@
                              "goalsAgainst":  61,
                              "cleanSheets":  9,
                              "drawn":  9,
-                             "avgXG":  1.32
+                             "avgXG":  1.35
+                         },
+                         {
+                             "avgPossession":  0.4768,
+                             "avgRating":  6.75,
+                             "played":  38,
+                             "points":  49,
+                             "goalDifference":  -9,
+                             "name":  "Valencia",
+                             "lost":  15,
+                             "won":  13,
+                             "logo":  "https://highlightly.net/soccer/images/teams/453516.png",
+                             "goalsFor":  46,
+                             "goalsAgainst":  55,
+                             "cleanSheets":  9,
+                             "drawn":  10,
+                             "avgXG":  1.3
                          }
                      ],
     "valoracion":  [
                        {
-                           "avgPossession":  0.6003,
-                           "avgRating":  7.07,
-                           "played":  38,
-                           "points":  86,
-                           "goalDifference":  42,
-                           "name":  "Real Madrid",
-                           "lost":  6,
-                           "won":  27,
-                           "logo":  "https://highlightly.net/soccer/images/teams/461175.png",
-                           "goalsFor":  77,
-                           "goalsAgainst":  35,
-                           "cleanSheets":  14,
-                           "drawn":  5,
-                           "avgXG":  2.11
-                       },
-                       {
-                           "avgPossession":  0.6883,
-                           "avgRating":  7.04,
+                           "avgPossession":  0.6887,
+                           "avgRating":  7.06,
                            "played":  38,
                            "points":  94,
                            "goalDifference":  59,
@@ -272,26 +256,26 @@
                            "goalsAgainst":  36,
                            "cleanSheets":  15,
                            "drawn":  1,
-                           "avgXG":  2.3
+                           "avgXG":  2.28
                        },
                        {
-                           "avgPossession":  0.4476,
-                           "avgRating":  6.9,
+                           "avgPossession":  0.5934,
+                           "avgRating":  7.04,
                            "played":  38,
-                           "points":  72,
-                           "goalDifference":  26,
-                           "name":  "Villarreal",
-                           "lost":  10,
-                           "won":  22,
-                           "logo":  "https://highlightly.net/soccer/images/teams/454367.png",
-                           "goalsFor":  72,
-                           "goalsAgainst":  46,
-                           "cleanSheets":  8,
-                           "drawn":  6,
-                           "avgXG":  1.5
+                           "points":  86,
+                           "goalDifference":  42,
+                           "name":  "Real Madrid",
+                           "lost":  6,
+                           "won":  27,
+                           "logo":  "https://highlightly.net/soccer/images/teams/461175.png",
+                           "goalsFor":  77,
+                           "goalsAgainst":  35,
+                           "cleanSheets":  14,
+                           "drawn":  5,
+                           "avgXG":  2.01
                        },
                        {
-                           "avgPossession":  0.495,
+                           "avgPossession":  0.5018,
                            "avgRating":  6.88,
                            "played":  38,
                            "points":  60,
@@ -304,10 +288,26 @@
                            "goalsAgainst":  48,
                            "cleanSheets":  10,
                            "drawn":  15,
-                           "avgXG":  1.53
+                           "avgXG":  1.46
                        },
                        {
-                           "avgPossession":  0.524,
+                           "avgPossession":  0.4445,
+                           "avgRating":  6.88,
+                           "played":  38,
+                           "points":  72,
+                           "goalDifference":  26,
+                           "name":  "Villarreal",
+                           "lost":  10,
+                           "won":  22,
+                           "logo":  "https://highlightly.net/soccer/images/teams/454367.png",
+                           "goalsFor":  72,
+                           "goalsAgainst":  46,
+                           "cleanSheets":  8,
+                           "drawn":  6,
+                           "avgXG":  1.49
+                       },
+                       {
+                           "avgPossession":  0.5321,
                            "avgRating":  6.88,
                            "played":  38,
                            "points":  69,
@@ -320,13 +320,13 @@
                            "goalsAgainst":  44,
                            "cleanSheets":  14,
                            "drawn":  6,
-                           "avgXG":  1.56
+                           "avgXG":  1.55
                        }
                    ],
     "porteriasCero":  [
                           {
-                              "avgPossession":  0.6883,
-                              "avgRating":  7.04,
+                              "avgPossession":  0.6887,
+                              "avgRating":  7.06,
                               "played":  38,
                               "points":  94,
                               "goalDifference":  59,
@@ -338,11 +338,11 @@
                               "goalsAgainst":  36,
                               "cleanSheets":  15,
                               "drawn":  1,
-                              "avgXG":  2.3
+                              "avgXG":  2.28
                           },
                           {
-                              "avgPossession":  0.6003,
-                              "avgRating":  7.07,
+                              "avgPossession":  0.5934,
+                              "avgRating":  7.04,
                               "played":  38,
                               "points":  86,
                               "goalDifference":  42,
@@ -354,10 +354,10 @@
                               "goalsAgainst":  35,
                               "cleanSheets":  14,
                               "drawn":  5,
-                              "avgXG":  2.11
+                              "avgXG":  2.01
                           },
                           {
-                              "avgPossession":  0.524,
+                              "avgPossession":  0.5321,
                               "avgRating":  6.88,
                               "played":  38,
                               "points":  69,
@@ -370,11 +370,11 @@
                               "goalsAgainst":  44,
                               "cleanSheets":  14,
                               "drawn":  6,
-                              "avgXG":  1.56
+                              "avgXG":  1.55
                           },
                           {
-                              "avgPossession":  0.4163,
-                              "avgRating":  6.71,
+                              "avgPossession":  0.4011,
+                              "avgRating":  6.72,
                               "played":  38,
                               "points":  51,
                               "goalDifference":  -6,
@@ -386,11 +386,11 @@
                               "goalsAgainst":  38,
                               "cleanSheets":  12,
                               "drawn":  6,
-                              "avgXG":  0.79
+                              "avgXG":  0.82
                           },
                           {
-                              "avgPossession":  0.54,
-                              "avgRating":  6.78,
+                              "avgPossession":  0.535,
+                              "avgRating":  6.79,
                               "played":  38,
                               "points":  50,
                               "goalDifference":  -3,
@@ -402,13 +402,13 @@
                               "goalsAgainst":  44,
                               "cleanSheets":  12,
                               "drawn":  14,
-                              "avgXG":  1.29
+                              "avgXG":  1.35
                           }
                       ],
     "posesion15":  [
                        {
-                           "avgPossession":  0.6883,
-                           "avgRating":  7.04,
+                           "avgPossession":  0.6887,
+                           "avgRating":  7.06,
                            "played":  38,
                            "points":  94,
                            "goalDifference":  59,
@@ -420,11 +420,11 @@
                            "goalsAgainst":  36,
                            "cleanSheets":  15,
                            "drawn":  1,
-                           "avgXG":  2.3
+                           "avgXG":  2.28
                        },
                        {
-                           "avgPossession":  0.6003,
-                           "avgRating":  7.07,
+                           "avgPossession":  0.5934,
+                           "avgRating":  7.04,
                            "played":  38,
                            "points":  86,
                            "goalDifference":  42,
@@ -436,10 +436,10 @@
                            "goalsAgainst":  35,
                            "cleanSheets":  14,
                            "drawn":  5,
-                           "avgXG":  2.11
+                           "avgXG":  2.01
                        },
                        {
-                           "avgPossession":  0.5881,
+                           "avgPossession":  0.5766,
                            "avgRating":  6.83,
                            "played":  38,
                            "points":  43,
@@ -452,11 +452,11 @@
                            "goalsAgainst":  57,
                            "cleanSheets":  8,
                            "drawn":  13,
-                           "avgXG":  1.18
+                           "avgXG":  1.11
                        },
                        {
-                           "avgPossession":  0.54,
-                           "avgRating":  6.78,
+                           "avgPossession":  0.535,
+                           "avgRating":  6.79,
                            "played":  38,
                            "points":  50,
                            "goalDifference":  -3,
@@ -468,26 +468,10 @@
                            "goalsAgainst":  44,
                            "cleanSheets":  12,
                            "drawn":  14,
-                           "avgXG":  1.29
+                           "avgXG":  1.35
                        },
                        {
-                           "avgPossession":  0.5315,
-                           "avgRating":  6.75,
-                           "played":  38,
-                           "points":  43,
-                           "goalDifference":  -14,
-                           "name":  "Sevilla FC",
-                           "lost":  19,
-                           "won":  12,
-                           "logo":  "https://highlightly.net/soccer/images/teams/456920.png",
-                           "goalsFor":  46,
-                           "goalsAgainst":  60,
-                           "cleanSheets":  6,
-                           "drawn":  7,
-                           "avgXG":  1.04
-                       },
-                       {
-                           "avgPossession":  0.524,
+                           "avgPossession":  0.5321,
                            "avgRating":  6.88,
                            "played":  38,
                            "points":  69,
@@ -500,10 +484,10 @@
                            "goalsAgainst":  44,
                            "cleanSheets":  14,
                            "drawn":  6,
-                           "avgXG":  1.56
+                           "avgXG":  1.55
                        },
                        {
-                           "avgPossession":  0.5081,
+                           "avgPossession":  0.5124,
                            "avgRating":  6.78,
                            "played":  38,
                            "points":  46,
@@ -516,27 +500,27 @@
                            "goalsAgainst":  61,
                            "cleanSheets":  3,
                            "drawn":  13,
-                           "avgXG":  1.3
+                           "avgXG":  1.38
                        },
                        {
-                           "avgPossession":  0.5038,
-                           "avgRating":  6.83,
+                           "avgPossession":  0.5092,
+                           "avgRating":  6.74,
                            "played":  38,
-                           "points":  54,
-                           "goalDifference":  5,
-                           "name":  "Celta de Vigo",
-                           "lost":  12,
-                           "won":  14,
-                           "logo":  "https://highlightly.net/soccer/images/teams/458622.png",
-                           "goalsFor":  53,
-                           "goalsAgainst":  48,
-                           "cleanSheets":  10,
-                           "drawn":  12,
-                           "avgXG":  1.35
+                           "points":  43,
+                           "goalDifference":  -14,
+                           "name":  "Sevilla FC",
+                           "lost":  19,
+                           "won":  12,
+                           "logo":  "https://highlightly.net/soccer/images/teams/456920.png",
+                           "goalsFor":  46,
+                           "goalsAgainst":  60,
+                           "cleanSheets":  6,
+                           "drawn":  7,
+                           "avgXG":  1.02
                        },
                        {
-                           "avgPossession":  0.4968,
-                           "avgRating":  6.77,
+                           "avgPossession":  0.5066,
+                           "avgRating":  6.78,
                            "played":  38,
                            "points":  41,
                            "goalDifference":  -16,
@@ -548,10 +532,26 @@
                            "goalsAgainst":  55,
                            "cleanSheets":  6,
                            "drawn":  14,
+                           "avgXG":  1.27
+                       },
+                       {
+                           "avgPossession":  0.5034,
+                           "avgRating":  6.82,
+                           "played":  38,
+                           "points":  54,
+                           "goalDifference":  5,
+                           "name":  "Celta de Vigo",
+                           "lost":  12,
+                           "won":  14,
+                           "logo":  "https://highlightly.net/soccer/images/teams/458622.png",
+                           "goalsFor":  53,
+                           "goalsAgainst":  48,
+                           "cleanSheets":  10,
+                           "drawn":  12,
                            "avgXG":  1.29
                        },
                        {
-                           "avgPossession":  0.495,
+                           "avgPossession":  0.5018,
                            "avgRating":  6.88,
                            "played":  38,
                            "points":  60,
@@ -564,10 +564,26 @@
                            "goalsAgainst":  48,
                            "cleanSheets":  10,
                            "drawn":  15,
-                           "avgXG":  1.53
+                           "avgXG":  1.46
                        },
                        {
-                           "avgPossession":  0.4906,
+                           "avgPossession":  0.4858,
+                           "avgRating":  6.7,
+                           "played":  38,
+                           "points":  45,
+                           "goalDifference":  -15,
+                           "name":  "Athletic Club",
+                           "lost":  19,
+                           "won":  13,
+                           "logo":  "https://highlightly.net/soccer/images/teams/452665.png",
+                           "goalsFor":  43,
+                           "goalsAgainst":  58,
+                           "cleanSheets":  6,
+                           "drawn":  6,
+                           "avgXG":  1.32
+                       },
+                       {
+                           "avgPossession":  0.4824,
                            "avgRating":  6.72,
                            "played":  38,
                            "points":  43,
@@ -583,23 +599,7 @@
                            "avgXG":  1.25
                        },
                        {
-                           "avgPossession":  0.4832,
-                           "avgRating":  6.71,
-                           "played":  38,
-                           "points":  45,
-                           "goalDifference":  -15,
-                           "name":  "Athletic Club",
-                           "lost":  19,
-                           "won":  13,
-                           "logo":  "https://highlightly.net/soccer/images/teams/452665.png",
-                           "goalsFor":  43,
-                           "goalsAgainst":  58,
-                           "cleanSheets":  6,
-                           "drawn":  6,
-                           "avgXG":  1.3
-                       },
-                       {
-                           "avgPossession":  0.4771,
+                           "avgPossession":  0.4768,
                            "avgRating":  6.75,
                            "played":  38,
                            "points":  49,
@@ -612,11 +612,11 @@
                            "goalsAgainst":  55,
                            "cleanSheets":  9,
                            "drawn":  10,
-                           "avgXG":  1.2
+                           "avgXG":  1.3
                        },
                        {
-                           "avgPossession":  0.4597,
-                           "avgRating":  6.76,
+                           "avgPossession":  0.4695,
+                           "avgRating":  6.77,
                            "played":  38,
                            "points":  42,
                            "goalDifference":  -10,
@@ -628,10 +628,10 @@
                            "goalsAgainst":  57,
                            "cleanSheets":  6,
                            "drawn":  9,
-                           "avgXG":  1.17
+                           "avgXG":  1.13
                        },
                        {
-                           "avgPossession":  0.4527,
+                           "avgPossession":  0.4676,
                            "avgRating":  6.78,
                            "played":  38,
                            "points":  42,
@@ -644,13 +644,13 @@
                            "goalsAgainst":  50,
                            "cleanSheets":  7,
                            "drawn":  9,
-                           "avgXG":  1.22
+                           "avgXG":  1.21
                        }
                    ],
     "posesion":  [
                      {
-                         "avgPossession":  0.6883,
-                         "avgRating":  7.04,
+                         "avgPossession":  0.6887,
+                         "avgRating":  7.06,
                          "played":  38,
                          "points":  94,
                          "goalDifference":  59,
@@ -662,11 +662,11 @@
                          "goalsAgainst":  36,
                          "cleanSheets":  15,
                          "drawn":  1,
-                         "avgXG":  2.3
+                         "avgXG":  2.28
                      },
                      {
-                         "avgPossession":  0.6003,
-                         "avgRating":  7.07,
+                         "avgPossession":  0.5934,
+                         "avgRating":  7.04,
                          "played":  38,
                          "points":  86,
                          "goalDifference":  42,
@@ -678,10 +678,10 @@
                          "goalsAgainst":  35,
                          "cleanSheets":  14,
                          "drawn":  5,
-                         "avgXG":  2.11
+                         "avgXG":  2.01
                      },
                      {
-                         "avgPossession":  0.5881,
+                         "avgPossession":  0.5766,
                          "avgRating":  6.83,
                          "played":  38,
                          "points":  43,
@@ -694,11 +694,11 @@
                          "goalsAgainst":  57,
                          "cleanSheets":  8,
                          "drawn":  13,
-                         "avgXG":  1.18
+                         "avgXG":  1.11
                      },
                      {
-                         "avgPossession":  0.54,
-                         "avgRating":  6.78,
+                         "avgPossession":  0.535,
+                         "avgRating":  6.79,
                          "played":  38,
                          "points":  50,
                          "goalDifference":  -3,
@@ -710,33 +710,33 @@
                          "goalsAgainst":  44,
                          "cleanSheets":  12,
                          "drawn":  14,
-                         "avgXG":  1.29
+                         "avgXG":  1.35
                      },
                      {
-                         "avgPossession":  0.5315,
-                         "avgRating":  6.75,
+                         "avgPossession":  0.5321,
+                         "avgRating":  6.88,
                          "played":  38,
-                         "points":  43,
-                         "goalDifference":  -14,
-                         "name":  "Sevilla FC",
-                         "lost":  19,
-                         "won":  12,
-                         "logo":  "https://highlightly.net/soccer/images/teams/456920.png",
-                         "goalsFor":  46,
-                         "goalsAgainst":  60,
-                         "cleanSheets":  6,
-                         "drawn":  7,
-                         "avgXG":  1.04
+                         "points":  69,
+                         "goalDifference":  18,
+                         "name":  "Atlético Madrid",
+                         "lost":  11,
+                         "won":  21,
+                         "logo":  "https://highlightly.net/soccer/images/teams/451814.png",
+                         "goalsFor":  62,
+                         "goalsAgainst":  44,
+                         "cleanSheets":  14,
+                         "drawn":  6,
+                         "avgXG":  1.55
                      }
                  ],
     "meta":  {
-                 "jornadasDescargadas":  35,
+                 "jornadasDescargadas":  38,
                  "totalJornadas":  38
              },
     "porteriasCero15":  [
                             {
-                                "avgPossession":  0.6883,
-                                "avgRating":  7.04,
+                                "avgPossession":  0.6887,
+                                "avgRating":  7.06,
                                 "played":  38,
                                 "points":  94,
                                 "goalDifference":  59,
@@ -748,11 +748,11 @@
                                 "goalsAgainst":  36,
                                 "cleanSheets":  15,
                                 "drawn":  1,
-                                "avgXG":  2.3
+                                "avgXG":  2.28
                             },
                             {
-                                "avgPossession":  0.6003,
-                                "avgRating":  7.07,
+                                "avgPossession":  0.5934,
+                                "avgRating":  7.04,
                                 "played":  38,
                                 "points":  86,
                                 "goalDifference":  42,
@@ -764,10 +764,10 @@
                                 "goalsAgainst":  35,
                                 "cleanSheets":  14,
                                 "drawn":  5,
-                                "avgXG":  2.11
+                                "avgXG":  2.01
                             },
                             {
-                                "avgPossession":  0.524,
+                                "avgPossession":  0.5321,
                                 "avgRating":  6.88,
                                 "played":  38,
                                 "points":  69,
@@ -780,11 +780,11 @@
                                 "goalsAgainst":  44,
                                 "cleanSheets":  14,
                                 "drawn":  6,
-                                "avgXG":  1.56
+                                "avgXG":  1.55
                             },
                             {
-                                "avgPossession":  0.4163,
-                                "avgRating":  6.71,
+                                "avgPossession":  0.4011,
+                                "avgRating":  6.72,
                                 "played":  38,
                                 "points":  51,
                                 "goalDifference":  -6,
@@ -796,11 +796,11 @@
                                 "goalsAgainst":  38,
                                 "cleanSheets":  12,
                                 "drawn":  6,
-                                "avgXG":  0.79
+                                "avgXG":  0.82
                             },
                             {
-                                "avgPossession":  0.54,
-                                "avgRating":  6.78,
+                                "avgPossession":  0.535,
+                                "avgRating":  6.79,
                                 "played":  38,
                                 "points":  50,
                                 "goalDifference":  -3,
@@ -812,11 +812,11 @@
                                 "goalsAgainst":  44,
                                 "cleanSheets":  12,
                                 "drawn":  14,
-                                "avgXG":  1.29
+                                "avgXG":  1.35
                             },
                             {
-                                "avgPossession":  0.5038,
-                                "avgRating":  6.83,
+                                "avgPossession":  0.5034,
+                                "avgRating":  6.82,
                                 "played":  38,
                                 "points":  54,
                                 "goalDifference":  5,
@@ -828,11 +828,11 @@
                                 "goalsAgainst":  48,
                                 "cleanSheets":  10,
                                 "drawn":  12,
-                                "avgXG":  1.35
+                                "avgXG":  1.29
                             },
                             {
-                                "avgPossession":  0.4482,
-                                "avgRating":  6.72,
+                                "avgPossession":  0.4603,
+                                "avgRating":  6.73,
                                 "played":  38,
                                 "points":  29,
                                 "goalDifference":  -34,
@@ -847,8 +847,8 @@
                                 "avgXG":  0.93
                             },
                             {
-                                "avgPossession":  0.4294,
-                                "avgRating":  6.77,
+                                "avgPossession":  0.4247,
+                                "avgRating":  6.76,
                                 "played":  38,
                                 "points":  46,
                                 "goalDifference":  -12,
@@ -860,10 +860,10 @@
                                 "goalsAgainst":  55,
                                 "cleanSheets":  10,
                                 "drawn":  10,
-                                "avgXG":  1.35
+                                "avgXG":  1.28
                             },
                             {
-                                "avgPossession":  0.495,
+                                "avgPossession":  0.5018,
                                 "avgRating":  6.88,
                                 "played":  38,
                                 "points":  60,
@@ -876,10 +876,10 @@
                                 "goalsAgainst":  48,
                                 "cleanSheets":  10,
                                 "drawn":  15,
-                                "avgXG":  1.53
+                                "avgXG":  1.46
                             },
                             {
-                                "avgPossession":  0.4306,
+                                "avgPossession":  0.4282,
                                 "avgRating":  6.75,
                                 "played":  38,
                                 "points":  42,
@@ -892,10 +892,10 @@
                                 "goalsAgainst":  61,
                                 "cleanSheets":  9,
                                 "drawn":  9,
-                                "avgXG":  1.32
+                                "avgXG":  1.35
                             },
                             {
-                                "avgPossession":  0.4771,
+                                "avgPossession":  0.4768,
                                 "avgRating":  6.75,
                                 "played":  38,
                                 "points":  49,
@@ -908,11 +908,11 @@
                                 "goalsAgainst":  55,
                                 "cleanSheets":  9,
                                 "drawn":  10,
-                                "avgXG":  1.2
+                                "avgXG":  1.3
                             },
                             {
-                                "avgPossession":  0.4476,
-                                "avgRating":  6.9,
+                                "avgPossession":  0.4445,
+                                "avgRating":  6.88,
                                 "played":  38,
                                 "points":  72,
                                 "goalDifference":  26,
@@ -924,10 +924,10 @@
                                 "goalsAgainst":  46,
                                 "cleanSheets":  8,
                                 "drawn":  6,
-                                "avgXG":  1.5
+                                "avgXG":  1.49
                             },
                             {
-                                "avgPossession":  0.5881,
+                                "avgPossession":  0.5766,
                                 "avgRating":  6.83,
                                 "played":  38,
                                 "points":  43,
@@ -940,10 +940,10 @@
                                 "goalsAgainst":  57,
                                 "cleanSheets":  8,
                                 "drawn":  13,
-                                "avgXG":  1.18
+                                "avgXG":  1.11
                             },
                             {
-                                "avgPossession":  0.4527,
+                                "avgPossession":  0.4676,
                                 "avgRating":  6.78,
                                 "played":  38,
                                 "points":  42,
@@ -956,11 +956,11 @@
                                 "goalsAgainst":  50,
                                 "cleanSheets":  7,
                                 "drawn":  9,
-                                "avgXG":  1.22
+                                "avgXG":  1.21
                             },
                             {
-                                "avgPossession":  0.4597,
-                                "avgRating":  6.76,
+                                "avgPossession":  0.4695,
+                                "avgRating":  6.77,
                                 "played":  38,
                                 "points":  42,
                                 "goalDifference":  -10,
@@ -972,7 +972,7 @@
                                 "goalsAgainst":  57,
                                 "cleanSheets":  6,
                                 "drawn":  9,
-                                "avgXG":  1.17
+                                "avgXG":  1.13
                             }
                         ]
 }
