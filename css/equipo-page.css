@@ -515,3 +515,75 @@
     letter-spacing:0.5px;
     padding:12px 4px 4px;
 }
+
+/* ================================
+   EQUIPO PAGE — Arbitrajes
+   =============================== */
+.arb-team-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:12px;
+    margin-top:8px;
+}
+
+.arb-team-table th{
+    text-align:left;
+    font-size:10px;
+    font-weight:700;
+    color:#fff;
+    text-transform:uppercase;
+    letter-spacing:0.4px;
+    padding:6px 4px;
+    border-bottom:2px solid var(--border-color);
+}
+
+.arb-team-table td{
+    padding:7px 4px;
+    border-bottom:1px solid var(--border-color);
+    color:#fff;
+}
+
+.arb-team-table tbody tr:hover{
+    background:var(--bg-card-hover);
+}
+
+.arb-team-col-name{
+    font-weight:600;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    max-width:160px;
+}
+
+.arb-team-col-num{
+    text-align:center;
+    font-weight:700;
+    width:36px;
+}
+
+.arb-team-link{
+    color:var(--accent-blue);
+    text-decoration:none;
+    transition:color 0.2s;
+}
+
+.arb-team-link:hover{
+    color:var(--accent-gold);
+}
+
+.arb-wins{
+    color:#22c55e;
+}
+
+.arb-losses{
+    color:#ef4444;
+}
+
+.arb-ranking-total-row{
+    border-top:2px solid var(--border);
+    font-weight:700;
+}
+
+.arb-ranking-total-row td{
+    color:#fff;
+}

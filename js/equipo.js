@@ -617,6 +617,7 @@ document.getElementById(
     <span class="partidos-tab partidos-tab--active" data-ver="jugados">Jugados</span>
     <span class="partidos-tab" data-ver="proximos">Próximos</span>
     <span class="partidos-tab" data-ver="plantilla">Plantilla</span>
+    <span class="partidos-tab" data-ver="arbitrajes">Arbitrajes</span>
     <span class="partidos-tab" data-ver="noticias">Noticias</span>
     <span class="partidos-tab" data-ver="fichajes">Fichajes</span>
     <span class="partidos-tab" data-ver="evolucion">Evolución</span>
@@ -626,6 +627,7 @@ document.getElementById(
     <div class="partidos-lista" id="pl-jugados">${htmlJugados}</div>
     <div class="partidos-lista" id="pl-proximos" style="display:none">${htmlProximos}</div>
     <div class="partidos-lista" id="pl-plantilla" style="display:none"></div>
+    <div class="partidos-lista" id="pl-arbitrajes" style="display:none"></div>
     <div class="partidos-lista" id="pl-noticias" style="display:none"><p class="tab-placeholder">Próximamente: Noticias</p></div>
     <div class="partidos-lista" id="pl-fichajes" style="display:none"><p class="tab-placeholder">Próximamente: Fichajes</p></div>
     <div class="partidos-lista" id="pl-evolucion" style="display:none">
@@ -655,12 +657,16 @@ document.getElementById(
         document.getElementById('pl-jugados').style.display = ver === 'jugados' ? '' : 'none';
         document.getElementById('pl-proximos').style.display = ver === 'proximos' ? '' : 'none';
         document.getElementById('pl-plantilla').style.display = ver === 'plantilla' ? '' : 'none';
+        document.getElementById('pl-arbitrajes').style.display = ver === 'arbitrajes' ? '' : 'none';
         document.getElementById('pl-noticias').style.display = ver === 'noticias' ? '' : 'none';
         document.getElementById('pl-fichajes').style.display = ver === 'fichajes' ? '' : 'none';
         document.getElementById('pl-evolucion').style.display = ver === 'evolucion' ? '' : 'none';
 
         if (ver === 'noticias') {
             cargarNoticias();
+        }
+        if (ver === 'arbitrajes') {
+            cargarArbitrajes(jugados, nombreEquipo);
         }
         if (ver === 'fichajes') {
             cargarFichajes();
@@ -763,6 +769,149 @@ document.getElementById(
             if (t.indexOf(palabras[i]) !== -1) return true;
         }
         return false;
+    }
+
+    async function cargarArbitrajes(jugados, nombreEquipo) {
+        var container = document.getElementById('pl-arbitrajes');
+        if (!container) return;
+        container.innerHTML = '<p class="tab-placeholder">Cargando arbitrajes...</p>';
+
+        try {
+            var respArb = await fetch('./data/' + APP.getState().season + '/' + APP.getState().competition + '/arbitros.json');
+            var arbitrosData = await respArb.json();
+
+            var respDesc = await fetch(APP.ruta('descargados'));
+            var descargados = await respDesc.json();
+            var idsDesc = new Set(descargados.map(function(d) { return d.id.toString(); }));
+
+            var partidosConRef = [];
+            for (var i = 0; i < jugados.length; i++) {
+                var j = jugados[i];
+                if (!idsDesc.has(j.id.toString())) continue;
+                try {
+                    var respM = await fetch(APP.ruta('partido', j.id));
+                    var matchData = await respM.json();
+                    if (matchData.referee && matchData.referee.name) {
+                        partidosConRef.push({ match: j, refereeName: matchData.referee.name, detail: matchData });
+                    }
+                } catch(e) {}
+            }
+
+            function normalizar(nombre) {
+                return nombre.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+            }
+
+            function buscarArbitro(refName) {
+                var norm = normalizar(refName);
+                return arbitrosData.find(function(a) {
+                    var parts = a.Nombre.split(/\s+/);
+                    var apellidos = parts.filter(function(p) { return p === p.toUpperCase() && p.length > 1; });
+                    if (apellidos.length >= 2) {
+                        var key = normalizar(apellidos.join(' '));
+                        if (norm.indexOf(key) !== -1) return true;
+                        var unique = [];
+                        for (var j = 0; j < apellidos.length; j++) {
+                            var w = normalizar(apellidos[j]);
+                            if (unique.indexOf(w) === -1) unique.push(w);
+                        }
+                        var matchCount = 0, sigCount = 0;
+                        for (var j = 0; j < unique.length; j++) {
+                            var w = unique[j];
+                            if (w.length > 2) {
+                                sigCount++;
+                                if (norm.indexOf(w) !== -1) matchCount++;
+                                else if (w.length > 5 && norm.indexOf(w.substring(0, 5)) !== -1) matchCount++;
+                            }
+                        }
+                        if (sigCount >= 2 && matchCount >= sigCount) return true;
+                    }
+                    if (apellidos.length === 1) {
+                        var key1 = normalizar(apellidos[0]);
+                        if (norm.indexOf(key1) !== -1) return true;
+                    }
+                    var nombreLower = normalizar(a.Nombre);
+                    if (norm.indexOf(nombreLower) !== -1 || nombreLower.indexOf(norm) !== -1) return true;
+                    return false;
+                });
+            }
+
+            var arbStats = {};
+            partidosConRef.forEach(function(pr) {
+                var arb = buscarArbitro(pr.refereeName);
+                var key = arb ? arb.Nombre : pr.refereeName;
+                if (!arbStats[key]) {
+                    arbStats[key] = { nombre: key, id: arb ? arb.id : null, ganados: 0, empatados: 0, perdidos: 0, total: 0 };
+                }
+                var m = pr.match;
+                var gl, gv;
+                if (m.state && m.state.score && m.state.score.current) {
+                    var parts = m.state.score.current.split('-').map(function(x) { return parseInt(x.trim()); });
+                    gl = parts[0]; gv = parts[1];
+                }
+                if (gl === undefined) return;
+                var esLocal = m.homeTeam.name === nombreEquipo;
+                var gf = esLocal ? gl : gv;
+                var gc = esLocal ? gv : gl;
+                arbStats[key].total++;
+                if (gf > gc) arbStats[key].ganados++;
+                else if (gf === gc) arbStats[key].empatados++;
+                else arbStats[key].perdidos++;
+            });
+
+            var ranked = Object.keys(arbStats).map(function(k) { return arbStats[k]; });
+            ranked.sort(function(a, b) {
+                var pctA = a.total > 0 ? a.ganados / a.total : 0;
+                var pctB = b.total > 0 ? b.ganados / b.total : 0;
+                if (pctB !== pctA) return pctB - pctA;
+                return b.total - a.total;
+            });
+
+            if (!ranked.length) {
+                container.innerHTML = '<p class="tab-placeholder">No hay datos de arbitrajes disponibles</p>';
+                return;
+            }
+
+            var html = '<table class="arb-team-table">';
+            html += '<thead><tr>';
+            html += '<th class="arb-team-col-name">\u00c1rbitro</th>';
+            html += '<th class="arb-team-col-num">PJ</th>';
+            html += '<th class="arb-team-col-num">Gan</th>';
+            html += '<th class="arb-team-col-num">Emp</th>';
+            html += '<th class="arb-team-col-num">Per</th>';
+            html += '<th class="arb-team-col-num">%G</th>';
+            html += '</tr></thead>';
+            html += '<tbody>';
+            var totalPJ = 0, totalG = 0, totalE = 0, totalP = 0;
+            ranked.forEach(function(r) {
+                var pct = r.total > 0 ? Math.round((r.ganados / r.total) * 100) : 0;
+                var link = r.id ? '<a href="arbitros.html?nombre=' + encodeURIComponent(r.nombre) + '" class="arb-team-link">' + escHtml(r.nombre) + '</a>' : escHtml(r.nombre);
+                html += '<tr>';
+                html += '<td class="arb-team-col-name">' + link + '</td>';
+                html += '<td class="arb-team-col-num">' + r.total + '</td>';
+                html += '<td class="arb-team-col-num arb-wins">' + r.ganados + '</td>';
+                html += '<td class="arb-team-col-num">' + r.empatados + '</td>';
+                html += '<td class="arb-team-col-num arb-losses">' + r.perdidos + '</td>';
+                html += '<td class="arb-team-col-num">' + pct + '</td>';
+                html += '</tr>';
+                totalPJ += r.total;
+                totalG += r.ganados;
+                totalE += r.empatados;
+                totalP += r.perdidos;
+            });
+            var totalPct = totalPJ > 0 ? Math.round((totalG / totalPJ) * 100) : 0;
+            html += '<tr class="arb-ranking-total-row">';
+            html += '<td class="arb-team-col-name">TOTAL</td>';
+            html += '<td class="arb-team-col-num">' + totalPJ + '</td>';
+            html += '<td class="arb-team-col-num arb-wins">' + totalG + '</td>';
+            html += '<td class="arb-team-col-num">' + totalE + '</td>';
+            html += '<td class="arb-team-col-num arb-losses">' + totalP + '</td>';
+            html += '<td class="arb-team-col-num">' + totalPct + '</td>';
+            html += '</tr>';
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        } catch(e) {
+            container.innerHTML = '<p class="tab-placeholder">Error al cargar arbitrajes</p>';
+        }
     }
 
     async function cargarNoticias() {

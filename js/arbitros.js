@@ -48,10 +48,13 @@
 
     function primerApellido(nombre) {
         if (!nombre) return '';
+        var prepos = ['de', 'del', 'la', 'las', 'los', 'el'];
         var parts = nombre.split(/\s+/);
         for (var i = 0; i < parts.length; i++) {
             if (parts[i] === parts[i].toUpperCase() && parts[i].length > 1) {
-                return parts[i].toLowerCase();
+                if (prepos.indexOf(parts[i].toLowerCase()) === -1) {
+                    return parts[i].toLowerCase();
+                }
             }
         }
         return parts[parts.length - 1].toLowerCase();
@@ -66,6 +69,28 @@
             if (apellidos.length >= 2) {
                 var key = normalizarApellido(apellidos.join(' '));
                 if (norm.indexOf(key) !== -1) return true;
+                var unique = [];
+                for (var j = 0; j < apellidos.length; j++) {
+                    var w = normalizarApellido(apellidos[j]);
+                    if (unique.indexOf(w) === -1) unique.push(w);
+                }
+                var matchCount = 0, sigCount = 0;
+                for (var j = 0; j < unique.length; j++) {
+                    var w = unique[j];
+                    if (w.length > 2) {
+                        sigCount++;
+                        if (norm.indexOf(w) !== -1) {
+                            matchCount++;
+                        } else if (w.length > 5 && norm.indexOf(w.substring(0, 5)) !== -1) {
+                            matchCount++;
+                        }
+                    }
+                }
+                if (sigCount >= 2 && matchCount >= sigCount) return true;
+            }
+            if (apellidos.length === 1) {
+                var key1 = normalizarApellido(apellidos[0]);
+                if (norm.indexOf(key1) !== -1) return true;
             }
             var nombreLower = normalizarApellido(a.Nombre);
             if (norm.indexOf(nombreLower) !== -1 || nombreLower.indexOf(norm) !== -1) return true;
@@ -259,6 +284,17 @@
                 html += '<td class="arb-col-pen">' + (m.penalty || '-') + '</td>';
                 html += '</tr>';
             });
+
+            var n = filtered.length;
+            html += '<tr class="arb-partidos-total">';
+            html += '<td class="arb-col-j"></td>';
+            html += '<td class="arb-col-fecha"></td>';
+            html += '<td class="arb-col-local" colspan="3">Total (' + n + ' partido' + (n !== 1 ? 's' : '') + ')</td>';
+            html += '<td class="arb-col-yc">' + totalYellow + '</td>';
+            html += '<td class="arb-col-rc">' + totalRed + '</td>';
+            html += '<td class="arb-col-pen">' + totalPen + '</td>';
+            html += '</tr>';
+
             html += '</tbody></table>';
 
             var n = filtered.length;
@@ -303,6 +339,8 @@
                 stats[a.id] = { id: a.id, nombre: a.Nombre, yellow: 0, red: 0, penalty: 0, total: 0, partidos: 0 };
             });
 
+            var sinAsignar = { yellow: 0, red: 0, penalty: 0, total: 0, partidos: 0 };
+
             matches.forEach(function(m) {
                 var data = extractMatchData(m);
                 var arb = matchArbitro(data.referee);
@@ -312,6 +350,12 @@
                     stats[arb.id].penalty += data.penalty;
                     stats[arb.id].total += data.yellow + data.red;
                     stats[arb.id].partidos++;
+                } else {
+                    sinAsignar.yellow += data.yellow;
+                    sinAsignar.red += data.red;
+                    sinAsignar.penalty += data.penalty;
+                    sinAsignar.total += data.yellow + data.red;
+                    sinAsignar.partidos++;
                 }
             });
 
@@ -335,6 +379,42 @@
                 html += '<td class="arb-ranking-total">' + r.total + '</td>';
                 html += '</tr>';
             });
+
+            var sumPJ = 0, sumYC = 0, sumRC = 0, sumPen = 0, sumTot = 0;
+            ranked.forEach(function(r) {
+                sumPJ += r.partidos;
+                sumYC += r.yellow;
+                sumRC += r.red;
+                sumPen += r.penalty;
+                sumTot += r.total;
+            });
+            sumPJ += sinAsignar.partidos;
+            sumYC += sinAsignar.yellow;
+            sumRC += sinAsignar.red;
+            sumPen += sinAsignar.penalty;
+            sumTot += sinAsignar.total;
+
+            if (sinAsignar.partidos > 0) {
+                html += '<tr class="arb-ranking-sin">';
+                html += '<td class="arb-ranking-pos"></td>';
+                html += '<td class="arb-ranking-name">Sin asignar</td>';
+                html += '<td class="arb-ranking-num">' + sinAsignar.partidos + '</td>';
+                html += '<td class="arb-ranking-num arb-cards-yellow">' + sinAsignar.yellow + '</td>';
+                html += '<td class="arb-ranking-num arb-cards-red">' + sinAsignar.red + '</td>';
+                html += '<td class="arb-ranking-num arb-cards-pen">' + sinAsignar.penalty + '</td>';
+                html += '<td class="arb-ranking-total">' + sinAsignar.total + '</td>';
+                html += '</tr>';
+            }
+            html += '<tr class="arb-ranking-total-row">';
+            html += '<td class="arb-ranking-pos"></td>';
+            html += '<td class="arb-ranking-name">Total</td>';
+            html += '<td class="arb-ranking-num">' + sumPJ + '</td>';
+            html += '<td class="arb-ranking-num arb-cards-yellow">' + sumYC + '</td>';
+            html += '<td class="arb-ranking-num arb-cards-red">' + sumRC + '</td>';
+            html += '<td class="arb-ranking-num arb-cards-pen">' + sumPen + '</td>';
+            html += '<td class="arb-ranking-total">' + sumTot + '</td>';
+            html += '</tr>';
+
             html += '</tbody></table>';
             container.innerHTML = html;
         });
@@ -545,9 +625,19 @@
             teamList.sort(function(a, b) { return b.played - a.played || a.team.localeCompare(b.team, 'es'); });
 
             function pct(val, total) {
-                if (total === 0) return '0.0';
-                return ((val / total) * 100).toFixed(1);
+                if (total === 0) return '0';
+                return Math.round((val / total) * 100).toString();
             }
+
+            var totalPJ = 0, totalGan = 0, totalPer = 0, totalEmp = 0, totalPenF = 0, totalPenC = 0;
+            teamList.forEach(function(t) {
+                totalPJ += t.played;
+                totalGan += t.wins;
+                totalPer += t.losses;
+                totalEmp += t.draws;
+                totalPenF += t.penFor;
+                totalPenC += t.penAgainst;
+            });
 
             var html = '<div class="arb-detalle-wrap">';
             html += '<table class="arb-detalle-table">';
@@ -579,6 +669,19 @@
                 html += '<td class="arb-detalle-num arb-detalle-pen">' + t.penAgainst + '</td>';
                 html += '</tr>';
             });
+
+            html += '<tr class="arb-detalle-total">';
+            html += '<td class="arb-detalle-team">Total</td>';
+            html += '<td class="arb-detalle-num">' + totalPJ + '</td>';
+            html += '<td class="arb-detalle-num arb-detalle-wins">' + totalGan + '</td>';
+            html += '<td class="arb-detalle-num arb-detalle-pct">' + pct(totalGan, totalPJ) + '</td>';
+            html += '<td class="arb-detalle-num arb-detalle-losses">' + totalPer + '</td>';
+            html += '<td class="arb-detalle-num arb-detalle-pct">' + pct(totalPer, totalPJ) + '</td>';
+            html += '<td class="arb-detalle-num">' + totalEmp + '</td>';
+            html += '<td class="arb-detalle-num arb-detalle-pct">' + pct(totalEmp, totalPJ) + '</td>';
+            html += '<td class="arb-detalle-num arb-detalle-pen">' + totalPenF + '</td>';
+            html += '<td class="arb-detalle-num arb-detalle-pen">' + totalPenC + '</td>';
+            html += '</tr>';
 
             html += '</tbody></table>';
             html += '</div>';

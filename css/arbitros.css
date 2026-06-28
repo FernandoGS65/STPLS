@@ -391,6 +391,15 @@
     background:var(--bg-card-hover);
 }
 
+.arb-partidos-total{
+    border-top:2px solid var(--border);
+    font-weight:700;
+}
+
+.arb-partidos-total td{
+    color:var(--text-primary);
+}
+
 .arb-col-j{
     width:24px;
     font-weight:700;
@@ -618,6 +627,24 @@
     font-weight:800;
 }
 
+.arb-ranking-total-row{
+    border-top:2px solid var(--border);
+    font-weight:700;
+}
+
+.arb-ranking-total-row td{
+    color:var(--text-primary);
+}
+
+.arb-ranking-sin{
+    color:var(--text-muted);
+    font-style:italic;
+}
+
+.arb-ranking-sin td{
+    color:var(--text-muted);
+}
+
 /* ================================
    LOADING SPINNER
    =============================== */
@@ -704,5 +731,14 @@
 
 .arb-detalle-pen{
     color:var(--accent-blue);
+}
+
+.arb-detalle-total{
+    border-top:2px solid var(--border);
+    font-weight:700;
+}
+
+.arb-detalle-total .arb-detalle-team{
+    color:var(--text);
 }
 

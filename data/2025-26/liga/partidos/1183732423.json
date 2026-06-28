@@ -1,1 +1,3813 @@
-﻿{"venue":{"city":"Vitoria-Gasteiz","name":"Estadio de Mendizorroza","country":"Spain","capacity":"19840"},"referee":{"name":"Gil, Maria Eugenia","nationality":"Spain"},"forecast":{"status":"cloudy","temperature":"-0.75°C"},"events":[{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"time":"10","type":"Yellow Card","assist":null,"player":"F. Vinas","playerId":8296484,"substituted":null,"assistingPlayerId":null},{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"time":"45+2","type":"Yellow Card","assist":null,"player":"D. Suarez","playerId":235375,"substituted":null,"assistingPlayerId":null},{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"time":"46","type":"Substitution","assist":null,"player":"D. Suarez","playerId":235375,"substituted":"L. Boye","assistingPlayerId":98042},{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"time":"46","type":"Substitution","assist":null,"player":"Calebe","playerId":42932092,"substituted":"C. Vicente","assistingPlayerId":30141608},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"time":"54","type":"Substitution","assist":null,"player":"J. Brekalo","playerId":444836,"substituted":"H. Hassan","assistingPlayerId":3356038},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"time":"54","type":"Substitution","assist":null,"player":"E. Bailly","playerId":142639,"substituted":"D. Carmo","assistingPlayerId":6757324},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"time":"56","type":"Goal","assist":"I. Chaira","player":"F. Vinas","playerId":8296484,"substituted":null,"assistingPlayerId":42858676},{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"time":"62","type":"Substitution","assist":null,"player":"C. Alena","playerId":23177,"substituted":"A. Rebbach","assistingPlayerId":29584065},{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"time":"62","type":"Substitution","assist":null,"player":"P. Ibanez","playerId":22379315,"substituted":"C. Protesoni","assistingPlayerId":979839},{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"time":"69","type":"Goal","assist":null,"player":"L. Boye","playerId":98042,"substituted":null,"assistingPlayerId":null},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"time":"74","type":"Substitution","assist":null,"player":"A. Reina","playerId":29380400,"substituted":"N. Fonseca","assistingPlayerId":4941244},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"time":"76","type":"Yellow Card","assist":null,"player":"F. Vinas","playerId":8296484,"substituted":null,"assistingPlayerId":null},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"time":"76","type":"Red Card","assist":null,"player":"F. Vinas","playerId":8296484,"substituted":null,"assistingPlayerId":null},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"time":"78","type":"Yellow Card","assist":null,"player":"R. Alhassane","playerId":47531057,"substituted":null,"assistingPlayerId":null},{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"time":"79","type":"Yellow Card","assist":null,"player":"C. Protesoni","playerId":979839,"substituted":null,"assistingPlayerId":null},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"time":"85","type":"Substitution","assist":null,"player":"S. Colombatto","playerId":4979401,"substituted":"A. Fores","assistingPlayerId":29655388},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"time":"85","type":"Substitution","assist":null,"player":"I. Chaira","playerId":42858676,"substituted":"J. Lopez","assistingPlayerId":29404550},{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"time":"88","type":"Yellow Card","assist":null,"player":"C. Protesoni","playerId":979839,"substituted":null,"assistingPlayerId":null},{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"time":"88","type":"Red Card","assist":null,"player":"C. Protesoni","playerId":979839,"substituted":null,"assistingPlayerId":null},{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"time":"90","type":"Substitution","assist":null,"player":"T. Martinez","playerId":7596295,"substituted":"A. Manas","assistingPlayerId":100448376}],"predictions":{"live":[{"type":"live","modelType":"three-way","description":"Alavés is most likely to win the game against Oviedo.","generatedAt":"2026-01-04T17:40:29.860Z","probabilities":{"away":"19.86%","draw":"35.07%","home":"45.07%"}},{"type":"live","modelType":"three-way","description":"Alavés is most likely to win the game against Oviedo.","generatedAt":"2026-01-04T17:50:26.752Z","probabilities":{"away":"22.16%","draw":"37.68%","home":"40.16%"}},{"type":"live","modelType":"three-way","description":"The match will most likely result in a draw.","generatedAt":"2026-01-04T18:00:51.178Z","probabilities":{"away":"23.18%","draw":"39.88%","home":"36.93%"}},{"type":"live","modelType":"three-way","description":"The match will most likely result in a draw.","generatedAt":"2026-01-04T18:10:49.470Z","probabilities":{"away":"21.24%","draw":"42.89%","home":"35.87%"}},{"type":"live","modelType":"three-way","description":"The match will most likely result in a draw.","generatedAt":"2026-01-04T18:20:51.590Z","probabilities":{"away":"21.09%","draw":"45.68%","home":"33.23%"}},{"type":"live","modelType":"three-way","description":"The match will most likely result in a draw.","generatedAt":"2026-01-04T18:30:50.398Z","probabilities":{"away":"20.55%","draw":"45.29%","home":"34.16%"}},{"type":"live","modelType":"three-way","description":"The match will most likely result in a draw.","generatedAt":"2026-01-04T18:40:55.172Z","probabilities":{"away":"18.78%","draw":"47.87%","home":"33.35%"}},{"type":"live","modelType":"three-way","description":"Oviedo is most likely to win the game against Alavés.","generatedAt":"2026-01-04T18:50:49.914Z","probabilities":{"away":"63.90%","draw":"27.31%","home":"8.79%"}},{"type":"live","modelType":"three-way","description":"The match will most likely result in a draw.","generatedAt":"2026-01-04T19:00:58.839Z","probabilities":{"away":"17.17%","draw":"57.53%","home":"25.30%"}},{"type":"live","modelType":"three-way","description":"The match will most likely result in a draw.","generatedAt":"2026-01-04T19:10:54.429Z","probabilities":{"away":"5.26%","draw":"63.86%","home":"30.88%"}},{"type":"live","modelType":"three-way","description":"The match will most likely result in a draw.","generatedAt":"2026-01-04T19:21:07.399Z","probabilities":{"away":"4.53%","draw":"88.24%","home":"7.24%"}}],"prematch":[{"type":"prematch","modelType":"three-way","description":"Alavés is most likely to win the game against Oviedo.","generatedAt":"2025-12-28T03:09:12.487Z","probabilities":{"away":"18.24%","draw":"30.00%","home":"51.76%"}},{"type":"prematch","modelType":"three-way","description":"Alavés is most likely to win the game against Oviedo.","generatedAt":"2025-12-29T03:02:53.775Z","probabilities":{"away":"18.19%","draw":"29.99%","home":"51.81%"}},{"type":"prematch","modelType":"three-way","description":"Alavés is most likely to win the game against Oviedo.","generatedAt":"2025-12-30T03:01:12.353Z","probabilities":{"away":"18.33%","draw":"30.07%","home":"51.60%"}},{"type":"prematch","modelType":"three-way","description":"Alavés is most likely to win the game against Oviedo.","generatedAt":"2025-12-31T02:56:31.633Z","probabilities":{"away":"18.40%","draw":"30.12%","home":"51.48%"}},{"type":"prematch","modelType":"three-way","description":"Alavés is most likely to win the game against Oviedo.","generatedAt":"2026-01-01T02:54:21.279Z","probabilities":{"away":"18.37%","draw":"29.97%","home":"51.67%"}},{"type":"prematch","modelType":"three-way","description":"Alavés is most likely to win the game against Oviedo.","generatedAt":"2026-01-02T02:50:35.717Z","probabilities":{"away":"18.23%","draw":"30.07%","home":"51.70%"}},{"type":"prematch","modelType":"three-way","description":"Alavés is most likely to win the game against Oviedo.","generatedAt":"2026-01-03T02:49:12.454Z","probabilities":{"away":"18.55%","draw":"30.61%","home":"50.85%"}},{"type":"prematch","modelType":"three-way","description":"Alavés is most likely to win the game against Oviedo.","generatedAt":"2026-01-04T02:31:35.031Z","probabilities":{"away":"18.56%","draw":"30.66%","home":"50.79%"}}]},"statistics":[{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"statistics":[{"value":1.72,"displayName":"Expected Goals"},{"value":3,"displayName":"Big Chances Created"},{"value":19,"displayName":"Free Kicks"},{"value":1.41,"displayName":"Expected Assists"},{"value":6,"displayName":"Successful Crosses"},{"value":28,"displayName":"Crosses"},{"value":163,"displayName":"Passes Own Half"},{"value":307,"displayName":"Passes Opposition Half"},{"value":31,"displayName":"Successful Long Passes"},{"value":60,"displayName":"Long Passes"},{"value":18,"displayName":"Throw-Ins"},{"value":13,"displayName":"Key Passes"},{"value":120,"displayName":"Passes Into Final Third"},{"value":87,"displayName":"Backward Passes"},{"value":9,"displayName":"Goal Kicks"},{"value":6,"displayName":"Interceptions"},{"value":6,"displayName":"Successful Tackles"},{"value":19,"displayName":"Tackles"},{"value":29,"displayName":"Clearances"},{"value":21,"displayName":"Successful Aerial Duels"},{"value":43,"displayName":"Aerial Duels"},{"value":10,"displayName":"Successful Dribbles"},{"value":24,"displayName":"Dribbles"},{"value":0.39,"displayName":"Shots accuracy"},{"value":79,"displayName":"Failed passes"},{"value":0.57,"displayName":"Possession"},{"value":7,"displayName":"Shots on target"},{"value":6,"displayName":"Corners"},{"value":363,"displayName":"Successful passes"},{"value":1,"displayName":"Red cards"},{"value":8,"displayName":"Shots off target"},{"value":3,"displayName":"Blocked shots"},{"value":7,"displayName":"Shots within penalty area"},{"value":442,"displayName":"Total passes"},{"value":11,"displayName":"Shots outside penalty area"},{"value":5,"displayName":"Goalkeeper saves"},{"value":11,"displayName":"Fouls"},{"value":1,"displayName":"Yellow cards"}]},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"statistics":[{"value":2.44,"displayName":"Expected Goals"},{"value":6,"displayName":"Big Chances Created"},{"value":10,"displayName":"Free Kicks"},{"value":1.35,"displayName":"Expected Assists"},{"value":3,"displayName":"Successful Crosses"},{"value":19,"displayName":"Crosses"},{"value":146,"displayName":"Passes Own Half"},{"value":215,"displayName":"Passes Opposition Half"},{"value":30,"displayName":"Successful Long Passes"},{"value":77,"displayName":"Long Passes"},{"value":14,"displayName":"Throw-Ins"},{"value":13,"displayName":"Key Passes"},{"value":75,"displayName":"Passes Into Final Third"},{"value":58,"displayName":"Backward Passes"},{"value":8,"displayName":"Goal Kicks"},{"value":12,"displayName":"Interceptions"},{"value":12,"displayName":"Successful Tackles"},{"value":22,"displayName":"Tackles"},{"value":35,"displayName":"Clearances"},{"value":22,"displayName":"Successful Aerial Duels"},{"value":43,"displayName":"Aerial Duels"},{"value":14,"displayName":"Successful Dribbles"},{"value":22,"displayName":"Dribbles"},{"value":0.33,"displayName":"Shots accuracy"},{"value":84,"displayName":"Failed passes"},{"value":0.43,"displayName":"Possession"},{"value":6,"displayName":"Shots on target"},{"value":7,"displayName":"Corners"},{"value":258,"displayName":"Successful passes"},{"value":1,"displayName":"Red cards"},{"value":7,"displayName":"Shots off target"},{"value":5,"displayName":"Blocked shots"},{"value":10,"displayName":"Shots within penalty area"},{"value":342,"displayName":"Total passes"},{"value":8,"displayName":"Shots outside penalty area"},{"value":6,"displayName":"Goalkeeper saves"},{"value":20,"displayName":"Fouls"},{"value":1,"displayName":"Yellow cards"}]}],"id":1183732423,"round":"Regular Season - 18","date":"2026-01-04T17:30:00.000Z","country":{"code":"ES","name":"Spain","logo":"https://highlightly.net/soccer/images/countries/ES.svg"},"state":{"clock":90,"score":{"current":"1 - 1","penalties":null},"description":"Finished"},"awayTeam":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo","topPlayers":[{"name":"Haissem Hassan","position":"Attacker","statistics":[{"name":"Expected Goals","value":0.04},{"name":"Shots On Target","value":0},{"name":"Minutes","value":37}]},{"name":"Ilyas Chaira","position":"Midfielder","statistics":[{"name":"Expected Goals","value":0.11},{"name":"Shots On Target","value":1},{"name":"Minutes","value":84}]},{"name":"Rahim Alhassane","position":"Defender","statistics":[{"name":"Interceptions","value":4},{"name":"Clearances","value":7},{"name":"Minutes","value":90}]}],"shots":[{"time":"2\u0027","outcome":"Post","goalTarget":null,"playerName":"David Costas"},{"time":"13\u0027","outcome":"Missed","goalTarget":"CloseLeft","playerName":"Federico Viñas"},{"time":"19\u0027","outcome":"Missed","goalTarget":null,"playerName":"Santiago Colombatto"},{"time":"23\u0027","outcome":"Saved","goalTarget":"Low Centre","playerName":"Lucas Ahijado"},{"time":"44\u0027","outcome":"Blocked","goalTarget":"Low Left","playerName":"Josip Brekalo"},{"time":"45\u0027","outcome":"Missed","goalTarget":null,"playerName":"Josip Brekalo"},{"time":"45\u0027","outcome":"Saved","goalTarget":"Low Left","playerName":"Alberto Reina"},{"time":"45 + 2\u0027","outcome":"Blocked","goalTarget":"Low Centre","playerName":"Ilyas Chaira"},{"time":"55\u0027","outcome":"Saved","goalTarget":"Low Centre","playerName":"Kwasi Sibo"},{"time":"56\u0027","outcome":"Goal","goalTarget":"Low Left","playerName":"Federico Viñas"},{"time":"58\u0027","outcome":"Saved","goalTarget":"Low Centre","playerName":"Ilyas Chaira"},{"time":"59\u0027","outcome":"Blocked","goalTarget":"Low Centre","playerName":"Santiago Colombatto"},{"time":"59\u0027","outcome":"Blocked","goalTarget":"Low Centre","playerName":"Kwasi Sibo"},{"time":"65\u0027","outcome":"Saved","goalTarget":"Low Left","playerName":"Federico Viñas"},{"time":"66\u0027","outcome":"Blocked","goalTarget":"Low Centre","playerName":"Haissem Hassan"},{"time":"80\u0027","outcome":"Missed","goalTarget":"Close Right","playerName":"Ilyas Chaira"},{"time":"89\u0027","outcome":"Missed","goalTarget":null,"playerName":"Haissem Hassan"},{"time":"90 + 2\u0027","outcome":"Missed","goalTarget":"CloseLeft","playerName":"Nicolás Fonseca"}]},"homeTeam":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés","topPlayers":[{"name":"Lucas Boyé","position":"Attacker","statistics":[{"name":"Expected Goals","value":0.55},{"name":"Shots On Target","value":1},{"name":"Minutes","value":45}]},{"name":"Pablo Ibañez","position":"Midfielder","statistics":[{"name":"Expected Goals","value":0.42},{"name":"Shots On Target","value":1},{"name":"Minutes","value":61}]},{"name":"Jonny Otto","position":"Defender","statistics":[{"name":"Interceptions","value":3},{"name":"Clearances","value":2},{"name":"Minutes","value":90}]}],"shots":[{"time":"1\u0027","outcome":"Saved","goalTarget":"High Centre","playerName":"Carles Aleñà"},{"time":"15\u0027","outcome":"Blocked","goalTarget":"Low Left","playerName":"Calebe"},{"time":"16\u0027","outcome":"Missed","goalTarget":null,"playerName":"Pablo Ibañez"},{"time":"21\u0027","outcome":"Missed","goalTarget":null,"playerName":"Antonio Blanco"},{"time":"29\u0027","outcome":"Post","goalTarget":null,"playerName":"Pablo Ibañez"},{"time":"31\u0027","outcome":"Saved","goalTarget":"Low Centre","playerName":"Calebe"},{"time":"38\u0027","outcome":"Missed","goalTarget":null,"playerName":"Toni Martinez"},{"time":"47\u0027","outcome":"Missed","goalTarget":null,"playerName":"Lucas Boyé"},{"time":"61\u0027","outcome":"Saved","goalTarget":"Low Centre","playerName":"Toni Martinez"},{"time":"61\u0027","outcome":"Saved","goalTarget":"Low Centre","playerName":"Pablo Ibañez"},{"time":"61\u0027","outcome":"Missed","goalTarget":"CloseLeft","playerName":"Lucas Boyé"},{"time":"69\u0027","outcome":"Goal","goalTarget":"High Left","playerName":"Lucas Boyé"},{"time":"78\u0027","outcome":"Missed","goalTarget":null,"playerName":"Carlos Vicente"},{"time":"78\u0027","outcome":"Blocked","goalTarget":"Low Centre","playerName":"Antonio Blanco"},{"time":"87\u0027","outcome":"Saved","goalTarget":"High Centre","playerName":"Abde Rebbach"},{"time":"90 + 1\u0027","outcome":"Blocked","goalTarget":"Low Centre","playerName":"Nahuel Tenaglia"},{"time":"90 + 1\u0027","outcome":"Saved","goalTarget":"High Left","playerName":"Nahuel Tenaglia"}]},"league":{"id":119924,"logo":"https://highlightly.net/soccer/images/leagues/119924.png","name":"La Liga","season":2025},"news":[],"lineups":{"homeTeam":{"formation":"4-1-4-1","substitutes":[{"name":"Raúl Fernández","number":13,"position":"Goalkeeper","id":7565061},{"name":"Grégoire Swiderski","number":31,"position":"Goalkeeper","id":60731769},{"name":"Carlos Ballestero","number":30,"position":"Defender","id":62392484},{"name":"Carlos Vicente","number":7,"position":"Forward","id":30141608},{"name":"Abderrahman Rebbach","number":21,"position":"Forward","id":29584065},{"name":"Jon Guridi","number":18,"position":"Midfielder","id":16876335},{"name":"Ander Guevara","number":6,"position":"Midfielder","id":7616903},{"name":"Carlos Benavídez","number":23,"position":"Midfielder","id":979839},{"name":"Lucas Boyé","number":15,"position":"Forward","id":98042},{"name":"Aitor Mañas","number":34,"position":"Forward","id":53200994}],"initialLineup":[[{"name":"Antonio Sivera","number":1,"position":"Goalkeeper","id":7623987}],[{"name":"Youssef Enriquez Lekhedim","number":3,"position":"Defender","id":58182978},{"name":"Jon Pacheco","number":5,"position":"Defender","id":29390060},{"name":"Nahuel Tenaglia","number":14,"position":"Defender","id":1003667},{"name":"Jonny Otto","number":17,"position":"Defender","id":3017294}],[{"name":"Antonio Blanco","number":8,"position":"Midfielder","id":26192600}],[{"name":"Carles Aleñá","number":10,"position":"Midfielder","id":23177},{"name":"Denis Suárez","number":4,"position":"Midfielder","id":235375},{"name":"Pablo Ibáñez","number":19,"position":"Midfielder","id":22379315},{"name":"Calebe Gonçalves","number":20,"position":"Midfielder","id":42932092}],[{"name":"Toni Martínez","number":11,"position":"Forward","id":7596295}]],"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"awayTeam":{"formation":"4-2-3-1","substitutes":[{"name":"Horațiu Moldovan","number":1,"position":"Goalkeeper","id":6865516},{"name":"David Carmo","number":16,"position":"Defender","id":6757324},{"name":"Dani Calvo","number":12,"position":"Defender","id":7561680},{"name":"Javi López","number":25,"position":"Defender","id":29404550},{"name":"Oier Luengo","number":15,"position":"Defender","id":17249694},{"name":"Pablo Agudín","number":27,"position":"Midfielder","id":96751172},{"name":"Leander Dendoncker","number":20,"position":"Midfielder","id":470596},{"name":"Luka Ilić","number":21,"position":"Midfielder","id":6230693},{"name":"Haissem Hassan","number":10,"position":"Forward","id":3356038},{"name":"Nicolas Fonseca","number":23,"position":"Midfielder","id":4941244},{"name":"Santi Cazorla","number":8,"position":"Midfielder","id":273049},{"name":"Álex Forés","number":19,"position":"Forward","id":29655388}],"initialLineup":[[{"name":"Aarón Escandell","number":13,"position":"Goalkeeper","id":7514507}],[{"name":"Abdel Rahim","number":3,"position":"Defender","id":47531057},{"name":"Eric Bailly","number":2,"position":"Defender","id":142639},{"name":"David Costas","number":4,"position":"Defender","id":7636223},{"name":"Lucas Ahijado","number":24,"position":"Defender","id":21179382}],[{"name":"Kwasi Sibo","number":6,"position":"Midfielder","id":581042},{"name":"Santiago Colombatto","number":11,"position":"Midfielder","id":4979401}],[{"name":"Ilyas Chaira","number":7,"position":"Midfielder","id":42858676},{"name":"Alberto Reina","number":5,"position":"Midfielder","id":29380400},{"name":"Josip Brekalo","number":18,"position":"Midfielder","id":444836}],[{"name":"Federico Viñas","number":9,"position":"Forward","id":8296484}]],"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"}},"boxScore":{"value":[{"team":{"id":462026,"logo":"https://highlightly.net/soccer/images/teams/462026.png","name":"Alavés"},"players":[{"id":7623987,"name":"Antonio Sivera","matchRating":"8.31","shirtNumber":1,"position":"Goalkeeper","isCaptain":false,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":5,"goalsConceded":1,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"45.45 %","passesSuccessful":15,"passesFailed":18,"passesTotal":33,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":0,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":2,"expectedGoalsPrevented":1.04},"fullName":"Antonio Sivera Salvá","logo":null},{"id":3017294,"name":"Jonny Otto","matchRating":"6.97","shirtNumber":17,"position":"Defender","isCaptain":false,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":3,"dribblesSuccessful":2,"dribblesFailed":1,"dribbleSuccessRate":"66.67 %","fouledByOthers":3,"fouledOthers":1,"tacklesTotal":1,"interceptionsTotal":3,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"81.82 %","passesSuccessful":45,"passesFailed":10,"passesTotal":55,"passesKey":1,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":12,"duelsWon":7,"duelsLost":5,"duelSuccessRate":"58.33 %","expectedAssists":0.53,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Jonathan Castro Otto","logo":null},{"id":1003667,"name":"Nahuel Tenaglia","matchRating":"7.17","shirtNumber":14,"position":"Defender","isCaptain":false,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":0,"dribblesFailed":1,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":3,"interceptionsTotal":0,"shotsOnTarget":1,"shotsOffTarget":0,"shotsTotal":1,"shotsAccuracy":"100.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"90.32 %","passesSuccessful":28,"passesFailed":3,"passesTotal":31,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":12,"duelsWon":7,"duelsLost":5,"duelSuccessRate":"58.33 %","expectedAssists":0.01,"expectedGoals":0.09,"expectedGoalsOnTarget":0.26,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Facundo Nahuel Tenaglia","logo":null},{"id":29390060,"name":"Jon Pacheco","matchRating":"7.31","shirtNumber":5,"position":"Defender","isCaptain":false,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":1,"fouledOthers":0,"tacklesTotal":2,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"83.72 %","passesSuccessful":36,"passesFailed":7,"passesTotal":43,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":7,"duelsWon":5,"duelsLost":2,"duelSuccessRate":"71.43 %","expectedAssists":0.01,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Jon Pacheco Dozagarat","logo":null},{"id":58182978,"name":"Youssef Enriquez","matchRating":"6.86","shirtNumber":3,"position":"Defender","isCaptain":false,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":1,"dribblesFailed":0,"dribbleSuccessRate":"100.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":1,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":1,"shotsTotal":1,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"88.57 %","passesSuccessful":31,"passesFailed":4,"passesTotal":35,"passesKey":1,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":6,"duelsWon":3,"duelsLost":3,"duelSuccessRate":"50.00 %","expectedAssists":null,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Youssef Enríquez Lekhedim","logo":null},{"id":26192600,"name":"Antonio Blanco","matchRating":"7.46","shirtNumber":8,"position":"Midfielder","isCaptain":true,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":1,"dribblesFailed":0,"dribbleSuccessRate":"100.00 %","fouledByOthers":2,"fouledOthers":3,"tacklesTotal":2,"interceptionsTotal":2,"shotsOnTarget":0,"shotsOffTarget":1,"shotsTotal":1,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"86.49 %","passesSuccessful":64,"passesFailed":10,"passesTotal":74,"passesKey":1,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":19,"duelsWon":9,"duelsLost":10,"duelSuccessRate":"47.37 %","expectedAssists":0.04,"expectedGoals":0.05,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Antonio Blanco Conde","logo":null},{"id":42932092,"name":"Calebe Gonçalves","matchRating":"6.69","shirtNumber":20,"position":"Midfielder","isCaptain":false,"minutesPlayed":45,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":4,"dribblesSuccessful":1,"dribblesFailed":3,"dribbleSuccessRate":"25.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":1,"interceptionsTotal":0,"shotsOnTarget":1,"shotsOffTarget":0,"shotsTotal":1,"shotsAccuracy":"100.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"94.44 %","passesSuccessful":17,"passesFailed":1,"passesTotal":18,"passesKey":2,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":6,"duelsWon":2,"duelsLost":4,"duelSuccessRate":"33.33 %","expectedAssists":0.02,"expectedGoals":0.05,"expectedGoalsOnTarget":0.02,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Calebe Gonçalves Ferreira da Silva","logo":null},{"id":22379315,"name":"Pablo Ibáñez","matchRating":"6.64","shirtNumber":19,"position":"Midfielder","isCaptain":false,"minutesPlayed":62,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":1,"dribblesFailed":0,"dribbleSuccessRate":"100.00 %","fouledByOthers":4,"fouledOthers":1,"tacklesTotal":2,"interceptionsTotal":0,"shotsOnTarget":1,"shotsOffTarget":2,"shotsTotal":3,"shotsAccuracy":"33.33 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"88.24 %","passesSuccessful":15,"passesFailed":2,"passesTotal":17,"passesKey":1,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":10,"duelsWon":7,"duelsLost":3,"duelSuccessRate":"70.00 %","expectedAssists":0.02,"expectedGoals":0.42,"expectedGoalsOnTarget":0.25,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Pablo Ibáñez Lumbreras","logo":null},{"id":235375,"name":"Denis Suárez","matchRating":"6.67","shirtNumber":4,"position":"Midfielder","isCaptain":false,"minutesPlayed":45,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":2,"dribblesSuccessful":1,"dribblesFailed":1,"dribbleSuccessRate":"50.00 %","fouledByOthers":2,"fouledOthers":2,"tacklesTotal":1,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"89.29 %","passesSuccessful":25,"passesFailed":3,"passesTotal":28,"passesKey":0,"cardsRed":0,"cardsYellow":1,"cardsSecondYellow":1,"duelsTotal":9,"duelsWon":4,"duelsLost":5,"duelSuccessRate":"44.44 %","expectedAssists":0.01,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Denis Suárez Fernández","logo":null},{"id":23177,"name":"Carles Aleñá","matchRating":"6.67","shirtNumber":10,"position":"Midfielder","isCaptain":false,"minutesPlayed":62,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":1,"dribblesFailed":0,"dribbleSuccessRate":"100.00 %","fouledByOthers":1,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":1,"shotsOnTarget":1,"shotsOffTarget":0,"shotsTotal":1,"shotsAccuracy":"100.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"94.44 %","passesSuccessful":17,"passesFailed":1,"passesTotal":18,"passesKey":1,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":4,"duelsWon":2,"duelsLost":2,"duelSuccessRate":"50.00 %","expectedAssists":0.05,"expectedGoals":0.05,"expectedGoalsOnTarget":0.23,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Carles Aleña Castillo","logo":null},{"id":7596295,"name":"Toni Martínez","matchRating":"6.34","shirtNumber":11,"position":"Forward","isCaptain":false,"minutesPlayed":89,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":0,"dribblesFailed":1,"dribbleSuccessRate":"0.00 %","fouledByOthers":2,"fouledOthers":1,"tacklesTotal":1,"interceptionsTotal":0,"shotsOnTarget":1,"shotsOffTarget":1,"shotsTotal":2,"shotsAccuracy":"50.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"68.18 %","passesSuccessful":15,"passesFailed":7,"passesTotal":22,"passesKey":2,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":14,"duelsWon":6,"duelsLost":8,"duelSuccessRate":"42.86 %","expectedAssists":0.03,"expectedGoals":0.42,"expectedGoalsOnTarget":0.22,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Antonio Martínez López","logo":null},{"id":30141608,"name":"Carlos Vicente","matchRating":"7.53","shirtNumber":7,"position":"Forward","isCaptain":false,"minutesPlayed":45,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":3,"dribblesSuccessful":2,"dribblesFailed":1,"dribbleSuccessRate":"66.67 %","fouledByOthers":2,"fouledOthers":0,"tacklesTotal":1,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":1,"shotsTotal":1,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"77.27 %","passesSuccessful":17,"passesFailed":5,"passesTotal":22,"passesKey":3,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":7,"duelsWon":5,"duelsLost":2,"duelSuccessRate":"71.43 %","expectedAssists":0.45,"expectedGoals":0.03,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Carlos Vicente Robles","logo":null},{"id":98042,"name":"Lucas Boyé","matchRating":"7.57","shirtNumber":15,"position":"Forward","isCaptain":false,"minutesPlayed":45,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":1,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":1,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":1,"shotsOffTarget":2,"shotsTotal":3,"shotsAccuracy":"33.33 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"61.54 %","passesSuccessful":8,"passesFailed":5,"passesTotal":13,"passesKey":1,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":9,"duelsWon":3,"duelsLost":6,"duelSuccessRate":"33.33 %","expectedAssists":0.03,"expectedGoals":0.55,"expectedGoalsOnTarget":0.31,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Lucas Ariel Boyé","logo":null},{"id":29584065,"name":"Abderrahman Rebbach","matchRating":"6.71","shirtNumber":21,"position":"Forward","isCaptain":false,"minutesPlayed":28,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":4,"dribblesSuccessful":0,"dribblesFailed":4,"dribbleSuccessRate":"0.00 %","fouledByOthers":1,"fouledOthers":0,"tacklesTotal":2,"interceptionsTotal":0,"shotsOnTarget":1,"shotsOffTarget":0,"shotsTotal":1,"shotsAccuracy":"100.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"78.57 %","passesSuccessful":11,"passesFailed":3,"passesTotal":14,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":10,"duelsWon":4,"duelsLost":6,"duelSuccessRate":"40.00 %","expectedAssists":0.02,"expectedGoals":0.05,"expectedGoalsOnTarget":0.05,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Abderrahmane Rebbach","logo":null},{"id":979839,"name":"Carlos Benavídez","matchRating":"6.62","shirtNumber":23,"position":"Midfielder","isCaptain":false,"minutesPlayed":26,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":1,"fouledOthers":2,"tacklesTotal":1,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"100.00 %","passesSuccessful":19,"passesFailed":0,"passesTotal":19,"passesKey":0,"cardsRed":1,"cardsYellow":2,"cardsSecondYellow":1,"duelsTotal":4,"duelsWon":2,"duelsLost":2,"duelSuccessRate":"50.00 %","expectedAssists":0.45,"expectedGoals":0.03,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Carlos Nahuel Benavídez Protesoni","logo":null},{"id":53200994,"name":"Aitor Mañas","matchRating":null,"shirtNumber":34,"position":"Forward","isCaptain":false,"minutesPlayed":1,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":2,"dribblesSuccessful":0,"dribblesFailed":2,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":1,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":5,"duelsWon":1,"duelsLost":4,"duelSuccessRate":"20.00 %","expectedAssists":null,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Aitor Mañas Buenadicha","logo":null},{"id":7565061,"name":"Raúl Fernández","matchRating":null,"shirtNumber":13,"position":"Goalkeeper","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":0.02,"expectedGoals":0.42,"expectedGoalsOnTarget":0.25,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Raúl Fernández-Cavada Mateos","logo":null},{"id":60731769,"name":"Grégoire Swiderski","matchRating":null,"shirtNumber":31,"position":"Goalkeeper","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":null,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Grégoire Swiderski","logo":null},{"id":62392484,"name":"Carlos Ballestero","matchRating":null,"shirtNumber":30,"position":"Defender","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":0.45,"expectedGoals":0.03,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Carlos Ballestero García","logo":null},{"id":16876335,"name":"Jon Guridi","matchRating":null,"shirtNumber":18,"position":"Midfielder","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":null,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Jon Guridi Aldalur","logo":null},{"id":7616903,"name":"Ander Guevara","matchRating":null,"shirtNumber":6,"position":"Midfielder","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":null,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Ander Guevara Lajo","logo":null}]},{"team":{"id":611802,"logo":"https://highlightly.net/soccer/images/teams/611802.png","name":"Oviedo"},"players":[{"id":7514507,"name":"Aarón Escandell","matchRating":"7.34","shirtNumber":13,"position":"Goalkeeper","isCaptain":false,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":6,"goalsConceded":1,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"54.55 %","passesSuccessful":18,"passesFailed":15,"passesTotal":33,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":0.02,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":1.3,"expectedGoalsPrevented":0.33},"fullName":"Aarón Escandell Banacloche","logo":null},{"id":21179382,"name":"Lucas Ahijado","matchRating":"6.87","shirtNumber":24,"position":"Defender","isCaptain":false,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":3,"interceptionsTotal":2,"shotsOnTarget":1,"shotsOffTarget":0,"shotsTotal":1,"shotsAccuracy":"100.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"80.65 %","passesSuccessful":25,"passesFailed":6,"passesTotal":31,"passesKey":1,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":4,"duelsWon":3,"duelsLost":1,"duelSuccessRate":"75.00 %","expectedAssists":0.01,"expectedGoals":0.34,"expectedGoalsOnTarget":0.28,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Lucas Ahijado Quintana","logo":null},{"id":7636223,"name":"David Costas","matchRating":"6.91","shirtNumber":4,"position":"Defender","isCaptain":true,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":1,"dribblesFailed":0,"dribbleSuccessRate":"100.00 %","fouledByOthers":1,"fouledOthers":1,"tacklesTotal":2,"interceptionsTotal":3,"shotsOnTarget":0,"shotsOffTarget":1,"shotsTotal":1,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"75.00 %","passesSuccessful":24,"passesFailed":8,"passesTotal":32,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":12,"duelsWon":7,"duelsLost":5,"duelSuccessRate":"58.33 %","expectedAssists":0.05,"expectedGoals":0.45,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"David Costas Cordal","logo":null},{"id":142639,"name":"Eric Bailly","matchRating":"6.99","shirtNumber":2,"position":"Defender","isCaptain":false,"minutesPlayed":54,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":1,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"82.35 %","passesSuccessful":14,"passesFailed":3,"passesTotal":17,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":5,"duelsWon":3,"duelsLost":2,"duelSuccessRate":"60.00 %","expectedAssists":0,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Eric Bertrand Bailly","logo":null},{"id":47531057,"name":"Abdel Rahim","matchRating":"7.01","shirtNumber":3,"position":"Defender","isCaptain":false,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":2,"dribblesSuccessful":1,"dribblesFailed":1,"dribbleSuccessRate":"50.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":3,"interceptionsTotal":4,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"74.29 %","passesSuccessful":26,"passesFailed":9,"passesTotal":35,"passesKey":2,"cardsRed":0,"cardsYellow":1,"cardsSecondYellow":1,"duelsTotal":6,"duelsWon":4,"duelsLost":2,"duelSuccessRate":"66.67 %","expectedAssists":0.02,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Abdel Rahim Alhassane Bonkano","logo":null},{"id":581042,"name":"Kwasi Sibo","matchRating":"6.21","shirtNumber":6,"position":"Midfielder","isCaptain":false,"minutesPlayed":90,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":1,"fouledOthers":4,"tacklesTotal":0,"interceptionsTotal":1,"shotsOnTarget":1,"shotsOffTarget":0,"shotsTotal":1,"shotsAccuracy":"100.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"82.35 %","passesSuccessful":28,"passesFailed":6,"passesTotal":34,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":10,"duelsWon":3,"duelsLost":7,"duelSuccessRate":"30.00 %","expectedAssists":0.03,"expectedGoals":0.05,"expectedGoalsOnTarget":0.14,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Kwasi Sibo","logo":null},{"id":4979401,"name":"Santiago Colombatto","matchRating":"7.22","shirtNumber":11,"position":"Midfielder","isCaptain":false,"minutesPlayed":85,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":2,"dribblesSuccessful":2,"dribblesFailed":0,"dribbleSuccessRate":"100.00 %","fouledByOthers":2,"fouledOthers":4,"tacklesTotal":2,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":1,"shotsTotal":1,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"86.84 %","passesSuccessful":33,"passesFailed":5,"passesTotal":38,"passesKey":2,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":11,"duelsWon":7,"duelsLost":4,"duelSuccessRate":"63.64 %","expectedAssists":0.11,"expectedGoals":0.11,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Santiago Colombatto","logo":null},{"id":42858676,"name":"Ilyas Chaira","matchRating":"6.91","shirtNumber":7,"position":"Midfielder","isCaptain":false,"minutesPlayed":85,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":1,"dribblesTotal":4,"dribblesSuccessful":3,"dribblesFailed":1,"dribbleSuccessRate":"75.00 %","fouledByOthers":2,"fouledOthers":2,"tacklesTotal":2,"interceptionsTotal":0,"shotsOnTarget":1,"shotsOffTarget":1,"shotsTotal":2,"shotsAccuracy":"50.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"84.00 %","passesSuccessful":21,"passesFailed":4,"passesTotal":25,"passesKey":3,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":14,"duelsWon":7,"duelsLost":7,"duelSuccessRate":"50.00 %","expectedAssists":0.15,"expectedGoals":0.11,"expectedGoalsOnTarget":0.02,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Ilyas Chaira","logo":null},{"id":29380400,"name":"Alberto Reina","matchRating":"6.59","shirtNumber":5,"position":"Midfielder","isCaptain":false,"minutesPlayed":74,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":1,"fouledOthers":2,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":1,"shotsOffTarget":0,"shotsTotal":1,"shotsAccuracy":"100.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"88.89 %","passesSuccessful":16,"passesFailed":2,"passesTotal":18,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":12,"duelsWon":4,"duelsLost":8,"duelSuccessRate":"33.33 %","expectedAssists":0.03,"expectedGoals":0.25,"expectedGoalsOnTarget":0.29,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Alberto Reina Campos","logo":null},{"id":444836,"name":"Josip Brekalo","matchRating":"7.31","shirtNumber":18,"position":"Midfielder","isCaptain":false,"minutesPlayed":54,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":1,"dribblesFailed":0,"dribbleSuccessRate":"100.00 %","fouledByOthers":1,"fouledOthers":1,"tacklesTotal":4,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":1,"shotsTotal":1,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"56.52 %","passesSuccessful":13,"passesFailed":10,"passesTotal":23,"passesKey":1,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":11,"duelsWon":6,"duelsLost":5,"duelSuccessRate":"54.55 %","expectedAssists":0.45,"expectedGoals":0.04,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Josip Brekalo","logo":null},{"id":8296484,"name":"Federico Viñas","matchRating":"6.87","shirtNumber":9,"position":"Forward","isCaptain":false,"minutesPlayed":75,"isSubstitute":false,"offsides":0,"statistics":{"goalsScored":1,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":2,"dribblesSuccessful":1,"dribblesFailed":1,"dribbleSuccessRate":"50.00 %","fouledByOthers":1,"fouledOthers":3,"tacklesTotal":1,"interceptionsTotal":0,"shotsOnTarget":2,"shotsOffTarget":1,"shotsTotal":3,"shotsAccuracy":"66.67 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"65.00 %","passesSuccessful":13,"passesFailed":7,"passesTotal":20,"passesKey":2,"cardsRed":1,"cardsYellow":2,"cardsSecondYellow":1,"duelsTotal":19,"duelsWon":9,"duelsLost":10,"duelSuccessRate":"47.37 %","expectedAssists":0.11,"expectedGoals":1,"expectedGoalsOnTarget":1.31,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Federico Sebastián Viñas Barboza","logo":null},{"id":6757324,"name":"David Carmo","matchRating":"6.33","shirtNumber":16,"position":"Defender","isCaptain":false,"minutesPlayed":36,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":2,"tacklesTotal":3,"interceptionsTotal":1,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"50.00 %","passesSuccessful":4,"passesFailed":4,"passesTotal":8,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":11,"duelsWon":6,"duelsLost":5,"duelSuccessRate":"54.55 %","expectedAssists":0,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"David Mota Veiga Teixeira Carmo","logo":null},{"id":3356038,"name":"Haissem Hassan","matchRating":"7.16","shirtNumber":10,"position":"Forward","isCaptain":false,"minutesPlayed":36,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":7,"dribblesSuccessful":4,"dribblesFailed":3,"dribbleSuccessRate":"57.14 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":1,"shotsTotal":1,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"84.62 %","passesSuccessful":11,"passesFailed":2,"passesTotal":13,"passesKey":1,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":9,"duelsWon":5,"duelsLost":4,"duelSuccessRate":"55.56 %","expectedAssists":0.34,"expectedGoals":0.04,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Haissem Hassan","logo":null},{"id":4941244,"name":"Nicolas Fonseca","matchRating":"6.55","shirtNumber":23,"position":"Midfielder","isCaptain":false,"minutesPlayed":16,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":1,"dribblesFailed":0,"dribbleSuccessRate":"100.00 %","fouledByOthers":0,"fouledOthers":1,"tacklesTotal":1,"interceptionsTotal":1,"shotsOnTarget":0,"shotsOffTarget":1,"shotsTotal":1,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"87.50 %","passesSuccessful":7,"passesFailed":1,"passesTotal":8,"passesKey":1,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":4,"duelsWon":2,"duelsLost":2,"duelSuccessRate":"50.00 %","expectedAssists":0.01,"expectedGoals":0.02,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Nicolás Fonseca","logo":null},{"id":29404550,"name":"Javi López","matchRating":"6.68","shirtNumber":25,"position":"Defender","isCaptain":false,"minutesPlayed":12,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":0,"dribblesFailed":1,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"66.67 %","passesSuccessful":4,"passesFailed":2,"passesTotal":6,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":2,"duelsWon":0,"duelsLost":2,"duelSuccessRate":"0.00 %","expectedAssists":0,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Javier López Carballo","logo":null},{"id":29655388,"name":"Álex Forés","matchRating":"6.45","shirtNumber":19,"position":"Forward","isCaptain":false,"minutesPlayed":12,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":1,"dribblesSuccessful":0,"dribblesFailed":1,"dribbleSuccessRate":"0.00 %","fouledByOthers":1,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"100.00 %","passesSuccessful":1,"passesFailed":0,"passesTotal":1,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":4,"duelsWon":1,"duelsLost":3,"duelSuccessRate":"25.00 %","expectedAssists":0,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Álex Forés Mendoza","logo":null},{"id":6865516,"name":"Horațiu Moldovan","matchRating":null,"shirtNumber":1,"position":"Goalkeeper","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":null,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Horaţiu Alexandru Moldovan","logo":null},{"id":7561680,"name":"Dani Calvo","matchRating":null,"shirtNumber":12,"position":"Defender","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":0,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Daniel Pedro Calvo San Román","logo":null},{"id":17249694,"name":"Oier Luengo","matchRating":null,"shirtNumber":15,"position":"Defender","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":null,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Oier Luengo Redondo","logo":null},{"id":96751172,"name":"Pablo Agudín","matchRating":null,"shirtNumber":27,"position":"Midfielder","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":0.02,"expectedGoals":0.42,"expectedGoalsOnTarget":0.25,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":null,"logo":null},{"id":470596,"name":"Leander Dendoncker","matchRating":null,"shirtNumber":20,"position":"Midfielder","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":null,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Leander Dendoncker","logo":null},{"id":6230693,"name":"Luka Ilić","matchRating":null,"shirtNumber":21,"position":"Midfielder","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":null,"expectedGoals":null,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Luka Ilić","logo":null},{"id":273049,"name":"Santi Cazorla","matchRating":null,"shirtNumber":8,"position":"Midfielder","isCaptain":false,"minutesPlayed":0,"isSubstitute":true,"offsides":0,"statistics":{"goalsScored":0,"goalsSaved":0,"goalsConceded":0,"assists":0,"dribblesTotal":0,"dribblesSuccessful":0,"dribblesFailed":0,"dribbleSuccessRate":"0.00 %","fouledByOthers":0,"fouledOthers":0,"tacklesTotal":0,"interceptionsTotal":0,"shotsOnTarget":0,"shotsOffTarget":0,"shotsTotal":0,"shotsAccuracy":"0.00 %","penaltiesScored":0,"penaltiesMissed":0,"penaltiesTotal":0,"penaltiesAccuracy":"0.00 %","passesAccuracy":"0.00 %","passesSuccessful":0,"passesFailed":0,"passesTotal":0,"passesKey":0,"cardsRed":0,"cardsYellow":0,"cardsSecondYellow":0,"duelsTotal":0,"duelsWon":0,"duelsLost":0,"duelSuccessRate":"0.00 %","expectedAssists":0.11,"expectedGoals":0.11,"expectedGoalsOnTarget":null,"expectedGoalsOnTargetConceded":null,"expectedGoalsPrevented":null},"fullName":"Santiago Cazorla González","logo":null}]}],"Count":2}}
+{
+  "venue": {
+    "city": "Vitoria-Gasteiz",
+    "name": "Estadio de Mendizorroza",
+    "country": "Spain",
+    "capacity": "19840"
+  },
+  "referee": {
+    "name": "Gil Manzano, Jesus",
+    "nationality": "Spain"
+  },
+  "forecast": {
+    "status": "cloudy",
+    "temperature": "-0.75°C"
+  },
+  "events": [
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "time": "10",
+      "type": "Yellow Card",
+      "assist": null,
+      "player": "F. Vinas",
+      "playerId": 8296484,
+      "substituted": null,
+      "assistingPlayerId": null
+    },
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "time": "45+2",
+      "type": "Yellow Card",
+      "assist": null,
+      "player": "D. Suarez",
+      "playerId": 235375,
+      "substituted": null,
+      "assistingPlayerId": null
+    },
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "time": "46",
+      "type": "Substitution",
+      "assist": null,
+      "player": "D. Suarez",
+      "playerId": 235375,
+      "substituted": "L. Boye",
+      "assistingPlayerId": 98042
+    },
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "time": "46",
+      "type": "Substitution",
+      "assist": null,
+      "player": "Calebe",
+      "playerId": 42932092,
+      "substituted": "C. Vicente",
+      "assistingPlayerId": 30141608
+    },
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "time": "54",
+      "type": "Substitution",
+      "assist": null,
+      "player": "J. Brekalo",
+      "playerId": 444836,
+      "substituted": "H. Hassan",
+      "assistingPlayerId": 3356038
+    },
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "time": "54",
+      "type": "Substitution",
+      "assist": null,
+      "player": "E. Bailly",
+      "playerId": 142639,
+      "substituted": "D. Carmo",
+      "assistingPlayerId": 6757324
+    },
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "time": "56",
+      "type": "Goal",
+      "assist": "I. Chaira",
+      "player": "F. Vinas",
+      "playerId": 8296484,
+      "substituted": null,
+      "assistingPlayerId": 42858676
+    },
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "time": "62",
+      "type": "Substitution",
+      "assist": null,
+      "player": "C. Alena",
+      "playerId": 23177,
+      "substituted": "A. Rebbach",
+      "assistingPlayerId": 29584065
+    },
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "time": "62",
+      "type": "Substitution",
+      "assist": null,
+      "player": "P. Ibanez",
+      "playerId": 22379315,
+      "substituted": "C. Protesoni",
+      "assistingPlayerId": 979839
+    },
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "time": "69",
+      "type": "Goal",
+      "assist": null,
+      "player": "L. Boye",
+      "playerId": 98042,
+      "substituted": null,
+      "assistingPlayerId": null
+    },
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "time": "74",
+      "type": "Substitution",
+      "assist": null,
+      "player": "A. Reina",
+      "playerId": 29380400,
+      "substituted": "N. Fonseca",
+      "assistingPlayerId": 4941244
+    },
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "time": "76",
+      "type": "Yellow Card",
+      "assist": null,
+      "player": "F. Vinas",
+      "playerId": 8296484,
+      "substituted": null,
+      "assistingPlayerId": null
+    },
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "time": "76",
+      "type": "Red Card",
+      "assist": null,
+      "player": "F. Vinas",
+      "playerId": 8296484,
+      "substituted": null,
+      "assistingPlayerId": null
+    },
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "time": "78",
+      "type": "Yellow Card",
+      "assist": null,
+      "player": "R. Alhassane",
+      "playerId": 47531057,
+      "substituted": null,
+      "assistingPlayerId": null
+    },
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "time": "79",
+      "type": "Yellow Card",
+      "assist": null,
+      "player": "C. Protesoni",
+      "playerId": 979839,
+      "substituted": null,
+      "assistingPlayerId": null
+    },
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "time": "85",
+      "type": "Substitution",
+      "assist": null,
+      "player": "S. Colombatto",
+      "playerId": 4979401,
+      "substituted": "A. Fores",
+      "assistingPlayerId": 29655388
+    },
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "time": "85",
+      "type": "Substitution",
+      "assist": null,
+      "player": "I. Chaira",
+      "playerId": 42858676,
+      "substituted": "J. Lopez",
+      "assistingPlayerId": 29404550
+    },
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "time": "88",
+      "type": "Yellow Card",
+      "assist": null,
+      "player": "C. Protesoni",
+      "playerId": 979839,
+      "substituted": null,
+      "assistingPlayerId": null
+    },
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "time": "88",
+      "type": "Red Card",
+      "assist": null,
+      "player": "C. Protesoni",
+      "playerId": 979839,
+      "substituted": null,
+      "assistingPlayerId": null
+    },
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "time": "90",
+      "type": "Substitution",
+      "assist": null,
+      "player": "T. Martinez",
+      "playerId": 7596295,
+      "substituted": "A. Manas",
+      "assistingPlayerId": 100448376
+    }
+  ],
+  "predictions": {
+    "live": [
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "Alavés is most likely to win the game against Oviedo.",
+        "generatedAt": "2026-01-04T17:40:29.860Z",
+        "probabilities": {
+          "away": "19.86%",
+          "draw": "35.07%",
+          "home": "45.07%"
+        }
+      },
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "Alavés is most likely to win the game against Oviedo.",
+        "generatedAt": "2026-01-04T17:50:26.752Z",
+        "probabilities": {
+          "away": "22.16%",
+          "draw": "37.68%",
+          "home": "40.16%"
+        }
+      },
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "The match will most likely result in a draw.",
+        "generatedAt": "2026-01-04T18:00:51.178Z",
+        "probabilities": {
+          "away": "23.18%",
+          "draw": "39.88%",
+          "home": "36.93%"
+        }
+      },
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "The match will most likely result in a draw.",
+        "generatedAt": "2026-01-04T18:10:49.470Z",
+        "probabilities": {
+          "away": "21.24%",
+          "draw": "42.89%",
+          "home": "35.87%"
+        }
+      },
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "The match will most likely result in a draw.",
+        "generatedAt": "2026-01-04T18:20:51.590Z",
+        "probabilities": {
+          "away": "21.09%",
+          "draw": "45.68%",
+          "home": "33.23%"
+        }
+      },
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "The match will most likely result in a draw.",
+        "generatedAt": "2026-01-04T18:30:50.398Z",
+        "probabilities": {
+          "away": "20.55%",
+          "draw": "45.29%",
+          "home": "34.16%"
+        }
+      },
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "The match will most likely result in a draw.",
+        "generatedAt": "2026-01-04T18:40:55.172Z",
+        "probabilities": {
+          "away": "18.78%",
+          "draw": "47.87%",
+          "home": "33.35%"
+        }
+      },
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "Oviedo is most likely to win the game against Alavés.",
+        "generatedAt": "2026-01-04T18:50:49.914Z",
+        "probabilities": {
+          "away": "63.90%",
+          "draw": "27.31%",
+          "home": "8.79%"
+        }
+      },
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "The match will most likely result in a draw.",
+        "generatedAt": "2026-01-04T19:00:58.839Z",
+        "probabilities": {
+          "away": "17.17%",
+          "draw": "57.53%",
+          "home": "25.30%"
+        }
+      },
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "The match will most likely result in a draw.",
+        "generatedAt": "2026-01-04T19:10:54.429Z",
+        "probabilities": {
+          "away": "5.26%",
+          "draw": "63.86%",
+          "home": "30.88%"
+        }
+      },
+      {
+        "type": "live",
+        "modelType": "three-way",
+        "description": "The match will most likely result in a draw.",
+        "generatedAt": "2026-01-04T19:21:07.399Z",
+        "probabilities": {
+          "away": "4.53%",
+          "draw": "88.24%",
+          "home": "7.24%"
+        }
+      }
+    ],
+    "prematch": [
+      {
+        "type": "prematch",
+        "modelType": "three-way",
+        "description": "Alavés is most likely to win the game against Oviedo.",
+        "generatedAt": "2025-12-28T03:09:12.487Z",
+        "probabilities": {
+          "away": "18.24%",
+          "draw": "30.00%",
+          "home": "51.76%"
+        }
+      },
+      {
+        "type": "prematch",
+        "modelType": "three-way",
+        "description": "Alavés is most likely to win the game against Oviedo.",
+        "generatedAt": "2025-12-29T03:02:53.775Z",
+        "probabilities": {
+          "away": "18.19%",
+          "draw": "29.99%",
+          "home": "51.81%"
+        }
+      },
+      {
+        "type": "prematch",
+        "modelType": "three-way",
+        "description": "Alavés is most likely to win the game against Oviedo.",
+        "generatedAt": "2025-12-30T03:01:12.353Z",
+        "probabilities": {
+          "away": "18.33%",
+          "draw": "30.07%",
+          "home": "51.60%"
+        }
+      },
+      {
+        "type": "prematch",
+        "modelType": "three-way",
+        "description": "Alavés is most likely to win the game against Oviedo.",
+        "generatedAt": "2025-12-31T02:56:31.633Z",
+        "probabilities": {
+          "away": "18.40%",
+          "draw": "30.12%",
+          "home": "51.48%"
+        }
+      },
+      {
+        "type": "prematch",
+        "modelType": "three-way",
+        "description": "Alavés is most likely to win the game against Oviedo.",
+        "generatedAt": "2026-01-01T02:54:21.279Z",
+        "probabilities": {
+          "away": "18.37%",
+          "draw": "29.97%",
+          "home": "51.67%"
+        }
+      },
+      {
+        "type": "prematch",
+        "modelType": "three-way",
+        "description": "Alavés is most likely to win the game against Oviedo.",
+        "generatedAt": "2026-01-02T02:50:35.717Z",
+        "probabilities": {
+          "away": "18.23%",
+          "draw": "30.07%",
+          "home": "51.70%"
+        }
+      },
+      {
+        "type": "prematch",
+        "modelType": "three-way",
+        "description": "Alavés is most likely to win the game against Oviedo.",
+        "generatedAt": "2026-01-03T02:49:12.454Z",
+        "probabilities": {
+          "away": "18.55%",
+          "draw": "30.61%",
+          "home": "50.85%"
+        }
+      },
+      {
+        "type": "prematch",
+        "modelType": "three-way",
+        "description": "Alavés is most likely to win the game against Oviedo.",
+        "generatedAt": "2026-01-04T02:31:35.031Z",
+        "probabilities": {
+          "away": "18.56%",
+          "draw": "30.66%",
+          "home": "50.79%"
+        }
+      }
+    ]
+  },
+  "statistics": [
+    {
+      "team": {
+        "id": 462026,
+        "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+        "name": "Alavés"
+      },
+      "statistics": [
+        {
+          "value": 1.72,
+          "displayName": "Expected Goals"
+        },
+        {
+          "value": 3,
+          "displayName": "Big Chances Created"
+        },
+        {
+          "value": 19,
+          "displayName": "Free Kicks"
+        },
+        {
+          "value": 1.41,
+          "displayName": "Expected Assists"
+        },
+        {
+          "value": 6,
+          "displayName": "Successful Crosses"
+        },
+        {
+          "value": 28,
+          "displayName": "Crosses"
+        },
+        {
+          "value": 163,
+          "displayName": "Passes Own Half"
+        },
+        {
+          "value": 307,
+          "displayName": "Passes Opposition Half"
+        },
+        {
+          "value": 31,
+          "displayName": "Successful Long Passes"
+        },
+        {
+          "value": 60,
+          "displayName": "Long Passes"
+        },
+        {
+          "value": 18,
+          "displayName": "Throw-Ins"
+        },
+        {
+          "value": 13,
+          "displayName": "Key Passes"
+        },
+        {
+          "value": 120,
+          "displayName": "Passes Into Final Third"
+        },
+        {
+          "value": 87,
+          "displayName": "Backward Passes"
+        },
+        {
+          "value": 9,
+          "displayName": "Goal Kicks"
+        },
+        {
+          "value": 6,
+          "displayName": "Interceptions"
+        },
+        {
+          "value": 6,
+          "displayName": "Successful Tackles"
+        },
+        {
+          "value": 19,
+          "displayName": "Tackles"
+        },
+        {
+          "value": 29,
+          "displayName": "Clearances"
+        },
+        {
+          "value": 21,
+          "displayName": "Successful Aerial Duels"
+        },
+        {
+          "value": 43,
+          "displayName": "Aerial Duels"
+        },
+        {
+          "value": 10,
+          "displayName": "Successful Dribbles"
+        },
+        {
+          "value": 24,
+          "displayName": "Dribbles"
+        },
+        {
+          "value": 0.39,
+          "displayName": "Shots accuracy"
+        },
+        {
+          "value": 79,
+          "displayName": "Failed passes"
+        },
+        {
+          "value": 0.57,
+          "displayName": "Possession"
+        },
+        {
+          "value": 7,
+          "displayName": "Shots on target"
+        },
+        {
+          "value": 6,
+          "displayName": "Corners"
+        },
+        {
+          "value": 363,
+          "displayName": "Successful passes"
+        },
+        {
+          "value": 1,
+          "displayName": "Red cards"
+        },
+        {
+          "value": 8,
+          "displayName": "Shots off target"
+        },
+        {
+          "value": 3,
+          "displayName": "Blocked shots"
+        },
+        {
+          "value": 7,
+          "displayName": "Shots within penalty area"
+        },
+        {
+          "value": 442,
+          "displayName": "Total passes"
+        },
+        {
+          "value": 11,
+          "displayName": "Shots outside penalty area"
+        },
+        {
+          "value": 5,
+          "displayName": "Goalkeeper saves"
+        },
+        {
+          "value": 11,
+          "displayName": "Fouls"
+        },
+        {
+          "value": 1,
+          "displayName": "Yellow cards"
+        }
+      ]
+    },
+    {
+      "team": {
+        "id": 611802,
+        "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+        "name": "Oviedo"
+      },
+      "statistics": [
+        {
+          "value": 2.44,
+          "displayName": "Expected Goals"
+        },
+        {
+          "value": 6,
+          "displayName": "Big Chances Created"
+        },
+        {
+          "value": 10,
+          "displayName": "Free Kicks"
+        },
+        {
+          "value": 1.35,
+          "displayName": "Expected Assists"
+        },
+        {
+          "value": 3,
+          "displayName": "Successful Crosses"
+        },
+        {
+          "value": 19,
+          "displayName": "Crosses"
+        },
+        {
+          "value": 146,
+          "displayName": "Passes Own Half"
+        },
+        {
+          "value": 215,
+          "displayName": "Passes Opposition Half"
+        },
+        {
+          "value": 30,
+          "displayName": "Successful Long Passes"
+        },
+        {
+          "value": 77,
+          "displayName": "Long Passes"
+        },
+        {
+          "value": 14,
+          "displayName": "Throw-Ins"
+        },
+        {
+          "value": 13,
+          "displayName": "Key Passes"
+        },
+        {
+          "value": 75,
+          "displayName": "Passes Into Final Third"
+        },
+        {
+          "value": 58,
+          "displayName": "Backward Passes"
+        },
+        {
+          "value": 8,
+          "displayName": "Goal Kicks"
+        },
+        {
+          "value": 12,
+          "displayName": "Interceptions"
+        },
+        {
+          "value": 12,
+          "displayName": "Successful Tackles"
+        },
+        {
+          "value": 22,
+          "displayName": "Tackles"
+        },
+        {
+          "value": 35,
+          "displayName": "Clearances"
+        },
+        {
+          "value": 22,
+          "displayName": "Successful Aerial Duels"
+        },
+        {
+          "value": 43,
+          "displayName": "Aerial Duels"
+        },
+        {
+          "value": 14,
+          "displayName": "Successful Dribbles"
+        },
+        {
+          "value": 22,
+          "displayName": "Dribbles"
+        },
+        {
+          "value": 0.33,
+          "displayName": "Shots accuracy"
+        },
+        {
+          "value": 84,
+          "displayName": "Failed passes"
+        },
+        {
+          "value": 0.43,
+          "displayName": "Possession"
+        },
+        {
+          "value": 6,
+          "displayName": "Shots on target"
+        },
+        {
+          "value": 7,
+          "displayName": "Corners"
+        },
+        {
+          "value": 258,
+          "displayName": "Successful passes"
+        },
+        {
+          "value": 1,
+          "displayName": "Red cards"
+        },
+        {
+          "value": 7,
+          "displayName": "Shots off target"
+        },
+        {
+          "value": 5,
+          "displayName": "Blocked shots"
+        },
+        {
+          "value": 10,
+          "displayName": "Shots within penalty area"
+        },
+        {
+          "value": 342,
+          "displayName": "Total passes"
+        },
+        {
+          "value": 8,
+          "displayName": "Shots outside penalty area"
+        },
+        {
+          "value": 6,
+          "displayName": "Goalkeeper saves"
+        },
+        {
+          "value": 20,
+          "displayName": "Fouls"
+        },
+        {
+          "value": 1,
+          "displayName": "Yellow cards"
+        }
+      ]
+    }
+  ],
+  "id": 1183732423,
+  "round": "Regular Season - 18",
+  "date": "2026-01-04T17:30:00.000Z",
+  "country": {
+    "code": "ES",
+    "name": "Spain",
+    "logo": "https://highlightly.net/soccer/images/countries/ES.svg"
+  },
+  "state": {
+    "clock": 90,
+    "score": {
+      "current": "1 - 1",
+      "penalties": null
+    },
+    "description": "Finished"
+  },
+  "awayTeam": {
+    "id": 611802,
+    "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+    "name": "Oviedo",
+    "topPlayers": [
+      {
+        "name": "Haissem Hassan",
+        "position": "Attacker",
+        "statistics": [
+          {
+            "name": "Expected Goals",
+            "value": 0.04
+          },
+          {
+            "name": "Shots On Target",
+            "value": 0
+          },
+          {
+            "name": "Minutes",
+            "value": 37
+          }
+        ]
+      },
+      {
+        "name": "Ilyas Chaira",
+        "position": "Midfielder",
+        "statistics": [
+          {
+            "name": "Expected Goals",
+            "value": 0.11
+          },
+          {
+            "name": "Shots On Target",
+            "value": 1
+          },
+          {
+            "name": "Minutes",
+            "value": 84
+          }
+        ]
+      },
+      {
+        "name": "Rahim Alhassane",
+        "position": "Defender",
+        "statistics": [
+          {
+            "name": "Interceptions",
+            "value": 4
+          },
+          {
+            "name": "Clearances",
+            "value": 7
+          },
+          {
+            "name": "Minutes",
+            "value": 90
+          }
+        ]
+      }
+    ],
+    "shots": [
+      {
+        "time": "2'",
+        "outcome": "Post",
+        "goalTarget": null,
+        "playerName": "David Costas"
+      },
+      {
+        "time": "13'",
+        "outcome": "Missed",
+        "goalTarget": "CloseLeft",
+        "playerName": "Federico Viñas"
+      },
+      {
+        "time": "19'",
+        "outcome": "Missed",
+        "goalTarget": null,
+        "playerName": "Santiago Colombatto"
+      },
+      {
+        "time": "23'",
+        "outcome": "Saved",
+        "goalTarget": "Low Centre",
+        "playerName": "Lucas Ahijado"
+      },
+      {
+        "time": "44'",
+        "outcome": "Blocked",
+        "goalTarget": "Low Left",
+        "playerName": "Josip Brekalo"
+      },
+      {
+        "time": "45'",
+        "outcome": "Missed",
+        "goalTarget": null,
+        "playerName": "Josip Brekalo"
+      },
+      {
+        "time": "45'",
+        "outcome": "Saved",
+        "goalTarget": "Low Left",
+        "playerName": "Alberto Reina"
+      },
+      {
+        "time": "45 + 2'",
+        "outcome": "Blocked",
+        "goalTarget": "Low Centre",
+        "playerName": "Ilyas Chaira"
+      },
+      {
+        "time": "55'",
+        "outcome": "Saved",
+        "goalTarget": "Low Centre",
+        "playerName": "Kwasi Sibo"
+      },
+      {
+        "time": "56'",
+        "outcome": "Goal",
+        "goalTarget": "Low Left",
+        "playerName": "Federico Viñas"
+      },
+      {
+        "time": "58'",
+        "outcome": "Saved",
+        "goalTarget": "Low Centre",
+        "playerName": "Ilyas Chaira"
+      },
+      {
+        "time": "59'",
+        "outcome": "Blocked",
+        "goalTarget": "Low Centre",
+        "playerName": "Santiago Colombatto"
+      },
+      {
+        "time": "59'",
+        "outcome": "Blocked",
+        "goalTarget": "Low Centre",
+        "playerName": "Kwasi Sibo"
+      },
+      {
+        "time": "65'",
+        "outcome": "Saved",
+        "goalTarget": "Low Left",
+        "playerName": "Federico Viñas"
+      },
+      {
+        "time": "66'",
+        "outcome": "Blocked",
+        "goalTarget": "Low Centre",
+        "playerName": "Haissem Hassan"
+      },
+      {
+        "time": "80'",
+        "outcome": "Missed",
+        "goalTarget": "Close Right",
+        "playerName": "Ilyas Chaira"
+      },
+      {
+        "time": "89'",
+        "outcome": "Missed",
+        "goalTarget": null,
+        "playerName": "Haissem Hassan"
+      },
+      {
+        "time": "90 + 2'",
+        "outcome": "Missed",
+        "goalTarget": "CloseLeft",
+        "playerName": "Nicolás Fonseca"
+      }
+    ]
+  },
+  "homeTeam": {
+    "id": 462026,
+    "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+    "name": "Alavés",
+    "topPlayers": [
+      {
+        "name": "Lucas Boyé",
+        "position": "Attacker",
+        "statistics": [
+          {
+            "name": "Expected Goals",
+            "value": 0.55
+          },
+          {
+            "name": "Shots On Target",
+            "value": 1
+          },
+          {
+            "name": "Minutes",
+            "value": 45
+          }
+        ]
+      },
+      {
+        "name": "Pablo Ibañez",
+        "position": "Midfielder",
+        "statistics": [
+          {
+            "name": "Expected Goals",
+            "value": 0.42
+          },
+          {
+            "name": "Shots On Target",
+            "value": 1
+          },
+          {
+            "name": "Minutes",
+            "value": 61
+          }
+        ]
+      },
+      {
+        "name": "Jonny Otto",
+        "position": "Defender",
+        "statistics": [
+          {
+            "name": "Interceptions",
+            "value": 3
+          },
+          {
+            "name": "Clearances",
+            "value": 2
+          },
+          {
+            "name": "Minutes",
+            "value": 90
+          }
+        ]
+      }
+    ],
+    "shots": [
+      {
+        "time": "1'",
+        "outcome": "Saved",
+        "goalTarget": "High Centre",
+        "playerName": "Carles Aleñà"
+      },
+      {
+        "time": "15'",
+        "outcome": "Blocked",
+        "goalTarget": "Low Left",
+        "playerName": "Calebe"
+      },
+      {
+        "time": "16'",
+        "outcome": "Missed",
+        "goalTarget": null,
+        "playerName": "Pablo Ibañez"
+      },
+      {
+        "time": "21'",
+        "outcome": "Missed",
+        "goalTarget": null,
+        "playerName": "Antonio Blanco"
+      },
+      {
+        "time": "29'",
+        "outcome": "Post",
+        "goalTarget": null,
+        "playerName": "Pablo Ibañez"
+      },
+      {
+        "time": "31'",
+        "outcome": "Saved",
+        "goalTarget": "Low Centre",
+        "playerName": "Calebe"
+      },
+      {
+        "time": "38'",
+        "outcome": "Missed",
+        "goalTarget": null,
+        "playerName": "Toni Martinez"
+      },
+      {
+        "time": "47'",
+        "outcome": "Missed",
+        "goalTarget": null,
+        "playerName": "Lucas Boyé"
+      },
+      {
+        "time": "61'",
+        "outcome": "Saved",
+        "goalTarget": "Low Centre",
+        "playerName": "Toni Martinez"
+      },
+      {
+        "time": "61'",
+        "outcome": "Saved",
+        "goalTarget": "Low Centre",
+        "playerName": "Pablo Ibañez"
+      },
+      {
+        "time": "61'",
+        "outcome": "Missed",
+        "goalTarget": "CloseLeft",
+        "playerName": "Lucas Boyé"
+      },
+      {
+        "time": "69'",
+        "outcome": "Goal",
+        "goalTarget": "High Left",
+        "playerName": "Lucas Boyé"
+      },
+      {
+        "time": "78'",
+        "outcome": "Missed",
+        "goalTarget": null,
+        "playerName": "Carlos Vicente"
+      },
+      {
+        "time": "78'",
+        "outcome": "Blocked",
+        "goalTarget": "Low Centre",
+        "playerName": "Antonio Blanco"
+      },
+      {
+        "time": "87'",
+        "outcome": "Saved",
+        "goalTarget": "High Centre",
+        "playerName": "Abde Rebbach"
+      },
+      {
+        "time": "90 + 1'",
+        "outcome": "Blocked",
+        "goalTarget": "Low Centre",
+        "playerName": "Nahuel Tenaglia"
+      },
+      {
+        "time": "90 + 1'",
+        "outcome": "Saved",
+        "goalTarget": "High Left",
+        "playerName": "Nahuel Tenaglia"
+      }
+    ]
+  },
+  "league": {
+    "id": 119924,
+    "logo": "https://highlightly.net/soccer/images/leagues/119924.png",
+    "name": "La Liga",
+    "season": 2025
+  },
+  "news": [],
+  "lineups": {
+    "homeTeam": {
+      "formation": "4-1-4-1",
+      "substitutes": [
+        {
+          "name": "Raúl Fernández",
+          "number": 13,
+          "position": "Goalkeeper",
+          "id": 7565061
+        },
+        {
+          "name": "Grégoire Swiderski",
+          "number": 31,
+          "position": "Goalkeeper",
+          "id": 60731769
+        },
+        {
+          "name": "Carlos Ballestero",
+          "number": 30,
+          "position": "Defender",
+          "id": 62392484
+        },
+        {
+          "name": "Carlos Vicente",
+          "number": 7,
+          "position": "Forward",
+          "id": 30141608
+        },
+        {
+          "name": "Abderrahman Rebbach",
+          "number": 21,
+          "position": "Forward",
+          "id": 29584065
+        },
+        {
+          "name": "Jon Guridi",
+          "number": 18,
+          "position": "Midfielder",
+          "id": 16876335
+        },
+        {
+          "name": "Ander Guevara",
+          "number": 6,
+          "position": "Midfielder",
+          "id": 7616903
+        },
+        {
+          "name": "Carlos Benavídez",
+          "number": 23,
+          "position": "Midfielder",
+          "id": 979839
+        },
+        {
+          "name": "Lucas Boyé",
+          "number": 15,
+          "position": "Forward",
+          "id": 98042
+        },
+        {
+          "name": "Aitor Mañas",
+          "number": 34,
+          "position": "Forward",
+          "id": 53200994
+        }
+      ],
+      "initialLineup": [
+        [
+          {
+            "name": "Antonio Sivera",
+            "number": 1,
+            "position": "Goalkeeper",
+            "id": 7623987
+          }
+        ],
+        [
+          {
+            "name": "Youssef Enriquez Lekhedim",
+            "number": 3,
+            "position": "Defender",
+            "id": 58182978
+          },
+          {
+            "name": "Jon Pacheco",
+            "number": 5,
+            "position": "Defender",
+            "id": 29390060
+          },
+          {
+            "name": "Nahuel Tenaglia",
+            "number": 14,
+            "position": "Defender",
+            "id": 1003667
+          },
+          {
+            "name": "Jonny Otto",
+            "number": 17,
+            "position": "Defender",
+            "id": 3017294
+          }
+        ],
+        [
+          {
+            "name": "Antonio Blanco",
+            "number": 8,
+            "position": "Midfielder",
+            "id": 26192600
+          }
+        ],
+        [
+          {
+            "name": "Carles Aleñá",
+            "number": 10,
+            "position": "Midfielder",
+            "id": 23177
+          },
+          {
+            "name": "Denis Suárez",
+            "number": 4,
+            "position": "Midfielder",
+            "id": 235375
+          },
+          {
+            "name": "Pablo Ibáñez",
+            "number": 19,
+            "position": "Midfielder",
+            "id": 22379315
+          },
+          {
+            "name": "Calebe Gonçalves",
+            "number": 20,
+            "position": "Midfielder",
+            "id": 42932092
+          }
+        ],
+        [
+          {
+            "name": "Toni Martínez",
+            "number": 11,
+            "position": "Forward",
+            "id": 7596295
+          }
+        ]
+      ],
+      "id": 462026,
+      "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+      "name": "Alavés"
+    },
+    "awayTeam": {
+      "formation": "4-2-3-1",
+      "substitutes": [
+        {
+          "name": "Horațiu Moldovan",
+          "number": 1,
+          "position": "Goalkeeper",
+          "id": 6865516
+        },
+        {
+          "name": "David Carmo",
+          "number": 16,
+          "position": "Defender",
+          "id": 6757324
+        },
+        {
+          "name": "Dani Calvo",
+          "number": 12,
+          "position": "Defender",
+          "id": 7561680
+        },
+        {
+          "name": "Javi López",
+          "number": 25,
+          "position": "Defender",
+          "id": 29404550
+        },
+        {
+          "name": "Oier Luengo",
+          "number": 15,
+          "position": "Defender",
+          "id": 17249694
+        },
+        {
+          "name": "Pablo Agudín",
+          "number": 27,
+          "position": "Midfielder",
+          "id": 96751172
+        },
+        {
+          "name": "Leander Dendoncker",
+          "number": 20,
+          "position": "Midfielder",
+          "id": 470596
+        },
+        {
+          "name": "Luka Ilić",
+          "number": 21,
+          "position": "Midfielder",
+          "id": 6230693
+        },
+        {
+          "name": "Haissem Hassan",
+          "number": 10,
+          "position": "Forward",
+          "id": 3356038
+        },
+        {
+          "name": "Nicolas Fonseca",
+          "number": 23,
+          "position": "Midfielder",
+          "id": 4941244
+        },
+        {
+          "name": "Santi Cazorla",
+          "number": 8,
+          "position": "Midfielder",
+          "id": 273049
+        },
+        {
+          "name": "Álex Forés",
+          "number": 19,
+          "position": "Forward",
+          "id": 29655388
+        }
+      ],
+      "initialLineup": [
+        [
+          {
+            "name": "Aarón Escandell",
+            "number": 13,
+            "position": "Goalkeeper",
+            "id": 7514507
+          }
+        ],
+        [
+          {
+            "name": "Abdel Rahim",
+            "number": 3,
+            "position": "Defender",
+            "id": 47531057
+          },
+          {
+            "name": "Eric Bailly",
+            "number": 2,
+            "position": "Defender",
+            "id": 142639
+          },
+          {
+            "name": "David Costas",
+            "number": 4,
+            "position": "Defender",
+            "id": 7636223
+          },
+          {
+            "name": "Lucas Ahijado",
+            "number": 24,
+            "position": "Defender",
+            "id": 21179382
+          }
+        ],
+        [
+          {
+            "name": "Kwasi Sibo",
+            "number": 6,
+            "position": "Midfielder",
+            "id": 581042
+          },
+          {
+            "name": "Santiago Colombatto",
+            "number": 11,
+            "position": "Midfielder",
+            "id": 4979401
+          }
+        ],
+        [
+          {
+            "name": "Ilyas Chaira",
+            "number": 7,
+            "position": "Midfielder",
+            "id": 42858676
+          },
+          {
+            "name": "Alberto Reina",
+            "number": 5,
+            "position": "Midfielder",
+            "id": 29380400
+          },
+          {
+            "name": "Josip Brekalo",
+            "number": 18,
+            "position": "Midfielder",
+            "id": 444836
+          }
+        ],
+        [
+          {
+            "name": "Federico Viñas",
+            "number": 9,
+            "position": "Forward",
+            "id": 8296484
+          }
+        ]
+      ],
+      "id": 611802,
+      "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+      "name": "Oviedo"
+    }
+  },
+  "boxScore": {
+    "value": [
+      {
+        "team": {
+          "id": 462026,
+          "logo": "https://highlightly.net/soccer/images/teams/462026.png",
+          "name": "Alavés"
+        },
+        "players": [
+          {
+            "id": 7623987,
+            "name": "Antonio Sivera",
+            "matchRating": "8.31",
+            "shirtNumber": 1,
+            "position": "Goalkeeper",
+            "isCaptain": false,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 5,
+              "goalsConceded": 1,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "45.45 %",
+              "passesSuccessful": 15,
+              "passesFailed": 18,
+              "passesTotal": 33,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": 0,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": 2,
+              "expectedGoalsPrevented": 1.04
+            },
+            "fullName": "Antonio Sivera Salvá",
+            "logo": null
+          },
+          {
+            "id": 3017294,
+            "name": "Jonny Otto",
+            "matchRating": "6.97",
+            "shirtNumber": 17,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 3,
+              "dribblesSuccessful": 2,
+              "dribblesFailed": 1,
+              "dribbleSuccessRate": "66.67 %",
+              "fouledByOthers": 3,
+              "fouledOthers": 1,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 3,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "81.82 %",
+              "passesSuccessful": 45,
+              "passesFailed": 10,
+              "passesTotal": 55,
+              "passesKey": 1,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 12,
+              "duelsWon": 7,
+              "duelsLost": 5,
+              "duelSuccessRate": "58.33 %",
+              "expectedAssists": 0.53,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Jonathan Castro Otto",
+            "logo": null
+          },
+          {
+            "id": 1003667,
+            "name": "Nahuel Tenaglia",
+            "matchRating": "7.17",
+            "shirtNumber": 14,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 1,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 3,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 0,
+              "shotsTotal": 1,
+              "shotsAccuracy": "100.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "90.32 %",
+              "passesSuccessful": 28,
+              "passesFailed": 3,
+              "passesTotal": 31,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 12,
+              "duelsWon": 7,
+              "duelsLost": 5,
+              "duelSuccessRate": "58.33 %",
+              "expectedAssists": 0.01,
+              "expectedGoals": 0.09,
+              "expectedGoalsOnTarget": 0.26,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Facundo Nahuel Tenaglia",
+            "logo": null
+          },
+          {
+            "id": 29390060,
+            "name": "Jon Pacheco",
+            "matchRating": "7.31",
+            "shirtNumber": 5,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 1,
+              "fouledOthers": 0,
+              "tacklesTotal": 2,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "83.72 %",
+              "passesSuccessful": 36,
+              "passesFailed": 7,
+              "passesTotal": 43,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 7,
+              "duelsWon": 5,
+              "duelsLost": 2,
+              "duelSuccessRate": "71.43 %",
+              "expectedAssists": 0.01,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Jon Pacheco Dozagarat",
+            "logo": null
+          },
+          {
+            "id": 58182978,
+            "name": "Youssef Enriquez",
+            "matchRating": "6.86",
+            "shirtNumber": 3,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "100.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 1,
+              "shotsTotal": 1,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "88.57 %",
+              "passesSuccessful": 31,
+              "passesFailed": 4,
+              "passesTotal": 35,
+              "passesKey": 1,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 6,
+              "duelsWon": 3,
+              "duelsLost": 3,
+              "duelSuccessRate": "50.00 %",
+              "expectedAssists": null,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Youssef Enríquez Lekhedim",
+            "logo": null
+          },
+          {
+            "id": 26192600,
+            "name": "Antonio Blanco",
+            "matchRating": "7.46",
+            "shirtNumber": 8,
+            "position": "Midfielder",
+            "isCaptain": true,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "100.00 %",
+              "fouledByOthers": 2,
+              "fouledOthers": 3,
+              "tacklesTotal": 2,
+              "interceptionsTotal": 2,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 1,
+              "shotsTotal": 1,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "86.49 %",
+              "passesSuccessful": 64,
+              "passesFailed": 10,
+              "passesTotal": 74,
+              "passesKey": 1,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 19,
+              "duelsWon": 9,
+              "duelsLost": 10,
+              "duelSuccessRate": "47.37 %",
+              "expectedAssists": 0.04,
+              "expectedGoals": 0.05,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Antonio Blanco Conde",
+            "logo": null
+          },
+          {
+            "id": 42932092,
+            "name": "Calebe Gonçalves",
+            "matchRating": "6.69",
+            "shirtNumber": 20,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 45,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 4,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 3,
+              "dribbleSuccessRate": "25.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 0,
+              "shotsTotal": 1,
+              "shotsAccuracy": "100.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "94.44 %",
+              "passesSuccessful": 17,
+              "passesFailed": 1,
+              "passesTotal": 18,
+              "passesKey": 2,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 6,
+              "duelsWon": 2,
+              "duelsLost": 4,
+              "duelSuccessRate": "33.33 %",
+              "expectedAssists": 0.02,
+              "expectedGoals": 0.05,
+              "expectedGoalsOnTarget": 0.02,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Calebe Gonçalves Ferreira da Silva",
+            "logo": null
+          },
+          {
+            "id": 22379315,
+            "name": "Pablo Ibáñez",
+            "matchRating": "6.64",
+            "shirtNumber": 19,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 62,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "100.00 %",
+              "fouledByOthers": 4,
+              "fouledOthers": 1,
+              "tacklesTotal": 2,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 2,
+              "shotsTotal": 3,
+              "shotsAccuracy": "33.33 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "88.24 %",
+              "passesSuccessful": 15,
+              "passesFailed": 2,
+              "passesTotal": 17,
+              "passesKey": 1,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 10,
+              "duelsWon": 7,
+              "duelsLost": 3,
+              "duelSuccessRate": "70.00 %",
+              "expectedAssists": 0.02,
+              "expectedGoals": 0.42,
+              "expectedGoalsOnTarget": 0.25,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Pablo Ibáñez Lumbreras",
+            "logo": null
+          },
+          {
+            "id": 235375,
+            "name": "Denis Suárez",
+            "matchRating": "6.67",
+            "shirtNumber": 4,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 45,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 2,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 1,
+              "dribbleSuccessRate": "50.00 %",
+              "fouledByOthers": 2,
+              "fouledOthers": 2,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "89.29 %",
+              "passesSuccessful": 25,
+              "passesFailed": 3,
+              "passesTotal": 28,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 1,
+              "cardsSecondYellow": 1,
+              "duelsTotal": 9,
+              "duelsWon": 4,
+              "duelsLost": 5,
+              "duelSuccessRate": "44.44 %",
+              "expectedAssists": 0.01,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Denis Suárez Fernández",
+            "logo": null
+          },
+          {
+            "id": 23177,
+            "name": "Carles Aleñá",
+            "matchRating": "6.67",
+            "shirtNumber": 10,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 62,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "100.00 %",
+              "fouledByOthers": 1,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 1,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 0,
+              "shotsTotal": 1,
+              "shotsAccuracy": "100.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "94.44 %",
+              "passesSuccessful": 17,
+              "passesFailed": 1,
+              "passesTotal": 18,
+              "passesKey": 1,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 4,
+              "duelsWon": 2,
+              "duelsLost": 2,
+              "duelSuccessRate": "50.00 %",
+              "expectedAssists": 0.05,
+              "expectedGoals": 0.05,
+              "expectedGoalsOnTarget": 0.23,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Carles Aleña Castillo",
+            "logo": null
+          },
+          {
+            "id": 7596295,
+            "name": "Toni Martínez",
+            "matchRating": "6.34",
+            "shirtNumber": 11,
+            "position": "Forward",
+            "isCaptain": false,
+            "minutesPlayed": 89,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 1,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 2,
+              "fouledOthers": 1,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 1,
+              "shotsTotal": 2,
+              "shotsAccuracy": "50.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "68.18 %",
+              "passesSuccessful": 15,
+              "passesFailed": 7,
+              "passesTotal": 22,
+              "passesKey": 2,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 14,
+              "duelsWon": 6,
+              "duelsLost": 8,
+              "duelSuccessRate": "42.86 %",
+              "expectedAssists": 0.03,
+              "expectedGoals": 0.42,
+              "expectedGoalsOnTarget": 0.22,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Antonio Martínez López",
+            "logo": null
+          },
+          {
+            "id": 30141608,
+            "name": "Carlos Vicente",
+            "matchRating": "7.53",
+            "shirtNumber": 7,
+            "position": "Forward",
+            "isCaptain": false,
+            "minutesPlayed": 45,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 3,
+              "dribblesSuccessful": 2,
+              "dribblesFailed": 1,
+              "dribbleSuccessRate": "66.67 %",
+              "fouledByOthers": 2,
+              "fouledOthers": 0,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 1,
+              "shotsTotal": 1,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "77.27 %",
+              "passesSuccessful": 17,
+              "passesFailed": 5,
+              "passesTotal": 22,
+              "passesKey": 3,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 7,
+              "duelsWon": 5,
+              "duelsLost": 2,
+              "duelSuccessRate": "71.43 %",
+              "expectedAssists": 0.45,
+              "expectedGoals": 0.03,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Carlos Vicente Robles",
+            "logo": null
+          },
+          {
+            "id": 98042,
+            "name": "Lucas Boyé",
+            "matchRating": "7.57",
+            "shirtNumber": 15,
+            "position": "Forward",
+            "isCaptain": false,
+            "minutesPlayed": 45,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 1,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 1,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 2,
+              "shotsTotal": 3,
+              "shotsAccuracy": "33.33 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "61.54 %",
+              "passesSuccessful": 8,
+              "passesFailed": 5,
+              "passesTotal": 13,
+              "passesKey": 1,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 9,
+              "duelsWon": 3,
+              "duelsLost": 6,
+              "duelSuccessRate": "33.33 %",
+              "expectedAssists": 0.03,
+              "expectedGoals": 0.55,
+              "expectedGoalsOnTarget": 0.31,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Lucas Ariel Boyé",
+            "logo": null
+          },
+          {
+            "id": 29584065,
+            "name": "Abderrahman Rebbach",
+            "matchRating": "6.71",
+            "shirtNumber": 21,
+            "position": "Forward",
+            "isCaptain": false,
+            "minutesPlayed": 28,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 4,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 4,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 1,
+              "fouledOthers": 0,
+              "tacklesTotal": 2,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 0,
+              "shotsTotal": 1,
+              "shotsAccuracy": "100.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "78.57 %",
+              "passesSuccessful": 11,
+              "passesFailed": 3,
+              "passesTotal": 14,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 10,
+              "duelsWon": 4,
+              "duelsLost": 6,
+              "duelSuccessRate": "40.00 %",
+              "expectedAssists": 0.02,
+              "expectedGoals": 0.05,
+              "expectedGoalsOnTarget": 0.05,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Abderrahmane Rebbach",
+            "logo": null
+          },
+          {
+            "id": 979839,
+            "name": "Carlos Benavídez",
+            "matchRating": "6.62",
+            "shirtNumber": 23,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 26,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 1,
+              "fouledOthers": 2,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "100.00 %",
+              "passesSuccessful": 19,
+              "passesFailed": 0,
+              "passesTotal": 19,
+              "passesKey": 0,
+              "cardsRed": 1,
+              "cardsYellow": 2,
+              "cardsSecondYellow": 1,
+              "duelsTotal": 4,
+              "duelsWon": 2,
+              "duelsLost": 2,
+              "duelSuccessRate": "50.00 %",
+              "expectedAssists": 0.45,
+              "expectedGoals": 0.03,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Carlos Nahuel Benavídez Protesoni",
+            "logo": null
+          },
+          {
+            "id": 53200994,
+            "name": "Aitor Mañas",
+            "matchRating": null,
+            "shirtNumber": 34,
+            "position": "Forward",
+            "isCaptain": false,
+            "minutesPlayed": 1,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 2,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 2,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 5,
+              "duelsWon": 1,
+              "duelsLost": 4,
+              "duelSuccessRate": "20.00 %",
+              "expectedAssists": null,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Aitor Mañas Buenadicha",
+            "logo": null
+          },
+          {
+            "id": 7565061,
+            "name": "Raúl Fernández",
+            "matchRating": null,
+            "shirtNumber": 13,
+            "position": "Goalkeeper",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": 0.02,
+              "expectedGoals": 0.42,
+              "expectedGoalsOnTarget": 0.25,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Raúl Fernández-Cavada Mateos",
+            "logo": null
+          },
+          {
+            "id": 60731769,
+            "name": "Grégoire Swiderski",
+            "matchRating": null,
+            "shirtNumber": 31,
+            "position": "Goalkeeper",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": null,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Grégoire Swiderski",
+            "logo": null
+          },
+          {
+            "id": 62392484,
+            "name": "Carlos Ballestero",
+            "matchRating": null,
+            "shirtNumber": 30,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": 0.45,
+              "expectedGoals": 0.03,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Carlos Ballestero García",
+            "logo": null
+          },
+          {
+            "id": 16876335,
+            "name": "Jon Guridi",
+            "matchRating": null,
+            "shirtNumber": 18,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": null,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Jon Guridi Aldalur",
+            "logo": null
+          },
+          {
+            "id": 7616903,
+            "name": "Ander Guevara",
+            "matchRating": null,
+            "shirtNumber": 6,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": null,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Ander Guevara Lajo",
+            "logo": null
+          }
+        ]
+      },
+      {
+        "team": {
+          "id": 611802,
+          "logo": "https://highlightly.net/soccer/images/teams/611802.png",
+          "name": "Oviedo"
+        },
+        "players": [
+          {
+            "id": 7514507,
+            "name": "Aarón Escandell",
+            "matchRating": "7.34",
+            "shirtNumber": 13,
+            "position": "Goalkeeper",
+            "isCaptain": false,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 6,
+              "goalsConceded": 1,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "54.55 %",
+              "passesSuccessful": 18,
+              "passesFailed": 15,
+              "passesTotal": 33,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": 0.02,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": 1.3,
+              "expectedGoalsPrevented": 0.33
+            },
+            "fullName": "Aarón Escandell Banacloche",
+            "logo": null
+          },
+          {
+            "id": 21179382,
+            "name": "Lucas Ahijado",
+            "matchRating": "6.87",
+            "shirtNumber": 24,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 3,
+              "interceptionsTotal": 2,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 0,
+              "shotsTotal": 1,
+              "shotsAccuracy": "100.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "80.65 %",
+              "passesSuccessful": 25,
+              "passesFailed": 6,
+              "passesTotal": 31,
+              "passesKey": 1,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 4,
+              "duelsWon": 3,
+              "duelsLost": 1,
+              "duelSuccessRate": "75.00 %",
+              "expectedAssists": 0.01,
+              "expectedGoals": 0.34,
+              "expectedGoalsOnTarget": 0.28,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Lucas Ahijado Quintana",
+            "logo": null
+          },
+          {
+            "id": 7636223,
+            "name": "David Costas",
+            "matchRating": "6.91",
+            "shirtNumber": 4,
+            "position": "Defender",
+            "isCaptain": true,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "100.00 %",
+              "fouledByOthers": 1,
+              "fouledOthers": 1,
+              "tacklesTotal": 2,
+              "interceptionsTotal": 3,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 1,
+              "shotsTotal": 1,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "75.00 %",
+              "passesSuccessful": 24,
+              "passesFailed": 8,
+              "passesTotal": 32,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 12,
+              "duelsWon": 7,
+              "duelsLost": 5,
+              "duelSuccessRate": "58.33 %",
+              "expectedAssists": 0.05,
+              "expectedGoals": 0.45,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "David Costas Cordal",
+            "logo": null
+          },
+          {
+            "id": 142639,
+            "name": "Eric Bailly",
+            "matchRating": "6.99",
+            "shirtNumber": 2,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 54,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "82.35 %",
+              "passesSuccessful": 14,
+              "passesFailed": 3,
+              "passesTotal": 17,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 5,
+              "duelsWon": 3,
+              "duelsLost": 2,
+              "duelSuccessRate": "60.00 %",
+              "expectedAssists": 0,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Eric Bertrand Bailly",
+            "logo": null
+          },
+          {
+            "id": 47531057,
+            "name": "Abdel Rahim",
+            "matchRating": "7.01",
+            "shirtNumber": 3,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 2,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 1,
+              "dribbleSuccessRate": "50.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 3,
+              "interceptionsTotal": 4,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "74.29 %",
+              "passesSuccessful": 26,
+              "passesFailed": 9,
+              "passesTotal": 35,
+              "passesKey": 2,
+              "cardsRed": 0,
+              "cardsYellow": 1,
+              "cardsSecondYellow": 1,
+              "duelsTotal": 6,
+              "duelsWon": 4,
+              "duelsLost": 2,
+              "duelSuccessRate": "66.67 %",
+              "expectedAssists": 0.02,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Abdel Rahim Alhassane Bonkano",
+            "logo": null
+          },
+          {
+            "id": 581042,
+            "name": "Kwasi Sibo",
+            "matchRating": "6.21",
+            "shirtNumber": 6,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 90,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 1,
+              "fouledOthers": 4,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 1,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 0,
+              "shotsTotal": 1,
+              "shotsAccuracy": "100.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "82.35 %",
+              "passesSuccessful": 28,
+              "passesFailed": 6,
+              "passesTotal": 34,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 10,
+              "duelsWon": 3,
+              "duelsLost": 7,
+              "duelSuccessRate": "30.00 %",
+              "expectedAssists": 0.03,
+              "expectedGoals": 0.05,
+              "expectedGoalsOnTarget": 0.14,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Kwasi Sibo",
+            "logo": null
+          },
+          {
+            "id": 4979401,
+            "name": "Santiago Colombatto",
+            "matchRating": "7.22",
+            "shirtNumber": 11,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 85,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 2,
+              "dribblesSuccessful": 2,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "100.00 %",
+              "fouledByOthers": 2,
+              "fouledOthers": 4,
+              "tacklesTotal": 2,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 1,
+              "shotsTotal": 1,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "86.84 %",
+              "passesSuccessful": 33,
+              "passesFailed": 5,
+              "passesTotal": 38,
+              "passesKey": 2,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 11,
+              "duelsWon": 7,
+              "duelsLost": 4,
+              "duelSuccessRate": "63.64 %",
+              "expectedAssists": 0.11,
+              "expectedGoals": 0.11,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Santiago Colombatto",
+            "logo": null
+          },
+          {
+            "id": 42858676,
+            "name": "Ilyas Chaira",
+            "matchRating": "6.91",
+            "shirtNumber": 7,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 85,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 1,
+              "dribblesTotal": 4,
+              "dribblesSuccessful": 3,
+              "dribblesFailed": 1,
+              "dribbleSuccessRate": "75.00 %",
+              "fouledByOthers": 2,
+              "fouledOthers": 2,
+              "tacklesTotal": 2,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 1,
+              "shotsTotal": 2,
+              "shotsAccuracy": "50.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "84.00 %",
+              "passesSuccessful": 21,
+              "passesFailed": 4,
+              "passesTotal": 25,
+              "passesKey": 3,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 14,
+              "duelsWon": 7,
+              "duelsLost": 7,
+              "duelSuccessRate": "50.00 %",
+              "expectedAssists": 0.15,
+              "expectedGoals": 0.11,
+              "expectedGoalsOnTarget": 0.02,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Ilyas Chaira",
+            "logo": null
+          },
+          {
+            "id": 29380400,
+            "name": "Alberto Reina",
+            "matchRating": "6.59",
+            "shirtNumber": 5,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 74,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 1,
+              "fouledOthers": 2,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 1,
+              "shotsOffTarget": 0,
+              "shotsTotal": 1,
+              "shotsAccuracy": "100.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "88.89 %",
+              "passesSuccessful": 16,
+              "passesFailed": 2,
+              "passesTotal": 18,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 12,
+              "duelsWon": 4,
+              "duelsLost": 8,
+              "duelSuccessRate": "33.33 %",
+              "expectedAssists": 0.03,
+              "expectedGoals": 0.25,
+              "expectedGoalsOnTarget": 0.29,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Alberto Reina Campos",
+            "logo": null
+          },
+          {
+            "id": 444836,
+            "name": "Josip Brekalo",
+            "matchRating": "7.31",
+            "shirtNumber": 18,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 54,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "100.00 %",
+              "fouledByOthers": 1,
+              "fouledOthers": 1,
+              "tacklesTotal": 4,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 1,
+              "shotsTotal": 1,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "56.52 %",
+              "passesSuccessful": 13,
+              "passesFailed": 10,
+              "passesTotal": 23,
+              "passesKey": 1,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 11,
+              "duelsWon": 6,
+              "duelsLost": 5,
+              "duelSuccessRate": "54.55 %",
+              "expectedAssists": 0.45,
+              "expectedGoals": 0.04,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Josip Brekalo",
+            "logo": null
+          },
+          {
+            "id": 8296484,
+            "name": "Federico Viñas",
+            "matchRating": "6.87",
+            "shirtNumber": 9,
+            "position": "Forward",
+            "isCaptain": false,
+            "minutesPlayed": 75,
+            "isSubstitute": false,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 1,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 2,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 1,
+              "dribbleSuccessRate": "50.00 %",
+              "fouledByOthers": 1,
+              "fouledOthers": 3,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 2,
+              "shotsOffTarget": 1,
+              "shotsTotal": 3,
+              "shotsAccuracy": "66.67 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "65.00 %",
+              "passesSuccessful": 13,
+              "passesFailed": 7,
+              "passesTotal": 20,
+              "passesKey": 2,
+              "cardsRed": 1,
+              "cardsYellow": 2,
+              "cardsSecondYellow": 1,
+              "duelsTotal": 19,
+              "duelsWon": 9,
+              "duelsLost": 10,
+              "duelSuccessRate": "47.37 %",
+              "expectedAssists": 0.11,
+              "expectedGoals": 1,
+              "expectedGoalsOnTarget": 1.31,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Federico Sebastián Viñas Barboza",
+            "logo": null
+          },
+          {
+            "id": 6757324,
+            "name": "David Carmo",
+            "matchRating": "6.33",
+            "shirtNumber": 16,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 36,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 2,
+              "tacklesTotal": 3,
+              "interceptionsTotal": 1,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "50.00 %",
+              "passesSuccessful": 4,
+              "passesFailed": 4,
+              "passesTotal": 8,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 11,
+              "duelsWon": 6,
+              "duelsLost": 5,
+              "duelSuccessRate": "54.55 %",
+              "expectedAssists": 0,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "David Mota Veiga Teixeira Carmo",
+            "logo": null
+          },
+          {
+            "id": 3356038,
+            "name": "Haissem Hassan",
+            "matchRating": "7.16",
+            "shirtNumber": 10,
+            "position": "Forward",
+            "isCaptain": false,
+            "minutesPlayed": 36,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 7,
+              "dribblesSuccessful": 4,
+              "dribblesFailed": 3,
+              "dribbleSuccessRate": "57.14 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 1,
+              "shotsTotal": 1,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "84.62 %",
+              "passesSuccessful": 11,
+              "passesFailed": 2,
+              "passesTotal": 13,
+              "passesKey": 1,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 9,
+              "duelsWon": 5,
+              "duelsLost": 4,
+              "duelSuccessRate": "55.56 %",
+              "expectedAssists": 0.34,
+              "expectedGoals": 0.04,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Haissem Hassan",
+            "logo": null
+          },
+          {
+            "id": 4941244,
+            "name": "Nicolas Fonseca",
+            "matchRating": "6.55",
+            "shirtNumber": 23,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 16,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 1,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "100.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 1,
+              "tacklesTotal": 1,
+              "interceptionsTotal": 1,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 1,
+              "shotsTotal": 1,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "87.50 %",
+              "passesSuccessful": 7,
+              "passesFailed": 1,
+              "passesTotal": 8,
+              "passesKey": 1,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 4,
+              "duelsWon": 2,
+              "duelsLost": 2,
+              "duelSuccessRate": "50.00 %",
+              "expectedAssists": 0.01,
+              "expectedGoals": 0.02,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Nicolás Fonseca",
+            "logo": null
+          },
+          {
+            "id": 29404550,
+            "name": "Javi López",
+            "matchRating": "6.68",
+            "shirtNumber": 25,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 12,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 1,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "66.67 %",
+              "passesSuccessful": 4,
+              "passesFailed": 2,
+              "passesTotal": 6,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 2,
+              "duelsWon": 0,
+              "duelsLost": 2,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": 0,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Javier López Carballo",
+            "logo": null
+          },
+          {
+            "id": 29655388,
+            "name": "Álex Forés",
+            "matchRating": "6.45",
+            "shirtNumber": 19,
+            "position": "Forward",
+            "isCaptain": false,
+            "minutesPlayed": 12,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 1,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 1,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 1,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "100.00 %",
+              "passesSuccessful": 1,
+              "passesFailed": 0,
+              "passesTotal": 1,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 4,
+              "duelsWon": 1,
+              "duelsLost": 3,
+              "duelSuccessRate": "25.00 %",
+              "expectedAssists": 0,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Álex Forés Mendoza",
+            "logo": null
+          },
+          {
+            "id": 6865516,
+            "name": "Horațiu Moldovan",
+            "matchRating": null,
+            "shirtNumber": 1,
+            "position": "Goalkeeper",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": null,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Horaţiu Alexandru Moldovan",
+            "logo": null
+          },
+          {
+            "id": 7561680,
+            "name": "Dani Calvo",
+            "matchRating": null,
+            "shirtNumber": 12,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": 0,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Daniel Pedro Calvo San Román",
+            "logo": null
+          },
+          {
+            "id": 17249694,
+            "name": "Oier Luengo",
+            "matchRating": null,
+            "shirtNumber": 15,
+            "position": "Defender",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": null,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Oier Luengo Redondo",
+            "logo": null
+          },
+          {
+            "id": 96751172,
+            "name": "Pablo Agudín",
+            "matchRating": null,
+            "shirtNumber": 27,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": 0.02,
+              "expectedGoals": 0.42,
+              "expectedGoalsOnTarget": 0.25,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": null,
+            "logo": null
+          },
+          {
+            "id": 470596,
+            "name": "Leander Dendoncker",
+            "matchRating": null,
+            "shirtNumber": 20,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": null,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Leander Dendoncker",
+            "logo": null
+          },
+          {
+            "id": 6230693,
+            "name": "Luka Ilić",
+            "matchRating": null,
+            "shirtNumber": 21,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": null,
+              "expectedGoals": null,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Luka Ilić",
+            "logo": null
+          },
+          {
+            "id": 273049,
+            "name": "Santi Cazorla",
+            "matchRating": null,
+            "shirtNumber": 8,
+            "position": "Midfielder",
+            "isCaptain": false,
+            "minutesPlayed": 0,
+            "isSubstitute": true,
+            "offsides": 0,
+            "statistics": {
+              "goalsScored": 0,
+              "goalsSaved": 0,
+              "goalsConceded": 0,
+              "assists": 0,
+              "dribblesTotal": 0,
+              "dribblesSuccessful": 0,
+              "dribblesFailed": 0,
+              "dribbleSuccessRate": "0.00 %",
+              "fouledByOthers": 0,
+              "fouledOthers": 0,
+              "tacklesTotal": 0,
+              "interceptionsTotal": 0,
+              "shotsOnTarget": 0,
+              "shotsOffTarget": 0,
+              "shotsTotal": 0,
+              "shotsAccuracy": "0.00 %",
+              "penaltiesScored": 0,
+              "penaltiesMissed": 0,
+              "penaltiesTotal": 0,
+              "penaltiesAccuracy": "0.00 %",
+              "passesAccuracy": "0.00 %",
+              "passesSuccessful": 0,
+              "passesFailed": 0,
+              "passesTotal": 0,
+              "passesKey": 0,
+              "cardsRed": 0,
+              "cardsYellow": 0,
+              "cardsSecondYellow": 0,
+              "duelsTotal": 0,
+              "duelsWon": 0,
+              "duelsLost": 0,
+              "duelSuccessRate": "0.00 %",
+              "expectedAssists": 0.11,
+              "expectedGoals": 0.11,
+              "expectedGoalsOnTarget": null,
+              "expectedGoalsOnTargetConceded": null,
+              "expectedGoalsPrevented": null
+            },
+            "fullName": "Santiago Cazorla González",
+            "logo": null
+          }
+        ]
+      }
+    ],
+    "Count": 2
+  }
+}
