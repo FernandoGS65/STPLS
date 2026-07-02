@@ -234,6 +234,13 @@ try {
     const partidos =
         datos.data;
 
+    const state = APP.getState();
+    const seasonLabel = state.seasons.find(s => s.id === state.season);
+    const tempEl = document.getElementById('clasificacion-temporada');
+    if (tempEl && seasonLabel) {
+        tempEl.textContent = 'Temporada ' + seasonLabel.label;
+    }
+
     const selector =
         document.getElementById(
             "selector-jornada"

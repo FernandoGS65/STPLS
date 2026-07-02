@@ -8,21 +8,43 @@ Vanilla static PWA site (no build tools, no package.json, no tests).
 .\server.ps1               # PowerShell HttpListener on http://localhost:8000
 ```
 
-## Data fetching (PowerShell scripts)
+Server has two API endpoints:
+- `POST /api/update-position` — updates player position in plantilla.json
+- `GET /api/noticias?team={slug}` — fetches news for a team (auto-generates if stale >1h)
+
+## Data pipeline order
+
+Scripts must run in this order for a new season:
 
 ```powershell
-# Copy config first (API key from RapidAPI/highlightly.net)
+# 1. Copy config (API key from RapidAPI/highightly.net)
 copy config.example.json config.json
 
-# Fetch match details (daily limit: 100 calls, 200ms delay between calls)
+# 2. Fetch match details (daily limit: 100 calls, 200ms delay between calls)
 .\fetch-partidos.ps1 -Mode detail -StartIndex 0 -BatchSize 20
 
-# Then lineups + boxscore (merges into existing match files)
+# 3. Then lineups + boxscore (merges into existing match files)
 .\fetch-partidos.ps1 -Mode lineups -StartIndex 0 -BatchSize 20
 .\fetch-partidos.ps1 -Mode boxscore -StartIndex 0 -BatchSize 20
 
-# Batch wrapper (same params)
+# 4. Update player squads (requires plantilla.json)
+.\update-plantilla.ps1
+
+# 5. Generate statistics (requires plantilla.json + match data)
+.\generate-estadisticas.ps1
+
+# Batch wrapper (same params as fetch-partidos)
 .\fetch-batch.ps1 -StartIndex 0 -BatchSize 20
+```
+
+### Other fetch scripts
+
+```powershell
+.\fetch-noticias.ps1 -Team "barcelona"           # RSS news per team
+.\fetch-fichajes.ps1                              # Transfers (uses footballApiKey)
+.\fetch-fotmob-ids.ps1                            # FotMob player IDs (updates plantilla.json)
+.\fetch-nationality.ps1                           # Player nationalities from FotMob
+.\fetch-missing.ps1                               # Fetches missing data for all matches
 ```
 
 ## Architecture
@@ -32,7 +54,7 @@ copy config.example.json config.json
 - Pages register via `APP.onChange(fn)` — fires when season/comp changes
 - `js/api.js` exists but is **unused** by any page (dead code)
 - `style.css` — `@import` chain loading all CSS modules from `css/`
-- `css/` directory — 11 modular CSS files, one per page/feature:
+- `css/` directory — 12 modular CSS files, one per page/feature:
   - `variables.css` — reset, CSS custom properties, light mode
   - `layout.css` — navbar, nav-icons, hero, footer, page wrappers
   - `index.css` — index page: liga cards, mini tables (clasif/results/stats)
@@ -43,6 +65,7 @@ copy config.example.json config.json
   - `partido.css` — partido page: all `pv-*` classes (header, stats, events, lineups, pitch, boxscore, predictions)
   - `jugadores.css` — jugadores page: search, player cards
   - `estadisticas.css` — estadísticas page: tabs, stat tables, player rows
+  - `descargas.css` — descargas page
   - `arbitros.css` — árbitros page
   - `responsive.css` — all `@media` queries consolidated
 
@@ -54,6 +77,9 @@ data/{season}/{competition}/
   partidos/{id}.json — match detail (venue, events, stats, lineups, boxscore)
   videos.json        — RTVE embed URLs keyed by "LL-J{nn}-{home}-{away}"
   descargados.json   — index of downloaded matches (auto-regenerated after fetch)
+  plantilla.json     — squad data (players, positions, FotMob IDs)
+  estadisticas-jugadores.json — aggregated player stats (generated)
+  noticias/{team}.json — team news (auto-generated from RSS)
 data/equipos-info.json — stadium, capacity, trophies per team
 data/fichajes.json     — transfers per team (keyed by slug)
 data/seasons.json      — available seasons/competitions
@@ -84,3 +110,6 @@ data/seasons.json      — available seasons/competitions
 - `jugadores.js` uses **hardcoded** player arrays, not API data
 - `equipos.html` uses old `<header class="hero">` pattern (unlike other pages with `<nav>` only)
 - `seasons.json` currently has one entry (`2025-26` / `liga`) — add entries there for new seasons
+- `generate-estadisticas.ps1` and `update-plantilla.ps1` require `plantilla.json` to exist first
+- `fetch-fichajes.ps1` uses a different API key (`footballApiKey`) than the match fetch scripts
+- `fetch-fotmob-ids.ps1` and `fetch-nationality.ps1` scrape FotMob (not an API) — may break if page structure changes
