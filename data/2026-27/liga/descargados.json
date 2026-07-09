@@ -8,7 +8,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336358422,
@@ -19,7 +19,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336360124,
@@ -30,7 +30,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336361826,
@@ -41,7 +41,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336360975,
@@ -52,7 +52,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336355018,
@@ -63,7 +63,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336354167,
@@ -74,7 +74,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336355869,
@@ -85,7 +85,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336357571,
@@ -96,7 +96,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336356720,
@@ -107,7 +107,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336367783,
@@ -118,7 +118,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336366932,
@@ -129,7 +129,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336368634,
@@ -140,7 +140,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336370336,
@@ -151,7 +151,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336369485,
@@ -162,7 +162,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336363528,
@@ -173,7 +173,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336362677,
@@ -184,7 +184,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336364379,
@@ -195,7 +195,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336366081,
@@ -206,7 +206,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336365230,
@@ -217,7 +217,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336376293,
@@ -228,7 +228,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336375442,
@@ -239,7 +239,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336377144,
@@ -250,7 +250,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336378846,
@@ -261,7 +261,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336377995,
@@ -272,7 +272,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336372038,
@@ -283,7 +283,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336371187,
@@ -294,7 +294,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336372889,
@@ -305,7 +305,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336374591,
@@ -316,7 +316,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336373740,
@@ -327,7 +327,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336384803,
@@ -338,7 +338,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336383952,
@@ -349,7 +349,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336385654,
@@ -360,7 +360,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336387356,
@@ -371,7 +371,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336386505,
@@ -382,7 +382,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336380548,
@@ -393,7 +393,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336379697,
@@ -404,7 +404,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336381399,
@@ -415,7 +415,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336383101,
@@ -426,7 +426,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336382250,
@@ -437,7 +437,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336393313,
@@ -448,7 +448,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336392462,
@@ -459,7 +459,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336394164,
@@ -470,7 +470,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336395866,
@@ -481,7 +481,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336395015,
@@ -492,7 +492,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336389058,
@@ -503,7 +503,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336388207,
@@ -514,7 +514,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336389909,
@@ -525,7 +525,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336391611,
@@ -536,7 +536,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336390760,
@@ -547,7 +547,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336401823,
@@ -558,7 +558,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336400972,
@@ -569,7 +569,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336402674,
@@ -580,7 +580,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336404376,
@@ -591,7 +591,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336403525,
@@ -601,8 +601,8 @@
         "date":  "2026-09-16T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1336397568,
@@ -613,7 +613,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336396717,
@@ -624,7 +624,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336398419,
@@ -635,7 +635,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336400121,
@@ -646,7 +646,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336399270,
@@ -657,7 +657,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336410333,
@@ -667,8 +667,8 @@
         "date":  "2026-09-20T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1336409482,
@@ -679,7 +679,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336411184,
@@ -689,8 +689,8 @@
         "date":  "2026-09-20T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1336412886,
@@ -701,7 +701,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336412035,
@@ -711,8 +711,8 @@
         "date":  "2026-09-20T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1336406078,
@@ -723,7 +723,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336405227,
@@ -733,8 +733,8 @@
         "date":  "2026-09-20T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1336406929,
@@ -745,7 +745,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336408631,
@@ -755,8 +755,8 @@
         "date":  "2026-09-20T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1336407780,
@@ -766,8 +766,8 @@
         "date":  "2026-09-20T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
-        "boxscore":  false
+        "lineups":  true,
+        "boxscore":  true
     },
     {
         "id":  1336418843,
@@ -777,7 +777,7 @@
         "date":  "2026-10-11T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -788,7 +788,7 @@
         "date":  "2026-10-11T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -799,7 +799,7 @@
         "date":  "2026-10-11T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -810,7 +810,7 @@
         "date":  "2026-10-11T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -821,7 +821,7 @@
         "date":  "2026-10-11T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -832,7 +832,7 @@
         "date":  "2026-10-11T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -843,7 +843,7 @@
         "date":  "2026-10-11T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -854,7 +854,7 @@
         "date":  "2026-10-11T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -865,7 +865,7 @@
         "date":  "2026-10-11T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -876,7 +876,7 @@
         "date":  "2026-10-11T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -887,7 +887,7 @@
         "date":  "2026-10-18T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -898,7 +898,7 @@
         "date":  "2026-10-18T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -909,7 +909,7 @@
         "date":  "2026-10-18T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -920,7 +920,7 @@
         "date":  "2026-10-18T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -931,7 +931,7 @@
         "date":  "2026-10-18T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -942,7 +942,7 @@
         "date":  "2026-10-18T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -953,7 +953,7 @@
         "date":  "2026-10-18T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -964,7 +964,7 @@
         "date":  "2026-10-18T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -975,7 +975,7 @@
         "date":  "2026-10-18T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -986,7 +986,7 @@
         "date":  "2026-10-18T15:00:00.000Z",
         "score":  null,
         "detail":  true,
-        "lineups":  false,
+        "lineups":  true,
         "boxscore":  false
     },
     {
@@ -998,7 +998,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336435012,
@@ -1009,7 +1009,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336436714,
@@ -1020,7 +1020,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336438416,
@@ -1031,7 +1031,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336437565,
@@ -1042,7 +1042,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336431608,
@@ -1053,7 +1053,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336430757,
@@ -1064,7 +1064,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336432459,
@@ -1075,7 +1075,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336434161,
@@ -1086,7 +1086,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336433310,
@@ -1097,7 +1097,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336444373,
@@ -1108,7 +1108,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336443522,
@@ -1119,7 +1119,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336445224,
@@ -1130,7 +1130,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336446926,
@@ -1141,7 +1141,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336446075,
@@ -1152,7 +1152,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336440118,
@@ -1163,7 +1163,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336439267,
@@ -1174,7 +1174,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336440969,
@@ -1185,7 +1185,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336442671,
@@ -1196,7 +1196,7 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     },
     {
         "id":  1336441820,
@@ -1207,6 +1207,6 @@
         "score":  null,
         "detail":  true,
         "lineups":  true,
-        "boxscore":  false
+        "boxscore":  true
     }
 ]
