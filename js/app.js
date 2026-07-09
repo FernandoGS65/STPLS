@@ -111,6 +111,15 @@ var APP = (function() {
         notify();
     }
 
+    /* ===== LOGO OVERRIDES ===== */
+    var logoOverrides = {
+        'https://highlightly.net/soccer/images/teams/3970699.png': 'imagenes/escudos/racing-santander.png'
+    };
+
+    function fixLogo(url) {
+        return logoOverrides[url] || url;
+    }
+
     /* ===== ROUTING ===== */
     function ruta(tipo, param) {
         var base = './data/' + state.season + '/' + state.competition;
@@ -253,6 +262,7 @@ var icons = [
     return {
         init: init,
         ruta: ruta,
+        fixLogo: fixLogo,
         onChange: onChange,
         getState: function() { return state; },
         season: function() { return state.season; },

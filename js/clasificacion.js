@@ -33,7 +33,7 @@ partidos.forEach(partido => {
         tabla[local] = {
             team: {
                 name: local,
-                logo: partido.homeTeam.logo
+                logo: APP.fixLogo(partido.homeTeam.logo)
             },
             points: 0,
             total: {
@@ -53,7 +53,7 @@ partidos.forEach(partido => {
         tabla[visitante] = {
             team: {
                 name: visitante,
-                logo: partido.awayTeam.logo
+                logo: APP.fixLogo(partido.awayTeam.logo)
             },
             points: 0,
             total: {

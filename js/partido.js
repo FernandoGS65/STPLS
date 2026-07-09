@@ -77,12 +77,12 @@
         elHeader.innerHTML =
             '<div class="pv-header-bar">' +
                 '<div class="pv-team">' +
-                    '<img src="' + home.logo + '" class="pv-logo" alt="' + escHtml(home.name) + '" onerror="this.src=\'imagenes/stpls-icon.png\'">' +
+                    '<img src="' + APP.fixLogo(home.logo) + '" class="pv-logo" alt="' + escHtml(home.name) + '" onerror="this.src=\'imagenes/stpls-icon.png\'">' +
                     '<a href="equipo.html?id=' + encodeURIComponent(home.name) + '" class="pv-team-name">' + escHtml(home.name) + '</a>' +
                 '</div>' +
                 '<div class="pv-score">' + escHtml(score) + '</div>' +
                 '<div class="pv-team">' +
-                    '<img src="' + away.logo + '" class="pv-logo" alt="' + escHtml(away.name) + '" onerror="this.src=\'imagenes/stpls-icon.png\'">' +
+                    '<img src="' + APP.fixLogo(away.logo) + '" class="pv-logo" alt="' + escHtml(away.name) + '" onerror="this.src=\'imagenes/stpls-icon.png\'">' +
                     '<a href="equipo.html?id=' + encodeURIComponent(away.name) + '" class="pv-team-name">' + escHtml(away.name) + '</a>' +
                 '</div>' +
             '</div>' +
@@ -557,7 +557,7 @@
 
         if (homeT) {
             html += '<div class="pv-pitch-header home">';
-            html += '<img src="' + escHtml(homeT.logo || 'imagenes/stpls-icon.png') + '" class="pv-pitch-shield" alt="" onerror="this.src=\'imagenes/stpls-icon.png\'">';
+            html += '<img src="' + escHtml(APP.fixLogo(homeT.logo || 'imagenes/stpls-icon.png')) + '" class="pv-pitch-shield" alt="" onerror="this.src=\'imagenes/stpls-icon.png\'">';
             html += '<h3>' + escHtml(homeT.name) + '</h3>';
             if (homeAvg) html += '<span class="pv-pitch-avg' + (homeWins ? ' best' : (awayWins ? ' worst' : '')) + '">' + homeAvg + '</span>';
             html += '<span class="pv-pitch-formation">' + escHtml(homeT.formation) + '</span>';
@@ -577,7 +577,7 @@
 
         if (awayT) {
             html += '<div class="pv-pitch-header away">';
-            html += '<img src="' + escHtml(awayT.logo || 'imagenes/stpls-icon.png') + '" class="pv-pitch-shield" alt="" onerror="this.src=\'imagenes/stpls-icon.png\'">';
+            html += '<img src="' + escHtml(APP.fixLogo(awayT.logo || 'imagenes/stpls-icon.png')) + '" class="pv-pitch-shield" alt="" onerror="this.src=\'imagenes/stpls-icon.png\'">';
             html += '<h3>' + escHtml(awayT.name) + '</h3>';
             if (awayAvg) html += '<span class="pv-pitch-avg' + (awayWins ? ' best' : (homeWins ? ' worst' : '')) + '">' + awayAvg + '</span>';
             html += '<span class="pv-pitch-formation">' + escHtml(awayT.formation) + '</span>';
@@ -607,9 +607,9 @@
                 var order = {Goalkeeper:0, Defender:1, Midfielder:2, Forward:3};
                 return (order[a.position]||9) - (order[b.position]||9);
             });
-            var logoTeam = box.team.logo || "";
+            var logoTeam = APP.fixLogo(box.team.logo || "");
             html += '<div class="pv-box-card">';
-            html += '<h3>' + (logoTeam ? '<img src="' + logoTeam + '" style="width:20px;height:20px;object-fit:contain">' : '') + escHtml(box.team.name) + '</h3>';
+            html += '<h3>' + (logoTeam ? '<img src="' + escHtml(logoTeam) + '" style="width:20px;height:20px;object-fit:contain">' : '') + escHtml(box.team.name) + '</h3>';
             html += '<div class="pv-box-scroll"><table class="pv-box-table"><thead><tr><th>#</th><th>Jugador</th><th>Pos</th><th>Min</th><th>G</th><th>A</th><th>TA</th><th>TR</th><th>Val</th></tr></thead><tbody>';
             sorted.forEach(function(p) {
                 var s = p.statistics && p.statistics[0] ? p.statistics[0] : {};

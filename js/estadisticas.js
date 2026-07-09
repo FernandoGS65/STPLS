@@ -79,7 +79,7 @@
 
     function renderTeamRow(team, index, value) {
         var pos = index + 1;
-        var logoUrl = team.logo || '';
+        var logoUrl = APP.fixLogo(team.logo || '');
         var initials = team.name.split(' ').map(function(w) { return w[0]; }).join('').substring(0, 2).toUpperCase();
 
         var html = '<div class="estadisticas-row">';

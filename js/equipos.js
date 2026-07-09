@@ -17,7 +17,7 @@ function calcularClasificacion(partidos) {
                 nombre: local,
 
                 logo:
-                    partido.homeTeam.logo,
+                    APP.fixLogo(partido.homeTeam.logo),
 
                 puntos: 0,
 
@@ -40,7 +40,7 @@ function calcularClasificacion(partidos) {
                 nombre: visitante,
 
                 logo:
-                    partido.awayTeam.logo,
+                    APP.fixLogo(partido.awayTeam.logo),
 
                 puntos: 0,
 

@@ -297,7 +297,7 @@ const tieneDatos =
 ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7l2 2 3-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>' : ''}
 
         <img
-            src="${partido.homeTeam.logo}"
+            src="${APP.fixLogo(partido.homeTeam.logo)}"
             class="escudo-partido"
             alt="${partido.homeTeam.name}">
 
@@ -332,7 +332,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
     </a>
 
     <img
-        src="${partido.awayTeam.logo}"
+        src="${APP.fixLogo(partido.awayTeam.logo)}"
         class="escudo-partido"
         alt="${partido.awayTeam.name}">
 
@@ -454,7 +454,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
                     rating = Math.min(rating, 10);
 
                     var key = p.id || (p.name + '_' + (p.shirtNumber || ''));
-                    var teamLogo = box.team ? box.team.logo : '';
+                    var teamLogo = box.team ? APP.fixLogo(box.team.logo) : '';
                     var position = p.position;
                     if (p.id && positionById[p.id]) position = positionById[p.id];
 

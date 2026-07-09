@@ -55,7 +55,7 @@ function calcularClasificacion(partidos) {
                 nombre: local,
 
                 logo:
-                    partido.homeTeam.logo,
+                    APP.fixLogo(partido.homeTeam.logo),
 
                 puntos: 0,
 
@@ -78,7 +78,7 @@ function calcularClasificacion(partidos) {
                 nombre: visitante,
 
                 logo:
-                    partido.awayTeam.logo,
+                    APP.fixLogo(partido.awayTeam.logo),
 
                 puntos: 0,
 
@@ -1091,7 +1091,7 @@ document.getElementById(
 
         var html = '<div class="squad-card">';
         html += '<div class="squad-header">';
-        if (team.logo) html += '<img src="' + escHtml(team.logo) + '" class="squad-logo" onerror="this.style.display=\'none\'">';
+        if (team.logo) html += '<img src="' + escHtml(APP.fixLogo(team.logo)) + '" class="squad-logo" onerror="this.style.display=\'none\'">';
         html += '<h3 class="squad-team-name">' + escHtml(teamName) + '</h3>';
         html += '<span class="squad-count">' + team.players.length + ' jugadores convocados</span>';
         html += '</div>';
