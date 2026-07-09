@@ -70,14 +70,6 @@ function calcularClasificacion(partidos) {
         const gl = marcador[0];
         const gv = marcador[1];
 
-        const marcador =
-            partido.state.score.current
-                .split("-")
-                .map(x => parseInt(x.trim()));
-
-        const gl = marcador[0];
-        const gv = marcador[1];
-
         tabla[local].pj++;
         tabla[visitante].pj++;
 
