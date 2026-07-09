@@ -169,6 +169,10 @@ function calcularClasificacion(partidos) {
 }
 function calcularEvolucion(todosPartidos, nombreEquipo) {
     const evo = [];
+    const tienePartidos = todosPartidos.some(p =>
+        p.state && p.state.score && p.state.score.current
+    );
+    if (!tienePartidos) return evo;
     for (let j = 1; j <= 38; j++) {
         const filtrados = todosPartidos.filter(p => {
             const jn = parseInt(p.round.split("-")[1].trim());
@@ -176,7 +180,7 @@ function calcularEvolucion(todosPartidos, nombreEquipo) {
         });
         const clasif = calcularClasificacion(filtrados);
         const eq = clasif.find(e => e.nombre === nombreEquipo);
-        if (eq) evo.push({ jornada: j, posicion: eq.posicion });
+        if (eq && eq.pj > 0) evo.push({ jornada: j, posicion: eq.posicion });
     }
     return evo;
 }
@@ -709,15 +713,34 @@ document.getElementById(
         window._evoComparar = equipoComparar;
 
         const evoPrincipal = calcularEvolucion(datos.data, nombreEquipo);
+
+        if (evoPrincipal.length === 0) {
+            canvas.style.display = 'none';
+            const msg = canvas.nextElementSibling;
+            if (!msg || !msg.classList.contains('evolucion-msg')) {
+                const div = document.createElement('div');
+                div.className = 'evolucion-msg';
+                div.textContent = 'No hay datos de evolución disponibles para esta temporada.';
+                canvas.parentElement.appendChild(div);
+            }
+            return;
+        }
+
+        canvas.style.display = '';
+        const existingMsg = canvas.parentElement.querySelector('.evolucion-msg');
+        if (existingMsg) existingMsg.remove();
+
         let nombres = [nombreEquipo];
         let todasSeries = [evoPrincipal];
         let colores = ['#f0c040'];
 
         if (equipoComparar) {
             const evoComp = calcularEvolucion(datos.data, equipoComparar);
-            nombres.push(equipoComparar);
-            todasSeries.push(evoComp);
-            colores.push('#3b82f6');
+            if (evoComp.length > 0) {
+                nombres.push(equipoComparar);
+                todasSeries.push(evoComp);
+                colores.push('#3b82f6');
+            }
         }
 
         const cont = canvas.parentElement;
