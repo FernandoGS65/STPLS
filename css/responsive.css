@@ -8,6 +8,14 @@
         grid-template-columns:1fr;
         max-width:280px;
     }
+    .season-selector-home{
+        flex-direction:column;
+        align-items:stretch;
+    }
+    .home-select{
+        width:100%;
+        padding:10px 12px;
+    }
 }
 
 @media(max-width:640px){

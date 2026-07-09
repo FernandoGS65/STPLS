@@ -203,7 +203,41 @@ var icons = [
         origRender();
         renderNavIcons();
         renderFooterTheme();
+        renderHomeSelectors();
     };
+
+    function renderHomeSelectors() {
+        var container = document.getElementById('season-selector-home');
+        if (!container || !state.seasons.length) return;
+
+        var html = '<select id="home-season" class="home-select">';
+        state.seasons.forEach(function(s) {
+            html += '<option value="' + s.id + '"' + (s.id === state.season ? ' selected' : '') + '>' + s.label + '</option>';
+        });
+        html += '</select>';
+
+        var currentSeason = state.seasons.find(function(s) { return s.id === state.season; });
+        if (currentSeason && currentSeason.competitions.length > 1) {
+            html += '<select id="home-comp" class="home-select">';
+            currentSeason.competitions.forEach(function(c) {
+                html += '<option value="' + c.id + '"' + (c.id === state.competition ? ' selected' : '') + '>' + c.label + '</option>';
+            });
+            html += '</select>';
+        }
+
+        container.innerHTML = html;
+
+        document.getElementById('home-season').addEventListener('change', function(e) {
+            setSeason(e.target.value);
+        });
+
+        var compSel = document.getElementById('home-comp');
+        if (compSel) {
+            compSel.addEventListener('change', function(e) {
+                setCompetition(e.target.value);
+            });
+        }
+    }
 
     /* ===== CHANGE LISTENERS ===== */
     function onChange(fn) {

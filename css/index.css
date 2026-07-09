@@ -7,6 +7,30 @@
     padding:20px 16px;
 }
 
+/* --- Season selector (home) --- */
+.season-selector-home{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin-bottom:20px;
+}
+.home-select{
+    background:var(--bg-card);
+    color:var(--text-primary);
+    border:1px solid var(--border-color);
+    border-radius:8px;
+    padding:8px 12px;
+    font-size:14px;
+    font-family:inherit;
+    cursor:pointer;
+    outline:none;
+    appearance:auto;
+    min-width:120px;
+}
+.home-select:hover{
+    border-color:var(--accent-gold);
+}
+
 /* --- Liga cards --- */
 .ligas-grid{
     display:grid;
