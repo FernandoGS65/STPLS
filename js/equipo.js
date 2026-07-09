@@ -26,27 +26,11 @@ function calcularClasificacion(partidos) {
 
     partidos.forEach(partido => {
 
-        if (
-            !partido.state ||
-            !partido.state.score ||
-            !partido.state.score.current
-        ) return;
-
         const local =
             partido.homeTeam.name;
 
         const visitante =
             partido.awayTeam.name;
-
-        const marcador =
-            partido.state.score.current
-                .split("-")
-                .map(x =>
-                    parseInt(x.trim())
-                );
-
-        const gl = marcador[0];
-        const gv = marcador[1];
 
         if (!tabla[local]) {
 
@@ -93,6 +77,22 @@ function calcularClasificacion(partidos) {
             };
 
         }
+
+        if (
+            !partido.state ||
+            !partido.state.score ||
+            !partido.state.score.current
+        ) return;
+
+        const marcador =
+            partido.state.score.current
+                .split("-")
+                .map(x =>
+                    parseInt(x.trim())
+                );
+
+        const gl = marcador[0];
+        const gv = marcador[1];
 
         tabla[local].pj++;
         tabla[visitante].pj++;

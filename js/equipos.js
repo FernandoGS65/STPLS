@@ -112,41 +112,8 @@ function calcularClasificacion(partidos) {
     const clasificacion =
         Object.values(tabla);
 
-    clasificacion.sort((a, b) => {
-
-        if (
-            b.puntos !== a.puntos
-        ) {
-
-            return (
-                b.puntos - a.puntos
-            );
-
-        }
-
-        const dgA =
-            a.gf - a.gc;
-
-        const dgB =
-            b.gf - b.gc;
-
-        if (dgB !== dgA) {
-
-            return dgB - dgA;
-
-        }
-
-        return b.gf - a.gf;
-
-    });
-
-    clasificacion.forEach(
-        (equipo, index) => {
-
-            equipo.posicion =
-                index + 1;
-
-        }
+    clasificacion.sort((a, b) =>
+        a.nombre.localeCompare(b.nombre, 'es')
     );
 
     return clasificacion;
@@ -197,11 +164,6 @@ async function cargarEquipos() {
                         <h3>
                             ${equipo.nombre}
                         </h3>
-
-                        <p>
-                            ${equipo.posicion}º ·
-                            ${equipo.puntos} pts
-                        </p>
 
                     </div>
 

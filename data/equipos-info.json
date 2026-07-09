@@ -322,6 +322,23 @@
                    "recopa":  0,
                    "mundialClubes":  0
                },
+    "Malaga":  {
+                   "fundacion":  1948,
+                   "ciudad":  "Málaga",
+                   "estadio":  "La Rosaleda",
+                   "capacidad":  30044,
+                   "temporadasPrimera":  37,
+                   "liga":  0,
+                   "champions":  0,
+                   "copaRey":  1,
+                   "supercopa":  0,
+                   "web":  "https://www.malagacf.com",
+                   "apodo":  "Boquerones",
+                   "colores":  "Azul y blanco",
+                   "europaLeague":  0,
+                   "recopa":  0,
+                   "mundialClubes":  0
+               },
     "Racing Santander":  {
                              "fundacion":  1913,
                              "ciudad":  "Santander",
@@ -338,5 +355,56 @@
                              "europaLeague":  0,
                              "recopa":  0,
                              "mundialClubes":  0
-                         }
+                         },
+    "Girona":  {
+                   "fundacion":  1930,
+                   "ciudad":  "Girona",
+                   "estadio":  "Montilivi",
+                   "capacidad":  14826,
+                   "temporadasPrimera":  5,
+                   "liga":  0,
+                   "champions":  0,
+                   "copaRey":  0,
+                   "supercopa":  0,
+                   "web":  "https://www.gironafc.cat",
+                   "apodo":  "Gironins",
+                   "colores":  "Rojo y blanco",
+                   "europaLeague":  0,
+                   "recopa":  0,
+                   "mundialClubes":  0
+               },
+    "Mallorca":  {
+                     "fundacion":  1916,
+                     "ciudad":  "Palma de Mallorca",
+                     "estadio":  "Son Moix",
+                     "capacidad":  23142,
+                     "temporadasPrimera":  43,
+                     "liga":  0,
+                     "champions":  0,
+                     "copaRey":  1,
+                     "supercopa":  0,
+                     "web":  "https://www.rcdmallorca.es",
+                     "apodo":  "Piratas",
+                     "colores":  "Rojo y negro",
+                     "europaLeague":  0,
+                     "recopa":  0,
+                     "mundialClubes":  0
+                 },
+    "Oviedo":  {
+                   "fundacion":  1926,
+                   "ciudad":  "Oviedo",
+                   "estadio":  "Carlos Tartiere",
+                   "capacidad":  30500,
+                   "temporadasPrimera":  35,
+                   "liga":  0,
+                   "champions":  0,
+                   "copaRey":  0,
+                   "supercopa":  0,
+                   "web":  "https://www.rccdeoviedo.es",
+                   "apodo":  "Carbayones",
+                   "colores":  "Azul y blanco",
+                   "europaLeague":  0,
+                   "recopa":  0,
+                   "mundialClubes":  0
+               }
 }
