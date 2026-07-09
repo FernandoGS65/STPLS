@@ -59,7 +59,7 @@ const descargados = new Set(
                     b.split("-")[1]
                 );
 
-            return nb - na;
+            return na - nb;
 
         });
 
@@ -83,15 +83,47 @@ const descargados = new Set(
 
         });
 
+        var jornadaInicial = buscarJornadaActual(jornadas, partidos);
+
+        var idxActual = jornadas.indexOf(jornadaInicial);
+        if (idxActual === -1) idxActual = 0;
+
+        actualizarSlider(jornadas, idxActual);
+
         mostrarJornada(
-    jornadas[0],
+    jornadas[idxActual],
     partidos,
     videos,
     descargados
 );
+
+        document.getElementById("jornada-prev").addEventListener("click", function() {
+            if (idxActual < jornadas.length - 1) {
+                idxActual++;
+                actualizarSlider(jornadas, idxActual);
+                mostrarJornada(jornadas[idxActual], partidos, videos, descargados);
+                selector.value = jornadas[idxActual];
+            }
+        });
+
+        document.getElementById("jornada-next").addEventListener("click", function() {
+            if (idxActual > 0) {
+                idxActual--;
+                actualizarSlider(jornadas, idxActual);
+                mostrarJornada(jornadas[idxActual], partidos, videos, descargados);
+                selector.value = jornadas[idxActual];
+            }
+        });
+
         selector.addEventListener(
             "change",
             () => {
+
+                var nuevoIdx = jornadas.indexOf(selector.value);
+                if (nuevoIdx !== -1) {
+                    idxActual = nuevoIdx;
+                    actualizarSlider(jornadas, idxActual);
+                }
 
                 mostrarJornada(
     selector.value,
@@ -102,6 +134,28 @@ const descargados = new Set(
 
             }
         );
+
+        var touchStartX = 0;
+        var sliderEl = document.getElementById("jornada-slider");
+        sliderEl.addEventListener("touchstart", function(e) {
+            touchStartX = e.changedTouches[0].clientX;
+        }, { passive: true });
+        sliderEl.addEventListener("touchend", function(e) {
+            var diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0 && idxActual < jornadas.length - 1) {
+                    idxActual++;
+                    actualizarSlider(jornadas, idxActual);
+                    mostrarJornada(jornadas[idxActual], partidos, videos, descargados);
+                    selector.value = jornadas[idxActual];
+                } else if (diff < 0 && idxActual > 0) {
+                    idxActual--;
+                    actualizarSlider(jornadas, idxActual);
+                    mostrarJornada(jornadas[idxActual], partidos, videos, descargados);
+                    selector.value = jornadas[idxActual];
+                }
+            }
+        }, { passive: true });
 
     }
 
@@ -114,6 +168,42 @@ const descargados = new Set(
 
     }
 
+}
+
+function buscarJornadaActual(jornadas, partidos) {
+    var now = new Date();
+
+    for (var i = 0; i < jornadas.length; i++) {
+        var j = jornadas[i];
+        var filtrados = partidos.filter(function(p) { return p.round === j; });
+        var tieneJugado = filtrados.some(function(p) {
+            return p.state?.score?.current && p.state?.score?.current !== "-";
+        });
+        var tienePendiente = filtrados.some(function(p) {
+            return new Date(p.date) > now;
+        });
+        if (tieneJugado && tienePendiente) return j;
+    }
+
+    for (var i = 0; i < jornadas.length; i++) {
+        var j = jornadas[i];
+        var filtrados = partidos.filter(function(p) { return p.round === j; });
+        var todosJugados = filtrados.every(function(p) {
+            return p.state?.score?.current && p.state?.score?.current !== "-";
+        });
+        if (!todosJugados) return j;
+    }
+
+    return jornadas[jornadas.length - 1];
+}
+
+function actualizarSlider(jornadas, idxActual) {
+    var label = document.getElementById("jornada-label");
+    var numJor = jornadas[idxActual].split("-")[1].trim();
+    label.textContent = "Jornada " + numJor;
+
+    document.getElementById("jornada-prev").disabled = idxActual >= jornadas.length - 1;
+    document.getElementById("jornada-next").disabled = idxActual <= 0;
 }
 
 function normalizarEquipo(nombre){

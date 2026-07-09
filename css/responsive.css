@@ -236,6 +236,23 @@
         padding-top:16px;
     }
 
+    .jornada-slider{
+        padding:8px 10px;
+        gap:8px;
+        margin-bottom:16px;
+    }
+    .jornada-arrow{
+        padding:8px;
+    }
+    .jornada-arrow svg{
+        width:26px;
+        height:26px;
+    }
+    .jornada-label{
+        font-size:15px;
+        min-width:100px;
+    }
+
     .resultados-selector{
         min-width:0;
         flex-shrink:1;

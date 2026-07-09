@@ -29,10 +29,20 @@
         <div>
             <h2>Resultados</h2>
         </div>
-        <div class="resultados-selector-wrapper">
-            <label for="selector-jornada" class="resultados-label">Jornada</label>
-            <select id="selector-jornada" class="resultados-selector"></select>
-        </div>
+    </div>
+
+    <div class="jornada-slider" id="jornada-slider">
+        <button class="jornada-arrow" id="jornada-prev" aria-label="Jornada anterior">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <span class="jornada-label" id="jornada-label">Jornada 1</span>
+        <button class="jornada-arrow" id="jornada-next" aria-label="Siguiente jornada">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+    </div>
+
+    <div class="resultados-selector-wrapper" style="display:none">
+        <select id="selector-jornada" class="resultados-selector"></select>
     </div>
 
     <div id="menu-bests" class="menu-bests">

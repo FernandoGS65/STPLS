@@ -5,7 +5,7 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:20px;
+    margin-bottom:12px;
     flex-wrap:wrap;
     gap:12px;
 }
@@ -15,6 +15,50 @@
     font-weight:700;
     margin:0;
     color:var(--accent-gold);
+}
+
+/* --- Jornada slider --- */
+.jornada-slider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    margin-bottom:20px;
+    background:var(--bg-card);
+    border:1px solid var(--border-color);
+    border-radius:12px;
+    padding:10px 16px;
+}
+.jornada-arrow{
+    background:none;
+    border:none;
+    color:var(--accent-gold);
+    cursor:pointer;
+    padding:6px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:background 0.15s, opacity 0.15s;
+    flex-shrink:0;
+}
+.jornada-arrow:hover:not(:disabled){
+    background:var(--bg-surface);
+}
+.jornada-arrow:disabled{
+    opacity:0.25;
+    cursor:default;
+}
+.jornada-arrow:active:not(:disabled){
+    transform:scale(0.9);
+}
+.jornada-label{
+    font-size:16px;
+    font-weight:700;
+    color:var(--text-primary);
+    min-width:110px;
+    text-align:center;
+    user-select:none;
 }
 
 .resultados-selector-wrapper{
