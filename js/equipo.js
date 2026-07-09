@@ -491,6 +491,10 @@ const info =
         }
     });
 
+    proximos.sort((a, b) =>
+        new Date(a.date) - new Date(b.date)
+    );
+
     let formaReciente = "";
 
 const ultimos10 = jugados.slice(0, 10);
