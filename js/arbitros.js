@@ -805,26 +805,47 @@
         return './data/' + state.season + '/' + state.competition + '/arbitros.json';
     }
 
-    function init() {
-        var path = getJsonPath();
-        if (!path) {
-            document.getElementById('lista-arbitros').innerHTML =
-                '<div class="arb-empty">' +
-                    '<div class="arb-empty-icon">\u26A0</div>' +
-                    '<div class="arb-empty-title">No disponible</div>' +
-                    '<div class="arb-empty-desc">Selecciona una temporada y competici\u00f3n.</div>' +
-                '</div>';
-            return;
-        }
+    function arbitrosFromSupabase(rows) {
+        return rows.map(function(r) {
+            return {
+                id: r.id,
+                Nombre: r.name,
+                Colegio: r.college,
+                Internacional: r.international ? 1 : 0,
+                FechaNacim: r.birth_date,
+                FechaPrimera: r.first_date,
+                Foto: r.photo_url
+            };
+        });
+    }
 
+    function init() {
         var params = new URLSearchParams(window.location.search);
         var nombreParam = params.get('nombre');
 
-        fetch(path)
-            .then(function(resp) {
-                if (!resp.ok) throw new Error('HTTP ' + resp.status);
-                return resp.json();
-            })
+        function loadArbitros() {
+            var path = getJsonPath();
+            if (!path) throw new Error('No path');
+            return fetch(path)
+                .then(function(resp) {
+                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                    return resp.json();
+                });
+        }
+
+        var promise;
+        if (window.STPLS_API && window.STPLS_API.fetchReferees) {
+            promise = window.STPLS_API.fetchReferees()
+                .then(function(rows) {
+                    if (rows && rows.length > 0) return arbitrosFromSupabase(rows);
+                    return loadArbitros();
+                })
+                .catch(function() { return loadArbitros(); });
+        } else {
+            promise = loadArbitros();
+        }
+
+        promise
             .then(function(data) {
                 arbitrosData = data.sort(function(a, b) {
                     var aa = primerApellido(a.Nombre);

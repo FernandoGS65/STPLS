@@ -3,18 +3,62 @@
     var calendario = null;
     var descargados = null;
 
-    function init() {
-        Promise.all([
-            fetch(APP.ruta('calendario')).then(function(r) { return r.json(); }),
-            fetch(APP.ruta('descargados')).then(function(r) { return r.ok ? r.json() : []; })
-        ]).then(function(results) {
-            calendario = results[0];
-            descargados = results[1];
-            render();
-        }).catch(function(e) {
-            document.getElementById('descargas-tbody').innerHTML =
-                '<tr><td colspan="8" class="desc-error">Error al cargar datos: ' + e.message + '</td></tr>';
+    function matchesFromSupabase(matches) {
+        return matches.map(function(m) {
+            return {
+                id: m.id,
+                round: m.round,
+                date: m.date,
+                homeTeam: { name: m.home_team ? m.home_team.name : '?' },
+                awayTeam: { name: m.away_team ? m.away_team.name : '?' },
+                state: {
+                    score: {
+                        current: m.home_score != null ? m.home_score + '-' + m.away_score : null
+                    }
+                }
+            };
         });
+    }
+
+    function init() {
+        var useSupabase = false;
+
+        function loadFromJson() {
+            return Promise.all([
+                fetch(APP.ruta('calendario')).then(function(r) { return r.json(); }),
+                fetch(APP.ruta('descargados')).then(function(r) { return r.ok ? r.json() : []; })
+            ]).then(function(results) {
+                calendario = results[0];
+                descargados = results[1];
+                render();
+            });
+        }
+
+        if (window.STPLS_API && window.STPLS_API.fetchMatches) {
+            window.STPLS_API.fetchMatches()
+                .then(function(matches) {
+                    if (matches && matches.length > 0) {
+                        useSupabase = true;
+                        calendario = { data: matchesFromSupabase(matches) };
+                        // In Supabase mode we only have match metadata at the moment
+                        descargados = calendario.data.map(function(m) {
+                            return { id: m.id, detail: true, lineups: false, boxscore: false, score: m.state && m.state.score ? m.state.score.current : null };
+                        });
+                        render();
+                    } else {
+                        return loadFromJson();
+                    }
+                })
+                .catch(function(e) {
+                    console.warn('Supabase descargas failed, falling back to JSON', e);
+                    return loadFromJson();
+                });
+        } else {
+            loadFromJson().catch(function(e) {
+                document.getElementById('descargas-tbody').innerHTML =
+                    '<tr><td colspan="8" class="desc-error">Error al cargar datos: ' + e.message + '</td></tr>';
+            });
+        }
     }
 
     function render() {
