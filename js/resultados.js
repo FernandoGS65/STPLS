@@ -1,37 +1,71 @@
+function matchesFromSupabase(matches) {
+    return matches.map(function(m) {
+        return {
+            id: m.id,
+            round: m.round,
+            date: m.date,
+            state: {
+                score: {
+                    current: m.home_score != null ? m.home_score + '-' + m.away_score : null
+                },
+                description: m.status
+            },
+            homeTeam: {
+                id: m.home_team ? m.home_team.id : null,
+                name: m.home_team ? m.home_team.name : '',
+                logo: m.home_team ? APP.fixLogo(m.home_team.logo_url) : ''
+            },
+            awayTeam: {
+                id: m.away_team ? m.away_team.id : null,
+                name: m.away_team ? m.away_team.name : '',
+                logo: m.away_team ? APP.fixLogo(m.away_team.logo_url) : ''
+            }
+        };
+    });
+}
+
 async function cargarResultados() {
 
     try {
 
-        const respuesta =
-            await fetch(
-                APP.ruta("calendario")
-            );
+        let partidos = [];
+        let videos = {};
+        let descargados = new Set();
+        let useSupabase = false;
 
-        const datos =
-            await respuesta.json();
+        if (window.STPLS_API && window.STPLS_API.fetchMatches) {
+            try {
+                const supabaseMatches = await window.STPLS_API.fetchMatches();
+                if (supabaseMatches && supabaseMatches.length > 0) {
+                    partidos = matchesFromSupabase(supabaseMatches);
+                    useSupabase = true;
+                }
+            } catch (e) {
+                console.warn('Supabase matches fetch failed, falling back to JSON', e);
+            }
+        }
 
-            const respuestaVideos =
-    await fetch(
-        APP.ruta("videos")
-    );
+        if (useSupabase) {
+            try {
+                const supabaseVideos = await window.STPLS_API.fetchVideos();
+                if (supabaseVideos) videos = supabaseVideos;
+            } catch (e) {
+                console.warn('Supabase videos fetch failed', e);
+            }
+            // In Supabase mode all migrated matches are considered "available"
+            descargados = new Set(partidos.map(p => p.id));
+        } else {
+            const respuesta = await fetch(APP.ruta("calendario"));
+            const datos = await respuesta.json();
+            partidos = datos.data;
 
-const videos =
-    await respuestaVideos.json();
+            const respuestaVideos = await fetch(APP.ruta("videos"));
+            videos = await respuestaVideos.json();
 
-const respuestaDesc =
-    await fetch(
-        APP.ruta("descargados")
-    );
-
-const descargadosRaw =
-    await respuestaDesc.json();
-
-const descargados = new Set(
-    descargadosRaw.map(d => d.id)
-);
-
-        const partidos =
-            datos.data;
+            const respuestaDesc = await fetch(APP.ruta("descargados"));
+            const descargadosRaw = await respuestaDesc.json();
+            descargados = new Set(descargadosRaw.map(d => d.id));
+        }
 
         const selector =
             document.getElementById(
@@ -60,26 +94,6 @@ const descargados = new Set(
                 );
 
             return na - nb;
-
-        });
-
-        jornadas.forEach(jornada => {
-
-            const option =
-                document.createElement(
-                    "option"
-                );
-
-            option.value =
-                jornada;
-
-            option.textContent =
-                "Jornada " +
-                jornada.split("-")[1].trim();
-
-            selector.appendChild(
-                option
-            );
 
         });
 

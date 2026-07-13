@@ -218,21 +218,55 @@ contenedor.innerHTML = html;
 
 }
 
+function matchesFromSupabase(matches) {
+    return matches.map(function(m) {
+        return {
+            id: m.id,
+            round: m.round,
+            date: m.date,
+            state: {
+                score: {
+                    current: m.home_score != null ? m.home_score + ' - ' + m.away_score : null
+                },
+                description: m.status
+            },
+            homeTeam: {
+                name: m.home_team ? m.home_team.name : '',
+                logo: m.home_team ? APP.fixLogo(m.home_team.logo_url) : ''
+            },
+            awayTeam: {
+                name: m.away_team ? m.away_team.name : '',
+                logo: m.away_team ? APP.fixLogo(m.away_team.logo_url) : ''
+            }
+        };
+    });
+}
+
 async function cargarClasificacion() {
 
 
 try {
 
-    const respuesta =
-        await fetch(
-            APP.ruta("calendario")
-        );
+    let partidos = [];
+    let useSupabase = false;
 
-    const datos =
-        await respuesta.json();
+    if (window.STPLS_API && window.STPLS_API.fetchMatches) {
+        try {
+            const supabaseMatches = await window.STPLS_API.fetchMatches();
+            if (supabaseMatches && supabaseMatches.length > 0) {
+                partidos = matchesFromSupabase(supabaseMatches);
+                useSupabase = true;
+            }
+        } catch (e) {
+            console.warn('Supabase matches fetch failed, falling back to JSON', e);
+        }
+    }
 
-    const partidos =
-        datos.data;
+    if (!useSupabase) {
+        const respuesta = await fetch(APP.ruta("calendario"));
+        const datos = await respuesta.json();
+        partidos = datos.data;
+    }
 
     const state = APP.getState();
     const seasonLabel = state.seasons.find(s => s.id === state.season);

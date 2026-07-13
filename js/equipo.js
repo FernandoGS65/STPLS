@@ -1,3 +1,88 @@
+function matchesFromSupabase(matches) {
+    return matches.map(function(m) {
+        return {
+            id: m.id,
+            round: m.round,
+            date: m.date,
+            country: { code: 'ES', name: 'Spain', logo: '' },
+            state: {
+                clock: null,
+                score: {
+                    current: m.home_score != null ? m.home_score + '-' + m.away_score : null,
+                    penalties: null
+                },
+                description: m.status
+            },
+            homeTeam: {
+                id: m.home_team ? m.home_team.id : null,
+                name: m.home_team ? m.home_team.name : '',
+                logo: m.home_team ? APP.fixLogo(m.home_team.logo_url) : ''
+            },
+            awayTeam: {
+                id: m.away_team ? m.away_team.id : null,
+                name: m.away_team ? m.away_team.name : '',
+                logo: m.away_team ? APP.fixLogo(m.away_team.logo_url) : ''
+            },
+            league: { id: 119924, name: 'La Liga', season: 2026 }
+        };
+    });
+}
+
+function plantillaFromSupabase(teamName, players) {
+    return {
+        [teamName]: {
+            players: players.map(function(p) {
+                return {
+                    id: p.id,
+                    name: p.name,
+                    position: p.position,
+                    shirtNumber: p.shirt_number,
+                    number: p.shirt_number,
+                    age: p.age,
+                    nationality: p.nationality,
+                    photo: p.photo_url,
+                    fotMobId: p.fotmob_id,
+                    stats: p.stats || {}
+                };
+            })
+        }
+    };
+}
+
+function newsFromSupabase(items) {
+    return items.map(function(n) {
+        return {
+            titulo: n.title,
+            title: n.title,
+            resumen: n.summary,
+            summary: n.summary,
+            url: n.url,
+            imagen: n.image_url,
+            image: n.image_url,
+            fuente: n.source,
+            source: n.source,
+            fecha: n.published_at
+        };
+    });
+}
+
+function transfersFromSupabase(teamName, items) {
+    const result = {};
+    result[teamName] = items.map(function(t) {
+        return {
+            nombre: t.player_name,
+            player_name: t.player_name,
+            tipo: t.type,
+            desde: t.from_team,
+            from_team: t.from_team,
+            hacia: t.to_team,
+            to_team: t.to_team,
+            fecha: t.date
+        };
+    });
+    return result;
+}
+
 function obtenerParametro(nombre) {
 
     const params =
@@ -395,57 +480,60 @@ function obtenerPartidosEquipo(
 
 async function cargarEquipo() {
 
+    const nombreEquipo = obtenerParametro("id");
+    let datos = { data: [] };
+    let videos = {};
+    let matchIdsConDatos = new Set();
+    let useSupabase = false;
+    let supabaseTeamId = null;
+    let supabasePlayers = [];
 
-    const videosRespuesta =
-    await fetch(
-        APP.ruta("videos")
-    );
+    if (window.STPLS_API && window.STPLS_API.fetchMatches) {
+        try {
+            const allMatches = await window.STPLS_API.fetchMatches();
+            if (allMatches && allMatches.length > 0) {
+                datos.data = matchesFromSupabase(allMatches);
+                videos = await window.STPLS_API.fetchVideos();
+                matchIdsConDatos = new Set(datos.data.map(p => p.id.toString()));
+                useSupabase = true;
+                const teamMatch = allMatches.find(m =>
+                    (m.home_team && m.home_team.name === nombreEquipo) ||
+                    (m.away_team && m.away_team.name === nombreEquipo)
+                );
+                if (teamMatch) {
+                    supabaseTeamId = teamMatch.home_team.name === nombreEquipo
+                        ? teamMatch.home_team.id
+                        : teamMatch.away_team.id;
+                    supabasePlayers = await window.STPLS_API.fetchPlayers({ team_id: supabaseTeamId });
+                }
+            }
+        } catch (e) {
+            console.warn('Supabase fetch failed, falling back to JSON', e);
+        }
+    }
 
-const videos =
-    await videosRespuesta.json();
+    if (!useSupabase) {
+        const videosRespuesta = await fetch(APP.ruta("videos"));
+        videos = await videosRespuesta.json();
 
-    const nombreEquipo =
-        obtenerParametro("id");
+        const respuesta = await fetch(APP.ruta("calendario"));
+        datos = await respuesta.json();
 
-    const respuesta =
-        await fetch(
-            APP.ruta("calendario")
-        );
+        const descRespuesta = await fetch(APP.ruta("descargados"));
+        const descargados = await descRespuesta.json();
+        matchIdsConDatos = new Set(descargados.map(p => p.id.toString()));
+    }
 
-    const datos =
-        await respuesta.json();
+    const respuestaInfo = await fetch("./data/equipos-info.json");
+    const equiposInfo = await respuestaInfo.json();
 
-        const respuestaInfo =
-    await fetch(
-        "./data/equipos-info.json"
-    );
-
-const equiposInfo =
-    await respuestaInfo.json();
-
-    const descRespuesta =
-    await fetch(
-        APP.ruta("descargados")
-    );
-
-const descargados =
-    await descRespuesta.json();
-
-const slugEquipo =
-    nombreEquipo.toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/á/g, 'a').replace(/é/g, 'e').replace(/í/g, 'i')
-        .replace(/ó/g, 'o').replace(/ú/g, 'u')
-        .replace(/ñ/g, 'n')
-        .replace(/[^a-z0-9-]/g, '');
-
-
-const matchIdsConDatos =
-    new Set(
-        descargados.map(
-            p => p.id.toString()
-        )
-    );
+    const slugEquipo =
+        nombreEquipo.toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/á/g, 'a').replace(/é/g, 'e').replace(/í/g, 'i')
+            .replace(/ó/g, 'o').replace(/ú/g, 'u')
+            .replace(/ñ/g, 'n')
+            .replace(/[^a-z0-9-]/g, '');
 
     const clasificacion =
         calcularClasificacion(
@@ -959,17 +1047,22 @@ document.getElementById(
         if (container.querySelector('.noticias-list')) return;
         container.innerHTML = '<p class="tab-placeholder">Cargando noticias...</p>';
 
-        var slug = nombreEquipo.toLowerCase().trim()
-            .replace(/á/g,'a').replace(/é/g,'e').replace(/í/g,'i')
-            .replace(/ó/g,'o').replace(/ú/g,'u').replace(/ñ/g,'n')
-            .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-
-        var apiUrl = 'api/noticias?team=' + encodeURIComponent(slug);
-
         try {
-            var resp = await fetch(apiUrl);
-            if (!resp.ok) throw new Error('HTTP ' + resp.status);
-            var noticias = await resp.json();
+            var noticias = [];
+            if (useSupabase && supabaseTeamId) {
+                noticias = await window.STPLS_API.fetchNews(supabaseTeamId);
+                noticias = newsFromSupabase(noticias);
+            } else {
+                var slug = nombreEquipo.toLowerCase().trim()
+                    .replace(/á/g,'a').replace(/é/g,'e').replace(/í/g,'i')
+                    .replace(/ó/g,'o').replace(/ú/g,'u').replace(/ñ/g,'n')
+                    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+
+                var apiUrl = 'api/noticias?team=' + encodeURIComponent(slug);
+                var resp = await fetch(apiUrl);
+                if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                noticias = await resp.json();
+            }
 
             var seleccion = [];
             for (var i = 0; i < noticias.length && seleccion.length < 15; i++) {
@@ -1016,8 +1109,14 @@ document.getElementById(
         container.innerHTML = '<p class="tab-placeholder">Cargando fichajes...</p>';
 
         try {
-            var resp = await fetch('./data/fichajes.json');
-            var data = await resp.json();
+            var data;
+            if (useSupabase && supabaseTeamId) {
+                var items = await window.STPLS_API.fetchTransfers(supabaseTeamId);
+                data = transfersFromSupabase(slugEquipo, items);
+            } else {
+                var resp = await fetch('./data/fichajes.json');
+                data = await resp.json();
+            }
             var fichajes = data[slugEquipo];
             if (!fichajes || fichajes.length === 0) {
                 container.innerHTML = '<p class="tab-placeholder">No hay fichajes registrados para este equipo</p>';
@@ -1091,9 +1190,15 @@ document.getElementById(
         container.innerHTML = '<p class="tab-placeholder">Cargando plantilla...</p>';
 
         try {
-            var resp = await fetch(APP.ruta('plantilla'));
-            var data = await resp.json();
-            data = applyOverrides(data);
+            var data;
+            if (useSupabase && supabasePlayers && supabasePlayers.length > 0) {
+                data = plantillaFromSupabase(teamName, supabasePlayers);
+                data = applyOverrides(data);
+            } else {
+                var resp = await fetch(APP.ruta('plantilla'));
+                data = await resp.json();
+                data = applyOverrides(data);
+            }
             plantillaCache = data;
             renderPlantilla(data, teamName, container);
         } catch(e) {
