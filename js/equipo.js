@@ -532,9 +532,21 @@ function renderPartidos(lista) {
     lista.forEach(partido => {
         const local = partido.homeTeam.name;
         const visitante = partido.awayTeam.name;
-        const resultado = partido.state?.score?.current || "-";
         const tieneDatos = matchIdsConDatos.has(partido.id.toString());
         const id = partido.id;
+
+        let resultado;
+        const score = partido.state && partido.state.score && partido.state.score.current;
+        if (score) {
+            resultado = score;
+        } else if (partido.date) {
+            const fechaObj = new Date(partido.date);
+            const fechaStr = fechaObj.toLocaleDateString("es-ES", { day: "numeric", month: "short" });
+            const horaStr = fechaObj.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
+            resultado = horaStr !== "00:00" ? fechaStr + " · " + horaStr : fechaStr;
+        } else {
+            resultado = "-";
+        }
 
         let icono = "⚪";
         if (partido.state && partido.state.score && partido.state.score.current) {
