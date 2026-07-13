@@ -124,58 +124,55 @@ async function cargarEquipos() {
 
     try {
 
-        const respuesta =
-            await fetch(
-                APP.ruta("calendario")
-            );
+        let equipos = [];
+        let useSupabase = false;
 
-        const datos =
-            await respuesta.json();
+        // Try Supabase first
+        if (window.STPLS_API && window.STPLS_API.fetchTeams) {
+            try {
+                const supabaseTeams = await window.STPLS_API.fetchTeams();
+                if (supabaseTeams && supabaseTeams.length > 0) {
+                    equipos = supabaseTeams.map(t => ({
+                        nombre: t.name,
+                        logo: APP.fixLogo(t.logo_url)
+                    }));
+                    useSupabase = true;
+                }
+            } catch (e) {
+                console.warn('Supabase teams fetch failed, falling back to JSON', e);
+            }
+        }
 
-        const clasificacion =
-            calcularClasificacion(
-                datos.data
-            );
+        // Fallback to JSON
+        if (!useSupabase) {
+            const respuesta = await fetch(APP.ruta("calendario"));
+            const datos = await respuesta.json();
+            const clasificacion = calcularClasificacion(datos.data);
+            equipos = clasificacion.map(e => ({
+                nombre: e.nombre,
+                logo: e.logo
+            }));
+        }
 
-        const contenedor =
-            document.getElementById(
-                "lista-equipos"
-            );
-
+        const contenedor = document.getElementById("lista-equipos");
         let html = "";
 
-        clasificacion.forEach(
-            equipo => {
-
-                html += `
-
+        equipos.forEach(equipo => {
+            html += `
                 <a
-                    href="equipo.html?id=${encodeURIComponent(
-                        equipo.nombre
-                    )}"
+                    href="equipo.html?id=${encodeURIComponent(equipo.nombre)}"
                     class="equipo-card-link">
-
                     <div class="equipo-card">
-
                         <img
                             src="${equipo.logo}"
                             class="escudo-equipo">
-
-                        <h3>
-                            ${equipo.nombre}
-                        </h3>
-
+                        <h3>${equipo.nombre}</h3>
                     </div>
-
                 </a>
+            `;
+        });
 
-                `;
-
-            }
-        );
-
-        contenedor.innerHTML =
-            html;
+        contenedor.innerHTML = html;
 
     }
 

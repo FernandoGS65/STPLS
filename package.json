@@ -1,0 +1,21 @@
+{
+  "name": "stpls",
+  "version": "2.0.0",
+  "description": "STPLS - Spanish Total Players League Scores",
+  "type": "module",
+  "scripts": {
+    "migrate": "node scripts/migrate/index.js",
+    "migrate:dry": "node scripts/migrate/index.js --dry-run",
+    "fetch:matches": "node scripts/fetch/matches.js",
+    "fetch:missing": "node scripts/fetch/missing.js",
+    "dev": "node --watch scripts/dev-server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
