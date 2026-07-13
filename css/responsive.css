@@ -206,8 +206,9 @@
 /* --- Equipos page --- */
 @media(max-width:768px){
     .escudo-equipo{
-        width:45px;
-        height:45px;
+        width:39px;
+        height:39px;
+        padding:3px;
     }
 
     #lista-equipos{
