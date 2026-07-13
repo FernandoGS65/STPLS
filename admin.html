@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0f1a">
+    <title>Admin - STPLS</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/stpls-icon.png">
+    <style>
+        .admin-page { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .admin-box { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .admin-box h2 { margin-top: 0; color: var(--accent-gold); }
+        .admin-form { display: flex; flex-direction: column; gap: 14px; }
+        .admin-form label { font-size: 13px; color: var(--text-secondary); font-weight: 600; }
+        .admin-form input, .admin-form textarea, .admin-form select {
+            background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: 8px;
+            padding: 10px 12px; color: var(--text-primary); font-size: 14px;
+        }
+        .admin-form button {
+            background: linear-gradient(135deg, #16a34a, #15803d); color: #fff; border: none;
+            padding: 12px; border-radius: 8px; font-weight: 700; cursor: pointer;
+        }
+        .admin-form button.secondary { background: var(--bg-surface); color: var(--text-primary); border: 1px solid var(--border-color); }
+        .admin-msg { padding: 12px; border-radius: 8px; font-size: 13px; margin-top: 12px; }
+        .admin-msg.success { background: rgba(34,197,94,0.12); color: #22c55e; }
+        .admin-msg.error { background: rgba(239,68,68,0.12); color: #ef4444; }
+        .admin-hidden { display: none; }
+        .admin-nav { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .admin-nav button { background: var(--bg-surface); border: 1px solid var(--border-color); color: var(--text-primary); padding: 8px 14px; border-radius: 20px; cursor: pointer; }
+        .admin-nav button.active { background: var(--accent-gold); color: #000; border-color: var(--accent-gold); }
+        .admin-news-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+        .admin-news-item { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; display: flex; justify-content: space-between; align-items: center; }
+        .admin-news-item small { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-top">
+        <a href="index.html" class="nav-logo">STPLS</a>
+        <div id="nav-controls"></div>
+    </div>
+    <div id="nav-icons" class="nav-icons"></div>
+</nav>
+
+<main class="admin-page">
+    <h1>Panel de administración</h1>
+
+    <div id="admin-login" class="admin-box">
+        <h2>Iniciar sesión</h2>
+        <form class="admin-form" id="login-form">
+            <label>Email</label>
+            <input type="email" id="login-email" required placeholder="tu@email.com">
+            <label>Contraseña</label>
+            <input type="password" id="login-password" required placeholder="Contraseña">
+            <button type="submit">Entrar</button>
+        </form>
+        <div id="login-msg"></div>
+    </div>
+
+    <div id="admin-panel" class="admin-hidden">
+        <div class="admin-box">
+            <p>Sesión iniciada como <strong id="admin-email"></strong></p>
+            <button class="admin-form button secondary" id="logout-btn" style="margin-top:10px">Cerrar sesión</button>
+        </div>
+
+        <div class="admin-nav">
+            <button class="active" data-tab="news">Noticias</button>
+            <button data-tab="videos">Vídeos</button>
+        </div>
+
+        <div id="tab-news" class="admin-box">
+            <h2>Añadir noticia</h2>
+            <form class="admin-form" id="news-form">
+                <label>Equipo</label>
+                <select id="news-team" required></select>
+                <label>Título</label>
+                <input type="text" id="news-title" required>
+                <label>Resumen</label>
+                <textarea id="news-summary" rows="3"></textarea>
+                <label>URL</label>
+                <input type="url" id="news-url">
+                <label>Imagen URL</label>
+                <input type="url" id="news-image">
+                <label>Fuente</label>
+                <input type="text" id="news-source">
+                <button type="submit">Guardar noticia</button>
+            </form>
+            <div id="news-msg"></div>
+            <div class="admin-news-list" id="news-list"></div>
+        </div>
+
+        <div id="tab-videos" class="admin-box admin-hidden">
+            <h2>Añadir vídeo</h2>
+            <form class="admin-form" id="video-form">
+                <label>Partido</label>
+                <select id="video-match" required></select>
+                <label>URL del vídeo</label>
+                <input type="url" id="video-url" required>
+                <button type="submit">Guardar vídeo</button>
+            </form>
+            <div id="video-msg"></div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <a href="descargas.html" class="footer-link">Descargas</a>
+    <span class="footer-copy">STPLS &copy; 2026</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>
