@@ -516,7 +516,7 @@
                     if (card || goalCt || subOutEvt || subInEvt) {
                         html += '<div class="pv-avatar-badges">';
                         for (var gi = 0; gi < goalCt; gi++) html += '<span class="pv-ind-goal">\u26BD</span>';
-                        if (subOutEvt) html += '<span class="pv-ind-sub out"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span>';
+                        if (subOutEvt) html += '<span class="pv-ind-sub out" data-tooltip="Sustituido por ' + escHtml(subOutEvt.substituted || '') + '"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span>';
                         if (subInEvt) html += '<span class="pv-ind-sub in"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/><line x1="3" y1="12" x2="21" y2="12" opacity="0.3"/></svg></span>';
                         if (card === 'yellow') html += '<span class="pv-ind-card yellow"></span>';
                         if (card === 'red') html += '<span class="pv-ind-card red"></span>';
