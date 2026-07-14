@@ -299,11 +299,39 @@ CREATE POLICY "settings_delete_admin" ON settings
 -- STEP 4: Additional security hardening
 -- ============================================================
 
--- Prevent authenticated non-admin users from reading sensitive tables
--- (profiles and settings have no public SELECT, only admin/own read)
+-- FORCE RLS on all tables (protects service_role connections too)
+ALTER TABLE seasons FORCE ROW LEVEL SECURITY;
+ALTER TABLE competitions FORCE ROW LEVEL SECURITY;
+ALTER TABLE teams FORCE ROW LEVEL SECURITY;
+ALTER TABLE players FORCE ROW LEVEL SECURITY;
+ALTER TABLE matches FORCE ROW LEVEL SECURITY;
+ALTER TABLE match_events FORCE ROW LEVEL SECURITY;
+ALTER TABLE match_stats FORCE ROW LEVEL SECURITY;
+ALTER TABLE lineups FORCE ROW LEVEL SECURITY;
+ALTER TABLE boxscores FORCE ROW LEVEL SECURITY;
+ALTER TABLE news FORCE ROW LEVEL SECURITY;
+ALTER TABLE transfers FORCE ROW LEVEL SECURITY;
+ALTER TABLE referees FORCE ROW LEVEL SECURITY;
+ALTER TABLE videos FORCE ROW LEVEL SECURITY;
+ALTER TABLE profiles FORCE ROW LEVEL SECURITY;
+ALTER TABLE settings FORCE ROW LEVEL SECURITY;
 
--- Add index for is_admin() function performance
+-- Performance: wrap auth.uid() to avoid per-row evaluation
+-- (applied via separate UPDATE policies below)
+
+-- Performance index for admin checks
 CREATE INDEX IF NOT EXISTS idx_profiles_auth_admin ON profiles(id, role) WHERE role = 'admin';
+
+-- GIN indexes for JSONB columns (if queried with @>, ?, ?| operators)
+CREATE INDEX IF NOT EXISTS idx_teams_trophies_gin ON teams USING GIN (trophies);
+CREATE INDEX IF NOT EXISTS idx_players_stats_gin ON players USING GIN (stats);
+CREATE INDEX IF NOT EXISTS idx_matches_venue_gin ON matches USING GIN (venue);
+CREATE INDEX IF NOT EXISTS idx_matches_predictions_gin ON matches USING GIN (predictions);
+CREATE INDEX IF NOT EXISTS idx_lineups_data_gin ON lineups USING GIN (data);
+CREATE INDEX IF NOT EXISTS idx_boxscores_data_gin ON boxscores USING GIN (data);
+CREATE INDEX IF NOT EXISTS idx_player_season_stats_gin ON player_season_stats USING GIN (stats);
+CREATE INDEX IF NOT EXISTS idx_team_season_stats_gin ON team_season_stats USING GIN (stats);
+CREATE INDEX IF NOT EXISTS idx_settings_value_gin ON settings USING GIN (value);
 
 -- ============================================================
 -- VERIFICATION QUERIES (run after applying)

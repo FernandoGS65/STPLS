@@ -224,6 +224,17 @@ CREATE INDEX IF NOT EXISTS idx_player_season_stats_competition ON player_season_
 CREATE INDEX IF NOT EXISTS idx_team_season_stats_team ON team_season_stats(team_id);
 CREATE INDEX IF NOT EXISTS idx_team_season_stats_competition ON team_season_stats(competition_id);
 
+-- GIN indexes for JSONB columns
+CREATE INDEX IF NOT EXISTS idx_teams_trophies_gin ON teams USING GIN (trophies);
+CREATE INDEX IF NOT EXISTS idx_players_stats_gin ON players USING GIN (stats);
+CREATE INDEX IF NOT EXISTS idx_matches_venue_gin ON matches USING GIN (venue);
+CREATE INDEX IF NOT EXISTS idx_matches_predictions_gin ON matches USING GIN (predictions);
+CREATE INDEX IF NOT EXISTS idx_lineups_data_gin ON lineups USING GIN (data);
+CREATE INDEX IF NOT EXISTS idx_boxscores_data_gin ON boxscores USING GIN (data);
+CREATE INDEX IF NOT EXISTS idx_player_season_stats_gin ON player_season_stats USING GIN (stats);
+CREATE INDEX IF NOT EXISTS idx_team_season_stats_gin ON team_season_stats USING GIN (stats);
+CREATE INDEX IF NOT EXISTS idx_settings_value_gin ON settings USING GIN (value);
+
 -- ============================================================
 -- RLS Policies (secure: public read for data, admin-only for writes)
 -- ============================================================
@@ -243,6 +254,23 @@ ALTER TABLE referees ENABLE ROW LEVEL SECURITY;
 ALTER TABLE videos ENABLE ROW LEVEL SECURITY;
 ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE settings ENABLE ROW LEVEL SECURITY;
+
+-- FORCE RLS on all tables (protects service_role connections too)
+ALTER TABLE seasons FORCE ROW LEVEL SECURITY;
+ALTER TABLE competitions FORCE ROW LEVEL SECURITY;
+ALTER TABLE teams FORCE ROW LEVEL SECURITY;
+ALTER TABLE players FORCE ROW LEVEL SECURITY;
+ALTER TABLE matches FORCE ROW LEVEL SECURITY;
+ALTER TABLE match_events FORCE ROW LEVEL SECURITY;
+ALTER TABLE match_stats FORCE ROW LEVEL SECURITY;
+ALTER TABLE lineups FORCE ROW LEVEL SECURITY;
+ALTER TABLE boxscores FORCE ROW LEVEL SECURITY;
+ALTER TABLE news FORCE ROW LEVEL SECURITY;
+ALTER TABLE transfers FORCE ROW LEVEL SECURITY;
+ALTER TABLE referees FORCE ROW LEVEL SECURITY;
+ALTER TABLE videos FORCE ROW LEVEL SECURITY;
+ALTER TABLE profiles FORCE ROW LEVEL SECURITY;
+ALTER TABLE settings FORCE ROW LEVEL SECURITY;
 
 -- Helper function for admin check (SECURITY DEFINER avoids recursive RLS)
 CREATE OR REPLACE FUNCTION is_admin()
