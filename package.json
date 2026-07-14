@@ -6,6 +6,10 @@
   "scripts": {
     "migrate": "node scripts/migrate/index.js",
     "migrate:dry": "node scripts/migrate/index.js --dry-run",
+    "migrate:details": "node scripts/migrate/match-details.js",
+    "migrate:details:dry": "node scripts/migrate/match-details.js --dry-run",
+    "stats:generate": "node scripts/generate-stats.js",
+    "stats:generate:dry": "node scripts/generate-stats.js --dry-run",
     "fetch:matches": "node scripts/fetch/matches.js",
     "fetch:missing": "node scripts/fetch/missing.js",
     "dev": "node --watch scripts/dev-server.js"
