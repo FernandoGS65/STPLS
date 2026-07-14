@@ -655,6 +655,10 @@
                 var posA = order[a.position] != null ? order[a.position] : 9;
                 var posB = order[b.position] != null ? order[b.position] : 9;
                 if (posA !== posB) return posA - posB;
+                // Substitutes (S) always go below players with real minutes
+                var isSubA = a.isSubstitute || a.minutesPlayed == null || a.minutesPlayed === 'S' ? 1 : 0;
+                var isSubB = b.isSubstitute || b.minutesPlayed == null || b.minutesPlayed === 'S' ? 1 : 0;
+                if (isSubA !== isSubB) return isSubA - isSubB;
                 var minA = parseInt(a.minutesPlayed) || 0;
                 var minB = parseInt(b.minutesPlayed) || 0;
                 return minB - minA;
