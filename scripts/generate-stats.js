@@ -16,10 +16,17 @@ function safeFloat(v) {
     return isNaN(n) ? 0 : n;
 }
 
-async function loadPlayersMap() {
-    const { data, error } = await supabaseAdmin.from('players').select('id, name, team_id, team:team_id(name, logo_url), position, fotmob_id');
-    if (error) throw error;
-    return Object.fromEntries((data || []).map(p => [p.id, p]));
+async function loadPlayersAndTeamsMap() {
+    const [{ data: players, error: pErr }, { data: teams, error: tErr }] = await Promise.all([
+        supabaseAdmin.from('players').select('id, name, team_id, team:team_id(name, logo_url), position, fotmob_id'),
+        supabaseAdmin.from('teams').select('id, name')
+    ]);
+    if (pErr) throw pErr;
+    if (tErr) throw tErr;
+    return {
+        playersMap: Object.fromEntries((players || []).map(p => [p.id, p])),
+        teamNameToId: Object.fromEntries((teams || []).map(t => [t.name, t.id]))
+    };
 }
 
 async function loadMatches() {
@@ -124,13 +131,14 @@ function aggregatePlayerStats(boxscores, playersMap) {
     return Object.values(agg);
 }
 
-async function aggregateTeamStats(matches) {
+async function aggregateTeamStats(matches, teamNameToId) {
     const stats = {};
     matches.forEach(m => {
         if (!m.home_team || !m.away_team) return;
         [m.home_team, m.away_team].forEach(t => {
             if (!stats[t.name]) {
                 stats[t.name] = {
+                    id: teamNameToId[t.name] || null,
                     name: t.name,
                     pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, puntos: 0,
                     avgPossession: 0, possessionCount: 0,
@@ -224,16 +232,17 @@ function buildPlayerOutput(players) {
     return out;
 }
 
-function buildTeamOutput(teams) {
+function buildTeamOutput(teams, teamNameToId) {
+    const enriched = teams.map(t => ({ ...t, id: t.id || teamNameToId[t.name] || null }));
     return {
-        valoracion: teams.slice().sort((a, b) => b.avgPossession - a.avgPossession),
-        porteriasCero: teams.slice().sort((a, b) => b.cleanSheets - a.cleanSheets),
-        posesion: teams.slice().sort((a, b) => b.avgPossession - a.avgPossession),
+        valoracion: enriched.slice().sort((a, b) => b.avgPossession - a.avgPossession),
+        porteriasCero: enriched.slice().sort((a, b) => b.cleanSheets - a.cleanSheets),
+        posesion: enriched.slice().sort((a, b) => b.avgPossession - a.avgPossession),
         meta: { jornadasDescargadas: 0, totalJornadas: 0 }
     };
 }
 
-async function saveStats(playerStats, teamStats, playersMap) {
+async function saveStats(playerStats, teamStats, playersMap, teamNameToId) {
     // Delete existing
     await supabaseAdmin.from('player_season_stats').delete().eq('competition_id', competitionId);
     await supabaseAdmin.from('team_season_stats').delete().eq('competition_id', competitionId);
@@ -263,7 +272,7 @@ async function saveStats(playerStats, teamStats, playersMap) {
     }
 
     const teamRows = (teamStats.valoracion || []).map((t, idx) => ({
-        team_id: null,
+        team_id: t.id || teamNameToId[t.name] || null,
         competition_id: competitionId,
         stats: { ...t, position: idx + 1 }
     }));
@@ -282,20 +291,20 @@ async function main() {
     validateConfig();
     console.log(`Generating stats for ${competitionId}...`);
 
-    const playersMap = await loadPlayersMap();
+    const { playersMap, teamNameToId } = await loadPlayersAndTeamsMap();
     const matches = await loadMatches();
     const boxscores = await loadBoxscores();
 
     const aggPlayers = aggregatePlayerStats(boxscores, playersMap);
     const playerOutput = buildPlayerOutput(aggPlayers);
-    const teamOutput = buildTeamOutput(await aggregateTeamStats(matches));
+    const teamOutput = buildTeamOutput(await aggregateTeamStats(matches, teamNameToId), teamNameToId);
 
     if (dryRun) {
         console.log(`[DRY RUN] Would save ${aggPlayers.length} player stats and ${teamOutput.valoracion.length} team stats`);
         return;
     }
 
-    await saveStats(playerOutput, teamOutput, playersMap);
+    await saveStats(playerOutput, teamOutput, playersMap, teamNameToId);
     console.log(`Saved ${aggPlayers.length} player stats and ${teamOutput.valoracion.length} team stats.`);
 }
 
