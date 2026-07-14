@@ -88,7 +88,10 @@ ALTER TABLE player_season_stats ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Public read" ON player_season_stats FOR SELECT USING (true);
 CREATE POLICY "Admin write" ON player_season_stats FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
 
--- 7. Aggregated team season stats
+-- 7. Add country_code to players
+ALTER TABLE players ADD COLUMN IF NOT EXISTS country_code TEXT;
+
+-- 8. Aggregated team season stats
 CREATE TABLE IF NOT EXISTS team_season_stats (
     id SERIAL PRIMARY KEY,
     team_id INTEGER NOT NULL REFERENCES teams(id) ON DELETE CASCADE,

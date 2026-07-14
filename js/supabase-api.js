@@ -41,8 +41,12 @@
     async function fetchMatches(options) {
         if (!sb) return null;
         var compId = getCompetitionId();
+        var fields = '*, home_team:home_team_id(*), away_team:away_team_id(*)';
+        if (options && options.referee) {
+            fields += ', referee:referee_id(*)';
+        }
         var query = sb.from('matches')
-            .select('*, home_team:home_team_id(*), away_team:away_team_id(*)')
+            .select(fields)
             .eq('competition_id', compId);
         if (options && options.jornada) {
             query = query.eq('jornada', options.jornada);
@@ -53,6 +57,10 @@
         var { data, error } = await query.order('date');
         if (error) throw error;
         return (data || []).map(enrichMatch);
+    }
+
+    async function fetchMatchesWithReferee(teamId) {
+        return fetchMatches({ team: teamId, referee: true });
     }
 
     async function fetchPlayers(options) {
@@ -142,6 +150,52 @@
         return data;
     }
 
+    async function fetchTeamInfo(teamName) {
+        if (!sb) return null;
+        var { data, error } = await sb.from('teams')
+            .select('id,name,logo_url,stadium,capacity,founded,web,trophies')
+            .eq('name', teamName)
+            .single();
+        if (error) throw error;
+        if (!data) return null;
+        var t = data.trophies || {};
+        return {
+            id: data.id,
+            name: data.name,
+            logo: data.logo_url,
+            estadio: data.stadium || '',
+            capacidad: data.capacity || '',
+            fundacion: data.founded || '',
+            web: data.web || '',
+            liga: t.liga || 0,
+            copaRey: t.copa || 0,
+            supercopa: t.supercopa || 0,
+            champions: t.champions || 0,
+            europaLeague: t.europaLeague || 0,
+            recopa: t.recopa || 0,
+            mundialClubes: t.mundialClubes || 0
+        };
+    }
+
+    async function countTeamDetailedMatches(teamId) {
+        if (!sb) return 0;
+        var compId = getCompetitionId();
+        var { data: matches, error } = await sb.from('matches')
+            .select('id')
+            .eq('competition_id', compId)
+            .or('home_team_id.eq.' + teamId + ',away_team_id.eq.' + teamId);
+        if (error) throw error;
+        if (!matches || matches.length === 0) return 0;
+        var ids = matches.map(function(m) { return m.id; });
+        var { data: lineups } = await sb.from('lineups').select('match_id').in('match_id', ids);
+        var { data: boxscores } = await sb.from('boxscores').select('match_id').in('match_id', ids);
+        var withLineups = new Set((lineups || []).map(function(l) { return l.match_id; }));
+        var withBox = new Set((boxscores || []).map(function(b) { return b.match_id; }));
+        var count = 0;
+        ids.forEach(function(id) { if (withLineups.has(id) && withBox.has(id)) count++; });
+        return count;
+    }
+
     async function fetchVideos() {
         if (!sb) return null;
         var compId = getCompetitionId();
@@ -156,6 +210,36 @@
             }
         });
         return map;
+    }
+
+    async function fetchAllMatchesWithEvents() {
+        if (!sb) return null;
+        var compId = getCompetitionId();
+        var { data, error } = await sb.from('matches')
+            .select('*, home_team:home_team_id(*), away_team:away_team_id(*), referee:referee_id(*), events:match_events(*)')
+            .eq('competition_id', compId)
+            .order('date');
+        if (error) throw error;
+        return (data || []).map(function(m) {
+            var enriched = enrichMatch(m);
+            var homeTeam = m.home_team || {};
+            var awayTeam = m.away_team || {};
+            enriched.events = (m.events || []).map(function(e) {
+                var team = e.team_id === homeTeam.id ? homeTeam : (e.team_id === awayTeam.id ? awayTeam : null);
+                return {
+                    team: team ? { id: team.id, name: team.name, logo: team.logo_url } : null,
+                    time: e.time,
+                    type: e.type,
+                    player: e.player,
+                    playerId: e.player_id,
+                    substituted: e.substituted,
+                    substitutedId: e.substituted_id,
+                    assist: e.assist
+                };
+            });
+            enriched.referee = m.referee ? { name: m.referee.name, nationality: m.referee.nationality || '' } : null;
+            return enriched;
+        });
     }
 
     async function fetchMatchDetail(matchId) {
@@ -204,6 +288,77 @@
             .eq('match_id', matchId);
         if (error) throw error;
         return data || [];
+    }
+
+    async function fetchBestXIData() {
+        if (!sb) return null;
+        var compId = getCompetitionId();
+
+        var { data: matches, error: mErr } = await sb.from('matches')
+            .select('*, home_team:home_team_id(*), away_team:away_team_id(*)')
+            .eq('competition_id', compId);
+        if (mErr) throw mErr;
+
+        var { data: boxscores, error: bErr } = await sb.from('boxscores')
+            .select('*, team:team_id(*), player:player_id(*)')
+            .eq('match.competition_id', compId);
+        if (bErr) throw bErr;
+
+        var playersMap = {};
+        (boxscores || []).forEach(function(b) {
+            if (b.player && b.player.id) {
+                playersMap[b.player.id] = {
+                    position: b.player.position,
+                    fotMobId: b.player.fotmob_id
+                };
+            }
+        });
+
+        var byMatch = {};
+        (boxscores || []).forEach(function(b) {
+            if (!byMatch[b.match_id]) byMatch[b.match_id] = {};
+            if (!byMatch[b.match_id][b.team_id]) {
+                byMatch[b.match_id][b.team_id] = { team: b.team, players: [] };
+            }
+            var p = Object.assign({}, b.data || {});
+            if (b.player && b.player.position) p.position = b.player.position;
+            if (b.player && b.player.fotmob_id) p.fotMobId = b.player.fotmob_id;
+            byMatch[b.match_id][b.team_id].players.push(p);
+        });
+
+        var partidos = (matches || []).map(function(m) {
+            var teams = byMatch[m.id] || {};
+            var homeBox = teams[m.home_team.id];
+            var awayBox = teams[m.away_team.id];
+            var boxes = [];
+            if (homeBox) {
+                boxes.push({
+                    team: { name: homeBox.team.name, logo: homeBox.team.logo_url },
+                    players: homeBox.players
+                });
+            }
+            if (awayBox) {
+                boxes.push({
+                    team: { name: awayBox.team.name, logo: awayBox.team.logo_url },
+                    players: awayBox.players
+                });
+            }
+            return {
+                id: m.id,
+                round: m.round,
+                date: m.date,
+                homeTeam: { name: m.home_team.name, logo: m.home_team.logo_url },
+                awayTeam: { name: m.away_team.name, logo: m.away_team.logo_url },
+                state: { score: m.home_score != null ? { current: m.home_score + ' - ' + m.away_score } : null },
+                boxScore: { value: boxes }
+            };
+        }).filter(function(p) { return p.boxScore.value.length > 0; });
+
+        return {
+            matches: matches || [],
+            partidos: partidos,
+            playersMap: playersMap
+        };
     }
 
     // Return full match detail in the original JSON shape
@@ -381,19 +536,24 @@
     window.STPLS_API = {
         fetchTeams: fetchTeams,
         fetchMatches: fetchMatches,
+        fetchMatchesWithReferee: fetchMatchesWithReferee,
         fetchPlayers: fetchPlayers,
         fetchPlayerStats: fetchPlayerStats,
         fetchTeamStats: fetchTeamStats,
         fetchNews: fetchNews,
         fetchTransfers: fetchTransfers,
         fetchReferees: fetchReferees,
+        fetchTeamInfo: fetchTeamInfo,
         fetchVideos: fetchVideos,
         fetchMatchDetail: fetchMatchDetail,
         fetchMatchFullDetail: fetchMatchFullDetail,
+        fetchAllMatchesWithEvents: fetchAllMatchesWithEvents,
+        countTeamDetailedMatches: countTeamDetailedMatches,
         fetchMatchEvents: fetchMatchEvents,
         fetchMatchStats: fetchMatchStats,
         fetchLineups: fetchLineups,
         fetchBoxscore: fetchBoxscore,
+        fetchBestXIData: fetchBestXIData,
         fetchPlayerSeasonStats: fetchPlayerSeasonStats,
         fetchTeamSeasonStats: fetchTeamSeasonStats
     };

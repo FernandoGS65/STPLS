@@ -25,6 +25,20 @@
         return new Date().getFullYear() - year;
     }
 
+    function arbitrosFromSupabase(rows) {
+        return rows.map(function(r) {
+            return {
+                id: r.id,
+                Nombre: r.name,
+                Colegio: r.college,
+                Internacional: r.international ? 1 : 0,
+                FechaNacim: r.birth_date,
+                FechaPrimera: r.first_date,
+                Foto: r.photo_url
+            };
+        });
+    }
+
     function fotoUrl(path) {
         if (!path) return null;
         var idx = path.indexOf('imagenes');
@@ -104,8 +118,7 @@
         return m ? parseInt(m[1]) : 0;
     }
 
-    function loadAllMatches() {
-        if (partidosCache) return Promise.resolve(partidosCache);
+    function loadAllMatchesFromJson() {
         return fetch(APP.ruta('descargados'))
             .then(function(r) { return r.ok ? r.json() : []; })
             .then(function(descargados) {
@@ -120,6 +133,22 @@
                 partidosCache = results.filter(function(r) { return r !== null; });
                 return partidosCache;
             });
+    }
+
+    function loadAllMatches() {
+        if (partidosCache) return Promise.resolve(partidosCache);
+        if (window.STPLS_API && window.STPLS_API.fetchAllMatchesWithEvents) {
+            return window.STPLS_API.fetchAllMatchesWithEvents()
+                .then(function(matches) {
+                    partidosCache = matches || [];
+                    return partidosCache;
+                })
+                .catch(function(err) {
+                    console.warn('Supabase matches load failed, falling back to JSON', err);
+                    return loadAllMatchesFromJson();
+                });
+        }
+        return loadAllMatchesFromJson();
     }
 
     function extractMatchData(match) {
@@ -833,14 +862,21 @@
                 });
         }
 
+        function loadArbitrosSupabase() {
+            if (window.STPLS_API && window.STPLS_API.fetchReferees) {
+                return window.STPLS_API.fetchReferees()
+                    .then(function(rows) {
+                        if (rows && rows.length > 0) return arbitrosFromSupabase(rows);
+                        throw new Error('No referees in Supabase');
+                    });
+            }
+            throw new Error('STPLS_API not available');
+        }
+
+        var useSupabase = window.STPLS_API && window.STPLS_API.fetchReferees && window.STPLS_API.fetchAllMatchesWithEvents;
         var promise;
-        if (window.STPLS_API && window.STPLS_API.fetchReferees) {
-            promise = window.STPLS_API.fetchReferees()
-                .then(function(rows) {
-                    if (rows && rows.length > 0) return arbitrosFromSupabase(rows);
-                    return loadArbitros();
-                })
-                .catch(function() { return loadArbitros(); });
+        if (useSupabase) {
+            promise = loadArbitrosSupabase().catch(function() { return loadArbitros(); });
         } else {
             promise = loadArbitros();
         }

@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS players (
     shirt_number INTEGER,
     age INTEGER,
     nationality TEXT,
+    country_code TEXT,
     photo_url TEXT,
     fotmob_id TEXT,
     stats JSONB DEFAULT '{}',

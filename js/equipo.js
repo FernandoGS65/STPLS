@@ -31,7 +31,9 @@ function matchesFromSupabase(matches) {
 function plantillaFromSupabase(teamName, players) {
     return {
         [teamName]: {
+            logo: players.length && players[0].team ? players[0].team.logo_url : '',
             players: players.map(function(p) {
+                var s = p.stats || {};
                 return {
                     id: p.id,
                     name: p.name,
@@ -40,9 +42,16 @@ function plantillaFromSupabase(teamName, players) {
                     number: p.shirt_number,
                     age: p.age,
                     nationality: p.nationality,
+                    countryCode: p.country_code || p.countryCode || '',
                     photo: p.photo_url,
                     fotMobId: p.fotmob_id,
-                    stats: p.stats || {}
+                    stats: s,
+                    starts: s.starts || 0,
+                    subs: s.subs || 0,
+                    appearances: s.appearances || 0,
+                    goals: s.goals || 0,
+                    yellowCards: s.yellowCards || 0,
+                    redCards: s.redCards || 0
                 };
             })
         }
@@ -66,17 +75,34 @@ function newsFromSupabase(items) {
     });
 }
 
+function arbitrosFromSupabase(rows) {
+    return rows.map(function(r) {
+        return {
+            id: r.id,
+            Nombre: r.name,
+            Colegio: r.college,
+            Internacional: r.international ? 1 : 0,
+            FechaNacim: r.birth_date,
+            FechaPrimera: r.first_date,
+            Foto: r.photo_url
+        };
+    });
+}
+
 function transfersFromSupabase(teamName, items) {
     const result = {};
     result[teamName] = items.map(function(t) {
         return {
             nombre: t.player_name,
             player_name: t.player_name,
+            jugador: t.player_name,
             tipo: t.type,
             desde: t.from_team,
             from_team: t.from_team,
             hacia: t.to_team,
             to_team: t.to_team,
+            club: t.type === 'llegada' ? t.from_team : t.to_team,
+            precio: '-',
             fecha: t.date
         };
     });
@@ -524,8 +550,23 @@ async function cargarEquipo() {
         matchIdsConDatos = new Set(descargados.map(p => p.id.toString()));
     }
 
-    const respuestaInfo = await fetch("./data/equipos-info.json");
-    const equiposInfo = await respuestaInfo.json();
+    let info = {};
+    if (useSupabase && window.STPLS_API && window.STPLS_API.fetchTeamInfo) {
+        try {
+            info = await window.STPLS_API.fetchTeamInfo(nombreEquipo) || {};
+        } catch (e) {
+            console.warn('fetchTeamInfo failed', e);
+        }
+    }
+    if (!info || !info.estadio) {
+        try {
+            const respuestaInfo = await fetch("./data/equipos-info.json");
+            const equiposInfo = await respuestaInfo.json();
+            info = equiposInfo[nombreEquipo] || {};
+        } catch (e) {
+            info = {};
+        }
+    }
 
     const slugEquipo =
         nombreEquipo.toLowerCase()
@@ -545,8 +586,6 @@ async function cargarEquipo() {
             e =>
             e.nombre === nombreEquipo
         );
-const info =
-    equiposInfo[nombreEquipo] || {};
 
     if (!equipo) {
 
@@ -904,24 +943,37 @@ document.getElementById(
         container.innerHTML = '<p class="tab-placeholder">Cargando arbitrajes...</p>';
 
         try {
-            var respArb = await fetch('./data/' + APP.getState().season + '/' + APP.getState().competition + '/arbitros.json');
-            var arbitrosData = await respArb.json();
-
-            var respDesc = await fetch(APP.ruta('descargados'));
-            var descargados = await respDesc.json();
-            var idsDesc = new Set(descargados.map(function(d) { return d.id.toString(); }));
-
+            var arbitrosData = [];
             var partidosConRef = [];
-            for (var i = 0; i < jugados.length; i++) {
-                var j = jugados[i];
-                if (!idsDesc.has(j.id.toString())) continue;
-                try {
-                    var respM = await fetch(APP.ruta('partido', j.id));
-                    var matchData = await respM.json();
-                    if (matchData.referee && matchData.referee.name) {
-                        partidosConRef.push({ match: j, refereeName: matchData.referee.name, detail: matchData });
-                    }
-                } catch(e) {}
+
+            if (useSupabase && supabaseTeamId && window.STPLS_API && window.STPLS_API.fetchReferees) {
+                var rows = await window.STPLS_API.fetchReferees();
+                arbitrosData = arbitrosFromSupabase(rows);
+                var matchesRef = await window.STPLS_API.fetchMatchesWithReferee(supabaseTeamId);
+                partidosConRef = matchesRef.filter(function(m) {
+                    return m.referee && m.referee.name && m.state && m.state.score && m.state.score.current;
+                }).map(function(m) {
+                    return { match: m, refereeName: m.referee.name, detail: null };
+                });
+            } else {
+                var respArb = await fetch('./data/' + APP.getState().season + '/' + APP.getState().competition + '/arbitros.json');
+                arbitrosData = await respArb.json();
+
+                var respDesc = await fetch(APP.ruta('descargados'));
+                var descargados = await respDesc.json();
+                var idsDesc = new Set(descargados.map(function(d) { return d.id.toString(); }));
+
+                for (var i = 0; i < jugados.length; i++) {
+                    var j = jugados[i];
+                    if (!idsDesc.has(j.id.toString())) continue;
+                    try {
+                        var respM = await fetch(APP.ruta('partido', j.id));
+                        var matchData = await respM.json();
+                        if (matchData.referee && matchData.referee.name) {
+                            partidosConRef.push({ match: j, refereeName: matchData.referee.name, detail: matchData });
+                        }
+                    } catch(e) {}
+                }
             }
 
             function normalizar(nombre) {
@@ -1340,11 +1392,15 @@ document.getElementById(
 
         var totalJornadas = 0;
         try {
-            var descResp = await fetch(APP.ruta('descargados'));
-            var descData = await descResp.json();
-            totalJornadas = descData.filter(function(m) {
-                return (m.home === teamName || m.away === teamName) && m.lineups && m.boxscore;
-            }).length;
+            if (useSupabase && supabaseTeamId && window.STPLS_API && window.STPLS_API.countTeamDetailedMatches) {
+                totalJornadas = await window.STPLS_API.countTeamDetailedMatches(supabaseTeamId);
+            } else {
+                var descResp = await fetch(APP.ruta('descargados'));
+                var descData = await descResp.json();
+                totalJornadas = descData.filter(function(m) {
+                    return (m.home === teamName || m.away === teamName) && m.lineups && m.boxscore;
+                }).length;
+            }
         } catch(e) {}
 
         function playerNode(p, idx) {

@@ -195,6 +195,7 @@ async function migratePlayers(teamMap) {
                 shirt_number: p.shirtNumber || p.number,
                 age: p.age,
                 nationality: p.nationality,
+                country_code: p.countryCode || null,
                 photo_url: p.photo,
                 fotmob_id: p.fotMobId,
                 stats: p.stats || {}

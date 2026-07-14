@@ -370,13 +370,8 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
 
 (function() {
 
-    var partidosCache = null;
-    var descargadosCache = null;
-    var plantillaCache = null;
+    var bestXiDataCache = null;
     var modoActual = null;
-
-    var fotMobById = {};
-    var positionById = {};
 
     function escHtml(s) {
         if (s == null) return '';
@@ -397,27 +392,50 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
         return 'https://images.fotmob.com/image_resources/playerimages/' + fotMobId + '.png';
     }
 
-    async function ensureData() {
-        if (partidosCache && descargadosCache) return;
+    async function loadBestXiData() {
+        if (bestXiDataCache) return bestXiDataCache;
+
+        if (window.STPLS_API && window.STPLS_API.fetchBestXIData) {
+            try {
+                var sbData = await window.STPLS_API.fetchBestXIData();
+                if (sbData && sbData.partidos && sbData.partidos.length > 0) {
+                    bestXiDataCache = {
+                        partidos: sbData.partidos,
+                        matches: sbData.matches,
+                        playersMap: sbData.playersMap || {},
+                        jornadasPorEquipo: {},
+                        isJson: false
+                    };
+                    sbData.partidos.forEach(function(p) {
+                        if (p.homeTeam && p.homeTeam.name) {
+                            bestXiDataCache.jornadasPorEquipo[p.homeTeam.name] =
+                                (bestXiDataCache.jornadasPorEquipo[p.homeTeam.name] || 0) + 1;
+                        }
+                        if (p.awayTeam && p.awayTeam.name) {
+                            bestXiDataCache.jornadasPorEquipo[p.awayTeam.name] =
+                                (bestXiDataCache.jornadasPorEquipo[p.awayTeam.name] || 0) + 1;
+                        }
+                    });
+                    return bestXiDataCache;
+                }
+            } catch (e) {
+                console.warn('Supabase Best XI fetch failed, falling back to JSON', e);
+            }
+        }
 
         var resp = await fetch(APP.ruta('calendario'));
         var datos = await resp.json();
-        partidosCache = datos.data;
 
         var respDesc = await fetch(APP.ruta('descargados'));
-        descargadosCache = await respDesc.json();
-    }
+        var descargados = await respDesc.json();
 
-    async function ensurePlantilla() {
-        if (plantillaCache) return;
+        var respPla = await fetch(APP.ruta('plantilla'));
+        var plantilla = await respPla.json();
 
-        var resp = await fetch(APP.ruta('plantilla'));
-        plantillaCache = await resp.json();
-
-        fotMobById = {};
-        positionById = {};
-        Object.keys(plantillaCache).forEach(function(teamKey) {
-            var team = plantillaCache[teamKey];
+        var fotMobById = {};
+        var positionById = {};
+        Object.keys(plantilla).forEach(function(teamKey) {
+            var team = plantilla[teamKey];
             if (team && team.players) {
                 team.players.forEach(function(p) {
                     if (p.id && p.fotMobId) fotMobById[p.id] = p.fotMobId;
@@ -425,34 +443,63 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
                 });
             }
         });
-    }
 
-    function getPartidosDescargados(jornada) {
+        var jornadasPorEquipo = {};
+        descargados.forEach(function(d) {
+            if (!d.lineups || !d.boxscore) return;
+            jornadasPorEquipo[d.home] = (jornadasPorEquipo[d.home] || 0) + 1;
+            jornadasPorEquipo[d.away] = (jornadasPorEquipo[d.away] || 0) + 1;
+        });
+
         var ids = new Set();
-        if (jornada) {
-            descargadosCache.forEach(function(d) {
-                if (d.jornada === parseInt(jornada.split('-')[1].trim()) && d.boxscore) {
-                    ids.add(d.id);
-                }
-            });
-        } else {
-            descargadosCache.forEach(function(d) {
-                if (d.boxscore) ids.add(d.id);
-            });
-        }
+        descargados.forEach(function(d) {
+            if (d.boxscore) ids.add(d.id);
+        });
 
-        var resultados = [];
+        var fetchPromises = [];
         ids.forEach(function(id) {
-            var archivo = APP.ruta('partido', id);
-            resultados.push(
-                fetch(archivo).then(function(r) { return r.json(); }).catch(function() { return null; })
+            fetchPromises.push(
+                fetch(APP.ruta('partido', id)).then(function(r) { return r.json(); }).catch(function() { return null; })
             );
         });
-        return Promise.all(resultados);
+        var partidos = (await Promise.all(fetchPromises)).filter(function(x) { return x; });
+
+        bestXiDataCache = {
+            partidos: partidos,
+            matches: datos.data,
+            fotMobById: fotMobById,
+            positionById: positionById,
+            jornadasPorEquipo: jornadasPorEquipo,
+            isJson: true
+        };
+        return bestXiDataCache;
     }
 
-    function extraerJugadores(partidos, modo, jornadasPorEquipo) {
+    function parseJornada(round) {
+        if (!round) return 0;
+        var m = round.match(/(\d+)\s*$/);
+        return m ? parseInt(m[1]) : 0;
+    }
+
+    function getPartidosFiltrados(data, modo, jornadaActual) {
+        var todos = data.partidos || [];
+        if (modo === 'jornada' && jornadaActual) {
+            var numJor = parseInt(jornadaActual.split('-')[1].trim());
+            return todos.filter(function(p) {
+                return parseJornada(p.round) === numJor;
+            });
+        }
+        return todos;
+    }
+
+    function extraerJugadores(data, modo, jornadaActual) {
         var jugadores = {};
+        var partidos = getPartidosFiltrados(data, modo, jornadaActual);
+        var isJson = data.isJson;
+        var positionById = data.positionById || {};
+        var fotMobById = data.fotMobById || {};
+        var playersMap = data.playersMap || {};
+        var jornadasPorEquipo = data.jornadasPorEquipo || {};
 
         partidos.forEach(function(d) {
             if (!d || !d.boxScore) return;
@@ -470,7 +517,11 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
                     var key = p.id || (p.name + '_' + (p.shirtNumber || ''));
                     var teamLogo = box.team ? APP.fixLogo(box.team.logo) : '';
                     var position = p.position;
-                    if (p.id && positionById[p.id]) position = positionById[p.id];
+                    if (isJson && p.id && positionById[p.id]) position = positionById[p.id];
+                    if (!isJson && p.id && playersMap[p.id] && playersMap[p.id].position) position = playersMap[p.id].position;
+                    var fotMobId = null;
+                    if (isJson && p.id && fotMobById[p.id]) fotMobId = fotMobById[p.id];
+                    if (!isJson && p.id && playersMap[p.id] && playersMap[p.id].fotMobId) fotMobId = playersMap[p.id].fotMobId;
 
                     if (modo === 'temporada') {
                         var teamJor = jornadasPorEquipo[box.team ? box.team.name : ''] || 0;
@@ -485,7 +536,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
                                 shirtNumber: p.shirtNumber,
                                 teamName: box.team ? box.team.name : '',
                                 teamLogo: teamLogo,
-                                fotMobId: (p.id && fotMobById[p.id]) ? fotMobById[p.id] : null,
+                                fotMobId: fotMobId,
                                 teamTotalJornadas: teamJor
                             };
                         } else {
@@ -504,7 +555,7 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
                                 shirtNumber: p.shirtNumber,
                                 teamName: box.team ? box.team.name : '',
                                 teamLogo: teamLogo,
-                                fotMobId: (p.id && fotMobById[p.id]) ? fotMobById[p.id] : null
+                                fotMobId: fotMobId
                             };
                         }
                     }
@@ -625,24 +676,11 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
 
         container.innerHTML = '<div class="bestxi-loading">Cargando alineaciones...</div>';
 
-        await ensureData();
-        await ensurePlantilla();
-
+        var data = await loadBestXiData();
         var selector = document.getElementById('selector-jornada');
         var jornadaActual = selector ? selector.value : null;
 
-        var partidos = await getPartidosDescargados(modo === 'jornada' ? jornadaActual : null);
-
-        var jornadasPorEquipo = {};
-        if (modo === 'temporada') {
-            descargadosCache.forEach(function(d) {
-                if (!d.lineups || !d.boxscore) return;
-                jornadasPorEquipo[d.home] = (jornadasPorEquipo[d.home] || 0) + 1;
-                jornadasPorEquipo[d.away] = (jornadasPorEquipo[d.away] || 0) + 1;
-            });
-        }
-
-        var jugadores = extraerJugadores(partidos, modo, jornadasPorEquipo);
+        var jugadores = extraerJugadores(data, modo, modo === 'jornada' ? jornadaActual : null);
         var xi = seleccionarBestXI(jugadores);
 
         if (xi.por.length === 0 && xi.def.length === 0 && xi.med.length === 0 && xi.del.length === 0) {
@@ -683,16 +721,12 @@ ${tieneDatos ? '<svg class="icon-descarga" width="14" height="14" viewBox="0 0 1
     });
 
     APP.onChange(function() {
-        partidosCache = null;
-        descargadosCache = null;
-        plantillaCache = null;
-        fotMobById = {};
-        positionById = {};
+        bestXiDataCache = null;
+        modoActual = null;
         var container = document.getElementById('bestxi-container');
         var lista = document.getElementById('lista-resultados');
         if (container) container.style.display = 'none';
         if (lista) lista.style.display = 'block';
-        modoActual = null;
         document.querySelectorAll('.menu-bests-btn').forEach(function(b) { b.classList.remove('active'); });
     });
 
