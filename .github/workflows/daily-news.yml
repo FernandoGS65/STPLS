@@ -9,6 +9,9 @@ on:
 jobs:
   update-news:
     runs-on: windows-latest
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,11 +32,8 @@ jobs:
 
       - name: Check environment variables
         run: |
-          if ($env:SUPABASE_URL) { Write-Host "SUPABASE_URL is set" } else { Write-Host "SUPABASE_URL is MISSING" }
-          if ($env:SUPABASE_SERVICE_ROLE_KEY) { Write-Host "SUPABASE_SERVICE_ROLE_KEY is set" } else { Write-Host "SUPABASE_SERVICE_ROLE_KEY is MISSING" }
+          if ($env:SUPABASE_URL -and $env:SUPABASE_URL.Length -gt 0) { Write-Host "SUPABASE_URL is set (length: $($env:SUPABASE_URL.Length))" } else { Write-Host "SUPABASE_URL is MISSING or empty" }
+          if ($env:SUPABASE_SERVICE_ROLE_KEY -and $env:SUPABASE_SERVICE_ROLE_KEY.Length -gt 0) { Write-Host "SUPABASE_SERVICE_ROLE_KEY is set (length: $($env:SUPABASE_SERVICE_ROLE_KEY.Length))" } else { Write-Host "SUPABASE_SERVICE_ROLE_KEY is MISSING or empty" }
 
       - name: Migrate news to Supabase
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node scripts/migrate/index.js --only=news --season=2026-27 --competition=liga
