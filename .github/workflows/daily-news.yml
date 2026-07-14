@@ -27,6 +27,11 @@ jobs:
         run: |
           .\fetch-noticias.ps1 -Season "2026-27" -Competition "liga"
 
+      - name: Check environment variables
+        run: |
+          if ($env:SUPABASE_URL) { Write-Host "SUPABASE_URL is set" } else { Write-Host "SUPABASE_URL is MISSING" }
+          if ($env:SUPABASE_SERVICE_ROLE_KEY) { Write-Host "SUPABASE_SERVICE_ROLE_KEY is set" } else { Write-Host "SUPABASE_SERVICE_ROLE_KEY is MISSING" }
+
       - name: Migrate news to Supabase
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
