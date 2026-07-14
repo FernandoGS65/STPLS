@@ -1,120 +1,110 @@
-const jugadores = [
-  {
-    nombre: "Lamine Yamal",
-    equipo: "FC Barcelona",
-    posicion: "Extremo",
-    edad: 18,
-    goles: 14
-  },
-  {
-    nombre: "Robert Lewandowski",
-    equipo: "FC Barcelona",
-    posicion: "Delantero",
-    edad: 37,
-    goles: 26
-  },
-  {
-    nombre: "Jude Bellingham",
-    equipo: "Real Madrid",
-    posicion: "Centrocampista",
-    edad: 22,
-    goles: 12
-  },
-  {
-    nombre: "Vinicius Jr",
-    equipo: "Real Madrid",
-    posicion: "Extremo",
-    edad: 25,
-    goles: 18
-  },
-  {
-    nombre: "Antoine Griezmann",
-    equipo: "Atlético Madrid",
-    posicion: "Delantero",
-    edad: 34,
-    goles: 15
-  },
-   {
-    nombre: "Mikel Oyarzabal",
-    equipo: "Real Sociedad",
-    posicion: "Delantero",
-    edad: 33,
-    goles: 19
-  },
-   {
-    nombre: "Marc Cubarsí",
-    equipo: "FC Barcelona",
-    posicion: "Defensa",
-    edad: 18,
-    goles: 1
-  }
-];
+(function() {
+    'use strict';
 
-const lista =
-  document.getElementById("lista-jugadores");
+    var jugadores = [];
+    var lista = document.getElementById("lista-jugadores");
+    var buscador = document.getElementById("buscador-jugadores");
 
-const buscador =
-  document.getElementById("buscador-jugadores");
+    function escHtml(s) {
+        if (s == null) return '';
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
 
-function mostrarJugadores(textoBusqueda = "") {
+    function posicionEspanol(pos) {
+        var map = {
+            'Goalkeeper': 'Portero',
+            'Defender': 'Defensa',
+            'Midfielder': 'Centrocampista',
+            'Forward': 'Delantero'
+        };
+        return map[pos] || pos;
+    }
 
-  let html = "";
+    async function cargarJugadores() {
+        jugadores = [];
+        if (window.STPLS_API && window.STPLS_API.fetchPlayerSeasonStats) {
+            try {
+                var stats = await window.STPLS_API.fetchPlayerSeasonStats();
+                if (stats && stats.goleadores) {
+                    stats.goleadores.forEach(function(p) {
+                        jugadores.push({
+                            nombre: p.name,
+                            equipo: p.team,
+                            posicion: posicionEspanol(p.position),
+                            edad: null,
+                            goles: p.goals,
+                            asistencias: p.assists,
+                            foto: p.fotMobId ? 'https://images.fotmob.com/image_resources/playerimages/' + p.fotMobId + '.png' : ''
+                        });
+                    });
+                }
+            } catch (e) {
+                console.warn('Supabase player stats failed:', e);
+            }
+        }
 
-  const filtrados = jugadores.filter(jugador => {
+        if (jugadores.length === 0 && window.STPLS_API && window.STPLS_API.fetchPlayers) {
+            try {
+                var players = await window.STPLS_API.fetchPlayers();
+                jugadores = (players || []).map(function(p) {
+                    return {
+                        nombre: p.name,
+                        equipo: p.team ? p.team.name : '',
+                        posicion: posicionEspanol(p.position),
+                        edad: p.age,
+                        goles: 0,
+                        asistencias: 0,
+                        foto: p.photo_url || ''
+                    };
+                });
+            } catch (e) {
+                console.warn('Supabase players failed:', e);
+            }
+        }
 
-  const texto =
-    textoBusqueda.toLowerCase();
+        mostrarJugadores(buscador ? buscador.value : '');
+    }
 
-  return (
+    function mostrarJugadores(textoBusqueda) {
+        if (!lista) return;
+        textoBusqueda = (textoBusqueda || '').toLowerCase();
 
-    jugador.nombre
-      .toLowerCase()
-      .includes(texto)
+        var filtrados = jugadores.filter(function(jugador) {
+            return (
+                jugador.nombre.toLowerCase().includes(textoBusqueda) ||
+                jugador.equipo.toLowerCase().includes(textoBusqueda) ||
+                jugador.posicion.toLowerCase().includes(textoBusqueda)
+            );
+        });
 
-    ||
+        var html = "";
+        filtrados.forEach(function(jugador) {
+            var fotoHtml = jugador.foto
+                ? '<img src="' + escHtml(jugador.foto) + '" alt="" class="jugador-foto" onerror="this.style.display=\'none\'">'
+                : '';
+            html += '<div class="jugador-card">' +
+                fotoHtml +
+                '<h3>' + escHtml(jugador.nombre) + '</h3>' +
+                '<p><strong>Equipo:</strong> ' + escHtml(jugador.equipo) + '</p>' +
+                '<p><strong>Posición:</strong> ' + escHtml(jugador.posicion) + '</p>' +
+                (jugador.edad ? '<p><strong>Edad:</strong> ' + escHtml(jugador.edad) + '</p>' : '') +
+                '<p><strong>Goles:</strong> ⚽ ' + escHtml(jugador.goles) + '</p>' +
+                (jugador.asistencias ? '<p><strong>Asistencias:</strong> ' + escHtml(jugador.asistencias) + '</p>' : '') +
+                '</div>';
+        });
 
-    jugador.equipo
-      .toLowerCase()
-      .includes(texto)
+        lista.innerHTML = html;
+    }
 
-    ||
+    if (buscador) {
+        buscador.addEventListener("input", function() {
+            mostrarJugadores(buscador.value);
+        });
+    }
 
-    jugador.posicion
-      .toLowerCase()
-      .includes(texto)
-
-  );
-
-});
-
-  filtrados.forEach(jugador => {
-
-    html += `
-      <div class="jugador-card">
-
-        <h3>${jugador.nombre}</h3>
-
-        <p><strong>Equipo:</strong> ${jugador.equipo}</p>
-
-        <p><strong>Posición:</strong> ${jugador.posicion}</p>
-
-        <p><strong>Edad:</strong> ${jugador.edad}</p>
-
-        <p><strong>Goles:</strong> ⚽ ${jugador.goles}</p>
-
-      </div>
-    `;
-  });
-
-  lista.innerHTML = html;
-}
-
-mostrarJugadores();
-
-buscador.addEventListener("input", () => {
-
-  mostrarJugadores(
-    buscador.value
-  );
-
-});
+    if (window.APP && window.APP.onChange) {
+        APP.onChange(function() { cargarJugadores(); });
+    } else {
+        cargarJugadores();
+    }
+})();

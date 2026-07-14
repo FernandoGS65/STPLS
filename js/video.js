@@ -8,16 +8,33 @@ async function cargarVideo(){
         return;
     }
 
-    var resp = await fetch(APP.ruta("videos"));
-    var videos = await resp.json();
-    var entry = videos[id];
+    var url = "";
 
-    if (!entry) {
+    // Try Supabase first
+    if (window.STPLS_API && window.STPLS_API.fetchVideos) {
+        try {
+            var videos = await window.STPLS_API.fetchVideos();
+            if (videos && videos[id]) url = videos[id];
+        } catch (e) {
+            console.warn('Supabase videos failed:', e);
+        }
+    }
+
+    // Fallback to JSON
+    if (!url) {
+        try {
+            var resp = await fetch(APP.ruta("videos"));
+            var videos = await resp.json();
+            if (videos && videos[id]) url = videos[id];
+        } catch (e) {
+            console.warn('Videos JSON failed:', e);
+        }
+    }
+
+    if (!url) {
         contenedor.innerHTML = "<p>Vídeo no disponible.</p>";
         return;
     }
-
-    var url = typeof entry === "string" ? entry : "";
 
     if (url.indexOf("youtube.com") !== -1 || url.indexOf("youtu.be") !== -1) {
         var ytId = "";
