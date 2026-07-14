@@ -650,6 +650,7 @@
         var html = '<div class="pv-section">';
         bsData.forEach(function(box) {
             if (!box.players || !box.players.length) return;
+            console.log('Before sort:', box.team.name, box.players.map(function(p) { return { name: p.name, position: p.position, minutes: p.minutesPlayed }; }));
             var sorted = box.players.slice().sort(function(a, b) {
                 var order = {Goalkeeper:0, Defender:1, Midfielder:2, Forward:3};
                 var posA = order[a.position] || 9;
@@ -659,6 +660,7 @@
                 var minB = parseInt(b.minutesPlayed) || 0;
                 return minB - minA;
             });
+            console.log('After sort:', box.team.name, sorted.map(function(p) { return { name: p.name, position: p.position, minutes: p.minutesPlayed }; }));
             var logoTeam = APP.fixLogo(box.team.logo || "");
             html += '<div class="pv-box-card">';
             html += '<h3>' + (logoTeam ? '<img src="' + escHtml(logoTeam) + '" style="width:20px;height:20px;object-fit:contain">' : '') + escHtml(box.team.name) + '</h3>';
