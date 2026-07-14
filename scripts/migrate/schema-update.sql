@@ -106,3 +106,86 @@ CREATE INDEX IF NOT EXISTS idx_team_season_stats_competition ON team_season_stat
 ALTER TABLE team_season_stats ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Public read" ON team_season_stats FOR SELECT USING (true);
 CREATE POLICY "Admin write" ON team_season_stats FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
+
+-- ============================================================
+-- 9. SECURITY FIX: Overhaul RLS policies
+-- ============================================================
+-- Run security-fix-rls.sql separately for clean application,
+-- or apply inline below:
+
+-- Helper function
+CREATE OR REPLACE FUNCTION is_admin()
+RETURNS BOOLEAN AS $$
+BEGIN
+  RETURN EXISTS (
+    SELECT 1 FROM profiles
+    WHERE id = auth.uid() AND role = 'admin'
+  );
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER STABLE;
+
+-- Drop dangerous old policies
+DO $$ BEGIN
+  -- Profiles: block anon read/write
+  DROP POLICY IF EXISTS "Admin write" ON profiles;
+  DROP POLICY IF EXISTS "Public read" ON profiles;
+  -- Settings: block anon read/write
+  DROP POLICY IF EXISTS "Admin write" ON settings;
+  DROP POLICY IF EXISTS "Public read" ON settings;
+  -- News/Transfers: block anon delete
+  DROP POLICY IF EXISTS "Admin write" ON news;
+  DROP POLICY IF EXISTS "Admin write" ON transfers;
+  -- All other tables: replace FOR ALL with granular policies
+  DROP POLICY IF EXISTS "Admin write" ON seasons;
+  DROP POLICY IF EXISTS "Admin write" ON competitions;
+  DROP POLICY IF EXISTS "Admin write" ON teams;
+  DROP POLICY IF EXISTS "Admin write" ON players;
+  DROP POLICY IF EXISTS "Admin write" ON matches;
+  DROP POLICY IF EXISTS "Admin write" ON match_events;
+  DROP POLICY IF EXISTS "Admin write" ON match_stats;
+  DROP POLICY IF EXISTS "Admin write" ON lineups;
+  DROP POLICY IF EXISTS "Admin write" ON boxscores;
+  DROP POLICY IF EXISTS "Admin write" ON referees;
+  DROP POLICY IF EXISTS "Admin write" ON videos;
+EXCEPTION WHEN OTHERS THEN NULL;
+END $$;
+
+-- Profiles: no public read, admin-only
+ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "profiles_select_own" ON profiles FOR SELECT TO authenticated USING (auth.uid() = id);
+CREATE POLICY "profiles_select_admin" ON profiles FOR SELECT TO authenticated USING (is_admin());
+CREATE POLICY "profiles_insert_admin" ON profiles FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "profiles_update_own" ON profiles FOR UPDATE TO authenticated USING (auth.uid() = id) WITH CHECK (auth.uid() = id);
+CREATE POLICY "profiles_update_admin" ON profiles FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "profiles_delete_admin" ON profiles FOR DELETE TO authenticated USING (is_admin());
+
+-- Settings: no public read, admin-only
+ALTER TABLE settings ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "settings_select_admin" ON settings FOR SELECT TO authenticated USING (is_admin());
+CREATE POLICY "settings_insert_admin" ON settings FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "settings_update_admin" ON settings FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "settings_delete_admin" ON settings FOR DELETE TO authenticated USING (is_admin());
+
+-- News: admin write (granular)
+CREATE POLICY "news_insert_admin" ON news FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "news_update_admin" ON news FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "news_delete_admin" ON news FOR DELETE TO authenticated USING (is_admin());
+
+-- Transfers: admin write (granular)
+CREATE POLICY "transfers_insert_admin" ON transfers FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "transfers_update_admin" ON transfers FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "transfers_delete_admin" ON transfers FOR DELETE TO authenticated USING (is_admin());
+
+-- All other public tables: admin write (granular)
+DO $$ DECLARE
+  t TEXT;
+BEGIN
+  FOR t IN SELECT unnest(ARRAY['seasons','competitions','teams','players','matches','match_events','match_stats','lineups','boxscores','referees','videos']) LOOP
+    EXECUTE format('CREATE POLICY "%s_insert_admin" ON %I FOR INSERT TO authenticated WITH CHECK (is_admin())', t, t);
+    EXECUTE format('CREATE POLICY "%s_update_admin" ON %I FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin())', t, t);
+    EXECUTE format('CREATE POLICY "%s_delete_admin" ON %I FOR DELETE TO authenticated USING (is_admin())', t, t);
+  END LOOP;
+END $$;
+
+-- Performance index
+CREATE INDEX IF NOT EXISTS idx_profiles_auth_admin ON profiles(id, role) WHERE role = 'admin';

@@ -224,7 +224,10 @@ CREATE INDEX IF NOT EXISTS idx_player_season_stats_competition ON player_season_
 CREATE INDEX IF NOT EXISTS idx_team_season_stats_team ON team_season_stats(team_id);
 CREATE INDEX IF NOT EXISTS idx_team_season_stats_competition ON team_season_stats(competition_id);
 
--- RLS policies (basic: public read, admin write)
+-- ============================================================
+-- RLS Policies (secure: public read for data, admin-only for writes)
+-- ============================================================
+
 ALTER TABLE seasons ENABLE ROW LEVEL SECURITY;
 ALTER TABLE competitions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE teams ENABLE ROW LEVEL SECURITY;
@@ -238,35 +241,101 @@ ALTER TABLE news ENABLE ROW LEVEL SECURITY;
 ALTER TABLE transfers ENABLE ROW LEVEL SECURITY;
 ALTER TABLE referees ENABLE ROW LEVEL SECURITY;
 ALTER TABLE videos ENABLE ROW LEVEL SECURITY;
+ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
+ALTER TABLE settings ENABLE ROW LEVEL SECURITY;
 
--- Public read access
-CREATE POLICY "Public read" ON seasons FOR SELECT USING (true);
-CREATE POLICY "Public read" ON competitions FOR SELECT USING (true);
-CREATE POLICY "Public read" ON teams FOR SELECT USING (true);
-CREATE POLICY "Public read" ON players FOR SELECT USING (true);
-CREATE POLICY "Public read" ON matches FOR SELECT USING (true);
-CREATE POLICY "Public read" ON match_events FOR SELECT USING (true);
-CREATE POLICY "Public read" ON match_stats FOR SELECT USING (true);
-CREATE POLICY "Public read" ON lineups FOR SELECT USING (true);
-CREATE POLICY "Public read" ON boxscores FOR SELECT USING (true);
-CREATE POLICY "Public read" ON news FOR SELECT USING (true);
-CREATE POLICY "Public read" ON transfers FOR SELECT USING (true);
-CREATE POLICY "Public read" ON referees FOR SELECT USING (true);
-CREATE POLICY "Public read" ON videos FOR SELECT USING (true);
+-- Helper function for admin check (SECURITY DEFINER avoids recursive RLS)
+CREATE OR REPLACE FUNCTION is_admin()
+RETURNS BOOLEAN AS $$
+BEGIN
+  RETURN EXISTS (
+    SELECT 1 FROM profiles
+    WHERE id = auth.uid() AND role = 'admin'
+  );
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER STABLE;
 
--- Admin write access (authenticated users with role='admin' in profiles)
-CREATE POLICY "Admin write" ON seasons FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON competitions FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON teams FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON players FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON matches FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON match_events FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON match_stats FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON lineups FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON boxscores FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON news FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON transfers FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON referees FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON videos FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON settings FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
-CREATE POLICY "Admin write" ON profiles FOR ALL TO authenticated USING (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')) WITH CHECK (EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin'));
+-- === PUBLIC DATA: Public read, admin write ===
+
+CREATE POLICY "seasons_select_public" ON seasons FOR SELECT USING (true);
+CREATE POLICY "seasons_insert_admin" ON seasons FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "seasons_update_admin" ON seasons FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "seasons_delete_admin" ON seasons FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "competitions_select_public" ON competitions FOR SELECT USING (true);
+CREATE POLICY "competitions_insert_admin" ON competitions FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "competitions_update_admin" ON competitions FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "competitions_delete_admin" ON competitions FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "teams_select_public" ON teams FOR SELECT USING (true);
+CREATE POLICY "teams_insert_admin" ON teams FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "teams_update_admin" ON teams FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "teams_delete_admin" ON teams FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "players_select_public" ON players FOR SELECT USING (true);
+CREATE POLICY "players_insert_admin" ON players FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "players_update_admin" ON players FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "players_delete_admin" ON players FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "matches_select_public" ON matches FOR SELECT USING (true);
+CREATE POLICY "matches_insert_admin" ON matches FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "matches_update_admin" ON matches FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "matches_delete_admin" ON matches FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "match_events_select_public" ON match_events FOR SELECT USING (true);
+CREATE POLICY "match_events_insert_admin" ON match_events FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "match_events_update_admin" ON match_events FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "match_events_delete_admin" ON match_events FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "match_stats_select_public" ON match_stats FOR SELECT USING (true);
+CREATE POLICY "match_stats_insert_admin" ON match_stats FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "match_stats_update_admin" ON match_stats FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "match_stats_delete_admin" ON match_stats FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "lineups_select_public" ON lineups FOR SELECT USING (true);
+CREATE POLICY "lineups_insert_admin" ON lineups FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "lineups_update_admin" ON lineups FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "lineups_delete_admin" ON lineups FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "boxscores_select_public" ON boxscores FOR SELECT USING (true);
+CREATE POLICY "boxscores_insert_admin" ON boxscores FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "boxscores_update_admin" ON boxscores FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "boxscores_delete_admin" ON boxscores FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "news_select_public" ON news FOR SELECT USING (true);
+CREATE POLICY "news_insert_admin" ON news FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "news_update_admin" ON news FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "news_delete_admin" ON news FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "transfers_select_public" ON transfers FOR SELECT USING (true);
+CREATE POLICY "transfers_insert_admin" ON transfers FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "transfers_update_admin" ON transfers FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "transfers_delete_admin" ON transfers FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "referees_select_public" ON referees FOR SELECT USING (true);
+CREATE POLICY "referees_insert_admin" ON referees FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "referees_update_admin" ON referees FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "referees_delete_admin" ON referees FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "videos_select_public" ON videos FOR SELECT USING (true);
+CREATE POLICY "videos_insert_admin" ON videos FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "videos_update_admin" ON videos FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "videos_delete_admin" ON videos FOR DELETE TO authenticated USING (is_admin());
+
+-- === SENSITIVE: No public read, admin only ===
+
+CREATE POLICY "profiles_select_own" ON profiles FOR SELECT TO authenticated USING (auth.uid() = id);
+CREATE POLICY "profiles_select_admin" ON profiles FOR SELECT TO authenticated USING (is_admin());
+CREATE POLICY "profiles_insert_admin" ON profiles FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "profiles_update_own" ON profiles FOR UPDATE TO authenticated USING (auth.uid() = id) WITH CHECK (auth.uid() = id);
+CREATE POLICY "profiles_update_admin" ON profiles FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "profiles_delete_admin" ON profiles FOR DELETE TO authenticated USING (is_admin());
+
+CREATE POLICY "settings_select_admin" ON settings FOR SELECT TO authenticated USING (is_admin());
+CREATE POLICY "settings_insert_admin" ON settings FOR INSERT TO authenticated WITH CHECK (is_admin());
+CREATE POLICY "settings_update_admin" ON settings FOR UPDATE TO authenticated USING (is_admin()) WITH CHECK (is_admin());
+CREATE POLICY "settings_delete_admin" ON settings FOR DELETE TO authenticated USING (is_admin());
+
+-- Performance index for admin checks
+CREATE INDEX IF NOT EXISTS idx_profiles_auth_admin ON profiles(id, role) WHERE role = 'admin';
+
