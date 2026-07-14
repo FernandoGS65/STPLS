@@ -25,43 +25,31 @@
 
     async function cargarPartido() {
         try {
-            var b = null;
             var d = null;
             var videos = null;
 
-            // Try Supabase first
-            if (window.STPLS_API && window.STPLS_API.fetchMatchDetail) {
+            // Try Supabase full detail first
+            if (window.STPLS_API && window.STPLS_API.fetchMatchFullDetail) {
                 try {
-                    b = await window.STPLS_API.fetchMatchDetail(matchId);
-                    var allMatches = await window.STPLS_API.fetchMatches();
-                    if (!b && allMatches) b = allMatches.find(function(m) { return m.id == matchId; }) || null;
+                    d = await window.STPLS_API.fetchMatchFullDetail(matchId);
                 } catch (supErr) {
-                    console.warn('Supabase match detail failed:', supErr);
+                    console.warn('Supabase match full detail failed:', supErr);
                 }
             }
 
-            // Fallback / enrichment from JSON
-            var liga = null;
-            try {
-                var calResp = await fetch(APP.ruta("calendario"));
-                if (!calResp.ok) throw new Error("HTTP " + calResp.status);
-                liga = await calResp.json();
-            } catch (e) {
-                console.warn('Calendar JSON failed:', e);
-            }
-            if (!b && liga && liga.data) {
-                b = liga.data.find(function(m) { return m.id == matchId; });
-            }
-            if (!b) { showError("Partido no encontrado en el calendario."); return; }
-
-            try {
-                var detResp = await fetch(APP.ruta("partido", matchId));
-                if (detResp.ok) d = await detResp.json();
-            } catch (e) {
-                console.warn('Match detail JSON failed:', e);
+            // Fallback to JSON file
+            if (!d) {
+                try {
+                    var detResp = await fetch(APP.ruta("partido", matchId));
+                    if (detResp.ok) d = await detResp.json();
+                } catch (e) {
+                    console.warn('Match detail JSON failed:', e);
+                }
             }
 
-            // Load videos (Supabase first, then JSON)
+            if (!d) { showError("Partido no encontrado."); return; }
+
+            // Load videos
             try {
                 if (window.STPLS_API && window.STPLS_API.fetchVideos) {
                     videos = await window.STPLS_API.fetchVideos();
@@ -78,7 +66,7 @@
                 }
             }
             if (videos) {
-                var key = buildVideoKey(b.round, b.homeTeam.name, b.awayTeam.name);
+                var key = buildVideoKey(d.round, d.homeTeam.name, d.awayTeam.name);
                 if (videos[key]) videoUrlCache = videos[key];
             }
 
@@ -91,7 +79,7 @@
                 }
             }
 
-            render(d, b);
+            render(d, d);
         } catch (e) {
             showError("Error: " + e.message);
         }

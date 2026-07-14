@@ -236,7 +236,18 @@
         });
     }
 
-    function loadData() {
+    async function loadData() {
+        if (window.STPLS_API && window.STPLS_API.fetchPlayerSeasonStats) {
+            try {
+                dataCache = await window.STPLS_API.fetchPlayerSeasonStats();
+                if (dataCache) {
+                    renderMainView();
+                    return;
+                }
+            } catch (e) {
+                console.warn('Supabase player stats failed:', e);
+            }
+        }
         fetch(APP.ruta('estadisticas-jugadores'))
             .then(function(r) { return r.json(); })
             .then(function(data) {
@@ -248,7 +259,20 @@
             });
     }
 
-    function loadTeamData() {
+    async function loadTeamData() {
+        if (window.STPLS_API && window.STPLS_API.fetchTeamSeasonStats) {
+            try {
+                teamDataCache = await window.STPLS_API.fetchTeamSeasonStats();
+                if (teamDataCache) {
+                    if (document.getElementById('tab-equipo').classList.contains('estadisticas-tab-content--active')) {
+                        renderTeamMainView();
+                    }
+                    return;
+                }
+            } catch (e) {
+                console.warn('Supabase team stats failed:', e);
+            }
+        }
         fetch(APP.ruta('estadisticas-equipo'))
             .then(function(r) { return r.json(); })
             .then(function(data) {
