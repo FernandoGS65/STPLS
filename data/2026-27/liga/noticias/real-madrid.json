@@ -1,6 +1,30 @@
-﻿{
-    "news":  [
-
-             ],
-    "team":  "Real Madrid"
-}
+﻿[
+    {
+        "url":  "https://www.sport.es/es/noticias/futbol/viajes-diego-espana-mundialista-atlanta-132429854?utm_source=rss-noticias\u0026utm_medium=feed\u0026utm_campaign=futbol",
+        "imagen":  "https://estaticos-cdn.prensaiberica.es/clip/e77da12e-25a6-41f1-a70f-6a7ed8803859_media-libre-aspect-ratio_default_0.jpg",
+        "titulo":  "Los viajes de Diego por la España mundialista: \"En Atlanta vi más camisetas del Sporting de Gijón que del Madrid\"",
+        "fuente":  "SPORT",
+        "fecha":  "2026-07-14T04:00:00.000Z"
+    },
+    {
+        "url":  "https://www.sport.es/es/noticias/futbol/fabril-regresa-trabajo-anuncia-amistoso-132420049?utm_source=rss-noticias\u0026utm_medium=feed\u0026utm_campaign=futbol",
+        "imagen":  "https://estaticos-cdn.prensaiberica.es/clip/2d21338e-809d-40e4-b3cf-7506f6461f32_media-libre-aspect-ratio_default_0.jpg",
+        "titulo":  "El Fabril regresa al trabajo y anuncia un amistoso contra el Real Madrid Castilla",
+        "fuente":  "SPORT",
+        "fecha":  "2026-07-13T20:54:42.000Z"
+    },
+    {
+        "url":  "https://as.com/futbol/fotorrelato/el-real-madrid-de-mourinho-ya-ha-empezado-a-trabajar-f202607-f/",
+        "imagen":  "https://img.asmedia.epimg.net/resizer/v2/Z3LXKCIM3FDMXEKW4M6HKMFSRA.jpg?auth=6851090096ee770fecba555be5e6009a7919b4168d4f38a918de40064ad832d5",
+        "titulo":  "El Real Madrid de Mourinho ya ha empezado a trabajar",
+        "fuente":  "AS",
+        "fecha":  "2026-07-13T19:40:54.000Z"
+    },
+    {
+        "url":  "https://as.com/futbol/fotorrelato/el-real-madrid-se-pone-a-punto-para-la-2026-27-f202607-f/",
+        "imagen":  "https://img.asmedia.epimg.net/resizer/v2/AYLJVCR2PFENTBZ7CL6I4XGVE4.jpg?auth=431e74ebf6331f574ead0b34b0fbbc052980847469b4258edbc283892a16252b",
+        "titulo":  "El Real Madrid se pone a punto para la 2026-27",
+        "fuente":  "AS",
+        "fecha":  "2026-07-13T14:15:10.000Z"
+    }
+]

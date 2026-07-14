@@ -18,3 +18,4 @@ test-flag*.png
 .agents/
 .opencode/
 skills-lock.json
+.vercel

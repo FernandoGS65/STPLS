@@ -11,6 +11,7 @@ const ROOT = path.join(__dirname, '..', '..');
 const dryRun = process.argv.includes('--dry-run');
 const season = process.argv.find(arg => arg.startsWith('--season='))?.split('=')[1] || DEFAULT_SEASON;
 const competition = process.argv.find(arg => arg.startsWith('--competition='))?.split('=')[1] || DEFAULT_COMPETITION;
+const only = process.argv.find(arg => arg.startsWith('--only='))?.split('=')[1] || '';
 
 async function readJson(filePath) {
     try {
@@ -127,6 +128,39 @@ async function migrateTeams(competitionId) {
     const { data, error } = await supabaseAdmin.from('teams').select('id,name');
     if (error) throw error;
     return Object.fromEntries(data.map(t => [t.name, t.id]));
+}
+
+async function loadTeamMap(competitionId) {
+    // Load existing teams from Supabase to map team names to IDs
+    const { data, error } = await supabaseAdmin.from('teams').select('id,name');
+    if (error) throw error;
+    if (!data || data.length === 0) {
+        throw new Error('No teams found in Supabase. Run full migration first.');
+    }
+    return Object.fromEntries(data.map(t => [t.name, t.id]));
+}
+
+async function runFullMigration(competitionId) {
+    console.log('3. Migrating teams...');
+    const teamMap = await migrateTeams(competitionId);
+
+    console.log('4. Migrating players...');
+    await migratePlayers(teamMap);
+
+    console.log('5. Migrating referees...');
+    await migrateReferees();
+
+    console.log('6. Migrating matches...');
+    await migrateMatches(competitionId, teamMap);
+
+    console.log('7. Migrating videos...');
+    await migrateVideos();
+
+    console.log('8. Migrating news...');
+    await migrateNews(teamMap);
+
+    console.log('9. Migrating transfers...');
+    await migrateTransfers(teamMap);
 }
 
 async function migratePlayers(teamMap) {
@@ -318,26 +352,26 @@ async function main() {
         console.log('2. Migrating competitions...');
         await migrateCompetitions();
 
-        console.log('3. Migrating teams...');
-        const teamMap = await migrateTeams(competitionId);
-
-        console.log('4. Migrating players...');
-        await migratePlayers(teamMap);
-
-        console.log('5. Migrating referees...');
-        await migrateReferees();
-
-        console.log('6. Migrating matches...');
-        await migrateMatches(competitionId, teamMap);
-
-        console.log('7. Migrating videos...');
-        await migrateVideos();
-
-        console.log('8. Migrating news...');
-        await migrateNews(teamMap);
-
-        console.log('9. Migrating transfers...');
-        await migrateTransfers(teamMap);
+        if (only && only !== 'teams') {
+            // When running a partial migration we still need the team map
+            console.log('Loading team map...');
+            const teamMap = await loadTeamMap(competitionId);
+            if (only === 'news') {
+                console.log('Migrating news...');
+                await migrateNews(teamMap);
+            } else if (only === 'transfers') {
+                console.log('Migrating transfers...');
+                await migrateTransfers(teamMap);
+            } else if (only === 'videos') {
+                console.log('Migrating videos...');
+                await migrateVideos();
+            } else {
+                console.warn(`Unknown --only=${only}, running full migration.`);
+                await runFullMigration(competitionId);
+            }
+        } else {
+            await runFullMigration(competitionId);
+        }
 
         console.log('\nMigration completed successfully.');
     } catch (error) {
