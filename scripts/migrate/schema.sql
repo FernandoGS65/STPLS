@@ -79,67 +79,80 @@ CREATE TABLE IF NOT EXISTS matches (
     home_score INTEGER,
     away_score INTEGER,
     status TEXT,
-    venue TEXT,
+    venue JSONB,
     referee_id INTEGER REFERENCES referees(id) ON DELETE SET NULL,
+    predictions JSONB,
     detail_url TEXT,
     created_at TIMESTAMPTZ DEFAULT NOW(),
     updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Match events (goals, cards, substitutions)
+-- Match events (goals, cards, substitutions, VAR, etc.)
 CREATE TABLE IF NOT EXISTS match_events (
     id SERIAL PRIMARY KEY,
     match_id INTEGER NOT NULL REFERENCES matches(id) ON DELETE CASCADE,
-    minute TEXT,
+    time TEXT,
     type TEXT NOT NULL,
+    player TEXT,
     player_id INTEGER REFERENCES players(id) ON DELETE SET NULL,
+    substituted TEXT,
+    substituted_id INTEGER REFERENCES players(id) ON DELETE SET NULL,
+    assist TEXT,
     team_id INTEGER REFERENCES teams(id) ON DELETE SET NULL,
     description TEXT,
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Match statistics per team
+-- Match statistics per team (one row per stat category)
 CREATE TABLE IF NOT EXISTS match_stats (
     id SERIAL PRIMARY KEY,
     match_id INTEGER NOT NULL REFERENCES matches(id) ON DELETE CASCADE,
-    team_id INTEGER REFERENCES teams(id) ON DELETE SET NULL,
     category TEXT NOT NULL,
     value_home TEXT,
     value_away TEXT,
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Lineups
+-- Lineups (simplified: store raw JSON for flexibility)
 CREATE TABLE IF NOT EXISTS lineups (
     id SERIAL PRIMARY KEY,
     match_id INTEGER NOT NULL REFERENCES matches(id) ON DELETE CASCADE,
     team_id INTEGER REFERENCES teams(id) ON DELETE SET NULL,
-    player_id INTEGER REFERENCES players(id) ON DELETE SET NULL,
-    is_starting BOOLEAN DEFAULT TRUE,
-    formation TEXT,
+    data JSONB NOT NULL DEFAULT '{}',
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Boxscores (player ratings per match)
+-- Boxscores (player ratings and per-match stats)
 CREATE TABLE IF NOT EXISTS boxscores (
     id SERIAL PRIMARY KEY,
     match_id INTEGER NOT NULL REFERENCES matches(id) ON DELETE CASCADE,
     player_id INTEGER REFERENCES players(id) ON DELETE SET NULL,
     team_id INTEGER REFERENCES teams(id) ON DELETE SET NULL,
-    minutes_played INTEGER DEFAULT 0,
-    goals INTEGER DEFAULT 0,
-    assists INTEGER DEFAULT 0,
-    shots INTEGER DEFAULT 0,
-    shots_on_target INTEGER DEFAULT 0,
-    passes INTEGER DEFAULT 0,
-    pass_accuracy REAL,
-    tackles INTEGER DEFAULT 0,
-    interceptions INTEGER DEFAULT 0,
-    fouls INTEGER DEFAULT 0,
-    yellow_cards INTEGER DEFAULT 0,
-    red_cards INTEGER DEFAULT 0,
-    match_rating REAL,
+    data JSONB NOT NULL DEFAULT '{}',
     created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Aggregated player season statistics
+CREATE TABLE IF NOT EXISTS player_season_stats (
+    id SERIAL PRIMARY KEY,
+    player_id INTEGER NOT NULL REFERENCES players(id) ON DELETE CASCADE,
+    competition_id TEXT NOT NULL REFERENCES competitions(id) ON DELETE CASCADE,
+    team_id INTEGER REFERENCES teams(id) ON DELETE SET NULL,
+    stats JSONB NOT NULL DEFAULT '{}',
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW(),
+    UNIQUE(player_id, competition_id)
+);
+
+-- Aggregated team season statistics
+CREATE TABLE IF NOT EXISTS team_season_stats (
+    id SERIAL PRIMARY KEY,
+    team_id INTEGER NOT NULL REFERENCES teams(id) ON DELETE CASCADE,
+    competition_id TEXT NOT NULL REFERENCES competitions(id) ON DELETE CASCADE,
+    stats JSONB NOT NULL DEFAULT '{}',
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW(),
+    UNIQUE(team_id, competition_id)
 );
 
 -- News
@@ -200,10 +213,15 @@ CREATE INDEX IF NOT EXISTS idx_matches_home_team ON matches(home_team_id);
 CREATE INDEX IF NOT EXISTS idx_matches_away_team ON matches(away_team_id);
 CREATE INDEX IF NOT EXISTS idx_players_team ON players(team_id);
 CREATE INDEX IF NOT EXISTS idx_boxscores_match ON boxscores(match_id);
+CREATE INDEX IF NOT EXISTS idx_boxscores_player ON boxscores(player_id);
 CREATE INDEX IF NOT EXISTS idx_lineups_match ON lineups(match_id);
 CREATE INDEX IF NOT EXISTS idx_match_events_match ON match_events(match_id);
 CREATE INDEX IF NOT EXISTS idx_match_stats_match ON match_stats(match_id);
 CREATE INDEX IF NOT EXISTS idx_news_team ON news(team_id);
+CREATE INDEX IF NOT EXISTS idx_player_season_stats_player ON player_season_stats(player_id);
+CREATE INDEX IF NOT EXISTS idx_player_season_stats_competition ON player_season_stats(competition_id);
+CREATE INDEX IF NOT EXISTS idx_team_season_stats_team ON team_season_stats(team_id);
+CREATE INDEX IF NOT EXISTS idx_team_season_stats_competition ON team_season_stats(competition_id);
 
 -- RLS policies (basic: public read, admin write)
 ALTER TABLE seasons ENABLE ROW LEVEL SECURITY;
