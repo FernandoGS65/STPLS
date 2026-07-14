@@ -23,31 +23,78 @@
 
     var plantillaCache = null;
 
-    function cargarPartido() {
-        Promise.all([
-            fetch(APP.ruta("partido", matchId)).then(function(r) {
-                return r.ok ? r.json() : null;
-            }),
-            fetch(APP.ruta("calendario")).then(function(r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-            fetch(APP.ruta("videos")).then(function(r) { return r.ok ? r.json() : null; }),
-            plantillaCache ? Promise.resolve(plantillaCache) : fetch(APP.ruta("plantilla")).then(function(r) { return r.ok ? r.json() : null; })
-        ]).then(function(res) {
-            var d = res[0];
-            var liga = res[1];
-            var videos = res[2];
-            if (res[3]) plantillaCache = res[3];
-            var b = liga.data.find(function(m) { return m.id == matchId; });
+    async function cargarPartido() {
+        try {
+            var b = null;
+            var d = null;
+            var videos = null;
+
+            // Try Supabase first
+            if (window.STPLS_API && window.STPLS_API.fetchMatchDetail) {
+                try {
+                    b = await window.STPLS_API.fetchMatchDetail(matchId);
+                    var allMatches = await window.STPLS_API.fetchMatches();
+                    if (!b && allMatches) b = allMatches.find(function(m) { return m.id == matchId; }) || null;
+                } catch (supErr) {
+                    console.warn('Supabase match detail failed:', supErr);
+                }
+            }
+
+            // Fallback / enrichment from JSON
+            var liga = null;
+            try {
+                var calResp = await fetch(APP.ruta("calendario"));
+                if (!calResp.ok) throw new Error("HTTP " + calResp.status);
+                liga = await calResp.json();
+            } catch (e) {
+                console.warn('Calendar JSON failed:', e);
+            }
+            if (!b && liga && liga.data) {
+                b = liga.data.find(function(m) { return m.id == matchId; });
+            }
             if (!b) { showError("Partido no encontrado en el calendario."); return; }
 
+            try {
+                var detResp = await fetch(APP.ruta("partido", matchId));
+                if (detResp.ok) d = await detResp.json();
+            } catch (e) {
+                console.warn('Match detail JSON failed:', e);
+            }
+
+            // Load videos (Supabase first, then JSON)
+            try {
+                if (window.STPLS_API && window.STPLS_API.fetchVideos) {
+                    videos = await window.STPLS_API.fetchVideos();
+                }
+            } catch (e) {
+                console.warn('Supabase videos failed:', e);
+            }
+            if (!videos) {
+                try {
+                    var vidResp = await fetch(APP.ruta("videos"));
+                    if (vidResp.ok) videos = await vidResp.json();
+                } catch (e) {
+                    console.warn('Videos JSON failed:', e);
+                }
+            }
             if (videos) {
                 var key = buildVideoKey(b.round, b.homeTeam.name, b.awayTeam.name);
                 if (videos[key]) videoUrlCache = videos[key];
             }
 
+            if (!plantillaCache) {
+                try {
+                    var planResp = await fetch(APP.ruta("plantilla"));
+                    if (planResp.ok) plantillaCache = await planResp.json();
+                } catch (e) {
+                    console.warn('Plantilla JSON failed:', e);
+                }
+            }
+
             render(d, b);
-        }).catch(function(e) {
+        } catch (e) {
             showError("Error: " + e.message);
-        });
+        }
     }
 
     APP.onChange(function() { cargarPartido(); });

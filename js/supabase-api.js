@@ -22,6 +22,22 @@
         return data;
     }
 
+    function enrichMatch(m) {
+        if (!m) return m;
+        // Provide a synthetic state object similar to the old JSON format
+        var finished = m.home_score != null && m.away_score != null;
+        m.state = {
+            description: finished ? 'Finished' : 'Scheduled',
+            score: finished ? { current: m.home_score + ' - ' + m.away_score } : null
+        };
+        // Provide homeTeam/awayTeam aliases expected by some pages
+        m.homeTeam = m.home_team || { name: '', logo: '' };
+        m.awayTeam = m.away_team || { name: '', logo: '' };
+        m.homeTeam.logo = m.homeTeam.logo || m.homeTeam.logo_url;
+        m.awayTeam.logo = m.awayTeam.logo || m.awayTeam.logo_url;
+        return m;
+    }
+
     async function fetchMatches(options) {
         if (!sb) return null;
         var compId = getCompetitionId();
@@ -36,7 +52,7 @@
         }
         var { data, error } = await query.order('date');
         if (error) throw error;
-        return data;
+        return (data || []).map(enrichMatch);
     }
 
     async function fetchPlayers(options) {
@@ -149,7 +165,45 @@
             .eq('id', matchId)
             .single();
         if (error) throw error;
-        return data;
+        return enrichMatch(data);
+    }
+
+    async function fetchMatchEvents(matchId) {
+        if (!sb) return null;
+        var { data, error } = await sb.from('match_events')
+            .select('*')
+            .eq('match_id', matchId)
+            .order('time')
+            .order('id');
+        if (error) throw error;
+        return data || [];
+    }
+
+    async function fetchMatchStats(matchId) {
+        if (!sb) return null;
+        var { data, error } = await sb.from('match_stats')
+            .select('*')
+            .eq('match_id', matchId);
+        if (error) throw error;
+        return data || [];
+    }
+
+    async function fetchLineups(matchId) {
+        if (!sb) return null;
+        var { data, error } = await sb.from('lineups')
+            .select('*')
+            .eq('match_id', matchId);
+        if (error) throw error;
+        return data || [];
+    }
+
+    async function fetchBoxscore(matchId) {
+        if (!sb) return null;
+        var { data, error } = await sb.from('boxscores')
+            .select('*')
+            .eq('match_id', matchId);
+        if (error) throw error;
+        return data || [];
     }
 
     window.STPLS_API = {
@@ -162,6 +216,10 @@
         fetchTransfers: fetchTransfers,
         fetchReferees: fetchReferees,
         fetchVideos: fetchVideos,
-        fetchMatchDetail: fetchMatchDetail
+        fetchMatchDetail: fetchMatchDetail,
+        fetchMatchEvents: fetchMatchEvents,
+        fetchMatchStats: fetchMatchStats,
+        fetchLineups: fetchLineups,
+        fetchBoxscore: fetchBoxscore
     };
 })();
