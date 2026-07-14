@@ -36,4 +36,5 @@ jobs:
           if ($env:SUPABASE_SERVICE_ROLE_KEY -and $env:SUPABASE_SERVICE_ROLE_KEY.Length -gt 0) { Write-Host "SUPABASE_SERVICE_ROLE_KEY is set (length: $($env:SUPABASE_SERVICE_ROLE_KEY.Length))" } else { Write-Host "SUPABASE_SERVICE_ROLE_KEY is MISSING or empty" }
 
       - name: Migrate news to Supabase
+        shell: bash
         run: node scripts/migrate/index.js --only=news --season=2026-27 --competition=liga
