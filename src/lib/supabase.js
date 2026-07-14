@@ -6,10 +6,12 @@ export const supabaseAdmin = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KE
     auth: { autoRefreshToken: false, persistSession: false }
 });
 
-// Public client for frontend-style operations
-export const supabasePublic = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-    auth: { autoRefreshToken: true, persistSession: false }
-});
+// Public client for frontend-style operations (only if anon key is available)
+export const supabasePublic = SUPABASE_ANON_KEY
+    ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+          auth: { autoRefreshToken: true, persistSession: false }
+      })
+    : null;
 
 export async function testConnection() {
     const { data, error } = await supabaseAdmin.from('seasons').select('count').single();
