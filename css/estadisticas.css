@@ -90,6 +90,8 @@
     background:#000;
     border-radius:12px;
     overflow:hidden;
+    max-width:640px;
+    margin:0 auto;
 }
 
 /* --- Row --- */
@@ -206,7 +208,8 @@
 .estadisticas-separator{
     height:1px;
     background:var(--border-color);
-    margin:24px 16px 4px;
+    margin:24px auto 4px;
+    max-width:640px;
 }
 
 /* --- Empty state --- */
@@ -224,11 +227,15 @@
     padding:16px;
     font-size:11px;
     color:var(--text-muted);
+    max-width:640px;
+    margin:0 auto;
 }
 
 /* --- Detail view --- */
 .estadisticas-detail{
     padding:0 0 32px;
+    max-width:640px;
+    margin:0 auto;
 }
 
 .estadisticas-detail-header{
