@@ -278,7 +278,7 @@ function mostrarJornada(
 
 const videoId =
 
-    `LL-J${numeroJornada}-` +
+    `${APP.videoPrefix()}${numeroJornada}-` +
 
     `${normalizarEquipo(
         partido.homeTeam.name

@@ -16,7 +16,7 @@
                     .replace(/[óòöôõ]/g,"o").replace(/[úùüû]/g,"u").replace(/[ñ]/g,"n")
                     .replace(/[^a-zA-Z0-9]/g,"");
         }
-        return "LL-J" + nn + "-" + cln(home) + "-" + cln(away);
+        return APP.videoPrefix() + nn + "-" + cln(home) + "-" + cln(away);
     }
 
     var videoUrlCache = null;

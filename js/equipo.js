@@ -690,7 +690,7 @@ function renderPartidos(lista) {
         const jornada = partido.round.split("-")[1].trim();
         const normalizarEquipo = nombre =>
             nombre.replaceAll(" ","").replaceAll("á","a").replaceAll("é","e").replaceAll("í","i").replaceAll("ó","o").replaceAll("ú","u");
-        const videoId = `LL-J${jornada.padStart(2,"0")}-${normalizarEquipo(local)}-${normalizarEquipo(visitante)}`;
+        const videoId = `${APP.videoPrefix()}${jornada.padStart(2,"0")}-${normalizarEquipo(local)}-${normalizarEquipo(visitante)}`;
         const tieneVideo = videos[videoId];
 
         html += `

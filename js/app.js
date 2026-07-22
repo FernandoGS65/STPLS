@@ -16,6 +16,14 @@ var APP = (function() {
     function init() {
         applyTheme(getPreferredTheme());
         setupThemeToggle();
+
+        var params = new URLSearchParams(window.location.search);
+        var urlComp = params.get('comp');
+        var urlSeason = params.get('season');
+
+        if (urlComp) state.urlComp = urlComp;
+        if (urlSeason) state.urlSeason = urlSeason;
+
         loadSeasons();
     }
 
@@ -75,6 +83,22 @@ var APP = (function() {
                 state.competition = def.competitions[0].id;
             }
 
+            if (state.urlComp) {
+                var foundSeason = null;
+                if (state.urlSeason) {
+                    foundSeason = state.seasons.find(function(s) { return s.id === state.urlSeason; });
+                }
+                if (!foundSeason) {
+                    foundSeason = state.seasons.find(function(s) { return s.competitions.some(function(c) { return c.id === state.urlComp; }); });
+                }
+                if (foundSeason) {
+                    state.season = foundSeason.id;
+                    state.competition = state.urlComp;
+                }
+                delete state.urlSeason;
+                delete state.urlComp;
+            }
+
             saveState();
             state.ready = true;
             renderNavSelectors();
@@ -109,6 +133,12 @@ var APP = (function() {
         saveState();
         renderNavSelectors();
         notify();
+    }
+
+    /* ===== VIDEO KEY HELPERS ===== */
+    function videoPrefix() {
+        var map = { liga: 'LL', premier: 'PL' };
+        return (map[state.competition] || 'LL') + '-J';
     }
 
     /* ===== LOGO OVERRIDES ===== */
@@ -263,6 +293,7 @@ var icons = [
         init: init,
         ruta: ruta,
         fixLogo: fixLogo,
+        videoPrefix: videoPrefix,
         onChange: onChange,
         getState: function() { return state; },
         season: function() { return state.season; },
