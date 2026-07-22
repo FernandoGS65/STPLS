@@ -147,11 +147,17 @@ async function cargarEquipos() {
         if (!useSupabase) {
             const respuesta = await fetch(APP.ruta("calendario"));
             const datos = await respuesta.json();
-            const clasificacion = calcularClasificacion(datos.data);
-            equipos = clasificacion.map(e => ({
-                nombre: e.nombre,
-                logo: e.logo
-            }));
+            var seen = {};
+            equipos = [];
+            datos.data.forEach(function(p) {
+                [p.homeTeam, p.awayTeam].forEach(function(t) {
+                    if (!seen[t.name]) {
+                        seen[t.name] = true;
+                        equipos.push({ nombre: t.name, logo: APP.fixLogo(t.logo) });
+                    }
+                });
+            });
+            equipos.sort(function(a, b) { return a.nombre.localeCompare(b.nombre, 'es'); });
         }
 
         const contenedor = document.getElementById("lista-equipos");
@@ -184,4 +190,13 @@ async function cargarEquipos() {
 
 }
 
-APP.onChange(function() { cargarEquipos(); });
+function actualizarTituloEquipos() {
+    var h2 = document.getElementById('equipos-titulo');
+    if (!h2) return;
+    var state = APP.getState();
+    var season = state.seasons.find(function(s) { return s.id === state.season; });
+    var comp = season ? season.competitions.find(function(c) { return c.id === state.competition; }) : null;
+    h2.textContent = 'Equipos – ' + (comp ? comp.label : state.competition);
+}
+
+APP.onChange(function() { actualizarTituloEquipos(); cargarEquipos(); });
