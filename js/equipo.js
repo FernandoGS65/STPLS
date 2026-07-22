@@ -1,10 +1,11 @@
 function matchesFromSupabase(matches) {
+    var isPremier = APP.getState().competition === 'premier';
     return matches.map(function(m) {
         return {
             id: m.id,
             round: m.round,
             date: m.date,
-            country: { code: 'ES', name: 'Spain', logo: '' },
+            country: { code: isPremier ? 'GB-ENG' : 'ES', name: isPremier ? 'England' : 'Spain', logo: '' },
             state: {
                 clock: null,
                 score: {
@@ -23,7 +24,7 @@ function matchesFromSupabase(matches) {
                 name: m.away_team ? m.away_team.name : '',
                 logo: m.away_team ? APP.fixLogo(m.away_team.logo_url) : ''
             },
-            league: { id: 119924, name: 'La Liga', season: 2026 }
+            league: { id: isPremier ? 33973 : 119924, name: isPremier ? 'Premier League' : 'La Liga', season: 2026 }
         };
     });
 }
@@ -731,7 +732,7 @@ document.getElementById(
 <div class="equipo-palmares">
     <div class="palmares-item">
         <strong class="palmares-num">${info.liga}</strong>
-        <span class="palmares-label">Liga</span>
+        <span class="palmares-label">${APP.getState().competition === 'premier' ? 'Premier' : 'Liga'}</span>
     </div>
     <div class="palmares-item">
         <strong class="palmares-num">${info.copaRey}</strong>

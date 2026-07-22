@@ -274,6 +274,11 @@ try {
     if (tempEl && seasonLabel) {
         tempEl.textContent = 'Temporada ' + seasonLabel.label;
     }
+    var comp = seasonLabel ? seasonLabel.competitions.find(function(c) { return c.id === state.competition; }) : null;
+    var tituloEl = document.getElementById('clasificacion-titulo');
+    if (tituloEl && comp) {
+        tituloEl.textContent = comp.label;
+    }
 
     const selector =
         document.getElementById(

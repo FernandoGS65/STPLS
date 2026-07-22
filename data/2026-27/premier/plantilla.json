@@ -1,0 +1,122 @@
+﻿{
+    "Arsenal":  {
+                    "logo":  "https://highlightly.net/soccer/images/teams/36526.png",
+                    "players":  [
+
+                                ]
+                },
+    "Aston Villa":  {
+                        "logo":  "https://highlightly.net/soccer/images/teams/56950.png",
+                        "players":  [
+
+                                    ]
+                    },
+    "Bournemouth":  {
+                        "logo":  "https://highlightly.net/soccer/images/teams/30569.png",
+                        "players":  [
+
+                                    ]
+                    },
+    "Brentford":  {
+                      "logo":  "https://highlightly.net/soccer/images/teams/47589.png",
+                      "players":  [
+
+                                  ]
+                  },
+    "Brighton":  {
+                     "logo":  "https://highlightly.net/soccer/images/teams/44185.png",
+                     "players":  [
+
+                                 ]
+                 },
+    "Chelsea":  {
+                    "logo":  "https://highlightly.net/soccer/images/teams/42483.png",
+                    "players":  [
+
+                                ]
+                },
+    "Coventry":  {
+                     "logo":  "https://highlightly.net/soccer/images/teams/1146230.png",
+                     "players":  [
+
+                                 ]
+                 },
+    "Crystal Palace":  {
+                           "logo":  "https://highlightly.net/soccer/images/teams/45036.png",
+                           "players":  [
+
+                                       ]
+                       },
+    "Everton":  {
+                    "logo":  "https://highlightly.net/soccer/images/teams/39079.png",
+                    "players":  [
+
+                                ]
+                },
+    "Fulham":  {
+                   "logo":  "https://highlightly.net/soccer/images/teams/31420.png",
+                   "players":  [
+
+                               ]
+               },
+    "Hull City":  {
+                      "logo":  "https://highlightly.net/soccer/images/teams/55248.png",
+                      "players":  [
+
+                                  ]
+                  },
+    "Ipswich":  {
+                    "logo":  "https://highlightly.net/soccer/images/teams/49291.png",
+                    "players":  [
+
+                                ]
+                },
+    "Leeds":  {
+                  "logo":  "https://highlightly.net/soccer/images/teams/54397.png",
+                  "players":  [
+
+                              ]
+              },
+    "Liverpool":  {
+                      "logo":  "https://highlightly.net/soccer/images/teams/34824.png",
+                      "players":  [
+
+                                  ]
+                  },
+    "Manchester City":  {
+                            "logo":  "https://highlightly.net/soccer/images/teams/43334.png",
+                            "players":  [
+
+                                        ]
+                        },
+    "Manchester United":  {
+                              "logo":  "https://highlightly.net/soccer/images/teams/28867.png",
+                              "players":  [
+
+                                          ]
+                          },
+    "Newcastle United":  {
+                             "logo":  "https://highlightly.net/soccer/images/teams/29718.png",
+                             "players":  [
+
+                                         ]
+                         },
+    "Nottingham Forest":  {
+                              "logo":  "https://highlightly.net/soccer/images/teams/56099.png",
+                              "players":  [
+
+                                          ]
+                          },
+    "Sunderland":  {
+                       "logo":  "https://highlightly.net/soccer/images/teams/635630.png",
+                       "players":  [
+
+                                   ]
+                   },
+    "Tottenham":  {
+                      "logo":  "https://highlightly.net/soccer/images/teams/40781.png",
+                      "players":  [
+
+                                  ]
+                  }
+}

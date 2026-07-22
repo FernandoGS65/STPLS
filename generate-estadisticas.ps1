@@ -1,9 +1,12 @@
+param(
+    [string]$Season = "2025-26",
+    [string]$Competition = "liga"
+)
+
 $ErrorActionPreference = "SilentlyContinue"
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
-$season = "2025-26"
-$comp = "liga"
-$baseDir = "C:\Proyectos\STPLS\data\$season\$comp"
+$baseDir = "data/$Season/$Competition"
 $partidosDir = "$baseDir\partidos"
 $plantillaPath = "$baseDir\plantilla.json"
 $outputPath = "$baseDir\estadisticas-jugadores.json"

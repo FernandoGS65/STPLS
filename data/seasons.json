@@ -5,7 +5,8 @@
       "label": "2026/27",
       "default": true,
       "competitions": [
-        { "id": "liga", "label": "La Liga" }
+        { "id": "liga", "label": "La Liga" },
+        { "id": "premier", "label": "Premier League" }
       ]
     },
     {

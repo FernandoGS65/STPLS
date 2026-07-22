@@ -12,8 +12,9 @@ async function cargarIndex() {
     }
 
     if (!partidos || partidos.length === 0) {
+        var state = APP ? APP.getState() : { season: '2026-27', competition: 'liga' };
         var local = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-        var ruta = local ? APP.ruta('calendario') : 'https://raw.githubusercontent.com/FernandoGS65/STPLS/refs/heads/main/data/2026-27/liga/calendario.json';
+        var ruta = local ? APP.ruta('calendario') : 'https://raw.githubusercontent.com/FernandoGS65/STPLS/refs/heads/main/data/' + state.season + '/' + state.competition + '/calendario.json';
         try {
             var res = await fetch(ruta);
             var json = await res.json();
