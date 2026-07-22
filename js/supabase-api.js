@@ -66,7 +66,8 @@
 
     async function fetchPlayers(options) {
         if (!sb) return null;
-        var query = sb.from('players').select('*, team:team_id(*)');
+        var compId = getCompetitionId();
+        var query = sb.from('players').select('*, team:team_id(*)').eq('competition_id', compId);
         if (options && options.team_id) {
             query = query.eq('team_id', options.team_id);
         }

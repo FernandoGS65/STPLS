@@ -62,6 +62,28 @@
             }
         }
 
+        if (jugadores.length === 0) {
+            try {
+                var resp = await fetch(APP.ruta('plantilla'));
+                var plantilla = await resp.json();
+                Object.keys(plantilla).forEach(function(team) {
+                    (plantilla[team].players || []).forEach(function(p) {
+                        jugadores.push({
+                            nombre: p.name,
+                            equipo: team,
+                            posicion: posicionEspanol(p.position),
+                            edad: null,
+                            goles: 0,
+                            asistencias: 0,
+                            foto: p.fotMobId ? 'https://images.fotmob.com/image_resources/playerimages/' + p.fotMobId + '.png' : ''
+                        });
+                    });
+                });
+            } catch (e) {
+                console.warn('Plantilla fallback failed:', e);
+            }
+        }
+
         mostrarJugadores(buscador ? buscador.value : '');
     }
 
