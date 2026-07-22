@@ -17,7 +17,8 @@
 
     async function fetchTeams() {
         if (!sb) return null;
-        var { data, error } = await sb.from('teams').select('*').order('name');
+        var compId = getCompetitionId();
+        var { data, error } = await sb.from('teams').select('*').eq('competition_id', compId).order('name');
         if (error) throw error;
         return data;
     }
