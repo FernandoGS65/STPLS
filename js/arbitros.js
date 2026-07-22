@@ -873,13 +873,7 @@
             throw new Error('STPLS_API not available');
         }
 
-        var useSupabase = window.STPLS_API && window.STPLS_API.fetchReferees && window.STPLS_API.fetchAllMatchesWithEvents;
-        var promise;
-        if (useSupabase) {
-            promise = loadArbitrosSupabase().catch(function() { return loadArbitros(); });
-        } else {
-            promise = loadArbitros();
-        }
+        var promise = loadArbitros();
 
         promise
             .then(function(data) {
